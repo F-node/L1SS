@@ -10,7 +10,7 @@ package lss;
  *
  */
 public interface Common {
-    
+
     final String[] ST_LIST = {"STR", "DEX", "CON", "INT", "WIS", "CHA"};
     final int STR = 0;
     final int DEX = 1;
@@ -51,14 +51,14 @@ public interface Common {
     final int W_K = 10;
     final int W_CS = 11;
     final int W_DA = 12;
-    
+
     final int MAIN = 13;
     final int SUB = 14;
-    
+
     final int PHI = 0;
     final int MAG = 1;
-    
-    
+
+
     final int L1 = 0;
     final int L15 = 1;
     final int L30 = 2;
@@ -166,13 +166,14 @@ public interface Common {
     final int F_G = 76;
     final int CLAY = 77;
     final int ITEM_MD2 = 78;
-    
+
     final int D_MA = 79;
     final int D_VR = 80;
-    
+
     final int E_WW = 81;
-    
+
     final int BS_COIN = 82;
+    final int L_HST = 83;
 
     final String[] AILMENT_LIST = {"êŒâª", "êáñ∞", "ìÄåã", "à√à≈", "ãCê‚", "çSë©", "ã∞ï|"};
     final int STONE = 0;
