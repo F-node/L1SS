@@ -28,6 +28,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
+
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
@@ -53,6 +54,7 @@ import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -182,8 +184,8 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
     LEV lev = new LEV();
 
     //パネル３
-    JCheckBox[] cb_buff = new JCheckBox[83];
-    JComboBox[] cb_buff_group = new JComboBox[83];
+    JCheckBox[] cb_buff = new JCheckBox[84];
+    JComboBox[] cb_buff_group = new JComboBox[84];
 
     //パネル４
     JComboBox cb_npc_level;
@@ -225,8 +227,8 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         }
     }
 
-    ArrayList<ZipEntry> arrow_entrys = new ArrayList();
-    ArrayList<ZipEntry> sting_entrys = new ArrayList();
+    ArrayList<ZipEntry> arrow_entrys = new ArrayList<>();
+    ArrayList<ZipEntry> sting_entrys = new ArrayList<>();
 
     File file;
 
@@ -681,7 +683,7 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         panels[0].add(cb_pattern_l2);
         panels[0].add(cb_pattern_r2);
 
-        String[] en_list = {"", "+1", "+2", "+3", "+4", "+5"};
+        String[] en_list = {"", "+1", "+2", "+3", "+4", "+5","+6"};
         cb_alterstone_en = new JComboBox(en_list);
         cb_alterstone_en.setBounds(0, 400 + 120, 50, 20);
         cb_alterstone_en.addActionListener(this);
@@ -1369,6 +1371,12 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[BS_COIN] = new JCheckBox("黒蛇の気");
         cb_buff[BS_COIN].setBounds(200 * row, 20 * col++, 150, 20);
         cb_buff[BS_COIN].setToolTipText("HP+20 MP+13 AC-2 ダメージ減少+3 闇耐性+10");
+
+        String list_hst[] = {"1個", "2個", "3個"};
+        cb_buff_group[L_HST] = new WideComboBox(list_hst);
+        cb_buff_group[L_HST].setBounds(200 * row + 100, 20 * col, 80, 20);
+        cb_buff[L_HST] = new JCheckBox("成長の果実");
+        cb_buff[L_HST].setBounds(200 * row, 20 * col++, 100, 20);
 
         MP mp = new MP();
 

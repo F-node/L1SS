@@ -952,6 +952,23 @@ public class Bougu implements Common {
             }
         }
 
+	    if (name.equals("ユニコーンの腕力のゲートル")) {
+	        if (enchant >= 9) {
+                op2.DMG_SHORT = 1;
+	        }
+	    }
+	    if (name.equals("ユニコーンの機敏のゲートル")) {
+	        if (enchant >= 9) {
+	        	op2.DMG_LONG = 1;
+	        }
+	    }
+	    if (name.equals("ユニコーンの知力のゲートル")) {
+	        if (enchant >= 9) {
+	        	op2.SP = 1;
+	        }
+	    }
+
+
         if (type.equals("リング") || type.equals("アミュレット")
                 || type.equals("イアリング") || type.equals("ベルト") || type.equals("ルーン")) {
 
