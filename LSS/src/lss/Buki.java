@@ -320,7 +320,7 @@ public class Buki implements Common {
             }
         }
         //死神の剣(REMASTERED)      +1強化毎に[近距離追加ダメージ+2(既存処理+1)][近距離クリティカル+1%][技術命中+1][精霊命中+1][恐怖命中+1]増加 
-        if (name.equals("死神の剣(REMASTERED)")) {
+        if (name.equals("死神の剣(REMASTERED)") || name.equals("死神の剣(REMASTERED)(ウェポンアタック発動)")) {
             if (enchant >= 0) {
             op2.DMG_SHORT += enchant;                   //近距離追加ダメージ
             op2.CRI_SHORT += enchant;                   //近距離クリティカル

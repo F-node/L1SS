@@ -1,6 +1,13 @@
 LineageStatusSimulator_fork2018
-
 変更点
+2019/07/25
+Update 3.5.2
+LSS/src/lss/Buki.java
+修正
+	強化によるオプションが適用されていない不具合を修正
+	テンペストアックス(奈落発動)(yuusyuuwarさんによって指摘)
+	死神の剣(REMASTERED)(ウェポンアタック発動)
+
 2019/07/24
 Update 3.5.1
 LSS/src/lss/Bougu.java
@@ -24,8 +31,10 @@ LSS/src/lss/UI.java
 	ダメージリダクション		>>>	ダメージ低下
 	ダメージリダクション無視	>>>	ダメージ低下無視
 	PVPダメージ減少			>>>	PVPダメージ低下
-	*ただし登録した装備品を読み込む処理の部分は今回は対象外
-	Buff.java 108行から
+
+LSS/src/lss/Buff.java
+	*ただし登録した装備品と読み込む処理の部分は今回は対象外
+	108行から一応コメントアウトして次回修正
 
 LSS/src/lss/Common.java
 変数削除
