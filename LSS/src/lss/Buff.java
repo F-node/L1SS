@@ -105,15 +105,18 @@ public class Buff implements Common {
             if (line.startsWith("SP=")) {
                 SP = Integer.parseInt(line.split("=")[1]);
             }
+            //if (line.startsWith("ダメージ低下=")) {
             if (line.startsWith("ダメージリダクション=")) {
                 DR = Integer.parseInt(line.split("=")[1]);
             }
+            //if (line.startsWith("ダメージ低下無視=")) {           
             if (line.startsWith("ダメージリダクション無視=")) {
                 DR_IGNORED = Integer.parseInt(line.split("=")[1]);
             }
             if (line.startsWith("PVP追加ダメージ=")) {
                 PVP = Integer.parseInt(line.split("=")[1]);
             }
+            //if (line.startsWith("PVPダメージ低下=")) {
             if (line.startsWith("PVPダメージ減少=")) {
                 PVP_DR = Integer.parseInt(line.split("=")[1]);
             }

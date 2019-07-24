@@ -148,7 +148,7 @@ public interface Common {
     final int ITEM_SEA = 53;    //深海の力
     final int ITEM_COOKING = 54;//料理
     final int ITEM_DESSERT = 55;//デザート
-    final int ITEM_MD = 56;     //旧マジックドール
+    final int ITEM_MD = 56;     //マジックドール
     final int E_EGR = 57;       //エルヴングラヴィティー
     final int KOMA = 58;        //コマのエンチャ
     final int P_BA = 59;        //ブレイブアバター
@@ -170,7 +170,7 @@ public interface Common {
     final int SEC = 75;         //セキュリティ
     final int F_G = 76;         //ギガンティック
     final int CLAY = 77;        //クレイ
-    final int ITEM_MD2 = 78;    //新マジックドール
+//    final int ITEM_MD2 = 78;    //新マジックドール
     final int D_MA = 79;        //ムービングアクセレーション
     final int D_VR = 80;        //ベノムレジスト
     final int E_QE = 81;        //クエイク
