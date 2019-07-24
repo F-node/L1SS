@@ -1,6 +1,36 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2019/07/24
+Update 3.5.1
+LSS/src/lss/Bougu.java
+LSS/src/lss/Buki.java
+LSS/src/lss/Calculator.java
+LSS/src/lss/UI.java
+新規及び修正
+	2019/07/24 Update
+	https://www.ncsoft.jp/lineage/news/notice/view?bbsNo=3101&articleNo=2291
+
+	祝福されたマジックドールに追加される効果
+	祝福されたランク3マジックドール:AC-2
+	祝福されたランク4マジックドール:AC-2 PVP追加ダメージ+2
+	祝福されたランク5マジックドール:AC-2 PVP追加ダメージ+2 PVPダメージ低下+4
+
+	ヴァラカス/リンドビオル/アンタラス/パプリオンの各マジックドールに追加される効果
+	AC-2 PVP追加ダメージ+4 PVPダメージ低下+2
+
+用語統一
+	ダメージ軽減			>>>	ダメージ低下
+	ダメージリダクション		>>>	ダメージ低下
+	ダメージリダクション無視	>>>	ダメージ低下無視
+	PVPダメージ減少			>>>	PVPダメージ低下
+	*ただし登録した装備品を読み込む処理の部分は今回は対象外
+	Buff.java 108行から
+
+LSS/src/lss/Common.java
+変数削除
+	//final int ITEM_MD2 = 78;    //新マジックドール
+
 2019/07/19
 Update 3.5.0
 LSS/data/E.zip

@@ -310,12 +310,12 @@ public class Buki implements Common {
             op2.ailment[HIT_TERROR] += enchant;         //恐怖命中
             }
         }
-        //ガイアの激怒              +1強化毎に[遠距離追加ダメージ+2(既存処理+1)][遠距離クリティカル+1%][ダメージ軽減無視][精霊命中+1]増加 
+        //ガイアの激怒              +1強化毎に[遠距離追加ダメージ+2(既存処理+1)][遠距離クリティカル+1%][ダメージ低下無視][精霊命中+1]増加 
         if (name.equals("ガイアの激怒")) {
             if (enchant >= 0) {
             op2.DMG_LONG += enchant;                    //遠距離追加ダメージ
             op2.CRI_LONG += enchant;                    //遠距離クリティカル
-            op2.DR_IGNORED += enchant;                  //ダメージリダクション無視
+            op2.DR_IGNORED += enchant;                  //ダメージ低下無視
             op2.ailment[HIT_SPIRIT] += enchant;         //精霊命中
             }
         }

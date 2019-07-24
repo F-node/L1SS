@@ -214,16 +214,16 @@ public class Bougu implements Common {
             text += " 恐怖命中+" + (op.ailment[HIT_TERROR] + op2.ailment[HIT_TERROR]);
         }
         if (op.DR + op2.DR > 0) {
-            text += " ダメージリダクション+" + (op.DR + op2.DR);
+            text += " ダメージ低下+" + (op.DR + op2.DR);
         }
         if (op.DR_IGNORED + op2.DR_IGNORED > 0) {
-            text += " ダメージリダクション無視+" + (op.DR_IGNORED + op2.DR_IGNORED);
+            text += " ダメージ低下無視+" + (op.DR_IGNORED + op2.DR_IGNORED);
         }
         if (op.PVP + op2.PVP > 0) {
             text += " PVP追加ダメージ+" + (op.PVP + op2.PVP);
         }
         if (op.PVP_DR + op2.PVP_DR > 0) {
-            text += " PVPダメージ減少+" + (op.PVP_DR + op2.PVP_DR);
+            text += " PVPダメージ低下+" + (op.PVP_DR + op2.PVP_DR);
         }
         if (op.c_weight + op2.c_weight > 0) {
             text += " 所持重量増加+" + (op.c_weight + op2.c_weight);
@@ -844,7 +844,7 @@ public class Bougu implements Common {
         }
         if (name.equals("地霊のガーダー")) {
             if (enchant >= 7) {
-                op2.DR = enchant-6;         //ダメージリダクション+(enchant-6)
+                op2.DR = enchant-6;         //ダメージ低下+(enchant-6)
                 op2.MR = enchant-4;         //MR+(enchant-4)
             } else if (enchant >= 6) {
                 op2.MR = 2;                 //MR+2
@@ -1289,7 +1289,7 @@ public class Bougu implements Common {
             if (enchant >= 9) {
                 op2.DMG_SHORT = 1;
             }
-            //+10強化オプション[ダメージ軽減+1]
+            //+10強化オプション[ダメージ低下+1]
             if (enchant >= 10) {
                 op2.DR = 1;
             }
@@ -1310,7 +1310,7 @@ public class Bougu implements Common {
             if (enchant >= 9) {
                 op2.DMG_LONG = 1;
             }
-            //+10強化オプション[ダメージ軽減+1]
+            //+10強化オプション[ダメージ低下+1]
             if (enchant >= 10) {
                 op2.DR = 1;
             }
@@ -1331,7 +1331,7 @@ public class Bougu implements Common {
             if (enchant >= 9) {
                 op2.SP = 1;
             }
-            //+10強化オプション[ダメージ軽減+1]
+            //+10強化オプション[ダメージ低下+1]
             if (enchant >= 10) {
                 op2.DR = 1;
             }
@@ -2668,19 +2668,19 @@ public class Bougu implements Common {
                         op2.HP = 30;
                         op2.MP = 50;
                         op2.DR = 3;
-                        op2.PVP_DR=2;        //PVPダメージ軽減+2
+                        op2.PVP_DR=2;        //PVPダメージ低下+2
                         break;
                     case 8:
                         op2.HP = 40;
                         op2.MP = 50;
                         op2.DR = 4;
-                        op2.PVP_DR=3;        //PVPダメージ軽減+3                        
+                        op2.PVP_DR=3;        //PVPダメージ低下+3                        
                         break;
                     case 9:
                         op2.HP = 50;
                         op2.MP = 60;
                         op2.DR = 5;
-                        op2.PVP_DR=4;        //PVPダメージ軽減+4
+                        op2.PVP_DR=4;        //PVPダメージ低下+4
                         break;
                     default:
                         break;
@@ -2758,18 +2758,18 @@ public class Bougu implements Common {
                     case 5:
                         op2.HP = 70;
                         op2.DR = 2;
-                        op2.effect = "ダメージ軽減+20 2%,";
+                        op2.effect = "ダメージ低下+20 2%,";
                         break;
                     case 6:
                         op2.HP = 80;
                         op2.DR = 3;
-                        op2.effect = "ダメージ軽減+20 3%,";
+                        op2.effect = "ダメージ低下+20 3%,";
                         op2.AC = -7;
                         break;
                     case 7:
                         op2.HP = 90;
                         op2.DR = 4;
-                        op2.effect = "ダメージ軽減+20 4%,";
+                        op2.effect = "ダメージ低下+20 4%,";
                         op2.HIT_SHORT = 1;      //近距離命中+1
                         op2.HIT_LONG = 1;       //遠距離命中+1
                         op2.AC = -8;            //AC-8
@@ -2777,7 +2777,7 @@ public class Bougu implements Common {
                     case 8:
                         op2.HP = 100;
                         op2.DR = 5;
-                        op2.effect = "ダメージ軽減+20 5%,";
+                        op2.effect = "ダメージ低下+20 5%,";
                         op2.HIT_SHORT = 3;      //近距離命中+3
                         op2.HIT_LONG = 3;       //遠距離命中+3
                         op2.AC = -9;            //AC-9
@@ -2785,7 +2785,7 @@ public class Bougu implements Common {
                     case 9:
                         op2.HP = 150;
                         op2.DR = 6;
-                        op2.effect = "ダメージ軽減+20 6%,";
+                        op2.effect = "ダメージ低下+20 6%,";
                         op2.HIT_SHORT = 5;      //近距離命中+5
                         op2.HIT_LONG = 5;       //遠距離命中+5
                         op2.AC = -10;           //AC-10

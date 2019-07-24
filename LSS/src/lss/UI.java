@@ -1235,7 +1235,7 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
 
         cb_buff[K_RA] = new JCheckBox("リダクションアーマー");
         cb_buff[K_RA].setBounds(0, 20 * col++, 150, 20);
-        cb_buff[K_RA].setToolTipText("ダメージリダクション+(Lv-40)/10 小数点以下切り捨て");
+        cb_buff[K_RA].setToolTipText("ダメージ低下+(Lv-40)/10 小数点以下切り捨て");
 
         cb_buff[K_SC] = new JCheckBox("ソリッドキャリッジ");
         cb_buff[K_SC].setBounds(0, 20 * col++, 150, 20);
@@ -1532,15 +1532,22 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[ITEM_SEA] = new JCheckBox("深海の力");
         cb_buff[ITEM_SEA].setBounds(200 * row, 20 * col++, 100, 20);
 
-        String list_md[] = {"ウェアウルフ", "バグベアー", "サキュバス", "エルダー", "ストーンゴーレム",
-            "クラスタシアン", "イエティ", "コカトリス", "シーダンサー", "スパルトイ", "スノーマン", "ラミア",
+        String list_md[] = {"カカシ", "ウェアウルフ", "クラスタシアン", "ストーンゴーレム", "イエティ", "バグベアー",
+            "ラヴァゴーレム", "スノーマン", "コカトリス", "サキュバス", "エルダー", "マーメイド",
+            "ダイアゴーレム","祝福されたダイアゴーレム", "ドレイク", "祝福されたドレイク", "キングバグベアー", "祝福されたキングバグベアー",
+            "サキュバスクイーン", "祝福されたサキュバスクイーン", "ブラックエルダー", "祝福されたブラックエルダー", "アースジャイアント", "祝福されたアースジャイアント",
+            "サイクロプス", "祝福されたサイクロプス", "ナイトバルド", "祝福されたナイトバルド", "アイリス", "祝福されたアイリス", "バンパイア", "祝福されたバンパイア", "シアー", "祝福されたシアー", "リッチ", "祝福されたリッチ",
+            "デスナイト", "祝福されたデスナイト", "デーモン", "祝福されたデーモン", "バランカ", "祝福されたバランカ", "カーツ", "祝福されたカーツ", "バフォメット", "祝福されたバフォメット", "マミーロード", "祝福されたマミーロード",
+            "アイスクイーン", "祝福されたアイスクイーン", "堕落", "祝福された堕落", "覚醒パオ", "祝福された覚醒パオ", 
+            "アンタラス", "パプリオン", "リンドビオル", "ヴァラカス",
+            "シーダンサー", "スパルトイ", "ラミア", "スノーマン(課金)", "グレムリン",
             "ブルート", "ブルート(努力する)", "ブルート(賢い)", "ブルート(聡明な)", "ブルート(光る)",
             "ブルート(眩しい)", "ジャイアント", "ジャイアント(努力する)", "ジャイアント(賢い)",
             "ジャイアント(聡明な)", "ジャイアント(光る)", "ジャイアント(眩しい)",
-            "パック/パオ(0段階)", "パック/パオ(1段階)", "パック/パオ(2段階)", "パック/パオ(3段階)", "リッチ"};
+            "パック/パオ(0段階)", "パック/パオ(1段階)", "パック/パオ(2段階)", "パック/パオ(3段階)"};
         cb_buff_group[ITEM_MD] = new WideComboBox(list_md);
         cb_buff_group[ITEM_MD].setBounds(200 * row + 100, 20 * col, 80, 20);
-        cb_buff[ITEM_MD] = new JCheckBox("旧マジックドール");
+        cb_buff[ITEM_MD] = new JCheckBox("マジックドール");
         cb_buff[ITEM_MD].setBounds(200 * row, 20 * col++, 100, 20);
 
         String list_md_op[] = {"AC-2", "AC-4", "AC-5/DR+2",
@@ -1554,16 +1561,18 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[ITEM_MD_OP] = new JCheckBox("パック/パオ OP");
         cb_buff[ITEM_MD_OP].setBounds(200 * row, 20 * col++, 100, 20);
 
-        String list_md2[] = {"カカシ", "スノーマン", "マーメイド", "ラヴァゴーレム",
-            "ジャイアント", "ブラックエルダー", "サキュバスクイーン", "ドレイク", "キングバグベアー", "ダイアゴーレム",
-            "サイクロプス", "ナイトバルド", "シアー",
-            "デスナイト", "デーモン", "覚醒パオ", "マミーロード",
-            "アイリス", "バンパイア", "バランカ", "アイスクイーン","カーツ","バフォメット","堕落",
-            "アンタラス", "パプリオン", "リンドビオル", "ヴァラカス"};
-        cb_buff_group[ITEM_MD2] = new WideComboBox(list_md2);
-        cb_buff_group[ITEM_MD2].setBounds(200 * row + 100, 20 * col, 80, 20);
-        cb_buff[ITEM_MD2] = new JCheckBox("新マジックドール");
-        cb_buff[ITEM_MD2].setBounds(200 * row, 20 * col++, 100, 20);
+        //String list_md2[] = {"カカシ", "ウェアウルフ", "クラスタシアン", "ストーンゴーレム", "イエティ", "バグベアー",
+        //    "ラヴァゴーレム", "スノーマン", "コカトリス", "サキュバス", "エルダー", "マーメイド",
+        //    "ダイアゴーレム","祝福されたダイアゴーレム", "ドレイク", "祝福されたドレイク", "キングバグベアー", "祝福されたキングバグベアー",
+        //    "サキュバスクイーン", "祝福されたサキュバスクイーン", "ブラックエルダー", "祝福されたブラックエルダー", "アースジャイアント", "祝福されたアースジャイアント",
+        //    "サイクロプス", "祝福されたサイクロプス", "ナイトバルド", "祝福されたナイトバルド", "アイリス", "祝福されたアイリス", "バンパイア", "祝福されたバンパイア", "シアー", "祝福されたシアー", "リッチ", "祝福されたリッチ",
+        //    "デスナイト", "祝福されたデスナイト", "デーモン", "祝福されたデーモン", "バランカ", "祝福されたバランカ", "カーツ", "祝福されたカーツ", "バフォメット", "祝福されたバフォメット", "マミーロード", "祝福されたマミーロード",
+        //    "アイスクイーン", "祝福されたアイスクイーン", "堕落", "祝福された堕落", "覚醒パオ", "祝福された覚醒パオ", 
+        //    "アンタラス", "パプリオン", "リンドビオル", "ヴァラカス"};
+        //cb_buff_group[ITEM_MD2] = new WideComboBox(list_md2);
+        //cb_buff_group[ITEM_MD2].setBounds(200 * row + 100, 20 * col, 80, 20);
+        //cb_buff[ITEM_MD2] = new JCheckBox("マジックドール");
+        //cb_buff[ITEM_MD2].setBounds(200 * row, 20 * col++, 100, 20);
 
         String list_koma[] = {"欠片3個", "欠片5個"};
         cb_buff_group[KOMA] = new WideComboBox(list_koma);
@@ -1581,7 +1590,8 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[CLAY].setBounds(200 * row, 20 * col++, 150, 20);
 
         cb_buff[BUFF_COIN] = new JCheckBox("バフコイン");
-        cb_buff[BUFF_COIN].setBounds(200 * row +100, 20 * col, 100, 20);
+        //cb_buff[BUFF_COIN].setBounds(200 * row +100, 20 * col, 100, 20);
+        cb_buff[BUFF_COIN].setBounds(200 * row, 20 * col++, 100, 20);
         
         cb_buff[BS_COIN] = new JCheckBox("黒蛇のコイン");
         cb_buff[BS_COIN].setBounds(200 * row, 20 * col++, 100, 20);
