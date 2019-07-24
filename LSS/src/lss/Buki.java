@@ -219,7 +219,7 @@ public class Buki implements Common {
             }
         }
         //テンペストアックス        +8以降強化1毎に恐怖的中+1(+10強化まで適用)
-        if (name.equals("テンペストアックス")) {
+        if (name.equals("テンペストアックス") || name.equals("テンペストアックス(奈落発動)")) {
             if (enchant >= 10) {
             op2.ailment[HIT_TERROR] += 3;               //恐怖的中+3
             } else if (enchant >= 9) {
