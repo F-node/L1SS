@@ -1,5 +1,14 @@
 LineageStatusSimulator_fork2018
 変更点
+2019/07/30
+Update 3.5.4
+LSS/src/lss/Bougu.java
+修正
+	強化+5のオプション値(フラビさんによって指摘)
+	カーツの闘士の守護インシグニア
+	カーツの射手の守護インシグニア
+	カーツの賢者の守護インシグニア
+
 2019/07/26
 Update 3.5.3
 LSS/src/lss/Buff.java
