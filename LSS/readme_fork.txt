@@ -1,5 +1,11 @@
 LineageStatusSimulator_fork2018
 変更点
+2019/08/01
+Update 3.5.5
+LSS/data/E.zip
+修正
+	射手の紋章(猫3匹と住んでる人さんによって指摘)
+
 2019/07/30
 Update 3.5.4
 LSS/src/lss/Bougu.java
