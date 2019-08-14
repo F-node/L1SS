@@ -3188,6 +3188,8 @@ public class Bougu implements Common {
                         op2.HP = 30;
                         op2.DR = 1;
                         op2.DMG_SHORT = 1;
+                        op2.PVP_DR = 1;
+                        op2.effect += "èjïüè¡ñ’å¯ó¶ +5%,";
                         break;
                     case 6:
                         op2.AC = -5;
@@ -3197,6 +3199,8 @@ public class Bougu implements Common {
                         op2.MR = 3;
                         op2.CRI_SHORT = 1;
                         op2.HIT_SHORT = 1;
+                        op2.PVP_DR = 2;
+                        op2.effect += "èjïüè¡ñ’å¯ó¶ +10%,";
                         break;              
                     case 7:
                         op2.AC = -6;
@@ -3206,7 +3210,8 @@ public class Bougu implements Common {
                         op2.MR = 5;
                         op2.CRI_SHORT = 3;
                         op2.HIT_SHORT = 3;
-                        op2.PVP_DR = 1;
+                        op2.PVP_DR = 3;
+                        op2.effect += "èjïüè¡ñ’å¯ó¶ +15%,";
                         break;              
                     case 8:
                         op2.AC = -7;
@@ -3216,7 +3221,8 @@ public class Bougu implements Common {
                         op2.MR = 7;
                         op2.CRI_SHORT = 5;
                         op2.HIT_SHORT = 5;
-                        op2.PVP_DR = 2;
+                        op2.PVP_DR = 5;
+                        op2.effect += "èjïüè¡ñ’å¯ó¶ +20%,";
                         break;
                     default:
                         break;
@@ -3229,6 +3235,8 @@ public class Bougu implements Common {
                         op2.HP = 30;
                         op2.DR = 1;
                         op2.DMG_LONG = 1;
+                        op2.PVP_DR = 1;
+                        op2.effect += "èjïüè¡ñ’å¯ó¶ +5%,";
                         break;
                     case 6:
                         op2.AC = -5;
@@ -3238,6 +3246,8 @@ public class Bougu implements Common {
                         op2.MR = 3;
                         op2.CRI_LONG = 1;
                         op2.HIT_LONG = 1;
+                        op2.PVP_DR = 2;
+                        op2.effect += "èjïüè¡ñ’å¯ó¶ +10%,";
                         break;              
                     case 7:
                         op2.AC = -6;
@@ -3247,7 +3257,8 @@ public class Bougu implements Common {
                         op2.MR = 5;
                         op2.CRI_LONG = 3;
                         op2.HIT_LONG = 3;
-                        op2.PVP_DR = 1;
+                        op2.PVP_DR = 3;
+                        op2.effect += "èjïüè¡ñ’å¯ó¶ +15%,";
                         break;              
                     case 8:
                         op2.AC = -7;
@@ -3257,7 +3268,8 @@ public class Bougu implements Common {
                         op2.MR = 7;
                         op2.CRI_LONG = 5;
                         op2.HIT_LONG = 5;
-                        op2.PVP_DR = 2;
+                        op2.PVP_DR = 5;
+                        op2.effect += "èjïüè¡ñ’å¯ó¶ +20%,";
                         break;
                     default:
                         break;
@@ -3270,6 +3282,8 @@ public class Bougu implements Common {
                         op2.HP = 30;
                         op2.DR = 1;
                         op2.HIT_SHORT = 1;
+                        op2.PVP_DR = 1;
+                        op2.effect += "èjïüè¡ñ’å¯ó¶ +5%,";
                         break;
                     case 6:
                         op2.AC = -5;
@@ -3279,6 +3293,8 @@ public class Bougu implements Common {
                         op2.HIT_SHORT = 2;
                         op2.CRI_MAGIC = 1;
                         op2.HIT_MAGIC = 1;
+                        op2.PVP_DR = 2;
+                        op2.effect += "èjïüè¡ñ’å¯ó¶ +10%,";
                         break;              
                     case 7:
                         op2.AC = -6;
@@ -3288,7 +3304,8 @@ public class Bougu implements Common {
                         op2.HIT_SHORT = 3;
                         op2.CRI_MAGIC = 2;
                         op2.HIT_MAGIC = 3;
-                        op2.PVP_DR = 1;
+                        op2.PVP_DR = 3;
+                        op2.effect += "èjïüè¡ñ’å¯ó¶ +15%,";
                         break;              
                     case 8:
                         op2.AC = -7;
@@ -3298,7 +3315,8 @@ public class Bougu implements Common {
                         op2.HIT_SHORT = 4;
                         op2.CRI_MAGIC = 4;
                         op2.HIT_MAGIC = 5;
-                        op2.PVP_DR = 2;
+                        op2.PVP_DR = 5;
+                        op2.effect += "èjïüè¡ñ’å¯ó¶ +20%,";
                         break;
                     default:
                         break;

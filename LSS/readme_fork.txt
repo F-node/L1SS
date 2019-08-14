@@ -1,5 +1,13 @@
 LineageStatusSimulator_fork2018
 変更点
+2019/08/14
+Update 3.5.6
+LSS/src/lss/Bougu.java
+修正
+	2019/08/14 Update
+	https://www.ncsoft.jp/lineage/news/notice/view?bbsNo=3101&articleNo=2296
+	合成インシグニアに[PvPダメージ低下][祝福消耗効率向上]のオプションを追加
+
 2019/08/01
 Update 3.5.5
 LSS/data/E.zip
