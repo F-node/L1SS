@@ -1,5 +1,16 @@
 LineageStatusSimulator_fork2018
+
 変更点
+2019/09/11
+Update 3.5.7
+LSS/data/E.zip
+修正及び追加
+	2019/09/11 Update
+	https://www.ncsoft.jp/lineage/news/notice/view?bbsNo=3101&articleNo=2303
+	幸運装備リニューアル(8種類)
+	旧仕様の武器は残しました｡
+	幸運のランスのブレイブショックは仕様不明な為､幸運のキーリンクと同仕様設定
+
 2019/08/14
 Update 3.5.6
 LSS/src/lss/Bougu.java
