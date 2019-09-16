@@ -3181,7 +3181,7 @@ public class Bougu implements Common {
                         break;
                 }
             }
-            if (name.equals("カーツの闘士の守護インシグニア")) {
+            if (name.equals("闘士の守護インシグニア")) {
                 switch (enchant) {                          
                     case 5:
                         op2.AC = -3;
@@ -3228,7 +3228,7 @@ public class Bougu implements Common {
                         break;
                 }
             }
-            if (name.equals("カーツの射手の守護インシグニア")) {
+            if (name.equals("射手の守護インシグニア")) {
                 switch (enchant) {                          
                     case 5:
                         op2.AC = -3;
@@ -3275,7 +3275,7 @@ public class Bougu implements Common {
                         break;
                 }
             }
-            if (name.equals("カーツの賢者の守護インシグニア")) {
+            if (name.equals("賢者の守護インシグニア")) {
                 switch (enchant) {                          
                     case 5:
                         op2.AC = -3;
