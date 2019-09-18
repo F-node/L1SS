@@ -373,6 +373,7 @@ public class Calculator implements Common {
     double acc_ew = 1.1547;
     // 三段加速(ドラゴンブラッド 蔵出し秘蔵酒)
     double acc_3 = 1.125;
+    // キー入力ディレイ
     double key_delay = 0.1815;
 
     double ce_rate = 0.0500;    //サイクロンの確率5%
@@ -5496,7 +5497,7 @@ buki.arrow_elementdmg=0;
         }
         if ((buki.enchant + buki.op2.DMG_SHORT + buki.op2.DMG_LONG) > 0) {
             //buki_text += "ダメージ" + buki.small + "/" + buki.big;
-            buki_text += "ダメージ" + buki.small + "+" + (buki.enchant + buki.op2.DMG_SHORT + buki.op2.DMG_LONG) + "/" + buki.big + "+" + (buki.enchant + buki.op2.DMG_SHORT + buki.op2.DMG_LONG);
+            buki_text += "ダメージ" + buki.small + "+" + (buki.enchant + (buki.op2.DMG_SHORT + buki.op2.DMG_LONG)/2) + "/" + buki.big + "+" + (buki.enchant + (buki.op2.DMG_SHORT + buki.op2.DMG_LONG)/2);
         }
         if (buki.two_hands) {
             buki_text += " 両手武器";
