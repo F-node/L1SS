@@ -2532,6 +2532,9 @@ public class Bougu implements Common {
                 if (enchant == 8) {
                     op2.PVP = 2;
                 }
+                if (enchant == 9) {
+                    op2.PVP = 2;
+                }
             }
 
             if (tokusei.equals("èÓîM")) {
