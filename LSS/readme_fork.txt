@@ -1,6 +1,16 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2019/10/16
+Update 3.6.0
+LSS/data/E.zip
+追加
+	LV93達成記念品
+	https://www.ncsoft.jp/lineage/news/notice/view?bbsNo=3101&articleNo=2323
+	+9 マエストロ: Broly(シャツ)
+	AC:3(+9)、STR+1、DEX+1、INT+1、全耐性+5、ダメージ低下+5、技術耐性+11、MR+16、PvPダメージ低下+4
+	不可:移動、倉庫、削除、強化、追加倉庫
+
 2019/09/18
 Update 3.5.9
 LSS/src/lss/Bougu.java
@@ -17,7 +27,8 @@ LSS/src/lss/Bougu.java
 LSS/data/E.zip
 修正
 	ブレイズショック
-	魔法ディレイ1から0へ 基本ダメージ20から40へ変更
+	魔法ディレイ1から0へ		基本ダメージ20から40へ
+	基本魔法発動率=0.01から0.02へ	魔法発動率強化=0.01から0.02へ
 	対象武器
 		ハロウィンソード.txt
 		ハロウィンツーハンドソード.txt
