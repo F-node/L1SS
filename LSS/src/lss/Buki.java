@@ -240,6 +240,16 @@ public class Buki implements Common {
             op2.ailment[HIT_SECRET] += 1;               //”é‹Z–½’†+1
             }
         }
+        //k“{‚ÌƒNƒƒE      +8ˆÈ~‹­‰»1–ˆ‚É¸—ì–½’†+1(+10‹­‰»‚Ü‚Å“K—p)
+        if (name.equals("k“{‚ÌƒNƒƒE")) {
+            if (enchant >= 10) {
+            op2.ailment[HIT_SPIRIT] += 3;               //¸—ì–½’†+3
+            } else if (enchant >= 9) {
+            op2.ailment[HIT_SPIRIT] += 2;               //¸—ì–½’†+2
+            } else if (enchant >= 8) {
+            op2.ailment[HIT_SPIRIT] += 1;               //¸—ì–½’†+1
+            }
+        }
         //ŽEˆÓ‚ÌƒL[ƒŠƒ“ƒN          +7ˆÈ~‹­‰»1–ˆ‚É”é‹Z–½’†+1–‚–@ƒNƒŠƒeƒBƒJƒ‹+1(+10‹­‰»‚Ü‚Å“K—p)
         if (name.equals("ŽEˆÓ‚ÌƒL[ƒŠƒ“ƒN")) {
             if (enchant >= 10) {

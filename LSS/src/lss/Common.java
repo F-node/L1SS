@@ -30,7 +30,6 @@ public interface Common {
     final int I = 6;
     final int F = 7;
 
-    //final String[] ELEM_LIST = {"火", "水", "風", "地"};
     final String[] ELEM_LIST = {"地", "火", "水", "風"};
     final int EARTH = 0;
     final int FIRE = 1;
@@ -170,9 +169,9 @@ public interface Common {
     final int SEC = 75;         //セキュリティ
     final int F_G = 76;         //ギガンティック
     final int CLAY = 77;        //クレイ
-//    final int ITEM_MD2 = 78;    //新マジックドール
-    final int D_MA = 79;        //ムービングアクセレーション
-    final int D_VR = 80;        //ベノムレジスト
+    final int MOMIJI = 78;      //もみじリング
+    final int D_MA = 79;        //ムービングアクセレーション*********未実装(予約分)
+    final int D_VR = 80;        //ベノムレジスト********************未実装(予約分)
     final int E_QE = 81;        //クエイク
     final int BS_COIN = 82;     //黒蛇のコイン
     final int L_HST = 83;       //成長の果実
@@ -191,7 +190,12 @@ public interface Common {
     final int H_PVP = 96;       //暗殺のボーナス
     final int H_RK = 97;        //ランカーボーナス
     final int ITEM_MAGAN = 98;  //魔眼
-
+    final int P_SA = 99;        //シャイニングアーマー
+    final int P_M = 100;        //マジェスティ
+    final int W_EA = 101;       //エンチャントアキュラシー
+    final int W_FA = 102;       //フリージングアーマー
+    final int D_FB = 103;       //ファイナルバーン
+            
 //    final String[] AILMENT_LIST = {"石化耐性", "睡眠耐性", "凍結耐性", "暗闇耐性", "気絶耐性", "拘束耐性", "恐怖耐性","破壊耐性","石化命中", "睡眠命中", "凍結命中", "暗闇命中", "気絶命中", "拘束命中", "恐怖命中","破壊命中"};
 //    final int STONE = 0;
 //    final int SLEEP = 1;

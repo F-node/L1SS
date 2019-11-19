@@ -1041,7 +1041,7 @@ public class Bougu implements Common {
                 op2.ailment[TERROR] = 1;    //恐怖耐性+1
             }
         }
-        if (name.equals("アントクイーンゴールデンウィング") || name.equals("アントクイーンシルバーウィング")) {
+        if (name.equals("アントクイーンゴールデンウィング")) {
             if (enchant >= 9) {
                 op2.ailment[SPIRIT] = 5;    //精霊耐性+5
             } else if (enchant >= 8) {
@@ -1052,6 +1052,24 @@ public class Bougu implements Common {
                 op2.ailment[SPIRIT] = 2;    //精霊耐性+2
             } else if (enchant >= 5) {
                 op2.ailment[SPIRIT] = 1;    //精霊耐性+1
+            }
+        }
+        if (name.equals("アントクイーンシルバーウィング")) {
+            if (enchant >= 9) {
+                op2.ailment[SPIRIT] = 5;    //精霊耐性+5
+                op2.ER= 5;                  //ER+5
+            } else if (enchant >= 8) {
+                op2.ailment[SPIRIT] = 4;    //精霊耐性+4
+                op2.ER= 4;                  //ER+4
+            } else if (enchant >= 7) {
+                op2.ailment[SPIRIT] = 3;    //精霊耐性+3
+                op2.ER= 3;                  //ER+3
+            } else if (enchant >= 6) {
+                op2.ailment[SPIRIT] = 2;    //精霊耐性+2
+                op2.ER= 2;                  //ER+2
+            } else if (enchant >= 5) {
+                op2.ailment[SPIRIT] = 1;    //精霊耐性+1
+                op2.ER= 1;                  //ER+1
             }
         }
         if (name.equals("血戦のマント")) {

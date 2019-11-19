@@ -97,6 +97,8 @@ public class Calculator implements Common {
     private int base_ac;
     private int equip_ac;
     private int base_er;
+//    private int base_pvp_dr;
+
     Buff buff;
     boolean md_dmg = false;
     int equip_pattern = 0;
@@ -367,7 +369,7 @@ public class Calculator implements Common {
     private double acc = 1.0;
     // 一段加速(GP GGP ワイン ウイスキー)
     double acc_1 = 1.3333;
-    // 二段加速(BP イビルブラッド ブラッドラスト 名誉のコイン ダンシングブレイズ フォーカスウェーブ ハリケーン サンドストーム)
+    // 二段加速(BP イビルブラッド ブラッドラスト 名誉のコイン ダンシングブレイズ フォーカスウェーブ ハリケーン サンドストーム ダークホース)
     double acc_2 = 1.3333;
     // 二段加速(EW 濃縮集中ポーション)
     double acc_ew = 1.1547;
@@ -504,6 +506,7 @@ public class Calculator implements Common {
             buff.effect += b.op2.effect;
             buff.PVP += b.op.PVP + b.op2.PVP;
             buff.PVP_DR += b.op.PVP_DR + b.op2.PVP_DR;
+            buff.ER += b.op.ER + b.op2.ER;
         }
 
         if (bougu[0].name.equals("エルヴンシールド")) {
@@ -877,8 +880,9 @@ public class Calculator implements Common {
                     buff.DMG_SHORT += 2;
                     buff.HIT_SHORT += 2;
                     buff.DR += 2;
-                    buff.effect += "タイタン系列発動区間+5%,";
-                    ui.cb_buff[ITEM_MD].setToolTipText("AC-2 最大HP+80 近距離ダメージ+2 近距離命中+2 ダメージ低下+2 タイタン系技術の発動HP区間が5%増加");
+                    buff.ailment[HIT_TERROR] += 3;
+                    buff.ailment[STUN] += 5;
+                    ui.cb_buff[ITEM_MD].setToolTipText("AC-2 最大HP+80 近距離ダメージ+2 近距離命中+2 ダメージ低下+2 恐怖命中+3 技術耐性+5");
                     break;
                 case 31:                            //祝福されたバンパイア
                     buff.AC -= 4;
@@ -887,8 +891,9 @@ public class Calculator implements Common {
                     buff.DMG_SHORT += 2;
                     buff.HIT_SHORT += 2;
                     buff.DR += 2;
-                    buff.effect += "タイタン系列発動区間+5%,";
-                    ui.cb_buff[ITEM_MD].setToolTipText("AC-4 PVP追加ダメージ+2  最大HP+80 近距離ダメージ+2 近距離命中+2 ダメージ低下+2 タイタン系技術の発動HP区間が5%増加");
+                    buff.ailment[HIT_TERROR] += 3;
+                    buff.ailment[STUN] += 5;
+                    ui.cb_buff[ITEM_MD].setToolTipText("AC-4 PVP追加ダメージ+2  最大HP+80 近距離ダメージ+2 近距離命中+2 ダメージ低下+2 恐怖命中+3 技術耐性+5");
                     break;
                 case 32:                            //シアー
                     buff.AC -= 2;
@@ -1658,12 +1663,12 @@ public class Calculator implements Common {
         }
 
         cons_mp = 0;
-        //リダクションアーマー 消費MP7/3mins 
+        //リダクションアーマー 消費MP7/5mins 
         if (ui.cb_buff[K_RA].isSelected()) {
             if (level >= 50 && cls == K) {
                 buff.DR += (level - 50) / 5 + 1;
                 if (ui.cb_buff[K_RA].getForeground().equals(Color.BLUE)) {
-                    cons_mp += (7.0 * (1.0 - red_mp * 0.01) - red_mp2) / 3;
+                    cons_mp += (7.0 * (1.0 - red_mp * 0.01) - red_mp2) / 5;
                 }
 
             } else {
@@ -1681,12 +1686,12 @@ public class Calculator implements Common {
                 ui.cb_buff[K_SC].setSelected(false);
             }
         }
-        //カウンターバリア 消費MP10/1mins
+        //カウンターバリア 消費MP15/2mins
         if (ui.cb_buff[K_CB].isSelected()) {
             if (level >= 80 && cls == K
                     && buki.type.equals("両手剣")) {
                 if (ui.cb_buff[K_CB].getForeground().equals(Color.BLUE)) {
-                    cons_mp += (10.0 * (1.0 - red_mp * 0.01) - red_mp2) / 1;
+                    cons_mp += (15.0 * (1.0 - red_mp * 0.01) - red_mp2) / 2;
                 }
                 // CB効果未実装
             } else {
@@ -1729,16 +1734,14 @@ public class Calculator implements Common {
                 ui.cb_buff[E_RM].setSelected(false);
             }
         }
-        //レジストエレメント 消費MP10/20mins
+        //レジストエレメント 常時
         if (ui.cb_buff[E_RE].isSelected()) {
             if (cls == E) {
-                buff.element_resist[FIRE] += 10;
-                buff.element_resist[WATER] += 10;
-                buff.element_resist[WIND] += 10;
-                buff.element_resist[EARTH] += 10;
-                if (ui.cb_buff[E_RE].getForeground().equals(Color.BLUE)) {
-                    cons_mp += (10.0 * (1.0 - red_mp * 0.01) - red_mp2) / 20;
-                }
+                buff.MR += 5;
+                buff.element_resist[FIRE] += 5;
+                buff.element_resist[WATER] += 5;
+                buff.element_resist[WIND] += 5;
+                buff.element_resist[EARTH] += 5;
             } else {
                 ui.cb_buff[E_RE].setSelected(false);
             }
@@ -1746,7 +1749,9 @@ public class Calculator implements Common {
         //クリアーマインド 消費MP10/20mins
         if (ui.cb_buff[E_CM].isSelected()) {
             if (cls == E) {
-                buff.ST[WIS] += 3;
+                buff.ST[STR] += 1;
+                buff.ST[DEX] += 1;
+                buff.ST[INT] += 1;
                 if (ui.cb_buff[E_CM].getForeground().equals(Color.BLUE)) {
                     cons_mp += (10.0 * (1.0 - red_mp * 0.01) - red_mp2) / 20;
                 }
@@ -1766,12 +1771,12 @@ public class Calculator implements Common {
                 ui.cb_buff[E_BW].setSelected(false);
             }
         }
-        //インフェルノ 消費MP40/1mins
+        //インフェルノ 消費MP50 HP70/2mins
         if (ui.cb_buff[E_IO].isSelected()) {
             if (level >= 80 && cls == E
                     && buki.type.equals("片手剣")) {
                 if (ui.cb_buff[E_IO].getForeground().equals(Color.BLUE)) {
-                    cons_mp += (40.0 * (1.0 - red_mp * 0.01) - red_mp2) / 1;
+                    cons_mp += (50.0 * (1.0 - red_mp * 0.01) - red_mp2) / 2;
                 }
                 // インフェルノ効果未実装
             } else {
@@ -1837,6 +1842,15 @@ public class Calculator implements Common {
                 ui.cb_buff[D_SA].setSelected(false);
             }
         }
+        //ファイナルバーン 消費MP20 HP50/5mins
+        if (ui.cb_buff[D_FB].isSelected()) {
+            //HPが70%以下の時、近距離クリティカル+5%(レベル80から2つレベルが上がる毎に+1%)
+            if (level <= 80) {
+            buff.CRI_SHORT += 5;
+            } else if (level > 80) {
+            buff.CRI_SHORT += 5+(level/2-40);
+            }
+        }
         //アクアプロテクト 消費MP30/16mins
         if (ui.cb_buff[E_AP].isSelected()) {
             if (ui.cb_buff[D_DE].isSelected()) {
@@ -1890,6 +1904,20 @@ public class Calculator implements Common {
             buff.AC -= 3;
             if (ui.cb_buff[W_BA].getForeground().equals(Color.BLUE)) {
                 cons_mp += (20.0 * (1.0 - red_mp * 0.01) - red_mp2) / 30;
+            }
+        }
+        //エンチャントアキュラシー 消費MP10/5mins
+        if (ui.cb_buff[W_EA].isSelected()) {
+            buff.HIT_SHORT += 5;
+            if (ui.cb_buff[W_EA].getForeground().equals(Color.BLUE)) {
+                cons_mp += (10.0 * (1.0 - red_mp * 0.01) - red_mp2) / 5;
+            }
+        }
+        //フリージングアーマー 消費MP20/5mins
+        if (ui.cb_buff[W_FA].isSelected()) {
+            buff.ER += 5;
+            if (ui.cb_buff[W_FA].getForeground().equals(Color.BLUE)) {
+                cons_mp += (10.0 * (1.0 - red_mp * 0.01) - red_mp2) / 5;
             }
         }
         //ドラゴンスキン 消費MP0/30mins
@@ -2015,6 +2043,17 @@ public class Calculator implements Common {
             ui.cb_buff[CLAY].setToolTipText("<html>"+"HP+100 MP+50 HPR+3 MPR+3"
                     + "<br>"+ "近距離ダメージ+1 遠距離ダメージ+1 近距離命中+5"
                     + "<br>"+ "地属性抵抗+30 ディクリースウェイト"+"</html>");
+        }
+        //もみじリング
+        if (ui.cb_buff[MOMIJI].isSelected()) {
+            buff.HP += 200;
+            buff.ST[STR]++;
+            buff.ST[DEX]++;
+            buff.ST[CON]++;
+            buff.ST[INT]++;
+            buff.ST[WIS]++;
+            buff.ST[CHA]++;
+            ui.cb_buff[MOMIJI].setToolTipText("HP+200 全ステータス+1");
         }
 
         switch (ui.cb_pattern_l.getSelectedIndex()) {
@@ -2150,19 +2189,22 @@ public class Calculator implements Common {
                         case 2:
                             buff.HIT_SHORT += 2;            //近距離命中+2
                                                             //祝福消耗効率+5%
-                            ui.elixir_rune.setToolTipText("ステ+1 ダメージ低下+3 近距離命中+2 祝福消耗効率+5%");
+                                                            //PVP魔法ダメージ減少+1%
+                            ui.elixir_rune.setToolTipText("ステ+1 ダメージ低下+3 近距離命中+2 祝福消耗効率+5% PVP魔法ダメージ減少+1%");
                             break;
                         case 3:
                             buff.HIT_SHORT += 2;            //近距離命中+2
                                                             //祝福消耗効率+5%
                             buff.ailment[HIT_STUN] += 5;    //技術命中+5
-                            ui.elixir_rune.setToolTipText("ステ+1 ダメージ低下+3 近距離命中+2 祝福消耗効率+5% 技術命中+5");
+                                                            //PVP魔法ダメージ減少+2%
+                            ui.elixir_rune.setToolTipText("ステ+1 ダメージ低下+3 近距離命中+2 祝福消耗効率+5% 技術命中+5 PVP魔法ダメージ減少+2%");
                             break;
                         case 4:
                             buff.HIT_SHORT += 2;            //近距離命中+2
                                                             //祝福消耗効率+5%
                             buff.ailment[HIT_STUN] += 10;   //技術命中+10
-                            ui.elixir_rune.setToolTipText("ステ+1 ダメージ低下+3 近距離命中+2 祝福消耗効率+5% 技術命中+10");
+                                                            //PVP魔法ダメージ減少+3%
+                            ui.elixir_rune.setToolTipText("ステ+1 ダメージ低下+3 近距離命中+2 祝福消耗効率+5% 技術命中+10 PVP魔法ダメージ減少+3%");
                             break;
                         default:
                             
@@ -2180,19 +2222,22 @@ public class Calculator implements Common {
                         case 2:
                             buff.DMG_SHORT += 1;            //近距離ダメージ+1
                                                             //祝福消耗効率+5%
-                            ui.elixir_rune.setToolTipText("ステ+1 HP+50 近距離ダメージ+1 祝福消耗効率+5%");
+                                                            //PVP魔法ダメージ減少+1%
+                            ui.elixir_rune.setToolTipText("ステ+1 HP+50 近距離ダメージ+1 祝福消耗効率+5% PVP魔法ダメージ減少+1%");
                             break;
                         case 3:
                             buff.DMG_SHORT += 1;            //近距離ダメージ+1
                                                             //祝福消耗効率+5%
                             buff.ailment[HIT_STUN] += 5;    //技術命中+5
-                            ui.elixir_rune.setToolTipText("ステ+1 HP+50 近距離ダメージ+1 祝福消耗効率+5% 技術命中+5");
+                                                            //PVP魔法ダメージ減少+2%
+                            ui.elixir_rune.setToolTipText("ステ+1 HP+50 近距離ダメージ+1 祝福消耗効率+5% 技術命中+5 PVP魔法ダメージ減少+2%");
                             break;
                         case 4:
                             buff.DMG_SHORT += 1;            //近距離ダメージ+1
                                                             //祝福消耗効率+5%
                             buff.ailment[HIT_STUN] += 10;   //技術命中+10
-                            ui.elixir_rune.setToolTipText("ステ+1 HP+50 近距離ダメージ+1 祝福消耗効率+5% 技術命中+10");
+                                                            //PVP魔法ダメージ減少+3%
+                            ui.elixir_rune.setToolTipText("ステ+1 HP+50 近距離ダメージ+1 祝福消耗効率+5% 技術命中+10 PVP魔法ダメージ減少+3%");
                             break;
                         default:
                             break;
@@ -2211,6 +2256,7 @@ public class Calculator implements Common {
                             buff.DMG_SHORT += 1;            //近距離ダメージ+1
                             buff.DMG_LONG += 1;             //遠距離ダメージ+1
                                                             //祝福消耗効率+5%
+                                                            //PVP魔法ダメージ減少+3%
                             ui.elixir_rune.setToolTipText("ステ+1 MP+50 近距離ダメージ+1 遠距離ダメージ+1 祝福消耗効率+5%");
                             break;
                         case 3:
@@ -2218,6 +2264,7 @@ public class Calculator implements Common {
                             buff.DMG_LONG += 1;             //遠距離ダメージ+1
                                                             //祝福消耗効率+5%
                             buff.ailment[HIT_SPIRIT] += 5;  //精霊命中+5
+                                                            //PVP魔法ダメージ減少+3%
                             ui.elixir_rune.setToolTipText("ステ+1 MP+50 近距離ダメージ+1 遠距離ダメージ+1 祝福消耗効率+5% 精霊命中+5");
                             break;
                         case 4:
@@ -2225,6 +2272,7 @@ public class Calculator implements Common {
                             buff.DMG_LONG += 1;             //遠距離ダメージ+1
                                                             //祝福消耗効率+5%
                             buff.ailment[HIT_SPIRIT] += 10; //精霊命中+10
+                                                            //PVP魔法ダメージ減少+3%
                             ui.elixir_rune.setToolTipText("ステ+1 MP+50 近距離ダメージ+1 遠距離ダメージ+1 祝福消耗効率+5% 精霊命中+10");
                             break;
                         default:
@@ -2242,19 +2290,22 @@ public class Calculator implements Common {
                         case 2:
                             buff.SP += 1;                   //SP+1
                                                             //祝福消耗効率+5%
-                            ui.elixir_rune.setToolTipText("ステ+1 MPR+3 SP+1 祝福消耗効率+5%");
+                                                            //PVP魔法ダメージ減少+1%
+                            ui.elixir_rune.setToolTipText("ステ+1 MPR+3 SP+1 祝福消耗効率+5% PVP魔法ダメージ減少+1%");
                             break;
                         case 3:
                             buff.SP += 1;                   //SP+1
                                                             //祝福消耗効率+5%
                             buff.HIT_MAGIC += 5;            //魔法命中+5
-                            ui.elixir_rune.setToolTipText("ステ+1 MPR+3 SP+1 祝福消耗効率+5% 魔法命中+5");
+                                                            //PVP魔法ダメージ減少+2%
+                            ui.elixir_rune.setToolTipText("ステ+1 MPR+3 SP+1 祝福消耗効率+5% 魔法命中+5 PVP魔法ダメージ減少+2%");
                             break;
                         case 4:
                             buff.SP += 1;                   //SP+1
                                                             //祝福消耗効率+5%
                             buff.HIT_MAGIC += 10;           //魔法命中+10
-                            ui.elixir_rune.setToolTipText("ステ+1 MPR+3 SP+1 祝福消耗効率+5% 魔法命中+10");
+                                                            //PVP魔法ダメージ減少+3%
+                            ui.elixir_rune.setToolTipText("ステ+1 MPR+3 SP+1 祝福消耗効率+5% 魔法命中+10 PVP魔法ダメージ減少+3%");
                             break;
                         default:
                             break;
@@ -2271,19 +2322,22 @@ public class Calculator implements Common {
                         case 2:
                             buff.MP += 30;                  //最大MP+30
                                                             //祝福消耗効率+5%
-                            ui.elixir_rune.setToolTipText("ステ+1 AC-3 MP+30 祝福消耗効率+5%");
+                                                            //PVP魔法ダメージ減少+1%
+                            ui.elixir_rune.setToolTipText("ステ+1 AC-3 MP+30 祝福消耗効率+5% PVP魔法ダメージ減少+1%");
                             break;
                         case 3:
                             buff.MP += 30;                  //最大MP+30
                                                             //祝福消耗効率+5%
                             buff.ailment[HIT_SPIRIT] += 5;  //精霊命中+5
-                            ui.elixir_rune.setToolTipText("ステ+1 AC-3 MP+30 祝福消耗効率+5% 精霊命中+5");
+                                                            //PVP魔法ダメージ減少+2%
+                            ui.elixir_rune.setToolTipText("ステ+1 AC-3 MP+30 祝福消耗効率+5% 精霊命中+5 PVP魔法ダメージ減少+2%");
                             break;
                         case 4:
                             buff.MP += 30;                  //最大MP+30
                                                             //祝福消耗効率+5%
                             buff.ailment[HIT_SPIRIT] += 10; //精霊命中+10
-                            ui.elixir_rune.setToolTipText("ステ+1 AC-3 MP+30 祝福消耗効率+5% 精霊命中+10");
+                                                            //PVP魔法ダメージ減少+3%
+                            ui.elixir_rune.setToolTipText("ステ+1 AC-3 MP+30 祝福消耗効率+5% 精霊命中+10 PVP魔法ダメージ減少+3%");
                             break;
                         default:
                             break;
@@ -2300,19 +2354,22 @@ public class Calculator implements Common {
                         case 2:
                             buff.DR += 1;                   //ダメージ低下+1
                                                             //祝福消耗効率+5%
-                            ui.elixir_rune.setToolTipText("ステ+1 近距離命中+3 ダメージ低下+1 祝福消耗効率+5%");
+                                                            //PVP魔法ダメージ減少+1%
+                            ui.elixir_rune.setToolTipText("ステ+1 近距離命中+3 ダメージ低下+1 祝福消耗効率+5% PVP魔法ダメージ減少+1%");
                             break;
                         case 3:
                             buff.DR += 1;                   //ダメージ低下+1
                                                             //祝福消耗効率+5%
                             buff.ailment[HIT_SECRET] += 5;  //秘技命中+5
-                            ui.elixir_rune.setToolTipText("ステ+1 近距離命中+3 ダメージ低下+1 祝福消耗効率+5% 秘技命中+5");
+                                                            //PVP魔法ダメージ減少+2%
+                            ui.elixir_rune.setToolTipText("ステ+1 近距離命中+3 ダメージ低下+1 祝福消耗効率+5% 秘技命中+5 PVP魔法ダメージ減少+2%");
                             break;
                         case 4:
                             buff.DR += 1;                   //ダメージ低下+1
                                                             //祝福消耗効率+5%
                             buff.ailment[HIT_SECRET] += 10; //秘技命中+10
-                            ui.elixir_rune.setToolTipText("ステ+1 近距離命中+3 ダメージ低下+1 祝福消耗効率+5% 秘技命中+10");
+                                                            //PVP魔法ダメージ減少+3%
+                            ui.elixir_rune.setToolTipText("ステ+1 近距離命中+3 ダメージ低下+1 祝福消耗効率+5% 秘技命中+10 PVP魔法ダメージ減少+3%");
                             break;
                         default:
                             break;
@@ -2330,19 +2387,22 @@ public class Calculator implements Common {
                         case 2:
                             buff.HP += 50;                  //最大HP+50
                                                             //祝福消耗効率+5%
-                            ui.elixir_rune.setToolTipText("ステ+1 所持重量増加+300 HP+50 祝福消耗効率+5%");
+                                                            //PVP魔法ダメージ減少+1%
+                            ui.elixir_rune.setToolTipText("ステ+1 所持重量増加+300 HP+50 祝福消耗効率+5% PVP魔法ダメージ減少+1%");
                             break;
                         case 3:
                             buff.HP += 50;                  //最大HP+50
                                                             //祝福消耗効率+5%
                             buff.ailment[HIT_SECRET] += 5;  //秘技命中+5
-                            ui.elixir_rune.setToolTipText("ステ+1 所持重量増加+300 HP+50 祝福消耗効率+5% 秘技命中+5");
+                                                            //PVP魔法ダメージ減少+2%
+                            ui.elixir_rune.setToolTipText("ステ+1 所持重量増加+300 HP+50 祝福消耗効率+5% 秘技命中+5 PVP魔法ダメージ減少+2%");
                             break;
                         case 4:
                             buff.HP += 50;                  //最大HP+50
                                                             //祝福消耗効率+5%
                             buff.ailment[HIT_SECRET] += 10; //秘技命中+10
-                            ui.elixir_rune.setToolTipText("ステ+1 所持重量増加+300 HP+50 祝福消耗効率+5% 秘技命中+10");
+                                                            //PVP魔法ダメージ減少+3%
+                            ui.elixir_rune.setToolTipText("ステ+1 所持重量増加+300 HP+50 祝福消耗効率+5% 秘技命中+10 PVP魔法ダメージ減少+3%");
                             break;
                         default:
                             break;
@@ -2359,19 +2419,22 @@ public class Calculator implements Common {
                         case 2:
                             buff.MR += 5;                   //MR+5%
                                                             //祝福消耗効率+5%
-                            ui.elixir_rune.setToolTipText("ステ+1 HP+50 MR+5% 祝福消耗効率+5%");
+                                                            //PVP魔法ダメージ減少+1%
+                            ui.elixir_rune.setToolTipText("ステ+1 HP+50 MR+5% 祝福消耗効率+5% PVP魔法ダメージ減少+1%");
                             break;
                         case 3:
                             buff.MR += 5;                   //MR+5%1
                                                             //祝福消耗効率+5%
                             buff.ailment[HIT_TERROR] += 5;  //技術命中+5
-                            ui.elixir_rune.setToolTipText("ステ+1 HP+50 MR+5% 祝福消耗効率+5% 技術命中+5");
+                                                            //PVP魔法ダメージ減少+2%
+                            ui.elixir_rune.setToolTipText("ステ+1 HP+50 MR+5% 祝福消耗効率+5% 技術命中+5 PVP魔法ダメージ減少+2%");
                             break;
                         case 4:
                             buff.MR += 5;                   //MR+5%
                                                             //祝福消耗効率+5%
                             buff.ailment[HIT_TERROR] += 10; //技術命中+10
-                            ui.elixir_rune.setToolTipText("ステ+1 HP+50 MR+5% 祝福消耗効率+5% 技術命中+10");
+                                                            //PVP魔法ダメージ減少+3%
+                            ui.elixir_rune.setToolTipText("ステ+1 HP+50 MR+5% 祝福消耗効率+5% 技術命中+10 PVP魔法ダメージ減少+3%");
                             break;
                         default:
                             break;
@@ -2952,6 +3015,25 @@ public class Calculator implements Common {
                 cons_mp += (25.0 * (1.0 - red_mp * 0.01) - red_mp2) / 10;
             }
         }
+        //シャイニングアーマー 消費MP25 HP50/5mins
+        if (ui.cb_buff[P_SA].isSelected()) {
+            buff.ER += 10;
+            if (ui.cb_buff[P_SA].getForeground().equals(Color.BLUE)) {
+                cons_mp += (25.0 * (1.0 - red_mp * 0.01) - red_mp2) / 5;
+            }
+        }
+        //マジェスティ 消費MP20 HP50/5mins
+        if (ui.cb_buff[P_M].isSelected()) {
+            //DR+2(レベル80から2つレベルが上がる毎に+1)
+            if (level <= 80) {
+            buff.DR += 2;
+            } else if (level > 80) {
+            buff.DR += 2+(level/2-40);
+            }
+            if (ui.cb_buff[P_M].getForeground().equals(Color.BLUE)) {
+                cons_mp += (20.0 * (1.0 - red_mp * 0.01) - red_mp2) / 5;
+            }
+        }
         //ブレイブアバター 消費MP0/常時 STR+1 DEX+1 INT+1 MR+10% 技術耐性+2 精霊耐性+2 秘技耐性+2 恐怖耐性+2
         if (ui.cb_buff[P_BA].isSelected()) {
             buff.MR += 10;
@@ -3486,10 +3568,13 @@ public class Calculator implements Common {
             cri_long += bougu1.op.CRI_LONG + bougu1.op2.CRI_LONG;
             cri_magic += bougu1.op.CRI_MAGIC + bougu1.op2.CRI_MAGIC;
         }
-        cri_short += buki.op.CRI_SHORT + buki.op2.CRI_SHORT;
-        cri_long += buki.op.CRI_LONG + buki.op2.CRI_LONG;
-        cri_magic += buki.op.CRI_MAGIC + buki.op2.CRI_MAGIC;
-
+//        cri_short += buki.op.CRI_SHORT + buki.op2.CRI_SHORT;
+        cri_short += buki.op.CRI_SHORT + buki.op2.CRI_SHORT + buff.CRI_SHORT;
+//        cri_long += buki.op.CRI_LONG + buki.op2.CRI_LONG;
+        cri_long += buki.op.CRI_LONG + buki.op2.CRI_LONG + buff.CRI_LONG;
+//        cri_magic += buki.op.CRI_MAGIC + buki.op2.CRI_MAGIC;
+        cri_magic += buki.op.CRI_MAGIC + buki.op2.CRI_MAGIC+ buff.CRI_MAGIC;
+        
         int st_int = _ST[BASE][INT] + _ST[REM][INT] + _ST[LEVEL][INT]
                 + _ST[ENCHANT][INT] + _ST[ELIXIR][INT];
 
@@ -3999,7 +4084,7 @@ buki.arrow_elementdmg=0;
                 break;
             case "ボウ":
                 //エルフ イーグルアイ 2% 消費MP20/2mins
-                cri_long += cr * 100;
+//                cri_long += cr * 100;
                 if (ui.cb_buff[E_EE].isSelected()) {
                     cri_long += 2;
                     if (ui.cb_buff[E_EE].isSelected()) {
@@ -4014,13 +4099,13 @@ buki.arrow_elementdmg=0;
                         + (1.0 - cri_long * 0.01) * dmg_small_ave;
                 break;
             default:
-                //エルフ ソウルオブフレイム 100% 消費MP30/2mins
+                //エルフ ソウルオブフレイム 100% 消費MP40/5mins
                 cri_short += cr * 100;
                 if (ui.cb_buff[E_SF].isSelected()) {
                     cri_short = 100;
                     if (ui.cb_buff[E_SF].isSelected()) {
                         if (ui.cb_buff[E_SF].getForeground().equals(Color.BLUE)) {
-                            cons_mp += (30.0 * (1.0 - red_mp * 0.01) - red_mp2) / 2;
+                            cons_mp += (40.0 * (1.0 - red_mp * 0.01) - red_mp2) / 5;
                         }
                     }
                 }
@@ -4804,35 +4889,49 @@ buki.arrow_elementdmg=0;
         }
 
         int c = 6;
+//        int d = 4;
         switch (cls) {
             case P:
                 c = 6;
+//                d = 4;
                 break;
             case K:
                 c = 6;
+//                d = 2;
                 break;
             case E:
                 c = 7;
+//                d = 4;
                 break;
             case W:
                 c = 8;
+//                d = 4;
                 break;
             case D:
                 c = 6;
+//                d = 3;
                 break;
             case R:
                 c = 6;
+//                d = 3;
                 break;
             case I:
                 c = 8;
+//                d = 3;
                 break;
             case F:
                 c = 6;
+//                d = 3;
                 break;
             default:
                 break;
         }
         base_ac = 10 - (int) (dex / 3) - (int) (level / c);
+//        LV60からPVPダメージ低下
+//        if (level >= 60){
+//        base_pvp_dr = (int) ((level-60) / d);
+//        System.out.println(base_pvp_dr);    //初期値確認用
+//        }
 
         base_er = (int) (dex / 2) + (int) (level / _C[ER][DEX][cls]);
 
@@ -4848,10 +4947,12 @@ buki.arrow_elementdmg=0;
                 er += -ac / 10-10;
         }
         dr = buff.DR;
-        dri= buff.DR_IGNORED;
+        dri= buff.DR_IGNORED;    
         pvp_dg= buff.PVP;
         pvp_dgr= buff.PVP_DR;
-        
+//        pvp_dgr= base_pvp_dr + buff.PVP_DR;
+//        System.out.println(pvp_dgr);    //初期値確認用
+
         if (ui.cb_buff[F_AG].isSelected()) {
             dr += -ac / 10;
         }
@@ -4876,11 +4977,11 @@ buki.arrow_elementdmg=0;
         pvp_dg += buki.op.PVP + buki.op2.PVP;
         pvp_dgr += buki.op.PVP_DR + buki.op2.PVP_DR;       
         
-        //アンキャニードッジ 消費MP20/3mins
+        //アンキャニードッジ 消費MP40/16mins
         if (ui.cb_buff[D_UD].isSelected()) {
             dg += 30;
             if (ui.cb_buff[D_UD].getForeground().equals(Color.BLUE)) {
-                cons_mp += (20.0 * (1.0 - red_mp * 0.01) - red_mp2) / 3;
+                cons_mp += (40.0 * (1.0 - red_mp * 0.01) - red_mp2) / 16;
             }
         }
         //ミラーイメージ 消費MP20/20mins
@@ -5100,7 +5201,7 @@ buki.arrow_elementdmg=0;
         int hpr2 = 0;
         int mpr2 = 0;
 
-        for (String split : buff.effect.split(",")) {
+       for (String split : buff.effect.split(",")) {
             if (split.contains("HP回復")) {
                 hpr2 += Integer.parseInt(split.split(" ")[1]);
             }
@@ -5357,17 +5458,17 @@ buki.arrow_elementdmg=0;
         ui.lab_hp.setText(Integer.toString((int) hp));
         ui.lab_mp.setText(Integer.toString((int) mp));
         //ムービングアクセレーション 消費MP10/16mins
-        if (ui.cb_buff[D_MA].isSelected()) {
-            if (ui.cb_buff[D_MA].getForeground().equals(Color.BLUE)) {
-                cons_mp += (10.0 * (1.0 - red_mp * 0.01) - red_mp2) / 16;
-            }
-        }
+        //if (ui.cb_buff[D_MA].isSelected()) {
+        //    if (ui.cb_buff[D_MA].getForeground().equals(Color.BLUE)) {
+        //        cons_mp += (10.0 * (1.0 - red_mp * 0.01) - red_mp2) / 16;
+        //    }
+        //}
         //ベノムレジスト 消費MP20/5mins
-        if (ui.cb_buff[D_VR].isSelected()) {
-            if (ui.cb_buff[D_MA].getForeground().equals(Color.BLUE)) {
-                cons_mp += (20.0 * (1.0 - red_mp * 0.01) - red_mp2) / 5;
-            }
-        }
+        //if (ui.cb_buff[D_VR].isSelected()) {
+        //    if (ui.cb_buff[D_MA].getForeground().equals(Color.BLUE)) {
+        //        cons_mp += (20.0 * (1.0 - red_mp * 0.01) - red_mp2) / 5;
+        //    }
+        //}
         //エキゾチックバイタライズ 消費MP30/16mins
         if (ui.cb_buff[E_EV].isSelected()) {
             if (ui.cb_buff[E_EV].getForeground().equals(Color.BLUE)) {
