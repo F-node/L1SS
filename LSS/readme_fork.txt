@@ -2,6 +2,14 @@ LineageStatusSimulator_fork2018
 
 変更点
 2019/11/20
+Update 3.6.2
+LSS/src/lss/Calculator.java
+LSS/src/lss/UI.java
+仕様変更
+	HW/EW/BW/SFの武器からキャラにかかるエンチャント効果の変更
+
+
+2019/11/20
 Update 3.6.1
 LSS/data/E.zip
 LSS/src/lss/Bougu.java
