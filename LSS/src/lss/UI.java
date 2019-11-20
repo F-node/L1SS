@@ -1166,7 +1166,7 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff_group[BUKI] = new WideComboBox(list_buki);
         cb_buff_group[BUKI].setBounds(100, 20 * col, 80, 20);
         cb_buff_group[BUKI].setSelectedIndex(2);
-        cb_buff[BUKI] = new JCheckBox("武器");
+        cb_buff[BUKI] = new JCheckBox("キャラ");
         cb_buff[BUKI].setToolTipText("<html>"+ "ホーリーウェポン 近距離ダメージ+1 近距離命中+1"
                 + "<br>"+ "エンチャントウェポン 近距離ダメージ+2"
                 + "<br>"+ "ブレスウェポン 近距離ダメージ+2 近距離命中+2"
