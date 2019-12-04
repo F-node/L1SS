@@ -1530,16 +1530,16 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[ITEM_WIZP] = new JCheckBox("ウィズダムポーション");
         cb_buff[ITEM_WIZP].setBounds(200 * row, 20 * col++, 150, 20);
 
-        String list_cooking[] = {"力強い和牛ステーキ", "祝福された力強い和牛ステーキ", "素早い鮭の煮付", "祝福された素早い鮭の煮付","賢い七面鳥焼き", "祝福された賢い七面鳥焼き","小粋な麺料理", "真心がこもった料理"};
+        String list_cooking[] = {"力強い和牛ステーキ", "祝福された力強い和牛ステーキ", "素早い鮭の煮付", "祝福された素早い鮭の煮付","賢い七面鳥焼き", "祝福された賢い七面鳥焼き","小粋な麺料理", "真心がこもった料理", "パタラシの和牛ステーキ", "パタラシのサーモンカナッペ", "パタラシの七面鳥焼き"};
         cb_buff_group[ITEM_COOKING] = new WideComboBox(list_cooking);
         cb_buff_group[ITEM_COOKING].setBounds(200 * row + 100, 20 * col, 80, 20);
         cb_buff[ITEM_COOKING] = new JCheckBox("料理");
         cb_buff[ITEM_COOKING].setBounds(200 * row, 20 * col++, 100, 20);
 
-        String list_dessert[] = {"修練の鶏スープ", "祝福された修練の鶏スープ", "幻想のバシリスクの卵スープ", "幻想のショートケーキ", "小粋な携帯飲料", "真心がこもったスープ"};
+        String list_dessert[] = {"修練の鶏スープ", "祝福された修練の鶏スープ", "幻想のバシリスクの卵スープ", "幻想のショートケーキ", "小粋な携帯飲料", "真心がこもったスープ", "パタラシのキノコスープ"};
         cb_buff_group[ITEM_DESSERT] = new WideComboBox(list_dessert);
         cb_buff_group[ITEM_DESSERT].setBounds(200 * row + 100, 20 * col, 80, 20);
-        cb_buff[ITEM_DESSERT] = new JCheckBox("デザート");
+        cb_buff[ITEM_DESSERT] = new JCheckBox("スープ");
         cb_buff[ITEM_DESSERT].setBounds(200 * row, 20 * col++, 100, 20);
 
         String list_breeze[] = {"治癒のポーション", "瞑想のポーション", "生命のポーション", "魔法のポーション",

@@ -1466,6 +1466,47 @@ public class Calculator implements Common {
         // 料理
         if (ui.cb_buff[ITEM_COOKING].isSelected()) {
             switch (ui.cb_buff_group[ITEM_COOKING].getSelectedIndex()) {
+                case 10:                                 //パタラシの七面鳥焼き
+                    buff.DR += 2;
+                    buff.SP += 2;
+                    buff.HPR += 2;
+                    buff.MPR += 3;
+                    buff.MR += 10;
+                    buff.element_resist[FIRE] += 10;
+                    buff.element_resist[WIND] += 10;
+                    buff.element_resist[EARTH] += 10;
+                    buff.element_resist[WATER] += 10;
+                    ui.cb_buff[ITEM_COOKING].setToolTipText("<html>"+"水属性抵抗+10 地属性抵抗+10 風属性抵抗+10 火属性抵抗+10"
+                                                           + "<br>"+ "MR+10 HPR+2 MPR+3 SP+2 EXP+10% ダメージ低下+2 15分"+"</html>");
+                    break;
+                case 9:                                 //パタラシのサーモンカナッペ
+                    buff.DR += 2;
+                    buff.HPR += 2;
+                    buff.MPR += 2;
+                    buff.MR += 10;
+                    buff.DMG_LONG += 2;
+                    buff.HIT_LONG += 1;
+                    buff.element_resist[FIRE] += 10;
+                    buff.element_resist[WIND] += 10;
+                    buff.element_resist[EARTH] += 10;
+                    buff.element_resist[WATER] += 10;
+                    ui.cb_buff[ITEM_COOKING].setToolTipText("<html>"+"水属性抵抗+10 地属性抵抗+10 風属性抵抗+10 火属性抵抗+10"
+                                                           + "<br>"+ "MR+10 HPR+2 MPR+2 遠距離ダメージ+2 遠距離命中+1 EXP+10% ダメージ低下+2 15分"+"</html>");
+                    break;
+                case 8:                                 //パタラシの和牛ステーキ
+                    buff.DR += 2;
+                    buff.HPR += 2;
+                    buff.MPR += 2;
+                    buff.MR += 10;
+                    buff.DMG_SHORT += 2;
+                    buff.HIT_SHORT += 1;
+                    buff.element_resist[FIRE] += 10;
+                    buff.element_resist[WIND] += 10;
+                    buff.element_resist[EARTH] += 10;
+                    buff.element_resist[WATER] += 10;
+                    ui.cb_buff[ITEM_COOKING].setToolTipText("<html>"+"水属性抵抗+10 地属性抵抗+10 風属性抵抗+10 火属性抵抗+10"
+                                                           + "<br>"+ "MR+10 HPR+2 MPR+2 近距離ダメージ+2 近距離命中+1 EXP+10% ダメージ低下+2 15分"+"</html>");
+                    break;
                 case 7:                                 //真心がこもった料理
                     buff.DR += 5;
                     buff.SP += 2;
@@ -1632,6 +1673,10 @@ public class Calculator implements Common {
                 case 5:                                 //真心がこもったスープ
                     buff.DR += 5;
                     ui.cb_buff[ITEM_DESSERT].setToolTipText("ダメージ低下+5 獲得経験値+5% 15分20秒");
+                    break;
+                case 6:                                 //パタラシのキノコスープ
+                    buff.DR += 2;
+                    ui.cb_buff[ITEM_DESSERT].setToolTipText("ダメージ低下+2 獲得経験値+10% 15分");
                     break;
                 default:
                     break;
