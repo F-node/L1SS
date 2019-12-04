@@ -1,6 +1,26 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2019/12/04
+Update 3.6.3
+LSS/data/E.zip
+LSS/src/lss/Bougu.java
+仕様変更
+	2019/12/04 Update
+	https://www.ncsoft.jp/lineage/news/notice/view?bbsNo=3101&articleNo=2350
+
+	特性:根性のアミュレット部位装備の特性が誓いに変更され、+5以上に強化時のオプションが上方修正
+	特性:情熱のリング部位装備の強化により、獲得できるPvP追加ダメージオプションが上方修正
+	特性:意地のベルト部位装備の強化により、獲得できるPvPダメージ低下オプションが上方修正
+	参考資料:http://www.lineagenews.info/article/462263821.html
+
+装備修正
+	アミュレットの特性:根性を誓いへ
+	対象:最果てのアミュレット/ゼラチンキューブのアミュレット(剣士)/ゼラチンキューブのアミュレット(術士)以外すべて
+
+	ゼラチンの体力のアミュレット/ゼラチンの精神のアミュレット
+	材質:骨をゴールドへ
+
 2019/11/20
 Update 3.6.2
 LSS/src/lss/Calculator.java
