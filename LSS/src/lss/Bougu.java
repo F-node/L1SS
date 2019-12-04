@@ -2609,7 +2609,7 @@ public class Bougu implements Common {
                         break;
                 }
             }
-            //根性のアミュレット
+            //誓いのアミュレット
             if (tokusei.equals("誓い")) {
                 switch (enchant) {
                     case 1:
@@ -2659,6 +2659,59 @@ public class Bougu implements Common {
                         op2.effect = "ポーション回復量 +10% +8,";
                         op2.effect += "回復悪化防御 +10% (恐怖),";
                         op2.MR = 10;
+                        op2.AC -= 5;
+                        op2.ailment[STUN] += 4;
+                        break;
+                    default:
+                        break;
+                }
+
+            }
+            //根性のイアリング
+            if (tokusei.equals("根性")) {
+                switch (enchant) {
+                    case 1:
+                        op2.HP = 5;
+                        break;
+                    case 2:
+                        op2.HP = 10;
+                        break;
+                    case 3:
+                        op2.HP = 20;
+                        break;
+                    case 4:
+                        op2.HP = 30;
+                        break;
+                    case 5:
+                        op2.HP = 40;
+                        op2.effect = "ポーション回復量 +2% +0,";
+                        op2.effect += "回復悪化防御 +2% (恐怖),";
+                        op2.AC -= 1;
+                        break;
+                    case 6:
+                        op2.HP = 40;
+                        op2.effect = "ポーション回復量 +4% +2,";
+                        op2.effect += "回復悪化防御 +4% (恐怖),";
+                        op2.AC -= 2;                      
+                        break;
+                    case 7:
+                        op2.HP = 50;
+                        op2.effect = "ポーション回復量 +6% +4,";
+                        op2.effect += "回復悪化防御 +6% (恐怖),";
+                        op2.AC -= 3;
+                        op2.ailment[STUN] += 2;
+                        break;
+                    case 8:
+                        op2.HP = 50;
+                        op2.effect = "ポーション回復量 +8% +6,";
+                        op2.effect += "回復悪化防御 +8% (恐怖),";
+                        op2.AC -= 4;
+                        op2.ailment[STUN] += 3;
+                        break;
+                    case 9:
+                        op2.HP = 60;
+                        op2.effect = "ポーション回復量 +9% +7,";
+                        op2.effect += "回復悪化防御 +9% (恐怖),";
                         op2.AC -= 5;
                         op2.ailment[STUN] += 4;
                         break;

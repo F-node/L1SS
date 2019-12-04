@@ -2,6 +2,13 @@ LineageStatusSimulator_fork2018
 
 変更点
 2019/12/04
+Update 3.6.5
+LSS/src/lss/Bougu.java
+修正
+	Update 3.6.3にて特性:根性を誓いに変更した際、イアリングも特性:根性だった為に、追加オプションが非適応となる
+	再度、特性:根性の追加オプションの処理を追加
+
+2019/12/04
 Update 3.6.4
 LSS/src/lss/Calculator.java
 LSS/src/lss/UI.java
