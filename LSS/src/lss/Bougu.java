@@ -2554,7 +2554,7 @@ public class Bougu implements Common {
                     op2.PVP = 2;
                 }
             }
-
+            //情熱のリング
             if (tokusei.equals("情熱")) {
                 switch (enchant) {
                     case 1:
@@ -2579,6 +2579,7 @@ public class Bougu implements Common {
                         op2.DMG_LONG = 2;
                         op2.DMG_SHORT = 2;
                         op2.MR = 1;
+                        op2.PVP = 1;        //PVP追加ダメージ+1
                         break;
                     case 7:
                         op2.HP = 50;
@@ -2586,30 +2587,30 @@ public class Bougu implements Common {
                         op2.DMG_SHORT = 3;
                         op2.SP = 1;
                         op2.MR = 3;
-                        op2.PVP = 1;        //PVP追加ダメージ+1
+                        op2.PVP = 2;        //PVP追加ダメージ+2
                         break;
                     case 8:
                         op2.HP = 50;
                         op2.DMG_LONG = 4;
                         op2.DMG_SHORT = 4;
-                        op2.PVP = 2;        //PVP追加ダメージ+2
                         op2.SP = 2;
                         op2.MR = 5;
+                        op2.PVP = 3;        //PVP追加ダメージ+3
                         break;
                     case 9:
                         op2.HP = 60;
                         op2.DMG_LONG = 5;
                         op2.DMG_SHORT = 5;
-                        op2.PVP = 3;        //PVP追加ダメージ+3
                         op2.SP = 3;
                         op2.MR = 7;
+                        op2.PVP = 5;        //PVP追加ダメージ+5
                         break;
                     default:
                         break;
                 }
             }
-
-            if (tokusei.equals("根性")) {
+            //根性のアミュレット
+            if (tokusei.equals("誓い")) {
                 switch (enchant) {
                     case 1:
                         op2.HP = 5;
@@ -2625,35 +2626,40 @@ public class Bougu implements Common {
                         break;
                     case 5:
                         op2.HP = 40;
-                        op2.effect = "ポーション回復量 +2% +0,";
-                        op2.effect += "回復悪化防御 +2% (恐怖),";
+                        op2.effect = "ポーション回復量 +3% +0,";
+                        op2.effect += "回復悪化防御 +3% (恐怖),";
+                        op2.MR = 1;
                         op2.AC -= 1;
                         break;
                     case 6:
                         op2.HP = 40;
-                        op2.effect = "ポーション回復量 +4% +2,";
-                        op2.effect += "回復悪化防御 +4% (恐怖),";
+                        op2.effect = "ポーション回復量 +5% +3,";
+                        op2.effect += "回復悪化防御 +5% (恐怖),";
+                        op2.MR = 3;
                         op2.AC -= 2;                      
                         break;
                     case 7:
                         op2.HP = 50;
-                        op2.effect = "ポーション回復量 +6% +4,";
-                        op2.effect += "回復悪化防御 +6% (恐怖),";
+                        op2.effect = "ポーション回復量 +7% +5,";
+                        op2.effect += "回復悪化防御 +7% (恐怖),";
+                        op2.MR = 5;
                         op2.AC -= 3;
                         op2.ailment[STUN] += 2;
                         break;
                     case 8:
                         op2.HP = 50;
-                        op2.effect = "ポーション回復量 +8% +6,";
-                        op2.effect += "回復悪化防御 +8% (恐怖),";
+                        op2.effect = "ポーション回復量 +9% +7,";
+                        op2.effect += "回復悪化防御 +9% (恐怖),";
+                        op2.MR = 7;
                         op2.AC -= 4;
                         op2.ailment[STUN] += 3;
                         break;
                     case 9:
                         op2.HP = 60;
-                        op2.effect = "ポーション回復量 +9% +7,";
-                        op2.effect += "回復悪化防御 +9% (恐怖),";
-                        op2.AC -= 4;
+                        op2.effect = "ポーション回復量 +10% +8,";
+                        op2.effect += "回復悪化防御 +10% (恐怖),";
+                        op2.MR = 10;
+                        op2.AC -= 5;
                         op2.ailment[STUN] += 4;
                         break;
                     default:
@@ -2661,7 +2667,7 @@ public class Bougu implements Common {
                 }
 
             }
-
+            //意地のベルト
             if (tokusei.equals("意地")) {
                 switch (enchant) {
                     case 1:
@@ -2684,24 +2690,25 @@ public class Bougu implements Common {
                         op2.HP = 20;
                         op2.MP = 40;
                         op2.DR = 2;
+                        op2.PVP_DR=1;        //PVPダメージ低下+1
                         break;
                     case 7:
                         op2.HP = 30;
                         op2.MP = 50;
                         op2.DR = 3;
-                        op2.PVP_DR=2;        //PVPダメージ低下+2
+                        op2.PVP_DR=3;        //PVPダメージ低下+3
                         break;
                     case 8:
                         op2.HP = 40;
                         op2.MP = 50;
                         op2.DR = 4;
-                        op2.PVP_DR=3;        //PVPダメージ低下+3                        
+                        op2.PVP_DR=5;        //PVPダメージ低下+5
                         break;
                     case 9:
                         op2.HP = 50;
-                        op2.MP = 60;
+                        op2.MP = 50;
                         op2.DR = 5;
-                        op2.PVP_DR=4;        //PVPダメージ低下+4
+                        op2.PVP_DR=7;        //PVPダメージ低下+7
                         break;
                     default:
                         break;
