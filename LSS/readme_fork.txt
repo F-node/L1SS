@@ -1,6 +1,13 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2019/12/11
+Update 3.6.6
+LSS/data/E.zip
+装備修正
+	神聖な腕力のリング/神聖な機敏のリング/神聖な知識のリング
+	追加オプションHP+30をHP+60へ
+
 2019/12/04
 Update 3.6.5
 LSS/src/lss/Bougu.java
