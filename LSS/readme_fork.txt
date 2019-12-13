@@ -1,6 +1,13 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2019/12/13
+Update 3.6.7
+LSS/src/lss/Calculator.java
+LSS/src/lss/UI.java
+スキル修正
+	Twitterの動画よりILL用加速スキル(ダークホース)が倍率1.080倍と計測できたので2段加速に項目追加
+
 2019/12/11
 Update 3.6.6
 LSS/data/E.zip

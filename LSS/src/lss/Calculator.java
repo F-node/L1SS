@@ -369,10 +369,12 @@ public class Calculator implements Common {
     private double acc = 1.0;
     // 一段加速(GP GGP ワイン ウイスキー)
     double acc_1 = 1.3333;
-    // 二段加速(BP イビルブラッド ブラッドラスト 名誉のコイン ダンシングブレイズ フォーカスウェーブ ハリケーン サンドストーム ダークホース)
+    // 二段加速(BP イビルブラッド ブラッドラスト 名誉のコイン ダンシングブレイズ フォーカスウェーブ ハリケーン サンドストーム)
     double acc_2 = 1.3333;
     // 二段加速(EW 濃縮集中ポーション)
     double acc_ew = 1.1547;
+    // 二段加速(ダークホース)
+    double acc_df = 1.0800;
     // 三段加速(ドラゴンブラッド 蔵出し秘蔵酒)
     double acc_3 = 1.125;
     // キー入力ディレイ
@@ -2998,6 +3000,9 @@ public class Calculator implements Common {
                     break;
                 case 1:
                     acc *= acc_ew;
+                    break;
+                case 2:
+                    acc *= acc_df;
                     break;
                 default:
                     break;

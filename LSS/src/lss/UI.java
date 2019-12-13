@@ -1111,13 +1111,13 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[ACC1].setToolTipText("x1.3333:GP GGP ワイン ウイスキー");
         cb_buff[ACC1].setBounds(0, 20 * col++, 100, 20);
 
-        String list_acc2[] = {"x1.3333", "x1.1547"};
+        String list_acc2[] = {"x1.3333", "x1.1547", "x1.0800"};
         cb_buff_group[ACC2] = new WideComboBox(list_acc2);
         cb_buff_group[ACC2].setBounds(100, 20 * col, 80, 20);
         cb_buff[ACC2] = new JCheckBox("2段加速");
-        cb_buff[ACC2].setToolTipText("<html>"+ "x1.3333:BP イビルブラッド ブラッドラスト 名誉のコイン"
-                + "<br>"+ "ダンシングブレイズ フォーカスウェーブ ハリケーン サンドストーム ダークホース"
-                + "<br>"+ "x1.1547:EW 濃縮集中ポーション"+"</html>");
+        cb_buff[ACC2].setToolTipText("<html>"+ "x1.3333:BP イビルブラッド ブラッドラスト 名誉のコイン ダンシングブレイズ フォーカスウェーブ ハリケーン サンドストーム"
+                + "<br>"+ "x1.1547:EW 濃縮集中ポーション"
+                + "<br>"+ "x1.0800:ダークホース"+"</html>");
         cb_buff[ACC2].setBounds(0, 20 * col++, 100, 20);
 
         cb_buff[ACC3] = new JCheckBox("3段加速");
