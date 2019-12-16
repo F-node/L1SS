@@ -1,6 +1,14 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2019/12/16
+Update 3.6.8
+LSS/src/lss/Calculator.java
+スキル修正
+	2019/10/30 Update
+	21周年アップデートのクラスケアによりブローアタックの対応武器に両手剣が追加された
+	https://lineage.plaync.com/board/update/view?articleId=4189560&viewMode=list&size=20
+
 2019/12/13
 Update 3.6.7
 LSS/src/lss/Calculator.java

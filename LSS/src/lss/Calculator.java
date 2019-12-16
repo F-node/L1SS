@@ -4654,10 +4654,9 @@ buki.arrow_elementdmg=0;
                 ui.cb_buff[P_B].setSelected(false);
             }
         }
-        //ブローアタック 消費MP10/5mins
+        //ブローアタック 消費MP10/5mins 武器対応:ダガー/片手剣/両手剣/鈍器/槍
         if (ui.cb_buff[K_BK].isSelected()) {
-            if (level >= 75 && cls == K
-                    && buki_id == W_D || buki_id == W_LS || buki_id == W_A|| buki_id == W_L) {
+            if (level >= 75 && cls == K && buki_id == W_D || buki_id == W_LS || buki_id == W_TS || buki_id == W_A|| buki_id == W_L) {
                 double bk_lv_bonus =((level - 74) * 0.01);
             
                 dmg_big_ave *= 1.5 * (bk_rate + bk_lv_bonus)
