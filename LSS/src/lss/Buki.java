@@ -266,6 +266,109 @@ public class Buki implements Common {
             op2.CRI_MAGIC += 1;                         //魔法クリティカル+1
             }
         }
+        //ヴァラカスのソード            +8以降強化1毎に技術/精霊/恐怖命中+1(最大+3)(+10強化まで適用)
+        if (name.equals("ヴァラカスのソード(REMASTERED)") || name.equals("ヴァラカスのソード(REMASTERED)(ヴァラカスの魂発動)")) {
+            if (enchant >= 10) {
+            op2.ailment[HIT_STUN] += 3;                 //技術命中+3
+            op2.ailment[HIT_SPIRIT] += 3;               //精霊命中+3
+            op2.ailment[HIT_TERROR] += 3;               //恐怖命中+3            
+            } else if (enchant >= 9) {
+            op2.ailment[HIT_STUN] += 2;                 //技術命中+2
+            op2.ailment[HIT_SPIRIT] += 2;               //精霊命中+2
+            op2.ailment[HIT_TERROR] += 2;               //恐怖命中+2
+            } else if (enchant >= 8) {
+            op2.ailment[HIT_STUN] += 1;                 //技術命中+1
+            op2.ailment[HIT_SPIRIT] += 1;               //精霊命中+1
+            op2.ailment[HIT_TERROR] += 1;               //恐怖命中+1
+            }
+        }
+        //ヴァラカスの両手剣            +8以降強化1毎に技術命中+1(最大+3)(+10強化まで適用)
+        if (name.equals("ヴァラカスの両手剣(REMASTERED)") || name.equals("ヴァラカスの両手剣(REMASTERED)(ヴァラカスの魂発動)")) {
+            if (enchant >= 10) {
+            op2.ailment[HIT_STUN] += 3;                 //技術命中+3            
+            } else if (enchant >= 9) {
+            op2.ailment[HIT_STUN] += 2;                 //技術命中+2
+            } else if (enchant >= 8) {
+            op2.ailment[HIT_STUN] += 1;                 //技術命中+1
+            }
+        }
+        //パプリオンのロングボウ        +8以降強化1毎に精霊命中+1/ダメージリダクション無視+1(最大+3)(+10強化まで適用)
+        if (name.equals("パプリオンのロングボウ(REMASTERED)") || name.equals("パプリオンのロングボウ(REMASTERED)(パプリオンの魂発動)")) {
+            if (enchant >= 10) {
+            op2.ailment[HIT_SPIRIT] += 3;               //精霊命中+3
+            op2.DR_IGNORED += 3;                        //ダメージリダクション無視+3            
+            } else if (enchant >= 9) {
+            op2.ailment[HIT_SPIRIT] += 2;               //精霊命中+2
+            op2.DR_IGNORED += 2;                        //ダメージリダクション無視+2
+            } else if (enchant >= 8) {
+            op2.ailment[HIT_SPIRIT] += 1;               //精霊命中+1
+            op2.DR_IGNORED += 1;                        //ダメージリダクション無視+1
+            }
+        }
+        //パプリオンのデュアルブレード  +8以降強化1毎に精霊命中+1(最大+3)(+10強化まで適用)
+        //                            ダブルヒット発動確率増加は未実装
+        if (name.equals("パプリオンのデュアルブレード(REMASTERED)") || name.equals("パプリオンのデュアルブレード(REMASTERED)(パプリオンの魂発動)")) {
+            if (enchant >= 10) {
+            op2.ailment[HIT_SPIRIT] += 3;               //精霊命中+3
+                                                        //ダブルヒット発動確率増加+3            
+            } else if (enchant >= 9) {
+            op2.ailment[HIT_SPIRIT] += 2;               //精霊命中+2
+                                                        //ダブルヒット発動確率増加+2
+            } else if (enchant >= 8) {
+            op2.ailment[HIT_SPIRIT] += 1;               //精霊命中+1
+                                                        //ダブルヒット発動確率増加+1
+            }
+        }
+        //アンタラスのアックス          +8以降強化1毎に恐怖命中+1(最大+3)(+10強化まで適用)
+        if (name.equals("アンタラスのアックス(REMASTERED)") || name.equals("アンタラスのアックス(REMASTERED)(アンタラスの魂発動)")) {
+            if (enchant >= 10) {
+            op2.ailment[HIT_TERROR] += 3;               //恐怖命中+3            
+            } else if (enchant >= 9) {
+            op2.ailment[HIT_TERROR] += 2;               //恐怖命中+2
+            } else if (enchant >= 8) {
+            op2.ailment[HIT_TERROR] += 1;               //恐怖命中+1
+            }
+        }
+        //アンタラスのスタッフ          +8以降強化1毎にSP+1/魔法命中+1(最大+3)(+10強化まで適用)
+        if (name.equals("アンタラスのスタッフ(REMASTERED)") || name.equals("アンタラスのスタッフ(REMASTERED)(アンタラスの魂発動)")) {
+            if (enchant >= 10) {
+            op2.SP                  += 3;               //SP+3
+            op2.HIT_MAGIC           += 3;               //魔法命中+3            
+            } else if (enchant >= 9) {
+            op2.SP                  += 2;               //SP+2
+            op2.HIT_MAGIC           += 2;               //魔法命中+2
+            } else if (enchant >= 8) {
+            op2.SP                  += 1;               //SP+1
+            op2.HIT_MAGIC           += 1;               //魔法命中+1
+            }
+        }
+        //リンドビオルのチェーンソード  +8以降強化1毎に秘技命中+1(最大+3)(+10強化まで適用)
+        //                            弱点露出確率増加は未実装
+        if (name.equals("リンドビオルのチェーンソード(REMASTERED)") || name.equals("リンドビオルのチェーンソード(REMASTERED)(リンドビオルの魂発動)")) {
+            if (enchant >= 10) {
+            op2.ailment[HIT_SECRET] += 3;               //秘技命中+3
+                                                        //弱点露出確率増加+3
+            } else if (enchant >= 9) {
+            op2.ailment[HIT_SECRET] += 2;               //秘技命中+2
+                                                        //弱点露出確率増加+2
+            } else if (enchant >= 8) {
+            op2.ailment[HIT_SECRET] += 1;               //秘技命中+1
+                                                        //弱点露出確率増加+1
+            }
+        }
+        //リンドビオルのキーリンク      +8以降強化1毎にSP+1/秘技命中+1(最大+3)(+10強化まで適用)
+        if (name.equals("リンドビオルのキーリンク(REMASTERED)") || name.equals("リンドビオルのキーリンク(REMASTERED)(リンドビオルの魂発動)")) {
+            if (enchant >= 10) {
+            op2.SP                  += 3;               //SP+3
+            op2.ailment[HIT_SECRET] += 3;               //秘技命中+3            
+            } else if (enchant >= 9) {
+            op2.SP                  += 2;               //SP+2
+            op2.ailment[HIT_SECRET] += 2;               //秘技命中+2
+            } else if (enchant >= 8) {
+            op2.SP                  += 1;               //SP+1
+            op2.ailment[HIT_SECRET] += 1;               //秘技命中+1
+            }
+        }
         //真冥王の執行剣            +1強化毎に[近距離追加ダメージ+2(既存処理+1)][近距離クリティカル+1][技術命中+1]増加
         if (name.equals("真冥王の執行剣")) {
             if (enchant >= 0) {
