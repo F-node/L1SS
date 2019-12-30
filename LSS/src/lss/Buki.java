@@ -5,77 +5,78 @@ import java.io.IOException;
 
 public class Buki implements Common {
 
-    int small = 0;
-    int big = 0;
-    String name = "";
-    String type = "";
-    double critical_rate = 0;// クロウ クリティカル
-    double double_hit_rate = 0;// デュアルブレード ダブルヒット
-    double week_point_exposure = 0;// チェーンソード 弱点露出
-    boolean two_hands = false;
+    int small = 0;                      //小さなモンスターダメージ
+    int big = 0;                        //大きなモンスターダメージ
+    String name = "";                   //武器の名前
+    String type = "";                   //武器の種類
+    double critical_rate = 0;           //クロウ クリティカル
+    double double_hit_rate = 0;         //デュアルブレード ダブルヒット
+    double week_point_exposure = 0;     //チェーンソード 弱点露出
+    boolean two_hands = false;          //両手剣(true)両手剣以外(false)
 //    String equip = "";
-    String material = "";
-    Buff op = new Buff();
-    Buff op2 = new Buff();
-    int enchant = 0;
-    int magic_enchant = 0;
-    int max_enchant = 0;
-    String arrow_name = "";
-    String arrow_material = "";
-//    String arrow_type = "";
-//    int arrow_small = 0;
-//    int arrow_big = 0;
-    int arrow_dmg = 0;
-    int arrow_elementdmg = 0; 
-    int arrow_hit = 0;
-    
-    int safety = 0;
-    boolean element_enchant = false;
+    String material = "";               //材質
+    Buff op = new Buff();               //武器1のオプション
+    Buff op2 = new Buff();              //武器2のオプション
+    int enchant = 0;                    //強化値
+    int magic_enchant = 0;              //武器に対して効果のある追加魔法ダメージ
+    int max_enchant = 0;                //最高可能強化値
+    int safety = 0;                     //安全強化値
+    boolean element_enchant = false;    //属性強化数
     // キーリンク用
-    int x, y, z;
+    int x, y, z;                        //キーリンク用ダメージダイス
     // 魔法武器用
-    String magic_name = "";
-//    boolean magic_motion = false;
-    double magic_rate = 0;
-    double magic_rate_plus = 0;
-    String magic_element = "";
-    double magic_power = 0;
-    double magic_delay = 0;
-//    int weight = 0;
+    String magic_name = "";             //魔法武器の魔法の名前
+//    boolean magic_motion = false;       //魔法モーションの有無
+    double magic_rate = 0;              //魔法発動率
+    double magic_rate_plus = 0;         //強化+1毎の魔法発動率
+    String magic_element = "";          //魔法属性
+    double magic_power = 0;             //魔法基本ダメージ
+    double magic_delay = 0;             //魔法ディレイ
+//    int buki_weight = 0;                //武器の重さ
+
+    //矢の設定情報
+    String arrow_name = "";             //矢の名前
+    int arrow_elementdmg = 0;           //武器属性ダメージ
+    int arrow_dmg = 0;                  //遠距離ダメージ
+    int arrow_hit = 0;                  //遠距離命中
+    String arrow_material = "";         //材質
+//    int arrow_weight = 0;               //矢の重さ
 
     private void reset() {
-        small = 0;
-        big = 0;
-        name = "";
-        type = "";
-        critical_rate = 0;
-        double_hit_rate = 0;
-        week_point_exposure = 0;
-        two_hands = false;
-        material = "";
-        op = new Buff();
-        op2 = new Buff();
-        enchant = 0;
-        magic_enchant = 0;
-        arrow_name = "";
-        arrow_material = "";
-//        arrow_type = "";
-        arrow_dmg = 0;
-        arrow_elementdmg = 0;
-        arrow_hit = 0;
+        //武器の初期設定
+        small = 0;                      //小さなモンスターダメージ
+        big = 0;                        //大きなモンスターダメージ
+        name = "";                      //武器の名前
+        type = "";                      //武器の種類
+        critical_rate = 0;              //クロウ クリティカル
+        double_hit_rate = 0;            //デュアルブレード ダブルヒット
+        week_point_exposure = 0;        //チェーンソード 弱点露出
+        two_hands = false;              //両手剣(true)両手剣以外(false)
+//        equip = "";
+        material = "";                  //材質
+        op = new Buff();                //武器1のオプション
+        op2 = new Buff();               //武器2のオプション
+        enchant = 0;                    //強化値
+        magic_enchant = 0;              //武器に対して効果のある追加魔法ダメージ
+        max_enchant = 0;                //最高可能強化値
+        safety = 0;                     //安全強化値
+        element_enchant = false;        //属性強化数
+        magic_name = "";                //魔法武器の魔法の名前
+//        magic_motion = false;           //魔法モーションの有無
+        magic_rate = 0;                 //魔法発動率
+        magic_rate_plus = 0;            //強化+1毎の魔法発動率
+        magic_element = "";             //魔法属性
+        magic_power = 0;                //魔法基本ダメージ
+        magic_delay = 0;                //魔法ディレイ
+//        buki_weight = 0;                //武器の重さ
 
-        safety = 0;
-        element_enchant = false;
-
-        magic_name = "";
-//        magic_motion = false;
-        magic_rate = 0;
-        magic_element = "";
-        magic_power = 0;
-        magic_delay = 0;
-        magic_rate_plus = 0;
-
-//        weight = 0;
+        //矢の初期設定
+        arrow_name = "";                //矢の名前
+        arrow_elementdmg = 0;           //武器属性ダメージ
+        arrow_dmg = 0;                  //遠距離ダメージ
+        arrow_hit = 0;                  //遠距離命中
+        arrow_material = "";            //材質
+//        arrow_weight = 0;               //矢の重さ
     }
 
     void load(BufferedReader reader) {
@@ -159,7 +160,7 @@ public class Buki implements Common {
                             .parseDouble(line.split("=")[1]);
                 }
 //                if (line.startsWith("重さ=")) {
-//                    weight = Integer.parseInt(line.split("=")[1]);
+//                    buki_weight = Integer.parseInt(line.split("=")[1]);
 //                }
             }
         } catch (IOException | NullPointerException e) {
@@ -175,11 +176,11 @@ public class Buki implements Common {
                 if (line.startsWith("name")) {
                     arrow_name = line.split("=")[1];
                 }
-                if (line.startsWith("追加ダメージ")) {
-                    arrow_dmg = Integer.parseInt(line.split("=")[1]);
-                }
                 if (line.startsWith("属性ダメージ")) {
                     arrow_elementdmg = Integer.parseInt(line.split("=")[1]);
+                }
+                if (line.startsWith("追加ダメージ")) {
+                    arrow_dmg = Integer.parseInt(line.split("=")[1]);
                 }
                 if (line.startsWith("遠距離命中")) {
                     arrow_hit = Integer.parseInt(line.split("=")[1]);
@@ -187,6 +188,9 @@ public class Buki implements Common {
                 if (line.startsWith("材質")) {
                     arrow_material = line.split("=")[1];
                 }
+//                if (line.startsWith("重さ=")) {
+//                    arrow_weight = Integer.parseInt(line.split("=")[1]);
+//                }
             }
 
         } catch (IOException | NullPointerException e) {
@@ -446,7 +450,7 @@ public class Buki implements Common {
         if (enchant >= 10) {
             op2.DMG_SHORT += enchant - 9;               //近距離追加ダメージ
             op2.DMG_LONG += enchant - 9;                //遠距離追加ダメージ
-            op2.DMG_MAGIC += enchant - 9;               //魔法追加ダメージ
+        //    op2.DMG_MAGIC += enchant - 9;               //魔法追加ダメージ
         }
     }
 }

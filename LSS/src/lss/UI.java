@@ -1162,11 +1162,11 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
                 + "<br>"+ "アイアンスキン      AC-10"+"</html>");
         cb_buff[B_AC].setBounds(0, 20 * col++, 100, 20);
 
-        String list_buki[] = {"+1 HIT+1", "+2", "+2 HIT+2", "+5"};
+        String list_buki[] = {"キャラ +1 HIT+1", "キャラ +2", "キャラ +2 HIT+2", "キャラ +5", "武器 +1 HIT+1", "武器 +2", "武器 +2 HIT+2", "武器 +5"};
         cb_buff_group[BUKI] = new WideComboBox(list_buki);
         cb_buff_group[BUKI].setBounds(100, 20 * col, 80, 20);
         cb_buff_group[BUKI].setSelectedIndex(2);
-        cb_buff[BUKI] = new JCheckBox("キャラ");
+        cb_buff[BUKI] = new JCheckBox("キャラ/武器");
         cb_buff[BUKI].setToolTipText("<html>"+ "ホーリーウェポン 近距離ダメージ+1 近距離命中+1"
                 + "<br>"+ "エンチャントウェポン 近距離ダメージ+2"
                 + "<br>"+ "ブレスウェポン 近距離ダメージ+2 近距離命中+2"

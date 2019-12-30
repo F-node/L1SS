@@ -3014,40 +3014,63 @@ public class Calculator implements Common {
         
 //2019/11/20Update HW/EW/BW/SFの仕様変更
 //今までは武器にエンチャント効果があったが今後はキャラに効果が発生
+//2019/12/25に旧計算方法でのダメージ計算もできるように項目追加
         buki.magic_enchant = 0;
         buki2.magic_enchant = 0;
         if (ui.cb_buff[BUKI].isSelected()) {
             switch (ui.cb_buff_group[BUKI].getSelectedIndex()) {
-                case 0://ホーリーウェポン 近距離ダメージ+1 近距離命中+1
-                    //buki.magic_enchant = 1;
-                    //buki2.magic_enchant = 1;
+                case 0://ホーリーウェポン 近距離ダメージ+1 近距離命中+1(キャラに対して)
                     buff.DMG_SHORT += 1;
                     buff.HIT_SHORT += 1;
                     if (ui.cb_buff[BUKI].getForeground().equals(Color.BLUE)) {
                         cons_mp += (10.0 * (1.0 - red_mp * 0.01) - red_mp2) / 20;
                     }
                     break;
-                case 1://エンチャントウェポン 近距離ダメージ+2
-                    //buki.magic_enchant = 2;
-                    //buki2.magic_enchant = 2;
+                case 1://エンチャントウェポン 近距離ダメージ+2(キャラに対して)
                     buff.DMG_SHORT += 2;
                     if (ui.cb_buff[BUKI].getForeground().equals(Color.BLUE)) {
                         cons_mp += (20.0 * (1.0 - red_mp * 0.01) - red_mp2) / 30;
                     }
                     break;
-                case 2://ブレスウェポン 近距離ダメージ+2 近距離命中+2
-                    //buki.magic_enchant = 2;
-                    //buki2.magic_enchant = 2;
+                case 2://ブレスウェポン 近距離ダメージ+2 近距離命中+2(キャラに対して)
                     buff.DMG_SHORT += 2;
                     buff.HIT_SHORT += 2;
                     if (ui.cb_buff[BUKI].getForeground().equals(Color.BLUE)) {
                         cons_mp += (20.0 * (1.0 - red_mp * 0.01) - red_mp2) / 20;
                     }
                     break;
-                case 3://シャドウファング 近距離ダメージ+5
-                    //buki.magic_enchant = 5;
-                    //buki2.magic_enchant = 5;
+                case 3://シャドウファング 近距離ダメージ+5(キャラに対して)
                     buff.DMG_SHORT += 5;
+                    if (ui.cb_buff[BUKI].getForeground().equals(Color.BLUE)) {
+                        cons_mp += (20.0 * (1.0 - red_mp * 0.01) - red_mp2) / 3;
+                    }
+                    break;
+                case 4://ホーリーウェポン 近距離ダメージ+1 近距離命中+1(武器に対して)
+                    buki.magic_enchant = 1;
+                    buki2.magic_enchant = 1;
+                    buff.HIT_SHORT += 1;
+                    if (ui.cb_buff[BUKI].getForeground().equals(Color.BLUE)) {
+                        cons_mp += (10.0 * (1.0 - red_mp * 0.01) - red_mp2) / 20;
+                    }
+                    break;
+                case 5://エンチャントウェポン 近距離ダメージ+2(武器に対して)
+                    buki.magic_enchant = 2;
+                    buki2.magic_enchant = 2;
+                    if (ui.cb_buff[BUKI].getForeground().equals(Color.BLUE)) {
+                        cons_mp += (20.0 * (1.0 - red_mp * 0.01) - red_mp2) / 30;
+                    }
+                    break;
+                case 6://ブレスウェポン 近距離ダメージ+2 近距離命中+2(武器に対して)
+                    buki.magic_enchant = 2;
+                    buki2.magic_enchant = 2;
+                    buff.HIT_SHORT += 2;
+                    if (ui.cb_buff[BUKI].getForeground().equals(Color.BLUE)) {
+                        cons_mp += (20.0 * (1.0 - red_mp * 0.01) - red_mp2) / 20;
+                    }
+                    break;
+                case 7://シャドウファング 近距離ダメージ+5(武器に対して)
+                    buki.magic_enchant = 5;
+                    buki2.magic_enchant = 5;
                     if (ui.cb_buff[BUKI].getForeground().equals(Color.BLUE)) {
                         cons_mp += (20.0 * (1.0 - red_mp * 0.01) - red_mp2) / 3;
                     }
