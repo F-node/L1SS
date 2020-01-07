@@ -203,6 +203,7 @@ public class Buki implements Common {
         if (name.equals("瞑想のスタッフ")) {
             op2.MPR += enchant;
         }
+        //漆黒の水晶球
         if (name.equals("漆黒の水晶球")) {
             if (enchant >= 9) {
                 op2.ST[CHA] += 1;

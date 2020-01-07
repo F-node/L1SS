@@ -2282,6 +2282,7 @@ public class Bougu implements Common {
                         case 4:
                             op2.effect = "ポーション回復量 +10% +10,";
                             op2.effect += "回復悪化防御 +10%,";
+                            op2.HIT_SHORT = 1;
                             break;
                         case 5:
                             op2.effect = "ポーション回復量 +12% +12,";
@@ -2328,6 +2329,7 @@ public class Bougu implements Common {
                         case 4:
                             op2.effect = "ポーション回復量 +10% +10,";
                             op2.effect += "回復悪化防御 +10%,";
+                            op2.HIT_LONG = 1;
                             break;
                         case 5:
                             op2.effect = "ポーション回復量 +12% +12,";
@@ -2374,6 +2376,7 @@ public class Bougu implements Common {
                         case 4:
                             op2.effect = "ポーション回復量 +10% +10,";
                             op2.effect += "回復悪化防御 +10%,";
+                            op2.HIT_MAGIC = 1;
                             break;
                         case 5:
                             op2.effect = "ポーション回復量 +12% +12,";
