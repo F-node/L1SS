@@ -2602,19 +2602,19 @@ public class Calculator implements Common {
             switch (ui.cb_pattern_l2.getSelectedIndex()) {
                 case 0:
                     break;
-                case 1:
+                case 1:                                 //四つ星(近距離)
                     buff.DMG_SHORT += 1;    //近距離ダメージ+1
                     buff.HIT_SHORT += 1;    //近距離命中+1
                     buff.SP += 1;           //SP+1
                     buff.MR += 5;           //MR+5
                     break;
-                case 2:
+                case 2:                                 //四つ星(遠距離)
                     buff.DMG_LONG += 1;     //遠距離ダメージ+1
                     buff.HIT_LONG += 1;     //遠距離命中+1
                     buff.SP += 1;           //SP+1
                     buff.MR += 5;           //MR+5
                     break;
-                case 3:
+                case 3:                                 //六つ星(近距離/遠距離)
                     buff.DMG_SHORT += 1;    //近距離ダメージ+1
                     buff.HIT_SHORT += 1;    //近距離命中+1
                     buff.DMG_LONG += 1;     //遠距離ダメージ+1
@@ -2622,7 +2622,7 @@ public class Calculator implements Common {
                     buff.SP += 1;           //SP+1
                     buff.MR += 5;           //MR+5
                     break;
-                case 4:
+                case 4:                                 //象牙の塔のタリスマン
                     break;
                 default:
                     break;
@@ -3776,7 +3776,7 @@ buki.arrow_hit=0;
 //        if (buki.type.equals("ボウ")) {
 //            if (buki.arrow_name.contains("霊")) {
 //                switch (buki.arrow_name) {
-//                    case "火霊のブラックミスリルアロー":
+//                   case "火霊のブラックミスリルアロー":
 //                        buff.ELEM_DMG_LONG[FIRE] += 3;
 //                       break;
 //                   case "水霊のブラックミスリルアロー":
