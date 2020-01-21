@@ -1536,7 +1536,7 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[ITEM_COOKING] = new JCheckBox("料理");
         cb_buff[ITEM_COOKING].setBounds(200 * row, 20 * col++, 100, 20);
 
-        String list_dessert[] = {"修練の鶏スープ", "祝福された修練の鶏スープ", "幻想のバシリスクの卵スープ", "幻想のショートケーキ", "小粋な携帯飲料", "真心がこもったスープ", "パタラシのキノコスープ"};
+        String list_dessert[] = {"修練の鶏スープ", "祝福された修練の鶏スープ", "幻想のバシリスクの卵スープ", "幻想のショートケーキ", "幻想のショートケーキ(KR版)", "小粋な携帯飲料", "真心がこもったスープ", "パタラシのキノコスープ"};
         cb_buff_group[ITEM_DESSERT] = new WideComboBox(list_dessert);
         cb_buff_group[ITEM_DESSERT].setBounds(200 * row + 100, 20 * col, 80, 20);
         cb_buff[ITEM_DESSERT] = new JCheckBox("スープ");
