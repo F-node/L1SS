@@ -447,6 +447,28 @@ public class Buki implements Common {
             op2.ailment[HIT_TERROR] += enchant;         //恐怖命中
             }
         }
+        //アインハザードの閃光(REMASTERED)  +1強化毎に[武器ダメージイミューン無視+5][近距離追加ダメージ+2(既存処理+1)][近距離クリティカル+2%][技術命中+1][精霊命中+1][恐怖命中+1]増加
+        //アインハザードの閃光(対モンスター範囲魔法)とアインハザードの一撃(対人魔法+2秒ホールド)は未実装 INT&SPに魔法ダメージは依存しない
+        if (name.equals("アインハザードの閃光(REMASTERED)")) {
+            if (enchant >= 0) {
+                                                        //イミューン無視武器ダメージ+5x強化数(未実装)
+            op2.DMG_SHORT += enchant;                   //近距離追加ダメージ
+            op2.CRI_SHORT += (enchant*2);               //近距離クリティカル+2x強化数
+            op2.ailment[HIT_STUN] += enchant;           //技術命中
+            op2.ailment[HIT_SPIRIT] += enchant;         //精霊命中
+            op2.ailment[HIT_TERROR] += enchant;         //恐怖命中
+            }
+        }
+        //グランカインの審判(REMASTERED)    +1強化毎に[武器ダメージイミューン無視+5][近距離追加ダメージ+2(既存処理+1)][近距離クリティカル+2%][技術命中+1]増加
+        //グランカインの咆哮(対モンスター範囲魔法)とグランカインの審判(対人魔法+2秒ホールド)は未実装 INT&SPに魔法ダメージは依存しない
+        if (name.equals("グランカインの審判(REMASTERED)")) {
+            if (enchant >= 0) {
+                                                        //イミューン無視武器ダメージ+5x強化数(未実装)
+            op2.DMG_SHORT += enchant;                   //近距離追加ダメージ
+            op2.CRI_SHORT += (enchant*2);               //近距離クリティカル+2x強化数
+            op2.ailment[HIT_STUN] += enchant;           //技術命中
+            }
+        }
         //強化+10以上はエンチャントによる追加ダメージが+2(既存処理に追加で+1)
         if (enchant >= 10) {
             op2.DMG_SHORT += enchant - 9;               //近距離追加ダメージ

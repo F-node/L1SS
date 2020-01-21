@@ -1668,15 +1668,19 @@ public class Calculator implements Common {
                     buff.DR += 3;
                     ui.cb_buff[ITEM_DESSERT].setToolTipText("ダメージ低下+3 獲得経験値+5% 15分20秒");
                     break;
-                case 4:                                 //小粋な携帯飲料
+                case 4:                                 //幻想のショートケーキ(KR版)
+                    buff.DR += 5;
+                    ui.cb_buff[ITEM_DESSERT].setToolTipText("ダメージ低下+5 獲得経験値+10% 15分20秒");
+                    break;
+                case 5:                                 //小粋な携帯飲料
                     buff.DR += 5;
                     ui.cb_buff[ITEM_DESSERT].setToolTipText("ダメージ低下+5 獲得経験値+5% 15分20秒");
                     break;
-                case 5:                                 //真心がこもったスープ
+                case 6:                                 //真心がこもったスープ
                     buff.DR += 5;
                     ui.cb_buff[ITEM_DESSERT].setToolTipText("ダメージ低下+5 獲得経験値+5% 15分20秒");
                     break;
-                case 6:                                 //パタラシのキノコスープ
+                case 7:                                 //パタラシのキノコスープ
                     buff.DR += 2;
                     ui.cb_buff[ITEM_DESSERT].setToolTipText("ダメージ低下+2 獲得経験値+10% 15分");
                     break;
@@ -5676,8 +5680,11 @@ buki.arrow_elementdmg=0;
             buki_text += "ダメージ" + buki.small + "/" + buki.big;
         }
         if ((buki.enchant + buki.op2.DMG_SHORT + buki.op2.DMG_LONG) > 0) {
-            //buki_text += "ダメージ" + buki.small + "/" + buki.big;
-            buki_text += "ダメージ" + buki.small + "+" + (buki.enchant + (buki.op2.DMG_SHORT + buki.op2.DMG_LONG)/2) + "/" + buki.big + "+" + (buki.enchant + (buki.op2.DMG_SHORT + buki.op2.DMG_LONG)/2);
+            if (buki.op2.DMG_LONG > buki.op2.DMG_SHORT) {  
+                buki_text += "ダメージ" + buki.small + "+" + (buki.enchant + buki.op2.DMG_LONG) + "/" + buki.big + "+" + (buki.enchant + buki.op2.DMG_LONG);      
+            } else {
+                buki_text += "ダメージ" + buki.small + "+" + (buki.enchant + buki.op2.DMG_SHORT) + "/" + buki.big + "+" + (buki.enchant + buki.op2.DMG_SHORT);
+            }
         }
         if (buki.two_hands) {
             buki_text += " 両手武器";
