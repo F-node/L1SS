@@ -272,7 +272,7 @@ public class Buki implements Common {
             }
         }
         //ヴァラカスのソード            +8以降強化1毎に技術/精霊/恐怖命中+1(最大+3)(+10強化まで適用)
-        if (name.equals("ヴァラカスのソード(REMASTERED)") || name.equals("ヴァラカスのソード(REMASTERED)(ヴァラカスの魂発動)")) {
+        if (name.equals("ヴァラカスのソード") || name.equals("ヴァラカスのソード(ヴァラカスの魂発動)")) {
             if (enchant >= 10) {
             op2.ailment[HIT_STUN] += 3;                 //技術命中+3
             op2.ailment[HIT_SPIRIT] += 3;               //精霊命中+3
@@ -288,7 +288,7 @@ public class Buki implements Common {
             }
         }
         //ヴァラカスの両手剣            +8以降強化1毎に技術命中+1(最大+3)(+10強化まで適用)
-        if (name.equals("ヴァラカスの両手剣(REMASTERED)") || name.equals("ヴァラカスの両手剣(REMASTERED)(ヴァラカスの魂発動)")) {
+        if (name.equals("ヴァラカスの両手剣") || name.equals("ヴァラカスの両手剣(ヴァラカスの魂発動)")) {
             if (enchant >= 10) {
             op2.ailment[HIT_STUN] += 3;                 //技術命中+3            
             } else if (enchant >= 9) {
@@ -298,7 +298,7 @@ public class Buki implements Common {
             }
         }
         //パプリオンのロングボウ        +8以降強化1毎に精霊命中+1/ダメージリダクション無視+1(最大+3)(+10強化まで適用)
-        if (name.equals("パプリオンのロングボウ(REMASTERED)") || name.equals("パプリオンのロングボウ(REMASTERED)(パプリオンの魂発動)")) {
+        if (name.equals("パプリオンのロングボウ") || name.equals("パプリオンのロングボウ(パプリオンの魂発動)")) {
             if (enchant >= 10) {
             op2.ailment[HIT_SPIRIT] += 3;               //精霊命中+3
             op2.DR_IGNORED += 3;                        //ダメージリダクション無視+3            
@@ -312,7 +312,7 @@ public class Buki implements Common {
         }
         //パプリオンのデュアルブレード  +8以降強化1毎に精霊命中+1(最大+3)(+10強化まで適用)
         //                            ダブルヒット発動確率増加は未実装
-        if (name.equals("パプリオンのデュアルブレード(REMASTERED)") || name.equals("パプリオンのデュアルブレード(REMASTERED)(パプリオンの魂発動)")) {
+        if (name.equals("パプリオンのデュアルブレード") || name.equals("パプリオンのデュアルブレード(パプリオンの魂発動)")) {
             if (enchant >= 10) {
             op2.ailment[HIT_SPIRIT] += 3;               //精霊命中+3
                                                         //ダブルヒット発動確率増加+3            
@@ -325,7 +325,7 @@ public class Buki implements Common {
             }
         }
         //アンタラスのアックス          +8以降強化1毎に恐怖命中+1(最大+3)(+10強化まで適用)
-        if (name.equals("アンタラスのアックス(REMASTERED)") || name.equals("アンタラスのアックス(REMASTERED)(アンタラスの魂発動)")) {
+        if (name.equals("アンタラスのアックス") || name.equals("アンタラスのアックス(アンタラスの魂発動)")) {
             if (enchant >= 10) {
             op2.ailment[HIT_TERROR] += 3;               //恐怖命中+3            
             } else if (enchant >= 9) {
@@ -335,7 +335,7 @@ public class Buki implements Common {
             }
         }
         //アンタラスのスタッフ          +8以降強化1毎にSP+1/魔法命中+1(最大+3)(+10強化まで適用)
-        if (name.equals("アンタラスのスタッフ(REMASTERED)") || name.equals("アンタラスのスタッフ(REMASTERED)(アンタラスの魂発動)")) {
+        if (name.equals("アンタラスのスタッフ") || name.equals("アンタラスのスタッフ(アンタラスの魂発動)")) {
             if (enchant >= 10) {
             op2.SP                  += 3;               //SP+3
             op2.HIT_MAGIC           += 3;               //魔法命中+3            
@@ -349,7 +349,7 @@ public class Buki implements Common {
         }
         //リンドビオルのチェーンソード  +8以降強化1毎に秘技命中+1(最大+3)(+10強化まで適用)
         //                            弱点露出確率増加は未実装
-        if (name.equals("リンドビオルのチェーンソード(REMASTERED)") || name.equals("リンドビオルのチェーンソード(REMASTERED)(リンドビオルの魂発動)")) {
+        if (name.equals("リンドビオルのチェーンソード") || name.equals("リンドビオルのチェーンソード(リンドビオルの魂発動)")) {
             if (enchant >= 10) {
             op2.ailment[HIT_SECRET] += 3;               //秘技命中+3
                                                         //弱点露出確率増加+3
@@ -362,7 +362,7 @@ public class Buki implements Common {
             }
         }
         //リンドビオルのキーリンク      +8以降強化1毎にSP+1/秘技命中+1(最大+3)(+10強化まで適用)
-        if (name.equals("リンドビオルのキーリンク(REMASTERED)") || name.equals("リンドビオルのキーリンク(REMASTERED)(リンドビオルの魂発動)")) {
+        if (name.equals("リンドビオルのキーリンク") || name.equals("リンドビオルのキーリンク(リンドビオルの魂発動)")) {
             if (enchant >= 10) {
             op2.SP                  += 3;               //SP+3
             op2.ailment[HIT_SECRET] += 3;               //秘技命中+3            
@@ -438,7 +438,7 @@ public class Buki implements Common {
             }
         }
         //死神の剣(REMASTERED)      +1強化毎に[近距離追加ダメージ+2(既存処理+1)][近距離クリティカル+1%][技術命中+1][精霊命中+1][恐怖命中+1]増加 
-        if (name.equals("死神の剣(REMASTERED)") || name.equals("死神の剣(REMASTERED)(ウェポンアタック発動)")) {
+        if (name.equals("死神の剣") || name.equals("死神の剣(ウェポンアタック発動)")) {
             if (enchant >= 0) {
             op2.DMG_SHORT += enchant;                   //近距離追加ダメージ
             op2.CRI_SHORT += enchant;                   //近距離クリティカル
@@ -449,7 +449,7 @@ public class Buki implements Common {
         }
         //アインハザードの閃光(REMASTERED)  +1強化毎に[武器ダメージイミューン無視+5][近距離追加ダメージ+2(既存処理+1)][近距離クリティカル+2%][技術命中+1][精霊命中+1][恐怖命中+1]増加
         //アインハザードの閃光(対モンスター範囲魔法)とアインハザードの一撃(対人魔法+2秒ホールド)は未実装 INT&SPに魔法ダメージは依存しない
-        if (name.equals("アインハザードの閃光(REMASTERED)")) {
+        if (name.equals("アインハザードの閃光")) {
             if (enchant >= 0) {
                                                         //イミューン無視武器ダメージ+5x強化数(未実装)
             op2.DMG_SHORT += enchant;                   //近距離追加ダメージ
@@ -461,7 +461,7 @@ public class Buki implements Common {
         }
         //グランカインの審判(REMASTERED)    +1強化毎に[武器ダメージイミューン無視+5][近距離追加ダメージ+2(既存処理+1)][近距離クリティカル+2%][技術命中+1]増加
         //グランカインの咆哮(対モンスター範囲魔法)とグランカインの審判(対人魔法+2秒ホールド)は未実装 INT&SPに魔法ダメージは依存しない
-        if (name.equals("グランカインの審判(REMASTERED)")) {
+        if (name.equals("グランカインの審判")) {
             if (enchant >= 0) {
                                                         //イミューン無視武器ダメージ+5x強化数(未実装)
             op2.DMG_SHORT += enchant;                   //近距離追加ダメージ
