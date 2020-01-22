@@ -133,6 +133,7 @@ public class Calculator implements Common {
     }
 
     {
+        //君主の初期ステータスと割り振り可能ステータス数
         st_data[P][BASE][STR] = 13;
         st_data[P][BASE][DEX] = 9;
         st_data[P][BASE][CON] = 11;
@@ -147,6 +148,7 @@ public class Calculator implements Common {
         st_data[P][REM][CHA] = 7;
         rem_data[P] = 9;
 
+        //ナイトの初期ステータスと割り振り可能ステータス数
         st_data[K][BASE][STR] = 16;
         st_data[K][BASE][DEX] = 12;
         st_data[K][BASE][CON] = 16;
@@ -161,6 +163,7 @@ public class Calculator implements Common {
         st_data[K][REM][CHA] = 4;
         rem_data[K] = 4;
 
+        //エルフの初期ステータスと割り振り可能ステータス数
         st_data[E][BASE][STR] = 10;
         st_data[E][BASE][DEX] = 12;
         st_data[E][BASE][CON] = 12;
@@ -175,6 +178,7 @@ public class Calculator implements Common {
         st_data[E][REM][CHA] = 8;
         rem_data[E] = 8;
 
+        //ウィザードの初期ステータスと割り振り可能ステータス数
         st_data[W][BASE][STR] = 8;
         st_data[W][BASE][DEX] = 7;
         st_data[W][BASE][CON] = 12;
@@ -189,6 +193,7 @@ public class Calculator implements Common {
         st_data[W][REM][CHA] = 12;
         rem_data[W] = 12;
 
+        //ダークエルフの初期ステータスと割り振り可能ステータス数
         st_data[D][BASE][STR] = 15;
         st_data[D][BASE][DEX] = 12;
         st_data[D][BASE][CON] = 12;
@@ -203,6 +208,7 @@ public class Calculator implements Common {
         st_data[D][REM][CHA] = 7;
         rem_data[D] = 7;
 
+        //ドラゴンナイトの初期ステータスと割り振り可能ステータス数
         st_data[R][BASE][STR] = 13;
         st_data[R][BASE][DEX] = 11;
         st_data[R][BASE][CON] = 14;
@@ -217,6 +223,7 @@ public class Calculator implements Common {
         st_data[R][REM][CHA] = 9;
         rem_data[R] = 9;
 
+        //イリュージョニストの初期ステータスと割り振り可能ステータス数
         st_data[I][BASE][STR] = 9;
         st_data[I][BASE][DEX] = 10;
         st_data[I][BASE][CON] = 12;
@@ -231,6 +238,7 @@ public class Calculator implements Common {
         st_data[I][REM][CHA] = 10;
         rem_data[I] = 10;
 
+        //ウォリアーの初期ステータスと割り振り可能ステータス数
         st_data[F][BASE][STR] = 16;
         st_data[F][BASE][DEX] = 13;
         st_data[F][BASE][CON] = 16;
@@ -3687,7 +3695,7 @@ public class Calculator implements Common {
                     ml = 7;
                 }
                 break;
-            case W:                     //エルフ:マジックレベル最大13から14へ変更
+            case W:                     //ウィザード:マジックレベル最大13から14へ変更
                 ml = level / 4;
                 if (ml > 14) {
                     ml = 14;
@@ -5341,10 +5349,6 @@ buki.arrow_elementdmg=0;
                 hp = 16;
                 mp = 2;
                 break;
-            case F:
-                hp = 16;
-                mp = 2;
-                break;
             case E:
                 hp = 15;
                 mp = 4;
@@ -5364,6 +5368,10 @@ buki.arrow_elementdmg=0;
             case I:
                 hp = 14;
                 mp = 5;
+                break;
+            case F:
+                hp = 16;
+                mp = 2;
                 break;
             default:
                 break;
@@ -5459,9 +5467,6 @@ buki.arrow_elementdmg=0;
             case K:
                 eq_hp += _ST[ENCHANT][CON] * 16;
                 break;
-            case F:
-                eq_hp += _ST[ENCHANT][CON] * 16;
-                break;
             case E:
                 eq_hp += _ST[ENCHANT][CON] * 9;
                 break;
@@ -5476,6 +5481,9 @@ buki.arrow_elementdmg=0;
                 break;
             case I:
                 eq_hp += _ST[ENCHANT][CON] * 8;
+                break;
+            case F:
+                eq_hp += _ST[ENCHANT][CON] * 16;
                 break;
             default:
                 break;
