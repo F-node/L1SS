@@ -1490,30 +1490,30 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         lab_tmp.setBounds(200 * row, 20 * col++, 200, 20);
         panels[2].add(lab_tmp);
 
-        cb_buff[F_AG] = new JCheckBox("アーマーガード");
-        cb_buff[F_AG].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[F_AG].setToolTipText("DR増加 -AC/5");
-        cb_buff[F_CR] = new JCheckBox("クラッシュ");
-        cb_buff[F_CR].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[F_CR].setToolTipText("一定確率(15%)でダメージ増加 Lv/2");
-        cb_buff[F_FU] = new JCheckBox("フューリー");
-        cb_buff[F_FU].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[F_FU].setToolTipText("クラッシュ発動時、一定確率(10%)でダメージ2倍");
-        cb_buff[F_TL] = new JCheckBox("タイタンロック(未実装)");
-        cb_buff[F_TL].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[F_TL].setToolTipText("<html>"+ "HP40%以下時一定確率(35%)で近距離攻撃回避+反撃"
+        cb_buff[S_AG] = new JCheckBox("アーマーガード");
+        cb_buff[S_AG].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[S_AG].setToolTipText("DR増加 -AC/5");
+        cb_buff[S_CR] = new JCheckBox("クラッシュ");
+        cb_buff[S_CR].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[S_CR].setToolTipText("一定確率(15%)でダメージ増加 Lv/2");
+        cb_buff[S_FU] = new JCheckBox("フューリー");
+        cb_buff[S_FU].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[S_FU].setToolTipText("クラッシュ発動時、一定確率(10%)でダメージ2倍");
+        cb_buff[S_TL] = new JCheckBox("タイタンロック(未実装)");
+        cb_buff[S_TL].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[S_TL].setToolTipText("<html>"+ "HP40%以下時一定確率(35%)で近距離攻撃回避+反撃"
                                      + "<br>"+ "カウンターダメージは武器の[BIG打撃値]+[追加ダメージ]+[強化数]x[2]"+"</html>");
-        cb_buff[F_TM] = new JCheckBox("タイタンマジック(未実装)");
-        cb_buff[F_TM].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[F_TM].setToolTipText("<html>"+ "HP40%以下時一定確率(35%)で魔法攻撃回避+反撃"
+        cb_buff[S_TM] = new JCheckBox("タイタンマジック(未実装)");
+        cb_buff[S_TM].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[S_TM].setToolTipText("<html>"+ "HP40%以下時一定確率(35%)で魔法攻撃回避+反撃"
                                      + "<br>"+ "カウンターダメージは武器の[BIG打撃値]+[追加ダメージ]+[強化数]x[2]"+"</html>");
-        cb_buff[F_TB] = new JCheckBox("タイタンブリッツ(未実装)");
-        cb_buff[F_TB].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[F_TB].setToolTipText("<html>"+ "HP40%以下時一定確率(35%)で遠距離攻撃回避+反撃"
+        cb_buff[S_TB] = new JCheckBox("タイタンブリッツ(未実装)");
+        cb_buff[S_TB].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[S_TB].setToolTipText("<html>"+ "HP40%以下時一定確率(35%)で遠距離攻撃回避+反撃"
                                      + "<br>"+ "カウンターダメージは武器の[BIG打撃値]+[追加ダメージ]+[強化数]x[2]"+"</html>");
-        cb_buff[F_G] = new JCheckBox("ギガンティック");
-        cb_buff[F_G].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[F_G].setToolTipText("最大HP Lv/2% 増加");
+        cb_buff[S_G] = new JCheckBox("ギガンティック");
+        cb_buff[S_G].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[S_G].setToolTipText("最大HP Lv/2% 増加");
 
         //col++;
         lab_tmp = new JLabel("その他");
@@ -2141,7 +2141,7 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
                                                 .toString(calc.buki.week_point_exposure));
                                         break;
                                     default:
-                                        if (cb_cls.getSelectedIndex() == F && !calc.buki.two_hands && calc.buki.type.equals("鈍器")) {
+                                        if (cb_cls.getSelectedIndex() == S && !calc.buki.two_hands && calc.buki.type.equals("鈍器")) {
                                             tb_blessed2.setEnabled(true);
                                             cb_eq[1].setEnabled(true);
                                             cb_eq_en[1].setEnabled(true);
