@@ -239,19 +239,19 @@ public class Calculator implements Common {
         rem_data[I] = 10;
 
         //ウォリアーの初期ステータスと割り振り可能ステータス数
-        st_data[F][BASE][STR] = 16;
-        st_data[F][BASE][DEX] = 13;
-        st_data[F][BASE][CON] = 16;
-        st_data[F][BASE][INT] = 10;
-        st_data[F][BASE][WIS] = 7;
-        st_data[F][BASE][CHA] = 9;
-        st_data[F][REM][STR] = 4;
-        st_data[F][REM][DEX] = 4;
-        st_data[F][REM][CON] = 4;
-        st_data[F][REM][INT] = 4;
-        st_data[F][REM][WIS] = 4;
-        st_data[F][REM][CHA] = 4;
-        rem_data[F] = 4;
+        st_data[S][BASE][STR] = 16;
+        st_data[S][BASE][DEX] = 13;
+        st_data[S][BASE][CON] = 16;
+        st_data[S][BASE][INT] = 10;
+        st_data[S][BASE][WIS] = 7;
+        st_data[S][BASE][CHA] = 9;
+        st_data[S][REM][STR] = 4;
+        st_data[S][REM][DEX] = 4;
+        st_data[S][REM][CON] = 4;
+        st_data[S][REM][INT] = 4;
+        st_data[S][REM][WIS] = 4;
+        st_data[S][REM][CHA] = 4;
+        rem_data[S] = 4;
 
         //ステータスボーナス
         _C[D_SHORT][STR][P] = 30;
@@ -261,7 +261,7 @@ public class Calculator implements Common {
         _C[D_SHORT][STR][D] = 10;
         _C[D_SHORT][STR][R] = 10;
         _C[D_SHORT][STR][I] = 10;
-        _C[D_SHORT][STR][F] = 10;
+        _C[D_SHORT][STR][S] = 10;
 
         _C[H_SHORT][STR][P] = 4;
         _C[H_SHORT][STR][K] = 3;
@@ -270,7 +270,7 @@ public class Calculator implements Common {
         _C[H_SHORT][STR][D] = 3;
         _C[H_SHORT][STR][R] = 4;
         _C[H_SHORT][STR][I] = 5;
-        _C[H_SHORT][STR][F] = 3;
+        _C[H_SHORT][STR][S] = 3;
 
         _C[C_SHORT][STR][P] = 20;
         _C[C_SHORT][STR][K] = 20;
@@ -279,7 +279,7 @@ public class Calculator implements Common {
         _C[C_SHORT][STR][D] = 10;
         _C[C_SHORT][STR][R] = 20;
         _C[C_SHORT][STR][I] = 30;
-        _C[C_SHORT][STR][F] = 20;
+        _C[C_SHORT][STR][S] = 20;
 
         _C[D_LONG][DEX][P] = 40;
         _C[D_LONG][DEX][K] = 40;
@@ -288,7 +288,7 @@ public class Calculator implements Common {
         _C[D_LONG][DEX][D] = 20;
         _C[D_LONG][DEX][R] = 40;
         _C[D_LONG][DEX][I] = 80;
-        _C[D_LONG][DEX][F] = 40;
+        _C[D_LONG][DEX][S] = 40;
 
         _C[H_LONG][DEX][P] = 6;
         _C[H_LONG][DEX][K] = 6;
@@ -297,7 +297,7 @@ public class Calculator implements Common {
         _C[H_LONG][DEX][D] = 4;
         _C[H_LONG][DEX][R] = 7;
         _C[H_LONG][DEX][I] = 8;
-        _C[H_LONG][DEX][F] = 6;
+        _C[H_LONG][DEX][S] = 6;
 
         _C[C_LONG][DEX][P] = 30;
         _C[C_LONG][DEX][K] = 40;
@@ -306,7 +306,7 @@ public class Calculator implements Common {
         _C[C_LONG][DEX][D] = 20;
         _C[C_LONG][DEX][R] = 40;
         _C[C_LONG][DEX][I] = 50;
-        _C[C_LONG][DEX][F] = 40;
+        _C[C_LONG][DEX][S] = 40;
 
         _C[ER][DEX][P] = 6;
         _C[ER][DEX][K] = 4;
@@ -315,7 +315,7 @@ public class Calculator implements Common {
         _C[ER][DEX][D] = 4;
         _C[ER][DEX][R] = 5;
         _C[ER][DEX][I] = 9;
-        _C[ER][DEX][F] = 4;
+        _C[ER][DEX][S] = 4;
 
         _C[D_MAGIC][INT][P] = 40;
         _C[D_MAGIC][INT][K] = 40;
@@ -324,7 +324,7 @@ public class Calculator implements Common {
         _C[D_MAGIC][INT][D] = 40;
         _C[D_MAGIC][INT][R] = 40;
         _C[D_MAGIC][INT][I] = 25;
-        _C[D_MAGIC][INT][F] = 40;
+        _C[D_MAGIC][INT][S] = 40;
 
         _C[H_MAGIC][INT][P] = 20;
         _C[H_MAGIC][INT][K] = 100;
@@ -333,7 +333,7 @@ public class Calculator implements Common {
         _C[H_MAGIC][INT][D] = 24;
         _C[H_MAGIC][INT][R] = 18;
         _C[H_MAGIC][INT][I] = 12;
-        _C[H_MAGIC][INT][F] = 100;
+        _C[H_MAGIC][INT][S] = 100;
 
         _C[C_MAGIC][INT][P] = 80;
         _C[C_MAGIC][INT][K] = 100;
@@ -342,7 +342,7 @@ public class Calculator implements Common {
         _C[C_MAGIC][INT][D] = 30;
         _C[C_MAGIC][INT][R] = 70;
         _C[C_MAGIC][INT][I] = 20;
-        _C[C_MAGIC][INT][F] = 100;
+        _C[C_MAGIC][INT][S] = 100;
 
         _C[MB][INT][P] = 0;
         _C[MB][INT][K] = 0;
@@ -351,7 +351,7 @@ public class Calculator implements Common {
         _C[MB][INT][D] = 0;
         _C[MB][INT][R] = 0;
         _C[MB][INT][I] = 1;
-        _C[MB][INT][F] = 0;
+        _C[MB][INT][S] = 0;
 
         _C[HP][CON][P] = 11;
         _C[HP][CON][K] = 16;
@@ -360,7 +360,7 @@ public class Calculator implements Common {
         _C[HP][CON][D] = 10;
         _C[HP][CON][R] = 12;
         _C[HP][CON][I] = 8;
-        _C[HP][CON][F] = 16;
+        _C[HP][CON][S] = 16;
 
         _C[MR][WIS][P] = 10;
         _C[MR][WIS][K] = 0;
@@ -369,7 +369,7 @@ public class Calculator implements Common {
         _C[MR][WIS][D] = 10;
         _C[MR][WIS][R] = 18;
         _C[MR][WIS][I] = 20;
-        _C[MR][WIS][F] = 0;
+        _C[MR][WIS][S] = 0;
     }
 
     private final UI ui;
@@ -2467,7 +2467,7 @@ public class Calculator implements Common {
                             break;
                     }
                     break;
-                case F:
+                case S:
                     buff.HP += 50;
                     ui.elixir_rune.setToolTipText("ステ+1 HP+50");
                     switch (q) {
@@ -3537,7 +3537,7 @@ public class Calculator implements Common {
                     //ui.cb_buff[H_RK].setToolTipText("INT+1");
                     buff.ST[INT] += 1;
                     break;
-                case F:
+                case S:
                     //ui.cb_buff[H_RK].setToolTipText("STR+1");
                     buff.ST[STR] += 1;
                     break;
@@ -3719,7 +3719,7 @@ public class Calculator implements Common {
                     ml = 10;
                 }
                 break;
-            case F:
+            case S:
                 ml = level / 50;
                 if (ml > 1) {
                     ml = 1;
@@ -3933,7 +3933,7 @@ buki.arrow_elementdmg=0;
         dmg_undead = 0.0;
 
 //        ui.sp_sub.setText("");
-        if (cls == F
+        if (cls == S
                 && ui.cb_eq[1].getSelectedIndex() != 0) {
 
             dmg_big_ave = (1.0 + buki.big) / 2 + buki.op.DMG_SHORT + buki.op2.DMG_SHORT + buki.enchant + buki.magic_enchant;
@@ -4504,11 +4504,11 @@ buki.arrow_elementdmg=0;
 
         //クラッシュ
         double ex = 0.0;
-        if (ui.cb_buff[F_CR].isSelected()) {
+        if (ui.cb_buff[S_CR].isSelected()) {
             ex = level / 2.0;
         }
         //フューリー
-        if (ui.cb_buff[F_FU].isSelected()) {
+        if (ui.cb_buff[S_FU].isSelected()) {
             dmg_big_ave = 0.15 * 0.1 * 2.0 * (dmg_big_ave + ex)
                     + (0.15 - (0.15 * 0.1)) * (dmg_big_ave + ex)
                     + (1.0 - 0.15) * dmg_big_ave;
@@ -5010,7 +5010,7 @@ buki.arrow_elementdmg=0;
                 c = 8;
 //                d = 3;
                 break;
-            case F:
+            case S:
                 c = 6;
 //                d = 3;
                 break;
@@ -5044,7 +5044,7 @@ buki.arrow_elementdmg=0;
 //        pvp_dgr= base_pvp_dr + buff.PVP_DR;
 //        System.out.println(pvp_dgr);    //初期値確認用
 
-        if (ui.cb_buff[F_AG].isSelected()) {
+        if (ui.cb_buff[S_AG].isSelected()) {
             dr += -ac / 10;
         }
 
@@ -5369,7 +5369,7 @@ buki.arrow_elementdmg=0;
                 hp = 14;
                 mp = 5;
                 break;
-            case F:
+            case S:
                 hp = 16;
                 mp = 2;
                 break;
@@ -5482,7 +5482,7 @@ buki.arrow_elementdmg=0;
             case I:
                 eq_hp += _ST[ENCHANT][CON] * 8;
                 break;
-            case F:
+            case S:
                 eq_hp += _ST[ENCHANT][CON] * 16;
                 break;
             default:
@@ -5507,7 +5507,7 @@ buki.arrow_elementdmg=0;
 //        }
         //アドバンスドスピリッツ 消費MP20/20mins
         if (ui.cb_buff[W_ADS].isSelected()) {
-            if (ui.cb_buff[F_G].isSelected()
+            if (ui.cb_buff[S_G].isSelected()
                     || ui.cb_buff[K_PD].isSelected()) {
                 ui.cb_buff[W_ADS].setSelected(false);
             } else {
@@ -5520,7 +5520,7 @@ buki.arrow_elementdmg=0;
         }
         //プライド 消費MP10/5mins
         if (ui.cb_buff[K_PD].isSelected()) {
-            if (ui.cb_buff[F_G].isSelected()
+            if (ui.cb_buff[S_G].isSelected()
                     || ui.cb_buff[W_ADS].isSelected()) {
                 ui.cb_buff[K_PD].setSelected(false);
             } else {
@@ -5531,13 +5531,13 @@ buki.arrow_elementdmg=0;
             }
         }
         //ギガンテック 消費MP10/5mins
-        if (ui.cb_buff[F_G].isSelected()) {
+        if (ui.cb_buff[S_G].isSelected()) {
             if (ui.cb_buff[W_ADS].isSelected()
                     || ui.cb_buff[K_PD].isSelected()) {
-                ui.cb_buff[F_G].setSelected(false);
+                ui.cb_buff[S_G].setSelected(false);
             } else {
             	hpp += (level/2)*0.01 * hp;
-                if (ui.cb_buff[F_G].getForeground().equals(Color.BLUE)) {
+                if (ui.cb_buff[S_G].getForeground().equals(Color.BLUE)) {
                     cons_mp += (10.0 * (1.0 - red_mp * 0.01) - red_mp2) / 5;
                 }
             }

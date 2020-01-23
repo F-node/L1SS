@@ -21,7 +21,7 @@ public interface Common {
     final int CHA = 5;
 
     //8種の職業
-    final String[] CLASS_LIST = {"P", "K", "E", "W", "D", "R", "I", "F"};
+    final String[] CLASS_LIST = {"P", "K", "E", "W", "D", "R", "I", "S"};
     final String[] CLASS_LIST2 = {"君主", "ナイト", "エルフ", "ウィザード", "ダークエルフ", "ドラゴンナイト", "イリュージョニスト", "ウォリアー"};
     final int P = 0;
     final int K = 1;
@@ -30,7 +30,7 @@ public interface Common {
     final int D = 4;
     final int R = 5;
     final int I = 6;
-    final int F = 7;
+    final int S = 7;
 
     //4種の属性
     final String[] ELEM_LIST = {"地", "火", "水", "風"};
@@ -243,15 +243,15 @@ public interface Common {
 
 //ウォリアーの技術
     //アクティブスキル
-    final int F_G = 76;         //ギガンティック
+    final int S_G = 76;         //ギガンティック
 
     //パッシブスキル
-    final int F_TL = 69;        //タイタンロック
-    final int F_TM = 70;        //タイタンマジック
-    final int F_TB = 71;        //タイタンブリッツ     
-    final int F_CR = 67;        //クラッシュ
-    final int F_AG = 66;        //アーマーガード
-    final int F_FU = 68;        //フューリー
+    final int S_TL = 69;        //タイタンロック
+    final int S_TM = 70;        //タイタンマジック
+    final int S_TB = 71;        //タイタンブリッツ     
+    final int S_CR = 67;        //クラッシュ
+    final int S_AG = 66;        //アーマーガード
+    final int S_FU = 68;        //フューリー
 
 //その他
     final int ITEM_BLUE = 50;   //魔力回復ポーション
