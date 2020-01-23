@@ -253,6 +253,21 @@ public class Calculator implements Common {
         st_data[S][REM][CHA] = 4;
         rem_data[S] = 4;
 
+        //フェンサーの初期ステータスと割り振り可能ステータス数
+        st_data[F][BASE][STR] = 16;
+        st_data[F][BASE][DEX] = 13;
+        st_data[F][BASE][CON] = 15;
+        st_data[F][BASE][INT] = 11;
+        st_data[F][BASE][WIS] = 11;
+        st_data[F][BASE][CHA] = 5;
+        st_data[F][REM][STR] = 4;
+        st_data[F][REM][DEX] = 4;
+        st_data[F][REM][CON] = 4;
+        st_data[F][REM][INT] = 4;
+        st_data[F][REM][WIS] = 4;
+        st_data[F][REM][CHA] = 4;
+        rem_data[F] = 4;
+
         //ステータスボーナス
         _C[D_SHORT][STR][P] = 30;
         _C[D_SHORT][STR][K] = 10;
@@ -262,6 +277,7 @@ public class Calculator implements Common {
         _C[D_SHORT][STR][R] = 10;
         _C[D_SHORT][STR][I] = 10;
         _C[D_SHORT][STR][S] = 10;
+        _C[D_SHORT][STR][F] = 10;
 
         _C[H_SHORT][STR][P] = 4;
         _C[H_SHORT][STR][K] = 3;
@@ -271,6 +287,7 @@ public class Calculator implements Common {
         _C[H_SHORT][STR][R] = 4;
         _C[H_SHORT][STR][I] = 5;
         _C[H_SHORT][STR][S] = 3;
+        _C[H_SHORT][STR][F] = 3;
 
         _C[C_SHORT][STR][P] = 20;
         _C[C_SHORT][STR][K] = 20;
@@ -280,6 +297,7 @@ public class Calculator implements Common {
         _C[C_SHORT][STR][R] = 20;
         _C[C_SHORT][STR][I] = 30;
         _C[C_SHORT][STR][S] = 20;
+        _C[C_SHORT][STR][F] = 20;
 
         _C[D_LONG][DEX][P] = 40;
         _C[D_LONG][DEX][K] = 40;
@@ -289,6 +307,7 @@ public class Calculator implements Common {
         _C[D_LONG][DEX][R] = 40;
         _C[D_LONG][DEX][I] = 80;
         _C[D_LONG][DEX][S] = 40;
+        _C[D_LONG][DEX][F] = 40;
 
         _C[H_LONG][DEX][P] = 6;
         _C[H_LONG][DEX][K] = 6;
@@ -298,6 +317,7 @@ public class Calculator implements Common {
         _C[H_LONG][DEX][R] = 7;
         _C[H_LONG][DEX][I] = 8;
         _C[H_LONG][DEX][S] = 6;
+        _C[H_LONG][DEX][F] = 6;
 
         _C[C_LONG][DEX][P] = 30;
         _C[C_LONG][DEX][K] = 40;
@@ -307,6 +327,7 @@ public class Calculator implements Common {
         _C[C_LONG][DEX][R] = 40;
         _C[C_LONG][DEX][I] = 50;
         _C[C_LONG][DEX][S] = 40;
+        _C[C_LONG][DEX][F] = 40;
 
         _C[ER][DEX][P] = 6;
         _C[ER][DEX][K] = 4;
@@ -316,6 +337,7 @@ public class Calculator implements Common {
         _C[ER][DEX][R] = 5;
         _C[ER][DEX][I] = 9;
         _C[ER][DEX][S] = 4;
+        _C[ER][DEX][F] = 4;
 
         _C[D_MAGIC][INT][P] = 40;
         _C[D_MAGIC][INT][K] = 40;
@@ -325,6 +347,7 @@ public class Calculator implements Common {
         _C[D_MAGIC][INT][R] = 40;
         _C[D_MAGIC][INT][I] = 25;
         _C[D_MAGIC][INT][S] = 40;
+        _C[D_MAGIC][INT][F] = 40;
 
         _C[H_MAGIC][INT][P] = 20;
         _C[H_MAGIC][INT][K] = 100;
@@ -334,6 +357,7 @@ public class Calculator implements Common {
         _C[H_MAGIC][INT][R] = 18;
         _C[H_MAGIC][INT][I] = 12;
         _C[H_MAGIC][INT][S] = 100;
+        _C[H_MAGIC][INT][F] = 100;
 
         _C[C_MAGIC][INT][P] = 80;
         _C[C_MAGIC][INT][K] = 100;
@@ -343,6 +367,7 @@ public class Calculator implements Common {
         _C[C_MAGIC][INT][R] = 70;
         _C[C_MAGIC][INT][I] = 20;
         _C[C_MAGIC][INT][S] = 100;
+        _C[C_MAGIC][INT][F] = 100;
 
         _C[MB][INT][P] = 0;
         _C[MB][INT][K] = 0;
@@ -352,6 +377,7 @@ public class Calculator implements Common {
         _C[MB][INT][R] = 0;
         _C[MB][INT][I] = 1;
         _C[MB][INT][S] = 0;
+        _C[MB][INT][F] = 0;
 
         _C[HP][CON][P] = 11;
         _C[HP][CON][K] = 16;
@@ -361,6 +387,7 @@ public class Calculator implements Common {
         _C[HP][CON][R] = 12;
         _C[HP][CON][I] = 8;
         _C[HP][CON][S] = 16;
+        _C[HP][CON][F] = 16;
 
         _C[MR][WIS][P] = 10;
         _C[MR][WIS][K] = 0;
@@ -370,6 +397,7 @@ public class Calculator implements Common {
         _C[MR][WIS][R] = 18;
         _C[MR][WIS][I] = 20;
         _C[MR][WIS][S] = 0;
+        _C[MR][WIS][F] = 0;
     }
 
     private final UI ui;
@@ -2499,6 +2527,38 @@ public class Calculator implements Common {
                             break;
                     }
                     break;
+                case F:
+                    buff.HP += 50;
+                    ui.elixir_rune.setToolTipText("ステ+1 HP+50");
+                    switch (q) {
+                        case 1:
+                            buff.MR += 5;                   //MR+5%
+                            ui.elixir_rune.setToolTipText("ステ+1 HP+50 MR+5%");
+                            break;
+                        case 2:
+                            buff.MR += 5;                   //MR+5%
+                                                            //祝福消耗効率+5%
+                                                            //PVP魔法ダメージ減少+1%
+                            ui.elixir_rune.setToolTipText("ステ+1 HP+50 MR+5% 祝福消耗効率+5% PVP魔法ダメージ減少+1%");
+                            break;
+                        case 3:
+                            buff.MR += 5;                   //MR+5%1
+                                                            //祝福消耗効率+5%
+                            buff.ailment[HIT_TERROR] += 5;  //技術命中+5
+                                                            //PVP魔法ダメージ減少+2%
+                            ui.elixir_rune.setToolTipText("ステ+1 HP+50 MR+5% 祝福消耗効率+5% 技術命中+5 PVP魔法ダメージ減少+2%");
+                            break;
+                        case 4:
+                            buff.MR += 5;                   //MR+5%
+                                                            //祝福消耗効率+5%
+                            buff.ailment[HIT_TERROR] += 10; //技術命中+10
+                                                            //PVP魔法ダメージ減少+3%
+                            ui.elixir_rune.setToolTipText("ステ+1 HP+50 MR+5% 祝福消耗効率+5% 技術命中+10 PVP魔法ダメージ減少+3%");
+                            break;
+                        default:
+                            break;
+                    }
+                    break;
                 default:
                     break;
             }
@@ -3504,7 +3564,7 @@ public class Calculator implements Common {
             }
         }
         //ランカーボーナス
-        //STR+1[君主][ナイト][ダークエルフ][ドラゴンナイト][ウォリアー]
+        //STR+1[君主][ナイト][ダークエルフ][ドラゴンナイト][ウォリアー][フェンサー]
         //DEX+1[エルフ]
         //INT+1[ウィザード][イリュージョニスト]
         if (ui.cb_buff[H_RK].isSelected()) {
@@ -3538,6 +3598,10 @@ public class Calculator implements Common {
                     buff.ST[INT] += 1;
                     break;
                 case S:
+                    //ui.cb_buff[H_RK].setToolTipText("STR+1");
+                    buff.ST[STR] += 1;
+                    break;
+                case F:
                     //ui.cb_buff[H_RK].setToolTipText("STR+1");
                     buff.ST[STR] += 1;
                     break;
@@ -3601,46 +3665,59 @@ public class Calculator implements Common {
         red_mp = Math.min(30, (int) (_int * 2 / 3));
 
         if (pure_str >= 25) {
-            base_dmg_short += 1;
-            base_hit_short += 1;
+            base_dmg_short += 1;                //近距離ダメージ+1
+            base_hit_short += 1;                //近距離命中+1
         }
         if (pure_str >= 35) {
-            base_dmg_short += 1;
-            base_hit_short += 1;
+            base_dmg_short += 1;                //近距離ダメージ+1
+            base_hit_short += 1;                //近距離命中+1
         }
         if (pure_str >= 45) {
-            base_dmg_short += 3;
-            base_hit_short += 3;
-            cri_short += 1;
+            base_dmg_short += 3;                //近距離ダメージ+3
+            base_hit_short += 3;                //近距離命中+3
+            cri_short += 1;                     //近距離クリティカル+1%
         }
-
+//        if (pure_str >= 55) {
+//            base_dmg_short += 5;                //近距離ダメージ+5
+//            base_hit_short += 5;                //近距離命中+5
+//            cri_short += 2;                     //近距離クリティカル+2%
+//        }
         if (pure_dex >= 25) {
-            base_dmg_long += 1;
-            base_hit_long += 1;
+            base_dmg_long += 1;                 //遠距離ダメージ+1
+            base_hit_long += 1;                 //遠距離命中+1
         }
         if (pure_dex >= 35) {
-            base_dmg_long += 1;
-            base_hit_long += 1;
+            base_dmg_long += 1;                 //遠距離ダメージ+1
+            base_hit_long += 1;                 //遠距離命中+1
         }
         if (pure_dex >= 45) {
-            base_dmg_long += 3;
-            base_hit_long += 3;
-            cri_long += 1;
+            base_dmg_long += 3;                 //遠距離ダメージ+3
+            base_hit_long += 3;                 //遠距離命中+3
+            cri_long += 1;                      //遠距離クリティカル+1%
         }
-
+//        if (pure_dex >= 55) {
+//            base_dmg_long += 5;                 //遠距離ダメージ+5
+//            base_hit_long += 5;                 //遠距離命中+5
+//            cri_long += 2;                      //遠距離クリティカル+2%
+//        }
         if (pure_int >= 25) {
-            base_dmg_magic += 1;
-            base_hit_magic += 1;
+            base_dmg_magic += 1;                //魔法ダメージ+1
+            base_hit_magic += 1;                //魔法命中+1
         }
         if (pure_int >= 35) {
-            base_dmg_magic += 1;
-            base_hit_magic += 1;
+            base_dmg_magic += 1;                //魔法ダメージ+1
+            base_hit_magic += 1;                //魔法命中+1
         }
         if (pure_int >= 45) {
-            base_dmg_magic += 3;
-            base_hit_magic += 3;
+            base_dmg_magic += 3;                //魔法ダメージ+3
+            base_hit_magic += 3;                //魔法命中+3
+            cri_magic += 1;                     //魔法クリティカル+1%
         }
-
+//        if (pure_int >= 55) {
+//            base_dmg_magic += 5;                //魔法ダメージ+5
+//            base_hit_magic += 5;                //魔法命中+5
+//            cri_magic += 2;                     //魔法クリティカル+2%
+//        }
         dmg_short = base_dmg_short + buff.DMG_SHORT;
         dmg_long = base_dmg_long + buff.DMG_LONG;
         dmg_magic = base_dmg_magic + buff.DMG_MAGIC;
@@ -3723,6 +3800,12 @@ public class Calculator implements Common {
                 ml = level / 50;
                 if (ml > 1) {
                     ml = 1;
+                }
+                break;
+            case F:
+                ml = level / 15;
+                if (ml > 2) {
+                    ml = 2;
                 }
                 break;
             default:
@@ -5014,6 +5097,10 @@ buki.arrow_elementdmg=0;
                 c = 6;
 //                d = 3;
                 break;
+            case F:
+                c = 6;
+//                d = 3;
+                break;
             default:
                 break;
         }
@@ -5236,42 +5323,63 @@ buki.arrow_elementdmg=0;
                 ui.pure_status_bonus[1][22].setText(Integer.toString(1));
                 mpr++;
             }
-            mpr++;
-            tmp++;
+            mpr++;                          //MP回復+1
+            tmp++;                          //MPポーション回復増加+1
+                                            //最大MP+50は5563行目以降で処理
         }
         if (pure_wis >= 35) {
             if (ui.cb_buff[ITEM_BLUE].isSelected()) {
                 ui.pure_status_bonus[1][22].setText(Integer.toString(2));
                 mpr++;
             }
-            mpr++;
-            tmp++;
+            mpr++;                          //MP回復+1
+            tmp++;                          //MPポーション回復増加+1
+                                            //最大MP+100は5563行目以降で処理
         }
         if (pure_wis >= 45) {
             if (ui.cb_buff[ITEM_BLUE].isSelected()) {
                 ui.pure_status_bonus[1][22].setText(Integer.toString(5));
                 mpr += 3;
             }
-            mpr += 3;
-            tmp += 3;
+            mpr += 3;                       //MP回復+3
+            tmp += 3;                       //MPポーション回復増加+3
+                                            //最大MP+150は5563行目以降で処理
         }
-
+        if (pure_wis >= 55) {
+            if (ui.cb_buff[ITEM_BLUE].isSelected()) {
+                ui.pure_status_bonus[1][22].setText(Integer.toString(10));
+                mpr += 5;
+            }
+            mpr += 5;                       //MP回復+5
+            tmp += 5;                       //MPポーション回復増加+5
+                                            //最大MP+200は5563行目以降で処理
+        }
+        
         ui.pure_status_bonus[1][21].setText(Integer.toString(tmp));
 
         hpr += (con / 2 + level / 20);
         hp_pot = (int) (minasToZero(con - 10) / 10);
 
         if (pure_con >= 25) {
-            hpr++;
+            hpr++;                          //HP回復+1
+                                            //最大HP+50は5549行目以降で処理
         }
         if (pure_con >= 35) {
-            hpr++;
-            hp_pot++;
+            hpr++;                          //HP回復+1
+            hp_pot++;                       //HPポーション回復増加+1%
+                                            //最大HP+100は5549行目以降で処理
         }
         if (pure_con >= 45) {
-            hpr += 3;
-            hp_pot += 2;
+            hpr += 3;                       //HP回復+3
+            hp_pot += 2;                    //HPポーション回復増加+2%
+                                            //最大HP+150は5549行目以降で処理
         }
+        if (pure_con >= 55) {
+            hpr += 5;                       //HP回復+5
+            hp_pot += 4;                    //HPポーション回復増加+4%
+                                            //最大HP+200は5549行目以降で処理
+        }
+
         ui.pure_status_bonus[1][11].setText(Integer.toString(hpr));
         ui.pure_status_bonus[1][12].setText(Integer.toString(hp_pot));
 
@@ -5373,13 +5481,20 @@ buki.arrow_elementdmg=0;
                 hp = 16;
                 mp = 2;
                 break;
+            case F:
+                hp = 16;
+                mp = 2;
+                break;
             default:
                 break;
         }
 
-        double[] c1 = {1.0, 2.0 / 3.0, 1.5, 2.0, 1.5, 0.7, 1.7, 2.0 / 3.0};
-        int[] c2 = {1, 0, 1, 2, 1, 1, 1, 0};
-
+//種族が増えた場合配列を1つ増やす必要あり c1とc2の値が不明　mpの量を決定する為の値と思われる
+//        double[] c1 = {1.0, 2.0 / 3.0, 1.5, 2.0, 1.5, 0.7, 1.7, 2.0 / 3.0};
+//        int[] c2 = {1, 0, 1, 2, 1, 1, 1, 0};
+        double[] c1 = {1.0, 2.0 / 3.0, 1.5, 2.0, 1.5, 0.7, 1.7, 2.0 / 3.0, 2.0 / 3.0};
+        int[] c2 = {1, 0, 1, 2, 1, 1, 1, 0, 0};
+        
         for (int i = 2; i <= level; i++) {
             for (int j = 0; j < 5; j++) {
                 if (i == ui.cb_elixir_level[j].getSelectedIndex() + 1) {
@@ -5432,6 +5547,7 @@ buki.arrow_elementdmg=0;
             ui.pure_status_bonus[1][20].setText(min + " - " + max);
         }
 
+//CONステータスによるHP増加処理
         if (con >= 25) {
             hp += 50;
         }
@@ -5441,7 +5557,11 @@ buki.arrow_elementdmg=0;
         if (con >= 45) {
             hp += 150;
         }
+        if (con >= 55) {
+            hp += 200;
+        }
 
+//WISステータスによるMP増加処理
         if (wis >= 25) {
             mp += 50;
         }
@@ -5450,6 +5570,9 @@ buki.arrow_elementdmg=0;
         }
         if (wis >= 45) {
             mp += 150;
+        }
+        if (wis >= 55) {
+            mp += 200;
         }
 
         int eq_hp = buff.HP;
@@ -5483,6 +5606,9 @@ buki.arrow_elementdmg=0;
                 eq_hp += _ST[ENCHANT][CON] * 8;
                 break;
             case S:
+                eq_hp += _ST[ENCHANT][CON] * 16;
+                break;
+            case F:
                 eq_hp += _ST[ENCHANT][CON] * 16;
                 break;
             default:

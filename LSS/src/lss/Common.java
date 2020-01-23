@@ -20,9 +20,9 @@ public interface Common {
     final int WIS = 4;
     final int CHA = 5;
 
-    //8種の職業
-    final String[] CLASS_LIST = {"P", "K", "E", "W", "D", "R", "I", "S"};
-    final String[] CLASS_LIST2 = {"君主", "ナイト", "エルフ", "ウィザード", "ダークエルフ", "ドラゴンナイト", "イリュージョニスト", "ウォリアー"};
+    //9種の職業
+    final String[] CLASS_LIST = {"P", "K", "E", "W", "D", "R", "I", "S", "F"};
+    final String[] CLASS_LIST2 = {"君主", "ナイト", "エルフ", "ウィザード", "ダークエルフ", "ドラゴンナイト", "イリュージョニスト", "ウォリアー", "フェンサー"};
     final int P = 0;
     final int K = 1;
     final int E = 2;
@@ -31,6 +31,7 @@ public interface Common {
     final int R = 5;
     final int I = 6;
     final int S = 7;
+    final int F = 8;
 
     //4種の属性
     final String[] ELEM_LIST = {"地", "火", "水", "風"};
@@ -94,7 +95,8 @@ public interface Common {
     final int EARRING1 = 11;
     final int EARRING2 = 12;
 
-//エンチャント(0から103までの合計104個分)
+//エンチャント(0から103までの合計104個分)　UI.javaの217行目も合わせて変更必須
+//仮設定で122までの123個で処理
 //基本エンチャント
     final int ACC1 = 0;         //1段加速
     final int ACC2 = 1;         //2段加速
@@ -252,6 +254,30 @@ public interface Common {
     final int S_CR = 67;        //クラッシュ
     final int S_AG = 66;        //アーマーガード
     final int S_FU = 68;        //フューリー
+
+//フェンサーの技術
+    //アクティブスキル
+    final int F_AAA = 104;      //Ashura            アシュラ
+    final int F_ABE = 105;      //Blade             ブレード
+    final int F_APR = 106;      //Panther           パンサー
+    final int F_AJT = 107;      //Judgment          ジャッジメント
+    final int F_AHE = 108;      //Hellfire          ヘルファイア
+    final int F_APM = 109;      //Phantom           ファントム
+
+    //パッシブスキル
+    final int F_PPH = 110;      //Phantom:Death     ファントム:デス
+    final int F_PPR = 111;      //Phantom:Reaper    ファントム:リーパー
+    final int F_PPK = 112;      //Panther:Shock     パンサー:ショック
+    final int F_PSL = 113;      //Survival          サヴァイヴ
+    final int F_PIZ = 114;      //Infinity:Blitz    インフィニティ:ブリッツ
+    final int F_PPX = 115;      //Paradox           パラドックス
+    final int F_PIE = 116;      //Infinity:Dodge    インフィニティ:ドッジ
+    final int F_PGH = 117;      //Growth            グロウス
+    final int F_PID = 118;      //Infinity:Blood    インフィニティ:ブラッド
+    final int F_PRE = 119;      //Rage              レイジ
+    final int F_PIR = 120;      //Infinity:Armor    インフィニティ:アーマー
+    final int F_PFE = 121;      //Frame             フレイム
+    final int F_PDS = 122;      //Damascus          ダマスカス
 
 //その他
     final int ITEM_BLUE = 50;   //魔力回復ポーション

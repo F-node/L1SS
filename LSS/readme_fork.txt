@@ -2,6 +2,16 @@ LineageStatusSimulator_fork2018
 
 変更点
 2020/01/23
+Update 3.7.7
+LSS/src/lss/Calculator.java
+LSS/src/lss/Common.java
+LSS/src/lss/UI.java
+クラス追加
+	F(Fenser)       	フェンサー
+パネル追加
+	エンチャントのタブをエンチャント1とエンチャント2に分割
+
+2020/01/23
 Update 3.7.6
 LSS/data/E.zip
 装備修正

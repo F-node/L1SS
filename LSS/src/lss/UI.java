@@ -69,7 +69,8 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
 
     String version = "";
     JTabbedPane tabpane;
-    JPanel panels[] = new JPanel[4];
+//    JPanel panels[] = new JPanel[4];
+    JPanel panels[] = new JPanel[5];
 
     File f_save_path = new File("./save");
 
@@ -214,9 +215,10 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
     //エンチャントアキュラシー
     //フリージングアーマー
     //ファイナルバーンで計104個分(0から103)
-    JCheckBox[] cb_buff = new JCheckBox[104];
-    JComboBox[] cb_buff_group = new JComboBox[104]; 
-
+//    JCheckBox[] cb_buff = new JCheckBox[104];
+//    JComboBox[] cb_buff_group = new JComboBox[104];
+    JCheckBox[] cb_buff = new JCheckBox[123];
+    JComboBox[] cb_buff_group = new JComboBox[123];
     //パネル４
     JComboBox cb_npc_level;
     JSlider[] s_target_res = new JSlider[ELEM_LIST.length];
@@ -280,7 +282,7 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         setTitle("Lineage Status Simulator ver " + version);
 //        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         //setSize(800, 600);
-        setSize(800, 640);       
+        setSize(800, 640);
         setResizable(false);
 
         ToolTipManager.sharedInstance().setInitialDelay(100);   //初期値:750
@@ -293,16 +295,19 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         panels[1] = new JPanel();
         panels[2] = new JPanel();
         panels[3] = new JPanel();
+        panels[4] = new JPanel();
 
         panels[0].setLayout(null);
         panels[1].setLayout(null);
         panels[2].setLayout(null);
         panels[3].setLayout(null);
+        panels[4].setLayout(null);
 
         tabpane.add("装備/ステータス", panels[0]);
         tabpane.add("レベル/エリクサー", panels[1]);
-        tabpane.add("エンチャント", panels[2]);
-        tabpane.add("耐性設定", panels[3]);
+        tabpane.add("エンチャント1", panels[2]);
+        tabpane.add("エンチャント2", panels[3]);       
+        tabpane.add("耐性設定", panels[4]);
 
         add(tabpane);
 
@@ -1658,7 +1663,7 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
 
         cb_buff[H_RK] = new JCheckBox("ランカーボーナス");
         cb_buff[H_RK].setBounds(200 * row, 20 * col++, 100, 20);
-        cb_buff[H_RK].setToolTipText("<html>"+ "STR+1[君主][ナイト][ダークエルフ][ドラゴンナイト][ウォリアー]"
+        cb_buff[H_RK].setToolTipText("<html>"+ "STR+1[君主][ナイト][ダークエルフ][ドラゴンナイト][ウォリアー][フェンサー]"
                                      + "<br>"+ "DEX+1[エルフ]"
                                      + "<br>"+ "INT+1[ウィザード][イリュージョニスト]"+"</html>");       
 
@@ -1684,53 +1689,53 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         //----------
         lab_tmp = new JLabel("耐性", SwingConstants.CENTER);
         lab_tmp.setBounds(0, 0, 200, 25);
-        panels[3].add(lab_tmp);
+        panels[4].add(lab_tmp);
         for (int i = 0; i < ELEM_LIST.length; i++) {
             JLabel lab = new JLabel(ELEM_LIST[i], SwingConstants.CENTER);
             lab.setBounds(0, 25 + i * 25, 100, 25);
-            panels[3].add(lab);
+            panels[4].add(lab);
             s_target_res[i] = new JSlider(-100, 100, 0);
             s_target_res[i].setBounds(100, 25 + i * 25, 100, 25);
             s_target_res[i].addChangeListener(this);
-            panels[3].add(s_target_res[i]);
+            panels[4].add(s_target_res[i]);
             lab_target_resist[i] = new JLabel("0", SwingConstants.CENTER);
             lab_target_resist[i].setBounds(200, 25 + i * 25, 100, 25);
-            panels[3].add(lab_target_resist[i]);
+            panels[4].add(lab_target_resist[i]);
         }
 
         lab_tmp = new JLabel("MR", SwingConstants.CENTER);
         lab_tmp.setBounds(0, 125, 100, 25);
-        panels[3].add(lab_tmp);
+        panels[4].add(lab_tmp);
         s_target_mr = new JSlider(0, 200, 100);
         s_target_mr.setBounds(100, 125, 100, 25);
         s_target_mr.addChangeListener(this);
-        panels[3].add(s_target_mr);
+        panels[4].add(s_target_mr);
         lab_target_mr = new JLabel("100", SwingConstants.CENTER);
         lab_target_mr.setBounds(200, 125, 100, 25);
-        panels[3].add(lab_target_mr);
+        panels[4].add(lab_target_mr);
 
         lab_tmp = new JLabel("対象", SwingConstants.CENTER);
         lab_tmp.setBounds(0, 175, 100, 25);
-        panels[3].add(lab_tmp);
+        panels[4].add(lab_tmp);
         String mode_list[] = {"NPC", "PC"};
         cb_mode_pc = new JComboBox(mode_list);
         cb_mode_pc.setBounds(100, 175, 100, 25);
-        panels[3].add(cb_mode_pc);
+        panels[4].add(cb_mode_pc);
 
         lab_tmp = new JLabel("AC", SwingConstants.CENTER);
         lab_tmp.setBounds(0, 200, 100, 25);
-        panels[3].add(lab_tmp);
+        panels[4].add(lab_tmp);
         String target_ac_list[] = new String[256];
         for (int i = 0; i < target_ac_list.length; i++) {
             target_ac_list[i] = Integer.toString(10 - i);
         }
         cb_target_ac = new JComboBox(target_ac_list);
         cb_target_ac.setBounds(100, 200, 100, 25);
-        panels[3].add(cb_target_ac);
+        panels[4].add(cb_target_ac);
         cb_hittyuu = new JCheckBox("必中");
         cb_hittyuu.addActionListener(this);
         cb_hittyuu.setBounds(220, 200, 100, 25);
-        panels[3].add(cb_hittyuu);
+        panels[4].add(cb_hittyuu);
 
         String[] dr_list = new String[61];
         for (int i = 0; i <= 60; i++) {
@@ -1745,118 +1750,118 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_target_dr.addActionListener(this);
         cb_target_dr.setBounds(100, 225, 100, 25);
         lab_tmp.setBounds(0, 225, 100, 25);
-        panels[3].add(cb_target_dr);
-        panels[3].add(lab_tmp);
+        panels[4].add(cb_target_dr);
+        panels[4].add(lab_tmp);
 
         lab_tmp = new JLabel("DG", SwingConstants.CENTER);
         lab_tmp.setBounds(0, 250, 100, 25);
-        panels[3].add(lab_tmp);
+        panels[4].add(lab_tmp);
         String dg_list[] = {"+50", "0", "-50"};
         cb_target_dg = new JComboBox(dg_list);
         cb_target_dg.setSelectedIndex(1);
         cb_target_dg.addActionListener(this);
 
         cb_target_dg.setBounds(100, 250, 100, 25);
-        panels[3].add(cb_target_dg);
+        panels[4].add(cb_target_dg);
 
         cb_sonsyou = new JCheckBox("損傷");
         cb_sonsyou.addActionListener(this);
         cb_sonsyou.setBounds(220, 175, 100, 25);
-        panels[3].add(cb_sonsyou);
+        panels[4].add(cb_sonsyou);
 
         lab_tmp = new JLabel("新規設定", SwingConstants.CENTER);
         lab_tmp.setBounds(420, 25, 100, 25);
-        panels[3].add(lab_tmp);
+        panels[4].add(lab_tmp);
         tf_res_name = new JTextField("");
         tf_res_name.setBounds(520, 25, 100, 25);
-        panels[3].add(tf_res_name);
+        panels[4].add(tf_res_name);
         bt_save_res = new JButton("作成");
         bt_save_res.setActionCommand("save_res");
         bt_save_res.addActionListener(this);
         bt_save_res.setBounds(620, 25, 100, 25);
-        panels[3].add(bt_save_res);
+        panels[4].add(bt_save_res);
 
         lab_tmp = new JLabel("設定リスト", SwingConstants.CENTER);
         lab_tmp.setBounds(420, 50, 100, 25);
-        panels[3].add(lab_tmp);
+        panels[4].add(lab_tmp);
         cb_res = new JComboBox();
         cb_res.setBounds(520, 50, 100, 25);
-        panels[3].add(cb_res);
+        panels[4].add(cb_res);
         bt_load_res = new JButton("読み込み");
         bt_load_res.setActionCommand("load_res");
         bt_load_res.addActionListener(this);
         bt_load_res.setBounds(620, 50, 100, 25);
-        panels[3].add(bt_load_res);
+        panels[4].add(bt_load_res);
         bt_ow_res = new JButton("上書き");
         bt_ow_res.setActionCommand("ow_res");
         bt_ow_res.addActionListener(this);
         bt_ow_res.setBounds(620, 75, 100, 25);
-        panels[3].add(bt_ow_res);
+        panels[4].add(bt_ow_res);
         bt_del_res = new JButton("削除");
         bt_del_res.setActionCommand("del_res");
         bt_del_res.addActionListener(this);
         bt_del_res.setBounds(620, 100, 100, 25);
-        panels[3].add(bt_del_res);
+        panels[4].add(bt_del_res);
 
         lab_tmp = new JLabel("起動時", SwingConstants.CENTER);
         lab_tmp.setBounds(420, 125, 100, 25);
-        panels[3].add(lab_tmp);
+        panels[4].add(lab_tmp);
         JButton bt_default = new JButton("変更");
         bt_default.setBounds(620, 125, 100, 25);
         bt_default.addActionListener(this);
         bt_default.setActionCommand("change_default");
-        panels[3].add(bt_default);
+        panels[4].add(bt_default);
         lab_default = new JLabel();
         lab_default.setHorizontalAlignment(SwingConstants.CENTER);
         lab_default.setBounds(520, 125, 100, 25);
-        panels[3].add(lab_default);
+        panels[4].add(lab_default);
 
         refresh();
 
         lab_tmp = new JLabel("簡易計算機", SwingConstants.CENTER);
         lab_tmp.setBounds(420, 250, 200, 25);
-        panels[3].add(lab_tmp);
+        panels[4].add(lab_tmp);
 
         lab_tmp = new JLabel("HP", SwingConstants.CENTER);
         lab_tmp.setBounds(420, 300, 100, 25);
-        panels[3].add(lab_tmp);
+        panels[4].add(lab_tmp);
         tf_e_hp = new JTextField("4000");
         tf_e_hp.setBounds(520, 300, 100, 25);
         tf_e_hp.addActionListener(this);
-        panels[3].add(tf_e_hp);
+        panels[4].add(tf_e_hp);
 
         lab_tmp = new JLabel("HPR [/5sec]", SwingConstants.CENTER);
         lab_tmp.setBounds(420, 325, 100, 25);
-        panels[3].add(lab_tmp);
+        panels[4].add(lab_tmp);
         tf_e_hpr = new JTextField("250");
         tf_e_hpr.setBounds(520, 325, 100, 25);
         tf_e_hpr.addActionListener(this);
-        panels[3].add(tf_e_hpr);
+        panels[4].add(tf_e_hpr);
 
         lab_tmp = new JLabel("タイプ", SwingConstants.CENTER);
         lab_tmp.setBounds(420, 350, 100, 25);
-        panels[3].add(lab_tmp);
+        panels[4].add(lab_tmp);
         String[] type_list = {"通常", "悪魔", "不死"};
         cb_e_type = new JComboBox(type_list);
         cb_e_type.setBounds(520, 350, 100, 25);
         cb_e_type.addActionListener(this);
-        panels[3].add(cb_e_type);
+        panels[4].add(cb_e_type);
 
         lab_tmp = new JLabel("サイズ", SwingConstants.CENTER);
         lab_tmp.setBounds(420, 375, 100, 25);
-        panels[3].add(lab_tmp);
+        panels[4].add(lab_tmp);
         String[] size_list = {"小", "大"};
         cb_e_size = new JComboBox(size_list);
         cb_e_size.setBounds(520, 375, 100, 25);
         cb_e_size.addActionListener(this);
-        panels[3].add(cb_e_size);
+        panels[4].add(cb_e_size);
 
         lab_tmp = new JLabel("戦闘時間(推定)", SwingConstants.CENTER);
         lab_tmp.setBounds(420, 425, 100, 25);
-        panels[3].add(lab_tmp);
+        panels[4].add(lab_tmp);
         lab_time = new JLabel();
         lab_time.setBounds(520, 425, 100, 25);
-        panels[3].add(lab_time);
+        panels[4].add(lab_time);
 
         try {
             try (BufferedReader br = new BufferedReader(new FileReader("./res/default"))) {
