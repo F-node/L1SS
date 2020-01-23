@@ -2,6 +2,17 @@ LineageStatusSimulator_fork2018
 
 変更点
 2020/01/23
+Update 3.7.6
+LSS/data/E.zip
+装備修正
+	Update 3.7.5の修正漏れ
+	幻想のプレートメイル
+	ヴァラカスフレイムプレートメイル
+	パプリオンハイドロプレートメイル
+	リンドビオルストームプレートメイル
+	アンタラスグランドプレートメイル
+
+2020/01/23
 Update 3.7.5
 LSS/data/E.zip
 LSS/src/lss/Calculator.java
