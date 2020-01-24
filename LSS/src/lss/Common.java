@@ -257,27 +257,27 @@ public interface Common {
 
 //フェンサーの技術
     //アクティブスキル
-    final int F_AAA = 104;      //Ashura            アシュラ
-    final int F_ABE = 105;      //Blade             ブレード
-    final int F_APR = 106;      //Panther           パンサー
-    final int F_AJT = 107;      //Judgment          ジャッジメント
-    final int F_AHE = 108;      //Hellfire          ヘルファイア
-    final int F_APM = 109;      //Phantom           ファントム
+    final int F_AAA = 104;      //AshurA            アシュラ
+    final int F_ABE = 105;      //BladE             ブレード
+    final int F_APR = 106;      //PantheR           パンサー
+    final int F_AJT = 107;      //JudgmenT          ジャッジメント
+    final int F_AHE = 108;      //HellfirE          ヘルファイア
+    final int F_APM = 109;      //PhantoM           ファントム
 
     //パッシブスキル
-    final int F_PPH = 110;      //Phantom:Death     ファントム:デス
-    final int F_PPR = 111;      //Phantom:Reaper    ファントム:リーパー
-    final int F_PPK = 112;      //Panther:Shock     パンサー:ショック
-    final int F_PSL = 113;      //Survival          サヴァイヴ
-    final int F_PIZ = 114;      //Infinity:Blitz    インフィニティ:ブリッツ
-    final int F_PPX = 115;      //Paradox           パラドックス
-    final int F_PIE = 116;      //Infinity:Dodge    インフィニティ:ドッジ
-    final int F_PGH = 117;      //Growth            グロウス
-    final int F_PID = 118;      //Infinity:Blood    インフィニティ:ブラッド
-    final int F_PRE = 119;      //Rage              レイジ
-    final int F_PIR = 120;      //Infinity:Armor    インフィニティ:アーマー
-    final int F_PFE = 121;      //Frame             フレイム
-    final int F_PDS = 122;      //Damascus          ダマスカス
+    final int F_PPH = 110;      //Phantom:DeatH     ファントム:デス
+    final int F_PPR = 111;      //Phantom:ReapeR    ファントム:リーパー
+    final int F_PPK = 112;      //Panther:ShocK     パンサー:ショック
+    final int F_PSE = 113;      //SurvivE           サヴァイヴ
+    final int F_PIZ = 114;      //Infinity:BlitZ    インフィニティ:ブリッツ
+    final int F_PPX = 115;      //ParadoX           パラドックス
+    final int F_PIE = 116;      //Infinity:DodgE    インフィニティ:ドッジ
+    final int F_PGH = 117;      //GrowtH            グロウス
+    final int F_PID = 118;      //Infinity:BlooD    インフィニティ:ブラッド
+    final int F_PRE = 119;      //RagE              レイジ
+    final int F_PIR = 120;      //Infinity:ArmoR    インフィニティ:アーマー
+    final int F_PFE = 121;      //FramE             フレイム
+    final int F_PDS = 122;      //DamascuS          ダマスカス
 
 //その他
     final int ITEM_BLUE = 50;   //魔力回復ポーション

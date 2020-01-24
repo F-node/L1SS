@@ -881,6 +881,25 @@ public class Bougu implements Common {
                 op2.ailment[SPIRIT] = 1;         //¸—ì‘Ï«+1
             }
         }
+        if (name.equals("ƒGƒ‹ƒVƒƒƒx‚Ìƒwƒ‹ƒ€")) {
+            op2.MP = 10 * enchant;
+            if (enchant >= 9) {
+                op2.ailment[STUN] = 5;           //‹Zp‘Ï«+5
+                op2.ailment[TERROR] = 5;         //‹°•|‘Ï«+5
+            } else if (enchant >= 8) {
+                op2.ailment[STUN] = 4;           //‹Zp‘Ï«+4
+                op2.ailment[TERROR] = 4;         //‹°•|‘Ï«+4
+            } else if (enchant >= 7) {
+                op2.ailment[STUN] = 3;           //‹Zp‘Ï«+3
+                op2.ailment[TERROR] = 3;         //‹°•|‘Ï«+3
+            } else if (enchant >= 6) {
+                op2.ailment[STUN] = 2;           //‹Zp‘Ï«+2
+                op2.ailment[TERROR] = 2;         //‹°•|‘Ï«+2
+            } else if (enchant >= 5) {
+                op2.ailment[STUN] = 1;           //‹Zp‘Ï«+1
+                op2.ailment[TERROR] = 1;         //‹°•|‘Ï«+1
+            }
+        }
         if (name.equals("ƒ}ƒ“ƒ{ƒnƒbƒg")) {
             if (enchant >= 7) {
                 op2.ST[CHA] = 1;
