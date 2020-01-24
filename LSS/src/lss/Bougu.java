@@ -1271,7 +1271,7 @@ public class Bougu implements Common {
                 op2.ailment[SECRET] = 1;    //秘技耐性+1
             }
         }
-        if (name.contains("ハルパスプレートメイル") || name.contains("ハルパススケイルメイル") || name.contains("ハルパスローブ")){
+        if (name.equals("ハルパスプレートメイル") || name.equals("ハルパススケイルメイル") || name.equals("ハルパスローブ")){
             if (enchant >= 9) {
                 op2.DR = 5;                 //ダメージ低下+5
             } else if (enchant >= 8) {
@@ -1940,7 +1940,7 @@ public class Bougu implements Common {
             }
         }
 //ゲートル
-        if (name.equals("シンセシスゲートル")) {
+        if (name.equals("シンセシスゲートル") || name.equals("体力のゲートル")){
             op2.HP = 5 * enchant;
         }
         //腕力のゲートルは+9[近距離ダメージ+1]追加
@@ -2023,6 +2023,54 @@ public class Bougu implements Common {
                 op2.HIT_MAGIC = 1;          //魔法命中+1
             }
         }
+        //ドラゴンスレイヤーゲートル
+        if (name.equals("ドラゴンスレイヤーゲートル")) {
+            if (enchant >= 9) {
+                op2.MR = 10;                //MR+10
+                op2.PVP_DR = 5;             //PVPダメージ低下+5
+                op2.HP = 150;               //HP+150
+            } else if (enchant >= 8) {
+                op2.MR = 8;                 //MR+8
+                op2.PVP_DR = 4;             //PVPダメージ低下+4
+                op2.HP = 100;               //HP+100
+            } else if (enchant >= 7) {
+                op2.MR = 6;                 //MR+6
+                op2.PVP_DR = 3;             //PVPダメージ低下+3
+                op2.HP = 50;                //HP+50
+            } else if (enchant >= 6) {
+                op2.MR = 4;                 //MR+4
+                op2.PVP_DR = 2;             //PVPダメージ低下+2
+            } else if (enchant >= 5) {
+                op2.MR = 2;                 //MR+2
+                op2.PVP_DR = 1;             //PVPダメージ低下+1
+            }
+        }
+//スポールダー
+        //指揮官のスポールダー/サイハのスポールダー/大魔術師のスポールダー
+        if (name.equals("指揮官のスポールダー") || name.equals("サイハのスポールダー") || name.equals("大魔術師のスポールダー")) {
+            if (enchant >= 9) {
+                op2.PVP_DR = 5;             //PVPダメージ低下+5
+                op2.ailment[TERROR] = 5;    //恐怖耐性+5
+                op2.HP = 100;               //HP+100
+            } else if (enchant >= 8) {
+                op2.PVP_DR = 4;             //PVPダメージ低下+4
+                op2.ailment[TERROR] = 4;    //恐怖耐性+4
+                op2.HP = 80;                //HP+80
+            } else if (enchant >= 7) {
+                op2.PVP_DR = 3;             //PVPダメージ低下+3
+                op2.ailment[TERROR] = 3;    //恐怖耐性+3
+                op2.HP = 60;                //HP+60
+            } else if (enchant >= 6) {
+                op2.PVP_DR = 2;             //PVPダメージ低下+2
+                op2.ailment[TERROR] = 2;    //恐怖耐性+2
+                op2.HP = 40;                //HP+40
+            } else if (enchant >= 5) {
+                op2.PVP_DR = 1;             //PVPダメージ低下+1
+                op2.ailment[TERROR] = 1;    //恐怖耐性+1
+                op2.HP = 20;                //HP+20
+            }
+        }
+
 //リング&アミュレット&ベルト&紋章&インシグニア
 //+1強化するごとにAC-1されない防具・アイテム
         if (type.equals("リング") || type.equals("アミュレット") || type.equals("イアリング") || type.equals("ベルト") || type.equals("紋章") || type.equals("インシグニア")) {
