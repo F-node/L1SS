@@ -1271,6 +1271,20 @@ public class Bougu implements Common {
                 op2.ailment[SECRET] = 1;    //秘技耐性+1
             }
         }
+        if (name.contains("ハルパスプレートメイル") || name.contains("ハルパススケイルメイル") || name.contains("ハルパスローブ")){
+            if (enchant >= 9) {
+                op2.DR = 5;                 //ダメージ低下+5
+            } else if (enchant >= 8) {
+                op2.DR = 4;                 //ダメージ低下+4
+            } else if (enchant >= 7) {
+                op2.DR = 3;                 //ダメージ低下+3
+            } else if (enchant >= 6) {
+                op2.DR = 2;                 //ダメージ低下+2
+            } else if (enchant >= 5) {
+                op2.DR = 1;                 //ダメージ低下+1
+            }
+        }
+
 //グローブ
         if (name.equals("輝く魔力のグローブ")) {
             if (enchant > 4) {
