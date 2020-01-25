@@ -1,6 +1,18 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2020/01/26
+Update 3.8.3
+LSS/data/E.zip
+LSS/src/lss/Bougu.java
+LSS/src/lss/Common.java
+LSS/src/lss/UI.java
+新規装備
+	ペンダント(仮)を実装
+	最大HP +XX% 最大MP +XX% DG ME 獲得経験値 +XX%の計算と表示は未実装
+修正
+	パネル1のUI
+
 2020/01/25
 Update 3.8.2
 LSS/data/E.zip

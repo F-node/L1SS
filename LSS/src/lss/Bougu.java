@@ -2071,9 +2071,9 @@ public class Bougu implements Common {
             }
         }
 
-//リング&アミュレット&ベルト&紋章&インシグニア
+//リング&アミュレット&ベルト&紋章&インシグニア&ペンダント
 //+1強化するごとにAC-1されない防具・アイテム
-        if (type.equals("リング") || type.equals("アミュレット") || type.equals("イアリング") || type.equals("ベルト") || type.equals("紋章") || type.equals("インシグニア")) {
+        if (type.equals("リング") || type.equals("アミュレット") || type.equals("イアリング") || type.equals("ベルト") || type.equals("紋章") || type.equals("インシグニア") || type.equals("ペンダント")) {
 
             if (name.equals("回復の紋章")) {
                 op2.effect = "ポーション回復量 +" + (enchant * 2 + 2) + "% +" + (enchant * 2 + 2) + ",";
@@ -3482,6 +3482,303 @@ public class Bougu implements Common {
                         op2.HIT_MAGIC = 5;
                         op2.PVP_DR = 5;
                         op2.effect += "祝福消耗効率 +20%,";
+                        break;
+                    default:
+                        break;
+                }
+            }
+        //ペンダント
+            if (name.equals("ルームティス闘士のペンダント")) {
+                switch (enchant) {
+                    case 1:
+//                        op2.MHP = 4;                //最大HP+4%
+//                        op2.MMP = 2;                //最大MP+2%
+                        break;
+                    case 2:
+//                        op2.MHP = 6;                //最大HP+6%
+//                        op2.MMP = 3;                //最大MP+3%
+                        op2.MR = 2;                 //MR+2
+                        break;
+                    case 3:
+//                        op2.MHP = 8;                //最大HP+8%
+//                        op2.MMP = 4;                //最大MP+4%
+                        op2.MR = 4;                 //MR+4
+                        break;               
+                    case 4:
+//                        op2.MHP = 10;               //最大HP+10%
+//                        op2.MMP = 5;                //最大MP+5%
+                        op2.MR = 6;                 //MR+6
+                        op2.DMG_SHORT = 1;          //近距離ダメージ+1
+                        break;             
+                    case 5:
+//                        op2.MHP = 12;               //最大HP+12%
+//                        op2.MMP = 6;                //最大MP+6%
+                        op2.MR = 10;                //MR+10
+                        op2.DMG_SHORT = 2;          //近距離ダメージ+2
+                        break;              
+                    case 6:
+//                        op2.MHP = 14;               //最大HP+14%
+//                        op2.MMP = 7;                //最大MP+7%
+                        op2.MR = 12;                //MR+12
+                        op2.DMG_SHORT = 3;          //近距離ダメージ+3
+//                        op2.DG = 2;                 //DG+2
+                        op2.ER = 2;                 //ER+2
+//                        op2.ME = 2;                 //ME+2
+                        op2.ailment[STUN] = 2;      //技術耐性+2
+                        op2.ailment[SPIRIT] = 2;    //精霊耐性+2
+                        op2.ailment[SECRET] = 2;    //秘技耐性+2
+                        op2.ailment[TERROR] = 2;    //恐怖耐性+2
+                        op2.PVP_DR = 2;             //PVPダメージ低下+2
+                        break;              
+                    case 7:
+//                        op2.MHP = 17;               //最大HP+17%
+//                        op2.MMP = 8;                //最大MP+8%
+                        op2.MR = 14;                //MR+14
+                        op2.DMG_SHORT = 4;          //近距離ダメージ+4
+//                        op2.DG = 4;                 //DG+4
+                        op2.ER = 4;                 //ER+4
+//                        op2.ME = 4;                 //ME+4
+                        op2.ailment[STUN] = 4;      //技術耐性+4
+                        op2.ailment[SPIRIT] = 4;    //精霊耐性+4
+                        op2.ailment[SECRET] = 4;    //秘技耐性+4
+                        op2.ailment[TERROR] = 4;    //恐怖耐性+4
+                        op2.PVP_DR = 4;             //PVPダメージ低下+4
+                        break;              
+                    case 8:
+//                        op2.MHP = 20;                 //最大HP+20%
+//                        op2.MMP = 10;                 //最大MP+10%
+                        op2.MR = 16;                //MR+16
+                        op2.DMG_SHORT = 5;          //近距離ダメージ+5
+//                        op2.DG = 6;                 //DG+6
+                        op2.ER = 6;                 //ER+6
+//                        op2.ME = 6;                 //ME+6
+                        op2.ailment[STUN] = 6;      //技術耐性+6
+                        op2.ailment[SPIRIT] = 6;    //精霊耐性+6
+                        op2.ailment[SECRET] = 6;    //秘技耐性+6
+                        op2.ailment[TERROR] = 6;    //恐怖耐性+6
+                        op2.PVP_DR = 6;             //PVPダメージ低下+6
+                        break;
+                    default:
+                        break;
+                }
+            }
+            if (name.equals("ルームティス名弓のペンダント")) {
+                switch (enchant) {
+                    case 1:
+//                        op2.MHP = 2;                //最大HP+2%
+//                        op2.MMP = 2;                //最大MP+2%
+                        break;
+                    case 2:
+//                        op2.MHP = 3;                //最大HP+3%
+//                        op2.MMP = 3;                //最大MP+3%
+                        op2.MR = 2;                 //MR+2
+                        break;
+                    case 3:
+//                        op2.MHP = 5;                //最大HP+5%
+//                        op2.MMP = 5;                //最大MP+5%
+                        op2.MR = 4;                 //MR+4
+                        break;               
+                    case 4:
+//                        op2.MHP = 7;                //最大HP+7%
+//                        op2.MMP = 7;                //最大MP+7%
+                        op2.MR = 6;                 //MR+6
+                        op2.DMG_LONG = 1;           //遠距離ダメージ+1
+                        break;             
+                    case 5:
+//                        op2.MHP = 9;                //最大HP+9%
+//                        op2.MMP = 9;                //最大MP+9%
+                        op2.MR = 10;                //MR+10
+                        op2.DMG_LONG = 2;           //遠距離ダメージ+2
+                        break;              
+                    case 6:
+//                        op2.MHP = 11;                //最大HP+11%
+//                        op2.MMP = 11;                //最大MP+11%
+                        op2.MR = 12;                //MR+12
+                        op2.DMG_LONG = 3;           //遠距離ダメージ+3
+//                        op2.DG = 2;                 //DG+2
+                        op2.ER = 2;                 //ER+2
+//                        op2.ME = 2;                 //ME+2
+                        op2.ailment[STUN] = 2;      //技術耐性+2
+                        op2.ailment[SPIRIT] = 2;    //精霊耐性+2
+                        op2.ailment[SECRET] = 2;    //秘技耐性+2
+                        op2.ailment[TERROR] = 2;    //恐怖耐性+2
+                        op2.PVP_DR = 2;             //PVPダメージ低下+2
+                        break;              
+                    case 7:
+//                        op2.MHP = 13;                 //最大HP+13%
+//                        op2.MMP = 13;                 //最大MP+13%
+                        op2.MR = 14;                //MR+14
+                        op2.DMG_LONG = 4;           //遠距離ダメージ+4
+//                        op2.DG = 4;                 //DG+4
+                        op2.ER = 4;                 //ER+4
+//                        op2.ME = 4;                 //ME+4
+                        op2.ailment[STUN] = 4;      //技術耐性+4
+                        op2.ailment[SPIRIT] = 4;    //精霊耐性+4
+                        op2.ailment[SECRET] = 4;    //秘技耐性+4
+                        op2.ailment[TERROR] = 4;    //恐怖耐性+4
+                        op2.PVP_DR = 4;             //PVPダメージ低下+4
+                        break;              
+                    case 8:
+//                        op2.MHP = 15;                 //最大HP+15%
+//                        op2.MMP = 15;                 //最大MP+15%
+                        op2.MR = 16;                //MR+16
+                        op2.DMG_LONG = 5;           //遠距離ダメージ+5
+//                        op2.DG = 6;                 //DG+6
+                        op2.ER = 6;                 //ER+6
+//                        op2.ME = 6;                 //ME+6
+                        op2.ailment[STUN] = 6;      //技術耐性+6
+                        op2.ailment[SPIRIT] = 6;    //精霊耐性+6
+                        op2.ailment[SECRET] = 6;    //秘技耐性+6
+                        op2.ailment[TERROR] = 6;    //恐怖耐性+6
+                        op2.PVP_DR = 6;             //PVPダメージ低下+6
+                        break;
+                    default:
+                        break;
+                }
+            }
+            if (name.equals("ルームティス賢者のペンダント")) {
+                switch (enchant) {
+                    case 1:
+//                        op2.MHP = 2;                //最大HP+2%
+//                        op2.MMP = 4;                //最大MP+4%
+                        break;
+                    case 2:
+//                        op2.MHP = 3;                //最大HP+3%
+//                        op2.MMP = 6;                //最大MP+6%
+                        op2.MR = 2;                 //MR+2
+                        break;
+                    case 3:
+//                        op2.MHP = 4;                //最大HP+4%
+//                        op2.MMP = 8;                //最大MP+8%
+                        op2.MR = 4;                 //MR+4
+                        break;               
+                    case 4:
+//                        op2.MHP = 5;                //最大HP+5%
+//                        op2.MMP = 10;               //最大MP+10%
+                        op2.MR = 6;                 //MR+6
+                        op2.SP = 1;                 //SP+1
+                        break;             
+                    case 5:
+//                        op2.MHP = 6;                //最大HP+6%
+//                        op2.MMP = 12;               //最大MP+12%
+                        op2.MR = 10;                //MR+10
+                        op2.SP = 2;                 //SP+2
+                        break;              
+                    case 6:
+//                        op2.MHP = 7;                //最大HP+7%
+//                        op2.MMP = 14;               //最大MP+14%
+                        op2.MR = 12;                //MR+12
+                        op2.SP = 3;                 //SP+3
+//                        op2.DG = 2;                 //DG+2
+                        op2.ER = 2;                 //ER+2
+//                        op2.ME = 2;                 //ME+2
+                        op2.ailment[STUN] = 2;      //技術耐性+2
+                        op2.ailment[SPIRIT] = 2;    //精霊耐性+2
+                        op2.ailment[SECRET] = 2;    //秘技耐性+2
+                        op2.ailment[TERROR] = 2;    //恐怖耐性+2
+                        op2.PVP_DR = 2;             //PVPダメージ低下+2
+                        break;              
+                    case 7:
+//                        op2.MHP = 8;                //最大HP+8%
+//                        op2.MMP = 17;               //最大MP+17%
+                        op2.MR = 14;                //MR+14
+                        op2.SP = 4;                 //SP+4
+//                        op2.DG = 4;                 //DG+4
+                        op2.ER = 4;                 //ER+4
+//                        op2.ME = 4;                 //ME+4
+                        op2.ailment[STUN] = 4;      //技術耐性+4
+                        op2.ailment[SPIRIT] = 4;    //精霊耐性+4
+                        op2.ailment[SECRET] = 4;    //秘技耐性+4
+                        op2.ailment[TERROR] = 4;    //恐怖耐性+4
+                        op2.PVP_DR = 4;             //PVPダメージ低下+4
+                        break;              
+                    case 8:
+//                        op2.MHP = 10;               //最大HP+10%
+//                        op2.MMP = 20;               //最大MP+20%
+                        op2.MR = 16;                //MR+16
+                        op2.SP = 5;                 //SP+5
+//                        op2.DG = 6;                 //DG+6
+                        op2.ER = 6;                 //ER+6
+//                        op2.ME = 6;                 //ME+6
+                        op2.ailment[STUN] = 6;      //技術耐性+6
+                        op2.ailment[SPIRIT] = 6;    //精霊耐性+6
+                        op2.ailment[SECRET] = 6;    //秘技耐性+6
+                        op2.ailment[TERROR] = 6;    //恐怖耐性+6
+                        op2.PVP_DR = 6;             //PVPダメージ低下+6
+                        break;
+                    default:
+                        break;
+                }
+            }
+            if (name.equals("ルームティス狩猟のペンダント")) {
+                switch (enchant) {
+                    case 1:
+//                        op2.MHP = 2;                //最大HP+2%
+//                        op2.MMP = 2;                //最大MP+2%
+                        break;
+                    case 2:
+//                        op2.MHP = 3;                //最大HP+3%
+//                        op2.MMP = 3;                //最大MP+3%
+                        op2.MR = 2;                 //MR+2
+                        break;
+                    case 3:
+//                        op2.MHP = 4;                //最大HP+4%
+//                        op2.MMP = 4;                //最大MP+4%
+                        op2.MR = 4;                 //MR+4
+                        break;               
+                    case 4:
+//                        op2.MHP = 5;                //最大HP+5%
+//                        op2.MMP = 5;                //最大MP+5%
+                        op2.MR = 6;                 //MR+6
+//                                                    //獲得経験値+4%
+                        break;             
+                    case 5:
+//                        op2.MHP = 6;                //最大HP+6%
+//                        op2.MMP = 6;                //最大MP+6%
+                        op2.MR = 10;                //MR+10
+//                                                    //獲得経験値+8%
+                        break;              
+                    case 6:
+//                        op2.MHP = 7;                //最大HP+7%
+//                        op2.MMP = 7;                //最大MP+7%
+                        op2.MR = 12;                //MR+12
+//                                                    //獲得経験値+12%
+//                        op2.DG = 2;                 //DG+2
+                        op2.ER = 2;                 //ER+2
+//                        op2.ME = 2;                 //ME+2
+                        op2.ailment[STUN] = 2;      //技術耐性+2
+                        op2.ailment[SPIRIT] = 2;    //精霊耐性+2
+                        op2.ailment[SECRET] = 2;    //秘技耐性+2
+                        op2.ailment[TERROR] = 2;    //恐怖耐性+2
+                        op2.PVP_DR = 2;             //PVPダメージ低下+2
+                        break;              
+                    case 7:
+//                        op2.MHP = 8;                //最大HP+8%
+//                        op2.MMP = 8;                //最大MP+8%
+                        op2.MR = 14;                //MR+14
+//                                                    //獲得経験値+16%
+//                        op2.DG = 4;                 //DG+4
+                        op2.ER = 4;                 //ER+4
+//                        op2.ME = 4;                 //ME+4
+                        op2.ailment[STUN] = 4;      //技術耐性+4
+                        op2.ailment[SPIRIT] = 4;    //精霊耐性+4
+                        op2.ailment[SECRET] = 4;    //秘技耐性+4
+                        op2.ailment[TERROR] = 4;    //恐怖耐性+4
+                        op2.PVP_DR = 4;             //PVPダメージ低下+4
+                        break;              
+                    case 8:
+//                        op2.MHP = 10;               //最大HP+10%
+//                        op2.MMP = 10;               //最大MP+10%
+                        op2.MR = 16;                //MR+16
+//                                                    //獲得経験値+20%
+//                        op2.DG = 6;                 //DG+6
+                        op2.ER = 6;                 //ER+6
+//                        op2.ME = 6;                 //ME+6
+                        op2.ailment[STUN] = 6;      //技術耐性+6
+                        op2.ailment[SPIRIT] = 6;    //精霊耐性+6
+                        op2.ailment[SECRET] = 6;    //秘技耐性+6
+                        op2.ailment[TERROR] = 6;    //恐怖耐性+6
+                        op2.PVP_DR = 6;             //PVPダメージ低下+6
                         break;
                     default:
                         break;
