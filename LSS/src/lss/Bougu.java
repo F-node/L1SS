@@ -3521,9 +3521,9 @@ public class Bougu implements Common {
 //                        op2.MMP = 7;                //ç≈ëÂMP+7%
                         op2.MR = 12;                //MR+12
                         op2.DMG_SHORT = 3;          //ãﬂãóó£É_ÉÅÅ[ÉW+3
-//                        op2.DG = 2;                 //DG+2
+                        op2.DG = 2;                 //DG+2
                         op2.ER = 2;                 //ER+2
-//                        op2.ME = 2;                 //ME+2
+                        op2.ME = 2;                 //ME+2
                         op2.ailment[STUN] = 2;      //ãZèpëœê´+2
                         op2.ailment[SPIRIT] = 2;    //ê∏óÏëœê´+2
                         op2.ailment[SECRET] = 2;    //îÈãZëœê´+2
@@ -3535,9 +3535,9 @@ public class Bougu implements Common {
 //                        op2.MMP = 8;                //ç≈ëÂMP+8%
                         op2.MR = 14;                //MR+14
                         op2.DMG_SHORT = 4;          //ãﬂãóó£É_ÉÅÅ[ÉW+4
-//                        op2.DG = 4;                 //DG+4
+                        op2.DG = 4;                 //DG+4
                         op2.ER = 4;                 //ER+4
-//                        op2.ME = 4;                 //ME+4
+                        op2.ME = 4;                 //ME+4
                         op2.ailment[STUN] = 4;      //ãZèpëœê´+4
                         op2.ailment[SPIRIT] = 4;    //ê∏óÏëœê´+4
                         op2.ailment[SECRET] = 4;    //îÈãZëœê´+4
@@ -3549,9 +3549,9 @@ public class Bougu implements Common {
 //                        op2.MMP = 10;                 //ç≈ëÂMP+10%
                         op2.MR = 16;                //MR+16
                         op2.DMG_SHORT = 5;          //ãﬂãóó£É_ÉÅÅ[ÉW+5
-//                        op2.DG = 6;                 //DG+6
+                        op2.DG = 6;                 //DG+6
                         op2.ER = 6;                 //ER+6
-//                        op2.ME = 6;                 //ME+6
+                        op2.ME = 6;                 //ME+6
                         op2.ailment[STUN] = 6;      //ãZèpëœê´+6
                         op2.ailment[SPIRIT] = 6;    //ê∏óÏëœê´+6
                         op2.ailment[SECRET] = 6;    //îÈãZëœê´+6
@@ -3595,9 +3595,9 @@ public class Bougu implements Common {
 //                        op2.MMP = 11;                //ç≈ëÂMP+11%
                         op2.MR = 12;                //MR+12
                         op2.DMG_LONG = 3;           //âìãóó£É_ÉÅÅ[ÉW+3
-//                        op2.DG = 2;                 //DG+2
+                        op2.DG = 2;                 //DG+2
                         op2.ER = 2;                 //ER+2
-//                        op2.ME = 2;                 //ME+2
+                        op2.ME = 2;                 //ME+2
                         op2.ailment[STUN] = 2;      //ãZèpëœê´+2
                         op2.ailment[SPIRIT] = 2;    //ê∏óÏëœê´+2
                         op2.ailment[SECRET] = 2;    //îÈãZëœê´+2
@@ -3609,9 +3609,9 @@ public class Bougu implements Common {
 //                        op2.MMP = 13;                 //ç≈ëÂMP+13%
                         op2.MR = 14;                //MR+14
                         op2.DMG_LONG = 4;           //âìãóó£É_ÉÅÅ[ÉW+4
-//                        op2.DG = 4;                 //DG+4
+                        op2.DG = 4;                 //DG+4
                         op2.ER = 4;                 //ER+4
-//                        op2.ME = 4;                 //ME+4
+                        op2.ME = 4;                 //ME+4
                         op2.ailment[STUN] = 4;      //ãZèpëœê´+4
                         op2.ailment[SPIRIT] = 4;    //ê∏óÏëœê´+4
                         op2.ailment[SECRET] = 4;    //îÈãZëœê´+4
@@ -3623,9 +3623,9 @@ public class Bougu implements Common {
 //                        op2.MMP = 15;                 //ç≈ëÂMP+15%
                         op2.MR = 16;                //MR+16
                         op2.DMG_LONG = 5;           //âìãóó£É_ÉÅÅ[ÉW+5
-//                        op2.DG = 6;                 //DG+6
+                        op2.DG = 6;                 //DG+6
                         op2.ER = 6;                 //ER+6
-//                        op2.ME = 6;                 //ME+6
+                        op2.ME = 6;                 //ME+6
                         op2.ailment[STUN] = 6;      //ãZèpëœê´+6
                         op2.ailment[SPIRIT] = 6;    //ê∏óÏëœê´+6
                         op2.ailment[SECRET] = 6;    //îÈãZëœê´+6
@@ -3669,9 +3669,9 @@ public class Bougu implements Common {
 //                        op2.MMP = 14;               //ç≈ëÂMP+14%
                         op2.MR = 12;                //MR+12
                         op2.SP = 3;                 //SP+3
-//                        op2.DG = 2;                 //DG+2
+                        op2.DG = 2;                 //DG+2
                         op2.ER = 2;                 //ER+2
-//                        op2.ME = 2;                 //ME+2
+                       op2.ME = 2;                 //ME+2
                         op2.ailment[STUN] = 2;      //ãZèpëœê´+2
                         op2.ailment[SPIRIT] = 2;    //ê∏óÏëœê´+2
                         op2.ailment[SECRET] = 2;    //îÈãZëœê´+2
@@ -3683,9 +3683,9 @@ public class Bougu implements Common {
 //                        op2.MMP = 17;               //ç≈ëÂMP+17%
                         op2.MR = 14;                //MR+14
                         op2.SP = 4;                 //SP+4
-//                        op2.DG = 4;                 //DG+4
+                        op2.DG = 4;                 //DG+4
                         op2.ER = 4;                 //ER+4
-//                        op2.ME = 4;                 //ME+4
+                        op2.ME = 4;                 //ME+4
                         op2.ailment[STUN] = 4;      //ãZèpëœê´+4
                         op2.ailment[SPIRIT] = 4;    //ê∏óÏëœê´+4
                         op2.ailment[SECRET] = 4;    //îÈãZëœê´+4
@@ -3697,9 +3697,9 @@ public class Bougu implements Common {
 //                        op2.MMP = 20;               //ç≈ëÂMP+20%
                         op2.MR = 16;                //MR+16
                         op2.SP = 5;                 //SP+5
-//                        op2.DG = 6;                 //DG+6
+                        op2.DG = 6;                 //DG+6
                         op2.ER = 6;                 //ER+6
-//                        op2.ME = 6;                 //ME+6
+                        op2.ME = 6;                 //ME+6
                         op2.ailment[STUN] = 6;      //ãZèpëœê´+6
                         op2.ailment[SPIRIT] = 6;    //ê∏óÏëœê´+6
                         op2.ailment[SECRET] = 6;    //îÈãZëœê´+6
@@ -3743,9 +3743,9 @@ public class Bougu implements Common {
 //                        op2.MMP = 7;                //ç≈ëÂMP+7%
                         op2.MR = 12;                //MR+12
 //                                                    //älìæåoå±íl+12%
-//                        op2.DG = 2;                 //DG+2
+                        op2.DG = 2;                 //DG+2
                         op2.ER = 2;                 //ER+2
-//                        op2.ME = 2;                 //ME+2
+                        op2.ME = 2;                 //ME+2
                         op2.ailment[STUN] = 2;      //ãZèpëœê´+2
                         op2.ailment[SPIRIT] = 2;    //ê∏óÏëœê´+2
                         op2.ailment[SECRET] = 2;    //îÈãZëœê´+2
@@ -3757,9 +3757,9 @@ public class Bougu implements Common {
 //                        op2.MMP = 8;                //ç≈ëÂMP+8%
                         op2.MR = 14;                //MR+14
 //                                                    //älìæåoå±íl+16%
-//                        op2.DG = 4;                 //DG+4
+                        op2.DG = 4;                 //DG+4
                         op2.ER = 4;                 //ER+4
-//                        op2.ME = 4;                 //ME+4
+                        op2.ME = 4;                 //ME+4
                         op2.ailment[STUN] = 4;      //ãZèpëœê´+4
                         op2.ailment[SPIRIT] = 4;    //ê∏óÏëœê´+4
                         op2.ailment[SECRET] = 4;    //îÈãZëœê´+4
@@ -3771,9 +3771,9 @@ public class Bougu implements Common {
 //                        op2.MMP = 10;               //ç≈ëÂMP+10%
                         op2.MR = 16;                //MR+16
 //                                                    //älìæåoå±íl+20%
-//                        op2.DG = 6;                 //DG+6
+                        op2.DG = 6;                 //DG+6
                         op2.ER = 6;                 //ER+6
-//                        op2.ME = 6;                 //ME+6
+                        op2.ME = 6;                 //ME+6
                         op2.ailment[STUN] = 6;      //ãZèpëœê´+6
                         op2.ailment[SPIRIT] = 6;    //ê∏óÏëœê´+6
                         op2.ailment[SECRET] = 6;    //îÈãZëœê´+6

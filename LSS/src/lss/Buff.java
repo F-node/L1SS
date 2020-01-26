@@ -26,7 +26,9 @@ public class Buff implements Common {
     int SP;
     int DR;
     int MR;
+    int DG;
     int ER;
+    int ME;
     double r_weight;
     int c_weight;
     String effect = "";
