@@ -31,7 +31,9 @@ public class Calculator implements Common {
     private final int H_LONG = 1;
     private final int C_LONG = 2;
     private final int AC = 3;
+//    private final int DG = 0;
     private final int ER = 4;
+//    private final int ME = 0;
 
     private final int HP = 0;
     private final int HPR = 1;
@@ -96,14 +98,18 @@ public class Calculator implements Common {
     final Bougu bougu[] = new Bougu[EQ_LIST.length - 2];
     private int base_ac;
     private int equip_ac;
+    private int base_dg;   
     private int base_er;
+    private int base_me;    
 //    private int base_pvp_dr;
 
     Buff buff;
     boolean md_dmg = false;
     int equip_pattern = 0;
     int ac;
-    int dg;
+    int dg;                                                 //近距離回避力
+    int er;                                                 //遠距離回避力
+    int me;                                                 //確率魔法回避力
     double enemy_hit_rate;
     int cbdmg;
     double hp;
@@ -544,7 +550,9 @@ public class Calculator implements Common {
             buff.effect += b.op2.effect;
             buff.PVP += b.op.PVP + b.op2.PVP;
             buff.PVP_DR += b.op.PVP_DR + b.op2.PVP_DR;
+            buff.DG += b.op.DG + b.op2.DG;
             buff.ER += b.op.ER + b.op2.ER;
+            buff.ME += b.op.ME + b.op2.ME;
         }
 
         if (bougu[0].name.equals("エルヴンシールド")) {
@@ -2114,6 +2122,30 @@ public class Calculator implements Common {
         	}
             } else {
                 ui.cb_buff[I_IT].setSelected(false);
+            }
+        }
+        //インフィニティ:アーマー
+        if (ui.cb_buff[F_PIR].isSelected()) {
+            if (cls == F) {            	
+		if (level >= 101) {
+		    buff.DR += 15;          				//最大DR+15(LV101)
+        	} else if (level >= 45) {
+		    buff.DR += (level - 45) / 4 + 1;                    //DR+((level - 45) / 4 + 1)
+        	}
+            } else {
+                ui.cb_buff[F_PIR].setSelected(false);
+            }
+        }
+        //インフィニティ:ブリッツ
+        if (ui.cb_buff[F_PIZ].isSelected()) {
+            if (cls == F) {            	
+		if (level >= 89) {
+		    buff.ER += 15;          				//最大ER+15(LV89)
+        	} else if (level >= 75) {
+		    buff.ER += (level - 75) / 1 + 1;                    //ER+((level - 75) / 1 + 1)
+        	}
+            } else {
+                ui.cb_buff[F_PIZ].setSelected(false);
             }
         }
         //クレイ
@@ -5111,13 +5143,16 @@ buki.arrow_elementdmg=0;
 //        System.out.println(base_pvp_dr);    //初期値確認用
 //        }
 
+//ERの計算式
         base_er = (int) (dex / 2) + (int) (level / _C[ER][DEX][cls]);
 
         ui.pure_status_bonus[1][8].setText(Integer.toString(base_ac));
         ui.pure_status_bonus[1][9].setText(Integer.toString(base_er));
 
         ac = base_ac + buff.AC + equip_ac;
-        int er = base_er + buff.ER;
+        dg = base_dg + buff.DG;
+        er = base_er + buff.ER;
+        me = base_me + buff.ME;
 //        int dr = buff.DR;
 //        int dri= buff.DR_IGNORED;
         //AC-100以上からAC-10ごとにERが+1
@@ -5145,7 +5180,7 @@ buki.arrow_elementdmg=0;
             pvp_dgr += bougu1.op.PVP_DR;
             pvp_dgr += bougu1.op2.PVP_DR;
         }
-        dg = 0;
+//        dg = 0;
         //AC-100以上からAC-10ごとにDGが+1
         if (ac <= -100){
         dg += -ac / 10-10;
@@ -5176,9 +5211,22 @@ buki.arrow_elementdmg=0;
                     cons_mp += (40.0 * (1.0 - red_mp * 0.01) - red_mp2) / 10;
             }
         }
+        //インフィニティ:ドッジ
+        if (ui.cb_buff[F_PIE].isSelected()) {
+            if (cls == F) {            	
+		if (level >= 89) {
+		    dg += 20;                                                   //最大DG+20(LV89)
+        	} else if (level >= 70) {
+		    dg += (level - 70) / 1 + 1;                                 //DG+((level - 70) / 1 + 1)
+        	}
+            } else {
+                ui.cb_buff[F_PIE].setSelected(false);
+            }
+        }
         ui.lab_ac.setText(Integer.toString(ac));
         ui.lab_dg.setText(Integer.toString(dg));
         ui.lab_er.setText(Integer.toString(er));
+        ui.lab_me.setText(Integer.toString(me));
         ui.lab_dr.setText(Integer.toString(dr));
         ui.lab_dri.setText(Integer.toString(dri));
         ui.lab_sp.setText(Integer.toString(sp));
@@ -5668,7 +5716,19 @@ buki.arrow_elementdmg=0;
                 }
             }
         }
-        
+        //インフィニティ:ブラッド
+        if (ui.cb_buff[F_PID].isSelected()) {
+            if (cls == F) {            	
+		if (level >= 89) {
+		    hpp += 650;                                                 //最大HP+15(LV89)
+        	} else if (level >= 60) {
+		    hpp += 50 * ((level - 60) / 3 + 1);                         //HP+50*((level - 60) / 3 + 1)
+        	}
+            } else {
+                ui.cb_buff[F_PID].setSelected(false);
+            }
+        }
+
         hp = (int) (hp + eq_hp + hpp);
         mp = (int) (mp + eq_mp + mpp);
 

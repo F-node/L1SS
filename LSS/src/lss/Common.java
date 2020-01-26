@@ -93,7 +93,7 @@ public interface Common {
     final int EARRING2 = 12;
 
 //エンチャント(0から103までの合計104個分)　UI.javaの217行目も合わせて変更必須
-//仮設定で122までの123個で処理
+//仮設定で122までの110個で処理
 //基本エンチャント
     final int ACC1 = 0;         //1段加速
     final int ACC2 = 1;         //2段加速
@@ -253,28 +253,27 @@ public interface Common {
     final int S_FU = 68;        //フューリー
 
 //フェンサーの技術
-    //アクティブスキル
-    final int F_AAA = 104;      //AshurA            アシュラ
-    final int F_ABE = 105;      //BladE             ブレード
-    final int F_APR = 106;      //PantheR           パンサー
-    final int F_AJT = 107;      //JudgmenT          ジャッジメント
-    final int F_AHE = 108;      //HellfirE          ヘルファイア
-    final int F_APM = 109;      //PhantoM           ファントム
-
-    //パッシブスキル
-    final int F_PPH = 110;      //Phantom:DeatH     ファントム:デス
-    final int F_PPR = 111;      //Phantom:ReapeR    ファントム:リーパー
-    final int F_PPK = 112;      //Panther:ShocK     パンサー:ショック
-    final int F_PSE = 113;      //SurvivE           サヴァイヴ
-    final int F_PIZ = 114;      //Infinity:BlitZ    インフィニティ:ブリッツ
-    final int F_PPX = 115;      //ParadoX           パラドックス
-    final int F_PIE = 116;      //Infinity:DodgE    インフィニティ:ドッジ
-    final int F_PGH = 117;      //GrowtH            グロウス
-    final int F_PID = 118;      //Infinity:BlooD    インフィニティ:ブラッド
-    final int F_PRE = 119;      //RagE              レイジ
-    final int F_PIR = 120;      //Infinity:ArmoR    インフィニティ:アーマー
-    final int F_PFE = 121;      //FramE             フレイム
-    final int F_PDS = 122;      //DamascuS          ダマスカス
+//  アクティブスキル
+//    final int F_AAA = XXX;      //AshurA            アシュラ
+//    final int F_ABE = XXX;      //BladE             ブレード
+//    final int F_APR = XXX;      //PantheR           パンサー
+//    final int F_AJT = XXX;      //JudgmenT          ジャッジメント
+//    final int F_AHE = XXX;      //HellfirE          ヘルファイア
+//    final int F_APM = XXX;      //PhantoM           ファントム
+//  パッシブスキル
+//    final int F_PPH = XXX;      //Phantom:DeatH     ファントム:デス
+//    final int F_PPR = XXX;      //Phantom:ReapeR    ファントム:リーパー
+//    final int F_PPK = XXX;      //Panther:ShocK     パンサー:ショック
+//    final int F_PSE = XXX;      //SurvivE           サヴァイヴ
+    final int F_PIZ = 104;      //Infinity:BlitZ    インフィニティ:ブリッツ
+//    final int F_PPX = XXX;      //ParadoX           パラドックス
+    final int F_PIE = 105;      //Infinity:DodgE    インフィニティ:ドッジ
+//    final int F_PGH = XXX;      //GrowtH            グロウス
+    final int F_PID = 106;      //Infinity:BlooD    インフィニティ:ブラッド
+    final int F_PRE = 107;      //RagE              レイジ
+    final int F_PIR = 108;      //Infinity:ArmoR    インフィニティ:アーマー
+    final int F_PFE = 109;      //FramE             フレイム
+//    final int F_PDS = XXX;      //DamascuS          ダマスカス
 
 //その他
     final int ITEM_BLUE = 50;   //魔力回復ポーション
