@@ -14,6 +14,9 @@ public class Buff implements Common {
     int MP;
     int HPR;
     int MPR;
+    int MHP;
+    int MMP;
+    int MEXP;
     int DMG_SHORT;
     int DMG_LONG;
     int DMG_MAGIC;

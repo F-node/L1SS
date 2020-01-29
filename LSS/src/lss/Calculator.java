@@ -110,6 +110,9 @@ public class Calculator implements Common {
     int dg;                                                 //近距離回避力
     int er;                                                 //遠距離回避力
     int me;                                                 //確率魔法回避力
+    int mhp;                                                //最大HP+X%
+    int mmp;                                                //最大MP+X%
+    int mexp;                                               //獲得経験値+X%
     double enemy_hit_rate;
     int cbdmg;
     double hp;
@@ -859,13 +862,15 @@ public class Calculator implements Common {
                     ui.cb_buff[ITEM_MD].setToolTipText("AC-2 64秒毎にMPが15回復 魔法発動(コールライトニング)");
                     break;
                 case 22:                            //アースジャイアント
+                    buff.MEXP += 10;                //獲得経験値+10%
                     buff.DR += 1;
-                    ui.cb_buff[ITEM_MD].setToolTipText("経験値増加+10% ダメージ低下+1");
+                    ui.cb_buff[ITEM_MD].setToolTipText("獲得経験値+10% ダメージ低下+1");
                     break;
                 case 23:                            //祝福されたアースジャイアント
                     buff.AC -= 2;
+                    buff.MEXP += 10;                //獲得経験値+10%
                     buff.DR += 1;
-                    ui.cb_buff[ITEM_MD].setToolTipText("AC-2 経験値増加+10% ダメージ低下+1");
+                    ui.cb_buff[ITEM_MD].setToolTipText("AC-2 獲得経験値+10% ダメージ低下+1");
                     break;
         //LV4 MD
                 case 24:                            //サイクロプス
@@ -1518,12 +1523,13 @@ public class Calculator implements Common {
                     buff.HPR += 2;
                     buff.MPR += 3;
                     buff.MR += 10;
+                    buff.MEXP += 10;                                       //獲得経験値+10%
                     buff.element_resist[FIRE] += 10;
                     buff.element_resist[WIND] += 10;
                     buff.element_resist[EARTH] += 10;
                     buff.element_resist[WATER] += 10;
                     ui.cb_buff[ITEM_COOKING].setToolTipText("<html>"+"水属性抵抗+10 地属性抵抗+10 風属性抵抗+10 火属性抵抗+10"
-                                                           + "<br>"+ "MR+10 HPR+2 MPR+3 SP+2 EXP+10% ダメージ低下+2 15分"+"</html>");
+                                                           + "<br>"+ "MR+10 HPR+2 MPR+3 SP+2 獲得経験値+10% ダメージ低下+2 15分"+"</html>");
                     break;
                 case 9:                                 //パタラシのサーモンカナッペ
                     buff.DR += 2;
@@ -1532,12 +1538,13 @@ public class Calculator implements Common {
                     buff.MR += 10;
                     buff.DMG_LONG += 2;
                     buff.HIT_LONG += 1;
+                    buff.MEXP += 10;                                       //獲得経験値+10%
                     buff.element_resist[FIRE] += 10;
                     buff.element_resist[WIND] += 10;
                     buff.element_resist[EARTH] += 10;
                     buff.element_resist[WATER] += 10;
                     ui.cb_buff[ITEM_COOKING].setToolTipText("<html>"+"水属性抵抗+10 地属性抵抗+10 風属性抵抗+10 火属性抵抗+10"
-                                                           + "<br>"+ "MR+10 HPR+2 MPR+2 遠距離ダメージ+2 遠距離命中+1 EXP+10% ダメージ低下+2 15分"+"</html>");
+                                                           + "<br>"+ "MR+10 HPR+2 MPR+2 遠距離ダメージ+2 遠距離命中+1 獲得経験値+10% ダメージ低下+2 15分"+"</html>");
                     break;
                 case 8:                                 //パタラシの和牛ステーキ
                     buff.DR += 2;
@@ -1546,12 +1553,13 @@ public class Calculator implements Common {
                     buff.MR += 10;
                     buff.DMG_SHORT += 2;
                     buff.HIT_SHORT += 1;
+                    buff.MEXP += 10;                                       //獲得経験値+10%
                     buff.element_resist[FIRE] += 10;
                     buff.element_resist[WIND] += 10;
                     buff.element_resist[EARTH] += 10;
                     buff.element_resist[WATER] += 10;
                     ui.cb_buff[ITEM_COOKING].setToolTipText("<html>"+"水属性抵抗+10 地属性抵抗+10 風属性抵抗+10 火属性抵抗+10"
-                                                           + "<br>"+ "MR+10 HPR+2 MPR+2 近距離ダメージ+2 近距離命中+1 EXP+10% ダメージ低下+2 15分"+"</html>");
+                                                           + "<br>"+ "MR+10 HPR+2 MPR+2 近距離ダメージ+2 近距離命中+1 獲得経験値+10% ダメージ低下+2 15分"+"</html>");
                     break;
                 case 7:                                 //真心がこもった料理
                     buff.DR += 5;
@@ -1692,6 +1700,7 @@ public class Calculator implements Common {
         if (ui.cb_buff[ITEM_DESSERT].isSelected()) {
             switch (ui.cb_buff_group[ITEM_DESSERT].getSelectedIndex()) {
                 case 0:                                 //修練の鶏スープ
+                    buff.MEXP += 4;                     //獲得経験値+4%
                     buff.DR += 2;
                     ui.cb_buff[ITEM_DESSERT].setToolTipText("ダメージ低下+2 獲得経験値+4% 30分");
                     break;
@@ -1702,30 +1711,37 @@ public class Calculator implements Common {
         	    buff.ailment[SECRET] += 2;          //秘技耐性+2
         	    buff.ailment[TERROR] += 2;          //恐怖耐性+2
                     buff.PVP_DR += 2;                   //PvPDR+2
+                    buff.MEXP += 4;                     //獲得経験値+4%
                     ui.cb_buff[ITEM_DESSERT].setToolTipText("ダメージ低下+2 全クラススキル耐性+2 PvPDR+2 獲得経験値+4% 30分");
                     break;
                 case 2:                                 //幻想のバシリスクの卵スープ
                     buff.DR += 5;
+                    buff.MEXP += 3;                     //獲得経験値+3%
                     ui.cb_buff[ITEM_DESSERT].setToolTipText("ダメージ低下+5 獲得経験値+3% 15分20秒");
                     break;
                 case 3:                                 //幻想のショートケーキ
                     buff.DR += 3;
+                    buff.MEXP += 5;                     //獲得経験値+5%
                     ui.cb_buff[ITEM_DESSERT].setToolTipText("ダメージ低下+3 獲得経験値+5% 15分20秒");
                     break;
                 case 4:                                 //幻想のショートケーキ(KR版)
                     buff.DR += 5;
+                    buff.MEXP += 10;                    //獲得経験値+10%
                     ui.cb_buff[ITEM_DESSERT].setToolTipText("ダメージ低下+5 獲得経験値+10% 15分20秒");
                     break;
                 case 5:                                 //小粋な携帯飲料
                     buff.DR += 5;
+                    buff.MEXP += 5;                     //獲得経験値+5%
                     ui.cb_buff[ITEM_DESSERT].setToolTipText("ダメージ低下+5 獲得経験値+5% 15分20秒");
                     break;
                 case 6:                                 //真心がこもったスープ
                     buff.DR += 5;
+                    buff.MEXP += 5;                     //獲得経験値+5%
                     ui.cb_buff[ITEM_DESSERT].setToolTipText("ダメージ低下+5 獲得経験値+5% 15分20秒");
                     break;
                 case 7:                                 //パタラシのキノコスープ
                     buff.DR += 2;
+                    buff.MEXP += 10;                    //獲得経験値+10%
                     ui.cb_buff[ITEM_DESSERT].setToolTipText("ダメージ低下+2 獲得経験値+10% 15分");
                     break;
                 default:
@@ -2606,8 +2622,8 @@ public class Calculator implements Common {
                     buff.SP += 2;                       //SP+2
                     buff.HIT_MAGIC += 2;                //魔法命中+2
                     buff.MR += 5;                       //MR+5%
-                                                        //獲得経験値+2%
-                    ui.elixir_rune.setToolTipText("AC-4 DEX+1 遠距離ダメージ+4 遠距離命中+6 獲得経験値+10%");
+                    buff.MEXP += 2;                     //獲得経験値+2%
+                    ui.elixir_rune.setToolTipText("AC-4 DEX+1 遠距離ダメージ+4 遠距離命中+6 獲得経験値+2%");
         }else if (e == 7){                              //強化されたアルカの遺物
                     buff.AC -= 3;                       //AC-3
                     buff.DMG_SHORT += 2;                //近距離ダメージ+2
@@ -2618,7 +2634,7 @@ public class Calculator implements Common {
                     buff.HIT_MAGIC += 2;                //魔法命中+2
                     buff.MR += 5;                       //MR+5%
                     buff.ailment[TERROR] += 5;          //恐怖耐性+5
-                                                        //獲得経験値+5%                    
+                    buff.MEXP += 5;                     //獲得経験値+5%                    
                     ui.elixir_rune.setToolTipText("AC-3 近距離ダメージ+2 近距離命中+2 遠距離ダメージ+2 遠距離命中+ SP+2 魔法命中+2 MR+5% 恐怖耐性+5"
                             + " 獲得経験値+5%");
         }else if (e == 8){                              //ドラゴンの遺物
@@ -2629,28 +2645,28 @@ public class Calculator implements Common {
                     buff.HIT_LONG += 2;                 //遠距離命中+2
                     buff.SP += 2;                       //SP+2
                     buff.HIT_MAGIC += 2;                //魔法命中+2
-                                                        //獲得経験値+2%
+                    buff.MEXP += 2;                     //獲得経験値+2%
                     ui.elixir_rune.setToolTipText("AC-3 近距離ダメージ+2 近距離命中+2 遠距離ダメージ+2 遠距離命中+2 SP+2 魔法命中+2 獲得経験値+2%");
         }else if (e == 9){                              //強化されたドラゴンの遺物(腕力)
                     buff.AC -= 4;                       //AC-4
                     buff.ST[STR] += 1;                  //STR+1
                     buff.DMG_SHORT += 4;                //近距離ダメージ+4
                     buff.HIT_SHORT += 6;                //近距離命中+6
-                                                        //獲得経験値+10%
+                    buff.MEXP += 10;                    //獲得経験値+10%
                     ui.elixir_rune.setToolTipText("AC-4 STR+1 近距離ダメージ+4 近距離命中+6 獲得経験値+10%");
         }else if (e == 10){                             //強化されたドラゴンの遺物(知力)
                     buff.AC -= 4;                       //AC-4
                     buff.ST[INT] += 1;                  //INT+1
                     buff.SP += 4;                       //SP+4
                     buff.HIT_MAGIC += 6;                //魔法命中+6
-                                                        //獲得経験値+10%
+                    buff.MEXP += 10;                    //獲得経験値+10%
                     ui.elixir_rune.setToolTipText("AC-4 INT+1 SP+4 魔法命中+6 獲得経験値+10%");
         }else if (e == 11){                             //強化されたドラゴンの遺物(機敏)
                     buff.AC -= 4;                       //AC-4
                     buff.ST[DEX] += 1;                  //DEX+1
                     buff.DMG_LONG += 4;                 //遠距離ダメージ+4
                     buff.HIT_LONG += 6;                 //遠距離命中+6
-                                                        //獲得経験値+10%          
+                    buff.MEXP += 10;                    //獲得経験値+10%          
                     ui.elixir_rune.setToolTipText("AC-4 DEX+1 遠距離ダメージ+4 遠距離命中+6 獲得経験値+10%");
         }else if (e == 12){                             //真デスナイトの遺物
                     buff.AC -= 3;                       //AC-3
@@ -2660,14 +2676,14 @@ public class Calculator implements Common {
                     buff.HIT_LONG += 2;                 //遠距離命中+2
                     buff.SP += 2;                       //SP+2
                     buff.HIT_MAGIC += 2;                //魔法命中+2
-                                                        //獲得経験値+2%
+                    buff.MEXP += 2;                     //獲得経験値+2%
                     ui.elixir_rune.setToolTipText("AC-3 近距離ダメージ+2 近距離命中+2 遠距離ダメージ+2 遠距離命中+2 SP+2 魔法命中+2 獲得経験値+2%");
         }else if (e == 13){                             //強化された真デスナイトの遺物(腕力)
                     buff.AC -= 4;                       //AC-4
                     buff.ST[STR] += 1;                  //STR+1
                     buff.DMG_SHORT += 4;                //近距離ダメージ+4
                     buff.HIT_SHORT += 6;                //近距離命中+6
-                                                        //獲得経験値+10%
+                    buff.MEXP += 10;                    //獲得経験値+10%
                                                         //祝福消耗効率+5%
                                                         //全耐性+3
                     buff.ailment[STUN] += 3;            //技術耐性+3
@@ -2680,7 +2696,7 @@ public class Calculator implements Common {
                     buff.ST[INT] += 1;                  //INT+1
                     buff.SP += 4;                       //SP+4
                     buff.HIT_MAGIC += 6;                //魔法命中+6
-                                                        //獲得経験値+10%
+                    buff.MEXP += 10;                    //獲得経験値+10%
                                                         //祝福消耗効率+5%
                                                         //全耐性+3
                     buff.ailment[STUN] += 3;            //技術耐性+3
@@ -2693,7 +2709,7 @@ public class Calculator implements Common {
                     buff.ST[DEX] += 1;                  //DEX+1
                     buff.DMG_LONG += 4;                 //遠距離ダメージ+4
                     buff.HIT_LONG += 6;                 //遠距離命中+6
-                                                        //獲得経験値+10%          
+                    buff.MEXP += 10;                    //獲得経験値+10%          
                                                         //祝福消耗効率+5%
                                                         //全耐性+3
                     buff.ailment[STUN] += 3;            //技術耐性+3
@@ -3427,6 +3443,7 @@ public class Calculator implements Common {
             buff.HPR += 3;
             buff.MP += 30;
             buff.MPR += 3;
+            buff.MEXP += 5;                     //獲得経験値+5%
             ui.cb_buff[MBSC].setToolTipText("<html>"+ "ダメージ低下+3 近距離ダメージ+2 遠距離ダメージ+2 近距離命中+2 遠距離命中+2"
                     + "<br>"+ "魔法命中+2 SP+2 最大HP+50 HP回復+3 最大MP+30 MP回復+3 獲得経験値+5% 30分"+"</html>");
         }
@@ -3500,26 +3517,31 @@ public class Calculator implements Common {
         if (ui.cb_buff[L_HST].isSelected()) {
             switch ((String) ui.cb_buff_group[L_HST].getSelectedItem()) {
                 case "1個":
-                    ui.cb_buff[L_HST].setToolTipText("EXP20% AC-1");
+                    ui.cb_buff[L_HST].setToolTipText("獲得経験値+20% AC-1");
+                    buff.MEXP += 20;                                       //獲得経験値+20%
                     buff.AC -= 1;
                     break;
                 case "2個":
-                    ui.cb_buff[L_HST].setToolTipText("EXP30% AC-2 DR+1");
+                    ui.cb_buff[L_HST].setToolTipText("獲得経験値+30% AC-2 DR+1");
+                    buff.MEXP += 30;                                       //獲得経験値+30%
                     buff.AC -= 2;
                     buff.DR += 1;
                     break;
                 case "3個":
-                    ui.cb_buff[L_HST].setToolTipText("EXP40% AC-3 DR+2");
+                    ui.cb_buff[L_HST].setToolTipText("獲得経験値+40% AC-3 DR+2");
+                    buff.MEXP += 40;                                       //獲得経験値+40%
                     buff.AC -= 3;
                     buff.DR += 2;
                     break;
                 case "4個":
-                    ui.cb_buff[L_HST].setToolTipText("EXP40% AC-4 DR+2");
+                    ui.cb_buff[L_HST].setToolTipText("獲得経験値+40% AC-4 DR+2");
+                    buff.MEXP += 40;                                       //獲得経験値+40%
                     buff.AC -= 4;
                     buff.DR += 2;
                     break;
                 case "5個":
-                    ui.cb_buff[L_HST].setToolTipText("EXP40% AC-5 DR+2");
+                    ui.cb_buff[L_HST].setToolTipText("獲得経験値+40% AC-5 DR+2");
+                    buff.MEXP += 40;                                       //獲得経験値+40%
                     buff.AC -= 5;
                     buff.DR += 2;
                     break;
@@ -5161,8 +5183,12 @@ buki.arrow_elementdmg=0;
         }
         dr = buff.DR;
         dri= buff.DR_IGNORED;    
-        pvp_dg= buff.PVP;
-        pvp_dgr= buff.PVP_DR;
+        pvp_dg = buff.PVP;
+        pvp_dgr = buff.PVP_DR;
+        mhp = buff.MHP;                                                         //最大HP+X%(BUFF分)
+        mmp = buff.MMP;                                                         //最大MP+X%(BUFF分)
+        mexp = buff.MEXP;                                                       //獲得経験値+X%(BUFF分)
+        
 //        pvp_dgr= base_pvp_dr + buff.PVP_DR;
 //        System.out.println(pvp_dgr);    //初期値確認用
 
@@ -5179,6 +5205,12 @@ buki.arrow_elementdmg=0;
             pvp_dg += bougu1.op2.PVP;
             pvp_dgr += bougu1.op.PVP_DR;
             pvp_dgr += bougu1.op2.PVP_DR;
+            mhp += bougu1.op.MHP;                                               //最大HP+X%(防具分)
+            mhp += bougu1.op2.MHP;                                              //最大HP+X%(防具分)
+            mmp += bougu1.op.MMP;                                               //最大MP+X%(防具分)
+            mmp += bougu1.op2.MMP;                                              //最大MP+X%(防具分)
+            mexp += bougu1.op.MEXP;                                             //獲得経験値+X%(防具分)
+            mexp += bougu1.op2.MEXP;                                            //獲得経験値+X%(防具分)
         }
 //        dg = 0;
         //AC-100以上からAC-10ごとにDGが+1
@@ -5188,8 +5220,11 @@ buki.arrow_elementdmg=0;
         dr += buki.op.DR + buki.op2.DR;
         dri += buki.op.DR_IGNORED + buki.op2.DR_IGNORED; 
         pvp_dg += buki.op.PVP + buki.op2.PVP;
-        pvp_dgr += buki.op.PVP_DR + buki.op2.PVP_DR;       
-        
+        pvp_dgr += buki.op.PVP_DR + buki.op2.PVP_DR; 
+        mhp += buki.op.MHP + buki.op2.MHP;                                      //最大HP+X%(武器分)
+        mmp += buki.op.MMP + buki.op2.MMP;                                      //最大MP+X%(武器分)
+        mexp += buki.op.MEXP + buki.op2.MEXP;                                   //獲得経験値+X%(武器分)
+
         //アンキャニードッジ 消費MP40/16mins
         if (ui.cb_buff[D_UD].isSelected()) {
             dg += 30;
@@ -5679,6 +5714,11 @@ buki.arrow_elementdmg=0;
 //                mpp += 0.5 * mp;
 //            }
 //        }
+
+        //ペンダント等の装備による最大HP+X%/最大MP+X%の処理
+            	hpp += mhp *0.01 * hp;
+            	mpp += mmp *0.01 * mp;
+
         //アドバンスドスピリッツ 消費MP20/20mins
         if (ui.cb_buff[W_ADS].isSelected()) {
             if (ui.cb_buff[S_G].isSelected()
@@ -5734,18 +5774,10 @@ buki.arrow_elementdmg=0;
 
         ui.lab_hp.setText(Integer.toString((int) hp));
         ui.lab_mp.setText(Integer.toString((int) mp));
-        //ムービングアクセレーション 消費MP10/16mins
-        //if (ui.cb_buff[D_MA].isSelected()) {
-        //    if (ui.cb_buff[D_MA].getForeground().equals(Color.BLUE)) {
-        //        cons_mp += (10.0 * (1.0 - red_mp * 0.01) - red_mp2) / 16;
-        //    }
-        //}
-        //ベノムレジスト 消費MP20/5mins
-        //if (ui.cb_buff[D_VR].isSelected()) {
-        //    if (ui.cb_buff[D_MA].getForeground().equals(Color.BLUE)) {
-        //        cons_mp += (20.0 * (1.0 - red_mp * 0.01) - red_mp2) / 5;
-        //    }
-        //}
+
+        //獲得経験値
+        ui.lab_mexp.setText(Integer.toString((int) mexp));
+
         //エキゾチックバイタライズ 消費MP30/16mins
         if (ui.cb_buff[E_EV].isSelected()) {
             if (ui.cb_buff[E_EV].getForeground().equals(Color.BLUE)) {

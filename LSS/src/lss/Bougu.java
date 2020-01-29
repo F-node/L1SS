@@ -225,6 +225,15 @@ public class Bougu implements Common {
         if (op.PVP_DR + op2.PVP_DR > 0) {
             text += " PVPダメージ低下+" + (op.PVP_DR + op2.PVP_DR);
         }
+        if (op.MHP + op2.MHP > 0) {
+            text += " 最大HP+" + (op.MHP + op2.MHP) + "%";
+        }
+        if (op.MMP + op2.MMP > 0) {
+            text += " 最大MP+" + (op.MMP + op2.MMP) + "%";
+        }
+        if (op.MEXP + op2.MEXP > 0) {
+            text += " 獲得経験値+" + (op.MEXP + op2.MEXP) + "%";
+        }
         if (op.c_weight + op2.c_weight > 0) {
             text += " 所持重量増加+" + (op.c_weight + op2.c_weight);
         }
@@ -468,17 +477,17 @@ public class Bougu implements Common {
                     op2.HP = 100;                        //HP+100
                     op2.PVP = 1;                         //PVP追加ダメージ+1
                     op2.PVP_DR = 1;                      //PVPダメージ低下+1
-                                                         //EXP+8%
+                    op2.MEXP = 8;                        //獲得経験値+8%
             } else if (enchant >= 9) {
                     op2.DR = 1;                          //ダメージ低下+1(合計2)
                     op2.MR = 11;                         //MR+11
-                                                         //EXP+6%
+                    op2.MEXP = 6;                        //獲得経験値+6%
             } else if (enchant >= 8) {
                     op2.MR = 8;                          //MR+8
-                                                         //EXP+4%
+                    op2.MEXP = 4;                        //獲得経験値+4%
             } else if (enchant >= 7) {
                     op2.MR = 5;                          //MR+6
-                                                         //EXP+2%
+                    op2.MEXP = 2;                        //獲得経験値+2%
             } else if (enchant >= 6) {
                     op2.MR = 5;                          //MR+5
             } else if (enchant >= 5) {
@@ -2252,58 +2261,58 @@ public class Bougu implements Common {
                             break;
                     }
                     break; 
-                case "成長の紋章":          //+0成長の紋章でEXP+1%
+                case "成長の紋章":          //+0成長の紋章で獲得経験値+1%
                     switch (enchant) {
                         case 0:
-                            op2.effect = "EXP +1%,";
+                            op2.MEXP += 1;                                       //獲得経験値+1%
                             break;
                         case 1:
-                            op2.effect = "EXP +2%,";
+                            op2.MEXP += 2;                                       //獲得経験値+2%
                             op2.effect += "ポーション回復量 +2% +2,";
                             op2.effect += "回復悪化防御 +2%,";
                             break;
                         case 2:
-                            op2.effect = "EXP +3%,";
+                            op2.MEXP += 3;                                       //獲得経験値+3%
                             op2.effect += "ポーション回復量 +4% +4,";
                             op2.effect += "回復悪化防御 +4%,";
                             break;
                         case 3:
-                            op2.effect = "EXP +4%,";
+                            op2.MEXP += 4;                                       //獲得経験値+4%
                             op2.effect += "ポーション回復量 +6% +6,";
                             op2.effect += "回復悪化防御 +6%,";
                             break;
                         case 4:
-                            op2.effect = "EXP +5%,";
+                            op2.MEXP += 5;                                       //獲得経験値+5%
                             op2.effect += "ポーション回復量 +8% +8,";
                             op2.effect += "回復悪化防御 +8%,";
                             break;
                         case 5:
-                            op2.effect = "EXP +6%,";
+                            op2.MEXP += 6;                                       //獲得経験値+6%
                             op2.effect += "ポーション回復量 +9% +9,";
                             op2.effect += "回復悪化防御 +9%,";
                             break;
                         case 6:
-                            op2.effect = "EXP +7%,";
+                            op2.MEXP += 7;                                       //獲得経験値+7%
                             op2.effect += "ポーション回復量 +10% +10,";
                             op2.effect += "回復悪化防御 +10%,";
                             break;
                         case 7:
-                            op2.effect = "EXP +9%,";
+                            op2.MEXP += 9;                                       //獲得経験値+9%
                             op2.effect += "ポーション回復量 +11% +11,";
                             op2.effect += "回復悪化防御 +11%,";
                             break;
                         case 8:
-                            op2.effect = "EXP +11%,";
+                            op2.MEXP += 11;                                      //獲得経験値+11%
                             op2.effect += "ポーション回復量 +12% +12,";
                             op2.effect += "回復悪化防御 +12%,";
                             break;
                         case 9:
-                            op2.effect = "EXP +13%,";
+                            op2.MEXP += 13;                                      //獲得経験値+13%
                             op2.effect += "ポーション回復量 +13% +13,";
                             op2.effect += "回復悪化防御 +13%,";
                             break;
                         case 10:
-                            op2.effect = "EXP +15%,";
+                            op2.MEXP += 15;                                      //獲得経験値+15%
                             op2.effect += "ポーション回復量 +14% +14,";
                             op2.effect += "回復悪化防御 +14%,";
                             break;
@@ -2314,32 +2323,32 @@ public class Bougu implements Common {
                 case "守護の紋章":          //+0守護の紋章でAC=-1
                     switch (enchant) {
                         case 1:
-                            op2.effect = "獲得EXP +1%,";
+                            op2.MEXP += 1;                                       //獲得経験値+1%
                             break;
                         case 2:
-                            op2.effect = "獲得EXP +2%,";
+                            op2.MEXP += 2;                                       //獲得経験値+2%
                             break;
                         case 3:
-                            op2.effect = "獲得EXP +3%,";
+                            op2.MEXP += 3;                                       //獲得経験値+3%
                             break;
                         case 4:
-                            op2.effect = "獲得EXP +4%,";
+                            op2.MEXP += 4;                                       //獲得経験値+4%
                             op2.MR = 1;
                             break;
                         case 5:
-                            op2.effect = "獲得EXP +5%,";
+                            op2.MEXP += 5;                                       //獲得経験値+5%
                             op2.MR = 2;
                             break;
                         case 6:
-                            op2.effect = "獲得EXP +6%,";
+                            op2.MEXP += 6;                                       //獲得経験値+6%
                             op2.MR = 3;
                             break;
                         case 7:
-                            op2.effect = "獲得EXP +7%,";
+                            op2.MEXP += 7;                                       //獲得経験値+7%
                             op2.MR = 4;
                             break;
                         case 8:
-                            op2.effect = "獲得EXP +8%,";
+                            op2.MEXP += 8;                                       //獲得経験値+8%
                             op2.MR = 5;
                             break;
                         default:
@@ -3491,34 +3500,34 @@ public class Bougu implements Common {
             if (name.equals("ルームティス闘士のペンダント")) {
                 switch (enchant) {
                     case 1:
-//                        op2.MHP = 4;                //最大HP+4%
-//                        op2.MMP = 2;                //最大MP+2%
+                        op2.MHP = 4;                //最大HP+4%
+                        op2.MMP = 2;                //最大MP+2%
                         break;
                     case 2:
-//                        op2.MHP = 6;                //最大HP+6%
-//                        op2.MMP = 3;                //最大MP+3%
+                        op2.MHP = 6;                //最大HP+6%
+                        op2.MMP = 3;                //最大MP+3%
                         op2.MR = 2;                 //MR+2
                         break;
                     case 3:
-//                        op2.MHP = 8;                //最大HP+8%
-//                        op2.MMP = 4;                //最大MP+4%
+                        op2.MHP = 8;                //最大HP+8%
+                        op2.MMP = 4;                //最大MP+4%
                         op2.MR = 4;                 //MR+4
                         break;               
                     case 4:
-//                        op2.MHP = 10;               //最大HP+10%
-//                        op2.MMP = 5;                //最大MP+5%
+                        op2.MHP = 10;               //最大HP+10%
+                        op2.MMP = 5;                //最大MP+5%
                         op2.MR = 6;                 //MR+6
                         op2.DMG_SHORT = 1;          //近距離ダメージ+1
                         break;             
                     case 5:
-//                        op2.MHP = 12;               //最大HP+12%
-//                        op2.MMP = 6;                //最大MP+6%
+                        op2.MHP = 12;               //最大HP+12%
+                        op2.MMP = 6;                //最大MP+6%
                         op2.MR = 10;                //MR+10
                         op2.DMG_SHORT = 2;          //近距離ダメージ+2
                         break;              
                     case 6:
-//                        op2.MHP = 14;               //最大HP+14%
-//                        op2.MMP = 7;                //最大MP+7%
+                        op2.MHP = 14;               //最大HP+14%
+                        op2.MMP = 7;                //最大MP+7%
                         op2.MR = 12;                //MR+12
                         op2.DMG_SHORT = 3;          //近距離ダメージ+3
                         op2.DG = 2;                 //DG+2
@@ -3531,8 +3540,8 @@ public class Bougu implements Common {
                         op2.PVP_DR = 2;             //PVPダメージ低下+2
                         break;              
                     case 7:
-//                        op2.MHP = 17;               //最大HP+17%
-//                        op2.MMP = 8;                //最大MP+8%
+                        op2.MHP = 17;               //最大HP+17%
+                        op2.MMP = 8;                //最大MP+8%
                         op2.MR = 14;                //MR+14
                         op2.DMG_SHORT = 4;          //近距離ダメージ+4
                         op2.DG = 4;                 //DG+4
@@ -3545,8 +3554,8 @@ public class Bougu implements Common {
                         op2.PVP_DR = 4;             //PVPダメージ低下+4
                         break;              
                     case 8:
-//                        op2.MHP = 20;                 //最大HP+20%
-//                        op2.MMP = 10;                 //最大MP+10%
+                        op2.MHP = 20;               //最大HP+20%
+                        op2.MMP = 10;               //最大MP+10%
                         op2.MR = 16;                //MR+16
                         op2.DMG_SHORT = 5;          //近距離ダメージ+5
                         op2.DG = 6;                 //DG+6
@@ -3565,34 +3574,34 @@ public class Bougu implements Common {
             if (name.equals("ルームティス名弓のペンダント")) {
                 switch (enchant) {
                     case 1:
-//                        op2.MHP = 2;                //最大HP+2%
-//                        op2.MMP = 2;                //最大MP+2%
+                        op2.MHP = 2;                //最大HP+2%
+                        op2.MMP = 2;                //最大MP+2%
                         break;
                     case 2:
-//                        op2.MHP = 3;                //最大HP+3%
-//                        op2.MMP = 3;                //最大MP+3%
+                        op2.MHP = 3;                //最大HP+3%
+                        op2.MMP = 3;                //最大MP+3%
                         op2.MR = 2;                 //MR+2
                         break;
                     case 3:
-//                        op2.MHP = 5;                //最大HP+5%
-//                        op2.MMP = 5;                //最大MP+5%
+                        op2.MHP = 5;                //最大HP+5%
+                        op2.MMP = 5;                //最大MP+5%
                         op2.MR = 4;                 //MR+4
                         break;               
                     case 4:
-//                        op2.MHP = 7;                //最大HP+7%
-//                        op2.MMP = 7;                //最大MP+7%
+                        op2.MHP = 7;                //最大HP+7%
+                        op2.MMP = 7;                //最大MP+7%
                         op2.MR = 6;                 //MR+6
                         op2.DMG_LONG = 1;           //遠距離ダメージ+1
                         break;             
                     case 5:
-//                        op2.MHP = 9;                //最大HP+9%
-//                        op2.MMP = 9;                //最大MP+9%
+                        op2.MHP = 9;                //最大HP+9%
+                        op2.MMP = 9;                //最大MP+9%
                         op2.MR = 10;                //MR+10
                         op2.DMG_LONG = 2;           //遠距離ダメージ+2
                         break;              
                     case 6:
-//                        op2.MHP = 11;                //最大HP+11%
-//                        op2.MMP = 11;                //最大MP+11%
+                        op2.MHP = 11;               //最大HP+11%
+                        op2.MMP = 11;               //最大MP+11%
                         op2.MR = 12;                //MR+12
                         op2.DMG_LONG = 3;           //遠距離ダメージ+3
                         op2.DG = 2;                 //DG+2
@@ -3605,8 +3614,8 @@ public class Bougu implements Common {
                         op2.PVP_DR = 2;             //PVPダメージ低下+2
                         break;              
                     case 7:
-//                        op2.MHP = 13;                 //最大HP+13%
-//                        op2.MMP = 13;                 //最大MP+13%
+                        op2.MHP = 13;               //最大HP+13%
+                        op2.MMP = 13;               //最大MP+13%
                         op2.MR = 14;                //MR+14
                         op2.DMG_LONG = 4;           //遠距離ダメージ+4
                         op2.DG = 4;                 //DG+4
@@ -3619,8 +3628,8 @@ public class Bougu implements Common {
                         op2.PVP_DR = 4;             //PVPダメージ低下+4
                         break;              
                     case 8:
-//                        op2.MHP = 15;                 //最大HP+15%
-//                        op2.MMP = 15;                 //最大MP+15%
+                        op2.MHP = 15;               //最大HP+15%
+                        op2.MMP = 15;               //最大MP+15%
                         op2.MR = 16;                //MR+16
                         op2.DMG_LONG = 5;           //遠距離ダメージ+5
                         op2.DG = 6;                 //DG+6
@@ -3639,34 +3648,34 @@ public class Bougu implements Common {
             if (name.equals("ルームティス賢者のペンダント")) {
                 switch (enchant) {
                     case 1:
-//                        op2.MHP = 2;                //最大HP+2%
-//                        op2.MMP = 4;                //最大MP+4%
+                        op2.MHP = 2;                //最大HP+2%
+                        op2.MMP = 4;                //最大MP+4%
                         break;
                     case 2:
-//                        op2.MHP = 3;                //最大HP+3%
-//                        op2.MMP = 6;                //最大MP+6%
+                        op2.MHP = 3;                //最大HP+3%
+                        op2.MMP = 6;                //最大MP+6%
                         op2.MR = 2;                 //MR+2
                         break;
                     case 3:
-//                        op2.MHP = 4;                //最大HP+4%
-//                        op2.MMP = 8;                //最大MP+8%
+                        op2.MHP = 4;                //最大HP+4%
+                        op2.MMP = 8;                //最大MP+8%
                         op2.MR = 4;                 //MR+4
                         break;               
                     case 4:
-//                        op2.MHP = 5;                //最大HP+5%
-//                        op2.MMP = 10;               //最大MP+10%
+                        op2.MHP = 5;                //最大HP+5%
+                        op2.MMP = 10;               //最大MP+10%
                         op2.MR = 6;                 //MR+6
                         op2.SP = 1;                 //SP+1
                         break;             
                     case 5:
-//                        op2.MHP = 6;                //最大HP+6%
-//                        op2.MMP = 12;               //最大MP+12%
+                        op2.MHP = 6;                //最大HP+6%
+                        op2.MMP = 12;               //最大MP+12%
                         op2.MR = 10;                //MR+10
                         op2.SP = 2;                 //SP+2
                         break;              
                     case 6:
-//                        op2.MHP = 7;                //最大HP+7%
-//                        op2.MMP = 14;               //最大MP+14%
+                        op2.MHP = 7;                //最大HP+7%
+                        op2.MMP = 14;               //最大MP+14%
                         op2.MR = 12;                //MR+12
                         op2.SP = 3;                 //SP+3
                         op2.DG = 2;                 //DG+2
@@ -3679,8 +3688,8 @@ public class Bougu implements Common {
                         op2.PVP_DR = 2;             //PVPダメージ低下+2
                         break;              
                     case 7:
-//                        op2.MHP = 8;                //最大HP+8%
-//                        op2.MMP = 17;               //最大MP+17%
+                        op2.MHP = 8;                //最大HP+8%
+                        op2.MMP = 17;               //最大MP+17%
                         op2.MR = 14;                //MR+14
                         op2.SP = 4;                 //SP+4
                         op2.DG = 4;                 //DG+4
@@ -3693,8 +3702,8 @@ public class Bougu implements Common {
                         op2.PVP_DR = 4;             //PVPダメージ低下+4
                         break;              
                     case 8:
-//                        op2.MHP = 10;               //最大HP+10%
-//                        op2.MMP = 20;               //最大MP+20%
+                        op2.MHP = 10;               //最大HP+10%
+                        op2.MMP = 20;               //最大MP+20%
                         op2.MR = 16;                //MR+16
                         op2.SP = 5;                 //SP+5
                         op2.DG = 6;                 //DG+6
@@ -3713,36 +3722,36 @@ public class Bougu implements Common {
             if (name.equals("ルームティス狩猟のペンダント")) {
                 switch (enchant) {
                     case 1:
-//                        op2.MHP = 2;                //最大HP+2%
-//                        op2.MMP = 2;                //最大MP+2%
+                        op2.MHP = 2;                //最大HP+2%
+                        op2.MMP = 2;                //最大MP+2%
                         break;
                     case 2:
-//                        op2.MHP = 3;                //最大HP+3%
-//                        op2.MMP = 3;                //最大MP+3%
+                        op2.MHP = 3;                //最大HP+3%
+                        op2.MMP = 3;                //最大MP+3%
                         op2.MR = 2;                 //MR+2
                         break;
                     case 3:
-//                        op2.MHP = 4;                //最大HP+4%
-//                        op2.MMP = 4;                //最大MP+4%
+                        op2.MHP = 4;                //最大HP+4%
+                        op2.MMP = 4;                //最大MP+4%
                         op2.MR = 4;                 //MR+4
                         break;               
                     case 4:
-//                        op2.MHP = 5;                //最大HP+5%
-//                        op2.MMP = 5;                //最大MP+5%
+                        op2.MHP = 5;                //最大HP+5%
+                        op2.MMP = 5;                //最大MP+5%
                         op2.MR = 6;                 //MR+6
-//                                                    //獲得経験値+4%
+                        op2.MEXP = 4;               //獲得経験値+4%
                         break;             
                     case 5:
-//                        op2.MHP = 6;                //最大HP+6%
-//                        op2.MMP = 6;                //最大MP+6%
+                        op2.MHP = 6;                //最大HP+6%
+                        op2.MMP = 6;                //最大MP+6%
                         op2.MR = 10;                //MR+10
-//                                                    //獲得経験値+8%
+                        op2.MEXP = 8;               //獲得経験値+8%
                         break;              
                     case 6:
-//                        op2.MHP = 7;                //最大HP+7%
-//                        op2.MMP = 7;                //最大MP+7%
+                        op2.MHP = 7;                //最大HP+7%
+                        op2.MMP = 7;                //最大MP+7%
                         op2.MR = 12;                //MR+12
-//                                                    //獲得経験値+12%
+                        op2.MEXP = 12;              //獲得経験値+12%
                         op2.DG = 2;                 //DG+2
                         op2.ER = 2;                 //ER+2
                         op2.ME = 2;                 //ME+2
@@ -3753,10 +3762,10 @@ public class Bougu implements Common {
                         op2.PVP_DR = 2;             //PVPダメージ低下+2
                         break;              
                     case 7:
-//                        op2.MHP = 8;                //最大HP+8%
-//                        op2.MMP = 8;                //最大MP+8%
+                        op2.MHP = 8;                //最大HP+8%
+                        op2.MMP = 8;                //最大MP+8%
                         op2.MR = 14;                //MR+14
-//                                                    //獲得経験値+16%
+                        op2.MEXP = 16;              //獲得経験値+16%
                         op2.DG = 4;                 //DG+4
                         op2.ER = 4;                 //ER+4
                         op2.ME = 4;                 //ME+4
@@ -3767,10 +3776,10 @@ public class Bougu implements Common {
                         op2.PVP_DR = 4;             //PVPダメージ低下+4
                         break;              
                     case 8:
-//                        op2.MHP = 10;               //最大HP+10%
-//                        op2.MMP = 10;               //最大MP+10%
+                        op2.MHP = 10;               //最大HP+10%
+                        op2.MMP = 10;               //最大MP+10%
                         op2.MR = 16;                //MR+16
-//                                                    //獲得経験値+20%
+                        op2.MEXP = 20;              //獲得経験値+20%
                         op2.DG = 6;                 //DG+6
                         op2.ER = 6;                 //ER+6
                         op2.ME = 6;                 //ME+6
