@@ -1,6 +1,18 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2020/01/29
+Update 3.8.6
+LSS/src/lss/Bougu.java
+LSS/src/lss/Buff.java
+LSS/src/lss/Calculator.java
+LSS/src/lss/UI.java
+LSS/data/E.zip
+追加
+	ペンダントのオプション最大HP +XX% 最大MP +XX% 獲得経験値 +XX%の計算を実装
+修正
+	ルームティス狩猟のペンダント
+
 2020/01/27
 Update 3.8.5
 LSS/data/E.zip

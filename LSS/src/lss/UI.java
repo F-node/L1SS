@@ -123,6 +123,7 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
 
     JLabel lab_hp;
     JLabel lab_mp;
+    JLabel lab_mexp;
 
     JLabel lab_hpr;
     JLabel lab_mpr;
@@ -450,10 +451,16 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         lab_tmp.setBounds(210 + 60 + 25, 40, 200, 20);
         panels[0].add(lab_tmp);
         commons.add(lab_tmp);
+        lab_tmp = new JLabel("Šl“¾ŒoŒ±’l:");
+        lab_tmp.setBounds(455 + 25, 40+60, 200, 20);
+        panels[0].add(lab_tmp);
+        commons.add(lab_tmp);
         lab_hp = new JLabel();
         lab_hp.setBounds(230 + 25, 40, 70, 20);
         lab_mp = new JLabel();
         lab_mp.setBounds(300 + 25, 40, 70, 20);
+        lab_mexp = new JLabel();
+        lab_mexp.setBounds(545 + 25, 40+60, 70, 20);
 
         lab_tmp = new JLabel("AC");
         lab_tmp.setBounds(200 + 25, 40 + 20, 200, 20);
@@ -560,9 +567,11 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         commons.add(lab_tmp);
         panels[0].add(lab_hp);
         panels[0].add(lab_mp);
+        panels[0].add(lab_mexp);        
         commons.add(lab_hp);
         commons.add(lab_mp);
-
+        commons.add(lab_mexp);
+        
         lab_hpr = new JLabel();
         lab_mpr = new JLabel();
         lab_hpr.setBounds(200 + 30 + 25, 40 + 60, 200, 20);
