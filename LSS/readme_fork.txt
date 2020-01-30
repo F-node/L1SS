@@ -1,6 +1,14 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2020/01/30
+Update 3.8.7
+LSS/data/E.zip
+修正
+	フェンサーが装備できる様に修正
+	マジックプロテクションプレートメイル
+	ポルセの剣
+
 2020/01/29
 Update 3.8.6
 LSS/src/lss/Bougu.java
