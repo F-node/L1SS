@@ -12,12 +12,12 @@ package lss;
 public interface Common {
 
     //6種のステータス
-    final String[] ST_LIST = {"STR", "DEX", "CON", "INT", "WIS", "CHA"};
+    final String[] ST_LIST = {"STR", "DEX", "INT", "WIS", "CON", "CHA"};
     final int STR = 0;
     final int DEX = 1;
-    final int CON = 2;
-    final int INT = 3;
-    final int WIS = 4;
+    final int INT = 2;
+    final int WIS = 3;
+    final int CON = 4;
     final int CHA = 5;
 
     //9種の職業

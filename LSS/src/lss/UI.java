@@ -1086,28 +1086,28 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         pure_status_bonus[0][8] = new JLabel("AC");
         pure_status_bonus[0][9] = new JLabel("ER");
         
-        pure_status_bonus[0][10] = new JLabel("HP増加");
-        pure_status_bonus[0][11] = new JLabel("HPR");
-        pure_status_bonus[0][12] = new JLabel("HPポーション");
-        pure_status_bonus[0][13] = new JLabel("最大重量");
-        pure_status_bonus[0][14] = new JLabel("");
+        pure_status_bonus[0][10] = new JLabel("魔法ダメージ");
+        pure_status_bonus[0][11] = new JLabel("魔法命中");
+        pure_status_bonus[0][12] = new JLabel("魔法クリティカル");
+        pure_status_bonus[0][13] = new JLabel("MB");
+        pure_status_bonus[0][14] = new JLabel("MP消費減少");
         
-        pure_status_bonus[0][15] = new JLabel("魔法ダメージ");
-        pure_status_bonus[0][16] = new JLabel("魔法命中");
-        pure_status_bonus[0][17] = new JLabel("魔法クリティカル");
-        pure_status_bonus[0][18] = new JLabel("MB");
-        pure_status_bonus[0][19] = new JLabel("MP消費減少");
-        
-        pure_status_bonus[0][20] = new JLabel("MP増加");
-        pure_status_bonus[0][21] = new JLabel("MPR");
-        pure_status_bonus[0][22] = new JLabel("MPポーション");
-        pure_status_bonus[0][23] = new JLabel("MR");
+        pure_status_bonus[0][15] = new JLabel("MP増加");
+        pure_status_bonus[0][16] = new JLabel("MPR");
+        pure_status_bonus[0][17] = new JLabel("MPポーション");
+        pure_status_bonus[0][18] = new JLabel("MR");
+        pure_status_bonus[0][19] = new JLabel("");
+
+        pure_status_bonus[0][20] = new JLabel("HP増加");
+        pure_status_bonus[0][21] = new JLabel("HPR");
+        pure_status_bonus[0][22] = new JLabel("HPポーション");
+        pure_status_bonus[0][23] = new JLabel("最大所持重量");
         pure_status_bonus[0][24] = new JLabel("");
 
-        pure_status_bonus[0][25] = new JLabel("ペット");
-        pure_status_bonus[0][26] = new JLabel("レアペット");
-        pure_status_bonus[0][27] = new JLabel("サモンモンスター");
-        pure_status_bonus[0][28] = new JLabel("最大血盟員数");
+        pure_status_bonus[0][25] = new JLabel("");
+        pure_status_bonus[0][26] = new JLabel("");
+        pure_status_bonus[0][27] = new JLabel("");
+        pure_status_bonus[0][28] = new JLabel("");
         pure_status_bonus[0][29] = new JLabel("");
         
         for (int i = 0; i < pure_status_bonus[0].length; i++) {
@@ -1130,7 +1130,7 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         lab_tmp.setBounds(30, 480, 100, 20);
         panels[1].add(lab_tmp);
 
-        String elixir_list[] = {"---", "STR", "DEX", "CON", "INT", "WIS",
+        String elixir_list[] = {"---", "STR", "DEX", "INT", "WIS", "CON",
             "CHA"};
         for (int i = 0; i < 10; i++) {
             cb_elixir[i] = new JComboBox(elixir_list);
