@@ -1,6 +1,15 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2020/01/31
+Update 3.8.8
+LSS/src/lss/Calculator.java
+LSS/src/lss/Common.java
+LSS/src/lss/UI.java
+修正
+	STR/DEX/CON/INT/WIS/CHRの並びをSTR/DEX/INT/WIS/CON/CHAに変更
+	CHAオプションの表示を消去
+
 2020/01/30
 Update 3.8.7
 LSS/data/E.zip

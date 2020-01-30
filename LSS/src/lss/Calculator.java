@@ -5095,17 +5095,19 @@ buki.arrow_elementdmg=0;
 //        ui.lab_ml.setText("ML " + ml);
 //        ui.lab_mb.setText("MB " + mb);
 //        ui.lab_mag_dmg.setText("魔法ダメージ " + base_dmg_magic);
-        ui.pure_status_bonus[1][0].setText(Integer.toString(base_dmg_short));
-        ui.pure_status_bonus[1][5].setText(Integer.toString(base_dmg_long));
-        ui.pure_status_bonus[1][15].setText(Integer.toString(base_dmg_magic));
-        ui.pure_status_bonus[1][1].setText(Integer.toString(base_hit_short));
-        ui.pure_status_bonus[1][6].setText(Integer.toString(base_hit_long));
-        ui.pure_status_bonus[1][16].setText(Integer.toString(base_hit_magic));
-        ui.pure_status_bonus[1][2].setText(Integer.toString(cri_short));
-        ui.pure_status_bonus[1][7].setText(Integer.toString(cri_long));
-        ui.pure_status_bonus[1][17].setText(Integer.toString(cri_magic));
-        ui.pure_status_bonus[1][18].setText(Integer.toString(mb));
-        ui.pure_status_bonus[1][19].setText((Integer.toString(red_mp)));
+        ui.pure_status_bonus[1][0].setText(Integer.toString(base_dmg_short));   //近距離ダメージ
+        ui.pure_status_bonus[1][1].setText(Integer.toString(base_hit_short));   //近距離命中
+        ui.pure_status_bonus[1][2].setText(Integer.toString(cri_short));        //近距離クリティカル
+
+        ui.pure_status_bonus[1][5].setText(Integer.toString(base_dmg_long));    //遠距離ダメージ
+        ui.pure_status_bonus[1][6].setText(Integer.toString(base_hit_long));    //遠距離命中
+        ui.pure_status_bonus[1][7].setText(Integer.toString(cri_long));         //遠距離クリティカル
+
+        ui.pure_status_bonus[1][10].setText(Integer.toString(base_dmg_magic));  //魔法ダメージ
+        ui.pure_status_bonus[1][11].setText(Integer.toString(base_hit_magic));  //魔法命中
+        ui.pure_status_bonus[1][12].setText(Integer.toString(cri_magic));       //魔法クリティカル
+        ui.pure_status_bonus[1][13].setText(Integer.toString(mb));              //MB
+        ui.pure_status_bonus[1][14].setText((Integer.toString(red_mp)));        //MP消費減少
 
         equip_ac = 0;
 
@@ -5168,8 +5170,8 @@ buki.arrow_elementdmg=0;
 //ERの計算式
         base_er = (int) (dex / 2) + (int) (level / _C[ER][DEX][cls]);
 
-        ui.pure_status_bonus[1][8].setText(Integer.toString(base_ac));
-        ui.pure_status_bonus[1][9].setText(Integer.toString(base_er));
+        ui.pure_status_bonus[1][8].setText(Integer.toString(base_ac));          //AC
+        ui.pure_status_bonus[1][9].setText(Integer.toString(base_er));          //ER
 
         ac = base_ac + buff.AC + equip_ac;
         dg = base_dg + buff.DG;
@@ -5281,8 +5283,8 @@ buki.arrow_elementdmg=0;
 
         int weight = (int) ((str + con) / 2) * 100 + 1000;
 
-        ui.pure_status_bonus[1][3].setText(Integer.toString(weight));
-        ui.pure_status_bonus[1][13].setText(Integer.toString(weight));
+        ui.pure_status_bonus[1][3].setText(Integer.toString(weight));           //最大所持重量
+        ui.pure_status_bonus[1][23].setText(Integer.toString(weight));          //最大所持重量
 
         weight *= 1 + r_eq;
 
@@ -5344,7 +5346,7 @@ buki.arrow_elementdmg=0;
                 + _ST[ELIXIR][WIS] + _ST[ENCHANT][WIS];
 
         mr = minasToZero(wis - 10) * 4 + (int) (level / 2) + _C[MR][WIS][cls];
-        ui.pure_status_bonus[1][23].setText(Integer.toString(mr));
+        ui.pure_status_bonus[1][18].setText(Integer.toString(mr));              //MR
         mr += buff.MR;
         mr += buki.op.MR + buki2.op.MR;
         for (Bougu bougu1 : bougu) {
@@ -5393,7 +5395,7 @@ buki.arrow_elementdmg=0;
                 //mpr += (wis - 10) / 2;
                 //ui.pure_status_bonus[1][22].setText(Integer.toString((wis - 10) / 2));
                 mpr += (wis - 8) / 2;
-                ui.pure_status_bonus[1][22].setText(Integer.toString((wis - 8) / 2));
+                ui.pure_status_bonus[1][17].setText(Integer.toString((wis - 8) / 2));   //MPR
             } else {
                 mpr++;
             }
@@ -5403,7 +5405,7 @@ buki.arrow_elementdmg=0;
         mpr += tmp;
         if (pure_wis >= 25) {
             if (ui.cb_buff[ITEM_BLUE].isSelected()) {
-                ui.pure_status_bonus[1][22].setText(Integer.toString(1));
+                ui.pure_status_bonus[1][17].setText(Integer.toString(1));               //
                 mpr++;
             }
             mpr++;                          //MP回復+1
@@ -5412,7 +5414,7 @@ buki.arrow_elementdmg=0;
         }
         if (pure_wis >= 35) {
             if (ui.cb_buff[ITEM_BLUE].isSelected()) {
-                ui.pure_status_bonus[1][22].setText(Integer.toString(2));
+                ui.pure_status_bonus[1][17].setText(Integer.toString(2));
                 mpr++;
             }
             mpr++;                          //MP回復+1
@@ -5421,7 +5423,7 @@ buki.arrow_elementdmg=0;
         }
         if (pure_wis >= 45) {
             if (ui.cb_buff[ITEM_BLUE].isSelected()) {
-                ui.pure_status_bonus[1][22].setText(Integer.toString(5));
+                ui.pure_status_bonus[1][17].setText(Integer.toString(5));
                 mpr += 3;
             }
             mpr += 3;                       //MP回復+3
@@ -5430,7 +5432,7 @@ buki.arrow_elementdmg=0;
         }
         if (pure_wis >= 55) {
             if (ui.cb_buff[ITEM_BLUE].isSelected()) {
-                ui.pure_status_bonus[1][22].setText(Integer.toString(10));
+                ui.pure_status_bonus[1][17].setText(Integer.toString(10));
                 mpr += 5;
             }
             mpr += 5;                       //MP回復+5
@@ -5438,7 +5440,7 @@ buki.arrow_elementdmg=0;
                                             //最大MP+200は5563行目以降で処理
         }
         
-        ui.pure_status_bonus[1][21].setText(Integer.toString(tmp));
+        ui.pure_status_bonus[1][16].setText(Integer.toString(tmp));             //MP増加
 
         hpr += (con / 2 + level / 20);
         hp_pot = (int) (minasToZero(con - 10) / 10);
@@ -5463,8 +5465,8 @@ buki.arrow_elementdmg=0;
                                             //最大HP+200は5549行目以降で処理
         }
 
-        ui.pure_status_bonus[1][11].setText(Integer.toString(hpr));
-        ui.pure_status_bonus[1][12].setText(Integer.toString(hp_pot));
+        ui.pure_status_bonus[1][21].setText(Integer.toString(hpr));             //HP増加
+        ui.pure_status_bonus[1][22].setText(Integer.toString(hp_pot));          //HPポーション
 
         hpr += buff.HPR;
         mpr += buff.MPR;
@@ -5615,19 +5617,19 @@ buki.arrow_elementdmg=0;
             int min = 1 + minasToZero(con - 12) + _C[HP][CON][cls];
             int max = 2 + minasToZero(con - 12) + _C[HP][CON][cls];
 
-            ui.pure_status_bonus[1][10].setText(min + " - " + max);
+            ui.pure_status_bonus[1][20].setText(min + " - " + max);             //HP増加
         } else {
             int min = 1 + (int) ((con + 1) / 2) + _C[HP][CON][cls];
             int max = 2 + (int) ((con + 1) / 2) + _C[HP][CON][cls];
 
-            ui.pure_status_bonus[1][10].setText(min + " - " + max);
+            ui.pure_status_bonus[1][20].setText(min + " - " + max);             //HP増加
         }
 
         {
             int min = (int) ((int) (wis / 5) * c1[cls]) + c2[cls];
             int max = (int) ((int) (wis / 3) * c1[cls]) + c2[cls];
 
-            ui.pure_status_bonus[1][20].setText(min + " - " + max);
+            ui.pure_status_bonus[1][15].setText(min + " - " + max);             //MP増加
         }
 
 //CONステータスによるHP増加処理
