@@ -93,7 +93,7 @@ public interface Common {
     final int EARRING2 = 12;
 
 //エンチャント(0から103までの合計104個分)　UI.javaの217行目も合わせて変更必須
-//仮設定で122までの110個で処理
+//仮設定で122までの120個で処理
 //基本エンチャント
     final int ACC1 = 0;         //1段加速
     final int ACC2 = 1;         //2段加速
@@ -105,26 +105,33 @@ public interface Common {
     final int SEC = 75;         //セキュリティ
     final int VIP = 72;         //VIPエンチャント
 
-//君主の魔法
-    final int P_GA = 87;        //グレース(グレースアバター)
-    final int P_BA = 59;        //オーラ(ブレイブアバター)
-    final int P_M = 100;        //マジェスティ
-    final int P_SA = 99;        //シャイニングアーマー
-    final int P_S = 9;          //シャイニングシールド
-    final int P_B = 8;          //ブレイブメンタル
-    final int P_G = 7;          //グローイングウエポン
+//君主の魔法 合計10種類
+    final int P_PRE = 110;          //PRimE                         プライム
+//    final int P_EME = X;          //EMpirE                        エンパイア(未実装)
+    final int P_GRE = 87;           //GRacE                         グレース(グレースアバター)
+    final int P_AUA = 59;           //AUrA                          オーラ(ブレイブアバター)
+    final int P_MAY = 100;          //MAjestY                       マジェスティ
+     final int P_SAR = 99;           //Shining ArmoR                 シャイニングアーマー
+    final int P_SSD = 9;            //Shining ShielD                シャイニングシールド
+    final int P_BML = 8;            //Brave MentaL                  ブレイブメンタル
+    final int P_GWN = 7;            //Glowing WeapoN                グローイングウェポン
+//    final int P_TTT = X;          //True TargeT                   トゥルーターゲット(未実装)
 
 //ナイトの技術
     //アクティブスキル
-    final int K_CB = 36;        //カウンターバリア
-    final int K_BK = 89;        //ブローアタック
-    final int K_BA = 65;        //バウンスアタック
-    final int K_PD = 88;        //プライド
-    final int K_SC = 35;        //ソリッドキャリッジ
-    final int K_RA = 34;        //リダクションアーマー
-
+//    final int K_FSN = X;          //Force StaN                    フォーススタン(未実装)
+//    final int K_ABE = X;          //Absolute BladE                アブソルートブレイド(未実装)
+    final int K_CBR = 36;           //Counter BarrieR               カウンターバリア(未実装)
+    final int K_BLK = 89;           //BLow attacK                   ブローアタック
+    final int K_BOK = 65;           //BOunce attacK                 バウンスアタック
+//    final int K_SSN = X;          //Shock StaN                    ショックスタン(未実装)
+    final int K_PRE = 88;           //PRidE                         プライド
+    final int K_SCE = 35;           //Solid CarriagE                ソリッドキャリッジ
+    final int K_RAR = 34;           //Reduction ArmoR               リダクションアーマー
     //パッシブスキル
-    final int K_CB2 = 73;       //カウンターバリア:ベテラン
+    final int K_CBV = 73;           //Counter Barrier:Veteran       カウンターバリア:ベテラン
+    final int K_RFE = 111;          //Raging ForcE                  レイジングフォース
+    final int K_RAV = 112;          //Reduction Armor:Veteran       リダクションアーマー:ベテラン
 
 //エルフの精霊魔法
     //共通
@@ -256,7 +263,7 @@ public interface Common {
 //  アクティブスキル
 //    final int F_AAA = XXX;      //AshurA            アシュラ
 //    final int F_ABE = XXX;      //BladE             ブレード
-//    final int F_APR = XXX;      //PantheR           パンサー
+//    final int F_APA = XXX;      //Pantera           パンテラ
 //    final int F_AJT = XXX;      //JudgmenT          ジャッジメント
 //    final int F_AHE = XXX;      //HellfirE          ヘルファイア
 //    final int F_APM = XXX;      //PhantoM           ファントム
@@ -268,7 +275,7 @@ public interface Common {
     final int F_PIZ = 104;      //Infinity:BlitZ    インフィニティ:ブリッツ
 //    final int F_PPX = XXX;      //ParadoX           パラドックス
     final int F_PIE = 105;      //Infinity:DodgE    インフィニティ:ドッジ
-//    final int F_PGH = XXX;      //GrowtH            グロウス
+//    final int F_PGH = XXX;      //GrowtH            グロース
     final int F_PID = 106;      //Infinity:BlooD    インフィニティ:ブラッド
     final int F_PRE = 107;      //RagE              レイジ
     final int F_PIR = 108;      //Infinity:ArmoR    インフィニティ:アーマー
