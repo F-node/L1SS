@@ -1,6 +1,21 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2020/02/03
+Update 3.8.9
+LSS/src/lss/Calculator.java
+LSS/src/lss/Common.java
+LSS/src/lss/UI.java
+修正
+	保存時にステータスがズレた値をセーブデーターとして書き出してしまう
+	(ステータスの並び順が旧仕様になっている)
+	君主/ナイト/剣士のスキルと変数とツールチップ
+
+追加
+	プライム
+	レイジングフォース
+	リダクションアーマー:ベテラン
+
 2020/01/31
 Update 3.8.8
 LSS/src/lss/Calculator.java
