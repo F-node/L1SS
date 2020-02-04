@@ -1,6 +1,14 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2020/02/04
+Update 3.9.0
+LSS/src/lss/Calculator.java
+LSS/src/lss/Common.java
+LSS/src/lss/UI.java
+修正
+	一般魔法/エルフ/その他のスキルと変数とツールチップ
+
 2020/02/03
 Update 3.8.9
 LSS/src/lss/Calculator.java

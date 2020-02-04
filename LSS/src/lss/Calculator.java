@@ -1529,7 +1529,7 @@ public class Calculator implements Common {
                     buff.element_resist[EARTH] += 10;
                     buff.element_resist[WATER] += 10;
                     ui.cb_buff[ITEM_COOKING].setToolTipText("<html>"+"水属性抵抗+10 地属性抵抗+10 風属性抵抗+10 火属性抵抗+10"
-                                                           + "<br>"+ "MR+10 HPR+2 MPR+3 SP+2 獲得経験値+10% ダメージ低下+2 15分"+"</html>");
+                                                            + "<br>"+ "MR+10 HPR+2 MPR+3 SP+2 獲得経験値+10% ダメージ低下+2 15分"+"</html>");
                     break;
                 case 9:                                 //パタラシのサーモンカナッペ
                     buff.DR += 2;
@@ -1544,7 +1544,7 @@ public class Calculator implements Common {
                     buff.element_resist[EARTH] += 10;
                     buff.element_resist[WATER] += 10;
                     ui.cb_buff[ITEM_COOKING].setToolTipText("<html>"+"水属性抵抗+10 地属性抵抗+10 風属性抵抗+10 火属性抵抗+10"
-                                                           + "<br>"+ "MR+10 HPR+2 MPR+2 遠距離ダメージ+2 遠距離命中+1 獲得経験値+10% ダメージ低下+2 15分"+"</html>");
+                                                            + "<br>"+ "MR+10 HPR+2 MPR+2 遠距離ダメージ+2 遠距離命中+1 獲得経験値+10% ダメージ低下+2 15分"+"</html>");
                     break;
                 case 8:                                 //パタラシの和牛ステーキ
                     buff.DR += 2;
@@ -1559,7 +1559,7 @@ public class Calculator implements Common {
                     buff.element_resist[EARTH] += 10;
                     buff.element_resist[WATER] += 10;
                     ui.cb_buff[ITEM_COOKING].setToolTipText("<html>"+"水属性抵抗+10 地属性抵抗+10 風属性抵抗+10 火属性抵抗+10"
-                                                           + "<br>"+ "MR+10 HPR+2 MPR+2 近距離ダメージ+2 近距離命中+1 獲得経験値+10% ダメージ低下+2 15分"+"</html>");
+                                                            + "<br>"+ "MR+10 HPR+2 MPR+2 近距離ダメージ+2 近距離命中+1 獲得経験値+10% ダメージ低下+2 15分"+"</html>");
                     break;
                 case 7:                                 //真心がこもった料理
                     buff.DR += 5;
@@ -1576,8 +1576,8 @@ public class Calculator implements Common {
                     buff.element_resist[EARTH] += 10;
                     buff.element_resist[WATER] += 10;
                     ui.cb_buff[ITEM_COOKING].setToolTipText("<html>"+"水属性抵抗+10 地属性抵抗+10 風属性抵抗+10 火属性抵抗+10"
-                                                           + "<br>"+ "近距離ダメージ+2 近距離命中+2 遠距離ダメージ+2 遠距離命中+2"
-                                                           + "<br>"+ "MR+15 HPR+3 MPR+4 SP+2 ダメージ低下+5 15分20秒"+"</html>");
+                                                            + "<br>"+ "近距離ダメージ+2 近距離命中+2 遠距離ダメージ+2 遠距離命中+2"
+                                                            + "<br>"+ "MR+15 HPR+3 MPR+4 SP+2 ダメージ低下+5 15分20秒"+"</html>");
                     break;
                 case 6:                                 //小粋な麺料理
                     buff.DR += 5;
@@ -1594,8 +1594,8 @@ public class Calculator implements Common {
                     buff.element_resist[EARTH] += 10;
                     buff.element_resist[WATER] += 10;
                     ui.cb_buff[ITEM_COOKING].setToolTipText("<html>"+"水属性抵抗+10 地属性抵抗+10 風属性抵抗+10 火属性抵抗+10"
-                                                           + "<br>"+ "近距離ダメージ+2 近距離命中+2 遠距離ダメージ+2 遠距離命中+2"
-                                                           + "<br>"+ "MR+15 HPR+3 MPR+4 SP+2 ダメージ低下+5 15分20秒"+"</html>");
+                                                            + "<br>"+ "近距離ダメージ+2 近距離命中+2 遠距離ダメージ+2 遠距離命中+2"
+                                                            + "<br>"+ "MR+15 HPR+3 MPR+4 SP+2 ダメージ低下+5 15分20秒"+"</html>");
                     break;
                 case 5:                                 //祝福された賢い七面鳥焼き
                     buff.DR += 2;
@@ -1612,7 +1612,7 @@ public class Calculator implements Common {
         	    buff.ailment[HIT_SECRET] += 3;          //秘技命中+3
         	    buff.ailment[HIT_TERROR] += 3;          //恐怖命中+3
                     ui.cb_buff[ITEM_COOKING].setToolTipText("<html>"+"水属性抵抗+10 地属性抵抗+10 風属性抵抗+10 火属性抵抗+10"
-                                                           + "<br>"+ "MR+10 HPR+2 MPR+3 SP+2 ダメージ低下+2 全クラススキル命中+3 30分"+"</html>");
+                                                            + "<br>"+ "MR+10 HPR+2 MPR+3 SP+2 ダメージ低下+2 全クラススキル命中+3 30分"+"</html>");
                     break;
                 case 4:                                 //賢い七面鳥焼き
                     buff.DR += 2;
@@ -1625,7 +1625,7 @@ public class Calculator implements Common {
                     buff.element_resist[WIND] += 10;
                     buff.element_resist[EARTH] += 10;
                     ui.cb_buff[ITEM_COOKING].setToolTipText("<html>"+"水属性抵抗+10 地属性抵抗+10 風属性抵抗+10 火属性抵抗+10"
-                                                           + "<br>"+ "MR+10 HPR+2 MPR+3 SP+2 ダメージ低下+2 30分"+"</html>");
+                                                            + "<br>"+ "MR+10 HPR+2 MPR+3 SP+2 ダメージ低下+2 30分"+"</html>");
                     break;
                 case 3:                                 //祝福された素早い鮭の煮付
                     buff.DR += 2;
@@ -1643,7 +1643,7 @@ public class Calculator implements Common {
         	    buff.ailment[HIT_SECRET] += 3;          //秘技命中+3
         	    buff.ailment[HIT_TERROR] += 3;          //恐怖命中+3
                     ui.cb_buff[ITEM_COOKING].setToolTipText("<html>"+"水属性抵抗+10 地属性抵抗+10 風属性抵抗+10 火属性抵抗+10"
-                                                           + "<br>"+ "MR+10 HPR+2 MPR+3 遠距離ダメージ+2 遠距離命中+1 ダメージ低下+2 全クラススキル命中+3 30分"+"</html>");
+                                                            + "<br>"+ "MR+10 HPR+2 MPR+3 遠距離ダメージ+2 遠距離命中+1 ダメージ低下+2 全クラススキル命中+3 30分"+"</html>");
                     break;
                 case 2:                                 //素早い鮭の煮付
                     buff.DR += 2;
@@ -1657,7 +1657,7 @@ public class Calculator implements Common {
                     buff.element_resist[WIND] += 10;
                     buff.element_resist[EARTH] += 10;
                     ui.cb_buff[ITEM_COOKING].setToolTipText("<html>"+"水属性抵抗+10 地属性抵抗+10 風属性抵抗+10 火属性抵抗+10"
-                                                           + "<br>"+ "MR+10 HPR+2 MPR+3 遠距離ダメージ+2 遠距離命中+1 ダメージ低下+2 30分"+"</html>");
+                                                            + "<br>"+ "MR+10 HPR+2 MPR+3 遠距離ダメージ+2 遠距離命中+1 ダメージ低下+2 30分"+"</html>");
                     break;
                 case 1:                                 //祝福された力強い和牛ステーキ
                     buff.DR += 2;
@@ -1675,7 +1675,7 @@ public class Calculator implements Common {
         	    buff.ailment[HIT_SECRET] += 3;          //秘技命中+3
         	    buff.ailment[HIT_TERROR] += 3;          //恐怖命中+3
                     ui.cb_buff[ITEM_COOKING].setToolTipText("<html>"+"水属性抵抗+10 地属性抵抗+10 風属性抵抗+10 火属性抵抗+10"
-                                                           + "<br>"+ "MR+10 HPR+2 MPR+3 近距離ダメージ+2 近距離命中+1 ダメージ低下+2 全クラススキル命中+3 30分"+"</html>");
+                                                            + "<br>"+ "MR+10 HPR+2 MPR+3 近距離ダメージ+2 近距離命中+1 ダメージ低下+2 全クラススキル命中+3 30分"+"</html>");
                     break;
                 case 0:                                 //力強い和牛ステーキ
                     buff.DR += 2;
@@ -1689,7 +1689,7 @@ public class Calculator implements Common {
                     buff.element_resist[WIND] += 10;
                     buff.element_resist[EARTH] += 10;
                     ui.cb_buff[ITEM_COOKING].setToolTipText("<html>"+"水属性抵抗+10 地属性抵抗+10 風属性抵抗+10 火属性抵抗+10"
-                                                           + "<br>"+ "MR+10 HPR+2 MPR+3 近距離ダメージ+2 近距離命中+1 ダメージ低下+2 30分"+"</html>");
+                                                            + "<br>"+ "MR+10 HPR+2 MPR+3 近距離ダメージ+2 近距離命中+1 ダメージ低下+2 30分"+"</html>");
                     break;
                 default:
                     break;
@@ -1878,18 +1878,24 @@ public class Calculator implements Common {
             }
         }
         //レジストマジック 消費MP5/20mins
-        if (ui.cb_buff[E_RM].isSelected()) {
+        ui.cb_buff[E_RMC].setToolTipText("<html>"+ "[消費MP:5][消費HP:--]"
+                                         + "<br>"+ "MR+10"
+                                         + "<br>"+ "[習得レベル:15][持続時間:20分][対象:術者]"+"</html>");
+        if (ui.cb_buff[E_RMC].isSelected()) {
             if (cls == E) {
                 buff.MR += 10;
-                if (ui.cb_buff[E_RM].getForeground().equals(Color.BLUE)) {
+                if (ui.cb_buff[E_RMC].getForeground().equals(Color.BLUE)) {
                     cons_mp += (5.0 * (1.0 - red_mp * 0.01) - red_mp2) / 20;
                 }
             } else {
-                ui.cb_buff[E_RM].setSelected(false);
+                ui.cb_buff[E_RMC].setSelected(false);
             }
         }
         //レジストエレメント 常時
-        if (ui.cb_buff[E_RE].isSelected()) {
+        ui.cb_buff[E_RET].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "MR+5 全属性抵抗+5%"
+                                         + "<br>"+ "[習得レベル:30][持続時間:常時][対象:術者]"+"</html>");
+        if (ui.cb_buff[E_RET].isSelected()) {
             if (cls == E) {
                 buff.MR += 5;
                 buff.element_resist[FIRE] += 5;
@@ -1897,71 +1903,93 @@ public class Calculator implements Common {
                 buff.element_resist[WIND] += 5;
                 buff.element_resist[EARTH] += 5;
             } else {
-                ui.cb_buff[E_RE].setSelected(false);
+                ui.cb_buff[E_RET].setSelected(false);
             }
         }
         //クリアーマインド 消費MP10/20mins
-        if (ui.cb_buff[E_CM].isSelected()) {
+        ui.cb_buff[E_CMD].setToolTipText("<html>"+ "[消費MP:10][消費HP:--]"
+                                         + "<br>"+ "STR+1 DEX+1 INT+1"
+                                         + "<br>"+ "[習得レベル:30][持続時間:20分][対象:術者]"+"</html>");
+        if (ui.cb_buff[E_CMD].isSelected()) {
             if (cls == E) {
                 buff.ST[STR] += 1;
                 buff.ST[DEX] += 1;
                 buff.ST[INT] += 1;
-                if (ui.cb_buff[E_CM].getForeground().equals(Color.BLUE)) {
+                if (ui.cb_buff[E_CMD].getForeground().equals(Color.BLUE)) {
                     cons_mp += (10.0 * (1.0 - red_mp * 0.01) - red_mp2) / 20;
                 }
             } else {
-                ui.cb_buff[E_CM].setSelected(false);
+                ui.cb_buff[E_CMD].setSelected(false);
             }
         }
         //バーニングウエポン 消費MP30/16mins
-        if (ui.cb_buff[E_BW].isSelected()) {
+        ui.cb_buff[E_BWN].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
+                                         + "<br>"+ "火属性の近距離ダメージ+6 近距離命中+6"
+                                         + "<br>"+ "[習得レベル:75][持続時間:16分][対象:術者]"+"</html>");
+        if (ui.cb_buff[E_BWN].isSelected()) {
             if (cls == E) {
                 buff.ELEM_DMG_SHORT[FIRE] += 6;
                 buff.HIT_SHORT += 6;
-                if (ui.cb_buff[E_BW].getForeground().equals(Color.BLUE)) {
+                if (ui.cb_buff[E_BWN].getForeground().equals(Color.BLUE)) {
                     cons_mp += (30.0 * (1.0 - red_mp * 0.01) - red_mp2) / 16;
                 }
             } else {
-                ui.cb_buff[E_BW].setSelected(false);
+                ui.cb_buff[E_BWN].setSelected(false);
             }
         }
         //インフェルノ 消費MP50 HP70/2mins
-        if (ui.cb_buff[E_IO].isSelected()) {
+        ui.cb_buff[E_INO].setToolTipText("<html>"+ "[消費MP:50][消費HP:70]"
+                                         + "<br>"+ "一定確率(不明)で近距離ダメージを50%軽減しカウンター攻撃"
+                                         + "<br>"+ "カウンターダメージは武器の[SMALL打撃値]+[追加ダメージ]+[強化数]x[1~4(ランダム)]"
+                                         + "<br>"+ "[習得レベル:80][持続時間:2分8秒][対象:術者][触媒:精霊の玉(5)]"+"</html>");
+
+
+
+        if (ui.cb_buff[E_INO].isSelected()) {
             if (level >= 80 && cls == E
                     && buki.type.equals("片手剣")) {
-                if (ui.cb_buff[E_IO].getForeground().equals(Color.BLUE)) {
+                if (ui.cb_buff[E_INO].getForeground().equals(Color.BLUE)) {
                     cons_mp += (50.0 * (1.0 - red_mp * 0.01) - red_mp2) / 2;
                 }
                 // インフェルノ効果未実装
             } else {
-                ui.cb_buff[E_IO].setSelected(false);
+                ui.cb_buff[E_INO].setSelected(false);
             }
         }
         //アースウェポン 消費MP15/16mins
-        if (ui.cb_buff[E_EW].isSelected()) {
+        ui.cb_buff[E_EWN].setToolTipText("<html>"+ "[消費MP:15][消費HP:--]"
+                                        + "<br>"+ "地属性の近距離ダメージ+2 近距離命中+4"
+                                        + "<br>"+ "[習得レベル:45][持続時間:16分][対象:術者]"+"</html>");
+        if (ui.cb_buff[E_EWN].isSelected()) {
             if (cls == E) {
                 buff.ELEM_DMG_SHORT[EARTH] += 2;
                 buff.HIT_SHORT += 4;
-                if (ui.cb_buff[E_EW].getForeground().equals(Color.BLUE)) {
+                if (ui.cb_buff[E_EWN].getForeground().equals(Color.BLUE)) {
                     cons_mp += (15.0 * (1.0 - red_mp * 0.01) - red_mp2) / 16;
                 }
             } else {
-                ui.cb_buff[E_EW].setSelected(false);
+                ui.cb_buff[E_EWN].setSelected(false);
             }
         }
         //アクアショット 消費MP15/16mins
-        if (ui.cb_buff[E_AS].isSelected()) {
+        ui.cb_buff[E_AST].setToolTipText("<html>"+ "[消費MP:15][消費HP:--]"
+                                         + "<br>"+ "遠距離命中+4"
+                                         + "<br>"+ "[習得レベル:45][持続時間:16分][対象:術者]"+"</html>");
+        if (ui.cb_buff[E_AST].isSelected()) {
             if (cls == E) {
                 buff.HIT_LONG += 4;
-                if (ui.cb_buff[E_AS].getForeground().equals(Color.BLUE)) {
+                if (ui.cb_buff[E_AST].getForeground().equals(Color.BLUE)) {
                     cons_mp += (15.0 * (1.0 - red_mp * 0.01) - red_mp2) / 16;
                 }
             } else {
-                ui.cb_buff[E_AS].setSelected(false);
+                ui.cb_buff[E_AST].setSelected(false);
             }
         }  
         //ネイチャーズタッチ 消費MP20/5mins
-        if (ui.cb_buff[E_NT].isSelected()) {
+        ui.cb_buff[E_NTH].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
+                                         + "<br>"+ "HPR+15"
+                                         + "<br>"+ "[習得レベル:60][持続時間:5分20秒][対象:術者/PC]"+"</html>");
+        if (ui.cb_buff[E_NTH].isSelected()) {
             if (level > 9) {
                 if (level < 24) {
                     buff.HPR += level - 9;
@@ -1969,7 +1997,7 @@ public class Calculator implements Common {
                     buff.HPR += 15;
                 }
             }
-            if (ui.cb_buff[E_NT].getForeground().equals(Color.BLUE)) {
+            if (ui.cb_buff[E_NTH].getForeground().equals(Color.BLUE)) {
                 cons_mp += (20.0 * (1.0 - red_mp * 0.01) - red_mp2) / 5;
             }
         }
@@ -2005,45 +2033,63 @@ public class Calculator implements Common {
             buff.CRI_SHORT += 5+(level/2-40);
             }
         }
-        //アクアプロテクト 消費MP30/16mins
-        if (ui.cb_buff[E_AP].isSelected()) {
+        //アクアプロテクター 消費MP30/16mins
+        ui.cb_buff[E_APR].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
+                                         + "<br>"+ "遠距離回避(ER)+5"
+                                         + "<br>"+ "[習得レベル:60][持続時間:16分][対象:術者/PC]"+"</html>");
+        if (ui.cb_buff[E_APR].isSelected()) {
             if (ui.cb_buff[D_DE].isSelected()) {
-                ui.cb_buff[E_AP].setSelected(false);
+                ui.cb_buff[E_APR].setSelected(false);
             } else {
                 buff.ER += 5;
-                if (ui.cb_buff[E_AP].getForeground().equals(Color.BLUE)) {
+                if (ui.cb_buff[E_APR].getForeground().equals(Color.BLUE)) {
                     cons_mp += (30.0 * (1.0 - red_mp * 0.01) - red_mp2) / 16;
                 }
             }
         }
         //ストームショット 消費MP30/16mins
-        if (ui.cb_buff[E_SS].isSelected()) {
+        ui.cb_buff[E_SST].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
+                                         + "<br>"+ "風属性の遠距離ダメージ+6 遠距離命中+3"
+                                         + "<br>"+ "[習得レベル:75][持続時間:16分][対象:術者]"+"</html>");
+            if (ui.cb_buff[E_SST].isSelected()) {
+                ui.cb_buff[E_SEE].setSelected(false);
             buff.ELEM_DMG_LONG[WIND] += 6;
             buff.HIT_LONG += 3;
-            if (ui.cb_buff[E_SS].getForeground().equals(Color.BLUE)) {
-                cons_mp += (30.0 * (1.0 - red_mp * 0.01) - red_mp2) / 16;
-            }
+                if (ui.cb_buff[E_SST].getForeground().equals(Color.BLUE)) {
+                    cons_mp += (30.0 * (1.0 - red_mp * 0.01) - red_mp2) / 16;
+                }
         }
         //ストームアイ 消費MP40/16mins
-        if (ui.cb_buff[E_SE].isSelected()) {
-            if (ui.cb_buff[E_SS].isSelected()) {
-                ui.cb_buff[E_SE].setSelected(false);
-            } else {
+        ui.cb_buff[E_SEE].setToolTipText("<html>"+ "[消費MP:40][消費HP:--]"
+                                         + "<br>"+ "15セル内のPTメンバーに風属性の遠距離ダメージ+3 遠距離命中+2"
+                                         + "<br>"+ "[習得レベル:60][持続時間:16分][対象:術者/PTメンバー]"+"</html>");
+            if (ui.cb_buff[E_SEE].isSelected()) {
                 buff.ELEM_DMG_LONG[WIND] += 3;
                 buff.HIT_LONG += 2;
-                if (ui.cb_buff[E_SE].getForeground().equals(Color.BLUE)) {
+                if (ui.cb_buff[E_SEE].getForeground().equals(Color.BLUE)) {
                     cons_mp += (40.0 * (1.0 - red_mp * 0.01) - red_mp2) / 16;
                 }
             }
-        }
+
         //アースガーディアン 消費MP30/10mins
-        if (ui.cb_buff[E_EG].isSelected()) {
+        ui.cb_buff[E_EGN].setToolTipText("<html>"+ "[消費MP:30][消費HP:10]"
+                                         + "<br>"+ "DR+2"
+                                         + "<br>"+ "レベル80からレベル4毎にダメージ低下が+1ずつ増加"
+                                         + "<br>"+ "[習得レベル:60][持続時間:10分][対象:術者]"+"</html>");
+        if (ui.cb_buff[E_EGN].isSelected()) {
             buff.DR += 2;
-            if (ui.cb_buff[E_EG].getForeground().equals(Color.BLUE)) {
+
+            if (level >= 80 ) {
+                buff.DR += (level - 80) / 4 + 1;                 //DR(level - 80) / 4 + 1
+            }
+                    if (ui.cb_buff[E_EGN].getForeground().equals(Color.BLUE)) {
                 cons_mp += (30.0 * (1.0 - red_mp * 0.01) - red_mp2) / 10;
             }
         }
         //バーサーカー 消費MP40/5mins
+        ui.cb_buff[W_BSK].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
+                                         + "<br>"+ "近距離ダメージ+2 近距離命中+8 AC+10 HP自然回復不可"
+                                         + "<br>"+ "[習得レベル:56][持続時間:5分20秒][対象:術者/PTメンバー(15セル)]"+"</html>");
         if (ui.cb_buff[W_BSK].isSelected()) {
             buff.DMG_SHORT += 2;
             buff.HIT_SHORT += 8;
@@ -2054,6 +2100,10 @@ public class Calculator implements Common {
             }
         }
         //ブレスドアーマー 消費MP20/30mins
+        ui.cb_buff[W_BA].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
+                                        + "<br>"+ "選択した鎧のAC-3"
+                                        + "<br>"+ "ダブルクリックで装備している鎧に自動詠唱する"
+                                        + "<br>"+ "[習得レベル:24][持続時間:30分][対象:術者/PTメンバー]"+"</html>");
         if (ui.cb_buff[W_BA].isSelected()) {
             buff.AC -= 3;
             if (ui.cb_buff[W_BA].getForeground().equals(Color.BLUE)) {
@@ -2061,6 +2111,9 @@ public class Calculator implements Common {
             }
         }
         //エンチャントアキュラシー 消費MP10/5mins
+        ui.cb_buff[W_EA].setToolTipText("<html>"+ "[消費MP:10][消費HP:--]"
+                                        + "<br>"+ "近距離命中+5"
+                                        + "<br>"+ "[習得レベル:56][持続時間:5分][対象:術者][触媒:魔力の石(1)]"+"</html>");
         if (ui.cb_buff[W_EA].isSelected()) {
             buff.HIT_SHORT += 5;
             if (ui.cb_buff[W_EA].getForeground().equals(Color.BLUE)) {
@@ -2068,6 +2121,9 @@ public class Calculator implements Common {
             }
         }
         //フリージングアーマー 消費MP20/5mins
+        ui.cb_buff[W_FA].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
+                                        + "<br>"+ "ER+5"
+                                        + "<br>"+ "[習得レベル:56][持続時間:5分][対象:術者][触媒:魔力の石(1)]"+"</html>");
         if (ui.cb_buff[W_FA].isSelected()) {
             buff.ER += 5;
             if (ui.cb_buff[W_FA].getForeground().equals(Color.BLUE)) {
@@ -2208,6 +2264,9 @@ public class Calculator implements Common {
             }
         }
         //クレイ
+        ui.cb_buff[CLAY].setToolTipText("<html>"+ "HP+100 MP+50 HPR+3 MPR+3"
+                                        + "<br>"+ "近距離ダメージ+1 遠距離ダメージ+1 近距離命中+5"
+                                        + "<br>"+ "地属性抵抗+30 ディクリースウェイト"+"</html>");
         if (ui.cb_buff[CLAY].isSelected()) {
             buff.HP += 100;
             buff.MP += 50;
@@ -2218,11 +2277,9 @@ public class Calculator implements Common {
             buff.HIT_SHORT += 5;
             buff.element_resist[EARTH] += 30;
             ui.cb_buff[UI.W_DW].setSelected(true);
-            ui.cb_buff[CLAY].setToolTipText("<html>"+"HP+100 MP+50 HPR+3 MPR+3"
-                    + "<br>"+ "近距離ダメージ+1 遠距離ダメージ+1 近距離命中+5"
-                    + "<br>"+ "地属性抵抗+30 ディクリースウェイト"+"</html>");
         }
         //もみじリング
+        ui.cb_buff[MOMIJI].setToolTipText("HP+200 全ステータス+1");
         if (ui.cb_buff[MOMIJI].isSelected()) {
             buff.HP += 200;
             buff.ST[STR]++;
@@ -2231,7 +2288,6 @@ public class Calculator implements Common {
             buff.ST[INT]++;
             buff.ST[WIS]++;
             buff.ST[CHA]++;
-            ui.cb_buff[MOMIJI].setToolTipText("HP+200 全ステータス+1");
         }
 
         switch (ui.cb_pattern_l.getSelectedIndex()) {
@@ -3083,48 +3139,78 @@ public class Calculator implements Common {
                 break;
         }
 
+        //STR
+        ui.cb_buff[B_STR].setToolTipText("<html>"+ "STR+3 ドレスマイティ"
+                                         + "<br>"+ "STR+5 フィジカルエンチャント"
+                                         + "<br>"+ "STR+6 激励のポーション"
+                                         + "<br>"+ "STR+6(DEX+6) フローラのポーション"
+                                         + "<br>"+ "STR+6(DEX+6 AC-5) 四季のポーション"
+                                         + "<br>"+ "STR+7 偉大な勇者のスクロール"
+                                         + "<br>"+ "STR+7(DEX+7) クリスマスキャンディー"+"</html>");
         if (ui.cb_buff[B_STR].isSelected()) {
             switch (ui.cb_buff_group[B_STR].getSelectedIndex()) {
                 case 0:
+                    ui.cb_buff[B_STR].setToolTipText("STR+3 ドレスマイティ");
                     buff.ST[STR] += 3;
                     if (ui.cb_buff[B_STR].getForeground().equals(Color.BLUE)) {
                         cons_mp += (10.0 * (1.0 - red_mp * 0.01) - red_mp2) / 16;
                     }
                     break;
                 case 1:
+                    ui.cb_buff[B_STR].setToolTipText("STR+5 フィジカルエンチャント");
                     buff.ST[STR] += 5;
                     if (ui.cb_buff[B_STR].getForeground().equals(Color.BLUE)) {
                         cons_mp += (50.0 * (1.0 - red_mp * 0.01) - red_mp2) / 20;
                     }
                     break;
                 case 2:
+                    ui.cb_buff[B_STR].setToolTipText("<html>"+ "STR+6 激励のポーション"
+                                                     + "<br>"+ "STR+6(DEX+6) フローラのポーション"
+                                                     + "<br>"+ "STR+6(DEX+6 AC-5) 四季のポーション"+"</html>");
                     buff.ST[STR] += 6;
                     break;
                 case 3:
+                    ui.cb_buff[B_STR].setToolTipText("<html>"+ "STR+7 偉大な勇者のスクロール"
+                                                     + "<br>"+ "STR+7(DEX+7) クリスマスキャンディー"+"</html>");
                     buff.ST[STR] += 7;
                     break;
                 default:
                     break;
             }
         }
+        //DEX
+        ui.cb_buff[B_DEX].setToolTipText("<html>"+ "DEX+3 ドレスデクスタリティー"
+                                         + "<br>"+ "DEX+5 フィジカルエンチャント"
+                                         + "<br>"+ "DEX+6 才能のポーション"
+                                         + "<br>"+ "DEX+6(STR+6) フローラのポーション"
+                                         + "<br>"+ "DEX+6(STR+6 AC-5) 四季のポーション"
+                                         + "<br>"+ "DEX+7 偉大な名弓のスクロール"
+                                         + "<br>"+ "DEX+7(STR+7) クリスマスキャンディー"+"</html>");
         if (ui.cb_buff[B_DEX].isSelected()) {
             switch (ui.cb_buff_group[B_DEX].getSelectedIndex()) {
                 case 0:
+                    ui.cb_buff[B_DEX].setToolTipText("DEX+3 ドレスデクスタリティー");
                     buff.ST[DEX] += 3;
                     if (ui.cb_buff[B_DEX].getForeground().equals(Color.BLUE)) {
                         cons_mp += (10.0 * (1.0 - red_mp * 0.01) - red_mp2) / 16;
                     }
                     break;
                 case 1:
+                    ui.cb_buff[B_DEX].setToolTipText("DEX+5 フィジカルエンチャント");
                     buff.ST[DEX] += 5;
                     if (ui.cb_buff[B_DEX].getForeground().equals(Color.BLUE)) {
                         cons_mp += (50.0 * (1.0 - red_mp * 0.01) - red_mp2) / 20;
                     }
                     break;
                 case 2:
+                    ui.cb_buff[B_DEX].setToolTipText("<html>"+ "DEX+6 才能のポーション"
+                                                     + "<br>"+ "DEX+6(STR+6) フローラのポーション"
+                                                     + "<br>"+ "DEX+6(STR+6 AC-5) 四季のポーション"+"</html>");
                     buff.ST[DEX] += 6;
                     break;
                 case 3:
+                    ui.cb_buff[B_DEX].setToolTipText("<html>"+ "DEX+7 偉大な名弓のスクロール"
+                                                     + "<br>"+ "DEX+7(STR+7) クリスマスキャンディー"+"</html>");
                     buff.ST[DEX] += 7;
                     break;
                 default:
@@ -3144,16 +3230,21 @@ public class Calculator implements Common {
                 break;
             }
         }
-
+        //POTによるヘイスト効果
+        ui.cb_buff[ACC1].setToolTipText("x1.3333:GP GGP ワイン ウイスキー");
         if (ui.cb_buff[ACC1].isSelected()) {
             if (ui.cb_buff[ACC1].getForeground().equals(Color.BLUE)) {
                 cons_mp += (40.0 * (1.0 - red_mp * 0.01) - red_mp2) / 20;
             }
             acc *= acc_1;
         }
+        ui.cb_buff[ACC2].setToolTipText("<html>"+ "x1.3333:BP イビルブラッド ブラッドラスト 名誉のコイン ダンシングブレイズ フォーカスウェーブ ハリケーン サンドストーム"
+                                        + "<br>"+ "x1.1547:EW 濃縮集中ポーション"
+                                        + "<br>"+ "x1.0800:ダークホース"+"</html>");
         if (ui.cb_buff[ACC2].isSelected()) {
             switch (ui.cb_buff_group[ACC2].getSelectedIndex()) {
                 case 0:
+                    ui.cb_buff[ACC2].setToolTipText("x1.3333:BP イビルブラッド ブラッドラスト 名誉のコイン ダンシングブレイズ フォーカスウェーブ ハリケーン サンドストーム");
                     acc *= acc_2;
                     if (ui.cb_buff[ACC2].getForeground().equals(Color.BLUE)) {
                         if (cls == E) {
@@ -3162,15 +3253,18 @@ public class Calculator implements Common {
                     }
                     break;
                 case 1:
+                    ui.cb_buff[ACC2].setToolTipText("x1.1547:EW 濃縮集中ポーション");
                     acc *= acc_ew;
                     break;
                 case 2:
+                    ui.cb_buff[ACC2].setToolTipText("x1.0800:ダークホース");
                     acc *= acc_df;
                     break;
                 default:
                     break;
             }
         }
+        ui.cb_buff[ACC3].setToolTipText("x1.1250:ドラゴンブラッド 蔵出し秘蔵酒");
         if (ui.cb_buff[ACC3].isSelected()) {
             acc *= acc_3;
         }
@@ -3180,9 +3274,14 @@ public class Calculator implements Common {
 //2019/12/25に旧計算方法でのダメージ計算もできるように項目追加
         buki.magic_enchant = 0;
         buki2.magic_enchant = 0;
+        ui.cb_buff[BUKI].setToolTipText("<html>"+ "近距離ダメージ+1 近距離命中+1 ホーリーウェポン"
+                                        + "<br>"+ "近距離ダメージ+2 エンチャントウェポン"
+                                        + "<br>"+ "近距離ダメージ+2 近距離命中+2 ブレスウェポン"
+                                        + "<br>"+ "近距離ダメージ+5 シャドウファング"+"</html>");
         if (ui.cb_buff[BUKI].isSelected()) {
             switch (ui.cb_buff_group[BUKI].getSelectedIndex()) {
                 case 0://ホーリーウェポン 近距離ダメージ+1 近距離命中+1(キャラに対して)
+                    ui.cb_buff[BUKI].setToolTipText("近距離ダメージ+1 近距離命中+1 ホーリーウェポン(キャラに対して)");
                     buff.DMG_SHORT += 1;
                     buff.HIT_SHORT += 1;
                     if (ui.cb_buff[BUKI].getForeground().equals(Color.BLUE)) {
@@ -3190,12 +3289,14 @@ public class Calculator implements Common {
                     }
                     break;
                 case 1://エンチャントウェポン 近距離ダメージ+2(キャラに対して)
+                    ui.cb_buff[BUKI].setToolTipText("近距離ダメージ+2 エンチャントウェポン(キャラに対して)");
                     buff.DMG_SHORT += 2;
                     if (ui.cb_buff[BUKI].getForeground().equals(Color.BLUE)) {
                         cons_mp += (20.0 * (1.0 - red_mp * 0.01) - red_mp2) / 30;
                     }
                     break;
                 case 2://ブレスウェポン 近距離ダメージ+2 近距離命中+2(キャラに対して)
+                    ui.cb_buff[BUKI].setToolTipText("近距離ダメージ+2 近距離命中+2 ブレスウェポン(キャラに対して)");
                     buff.DMG_SHORT += 2;
                     buff.HIT_SHORT += 2;
                     if (ui.cb_buff[BUKI].getForeground().equals(Color.BLUE)) {
@@ -3203,12 +3304,14 @@ public class Calculator implements Common {
                     }
                     break;
                 case 3://シャドウファング 近距離ダメージ+5(キャラに対して)
+                    ui.cb_buff[BUKI].setToolTipText("近距離ダメージ+5 シャドウファング(キャラに対して)");
                     buff.DMG_SHORT += 5;
                     if (ui.cb_buff[BUKI].getForeground().equals(Color.BLUE)) {
                         cons_mp += (20.0 * (1.0 - red_mp * 0.01) - red_mp2) / 3;
                     }
                     break;
                 case 4://ホーリーウェポン 近距離ダメージ+1 近距離命中+1(武器に対して)
+                    ui.cb_buff[BUKI].setToolTipText("近距離ダメージ+1 近距離命中+1 ホーリーウェポン(武器に対して)");
                     buki.magic_enchant = 1;
                     buki2.magic_enchant = 1;
                     buff.HIT_SHORT += 1;
@@ -3217,6 +3320,7 @@ public class Calculator implements Common {
                     }
                     break;
                 case 5://エンチャントウェポン 近距離ダメージ+2(武器に対して)
+                    ui.cb_buff[BUKI].setToolTipText("近距離ダメージ+2 エンチャントウェポン(武器に対して)");
                     buki.magic_enchant = 2;
                     buki2.magic_enchant = 2;
                     if (ui.cb_buff[BUKI].getForeground().equals(Color.BLUE)) {
@@ -3224,6 +3328,7 @@ public class Calculator implements Common {
                     }
                     break;
                 case 6://ブレスウェポン 近距離ダメージ+2 近距離命中+2(武器に対して)
+                    ui.cb_buff[BUKI].setToolTipText("近距離ダメージ+2 近距離命中+2 ブレスウェポン(武器に対して)");
                     buki.magic_enchant = 2;
                     buki2.magic_enchant = 2;
                     buff.HIT_SHORT += 2;
@@ -3232,6 +3337,7 @@ public class Calculator implements Common {
                     }
                     break;
                 case 7://シャドウファング 近距離ダメージ+5(武器に対して)
+                    ui.cb_buff[BUKI].setToolTipText("近距離ダメージ+5 シャドウファング(武器に対して)");
                     buki.magic_enchant = 5;
                     buki2.magic_enchant = 5;
                     if (ui.cb_buff[BUKI].getForeground().equals(Color.BLUE)) {
@@ -3245,7 +3351,7 @@ public class Calculator implements Common {
 //君主魔法（プリンス・プリンセス)
         //グローイングウェポン 消費MP25/10mins
         ui.cb_buff[P_GWN].setToolTipText("<html>"+ "[消費MP:25][消費HP:--]"
-                                         + "<br>"+ "近接命中+5 追加打撃+5"
+                                         + "<br>"+ "近距離ダメージ+5 近距離命中+5"
                                          + "<br>"+ "[習得レベル:60][持続時間:10分40秒][対象:術者]"+"</html>");
             if (ui.cb_buff[P_GWN].isSelected()) {
             buff.HIT_SHORT += 5;
@@ -3457,24 +3563,32 @@ public class Calculator implements Common {
             }
         }
         //ACスキル
+        ui.cb_buff[B_AC].setToolTipText("<html>"+ "AC-2 シールド"
+                                        + "<br>"+ "AC-4 ファイヤーシールド"
+                                        + "<br>"+ "AC-5 四季のポーション"
+                                        + "<br>"+ "AC-10 アイアンスキン"+"</html>");
         if (ui.cb_buff[B_AC].isSelected()) {
             switch (ui.cb_buff_group[B_AC].getSelectedIndex()) {
                 case 0://シールド		AC-2	消費MP8  魔法レベル1 継続時間1800秒
+                    ui.cb_buff[B_AC].setToolTipText("AC-2 シールド");
                     buff.AC += -2;
                     if (ui.cb_buff[B_AC].getForeground().equals(Color.BLUE)) {
                         cons_mp += (8.0 * (1.0 - red_mp * 0.01) - red_mp2) / 30;
                     }
                     break;
                 case 1://ファイヤーシールド 	AC-4	消費MP15 魔法レベル3 継続時間960秒
+                    ui.cb_buff[B_AC].setToolTipText("AC-4 ファイヤーシールド");
                     buff.AC += -4;
                     if (ui.cb_buff[B_AC].getForeground().equals(Color.BLUE)) {
                         cons_mp += (15.0 * (1.0 - red_mp * 0.01) - red_mp2) / 16;
                     }
                     break;
                 case 2://四季のポーション 	AC-5      
+                    ui.cb_buff[B_AC].setToolTipText("AC-5 四季のポーション");
                     buff.AC += -5;
                     break;
                 case 3://アイアンスキン          AC-10	消費MP30 魔法レベル5 継続時間960秒
+                    ui.cb_buff[B_AC].setToolTipText("AC-10 アイアンスキン");
                     buff.AC += -10;
                     if (ui.cb_buff[B_AC].getForeground().equals(Color.BLUE)) {
                         cons_mp += (30.0 * (1.0 - red_mp * 0.01) - red_mp2) / 16;
@@ -3520,9 +3634,9 @@ public class Calculator implements Common {
 //            }
 //        }
         //VIP
-        ui.cb_buff[VIP].setToolTipText("<html>"+ "Red      HP+120 MP+120 MR+10 AC-5"
-                                       + "<br>"+ "Gold     HP+150 MP+120 MR+10 AC-5"
-                                       + "<br>"+ "Platinum HP+150 MP+150 MR+12 AC-5");
+        ui.cb_buff[VIP].setToolTipText("<html>"+ "HP+120 MP+120 MR+10 AC-5 Red"
+                                       + "<br>"+ "HP+150 MP+120 MR+10 AC-5 Gold"
+                                       + "<br>"+ "HP+150 MP+150 MR+12 AC-5 Platinum");
         if (ui.cb_buff[VIP].isSelected()) {
             switch ((String) ui.cb_buff_group[VIP].getSelectedItem()) {
                 case "Red":         //HP+120 MP+120 MR+10 AC-5
@@ -3540,7 +3654,7 @@ public class Calculator implements Common {
                     buff.AC -= 5;
                     break;
                 case "Platinum":    //HP+150 MP+150 MR+12 AC-5
-                    ui.cb_buff[VIP].setToolTipText("HP+150 MP+150 MR+120 AC-5");
+                    ui.cb_buff[VIP].setToolTipText("HP+150 MP+150 MR+12 AC-5");
                     buff.HP += 150;
                     buff.MP += 150;
                     buff.MR += 12;
@@ -3590,6 +3704,14 @@ public class Calculator implements Common {
             buff.DR += 3;
         }
         //魔眼
+        ui.cb_buff[ITEM_MAGAN].setToolTipText("<html>"+ "地竜の魔眼 秘技耐性+5"
+                                              + "<br>"+ "水竜の魔眼 精霊耐性+5"
+                                              + "<br>"+ "風竜の魔眼 恐怖耐性+5"
+                                              + "<br>"+ "火竜の魔眼 技術耐性+5"
+                                              + "<br>"+ "誕生の魔眼 精霊耐性+5 秘技耐性+5"
+                                              + "<br>"+ "形状の魔眼 精霊耐性+5 秘技耐性+5 恐怖耐性+5"
+                                              + "<br>"+ "生命の魔眼 技術耐性+5 精霊耐性+5 秘技耐性+5 恐怖耐性+5 技術命中+3 精霊命中+3 秘技命中+3 恐怖命中+3"
+                                              + "<br>"+ "グレムリンの魔眼 近距離ダメージ+2 遠距離ダメージ+2 SP+1");
         if (ui.cb_buff[ITEM_MAGAN].isSelected()) {
             switch (ui.cb_buff_group[ITEM_MAGAN].getSelectedIndex()) {
                 case 0://地竜の魔眼
@@ -3641,6 +3763,11 @@ public class Calculator implements Common {
             }
         }
         //成長の果実 y_ikedaさんによる修正を参考に
+        ui.cb_buff[L_HST].setToolTipText("<html>"+ "1個 獲得経験値+20% AC-1"
+                                         + "<br>"+ "2個 獲得経験値+30% AC-2 DR+1"
+                                         + "<br>"+ "3個 獲得経験値+40% AC-3 DR+2"
+                                         + "<br>"+ "4個 獲得経験値+40% AC-4 DR+2"
+                                         + "<br>"+ "5個 獲得経験値+40% AC-5 DR+2"+"</html>");
         if (ui.cb_buff[L_HST].isSelected()) {
             switch ((String) ui.cb_buff_group[L_HST].getSelectedItem()) {
                 case "1個":
@@ -3677,6 +3804,9 @@ public class Calculator implements Common {
             }
         }
         //生命のボーナス
+        ui.cb_buff[H_HP].setToolTipText("<html>"+ "HP+50"
+                                        + "<br>"+ "HP+100"
+                                        + "<br>"+ "HP+200"+"</html>");
         if (ui.cb_buff[H_HP].isSelected()) {
             switch ((String) ui.cb_buff_group[H_HP].getSelectedItem()) {
                 case "HP+50":
@@ -3696,6 +3826,9 @@ public class Calculator implements Common {
             }
         }
         //鉄甲のボーナス
+        ui.cb_buff[H_AC].setToolTipText("<html>"+ "AC-1"
+                                        + "<br>"+ "AC-2"
+                                        + "<br>"+ "AC-3"+"</html>");
         if (ui.cb_buff[H_AC].isSelected()) {
             switch ((String) ui.cb_buff_group[H_AC].getSelectedItem()) {
                 case "AC-1":
@@ -3715,6 +3848,8 @@ public class Calculator implements Common {
             }
         }
         //生存のボーナス
+        ui.cb_buff[H_PVPDR].setToolTipText("<html>"+ "PVPダメージ低下+1"
+                                           + "<br>"+ "PVPダメージ低下+2"+"</html>");
         if (ui.cb_buff[H_PVPDR].isSelected()) {
             switch ((String) ui.cb_buff_group[H_PVPDR].getSelectedItem()) {
                 case "PVP DR+1":
@@ -3730,6 +3865,8 @@ public class Calculator implements Common {
             }
         }
         //暗殺のボーナス
+        ui.cb_buff[H_PVP].setToolTipText("<html>"+ "PVPダメージ+1"
+                                         + "<br>"+ "PVPダメージ+2"+"</html>");
         if (ui.cb_buff[H_PVP].isSelected()) {
             switch ((String) ui.cb_buff_group[H_PVP].getSelectedItem()) {
                 case "PVP ダメ+1":
@@ -3748,42 +3885,45 @@ public class Calculator implements Common {
         //STR+1[君主][ナイト][ダークエルフ][ドラゴンナイト][ウォリアー][フェンサー]
         //DEX+1[エルフ]
         //INT+1[ウィザード][イリュージョニスト]
+        ui.cb_buff[H_RK].setToolTipText("<html>"+ "STR+1[君主][ナイト][ダークエルフ][ドラゴンナイト][ウォリアー][フェンサー]"
+                                        + "<br>"+ "DEX+1[エルフ]"
+                                        + "<br>"+ "INT+1[ウィザード][イリュージョニスト]"+"</html>");
         if (ui.cb_buff[H_RK].isSelected()) {
             switch (cls) {
                 case P:
-                    //ui.cb_buff[H_RK].setToolTipText("STR+1");
+                    ui.cb_buff[H_RK].setToolTipText("STR+1");
                     buff.ST[STR] += 1;
                     break;
                 case K:
-                    //ui.cb_buff[H_RK].setToolTipText("STR+1");
+                    ui.cb_buff[H_RK].setToolTipText("STR+1");
                     buff.ST[STR] += 1;
                     break;
                 case E:
-                    //ui.cb_buff[H_RK].setToolTipText("DEX+1");
+                    ui.cb_buff[H_RK].setToolTipText("DEX+1");
                     buff.ST[DEX] += 1;
                     break;
                 case W:
-                    //ui.cb_buff[H_RK].setToolTipText("INT+1");
+                    ui.cb_buff[H_RK].setToolTipText("INT+1");
                     buff.ST[INT] += 1;
                     break;                   
                 case D:
-                    //ui.cb_buff[H_RK].setToolTipText("STR+1");
+                    ui.cb_buff[H_RK].setToolTipText("STR+1");
                     buff.ST[STR] += 1;
                     break;                    
                 case R:
-                    //ui.cb_buff[H_RK].setToolTipText("STR+1");
+                    ui.cb_buff[H_RK].setToolTipText("STR+1");
                     buff.ST[STR] += 1;
                     break;
                 case I:
-                    //ui.cb_buff[H_RK].setToolTipText("INT+1");
+                    ui.cb_buff[H_RK].setToolTipText("INT+1");
                     buff.ST[INT] += 1;
                     break;
                 case S:
-                    //ui.cb_buff[H_RK].setToolTipText("STR+1");
+                    ui.cb_buff[H_RK].setToolTipText("STR+1");
                     buff.ST[STR] += 1;
                     break;
                 case F:
-                    //ui.cb_buff[H_RK].setToolTipText("STR+1");
+                    ui.cb_buff[H_RK].setToolTipText("STR+1");
                     buff.ST[STR] += 1;
                     break;
                 default:
@@ -4418,6 +4558,10 @@ buki.arrow_elementdmg=0;
         }
 
         //クリティカル処理
+        ui.cb_buff[E_EEE].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
+                                                 + "<br>"+ "遠距離クリティカル+2%"
+                                                 + "<br>"+ "キャンセレーションで解除されない"
+                                                 + "<br>"+ "[習得レベル:45][持続時間:2分8秒][対象:術者][触媒:精霊の玉(1)]"+"</html>");
         switch (buki.type) {
             case "キーリンク":
                 double a = 1 + 3.0 / 32.0 * (int_beta - 12);
@@ -4441,12 +4585,10 @@ buki.arrow_elementdmg=0;
             case "ボウ":
                 //エルフ イーグルアイ 2% 消費MP20/2mins
 //                cri_long += cr * 100;
-                if (ui.cb_buff[E_EE].isSelected()) {
+                if (ui.cb_buff[E_EEE].isSelected()) {
                     cri_long += 2;
-                    if (ui.cb_buff[E_EE].isSelected()) {
-                        if (ui.cb_buff[E_EE].getForeground().equals(Color.BLUE)) {
+                    if (ui.cb_buff[E_EEE].getForeground().equals(Color.BLUE)) {
                             cons_mp += (20.0 * (1.0 - red_mp * 0.01) - red_mp2) / 2;
-                        }
                     }
                 }
                 dmg_big_ave = (cri_long * 0.01) * dmg_big_max
@@ -4457,10 +4599,14 @@ buki.arrow_elementdmg=0;
             default:
                 //エルフ ソウルオブフレイム 100% 消費MP40/5mins
                 cri_short += cr * 100;
-                if (ui.cb_buff[E_SF].isSelected()) {
+                ui.cb_buff[E_SOF].setToolTipText("<html>"+ "[消費MP:40][消費HP:--]"
+                                                 + "<br>"+ "装備している武器の最大ダメージで攻撃する"
+                                                 + "<br>"+ "武器が損傷しなくなる"
+                                                 + "<br>"+ "[習得レベル:80][持続時間:5分20秒][対象:術者][触媒:精霊の玉(5)]"+"</html>");
+                if (ui.cb_buff[E_SOF].isSelected()) {
                     cri_short = 100;
-                    if (ui.cb_buff[E_SF].isSelected()) {
-                        if (ui.cb_buff[E_SF].getForeground().equals(Color.BLUE)) {
+                    if (ui.cb_buff[E_SOF].isSelected()) {
+                        if (ui.cb_buff[E_SOF].getForeground().equals(Color.BLUE)) {
                             cons_mp += (40.0 * (1.0 - red_mp * 0.01) - red_mp2) / 5;
                         }
                     }
@@ -4833,7 +4979,10 @@ buki.arrow_elementdmg=0;
             }
         }
         //エレメンタルファイアー 消費MP20/5mins
-        if (ui.cb_buff[E_EF].isSelected()) {
+        ui.cb_buff[E_EFE].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
+                                         + "<br>"+ "一定確率(40%)で近距離ダメージ1.5倍にする"
+                                         + "<br>"+ "[習得レベル:75][持続時間:5分20秒][対象:術者][触媒:精霊の玉(1)]"+"</html>");
+        if (ui.cb_buff[E_EFE].isSelected()) {
             if (!(buki.type.equals("ボウ") || buki.type.equals("ガントレット"))) {
                 dmg_big_ave *= 1.5 * ef_rate
                         + 1.0 * (1.0 - ef_rate);
@@ -4854,13 +5003,16 @@ buki.arrow_elementdmg=0;
                 if (dmg_cursed != 0) {
                     dmg_cursed -= 0.25 * ef_rate;
                 }
-                if (ui.cb_buff[E_EF].getForeground().equals(Color.BLUE)) {
+                if (ui.cb_buff[E_EFE].getForeground().equals(Color.BLUE)) {
                     cons_mp += (20.0 * (1.0 - red_mp * 0.01) - red_mp2) / 5;
                 }
             }
         }
         //クエイク 消費MP20/5mins
-        if (ui.cb_buff[E_QE].isSelected()) {
+        ui.cb_buff[E_QUE].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
+                                         + "<br>"+ "一定確率(40%)で近距離ダメージ1.5倍にする"
+                                         + "<br>"+ "[習得レベル:45][持続時間:5分20秒][対象:術者][触媒:精霊の玉(1)]"+"</html>");
+        if (ui.cb_buff[E_QUE].isSelected()) {
             if (!(buki.type.equals("ボウ") || buki.type.equals("ガントレット"))) {
                 dmg_big_ave *= 1.5 * qe_rate
                         + 1.0 * (1.0 - qe_rate);
@@ -4881,13 +5033,17 @@ buki.arrow_elementdmg=0;
                 if (dmg_cursed != 0) {
                     dmg_cursed -= 0.25 * qe_rate;
                 }
-                if (ui.cb_buff[E_QE].getForeground().equals(Color.BLUE)) {
+                if (ui.cb_buff[E_QUE].getForeground().equals(Color.BLUE)) {
                     cons_mp += (20.0 * (1.0 - red_mp * 0.01) - red_mp2) / 5;
                 }
             }
         }
         //サイクロン 消費MP30/16mins LV75取得可能 一定確率で遠距離ダメージ1.5倍 LV85からLV1毎に発動率1%増加
-        if (ui.cb_buff[E_CE].isSelected()) {
+        ui.cb_buff[E_CYE].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
+                                         + "<br>"+ "一定確率(5%)で遠距離ダメージ1.5倍にする"
+                                         + "<br>"+ "LV85からLV1毎に発動率1%増加"
+                                         + "<br>"+ "[習得レベル:75][持続時間:16分][対象:術者][触媒:精霊の玉(2)]"+"</html>");
+        if (ui.cb_buff[E_CYE].isSelected()) {
             if (level >= 75 && cls == E ) {
                 double ce_lv_bonus =0;
 
@@ -4915,17 +5071,17 @@ buki.arrow_elementdmg=0;
                 if (dmg_cursed != 0) {
                     dmg_cursed -= 0.25 * (ce_rate + ce_lv_bonus);
                 }
-                if (ui.cb_buff[E_CE].getForeground().equals(Color.BLUE)) {
+                if (ui.cb_buff[E_CYE].getForeground().equals(Color.BLUE)) {
                     cons_mp += (30.0 * (1.0 - red_mp * 0.01) - red_mp2) / 16;
                 }
             } else {
-                ui.cb_buff[E_CE].setSelected(false);
+                ui.cb_buff[E_CYE].setSelected(false);
             }
         }
          
         //ブレイブメンタル 消費MP25/10mins
         ui.cb_buff[P_BML].setToolTipText("<html>"+ "[消費MP:25][消費HP:--]"
-                                         + "<br>"+ "一定確率(40%)で近接ダメージ1.5倍"
+                                         + "<br>"+ "一定確率(40%)で近距離ダメージ1.5倍"
                                          + "<br>"+ "[習得レベル:70][持続時間:10分40秒][対象:術者]"+"</html>");
         if (ui.cb_buff[P_BML].isSelected()) {
             if (!(buki.type.equals("ボウ") || buki.type.equals("ガントレット"))) {
@@ -4958,7 +5114,7 @@ buki.arrow_elementdmg=0;
         }
         //ブローアタック 消費MP10/5mins 武器対応:ダガー/片手剣/両手剣/鈍器/槍
         ui.cb_buff[K_BLK].setToolTipText("<html>"+ "[消費MP:10][消費HP:50]"
-                                         + "<br>"+ "一定確率(5%)で近接ダメージを1.5倍"
+                                         + "<br>"+ "一定確率(5%)で近距離ダメージを1.5倍"
                                          + "<br>"+ "LV75からLV1毎に発動率1%増加"
                                          + "<br>"+ "[習得レベル:75][持続時間:5分][対象:術者]"+"</html>");
         if (ui.cb_buff[K_BLK].isSelected()) {
@@ -5431,10 +5587,14 @@ buki.arrow_elementdmg=0;
 
         weight += c_eq;
         //エルヴングラヴィティー    消費MP:30/30mins 所持重量増加+300
-        if (ui.cb_buff[E_EGR].isSelected()) {
+        ui.cb_buff[E_ELY].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
+                                         + "<br>"+ "所持重量増加+300"
+                                         + "<br>"+ "ディクリースウェイトの上位魔法"
+                                         + "<br>"+ "[習得レベル:75][持続時間:30分][対象:術者]"+"</html>");
+        if (ui.cb_buff[E_ELY].isSelected()) {
             ui.cb_buff[W_DW].setSelected(false);
             weight += 300;
-            if (ui.cb_buff[E_EGR].getForeground().equals(Color.BLUE)) {
+            if (ui.cb_buff[E_ELY].getForeground().equals(Color.BLUE)) {
                 cons_mp += (30.0 * (1.0 - red_mp * 0.01) - red_mp2) / 30;
             }
         }
@@ -5447,6 +5607,9 @@ buki.arrow_elementdmg=0;
             }
         }
         //ディクリースウェイト      消費MP:10/30mins 所持重量増加+180
+        ui.cb_buff[W_DW].setToolTipText("<html>"+ "[消費MP:10][消費HP:50]"
+                                        + "<br>"+ "所持重量増加+180"
+                                        + "<br>"+ "[習得レベル:80][持続時間:30分][対象:術者]"+"</html>");
         if (ui.cb_buff[W_DW].isSelected()) {
             weight += 180;
             if (ui.cb_buff[W_DW].getForeground().equals(Color.BLUE)) {
@@ -5524,6 +5687,9 @@ buki.arrow_elementdmg=0;
         int hp_pot;
 
         //魔力回復ポーション(魔力回復ポーション/古代の魔力回復ポーション/神秘の濃縮マナポーション)
+        ui.cb_buff[ITEM_BLUE].setToolTipText("<html>"+ "魔力回復ポーション"
+                                             + "<br>"+ "古代の魔力回復ポーション"
+                                             + "<br>"+ "神秘の濃縮マナポーション"+"</html>");
         if (ui.cb_buff[ITEM_BLUE].isSelected()) {
             if (wis >= 10) {
                 //mpr += (wis - 10) / 2;
@@ -5856,6 +6022,11 @@ buki.arrow_elementdmg=0;
             	mpp += mmp *0.01 * mp;
 
         //アドバンスドスピリッツ 消費MP20/20mins
+        ui.cb_buff[W_ADS].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
+                                         + "<br>"+ "最大HP/MP+20%"
+                                         + "<br>"+ "キャンセレーションで解除されない"
+                                         + "<br>"+ "リスタートすると効果が消える"
+                                         + "<br>"+ "[習得レベル:80][持続時間:20分][対象:術者]"+"</html>");
         if (ui.cb_buff[W_ADS].isSelected()) {
             if (ui.cb_buff[S_G].isSelected()
                     || ui.cb_buff[K_PRE].isSelected()) {
@@ -5918,14 +6089,20 @@ buki.arrow_elementdmg=0;
         ui.lab_mexp.setText(Integer.toString((int) mexp));
 
         //エキゾチックバイタライズ 消費MP30/16mins
-        if (ui.cb_buff[E_EV].isSelected()) {
-            if (ui.cb_buff[E_EV].getForeground().equals(Color.BLUE)) {
+        ui.cb_buff[E_EVE].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
+                                         + "<br>"+ "重量ゲージが50%を超えてもHPとMPが自然回復する"
+                                         + "<br>"+ "[習得レベル:75][持続時間:16分][対象:術者]"+"</html>");
+        if (ui.cb_buff[E_EVE].isSelected()) {
+            if (ui.cb_buff[E_EVE].getForeground().equals(Color.BLUE)) {
                 cons_mp += (30.0 * (1.0 - red_mp * 0.01) - red_mp2) / 16;
             }
         }
         //アディショナルファイアー 消費MP30/16mins
-        if (ui.cb_buff[E_AF].isSelected()) {
-            if (ui.cb_buff[E_AF].getForeground().equals(Color.BLUE)) {
+        ui.cb_buff[E_AFE].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
+                                        + "<br>"+ "重量ゲージが50%を超えてもHPとMPが自然回復する"
+                                        + "<br>"+ "[習得レベル:75][持続時間:16分][対象:術者]"+"</html>");
+        if (ui.cb_buff[E_AFE].isSelected()) {
+            if (ui.cb_buff[E_AFE].getForeground().equals(Color.BLUE)) {
                 cons_mp += (30.0 * (1.0 - red_mp * 0.01) - red_mp2) / 16;
             }
         }
