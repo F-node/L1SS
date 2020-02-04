@@ -93,17 +93,17 @@ public interface Common {
     final int EARRING2 = 12;
 
 //エンチャント(0から103までの合計104個分)　UI.javaの217行目も合わせて変更必須
-//仮設定で122までの120個で処理
+//仮設定で119までの120個で処理
 //基本エンチャント
-    final int ACC1 = 0;         //1段加速
-    final int ACC2 = 1;         //2段加速
-    final int ACC3 = 2;         //3段加速
-    final int B_STR = 3;        //STR
-    final int B_DEX = 4;        //DEX
-    final int B_AC = 5;         //AC
-    final int BUKI = 6;         //武器エンチャ魔法
-    final int SEC = 75;         //セキュリティ
-    final int VIP = 72;         //VIPエンチャント
+    final int ACC1 = 0;             //1段加速
+    final int ACC2 = 1;             //2段加速
+    final int ACC3 = 2;             //3段加速
+    final int B_STR = 3;            //STR
+    final int B_DEX = 4;            //DEX
+    final int B_AC = 5;             //AC
+    final int BUKI = 6;             //武器エンチャ魔法
+    final int SEC = 75;             //セキュリティ
+    final int VIP = 72;             //VIPエンチャント
 
 //君主の魔法 合計10種類
     final int P_PRE = 110;          //PRimE                         プライム
@@ -111,7 +111,7 @@ public interface Common {
     final int P_GRE = 87;           //GRacE                         グレース(グレースアバター)
     final int P_AUA = 59;           //AUrA                          オーラ(ブレイブアバター)
     final int P_MAY = 100;          //MAjestY                       マジェスティ
-     final int P_SAR = 99;           //Shining ArmoR                 シャイニングアーマー
+    final int P_SAR = 99;           //Shining ArmoR                 シャイニングアーマー
     final int P_SSD = 9;            //Shining ShielD                シャイニングシールド
     final int P_BML = 8;            //Brave MentaL                  ブレイブメンタル
     final int P_GWN = 7;            //Glowing WeapoN                グローイングウェポン
@@ -135,47 +135,71 @@ public interface Common {
 
 //エルフの精霊魔法
     //共通
-    final int E_EGR = 57;       //エルヴングラヴィティー
-    final int E_RE = 19;        //レジストエレメント
-    final int E_CM = 12;        //クリアマインド
-    final int E_RM = 20;        //レジストマジック
+//    final int E_MAE = X;          //MArblE                        マーブル(未実装)
+//    final int E_GEH = X;          //Glory EartH                   グローリーアース(未実装)
+//    final int E_SBR = X;          //Seoul BarrieR                 ソウルバリア(未実装)
+//    final int E_ASE = X;          //Area SilencE                  エリアサイレンス(未実装)
+    final int E_ELY = 57;           //ELvengravitY                  エルヴングラヴィティー
+//    final int E_GEL = X;          //Greater ElementaL             グレーターエレメンタル(未実装)
+//    final int E_EMC = X;          //Erase MagiC                   イレースマジック(未実装)
+//    final int E_EFN = X;          //Elemental FalldowN            エレメンタルフォールダウン(未実装)
+//    final int E_SLE = X;          //Summon Lesser Elemental       サモンレッサーエレメンタル(未実装)
+//    final int E_TAW = X;          //Triple ArroW                  トリプルアロー(未実装)
+//    final int E_BSL = X;          //Bloody SouL                   ブラッディソウル(未実装)
+//    final int E_EPN = X;          //Elemental ProtectioN          エレメンタルプロテクション(未実装)
+    final int E_RET = 19;           //Resist ElemenT                レジストエレメント
+    final int E_CMD = 12;           //Clear MinD                    クリアマインド
+//    final int E_TTM = X;          //Teleport To Mother            テレポートトゥマザー(未実装)
+//    final int E_BTM = X;          //Body To Mind                  ボディトゥマインド(未実装)
+    final int E_RMC = 20;           //Resist MagiC                  レジストマジック
 
     //火系列
-    final int E_IO = 86;        //インフェルノ(未実装)
-    final int E_SF = 15;        //ソウルオブフレイム
-    final int E_AF = 23;        //アディショナルファイヤー
-    final int E_EF = 11;        //エレメンタルファイアー
-    final int E_BW = 17;        //バーニングウェポン
+    final int E_INO = 86;           //INfernO                       インフェルノ(未実装)
+    final int E_SOF = 15;           //Soul Of Flame                 ソウルオブフレイム
+    final int E_AFE = 23;           //Additional FirE               アディショナルファイヤー
+    final int E_EFE = 11;           //Elemental FirE                エレメンタルファイアー
+    final int E_BWN = 17;           //Burning WeapoN                バーニングウェポン
+//    final int E_DBE = X;          //Dancing BlazE                 ダンシングブレイズ(基本エンチャントの2段加速で実装)
+//    final int E_FSD = X;          //Fire ShielD                   ファイアーシールド(基本エンチャントのACで実装)
 
     //水系列
-    final int E_AP = 21;        //アクアプロテクター
-    final int E_NT = 16;        //ネイチャーズタッチ
-    final int E_AS = 10;        //アクアショット
+//    final int E_PWR = X;          //Pollute WateR                 ポルートウォーター(未実装)
+//    final int E_NBG = X;          //Natures BlessinG              ネイチャーズブレッシング(未実装)
+//    final int E_FWE = X;          //Focus WavE                    フォーカスウェーブ(基本エンチャントの2段加速で実装)
+    final int E_APR = 21;           //Aqua ProtectoR                アクアプロテクター
+    final int E_NTH = 16;           //Natures ToucH                 ネイチャーズタッチ
+//    final int E_WLE = X;          //Water LifE                    ウォーターライフ(未実装)
+    final int E_AST = 10;           //Aqua ShoT                     アクアショット
 
     //風系列
-    final int E_CE = 85;        //サイクロン(未実装)
-    final int E_SS = 14;        //ストームショット
-    final int E_SE = 13;        //ストームアイ
-    final int E_EE = 84;        //イーグルアイ
+//    final int E_SGL = X;          //Striker GaiL                  ストライカーゲイル(未実装)
+//    final int E_HUE = X;          //HUrricanE                     ハリケーン(基本エンチャントの2段加速で実装)
+    final int E_CYE = 85;           //CYclonE                       サイクロン
+    final int E_SST = 14;           //Storm ShoT                    ストームショット
+    final int E_SEE = 13;           //Storm EyE                     ストームアイ
+    final int E_EEE = 84;           //Eagle EyE                     イーグルアイ
 
     //地系列
-    final int E_EV = 22;        //エキゾチックバイタライズ
-    final int E_EG = 61;        //アースガーディアン
-    final int E_QE = 81;        //クエイク
-    final int E_EW = 18;        //アースウェポン
+//    final int E_XX = X;           //Earth BinD                    アースバインド(未実装)
+    final int E_EVE = 22;           //Exotic VitalizE               エキゾチックバイタライズ
+//    final int E_XX = X;           //Iron SkiN                     アイアンスキン(未実装)
+//    final int E_XX = X;           //Sand StorM                    サンドストーム(基本エンチャントの2段加速で実装)
+    final int E_EGN = 61;           //Earth GuardiaN                アースガーディアン
+    final int E_QUE = 81;           //QUakE                         クエイク
+    final int E_EWN = 18;           //Earth WeapoN                  アースウェポン
 
 //ウィザードの魔法
     //LV10魔法
-    final int W_ADS = 24;       //アドバンスドスピリッツ
+    final int W_ADS = 24;           //アドバンスドスピリッツ
 
     //LV9魔法
 
     //LV8魔法
     
     //LV7魔法
-    final int W_FA = 102;       //フリージングアーマー
-    final int W_BSK = 25;       //バーサーカー
-    final int W_EA = 101;       //エンチャントアキュラシー
+    final int W_FA = 102;           //フリージングアーマー
+    final int W_BSK = 25;           //バーサーカー
+    final int W_EA = 101;           //エンチャントアキュラシー
 
     //LV6魔法
 
@@ -184,10 +208,10 @@ public interface Common {
     //LV4魔法
 
     //LV3魔法
-    final int W_BA = 27;        //ブレスドアーマー
+    final int W_BA = 27;            //ブレスドアーマー
 
     //LV2魔法
-    final int W_DW = 26;        //ディクリースウェイト
+    final int W_DW = 26;            //ディクリースウェイト
 
     //LV1魔法
 
