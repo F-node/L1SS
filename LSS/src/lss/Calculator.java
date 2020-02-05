@@ -742,11 +742,11 @@ public class Calculator implements Common {
             buff.HP += 50;
         }
         //ウィズダムポーション
+        ui.cb_buff[ITEM_WIZP].setToolTipText("SP+2 MPR+2");
         if (ui.cb_buff[ITEM_WIZP].isSelected()) {
             if (cls == W || cls == I) {
                 buff.SP += 2;
                 buff.MPR += 2;
-                ui.cb_buff[ITEM_WIZP].setToolTipText("SP+2 MPR+2");
             } else {
                 ui.cb_buff[ITEM_WIZP].setSelected(false);
             }
@@ -1891,6 +1891,68 @@ public class Calculator implements Common {
                 ui.cb_buff[E_RMC].setSelected(false);
             }
         }
+        //エレメンタルプロテクション
+        ui.cb_buff[E_EPN].setToolTipText("<html>"+ "[消費MP:6][消費HP:--]"
+                                         + "<br>"+ "選択している系列の属性抵抗50"
+                                         + "<br>"+ "グローリーアース取得時の2属性は不明"
+                                         + "<br>"+ "[習得レベル:45][持続時間:1分4秒][対象:術者]"+"</html>");
+
+        if (ui.cb_buff[E_EPN].isSelected()) {
+            if (cls == E) {
+                switch ((String) ui.cb_buff_group[E_EPN].getSelectedItem()) {
+                case "火エルフ":
+                    ui.cb_buff[E_EPN].setToolTipText("火属性抵抗50");
+		    buff.element_resist[FIRE] += 50;
+                    break;
+                case "水エルフ":
+                    ui.cb_buff[E_EPN].setToolTipText("水属性抵抗50");
+                    buff.element_resist[WATER] += 50;
+                    break;
+                case "風エルフ":
+                    ui.cb_buff[E_EPN].setToolTipText("風属性抵抗50");
+                    buff.element_resist[WIND] += 50;
+                    break;
+                case "地エルフ":
+                    ui.cb_buff[E_EPN].setToolTipText("地属性抵抗50");
+                    buff.element_resist[EARTH] += 50;
+                    break;
+                case "火*水エルフ":
+                    ui.cb_buff[E_EPN].setToolTipText("火属性抵抗50 水属性抵抗50");
+		    buff.element_resist[FIRE] += 50;
+                    buff.element_resist[WATER] += 50;
+                    break;
+                case "火*風エルフ":
+                    ui.cb_buff[E_EPN].setToolTipText("火属性抵抗50 風属性抵抗50");
+                    buff.element_resist[FIRE] += 50;
+                    buff.element_resist[WIND] += 50;
+                    break;
+                case "火*地エルフ":
+                    ui.cb_buff[E_EPN].setToolTipText("火属性抵抗50 地属性抵抗50");
+                    buff.element_resist[FIRE] += 50;
+                    buff.element_resist[EARTH] += 50;
+                    break;
+                case "水*風エルフ":
+                    ui.cb_buff[E_EPN].setToolTipText("水属性抵抗50 風属性抵抗50");
+                    buff.element_resist[WATER] += 50;
+                    buff.element_resist[WIND] += 50;
+                    break;
+                case "水*地エルフ":
+                    ui.cb_buff[E_EPN].setToolTipText("水属性抵抗50 地属性抵抗50");
+                    buff.element_resist[WATER] += 50;
+                    buff.element_resist[EARTH] += 50;
+                    break;
+                case "風*地エルフ":
+                    ui.cb_buff[E_EPN].setToolTipText("風属性抵抗50 地属性抵抗50");
+                    buff.element_resist[WIND] += 50;
+                    buff.element_resist[EARTH] += 50;
+                    break;
+                default:
+                    break;
+                }
+            } else {
+                ui.cb_buff[E_EPN].setSelected(false);
+            }
+        }
         //レジストエレメント 常時
         ui.cb_buff[E_RET].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
                                          + "<br>"+ "MR+5 全属性抵抗+5%"
@@ -1958,8 +2020,8 @@ public class Calculator implements Common {
         }
         //アースウェポン 消費MP15/16mins
         ui.cb_buff[E_EWN].setToolTipText("<html>"+ "[消費MP:15][消費HP:--]"
-                                        + "<br>"+ "地属性の近距離ダメージ+2 近距離命中+4"
-                                        + "<br>"+ "[習得レベル:45][持続時間:16分][対象:術者]"+"</html>");
+                                         + "<br>"+ "地属性の近距離ダメージ+2 近距離命中+4"
+                                         + "<br>"+ "[習得レベル:45][持続時間:16分][対象:術者]"+"</html>");
         if (ui.cb_buff[E_EWN].isSelected()) {
             if (cls == E) {
                 buff.ELEM_DMG_SHORT[EARTH] += 2;
@@ -2240,6 +2302,9 @@ public class Calculator implements Common {
             }
         }
         //インフィニティ:アーマー
+        ui.cb_buff[F_PIR].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                                 + "<br>"+ "レベル45からレベル4毎にダメージ低下が+1ずつ増加[最大+15]"
+                                                 + "<br>"+ "[習得レベル:45][持続時間:常時][対象:術者]"+"</html>");
         if (ui.cb_buff[F_PIR].isSelected()) {
             if (cls == F) {            	
 		if (level >= 101) {
@@ -2252,6 +2317,9 @@ public class Calculator implements Common {
             }
         }
         //インフィニティ:ブリッツ
+        ui.cb_buff[F_PIZ].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "レベル75からレベル1毎にERが+1ずつ増加[最大+15]"
+                                         + "<br>"+ "[習得レベル:75][持続時間:常時][対象:術者]"+"</html>");
         if (ui.cb_buff[F_PIZ].isSelected()) {
             if (cls == F) {            	
 		if (level >= 89) {
@@ -3673,7 +3741,7 @@ public class Calculator implements Common {
         }
         //真心のこもった祝福スクロール
         ui.cb_buff[MBSC].setToolTipText("<html>"+ "ダメージ低下+3 近距離ダメージ+2 遠距離ダメージ+2 近距離命中+2 遠距離命中+2"
-                    + "<br>"+ "魔法命中+2 SP+2 最大HP+50 HP回復+3 最大MP+30 MP回復+3 獲得経験値+5% 30分"+"</html>");
+                                        + "<br>"+ "魔法命中+2 SP+2 最大HP+50 HP回復+3 最大MP+30 MP回復+3 獲得経験値+5% 30分"+"</html>");
             if (ui.cb_buff[MBSC].isSelected()) {
             buff.DR += 1;
             buff.DMG_SHORT += 2;
@@ -4559,9 +4627,9 @@ buki.arrow_elementdmg=0;
 
         //クリティカル処理
         ui.cb_buff[E_EEE].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
-                                                 + "<br>"+ "遠距離クリティカル+2%"
-                                                 + "<br>"+ "キャンセレーションで解除されない"
-                                                 + "<br>"+ "[習得レベル:45][持続時間:2分8秒][対象:術者][触媒:精霊の玉(1)]"+"</html>");
+                                         + "<br>"+ "遠距離クリティカル+2%"
+                                         + "<br>"+ "キャンセレーションで解除されない"
+                                         + "<br>"+ "[習得レベル:45][持続時間:2分8秒][対象:術者][触媒:精霊の玉(1)]"+"</html>");
         switch (buki.type) {
             case "キーリンク":
                 double a = 1 + 3.0 / 32.0 * (int_beta - 12);
@@ -4914,11 +4982,18 @@ buki.arrow_elementdmg=0;
 
         //クラッシュ
         double ex = 0.0;
-        if (ui.cb_buff[S_CR].isSelected()) {
+        ui.cb_buff[S_CRH].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "近距離攻撃時に一定確率(15%)で追加ダメージ"
+                                         + "<br>"+ "[レベル]/[2]を与える"
+                                         + "<br>"+ "[習得レベル:45][持続時間:常時][対象:術者]"+"</html>");
+        if (ui.cb_buff[S_CRH].isSelected()) {
             ex = level / 2.0;
         }
         //フューリー
-        if (ui.cb_buff[S_FU].isSelected()) {
+        ui.cb_buff[S_FUY].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "クラッシュ発動時に一定確率(10%)でダメージ2倍を与える"
+                                         + "<br>"+ "[習得レベル:60][持続時間:常時][対象:術者]"+"</html>");
+        if (ui.cb_buff[S_FUY].isSelected()) {
             dmg_big_ave = 0.15 * 0.1 * 2.0 * (dmg_big_ave + ex)
                     + (0.15 - (0.15 * 0.1)) * (dmg_big_ave + ex)
                     + (1.0 - 0.15) * dmg_big_ave;
@@ -5484,7 +5559,11 @@ buki.arrow_elementdmg=0;
 //        pvp_dgr= base_pvp_dr + buff.PVP_DR;
 //        System.out.println(pvp_dgr);    //初期値確認用
 
-        if (ui.cb_buff[S_AG].isSelected()) {
+        //アーマーガード
+        ui.cb_buff[S_AGD].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "ダメージ低下+[AC]/[10]"
+                                         + "<br>"+ "[習得レベル:60][持続時間:常時][対象:術者]"+"</html>");
+        if (ui.cb_buff[S_AGD].isSelected()) {
             dr += -ac / 10;
         }
 
@@ -5539,6 +5618,10 @@ buki.arrow_elementdmg=0;
             }
         }
         //インフィニティ:ドッジ
+        ui.cb_buff[F_PIE].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "DG+5"
+                                         + "<br>"+ "レベル70からレベル2毎にDGが+1ずつ増加[最大+20]"
+                                         + "<br>"+ "[習得レベル:70][持続時間:常時][対象:術者]"+"</html>");
         if (ui.cb_buff[F_PIE].isSelected()) {
             if (cls == F) {            	
 		if (level >= 89) {
@@ -6028,7 +6111,7 @@ buki.arrow_elementdmg=0;
                                          + "<br>"+ "リスタートすると効果が消える"
                                          + "<br>"+ "[習得レベル:80][持続時間:20分][対象:術者]"+"</html>");
         if (ui.cb_buff[W_ADS].isSelected()) {
-            if (ui.cb_buff[S_G].isSelected()
+            if (ui.cb_buff[S_GIC].isSelected()
                     || ui.cb_buff[K_PRE].isSelected()) {
                 ui.cb_buff[W_ADS].setSelected(false);
             } else {
@@ -6044,7 +6127,7 @@ buki.arrow_elementdmg=0;
                                          + "<br>"+ "最大HP LV/4% 増加"
                                          + "<br>"+ "[習得レベル:60][持続時間:5分][対象:術者]"+"</html>");
         if (ui.cb_buff[K_PRE].isSelected()) {
-            if (ui.cb_buff[S_G].isSelected()
+            if (ui.cb_buff[S_GIC].isSelected()
                     || ui.cb_buff[W_ADS].isSelected()) {
                 ui.cb_buff[K_PRE].setSelected(false);
             } else {
@@ -6055,18 +6138,25 @@ buki.arrow_elementdmg=0;
             }
         }
         //ギガンテック 消費MP10/5mins
-        if (ui.cb_buff[S_G].isSelected()) {
+        ui.cb_buff[S_GIC].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "最大HPを増加する"
+                                         + "<br>"+ "[レベル]/[2]%"
+                                         + "<br>"+ "[習得レベル:60][持続時間:5分][対象:術者][触媒:結晶体(100)]"+"</html>");
+        if (ui.cb_buff[S_GIC].isSelected()) {
             if (ui.cb_buff[W_ADS].isSelected()
                     || ui.cb_buff[K_PRE].isSelected()) {
-                ui.cb_buff[S_G].setSelected(false);
+                ui.cb_buff[S_GIC].setSelected(false);
             } else {
             	hpp += (level/2)*0.01 * hp;
-                if (ui.cb_buff[S_G].getForeground().equals(Color.BLUE)) {
+                if (ui.cb_buff[S_GIC].getForeground().equals(Color.BLUE)) {
                     cons_mp += (10.0 * (1.0 - red_mp * 0.01) - red_mp2) / 5;
                 }
             }
         }
         //インフィニティ:ブラッド
+        ui.cb_buff[F_PID].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "レベル60からレベル3毎に最大HPが+50ずつ増加[最大+650]"
+                                         + "<br>"+ "[習得レベル:60][持続時間:常時][対象:術者]"+"</html>");
         if (ui.cb_buff[F_PID].isSelected()) {
             if (cls == F) {            	
 		if (level >= 89) {
@@ -6099,8 +6189,8 @@ buki.arrow_elementdmg=0;
         }
         //アディショナルファイアー 消費MP30/16mins
         ui.cb_buff[E_AFE].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
-                                        + "<br>"+ "重量ゲージが50%を超えてもHPとMPが自然回復する"
-                                        + "<br>"+ "[習得レベル:75][持続時間:16分][対象:術者]"+"</html>");
+                                         + "<br>"+ "重量ゲージが50%を超えてもHPとMPが自然回復する"
+                                         + "<br>"+ "[習得レベル:75][持続時間:16分][対象:術者]"+"</html>");
         if (ui.cb_buff[E_AFE].isSelected()) {
             if (ui.cb_buff[E_AFE].getForeground().equals(Color.BLUE)) {
                 cons_mp += (30.0 * (1.0 - red_mp * 0.01) - red_mp2) / 16;

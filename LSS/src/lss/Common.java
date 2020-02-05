@@ -77,7 +77,7 @@ public interface Common {
     final int L80 = 11;
     final int L82 = 12;
     final int L84 = 13;
-    final int L99 = 14;         //Hero用
+    final int L99 = 14;             //Hero用
 
     //パネル1のアミュレット/イアリング/リング/インシグニア/スポールダー/紋章/ペンダント等の順と位置
     final String[] EQ_LIST = {"武器", "武器", "シールド", "ヘルム", "グローブ", "シャツ",
@@ -136,7 +136,7 @@ public interface Common {
 //エルフの精霊魔法
     //共通
 //    final int E_MAE = X;          //MArblE                        マーブル(未実装)
-//    final int E_GEH = X;          //Glory EartH                   グローリーアース(未実装)
+    final int E_GEH = 113;          //Glory EartH                   グローリーアース(未実装)
 //    final int E_SBR = X;          //Seoul BarrieR                 ソウルバリア(未実装)
 //    final int E_ASE = X;          //Area SilencE                  エリアサイレンス(未実装)
     final int E_ELY = 57;           //ELvengravitY                  エルヴングラヴィティー
@@ -146,7 +146,7 @@ public interface Common {
 //    final int E_SLE = X;          //Summon Lesser Elemental       サモンレッサーエレメンタル(未実装)
 //    final int E_TAW = X;          //Triple ArroW                  トリプルアロー(未実装)
 //    final int E_BSL = X;          //Bloody SouL                   ブラッディソウル(未実装)
-//    final int E_EPN = X;          //Elemental ProtectioN          エレメンタルプロテクション(未実装)
+    final int E_EPN = 114;          //Elemental ProtectioN          エレメンタルプロテクション(未実装)
     final int E_RET = 19;           //Resist ElemenT                レジストエレメント
     final int E_CMD = 12;           //Clear MinD                    クリアマインド
 //    final int E_TTM = X;          //Teleport To Mother            テレポートトゥマザー(未実装)
@@ -182,7 +182,7 @@ public interface Common {
     //地系列
 //    final int E_XX = X;           //Earth BinD                    アースバインド(未実装)
     final int E_EVE = 22;           //Exotic VitalizE               エキゾチックバイタライズ
-//    final int E_XX = X;           //Iron SkiN                     アイアンスキン(未実装)
+//    final int E_XX = X;           //Iron SkiN                     アイアンスキン(基本エンチャントのACで実装)
 //    final int E_XX = X;           //Sand StorM                    サンドストーム(基本エンチャントの2段加速で実装)
     final int E_EGN = 61;           //Earth GuardiaN                アースガーディアン
     final int E_QUE = 81;           //QUakE                         クエイク
@@ -217,117 +217,164 @@ public interface Common {
 
 //ダークエルフの闇の精霊魔法
     //LV4魔法
-    final int D_DB2 = 28;       //ダブルブレイク:デスティニー
+//    final int D_XX = X;           //アベンジャー(未実装)
+//    final int D_XX = X;           //シャドウステップ(未実装)
+//    final int D_XX = X;           //アーマーブレイク(未実装)
+//    final int D_XX = X;           //ルシファー(未実装)
+//    final int D_XX = X;           //ルシファー:デスティニー(未実装)
+    final int D_DB2 = 28;           //ダブルブレイク:デスティニー
+//    final int D_XX = X;           //アーマーブレイク:デスティニー(未実装)
 
     //LV3魔法
-    final int D_DB = 29;        //ダブルブレイク
-    final int D_UD = 32;        //アンキャニードッジ
-    final int D_FB = 103;       //ファイナルバーン
-    final int D_DE = 31;        //ドレスイベイジョン
+    final int D_DB = 29;            //ダブルブレイク
+    final int D_UD = 32;            //アンキャニードッジ
+//    final int D_XX = X;           //シャドウファング(未実装)
+    final int D_FB = 103;           //ファイナルバーン
+    final int D_DE = 31;            //ドレスイベイジョン
     
     //LV2魔法
-    final int D_MA = 79;        //ムービングアクセレーション(未実装)
-    final int D_BS = 30;        //バーニングスピリッツ
-    final int D_VR = 80;        //ベノムレジスト(未実装)
+    final int D_MA = 79;            //ムービングアクセレーション(未実装)
+    final int D_BS = 30;            //バーニングスピリッツ
+//    final int D_XX = X;           //シャドウスリープ(未実装)
+    final int D_VR = 80;            //ベノムレジスト(未実装)
 
     //LV1魔法
-    final int D_SA = 33;        //シャドウアーマー
+//    final int D_XX = X;           //ブラインドハイディング(未実装)
+//    final int D_XX = X;           //エンチャントベノム(未実装)
+//    final int D_XX = X;           //ブリングストーン(未実装)
+    final int D_SA = 33;            //シャドウアーマー
+//    final int D_XX = X;           //ドレスマイティー(未実装)
 
 //ドラゴンナイトの秘技
     //LV4魔法
-    final int R_LINDVIOL = 90;  //覚醒[リンドビオル]
-    final int R_FS2 = 60;       //フォースレイヤー:ブレイブ(未実装)
+//    final int R_XX = X;           //ハルパス
+    final int R_LINDVIOL = 90;      //覚醒[リンドビオル]
+//    final int R_XX = X;           //アウラキア
+//    final int R_XX = X;           //サンダーグラップ:ブレイブ
+    final int R_FS2 = 60;           //フォースレイヤー:ブレイブ(未実装)
 
     //LV3魔法
-    final int R_MB = 38;        //モータルボディー
-    final int R_VALAKAS = 41;   //覚醒[ヴァラカス]
+    final int R_MB = 38;            //モータルボディー
+//    final int R_XX = X;           //サンダーグラップ
+//    final int R_XX = X;           //デストロイ:ホラー
+//    final int R_XX = X;           //アイオブドラゴン
+    final int R_VALAKAS = 41;       //覚醒[ヴァラカス]
 
     //LV2魔法
-    final int R_FAFURION = 40;  //覚醒[パプリオン](未実装)
+//    final int R_XX = X;           //ブラッドラスト
+//    final int R_XX = X;           //フォースレイヤー
+//    final int R_XX = X;           //デストロイ:フィアー
+//    final int R_XX = X;           //マグマアロー
+    final int R_FAFURION = 40;      //覚醒[パプリオン](未実装)
 
     //LV1魔法
-    final int R_DS = 37;        //ドラゴンスキン
-    final int R_ANTHARAS = 39;  //覚醒[アンタラス]
+    final int R_DS = 37;            //ドラゴンスキン
+//    final int R_XX = X;           //バーニングスラッシュ
+//    final int R_XX = X;           //デストロイ
+//    final int R_XX = X;           //マグマブレス
+    final int R_ANTHARAS = 39;      //覚醒[アンタラス]
 
 //イリュージョニストの幻術魔法
     //LV5魔法
-    final int I_IT = 92;        //インパクト
-    final int I_FS = 91;        //フォーカススピッツ
+//    final int I_XX = X;           //ポテンシャル
+//    final int I_XX = X;           //メビウス
+    final int I_IT = 92;            //インパクト
+//    final int I_XX = X;           //ダークホース
+    final int I_FS = 91;            //フォーカススピッツ
 
     //LV4魔法             
-    final int I_INS = 46;       //インサイト
-    final int I_RW = 62;        //リデュースウェイト
-    final int I_IA = 45;        //幻術[アバター]
+    final int I_INS = 46;           //インサイト
+//    final int I_XX = X;           //パニック
+    final int I_RW = 62;            //リデュースウェイト
+    final int I_IA = 45;            //幻術[アバター]
+//    final int I_XX = X;           //キューブ［アバター］
 
     //LV3魔法     
-    final int I_PAT = 47;       //ペイシェンス
-    final int I_ID = 44;        //幻術[ダイアゴーレム]
+    final int I_PAT = 47;           //ペイシェンス
+//    final int I_XX = X;           //ファンタズム
+//    final int I_XX = X;           //アイズブレイカー
+    final int I_ID = 44;            //幻術[ダイアゴーレム]
+//    final int I_XX = X;           //キューブ［リッチ］
 
     //LV2魔法 
-    final int I_CON = 48;       //コンセントレーション
-    final int I_IR = 43;        //幻術[リッチ]
+    final int I_CON = 48;           //コンセントレーション
+//    final int I_XX = X;           //マインドブレイク
+//    final int I_XX = X;           //ボーンブレイク
+    final int I_IR = 43;            //幻術[リッチ]
+//    final int I_XX = X;           //キューブ［ゴーレム］
 
     //LV1魔法 
-    final int I_MI = 49;        //ミラーイメージ
-    final int I_IO = 42;        //幻術[オーガ]
+    final int I_MI = 49;            //ミラーイメージ
+//    final int I_XX = X;           //コンフュージョン
+//    final int I_XX = X;           //スマッシュエネルギー
+    final int I_IO = 42;            //幻術[オーガ]
+//    final int I_XX = X;           //キューブ［オーガ］
 
 //ウォリアーの技術
     //アクティブスキル
-    final int S_G = 76;         //ギガンティック
+//    final int S_DEN = X;          //DEmolitioN                    デモリッション
+//    final int S_DEO = X;          //DEsperadO                     デスペラード
+    final int S_TRG = 115;          //Titan RisinG                  タイタンライジング
+//    final int S_PGP = X;          //Power GriP                    パワーグリップ
+    final int S_GIC = 76;           //GIgantiC                      ギガンティック
+//    final int S_TOK = X;          //TOmahawK                      トマホーク
+//    final int S_HOL = X;          //HOwL                          ハウル
 
     //パッシブスキル
-    final int S_TL = 69;        //タイタンロック
-    final int S_TM = 70;        //タイタンマジック
-    final int S_TB = 71;        //タイタンブリッツ     
-    final int S_CR = 67;        //クラッシュ
-    final int S_AG = 66;        //アーマーガード
-    final int S_FU = 68;        //フューリー
+    final int S_TLK = 69;           //Titan Lock                    タイタンロック
+    final int S_TMC = 70;           //Titan MagiC                   タイタンマジック
+    final int S_TBZ = 71;           //Titan BlitZ                   タイタンブリッツ     
+//    final int S_SLR = X;          //SLayeR                        スレイヤー
+    final int S_CRH = 67;           //CRasH                         クラッシュ
+    final int S_AGD = 66;           //Armor GuarD                   アーマーガード
+    final int S_FUY = 68;           //FUrY                          フューリー
+//    final int S_DAE = X;          //Desperado: AbsolutE           デスペラード:アブソリュート
 
 //フェンサーの技術
 //  アクティブスキル
-//    final int F_AAA = XXX;      //AshurA            アシュラ
-//    final int F_ABE = XXX;      //BladE             ブレード
-//    final int F_APA = XXX;      //Pantera           パンテラ
-//    final int F_AJT = XXX;      //JudgmenT          ジャッジメント
-//    final int F_AHE = XXX;      //HellfirE          ヘルファイア
-//    final int F_APM = XXX;      //PhantoM           ファントム
+//    final int F_AAA = XXX;        //AshurA                        アシュラ
+//    final int F_ABE = XXX;        //BladE                         ブレード
+//    final int F_APA = XXX;        //Pantera                       パンテラ
+//    final int F_AJT = XXX;        //JudgmenT                      ジャッジメント
+//    final int F_AHE = XXX;        //HellfirE                      ヘルファイア
+//    final int F_APM = XXX;        //PhantoM                       ファントム
 //  パッシブスキル
-//    final int F_PPH = XXX;      //Phantom:DeatH     ファントム:デス
-//    final int F_PPR = XXX;      //Phantom:ReapeR    ファントム:リーパー
-//    final int F_PPK = XXX;      //Panther:ShocK     パンサー:ショック
-//    final int F_PSE = XXX;      //SurvivE           サヴァイヴ
-    final int F_PIZ = 104;      //Infinity:BlitZ    インフィニティ:ブリッツ
-//    final int F_PPX = XXX;      //ParadoX           パラドックス
-    final int F_PIE = 105;      //Infinity:DodgE    インフィニティ:ドッジ
-//    final int F_PGH = XXX;      //GrowtH            グロース
-    final int F_PID = 106;      //Infinity:BlooD    インフィニティ:ブラッド
-    final int F_PRE = 107;      //RagE              レイジ
-    final int F_PIR = 108;      //Infinity:ArmoR    インフィニティ:アーマー
-    final int F_PFE = 109;      //FramE             フレイム
-//    final int F_PDS = XXX;      //DamascuS          ダマスカス
+//    final int F_PPH = XXX;        //Phantom:DeatH                 ファントム:デス
+//    final int F_PPR = XXX;        //Phantom:ReapeR                ファントム:リーパー
+//    final int F_PPK = XXX;        //Pantera:ShocK                 パンテラ:ショック
+//    final int F_PSE = XXX;        //SurvivE                       サヴァイヴ
+    final int F_PIZ = 104;          //Infinity:BlitZ                インフィニティ:ブリッツ
+//    final int F_PPX = XXX;        //ParadoX                       パラドックス
+    final int F_PIE = 105;          //Infinity:DodgE                インフィニティ:ドッジ
+//    final int F_PGE = XXX;        //GrousE                        グロウス
+    final int F_PID = 106;          //Infinity:BlooD                インフィニティ:ブラッド
+    final int F_PRE = 107;          //RagE                          レイジ
+    final int F_PIR = 108;          //Infinity:ArmoR                インフィニティ:アーマー
+    final int F_PFE = 109;          //FramE                         フレイム
+//    final int F_PDS = XXX;        //DamascuS                      ダマスカス
 
 //その他
-    final int ITEM_BLUE = 50;   //魔力回復ポーション
-    final int ITEM_WIZP = 51;   //ウィズダムポーション
-    final int ITEM_COOKING = 54;//料理
-    final int ITEM_DESSERT = 55;//デザート
-    final int ITEM_BREEZE = 52; //潮風の力
-    final int ITEM_SEA = 53;    //深海の力
-    final int ITEM_MD = 56;     //マジックドール
-    final int ITEM_MD_OP = 64;  //パック/パオ OP
-    final int KOMA = 58;        //コマのエンチャ
-    final int ITEM_MAGAN = 98;  //魔眼
-    final int CLAY = 77;        //クレイ
-    final int MOMIJI = 78;      //もみじリング
-    final int BUFF_COIN = 63;   //バフコイン
-    final int BS_COIN = 82;     //黒蛇のコイン
-    final int MBSC = 74;        //真心のこもった祝福スクロール
-    final int L_HST = 83;       //成長の果実
-    final int H_HP = 93;        //生命のボーナス
-    final int H_AC = 94;        //鉄甲のボーナス
-    final int H_PVPDR = 95;     //生存のボーナス
-    final int H_PVP = 96;       //暗殺のボーナス
-    final int H_RK = 97;        //ランカーボーナス
+    final int ITEM_BLUE = 50;       //魔力回復ポーション
+    final int ITEM_WIZP = 51;       //ウィズダムポーション
+    final int ITEM_COOKING = 54;    //料理
+    final int ITEM_DESSERT = 55;    //デザート
+    final int ITEM_BREEZE = 52;     //潮風の力
+    final int ITEM_SEA = 53;        //深海の力
+    final int ITEM_MD = 56;         //マジックドール
+    final int ITEM_MD_OP = 64;      //パック/パオ OP
+    final int KOMA = 58;            //コマのエンチャ
+    final int ITEM_MAGAN = 98;      //魔眼
+    final int CLAY = 77;            //クレイ
+    final int MOMIJI = 78;          //もみじリング
+    final int BUFF_COIN = 63;       //バフコイン
+    final int BS_COIN = 82;         //黒蛇のコイン
+    final int MBSC = 74;            //真心のこもった祝福スクロール
+    final int L_HST = 83;           //成長の果実
+    final int H_HP = 93;            //生命のボーナス
+    final int H_AC = 94;            //鉄甲のボーナス
+    final int H_PVPDR = 95;         //生存のボーナス
+    final int H_PVP = 96;           //暗殺のボーナス
+    final int H_RK = 97;            //ランカーボーナス
     
     final String[] AILMENT_LIST = {"技術命中", "技術耐性", "精霊命中", "精霊耐性", "秘技命中","秘技耐性", "恐怖命中", "恐怖耐性"};
 //    final String[] AILMENT_LIST = {"技術", "技術", "精霊", "精霊", "秘技","秘技", "恐怖", "恐怖"};

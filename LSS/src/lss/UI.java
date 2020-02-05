@@ -1243,14 +1243,14 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         //プライム
         String list_P_PRE[] = {"術者", "血盟員", "術者(攻城戦)", "血盟員(攻城戦)"};
         cb_buff_group[P_PRE] = new WideComboBox(list_P_PRE);
-        cb_buff_group[P_PRE].setBounds(100, 20 * col, 80, 20);
+        cb_buff_group[P_PRE].setBounds(200 * row + 100, 20 * col, 80, 20);
         cb_buff[P_PRE] = new JCheckBox("プライム");
         cb_buff[P_PRE].setBounds(200 * row, 20 * col++, 100, 20);
 
         //グレース
         String list_P_GRE[] = {"君主L80", "君主L81", "君主L82", "君主L83", "君主L84", "君主L85","君主L86","君主L87","君主L88","君主L89","君主L90+"};
         cb_buff_group[P_GRE] = new WideComboBox(list_P_GRE);
-        cb_buff_group[P_GRE].setBounds(100, 20 * col, 80, 20);
+        cb_buff_group[P_GRE].setBounds(200 * row + 100, 20 * col, 80, 20);
         cb_buff[P_GRE] = new JCheckBox("グレース");
         cb_buff[P_GRE].setBounds(200 * row, 20 * col++, 100, 20);
 
@@ -1269,7 +1269,7 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         //シャイニングシールド
         String list_P_SSD[] = {"術者", "PTメンバー"};
         cb_buff_group[P_SSD] = new WideComboBox(list_P_SSD);
-        cb_buff_group[P_SSD].setBounds(100, 20 * col, 80, 20);
+        cb_buff_group[P_SSD].setBounds(200 * row + 100, 20 * col, 80, 20);
         cb_buff[P_SSD] = new JCheckBox("シャイニングシールド");
         cb_buff[P_SSD].setBounds(200 * row, 20 * col++, 100, 20);
 
@@ -1328,9 +1328,24 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         lab_tmp.setBounds(200 * row, 20 * col++, 200, 20);
         panels[2].add(lab_tmp);
 
+        //グローリーアース
+        cb_buff[E_GEH] = new JCheckBox("グローリーアース(未実装)");
+        cb_buff[E_GEH].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[E_GEH].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                      + "<br>"+ "2つの属性系列を使用可能にする"
+                                      + "<br>"+ "属性系列に関係する魔法は同時に効果を得る サモンはランダムで召喚される"
+                                      + "<br>"+ "[習得レベル:85][持続時間:常時][対象:術者]"+"</html>");
+
         //エルヴングラヴィティー
         cb_buff[E_ELY] = new JCheckBox("エルヴングラヴィティー");
         cb_buff[E_ELY].setBounds(200 * row, 20 * col++, 150, 20);
+
+        //エレメンタルプロテクション
+        String list_E_EPN[] = {"火エルフ", "水エルフ", "風エルフ", "地エルフ", "火*水エルフ", "火*風エルフ", "火*地エルフ", "水*風エルフ", "水*地エルフ", "風*地エルフ"};
+        cb_buff_group[E_EPN] = new WideComboBox(list_E_EPN);
+        cb_buff_group[E_EPN].setBounds(200 * row + 100, 20 * col, 80, 20);
+        cb_buff[E_EPN] = new JCheckBox("エレメンタルプロテクション");
+        cb_buff[E_EPN].setBounds(200 * row, 20 * col++, 100, 20);
 
         //レジストエレメント
         cb_buff[E_RET] = new JCheckBox("レジストエレメント");
@@ -1438,18 +1453,23 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[D_BS] = new JCheckBox("バーニングスピリッツ");
         cb_buff[D_BS].setBounds(200 * row, 20 * col++, 150, 20);
         cb_buff[D_BS].setToolTipText("一定確率(33%)で近距離ダメージ1.5倍");
+
         cb_buff[D_DB] = new JCheckBox("ダブルブレイク");
         cb_buff[D_DB].setBounds(200 * row, 20 * col++, 150, 20);
         cb_buff[D_DB].setToolTipText("一定確率(33%)で武器ダメージ2倍");
+
         cb_buff[D_DB2] = new JCheckBox("ダブルブレイク:デスティニー(未実装)");
         cb_buff[D_DB2].setBounds(200 * row, 20 * col++, 150, 20);
         cb_buff[D_DB2].setToolTipText("ダブルブレイク発動確率上昇 80レベルから1レベル毎に発動確率1%増加");
+
         cb_buff[D_UD] = new JCheckBox("アンキャニードッジ");
         cb_buff[D_UD].setBounds(200 * row, 20 * col++, 150, 20);
         cb_buff[D_UD].setToolTipText("DG+30");
+
         cb_buff[D_DE] = new JCheckBox("ドレスイベイジョン");
         cb_buff[D_DE].setBounds(200 * row, 20 * col++, 150, 20);
         cb_buff[D_DE].setToolTipText("ER+18");
+
         cb_buff[D_SA] = new JCheckBox("シャドウアーマー");
         cb_buff[D_SA].setBounds(200 * row, 20 * col++, 150, 20);
         cb_buff[D_SA].setToolTipText("MR+5");
@@ -1536,65 +1556,89 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         lab_tmp.setBounds(200 * row, 20 * col++, 200, 20);
         panels[2].add(lab_tmp);
 
-        cb_buff[S_AG] = new JCheckBox("アーマーガード");
-        cb_buff[S_AG].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[S_AG].setToolTipText("DR増加 -AC/5");
-        cb_buff[S_CR] = new JCheckBox("クラッシュ");
-        cb_buff[S_CR].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[S_CR].setToolTipText("一定確率(15%)でダメージ増加 Lv/2");
-        cb_buff[S_FU] = new JCheckBox("フューリー");
-        cb_buff[S_FU].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[S_FU].setToolTipText("クラッシュ発動時、一定確率(10%)でダメージ2倍");
-        cb_buff[S_TL] = new JCheckBox("タイタンロック(未実装)");
-        cb_buff[S_TL].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[S_TL].setToolTipText("<html>"+ "HP40%以下時一定確率(35%)で近距離攻撃回避+反撃"
-                                     + "<br>"+ "カウンターダメージは武器の[BIG打撃値]+[追加ダメージ]+[強化数]x[2]"+"</html>");
-        cb_buff[S_TM] = new JCheckBox("タイタンマジック(未実装)");
-        cb_buff[S_TM].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[S_TM].setToolTipText("<html>"+ "HP40%以下時一定確率(35%)で魔法攻撃回避+反撃"
-                                     + "<br>"+ "カウンターダメージは武器の[BIG打撃値]+[追加ダメージ]+[強化数]x[2]"+"</html>");
-        cb_buff[S_TB] = new JCheckBox("タイタンブリッツ(未実装)");
-        cb_buff[S_TB].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[S_TB].setToolTipText("<html>"+ "HP40%以下時一定確率(35%)で遠距離攻撃回避+反撃"
-                                     + "<br>"+ "カウンターダメージは武器の[BIG打撃値]+[追加ダメージ]+[強化数]x[2]"+"</html>");
-        cb_buff[S_G] = new JCheckBox("ギガンティック");
-        cb_buff[S_G].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[S_G].setToolTipText("最大HP Lv/2% 増加");
+        //タイタンライジング
+        cb_buff[S_TRG] = new JCheckBox("タイタンライジング(未実装)");
+        cb_buff[S_TRG].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[S_TRG].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                     + "<br>"+ "タイタン系列発動区間+5%"
+                                     + "<br>"+ "レベル80からレベル1毎に効果が1%増加[最大10%]"
+                                     + "<br>"+ "標準35%+ライジング(5%+10%)+武器(5%+5%)=最大60%発動区間?"
+                                     + "<br>"+ "キャンセレーションで解除されない"
+                                     + "<br>"+ "[習得レベル:80][持続時間:40分][対象:術者][触媒:結晶体(100)]"+"</html>");
+
+        //ギガンティック
+        cb_buff[S_GIC] = new JCheckBox("ギガンティック");
+        cb_buff[S_GIC].setBounds(200 * row, 20 * col++, 150, 20);
+
+        //タイタンロック
+        cb_buff[S_TLK] = new JCheckBox("タイタンロック(未実装)");
+        cb_buff[S_TLK].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[S_TLK].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                     + "<br>"+ "HP40%以下時一定確率(35%)で近距離攻撃回避+反撃"
+                                     + "<br>"+ "カウンターダメージは武器の[BIG打撃値]+[追加ダメージ]+[強化数]x[2]"
+                                     + "<br>"+ "[習得レベル:75][持続時間:常時][対象:術者][触媒:結晶体(10)]"+"</html>");
+
+        //タイタンマジック
+        cb_buff[S_TMC] = new JCheckBox("タイタンマジック(未実装)");
+        cb_buff[S_TMC].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[S_TMC].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                     + "<br>"+ "HP40%以下時一定確率(35%)で魔法攻撃回避+反撃"
+                                     + "<br>"+ "カウンターダメージは武器の[BIG打撃値]+[追加ダメージ]+[強化数]x[2]"
+                                     + "<br>"+ "[習得レベル:75][持続時間:常時][対象:術者][触媒:結晶体(10)]"+"</html>");
+
+        //タイタンブリッツ
+        cb_buff[S_TBZ] = new JCheckBox("タイタンブリッツ(未実装)");
+        cb_buff[S_TBZ].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[S_TBZ].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                     + "<br>"+ "HP40%以下時一定確率(35%)で遠距離攻撃回避+反撃"
+                                     + "<br>"+ "カウンターダメージは武器の[BIG打撃値]+[追加ダメージ]+[強化数]x[2]"
+                                     + "<br>"+ "[習得レベル:80][持続時間:常時][対象:術者][触媒:結晶体(10)]"+"</html>");
+
+        //クラッシュ
+        cb_buff[S_CRH] = new JCheckBox("クラッシュ");
+        cb_buff[S_CRH].setBounds(200 * row, 20 * col++, 150, 20);
+
+        //アーマーガード
+        cb_buff[S_AGD] = new JCheckBox("アーマーガード");
+        cb_buff[S_AGD].setBounds(200 * row, 20 * col++, 150, 20);
+
+        //フューリー
+        cb_buff[S_FUY] = new JCheckBox("フューリー");
+        cb_buff[S_FUY].setBounds(200 * row, 20 * col++, 150, 20);
 
         lab_tmp = new JLabel("剣士技術");
         lab_tmp.setBounds(200 * row, 20 * col++, 100, 20);
         panels[2].add(lab_tmp);
 
         //アクティブスキル
+        //インフィニティ:ブリッツ
         cb_buff[F_PIZ] = new JCheckBox("インフィニティ:ブリッツ");
         cb_buff[F_PIZ].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[F_PIZ].setToolTipText("<html>"+ "レベル75から、レベル1毎にERが+1ずつ増加[最大+15]"
-                                      + "<br>"+ "[習得レベル:75][持続時間:常時][対象:術者]"+"</html>");
 
+        //インフィニティ:ドッジ
         cb_buff[F_PIE] = new JCheckBox("インフィニティ:ドッジ");
         cb_buff[F_PIE].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[F_PIE].setToolTipText("<html>"+ "DG+5"
-                                      + "<br>"+ "レベル70から、レベル2毎にDGが+1ずつ増加[最大+20]"
-                                      + "<br>"+ "[習得レベル:80][持続時間:常時][対象:術者]"+"</html>");
 
+        //インフィニティ:ブラッド
         cb_buff[F_PID] = new JCheckBox("インフィニティ:ブラッド");
         cb_buff[F_PID].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[F_PID].setToolTipText("<html>"+ "レベル60から、レベル3毎に最大HPが+50ずつ増加[最大+650]"
-                                      + "<br>"+ "[習得レベル:60][持続時間:常時][対象:術者]"+"</html>");
 
+        //レイジ
         cb_buff[F_PRE] = new JCheckBox("レイジ(未実装)");
         cb_buff[F_PRE].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[F_PRE].setToolTipText("<html>"+ "一定確率で近距離ダメージを増加させる(計算式不明)"
+        cb_buff[F_PRE].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                      + "<br>"+ "一定確率で近距離ダメージを増加させる(計算式不明)"
                                       + "<br>"+ "[習得レベル:60][持続時間:常時][対象:術者]"+"</html>");
 
+        //インフィニティ:アーマー
         cb_buff[F_PIR] = new JCheckBox("インフィニティ:アーマー");
         cb_buff[F_PIR].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[F_PIR].setToolTipText("<html>"+ "レベル45から、レベル4毎にダメージ低下が+1ずつ増加[最大+15]"
-                                      + "<br>"+ "[習得レベル:45][持続時間:常時][対象:術者]"+"</html>");
 
+        //フレイム
         cb_buff[F_PFE] = new JCheckBox("フレイム(未実装)");
         cb_buff[F_PFE].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[F_PFE].setToolTipText("<html>"+ "対象に攻撃が命中した時に、一定確率で3秒間HPを減少させる(計算式不明)"
+        cb_buff[F_PFE].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                      + "<br>"+ "対象に攻撃が命中した時に、一定確率で3秒間HPを減少させる(計算式不明)"
                                       + "<br>"+ "[習得レベル:45][持続時間:常時][対象:術者]"+"</html>");
 
         row = 4;
