@@ -1,6 +1,15 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2020/02/06
+Update 3.9.2
+LSS/src/lss/Calculator.java
+LSS/data/E.zip
+修正
+	ナイトバルドのゲートル
+	戦士のエリクサールーン
+	フェンサーのエリクサールーン
+
 2020/02/05
 Update 3.9.1
 LSS/src/lss/Calculator.java

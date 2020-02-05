@@ -2725,50 +2725,50 @@ public class Calculator implements Common {
                             ui.elixir_rune.setToolTipText("ステ+1 HP+50 MR+5% 祝福消耗効率+5% PVP魔法ダメージ減少+1%");
                             break;
                         case 3:
-                            buff.MR += 5;                   //MR+5%1
+                            buff.MR += 5;                   //MR+5%
                                                             //祝福消耗効率+5%
-                            buff.ailment[HIT_TERROR] += 5;  //技術命中+5
+                            buff.ailment[HIT_TERROR] += 5;  //恐怖命中+5
                                                             //PVP魔法ダメージ減少+2%
-                            ui.elixir_rune.setToolTipText("ステ+1 HP+50 MR+5% 祝福消耗効率+5% 技術命中+5 PVP魔法ダメージ減少+2%");
+                            ui.elixir_rune.setToolTipText("ステ+1 HP+50 MR+5% 祝福消耗効率+5% 恐怖命中+5 PVP魔法ダメージ減少+2%");
                             break;
                         case 4:
                             buff.MR += 5;                   //MR+5%
                                                             //祝福消耗効率+5%
-                            buff.ailment[HIT_TERROR] += 10; //技術命中+10
+                            buff.ailment[HIT_TERROR] += 10; //恐怖命中+10
                                                             //PVP魔法ダメージ減少+3%
-                            ui.elixir_rune.setToolTipText("ステ+1 HP+50 MR+5% 祝福消耗効率+5% 技術命中+10 PVP魔法ダメージ減少+3%");
+                            ui.elixir_rune.setToolTipText("ステ+1 HP+50 MR+5% 祝福消耗効率+5% 恐怖命中+10 PVP魔法ダメージ減少+3%");
                             break;
                         default:
                             break;
                     }
                     break;
                 case F:
-                    buff.HP += 50;
-                    ui.elixir_rune.setToolTipText("ステ+1 HP+50");
+                    buff.DR += 3;
+                    ui.elixir_rune.setToolTipText("ステ+1 DR+3");
                     switch (q) {
                         case 1:
-                            buff.MR += 5;                   //MR+5%
-                            ui.elixir_rune.setToolTipText("ステ+1 HP+50 MR+5%");
+                            buff.HIT_SHORT += 3;            //近距離命中+3
+                            ui.elixir_rune.setToolTipText("ステ+1 DR+3 近距離命中+3");
                             break;
                         case 2:
-                            buff.MR += 5;                   //MR+5%
+                            buff.HIT_SHORT += 3;            //近距離命中+3
                                                             //祝福消耗効率+5%
                                                             //PVP魔法ダメージ減少+1%
-                            ui.elixir_rune.setToolTipText("ステ+1 HP+50 MR+5% 祝福消耗効率+5% PVP魔法ダメージ減少+1%");
+                            ui.elixir_rune.setToolTipText("ステ+1 DR+3 近距離命中+3 祝福消耗効率+5% PVP魔法ダメージ減少+1%");
                             break;
                         case 3:
-                            buff.MR += 5;                   //MR+5%1
+                            buff.HIT_SHORT += 3;            //近距離命中+3
                                                             //祝福消耗効率+5%
-                            buff.ailment[HIT_TERROR] += 5;  //技術命中+5
+                            buff.ailment[HIT_TERROR] += 5;  //恐怖命中+5
                                                             //PVP魔法ダメージ減少+2%
-                            ui.elixir_rune.setToolTipText("ステ+1 HP+50 MR+5% 祝福消耗効率+5% 技術命中+5 PVP魔法ダメージ減少+2%");
+                            ui.elixir_rune.setToolTipText("ステ+1 DR+3 近距離命中+3 祝福消耗効率+5% 恐怖命中+5 PVP魔法ダメージ減少+2%");
                             break;
                         case 4:
-                            buff.MR += 5;                   //MR+5%
+                            buff.HIT_SHORT += 3;            //近距離命中+3
                                                             //祝福消耗効率+5%
-                            buff.ailment[HIT_TERROR] += 10; //技術命中+10
+                            buff.ailment[HIT_TERROR] += 10; //恐怖命中+10
                                                             //PVP魔法ダメージ減少+3%
-                            ui.elixir_rune.setToolTipText("ステ+1 HP+50 MR+5% 祝福消耗効率+5% 技術命中+10 PVP魔法ダメージ減少+3%");
+                            ui.elixir_rune.setToolTipText("ステ+1 DR+3 近距離命中+3 祝福消耗効率+5% 恐怖命中+10 PVP魔法ダメージ減少+3%");
                             break;
                         default:
                             break;
