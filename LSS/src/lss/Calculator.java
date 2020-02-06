@@ -2193,13 +2193,21 @@ public class Calculator implements Common {
             }
         }
         //ドラゴンスキン 消費MP0/30mins
-        if (ui.cb_buff[R_DS].isSelected()) {
+        ui.cb_buff[R_DSN].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
+                                         + "<br>"+ "ダメージ低下[DR]+5"
+                                         + "<br>"+ "レベル80からレベル2毎に効果が+1ずつ増加(LV80でDR6)"
+                                         + "<br>"+ "[習得レベル:20][持続時間:30分][対象:術者]"+"</html>");
+        if (ui.cb_buff[R_DSN].isSelected()) {
             buff.DR += 5;
             if (level >= 80) {
                 buff.DR += (int) ((level - 80) / 2) + 1;
             }
         }
         //覚醒[アンタラス] 消費MP20/10mins
+        ui.cb_buff[R_ANTHARAS].setToolTipText("<html>"+ "[消費MP:20][消費HP:10]"
+                                              + "<br>"+ "AC-3"
+                                              + "<br>"+ "キャンセレーションで解除されない"
+                                              + "<br>"+ "[習得レベル:20][持続時間:10分][対象:術者][触媒:刻印のボーンピース(1)]"+"</html>");
         if (ui.cb_buff[R_ANTHARAS].isSelected()) {
             buff.AC -= 3;
             if (ui.cb_buff[R_ANTHARAS].getForeground().equals(Color.BLUE)) {
@@ -2218,7 +2226,12 @@ public class Calculator implements Common {
         //        }
         //    }
         //}
+
         //覚醒[ヴァラカス] 消費MP50/10mins
+        ui.cb_buff[R_VALAKAS].setToolTipText("<html>"+ "[消費MP:50][消費HP:30]"
+                                             + "<br>"+ "近距離命中+5 技術耐性+10"
+                                             + "<br>"+ "キャンセレーションで解除されない"
+                                             + "<br>"+ "[習得レベル:60][持続時間:10分][対象:術者][触媒:刻印のボーンピース(1)]"+"</html>");
         if (ui.cb_buff[R_VALAKAS].isSelected()) {
             buff.HIT_SHORT += 5;
             buff.ailment[STUN] += 10;
@@ -2227,6 +2240,9 @@ public class Calculator implements Common {
             }
         }
         //コンセントレーション 消費MP30/10mins
+        ui.cb_buff[I_CON].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
+                                         + "<br>"+ "MPR+4"
+                                         + "<br>"+ "[習得レベル:30][持続時間:10分][対象:術者/PC]"+"</html>");
         if (ui.cb_buff[I_CON].isSelected()) {
             buff.MPR += 2;
             if (ui.cb_buff[I_CON].getForeground().equals(Color.BLUE)) {
@@ -2234,13 +2250,19 @@ public class Calculator implements Common {
             }
         }
         //ペイシェンス 消費MP25/10mins
-        if (ui.cb_buff[I_PAT].isSelected()) {
+        ui.cb_buff[I_PAE].setToolTipText("<html>"+ "[消費MP:25][消費HP:--]"
+                                         + "<br>"+ "DR+2"
+                                         + "<br>"+ "[習得レベル:45][持続時間:10分][対象:術者/PC]"+"</html>");
+        if (ui.cb_buff[I_PAE].isSelected()) {
             buff.DR += 2;
-            if (ui.cb_buff[I_PAT].getForeground().equals(Color.BLUE)) {
+            if (ui.cb_buff[I_PAE].getForeground().equals(Color.BLUE)) {
                 cons_mp += (25.0 * (1.0 - red_mp * 0.01) - red_mp2) / 10;
             }
         }
         //インサイト 消費MP60/10mins
+        ui.cb_buff[I_INS].setToolTipText("<html>"+ "[消費MP:60][消費HP:--]"
+                                         + "<br>"+ "STR+1 DEX+1 INT+1 CON+1 WIS+1"
+                                         + "<br>"+ "[習得レベル:60][持続時間:10分40秒][対象:術者]"+"</html>");
         if (ui.cb_buff[I_INS].isSelected()) {
             buff.ST[STR]++;
             buff.ST[DEX]++;
@@ -2251,39 +2273,62 @@ public class Calculator implements Common {
                 cons_mp += (60.0 * (1.0 - red_mp * 0.01) - red_mp2) / 10;
             }
         }
-        //幻術[オーガ] 消費MP20/2mins
-        if (ui.cb_buff[I_IO].isSelected()) {
+        //幻術/キューブ[オーガ] 消費MP20/2mins
+        ui.cb_buff[I_IOE].setToolTipText("<html>"+ "[消費MP:20/30][消費HP:--]"
+                                         + "<br>"+ "15セル内のPTメンバーに近距離ダメージ+4 近距離命中+4 遠距離ダメージ+4 遠距離命中+4"
+                                         + "<br>"+ "キャンセレーションで解除されない(術者のみ)"
+                                         + "<br>"+ "[習得レベル:15/15][持続時間:2分8秒][対象:術者/PT][触媒:属性石(0/3)]"+"</html>");
+        if (ui.cb_buff[I_IOE].isSelected()) {
             buff.DMG_SHORT += 4;
             buff.HIT_SHORT += 4;
-            if (ui.cb_buff[I_IO].getForeground().equals(Color.BLUE)) {
+            buff.DMG_LONG += 4;
+            buff.HIT_LONG += 4;
+            if (ui.cb_buff[I_IOE].getForeground().equals(Color.BLUE)) {
                 cons_mp += (20.0 * (1.0 - red_mp * 0.01) - red_mp2) / 2;
             }
         }
-        //幻術[リッチ] 消費MP20/2mins
-        if (ui.cb_buff[I_IR].isSelected()) {
+        //幻術/キューブ[リッチ] 消費MP20/2mins
+        ui.cb_buff[I_IRH].setToolTipText("<html>"+ "[消費MP:--/20][消費HP:--]"
+                                         + "<br>"+ "15セル内のPTメンバーにSP+2"
+                                         + "<br>"+ "[習得レベル:30/45][持続時間:常時/2分8秒][対象:術者/PT][触媒:属性石(0/3)]"+"</html>");
+        if (ui.cb_buff[I_IRH].isSelected()) {
             buff.SP += 2;
-            if (ui.cb_buff[I_IR].getForeground().equals(Color.BLUE)) {
+            if (ui.cb_buff[I_IRH].getForeground().equals(Color.BLUE)) {
                 cons_mp += (20.0 * (1.0 - red_mp * 0.01) - red_mp2) / 2;
             }
         }
-        //幻術[ダイアゴーレム] 消費MP40/2mins
-        if (ui.cb_buff[I_ID].isSelected()) {
+        //幻術/キューブ[ゴーレム] 消費MP40/2mins
+        ui.cb_buff[I_IGM].setToolTipText("<html>"+ "[消費MP:--/40][消費HP:--]"
+                                         + "<br>"+ "15セル内のPTメンバーにAC-8"
+                                         + "<br>"+ "キャンセレーションで解除されない(術者のみ)"
+                                         + "<br>"+ "[習得レベル:45/30][持続時間:常時/2分8秒][対象:術者/PT][触媒:属性石(0/5)]"+"</html>");
+        if (ui.cb_buff[I_IGM].isSelected()) {
             buff.AC -= 8;
-            if (ui.cb_buff[I_ID].getForeground().equals(Color.BLUE)) {
+            if (ui.cb_buff[I_IGM].getForeground().equals(Color.BLUE)) {
                 cons_mp += (40.0 * (1.0 - red_mp * 0.01) - red_mp2) / 2;
             }
         }
         //フォーカススピリッツ 消費MP30/5mins
-        if (ui.cb_buff[I_FS].isSelected()) {
+        ui.cb_buff[I_FSZ].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
+                                         + "<br>"+ "魔法クリティカル+5%"
+                                         + "<br>"+ "キャンセレーションで解除されない"
+                                         + "<br>"+ "[習得レベル:75][持続時間:5分][対象:術者][触媒:属性石(1)]"+"</html>");
+        if (ui.cb_buff[I_FSZ].isSelected()) {
             buff.CRI_MAGIC += 5;
-            if (ui.cb_buff[I_FS].getForeground().equals(Color.BLUE)) {
+            if (ui.cb_buff[I_FSZ].getForeground().equals(Color.BLUE)) {
                 cons_mp += (30.0 * (1.0 - red_mp * 0.01) - red_mp2) / 5;
             }
         }
         //インパクト 消費MP25/0.25mins
-        if (ui.cb_buff[I_IT].isSelected()) {
+        ui.cb_buff[I_IMT].setToolTipText("<html>"+ "[消費MP:40][消費HP:--]"
+                                         + "<br>"+ "15セル内のPTメンバーに"
+                                         + "<br>"+ "技術命中+5 精霊命中+5 竜語命中+5 恐怖命中+5"
+                                         + "<br>"+ "レベル80からレベル1毎に効果が+1ずつ増加[最大+10]"
+                                         + "<br>"+ "キャンセレーションで解除されない"
+                                         + "<br>"+ "[習得レベル:80][持続時間:15秒][対象:PT][触媒:属性石(5)]"+"</html>");
+        if (ui.cb_buff[I_IMT].isSelected()) {
             if (level >= 80 && cls == I) {
-                if (ui.cb_buff[I_IT].getForeground().equals(Color.BLUE)) {
+                if (ui.cb_buff[I_IMT].getForeground().equals(Color.BLUE)) {
                     cons_mp += (25.0 * (1.0 - red_mp * 0.01) - red_mp2) / 0.25;
                 }
             	if (level >= 85) {
@@ -2298,7 +2343,7 @@ public class Calculator implements Common {
                     buff.ailment[HIT_TERROR] += 5 + (level - 80);       //恐怖命中+(level - 75)
         	}
             } else {
-                ui.cb_buff[I_IT].setSelected(false);
+                ui.cb_buff[I_IMT].setSelected(false);
             }
         }
         //インフィニティ:アーマー
@@ -4946,11 +4991,15 @@ buki.arrow_elementdmg=0;
             dmg_big_ave += dmg_element1;
             dmg_small_ave += dmg_element1;
         }
-        //アバター
-        if (ui.cb_buff[I_IA].isSelected()) {
+        //幻術/キューブ[アバター]
+        ui.cb_buff[I_IAR].setToolTipText("<html>"+ "[消費MP:50/40][消費HP:--]"
+                                         + "<br>"+ "近距離ダメージ+10 遠距離ダメージ+10 魔法ダメージ+10 被ダメージ+5%"
+                                         + "<br>"+ "キャンセレーションで解除されない(術者のみ)"
+                                         + "<br>"+ "[習得レベル:60][持続時間:2分8秒][対象:術者/PT][触媒:属性石(0/5]"+"</html>");
+        if (ui.cb_buff[I_IAR].isSelected()) {
             dmg_big_ave += 10;
             dmg_small_ave += 10;
-            if (ui.cb_buff[I_IA].getForeground().equals(Color.BLUE)) {
+            if (ui.cb_buff[I_IAR].getForeground().equals(Color.BLUE)) {
                 cons_mp += (50.0 * (1.0 - red_mp * 0.01) - red_mp2) / 2;
             }
         }
@@ -5604,13 +5653,21 @@ buki.arrow_elementdmg=0;
             }
         }
         //ミラーイメージ 消費MP20/20mins
-        if (ui.cb_buff[I_MI].isSelected()) {
+        ui.cb_buff[I_MIE].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
+                                         + "<br>"+ "近距離回避[DG]+30"
+                                         + "<br>"+ "キャンセレーションで解除されない"                
+                                         + "<br>"+ "[習得レベル:15][持続時間:20分][対象:術者]"+"</html>");
+        if (ui.cb_buff[I_MIE].isSelected()) {
             dg += 30;
-            if (ui.cb_buff[I_MI].getForeground().equals(Color.BLUE)) {
+            if (ui.cb_buff[I_MIE].getForeground().equals(Color.BLUE)) {
                 cons_mp += (20.0 * (1.0 - red_mp * 0.01) - red_mp2) / 20;
             }
         }
         //覚醒[リンドビオル] 消費MP40/10mins
+        ui.cb_buff[R_LINDVIOL].setToolTipText("<html>"+ "[消費MP:40][消費HP:40]"
+                                              + "<br>"+ "近距離回避[DG]+7"
+                                              + "<br>"+ "キャンセレーションで解除されない"                
+                                              + "<br>"+ "[習得レベル:80][持続時間:10分][対象:術者][触媒:刻印のボーンピース(1)]"+"</html>");
         if (ui.cb_buff[R_LINDVIOL].isSelected()) {
             dg += 7;
             if (ui.cb_buff[R_LINDVIOL].getForeground().equals(Color.BLUE)) {
@@ -5682,10 +5739,14 @@ buki.arrow_elementdmg=0;
             }
         }
         //リデュースウェイト        消費MP:50/30mins 所持重量増加+480 
-        if (ui.cb_buff[I_RW].isSelected()) {
+        ui.cb_buff[I_RWT].setToolTipText("<html>"+ "[消費MP:50][消費HP:--]"
+                                         + "<br>"+ "所持重量増加+480"
+                                         + "<br>"+ "ディクリースウェイトの上位版なので重複不可能"
+                                         + "<br>"+ "[習得レベル:60][持続時間:30分][対象:術者]"+"</html>");
+        if (ui.cb_buff[I_RWT].isSelected()) {
             ui.cb_buff[W_DW].setSelected(false);
             weight += 480;
-            if (ui.cb_buff[I_RW].getForeground().equals(Color.BLUE)) {
+            if (ui.cb_buff[I_RWT].getForeground().equals(Color.BLUE)) {
                 cons_mp += (50.0 * (1.0 - red_mp * 0.01) - red_mp2) / 30;
             }
         }
@@ -6292,7 +6353,7 @@ buki.arrow_elementdmg=0;
         } else {
             b = 0.6 - 0.01 * ((ui.s_target_mr.getValue() - hit_magic) / 10);
         }
-        if (ui.cb_buff[I_IA].isSelected()) {
+        if (ui.cb_buff[I_IAR].isSelected()) {
             return (dmg_magic * a + base_dmg_magic) * b * (1 - cri)
                     + (dmg_magic * a + base_dmg_magic) * b * cri * 1.5 + 10;
         } else {

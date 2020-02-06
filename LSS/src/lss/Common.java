@@ -247,68 +247,68 @@ public interface Common {
 
 //ドラゴンナイトの秘技
     //LV4魔法
-//    final int R_XX = X;           //ハルパス
-    final int R_LINDVIOL = 90;      //覚醒[リンドビオル]
-//    final int R_XX = X;           //アウラキア
-//    final int R_XX = X;           //サンダーグラップ:ブレイブ
-    final int R_FS2 = 60;           //フォースレイヤー:ブレイブ(未実装)
+    final int R_HAS = 116;          //HAlpaS                        ハルパス
+    final int R_LINDVIOL = 90;      //Arousal[LINDVIOL]             覚醒[リンドビオル]
+    final int R_AUA = 117;          //AUrakiA                       アウラキア
+//    final int R_TGB = X;          //Thunder Grap:Brave            サンダーグラップ:ブレイブ
+    final int R_FSB = 60;           //Four Slayer:Brave             フォースレイヤー:ブレイブ(未実装)
 
     //LV3魔法
-    final int R_MB = 38;            //モータルボディー
-//    final int R_XX = X;           //サンダーグラップ
-//    final int R_XX = X;           //デストロイ:ホラー
-//    final int R_XX = X;           //アイオブドラゴン
-    final int R_VALAKAS = 41;       //覚醒[ヴァラカス]
+    final int R_MBY = 38;           //Mortal BodY                   モータルボディー
+//    final int R_TGP = X;          //Thunder GraP                  サンダーグラップ
+//    final int R_DHR = X;          //Destroy:HorroR                デストロイ:ホラー
+//    final int R_EOD = X;          //Eye Of Dragon                 アイオブドラゴン
+    final int R_VALAKAS = 41;       //Arousal[VALAKAS]              覚醒[ヴァラカス]
 
     //LV2魔法
-//    final int R_XX = X;           //ブラッドラスト
-//    final int R_XX = X;           //フォースレイヤー
-//    final int R_XX = X;           //デストロイ:フィアー
-//    final int R_XX = X;           //マグマアロー
-    final int R_FAFURION = 40;      //覚醒[パプリオン](未実装)
+//    final int R_BLT = X;          //Blood LasT                    ブラッドラスト(基本エンチャントの2段加速で実装)
+//    final int R_FSR = X;          //Four SlayeR                   フォースレイヤー
+//    final int R_DFR = X;          //Destroy:FeaR                  デストロイ:フィアー
+//    final int R_MAW = X;          //Magma ArroW                   マグマアロー
+    final int R_FAFURION = 40;      //Arousal[FAFURION]             覚醒[パプリオン](未実装)
 
     //LV1魔法
-    final int R_DS = 37;            //ドラゴンスキン
-//    final int R_XX = X;           //バーニングスラッシュ
-//    final int R_XX = X;           //デストロイ
-//    final int R_XX = X;           //マグマブレス
-    final int R_ANTHARAS = 39;      //覚醒[アンタラス]
+    final int R_DSN = 37;           //Dragon SkiN                   ドラゴンスキン
+//    final int R_BSH = X;          //Burning SlasH                 バーニングスラッシュ
+//    final int R_DEY = X;          //DEstroY                       デストロイ
+//    final int R_MBH = X;          //Magma BreatH                  マグマブレス
+    final int R_ANTHARAS = 39;      //Arousal[ANTHARAS]             覚醒[アンタラス]
 
 //イリュージョニストの幻術魔法
     //LV5魔法
-//    final int I_XX = X;           //ポテンシャル
-//    final int I_XX = X;           //メビウス
-    final int I_IT = 92;            //インパクト
-//    final int I_XX = X;           //ダークホース
-    final int I_FS = 91;            //フォーカススピッツ
+    final int I_POL = 118;          //POtentiaL                     ポテンシャル
+//    final int I_MES = X;          //MEviuS                        メビウス
+    final int I_IMT = 92;           //IMpacT                        インパクト
+//    final int I_DHE = X;          //Dark HorsE                    ダークホース(基本エンチャントの2段加速で実装)
+    final int I_FSZ = 91;           //Focus SpitZ                   フォーカススピッツ
 
     //LV4魔法             
-    final int I_INS = 46;           //インサイト
-//    final int I_XX = X;           //パニック
-    final int I_RW = 62;            //リデュースウェイト
-    final int I_IA = 45;            //幻術[アバター]
-//    final int I_XX = X;           //キューブ［アバター］
+    final int I_INS = 46;           //INsighT                       インサイト
+//    final int I_PAC = X;          //PAniC                         パニック
+    final int I_RWT = 62;           //Reduce WeighT                 リデュースウェイト
+    final int I_IAR = 45;           //Illusion[AvataR]              幻術[アバター]
+//    final int I_CAR = X;          //Cube[AvataR]                  キューブ[アバター]
 
     //LV3魔法     
-    final int I_PAT = 47;           //ペイシェンス
-//    final int I_XX = X;           //ファンタズム
-//    final int I_XX = X;           //アイズブレイカー
-    final int I_ID = 44;            //幻術[ダイアゴーレム]
-//    final int I_XX = X;           //キューブ［リッチ］
+    final int I_PAE = 47;           //PAtiencE                      ペイシェンス
+//    final int I_PHM = X;          //PHantasM                      ファンタズム
+//    final int I_EBR = X;          //Eyes BreakeR                  アイズブレイカー
+    final int I_IGM = 44;           //Illusion[GoleM]               幻術[ゴーレム]
+//    final int I_CRH = X;          //Cube[RicH]                    キューブ[リッチ]
 
     //LV2魔法 
-    final int I_CON = 48;           //コンセントレーション
-//    final int I_XX = X;           //マインドブレイク
-//    final int I_XX = X;           //ボーンブレイク
-    final int I_IR = 43;            //幻術[リッチ]
-//    final int I_XX = X;           //キューブ［ゴーレム］
+    final int I_CON = 48;           //COncentratioN                 コンセントレーション
+//    final int I_MBK = X;          //Mind BreaK                    マインドブレイク
+//    final int I_BBK = X;          //Bone BreaK                    ボーンブレイク
+    final int I_IRH = 43;           //Illusion[RicH]                幻術[リッチ]
+//    final int I_CGM = X;          //Cube[GoleM]                   キューブ[ゴーレム]
 
     //LV1魔法 
-    final int I_MI = 49;            //ミラーイメージ
-//    final int I_XX = X;           //コンフュージョン
-//    final int I_XX = X;           //スマッシュエネルギー
-    final int I_IO = 42;            //幻術[オーガ]
-//    final int I_XX = X;           //キューブ［オーガ］
+    final int I_MIE = 49;           //Mirror ImagE                  ミラーイメージ
+//    final int I_CFN = X;          //ConFusioN                     コンフュージョン
+//    final int I_SEY = X;          //Smash EnergY                  スマッシュエネルギー
+    final int I_IOE = 42;           //Illusion[OgrE]                幻術[オーガ]
+//    final int I_COE = X;          //Cube[OgrE]                    キューブ[オーガ]
 
 //ウォリアーの技術
     //アクティブスキル
@@ -328,7 +328,7 @@ public interface Common {
     final int S_CRH = 67;           //CRasH                         クラッシュ
     final int S_AGD = 66;           //Armor GuarD                   アーマーガード
     final int S_FUY = 68;           //FUrY                          フューリー
-//    final int S_DAE = X;          //Desperado: AbsolutE           デスペラード:アブソリュート
+//    final int S_DAE = X;          //Desperado:AbsolutE            デスペラード:アブソリュート
 
 //フェンサーの技術
 //  アクティブスキル

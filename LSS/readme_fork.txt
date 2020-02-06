@@ -2,6 +2,18 @@ LineageStatusSimulator_fork2018
 
 変更点
 2020/02/06
+Update 3.9.3
+LSS/src/lss/Calculator.java
+LSS/src/lss/Common.java
+LSS/src/lss/UI.java
+修正
+	ドラゴンナイト/イリュージョニストのスキルと変数とツールチップ
+追加
+	ハルパス(変数:116):未実装
+	アウラキア(変数:117):未実装
+	ポテンシャル(変数:118):未実装
+
+2020/02/06
 Update 3.9.2
 LSS/src/lss/Calculator.java
 LSS/data/E.zip

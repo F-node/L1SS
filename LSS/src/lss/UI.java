@@ -1489,27 +1489,63 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         lab_tmp.setBounds(200 * row, 20 * col++, 200, 20);
         panels[2].add(lab_tmp);
 
-        cb_buff[R_DS] = new JCheckBox("ドラゴンスキン");
-        cb_buff[R_DS].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[R_DS].setToolTipText("DR+5 Lv80でDR6 以降Lv2ごとにDR+1");
-        cb_buff[R_MB] = new JCheckBox("モータルボディー(未実装)");
-        cb_buff[R_MB].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[R_MB].setToolTipText("一定確率(25%)でAC/2(最低40)ダメージの反撃");
-        cb_buff[R_ANTHARAS] = new JCheckBox("覚醒[アンタラス]");
-        cb_buff[R_ANTHARAS].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[R_ANTHARAS].setToolTipText("AC-3");
-//        cb_buff[R_FAFURION] = new JCheckBox("覚醒[パプリオン]");
-//        cb_buff[R_FAFURION].setBounds(200 * row, 20 * col++, 150, 20);
-//        cb_buff[R_FAFURION].setToolTipText("重さが50~82%でも､HPとMPが自然回復する");
-        cb_buff[R_VALAKAS] = new JCheckBox("覚醒[ヴァラカス]");
-        cb_buff[R_VALAKAS].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[R_VALAKAS].setToolTipText("近接命中+5 技術耐性+10");
+        //ハルパス
+        cb_buff[R_HAS] = new JCheckBox("ハルパス(未実装)");
+        cb_buff[R_HAS].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[R_HAS].setToolTipText("<html>"+ "[消費MP:18][消費HP:--]"
+                                      + "<br>"+ "攻撃をしてきた対象に一定確率(不明)でカウンターダメージを与える"
+                                      + "<br>"+ "カウンターダメージは武器の[Small打撃値]x3"
+                                      + "<br>"+ "[習得レベル:85][持続時間:2分8秒][対象:術者][触媒:刻印のボーンピース(1)]"+"</html>");
+
+        //覚醒[リンドビオル]
         cb_buff[R_LINDVIOL] = new JCheckBox("覚醒[リンドビオル]");
         cb_buff[R_LINDVIOL].setBounds(200 * row, 20 * col++, 180, 20);
-        cb_buff[R_LINDVIOL].setToolTipText("DG+7");
-        cb_buff[R_FS2] = new JCheckBox("フォースレイヤー:ブレイブ(未実装)");
-        cb_buff[R_FS2].setBounds(200 * row, 20 * col++, 180, 20);
-        cb_buff[R_FS2].setToolTipText("弱点露出4段目が解放");
+
+        //アウラキア
+        cb_buff[R_AUA] = new JCheckBox("アウラキア(未実装)");
+        cb_buff[R_AUA].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[R_AUA].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                      + "<br>"+ "覚醒を2種類まで重複が可能になる"
+                                      + "<br>"+ "覚醒スキルの消費MPを5減少させる"
+                                      + "<br>"+ "[習得レベル:80][持続時間:常時][対象:術者][触媒:刻印のボーンピース(1)]"+"</html>");
+
+        //フォースレイヤー:ブレイブ
+        cb_buff[R_FSB] = new JCheckBox("フォースレイヤー:ブレイブ(未実装)");
+        cb_buff[R_FSB].setBounds(200 * row, 20 * col++, 180, 20);
+        cb_buff[R_FSB].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                      + "<br>"+ "弱点露出4段目が解放"
+                                      + "<br>"+ "リニューアル後:弱点露出に追加効果　一定確率でスタン状態にする"
+                                      + "<br>"+ "[習得レベル:85][持続時間:常時][対象:術者]"+"</html>");
+
+        //モータルボディー
+        cb_buff[R_MBY] = new JCheckBox("モータルボディー(未実装)");
+        cb_buff[R_MBY].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[R_MBY].setToolTipText("<html>"+ "[消費MP:--][消費HP:50]"
+                                      + "<br>"+ "攻撃をしてきた対象に一定確率(25%)でカウンターダメージを与える"
+                                      + "<br>"+ "カウンターダメージは[AC]/[2]最小は40ダメージ"
+                                      + "<br>"+ "[習得レベル:60][持続時間:5分][対象:術者]"+"</html>");
+
+
+        //覚醒[ヴァラカス]
+        cb_buff[R_VALAKAS] = new JCheckBox("覚醒[ヴァラカス]");
+        cb_buff[R_VALAKAS].setBounds(200 * row, 20 * col++, 150, 20);
+
+        //覚醒[パプリオン]
+        cb_buff[R_FAFURION] = new JCheckBox("覚醒[パプリオン]");
+        cb_buff[R_FAFURION].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[R_FAFURION].setToolTipText("<html>"+ "[消費MP:30][消費HP:20]"
+                                           + "<br>"+ "重量ゲージが50％を超えてもHPとMPが自然回復する"
+                                           + "<br>"+ "重量ゲージの範囲50から82%?"
+                                           + "<br>"+ "キャンセレーションで解除されない"
+                                           + "<br>"+ "[習得レベル:40][持続時間:10分][対象:術者][触媒:刻印のボーンピース(1)]"+"</html>");
+
+        //ドラゴンスキン
+        cb_buff[R_DSN] = new JCheckBox("ドラゴンスキン");
+        cb_buff[R_DSN].setBounds(200 * row, 20 * col++, 150, 20);
+
+        //覚醒[アンタラス]
+        cb_buff[R_ANTHARAS] = new JCheckBox("覚醒[アンタラス]");
+        cb_buff[R_ANTHARAS].setBounds(200 * row, 20 * col++, 150, 20);
         
         row = 3;
         col = 0;
@@ -1518,39 +1554,58 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         lab_tmp.setBounds(200 * row, 20 * col++, 200, 20);
         panels[2].add(lab_tmp);
 
-        cb_buff[I_MI] = new JCheckBox("ミラーイメージ");
-        cb_buff[I_MI].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[I_MI].setToolTipText("DG+30");
-        cb_buff[I_CON] = new JCheckBox("コンセントレーション");
-        cb_buff[I_CON].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[I_CON].setToolTipText("MPR+4");
-        cb_buff[I_PAT] = new JCheckBox("ペイシェンス");
-        cb_buff[I_PAT].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[I_PAT].setToolTipText("DR+2");
+        //ポテンシャル
+        cb_buff[I_POL] = new JCheckBox("ポテンシャル(未実装)");
+        cb_buff[I_POL].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[I_POL].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
+                                      + "<br>"+ "装備品や魔法が適用された状態の"
+                                      + "<br>"+ "[最大HP][最大MP][MR][SP][DG][ER]を20%上昇させる"
+                                      + "<br>"+ "アドバンスドスピリッツと重複する"
+                                      + "<br>"+ "[習得レベル:85][持続時間:2分8秒][対象:術者][触媒:属性石(2)]"+"</html>");
+        
+        //インパクト
+        cb_buff[I_IMT] = new JCheckBox("インパクト");
+        cb_buff[I_IMT].setBounds(200 * row, 20 * col++, 150, 20);
+
+        //フォーカススピリッツ
+        cb_buff[I_FSZ] = new JCheckBox("フォーカススピリッツ");
+        cb_buff[I_FSZ].setBounds(200 * row, 20 * col++, 180, 20);
+
+        //インサイト
         cb_buff[I_INS] = new JCheckBox("インサイト");
         cb_buff[I_INS].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[I_INS].setToolTipText("CHAを除く全ステータス+1");
-        cb_buff[I_RW] = new JCheckBox("リデュースウェイト");
-        cb_buff[I_RW].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[I_RW].setToolTipText("所持重量増加+480");
-        cb_buff[I_IO] = new JCheckBox("幻術[オーガ]");
-        cb_buff[I_IO].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[I_IO].setToolTipText("近距離ダメージ+4 近距離命中+4");
-        cb_buff[I_IR] = new JCheckBox("幻術[リッチ]");
-        cb_buff[I_IR].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[I_IR].setToolTipText("SP+2");
-        cb_buff[I_ID] = new JCheckBox("幻術[ダイアゴーレム]");
-        cb_buff[I_ID].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[I_ID].setToolTipText("AC-8");
-        cb_buff[I_IA] = new JCheckBox("幻術[アバター]");
-        cb_buff[I_IA].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[I_IA].setToolTipText("近距離ダメージ+10 遠距離ダメージ+10 魔法ダメージ+10 被ダメージ+5%");
-        cb_buff[I_FS] = new JCheckBox("フォーカススピリッツ");
-        cb_buff[I_FS].setBounds(200 * row, 20 * col++, 180, 20);
-        cb_buff[I_FS].setToolTipText("魔法クリティカル+5%");
-        cb_buff[I_IT] = new JCheckBox("インパクト");
-        cb_buff[I_IT].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[I_IT].setToolTipText("技術命中+5 精霊命中+5 竜語命中+5 恐怖命中+5");        
+
+        //リデュースウェイト
+        cb_buff[I_RWT] = new JCheckBox("リデュースウェイト");
+        cb_buff[I_RWT].setBounds(200 * row, 20 * col++, 150, 20);
+
+        //幻術[アバター]
+        cb_buff[I_IAR] = new JCheckBox("幻術/キューブ[アバター]");
+        cb_buff[I_IAR].setBounds(200 * row, 20 * col++, 150, 20);
+
+        //ペイシェンス
+        cb_buff[I_PAE] = new JCheckBox("ペイシェンス");
+        cb_buff[I_PAE].setBounds(200 * row, 20 * col++, 150, 20);
+
+        //幻術[ゴーレム]
+        cb_buff[I_IGM] = new JCheckBox("幻術/キューブ[ゴーレム]");
+        cb_buff[I_IGM].setBounds(200 * row, 20 * col++, 150, 20);
+
+        //幻術[リッチ]
+        cb_buff[I_IRH] = new JCheckBox("幻術/キューブ[リッチ]");
+        cb_buff[I_IRH].setBounds(200 * row, 20 * col++, 150, 20);
+
+        //コンセントレーション
+        cb_buff[I_CON] = new JCheckBox("コンセントレーション");
+        cb_buff[I_CON].setBounds(200 * row, 20 * col++, 150, 20);
+
+        //ミラーイメージ
+        cb_buff[I_MIE] = new JCheckBox("ミラーイメージ");
+        cb_buff[I_MIE].setBounds(200 * row, 20 * col++, 150, 20);
+
+        //幻術[オーガ]
+        cb_buff[I_IOE] = new JCheckBox("幻術/キューブ[オーガ]");
+        cb_buff[I_IOE].setBounds(200 * row, 20 * col++, 150, 20);
 
         lab_tmp = new JLabel("戦士技術");
         lab_tmp.setBounds(200 * row, 20 * col++, 200, 20);
