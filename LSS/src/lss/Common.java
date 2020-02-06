@@ -93,7 +93,7 @@ public interface Common {
     final int EARRING2 = 12;
 
 //エンチャント(0から103までの合計104個分)　UI.javaの217行目も合わせて変更必須
-//仮設定で119までの120個で処理
+//仮設定で119までの130個で処理
 //基本エンチャント
     final int ACC1 = 0;             //1段加速
     final int ACC2 = 1;             //2段加速
@@ -217,33 +217,33 @@ public interface Common {
 
 //ダークエルフの闇の精霊魔法
     //LV4魔法
-//    final int D_XX = X;           //アベンジャー(未実装)
-//    final int D_XX = X;           //シャドウステップ(未実装)
-//    final int D_XX = X;           //アーマーブレイク(未実装)
-//    final int D_XX = X;           //ルシファー(未実装)
-//    final int D_XX = X;           //ルシファー:デスティニー(未実装)
-    final int D_DB2 = 28;           //ダブルブレイク:デスティニー
-//    final int D_XX = X;           //アーマーブレイク:デスティニー(未実装)
+    final int D_AVR = 119;          //AVengeR                       アベンジャー(未実装)
+    final int D_SHS = 120;          //SHadow Step                   シャドウステップ(未実装)
+    final int D_ABK = 121;          //Armor BreaK                   アーマーブレイク(未実装)
+    final int D_LUR = 122;          //LUcifeR                       ルシファー(未実装)
+    final int D_LUD = 123;          //LUcifer:Destiny               ルシファー:デスティニー(未実装)
+    final int D_DBD = 28;           //Double Break:Destiny          ダブルブレイク:デスティニー
+    final int D_ABD = 124;          //Armor Break:Destiny           アーマーブレイク:デスティニー(未実装)
 
     //LV3魔法
-    final int D_DB = 29;            //ダブルブレイク
-    final int D_UD = 32;            //アンキャニードッジ
-//    final int D_XX = X;           //シャドウファング(未実装)
-    final int D_FB = 103;           //ファイナルバーン
-    final int D_DE = 31;            //ドレスイベイジョン
-    
+    final int D_DBK = 29;           //Double BreaK                  ダブルブレイク
+    final int D_UDE = 32;           //Uncanny DodgE                 アンキャニードッジ
+//    final int D_SFG = X;          //Shadow FanG                   シャドウファング(基本エンチャントのキャラ/武器で実装)
+    final int D_FBN = 103;          //Final BurN                    ファイナルバーン
+    final int D_DEN = 31;           //Dress EvasioN                 ドレスイベイジョン
+
     //LV2魔法
-    final int D_MA = 79;            //ムービングアクセレーション(未実装)
-    final int D_BS = 30;            //バーニングスピリッツ
-//    final int D_XX = X;           //シャドウスリープ(未実装)
-    final int D_VR = 80;            //ベノムレジスト(未実装)
+    final int D_MAN = 79;           //Moving AcceleratioN           ムービングアクセレーション(未実装)
+    final int D_BSS = 30;           //Burning SpiritS               バーニングスピリッツ
+//    final int D_SSP = X;          //Shadow SleeP                  シャドウスリープ(未実装)
+    final int D_VRT = 80;           //Venom ResisT                  ベノムレジスト(未実装)
 
     //LV1魔法
-//    final int D_XX = X;           //ブラインドハイディング(未実装)
-//    final int D_XX = X;           //エンチャントベノム(未実装)
-//    final int D_XX = X;           //ブリングストーン(未実装)
-    final int D_SA = 33;            //シャドウアーマー
-//    final int D_XX = X;           //ドレスマイティー(未実装)
+//    final int D_BHG = X;          //Blind HidinG                  ブラインドハイディング(未実装)
+//    final int D_EVM = X;          //Enchantment VenoM             エンチャントベノム(未実装)
+//    final int D_BRE = X;          //BRingstonE                    ブリングストーン(未実装)
+    final int D_SAR = 33;           //Shadow ArmoR                  シャドウアーマー
+//    final int D_DMY = X;          //Dress MightY                  ドレスマイティー(未実装)
 
 //ドラゴンナイトの秘技
     //LV4魔法
@@ -351,7 +351,7 @@ public interface Common {
     final int F_PRE = 107;          //RagE                          レイジ
     final int F_PIR = 108;          //Infinity:ArmoR                インフィニティ:アーマー
     final int F_PFE = 109;          //FramE                         フレイム
-//    final int F_PDS = XXX;        //DamascuS                      ダマスカス
+    final int F_PDS = 125;          //DamascuS                      ダマスカス
 
 //その他
     final int ITEM_BLUE = 50;       //魔力回復ポーション

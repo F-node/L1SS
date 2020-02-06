@@ -220,8 +220,8 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
     //ファイナルバーンで計104個分(0から103)
 //    JCheckBox[] cb_buff = new JCheckBox[104];
 //    JComboBox[] cb_buff_group = new JComboBox[104];
-    JCheckBox[] cb_buff = new JCheckBox[120];
-    JComboBox[] cb_buff_group = new JComboBox[120];
+    JCheckBox[] cb_buff = new JCheckBox[130];
+    JComboBox[] cb_buff_group = new JComboBox[130];
     //パネル4
     JComboBox cb_npc_level;
     JSlider[] s_target_res = new JSlider[ELEM_LIST.length];
@@ -1403,9 +1403,6 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[E_AST] = new JCheckBox("アクアショット");
         cb_buff[E_AST].setBounds(200 * row, 20 * col++, 150, 20);
 
-        col = 0;
-        row = 2;
-
         lab_tmp = new JLabel("精霊魔法(風)");
         lab_tmp.setBounds(200 * row, 20 * col++, 200, 20);
         panels[2].add(lab_tmp);
@@ -1413,6 +1410,9 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         //サイクロン
         cb_buff[E_CYE] = new JCheckBox("サイクロン");
         cb_buff[E_CYE].setBounds(200 * row, 20 * col++, 150, 20);
+
+        col = 0;
+        row = 2;
 
         //ストームショット
         cb_buff[E_SST] = new JCheckBox("ストームショット");
@@ -1432,7 +1432,7 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
 
         //エキゾチックバイタライズ
         cb_buff[E_EVE] = new JCheckBox("エキゾチックバイタライズ(未実装)");
-        cb_buff[E_EVE].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[E_EVE].setBounds(200 * row, 20 * col++, 200, 20);
 
         //アースガーディアン
         cb_buff[E_EGN] = new JCheckBox("アースガーディアン");
@@ -1450,38 +1450,98 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         lab_tmp.setBounds(200 * row, 20 * col++, 200, 20);
         panels[2].add(lab_tmp);
 
-        cb_buff[D_BS] = new JCheckBox("バーニングスピリッツ");
-        cb_buff[D_BS].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[D_BS].setToolTipText("一定確率(33%)で近距離ダメージ1.5倍");
+        //アベンジャー
+        cb_buff[D_AVR] = new JCheckBox("アベンジャー(未実装)");
+        cb_buff[D_AVR].setBounds(200 * row, 20 * col++, 200, 20);       
+        cb_buff[D_AVR].setToolTipText("<html>"+ "[消費MP:25][消費HP:--]"
+                                      + "<br>"+ "1セル内の対象に強力な物理ダメージを与える"
+                                      + "<br>"+ "対象のHPが30%以下だと一定確率(不明)で即死させる"
+                                      + "<br>"+ "ダメージはSTRと武器ダメージの影響を受けます"
+                                      + "<br>"+ "[習得レベル:85][持続時間:16分][対象:術者][触媒:ダークストーン(2)]"+"</html>");
 
-        cb_buff[D_DB] = new JCheckBox("ダブルブレイク");
-        cb_buff[D_DB].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[D_DB].setToolTipText("一定確率(33%)で武器ダメージ2倍");
+        //シャドウステップ
+        cb_buff[D_SHS] = new JCheckBox("シャドウステップ(未実装)");
+        cb_buff[D_SHS].setBounds(200 * row, 20 * col++, 200, 20);       
+        cb_buff[D_SHS].setToolTipText("<html>"+ "[消費MP:15][消費HP:--]"
+                                      + "<br>"+ "3セル内の対象に一瞬で接近して物理ダメージを与え一定確率(不明)でホールド状態にする"
+                                      + "<br>"+ "個別クールタイム"
+                                      + "<br>"+ "[習得レベル:80][持続時間:瞬間][対象:PC/NPC]"+"</html>");
 
-        cb_buff[D_DB2] = new JCheckBox("ダブルブレイク:デスティニー(未実装)");
-        cb_buff[D_DB2].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[D_DB2].setToolTipText("ダブルブレイク発動確率上昇 80レベルから1レベル毎に発動確率1%増加");
+        //アーマーブレイク
+        cb_buff[D_ABK] = new JCheckBox("アーマーブレイク(未実装)");
+        cb_buff[D_ABK].setBounds(200 * row, 20 * col++, 200, 20);       
+        cb_buff[D_ABK].setToolTipText("<html>"+ "[消費MP:50][消費HP:25]"
+                                      + "<br>"+ "1セル内の対象に一定確率(不明)で近距離攻撃の被ダメージを増加させる"
+                                      + "<br>"+ "術者の攻撃は+58%増加術者以外の攻撃は+20%増加"
+                                      + "<br>"+ "キャンセレーションで解除されない カウンターマジック無視"
+                                      + "<br>"+ "[習得レベル:80][持続時間:8秒][対象:PC][触媒:ダークストーン(2)]"+"</html>");
+        //ルシファー
+        cb_buff[D_LUR] = new JCheckBox("ルシファー(未実装)");
+        cb_buff[D_LUR].setBounds(200 * row, 20 * col++, 200, 20);       
+        cb_buff[D_LUR].setToolTipText("<html>"+ "[消費MP:15][消費HP:--]"
+                                      + "<br>"+ "被ダメージを10%低下"
+                                      + "<br>"+ "イミューントゥハームと重複不可能"
+                                      + "<br>"+ "キャンセレーションで解除されない"
+                                      + "<br>"+ "[習得レベル:80][持続時間:30秒][対象:術者][触媒:ダークストーン(2)]"+"</html>");
 
-        cb_buff[D_UD] = new JCheckBox("アンキャニードッジ");
-        cb_buff[D_UD].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[D_UD].setToolTipText("DG+30");
+        //ルシファー:デスティニー
+        cb_buff[D_LUD] = new JCheckBox("ルシファー:デスティニー(未実装)");
+        cb_buff[D_LUD].setBounds(200 * row, 20 * col++, 200, 20);       
+        cb_buff[D_LUD].setToolTipText("<html>"+ "[消費MP:25][消費HP:--]"
+                                      + "<br>"+ "ルシファーの持続時間を60秒にする"
+                                      + "<br>"+ "PVPダメージ低下+10%を追加"
+                                      + "<br>"+ "[習得レベル:85][持続時間:常時][対象:術者]"+"</html>");
 
-        cb_buff[D_DE] = new JCheckBox("ドレスイベイジョン");
-        cb_buff[D_DE].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[D_DE].setToolTipText("ER+18");
+        //ダブルブレイク:デスティニー
+        cb_buff[D_DBD] = new JCheckBox("ダブルブレイク:デスティニー");
+        cb_buff[D_DBD].setBounds(200 * row, 20 * col++, 200, 20);
 
-        cb_buff[D_SA] = new JCheckBox("シャドウアーマー");
-        cb_buff[D_SA].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[D_SA].setToolTipText("MR+5");
-//        cb_buff[D_MA] = new JCheckBox("ムービングアクセレーション");
-//        cb_buff[D_MA].setBounds(200 * row, 20 * col++, 150, 20);
-//        cb_buff[D_MA].setToolTipText("移動速度上昇");
-//        cb_buff[D_VR] = new JCheckBox("ベノムレジスト");
-//        cb_buff[D_VR].setBounds(200 * row, 20 * col++, 150, 20);
-//        cb_buff[D_VR].setToolTipText("毒無効");
-        cb_buff[D_FB] = new JCheckBox("ファイナルバーン");
-        cb_buff[D_FB].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[D_FB].setToolTipText("HPが70%以下の時、近距離クリティカル+5%(レベル80から2つレベルが上がる毎に+1%)");
+        //アーマーブレイク:デスティニー
+        cb_buff[D_ABD] = new JCheckBox("アーマーブレイク:デスティニー(未実装)");
+        cb_buff[D_ABD].setBounds(200 * row, 20 * col++, 200, 20);       
+        cb_buff[D_ABD].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                      + "<br>"+ "アーマーブレイクの成功率上昇"
+                                      + "<br>"+ "レベル85からレベル1毎に成功率が3%ずつ増加"
+                                      + "<br>"+ "アーマーブレイクの消費MPを35消費HPを20に低下"
+                                      + "<br>"+ "[習得レベル:85][持続時間:常時][対象:術者]"+"</html>");
+
+        //ダブルブレイク
+        cb_buff[D_DBK] = new JCheckBox("ダブルブレイク");
+        cb_buff[D_DBK].setBounds(200 * row, 20 * col++, 150, 20);
+
+        //アンキャニードッジ
+        cb_buff[D_UDE] = new JCheckBox("アンキャニードッジ");
+        cb_buff[D_UDE].setBounds(200 * row, 20 * col++, 150, 20);
+
+        //ファイナルバーン
+        cb_buff[D_FBN] = new JCheckBox("ファイナルバーン");
+        cb_buff[D_FBN].setBounds(200 * row, 20 * col++, 150, 20);
+
+        //ドレスイベイジョン
+        cb_buff[D_DEN] = new JCheckBox("ドレスイベイジョン");
+        cb_buff[D_DEN].setBounds(200 * row, 20 * col++, 150, 20);
+
+        //ムービングアクセレーション
+        cb_buff[D_MAN] = new JCheckBox("ムービングアクセレーション(未実装)");
+        cb_buff[D_MAN].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[D_MAN].setToolTipText("<html>"+ "[消費MP:10][消費HP:--]"
+                                      + "<br>"+ "移動速度のみ上昇"
+                                      + "<br>"+ "[習得レベル:40][持続時間:16分][対象:術者]"+"</html>");
+
+        //バーニングスピリッツ
+        cb_buff[D_BSS] = new JCheckBox("バーニングスピリッツ");
+        cb_buff[D_BSS].setBounds(200 * row, 20 * col++, 150, 20);
+
+        //ノムレジスト
+        cb_buff[D_VRT] = new JCheckBox("ベノムレジスト(未実装)");
+        cb_buff[D_VRT].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[D_VRT].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
+                                      + "<br>"+ "全ての毒を無効化する"
+                                      + "<br>"+ "[習得レベル:40][持続時間:5分20秒][対象:術者]"+"</html>");
+
+        //シャドウアーマー
+        cb_buff[D_SAR] = new JCheckBox("シャドウアーマー");
+        cb_buff[D_SAR].setBounds(200 * row, 20 * col++, 150, 20);
 
 //        col++;
 
@@ -1514,8 +1574,11 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[R_FSB].setBounds(200 * row, 20 * col++, 180, 20);
         cb_buff[R_FSB].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
                                       + "<br>"+ "弱点露出4段目が解放"
-                                      + "<br>"+ "リニューアル後:弱点露出に追加効果　一定確率でスタン状態にする"
+                                      + "<br>"+ "リニューアル後:弱点露出に追加効果 一定確率でスタン状態にする"
                                       + "<br>"+ "[習得レベル:85][持続時間:常時][対象:術者]"+"</html>");
+
+        row = 3;
+        col = 0;
 
         //モータルボディー
         cb_buff[R_MBY] = new JCheckBox("モータルボディー(未実装)");
@@ -1531,7 +1594,7 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[R_VALAKAS].setBounds(200 * row, 20 * col++, 150, 20);
 
         //覚醒[パプリオン]
-        cb_buff[R_FAFURION] = new JCheckBox("覚醒[パプリオン]");
+        cb_buff[R_FAFURION] = new JCheckBox("覚醒[パプリオン](未実装)");
         cb_buff[R_FAFURION].setBounds(200 * row, 20 * col++, 150, 20);
         cb_buff[R_FAFURION].setToolTipText("<html>"+ "[消費MP:30][消費HP:20]"
                                            + "<br>"+ "重量ゲージが50％を超えてもHPとMPが自然回復する"
@@ -1546,9 +1609,6 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         //覚醒[アンタラス]
         cb_buff[R_ANTHARAS] = new JCheckBox("覚醒[アンタラス]");
         cb_buff[R_ANTHARAS].setBounds(200 * row, 20 * col++, 150, 20);
-        
-        row = 3;
-        col = 0;
 
         lab_tmp = new JLabel("幻術魔法");
         lab_tmp.setBounds(200 * row, 20 * col++, 200, 20);
@@ -1670,6 +1730,9 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[F_PIZ] = new JCheckBox("インフィニティ:ブリッツ");
         cb_buff[F_PIZ].setBounds(200 * row, 20 * col++, 200, 20);
 
+        row = 4;
+        col = 0;
+
         //インフィニティ:ドッジ
         cb_buff[F_PIE] = new JCheckBox("インフィニティ:ドッジ");
         cb_buff[F_PIE].setBounds(200 * row, 20 * col++, 200, 20);
@@ -1696,8 +1759,12 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
                                       + "<br>"+ "対象に攻撃が命中した時に、一定確率で3秒間HPを減少させる(計算式不明)"
                                       + "<br>"+ "[習得レベル:45][持続時間:常時][対象:術者]"+"</html>");
 
-        row = 4;
-        col = 0;
+        //ダマスカス
+        cb_buff[F_PDS] = new JCheckBox("ダマスカス(未実装)");
+        cb_buff[F_PDS].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[F_PDS].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                      + "<br>"+ "着用した武器が損傷しなくなる"
+                                      + "<br>"+ "[習得レベル:45][持続時間:常時][対象:術者]"+"</html>");
         
         lab_tmp = new JLabel("その他");
         lab_tmp.setBounds(200 * row, 20 * col++, 200, 20);

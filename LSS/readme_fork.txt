@@ -2,6 +2,22 @@ LineageStatusSimulator_fork2018
 
 変更点
 2020/02/06
+Update 3.9.4
+LSS/src/lss/Calculator.java
+LSS/src/lss/Common.java
+LSS/src/lss/UI.java
+修正
+	ダークエルフ/フェンサーのスキルと変数とツールチップ
+追加
+	アベンジャー(変数:119):未実装
+	シャドウステップ(変数:120):未実装
+	アーマーブレイク(変数:121):未実装
+	ルシファー(変数:122):未実装
+	ルシファー:デスティニー(変数:123):未実装
+	アーマーブレイク:デスティニー(変数:124):未実装
+	ダマスカス(変数:125):未実装
+
+2020/02/06
 Update 3.9.3
 LSS/src/lss/Calculator.java
 LSS/src/lss/Common.java
