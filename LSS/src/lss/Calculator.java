@@ -2064,30 +2064,45 @@ public class Calculator implements Common {
             }
         }
         //ドレスイベイジョン 消費MP15/3mins
-        if (ui.cb_buff[D_DE].isSelected()) {
+        ui.cb_buff[D_DEN].setToolTipText("<html>"+ "[消費MP:15][消費HP:--]"
+                                         + "<br>"+ "遠距離回避(ER)+18"
+                                         + "<br>"+ "[習得レベル:60][持続時間:3分][対象:術者]"+"</html>");
+//リニューアル後
+//        ui.cb_buff[D_DEN].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+//                                         + "<br>"+ "遠距離回避(ER)+18"
+//                                         + "<br>"+ "[習得レベル:60][持続時間:常時][対象:術者]"+"</html>");
+        if (ui.cb_buff[D_DEN].isSelected()) {
             if (cls == D) {
                 buff.ER += 18;
 
-                if (ui.cb_buff[D_DE].getForeground().equals(Color.BLUE)) {
+                if (ui.cb_buff[D_DEN].getForeground().equals(Color.BLUE)) {
                     cons_mp += (15.0 * (1.0 - red_mp * 0.01) - red_mp2) / 3;
                 }
             } else {
-                ui.cb_buff[D_DE].setSelected(false);
+                ui.cb_buff[D_DEN].setSelected(false);
             }
         }
         //シャドウアーマー 消費MP12/16mins
-        if (ui.cb_buff[D_SA].isSelected()) {
+        ui.cb_buff[D_SAR].setToolTipText("<html>"+ "[消費MP:12][消費HP:--]"
+                                         + "<br>"+ "MR+5"
+                                         + "<br>"+ "キャンセレーションで解除されない"
+                                         + "<br>"+ "[習得レベル:20][持続時間:16分][対象:術者]"+"</html>");
+        if (ui.cb_buff[D_SAR].isSelected()) {
             if (cls == D) {
                 buff.MR += 5;
-                if (ui.cb_buff[D_SA].getForeground().equals(Color.BLUE)) {
+                if (ui.cb_buff[D_SAR].getForeground().equals(Color.BLUE)) {
                     cons_mp += (12.0 * (1.0 - red_mp * 0.01) - red_mp2) / 16;
                 }
             } else {
-                ui.cb_buff[D_SA].setSelected(false);
+                ui.cb_buff[D_SAR].setSelected(false);
             }
         }
         //ファイナルバーン 消費MP20 HP50/5mins
-        if (ui.cb_buff[D_FB].isSelected()) {
+        ui.cb_buff[D_FBN].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
+                                         + "<br>"+ "HPが70％以下になると近距離クリティカルが+5%増加"
+                                         + "<br>"+ "レベル80から2つレベルが上がる毎に+1%"
+                                         + "<br>"+ "[習得レベル:60][持続時間:常時][対象:術者/PC]"+"</html>");
+        if (ui.cb_buff[D_FBN].isSelected()) {
             //HPが70%以下の時、近距離クリティカル+5%(レベル80から2つレベルが上がる毎に+1%)
             if (level <= 80) {
             buff.CRI_SHORT += 5;
@@ -2100,7 +2115,7 @@ public class Calculator implements Common {
                                          + "<br>"+ "遠距離回避(ER)+5"
                                          + "<br>"+ "[習得レベル:60][持続時間:16分][対象:術者/PC]"+"</html>");
         if (ui.cb_buff[E_APR].isSelected()) {
-            if (ui.cb_buff[D_DE].isSelected()) {
+            if (ui.cb_buff[D_DEN].isSelected()) {
                 ui.cb_buff[E_APR].setSelected(false);
             } else {
                 buff.ER += 5;
@@ -4943,7 +4958,11 @@ buki.arrow_elementdmg=0;
             speed *= (atk_motion) / (atk_motion + vt_motion * vt_rate);
         }
         //ダブルブレイク
-        if (ui.cb_buff[D_DB].isSelected()) {
+        ui.cb_buff[D_DBK].setToolTipText("<html>"+ "[消費MP:12][消費HP:--]"
+                                         + "<br>"+ "一定確率(33%)でデュアルブレードとクロウのダメージを2倍にする"
+                                         + "<br>"+ "レベル45からレベル5毎に発動率が1%増加"
+                                         + "<br>"+ "[習得レベル:60][持続時間:3分12秒][対象:術者][触媒:ダークストーン(1)]"+"</html>");
+        if (ui.cb_buff[D_DBK].isSelected()) {
             if (buki_id == W_DB || buki_id == W_C) {
                 double db_lv_bonus = ((level - 45) / 5) * 0.01;
 
@@ -4957,12 +4976,16 @@ buki.arrow_elementdmg=0;
                 dmg_cursed *= 2.0 * (db_rate + db_lv_bonus)
                         + (1.0 - (db_rate + db_lv_bonus));
             } else {
-                ui.cb_buff[D_DB].setSelected(false);
-                ui.cb_buff[D_DB2].setSelected(false);
+                ui.cb_buff[D_DBK].setSelected(false);
+                ui.cb_buff[D_DBD].setSelected(false);
             }
         }
         //ダブルブレイク:デスティニー
-        if (ui.cb_buff[D_DB2].isSelected()) {
+        ui.cb_buff[D_DBD].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "ダブルブレイクの発動率上昇"
+                                         + "<br>"+ "80レベルから1レベル毎に発動確率1%増加"
+                                         + "<br>"+ "[習得レベル:80][持続時間:3分12秒][対象:術者]"+"</html>");
+        if (ui.cb_buff[D_DBD].isSelected()) {
             if (level >= 80 && cls == D
                     && buki_id == W_DB || buki_id == W_C) {
                 double db2_lv_bonus =(((level - 45) / 5) * 0.01)+((level - 79) * 0.01);
@@ -4976,10 +4999,10 @@ buki.arrow_elementdmg=0;
                         + (1.0 - (db_rate + db2_lv_bonus));
                 dmg_cursed *= 2.0 * (db_rate + db2_lv_bonus)
                         + (1.0 - (db_rate + db2_lv_bonus));
-                ui.cb_buff[D_DB].setSelected(false);
+                ui.cb_buff[D_DBK].setSelected(false);
             } else {
-                ui.cb_buff[D_DB].setSelected(false);
-                ui.cb_buff[D_DB2].setSelected(false);
+                ui.cb_buff[D_DBK].setSelected(false);
+                ui.cb_buff[D_DBD].setSelected(false);
             }
         }
         //武器属性
@@ -5076,7 +5099,10 @@ buki.arrow_elementdmg=0;
             }
         }
         //バーニングスピリッツ 消費MP20/5mins
-        if (ui.cb_buff[D_BS].isSelected()) {
+       ui.cb_buff[D_BSS].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                        + "<br>"+ "一定確率(33%)で近距離ダメージ1.5倍"
+                                        + "<br>"+ "[習得レベル:40][持続時間:常時][対象:術者]"+"</html>");
+       if (ui.cb_buff[D_BSS].isSelected()) {
             if (!(buki.type.equals("ボウ") || buki.type.equals("ガントレット"))) {
                 dmg_big_ave *= 1.5 * bs_rate
                         + 1.0 * (1.0 - bs_rate);
@@ -5097,7 +5123,7 @@ buki.arrow_elementdmg=0;
                     dmg_cursed -= 0.25 * bs_rate;
                 }
 
-                if (ui.cb_buff[D_BS].getForeground().equals(Color.BLUE)) {
+                if (ui.cb_buff[D_BSS].getForeground().equals(Color.BLUE)) {
                     cons_mp += (20.0 * (1.0 - red_mp * 0.01) - red_mp2) / 5;
                 }
             }
@@ -5646,9 +5672,13 @@ buki.arrow_elementdmg=0;
         mexp += buki.op.MEXP + buki.op2.MEXP;                                   //獲得経験値+X%(武器分)
 
         //アンキャニードッジ 消費MP40/16mins
-        if (ui.cb_buff[D_UD].isSelected()) {
+        ui.cb_buff[D_UDE].setToolTipText("<html>"+ "[消費MP:40][消費HP:--]"
+                                         + "<br>"+ "近距離回避[DG]+30 AC-100以上だとエフェクトが黄金に変化"
+                                         + "<br>"+ "キャンセレーションで解除されない"                
+                                         + "<br>"+ "[習得レベル:60][持続時間:16分][対象:術者][触媒:ダークストーン(1)]"+"</html>");
+        if (ui.cb_buff[D_UDE].isSelected()) {
             dg += 30;
-            if (ui.cb_buff[D_UD].getForeground().equals(Color.BLUE)) {
+            if (ui.cb_buff[D_UDE].getForeground().equals(Color.BLUE)) {
                 cons_mp += (40.0 * (1.0 - red_mp * 0.01) - red_mp2) / 16;
             }
         }
@@ -5684,7 +5714,7 @@ buki.arrow_elementdmg=0;
 		if (level >= 89) {
 		    dg += 20;                                                   //最大DG+20(LV89)
         	} else if (level >= 70) {
-		    dg += (level - 70) / 1 + 1;                                 //DG+((level - 70) / 1 + 1)
+		    dg += (level - 70) / 2 + 1;                                 //DG+((level - 70) / 2 + 1)
         	}
             } else {
                 ui.cb_buff[F_PIE].setSelected(false);
