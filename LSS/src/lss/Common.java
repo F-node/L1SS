@@ -189,32 +189,110 @@ public interface Common {
     final int E_EWN = 18;           //Earth WeapoN                  アースウェポン
 
 //ウィザードの魔法
+    //LV11魔法
+//    final int W_XX = X;           //Eternity                      エタニティ(未実装)
+//    final int W_XX = X;           //Meister Accuracy              マイスターアキュラシー(未実装)
+//    final int W_XX = x;           //Immun To Harm: Saint          イミューントゥハーム:セイント(未実装)
+
     //LV10魔法
-    final int W_ADS = 24;           //アドバンスドスピリッツ
+//    final int W_XX = X;           //Death heel                    デスヒール(未実装)
+//    final int W_XX = X;           //Meteor strike                 メテオストライク(未実装)
+//    final int W_XX = X;           //Greater Resurrection          グレーターリザレクション(未実装)
+//    final int W_XX = X;           //Ice Meteor                    アイスメテオ(未実装)
+//    final int W_XX = X;           //Disintegrate                  ディスインテグレート(未実装)
+//    final int W_XX = X;           //Absolute barrier              アブソルートバリア(未実装)
+    final int W_ADS = 24;           //Advanced spirits              アドバンスドスピリッツ
+//    final int W_XX = X;           //Ice spike                     アイススパイク(未実装)
 
     //LV9魔法
+//    final int W_XX = X;           //Lightning stormライトニングストーム(未実装)
+//    final int W_XX = X;           //Fog of sleepingフォグオブスリーピング(未実装)
+//    final int W_XX = X;           //Shape changeシェイプチェンジ(未実装)
+//    final int W_XX = X;           //Immun To Harmイミューントゥハーム(未実装)
+//    final int W_XX = X;           //Massteleportマステレポート(未実装)
+//    final int W_XX = X;           //Fire stormファイアーストーム(未実装)
+//    final int W_XX = X;           //Decay potionディケイポーション(未実装)
+//    final int W_XX = X;           //Counter detectionカウンターディテクション(未実装)
 
     //LV8魔法
-    
+//    final int W_FHL = X;          //Full HeeL                     フルヒール(未実装)
+//    final int W_FWL = X;          //Fire WalL                     ファイアーウォール(未実装)
+//    final int W_BLD = X;          //BLizzarD                      ブリザード(未実装)
+//    final int W_INY = X;          //INvisibilitY                  インビジビリティー(未実装)
+//    final int W_REN = X;          //REsurrectioN                  リザレクション(未実装)
+//    final int W_EAE = X;          //EArthquakE                    アースクエイク(未実装)
+//    final int W_LSM = X;          //Life StreaM                   ライフストリーム(未実装)
+//    final int W_SIE = X;          //SIlencE                       サイレンス(未実装)
+
     //LV7魔法
-    final int W_FA = 102;           //フリージングアーマー
-    final int W_BSK = 25;           //バーサーカー
-    final int W_EA = 101;           //エンチャントアキュラシー
+//    final int W_HAL = X;          //Heel AlL                      ヒールオール(未実装)
+    final int W_FAR = 102;          //Freezing ArmoR                フリージングアーマー
+//    final int W_SMR = X;          //Summon MonsteR                サモンモンスター(未実装)
+//    final int W_HWK = X;          //Holy WalK                     ホーリーウォーク(未実装)
+//    final int W_TOO = X;          //TOrnadO                       トルネード(未実装)
+//    final int W_GHT = X;          //Greater HeisT                 グレーターヘイスト(未実装)
+    final int W_BER = 25;           //BErserkeR                     バーサーカー
+    final int W_EAY = 101;          //Enchant Accuracy              エンチャントアキュラシー
 
     //LV6魔法
+//    final int W_CZE = X;          //Create ZombiE                 クリエイトゾンビ(未実装)
+//    final int W_PES = X;          //Physical Enchant:STR          フィジカルエンチャント:STR(未実装)
+//    final int W_HET = X;          //HEisT                         ヘイスト(未実装)
+//    final int W_CAN = X;          //CAncellatioN                  キャンセレーション(未実装)
+//    final int W_IRN = X;          //IRaptioN                      イラプション(未実装)
+//    final int W_SUT = X;          //SUnbursT                      サンバースト(未実装)
+//    final int W_WES = X;          //WEaknesS                      ウィークネス(未実装)
+//    final int W_BWN = X;          //Breath WeapoN                 ブレスウェポン(未実装)
 
     //LV5魔法
+//    final int W_CPE = X;          //Curse ParalyzE                カーズパラライズ(未実装)
+//    final int W_CLG = X;          //Call LightninG                コールライトニング(未実装)
+//    final int W_GHL = X;          //Greater HeeL                  グレーターヒール(未実装)
+//    final int W_TMR = X;          //Taming MonsteR                テイミングモンスター(未実装)
+//    final int W_RCE = X;          //Remove CursE                  リムーブカーズ(未実装)
+//    final int W_COC = X;          //Corn Of Cold                  コーンオブコールド(未実装)
+//    final int W_MDN = X;          //Mana DraiN                    マナドレイン(未実装)
+//    final int W_DAS = X;          //DArknesS                      ダークネス(未実装)
 
     //LV4魔法
+//    final int W_FIL = X;          //FIrebalL                      ファイアーボール(未実装)
+//    final int W_PED = X;          //Physical Enchant:DEX          フィジカルエンチャント:DEX(未実装)
+//    final int W_WBK = X;          //Weapon BreaK                  ウェポンブレイク(未実装)
+//    final int W_VTH = X;          //Vampiric ToucH                バンパイアリックタッチ(未実装)
+//    final int W_THW = X;          //THroW                         スロー(未実装)
+//    final int W_EJL = X;          //Earth JaiL                    アースジェイル(未実装)
+//    final int W_CMC = X;          //Counter MagiC                 カウンターマジック(未実装)
+//    final int W_MEN = X;          //MEditatioN                    メディテーション(未実装)
 
     //LV3魔法
-    final int W_BA = 27;            //ブレスドアーマー
+//    final int W_LIG = X;          //LIghtninG                     ライトニング(未実装)
+//    final int W_TUD = X;          //Turn UndeaD                   ターンアンデッド(未実装)
+//    final int W_EHL = X;          //Extra HeeL                    エキストラヒール(未実装)
+//    final int W_CBD = X;          //Curse BlinD                   カーズブラインド(未実装)
+    final int W_BAR = 27;           //Blessed ArmoR                 ブレスドアーマー
+//    final int W_FCD = X;          //Frozen ClouD                  フローズンクラウド(未実装)
+//    final int W_WEL = X;          //Week ElementaL                ウィークエレメンタル(未実装)
 
     //LV2魔法
-    final int W_DW = 26;            //ディクリースウェイト
+//    final int W_CPN = X;          //Cure PoisoN                   キュアポイズン(未実装)
+//    final int W_CRH = X;          //Chill ToucH                   チルタッチ(未実装)
+//    final int W_CPN = X;          //Cars PoisoN                   カーズポイズン(未実装)
+//    final int W_EWN = X;          //Enchant WeapoN                エンチャントウェポン(未実装)
+//    final int W_DEN = X;          //DEtectioN                     ディテクション(未実装)
+    final int W_DWT = 26;           //Decrease WeighT               ディクリースウェイト
+//    final int W_FAW = X;          //Fire ArroW                    ファイアーアロー(未実装)
+//    final int W_STK = X;          //STarracK                      スタラック(未実装)
 
     //LV1魔法
-
+//    final int W_HEL = X;          //HEaL                          ヒール(未実装)
+//    final int W_LIT = X;          //LIghT                         ライト(未実装)
+//    final int W_SHD = X;          //SHielD                        シールド(未実装)
+//    final int W_EBT = X;          //Energy BolT                   エネルギーボルト(未実装)
+//    final int W_TET = X;          //TEleporT                      テレポート(未実装)
+//    final int W_IDR = X;          //Ice DaggeR                    アイスダガー(未実装)
+//    final int W_WCR = X;          //Wind CutteR                   ウィンドカッター(未実装)
+//    final int W_HWS = X;          //Holy WeaponS                  ホーリーウェポン(未実装)
+    
 //ダークエルフの闇の精霊魔法
     //LV4魔法
     final int D_AVR = 119;          //AVengeR                       アベンジャー(未実装)
@@ -354,6 +432,7 @@ public interface Common {
     final int F_PDS = 125;          //DamascuS                      ダマスカス
 
 //その他
+    final int DRAGON_BLESS = 126;   //ドラゴンの祝福
     final int ITEM_BLUE = 50;       //魔力回復ポーション
     final int ITEM_WIZP = 51;       //ウィズダムポーション
     final int ITEM_COOKING = 54;    //料理
