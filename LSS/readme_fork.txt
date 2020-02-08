@@ -1,6 +1,16 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2020/02/08
+Update 3.9.5
+LSS/src/lss/Calculator.java
+LSS/src/lss/Common.java
+LSS/src/lss/UI.java
+修正
+	一般魔法とその他の変数とツールチップ
+追加
+	ドラゴンの祝福(変数:126):2か所の判定で実装している為、注意が必要
+
 2020/02/06
 Update 3.9.4
 LSS/src/lss/Calculator.java

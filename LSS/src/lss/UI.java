@@ -1215,24 +1215,24 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[W_ADS].setBounds(200 * row, 20 * col++, 150, 20);
 
         //フリージングアーマー
-        cb_buff[W_FA] = new JCheckBox("フリージングアーマー");
-        cb_buff[W_FA].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[W_FAR] = new JCheckBox("フリージングアーマー");
+        cb_buff[W_FAR].setBounds(200 * row, 20 * col++, 150, 20);
 
         //バーサーカー
-        cb_buff[W_BSK] = new JCheckBox("バーサーカー");
-        cb_buff[W_BSK].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[W_BER] = new JCheckBox("バーサーカー");
+        cb_buff[W_BER].setBounds(200 * row, 20 * col++, 150, 20);
 
         //エンチャントアキュラシー
-        cb_buff[W_EA] = new JCheckBox("エンチャントアキュラシー");
-        cb_buff[W_EA].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[W_EAY] = new JCheckBox("エンチャントアキュラシー");
+        cb_buff[W_EAY].setBounds(200 * row, 20 * col++, 150, 20);
 
         //ブレスドアーマー
-        cb_buff[W_BA] = new JCheckBox("ブレスドアーマー");
-        cb_buff[W_BA].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[W_BAR] = new JCheckBox("ブレスドアーマー");
+        cb_buff[W_BAR].setBounds(200 * row, 20 * col++, 150, 20);
 
         //ディクリースウェイト
-        cb_buff[W_DW] = new JCheckBox("ディクリースウェイト");
-        cb_buff[W_DW].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[W_DWT] = new JCheckBox("ディクリースウェイト");
+        cb_buff[W_DWT].setBounds(200 * row, 20 * col++, 150, 20);
 
 //        col++;
 
@@ -1769,6 +1769,10 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         lab_tmp = new JLabel("その他");
         lab_tmp.setBounds(200 * row, 20 * col++, 200, 20);
         panels[2].add(lab_tmp);
+
+        //ドラゴンの祝福
+        cb_buff[DRAGON_BLESS] = new JCheckBox("ドラゴンの祝福");
+        cb_buff[DRAGON_BLESS].setBounds(200 * row, 20 * col++, 150, 20);
 
         //魔力回復ポーション(魔力回復ポーション/古代の魔力回復ポーション/神秘の濃縮マナポーション)
         cb_buff[ITEM_BLUE] = new JCheckBox("魔力回復ポーション");

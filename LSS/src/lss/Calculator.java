@@ -2164,46 +2164,46 @@ public class Calculator implements Common {
             }
         }
         //バーサーカー 消費MP40/5mins
-        ui.cb_buff[W_BSK].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
+        ui.cb_buff[W_BER].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
                                          + "<br>"+ "近距離ダメージ+2 近距離命中+8 AC+10 HP自然回復不可"
                                          + "<br>"+ "[習得レベル:56][持続時間:5分20秒][対象:術者/PTメンバー(15セル)]"+"</html>");
-        if (ui.cb_buff[W_BSK].isSelected()) {
+        if (ui.cb_buff[W_BER].isSelected()) {
             buff.DMG_SHORT += 2;
             buff.HIT_SHORT += 8;
             buff.HPR -= 255;
             buff.AC += 10;
-            if (ui.cb_buff[W_BSK].getForeground().equals(Color.BLUE)) {
+            if (ui.cb_buff[W_BER].getForeground().equals(Color.BLUE)) {
                 cons_mp += (40.0 * (1.0 - red_mp * 0.01) - red_mp2) / 5;
             }
         }
         //ブレスドアーマー 消費MP20/30mins
-        ui.cb_buff[W_BA].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
-                                        + "<br>"+ "選択した鎧のAC-3"
-                                        + "<br>"+ "ダブルクリックで装備している鎧に自動詠唱する"
-                                        + "<br>"+ "[習得レベル:24][持続時間:30分][対象:術者/PTメンバー]"+"</html>");
-        if (ui.cb_buff[W_BA].isSelected()) {
+        ui.cb_buff[W_BAR].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
+                                         + "<br>"+ "選択した鎧のAC-3"
+                                         + "<br>"+ "ダブルクリックで装備している鎧に自動詠唱する"
+                                         + "<br>"+ "[習得レベル:24][持続時間:30分][対象:術者/PTメンバー]"+"</html>");
+        if (ui.cb_buff[W_BAR].isSelected()) {
             buff.AC -= 3;
-            if (ui.cb_buff[W_BA].getForeground().equals(Color.BLUE)) {
+            if (ui.cb_buff[W_BAR].getForeground().equals(Color.BLUE)) {
                 cons_mp += (20.0 * (1.0 - red_mp * 0.01) - red_mp2) / 30;
             }
         }
         //エンチャントアキュラシー 消費MP10/5mins
-        ui.cb_buff[W_EA].setToolTipText("<html>"+ "[消費MP:10][消費HP:--]"
-                                        + "<br>"+ "近距離命中+5"
-                                        + "<br>"+ "[習得レベル:56][持続時間:5分][対象:術者][触媒:魔力の石(1)]"+"</html>");
-        if (ui.cb_buff[W_EA].isSelected()) {
+        ui.cb_buff[W_EAY].setToolTipText("<html>"+ "[消費MP:10][消費HP:--]"
+                                         + "<br>"+ "近距離命中+5"
+                                         + "<br>"+ "[習得レベル:56][持続時間:5分][対象:術者][触媒:魔力の石(1)]"+"</html>");
+        if (ui.cb_buff[W_EAY].isSelected()) {
             buff.HIT_SHORT += 5;
-            if (ui.cb_buff[W_EA].getForeground().equals(Color.BLUE)) {
+            if (ui.cb_buff[W_EAY].getForeground().equals(Color.BLUE)) {
                 cons_mp += (10.0 * (1.0 - red_mp * 0.01) - red_mp2) / 5;
             }
         }
         //フリージングアーマー 消費MP20/5mins
-        ui.cb_buff[W_FA].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
-                                        + "<br>"+ "ER+5"
-                                        + "<br>"+ "[習得レベル:56][持続時間:5分][対象:術者][触媒:魔力の石(1)]"+"</html>");
-        if (ui.cb_buff[W_FA].isSelected()) {
+        ui.cb_buff[W_FAR].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
+                                         + "<br>"+ "ER+5"
+                                         + "<br>"+ "[習得レベル:56][持続時間:5分][対象:術者][触媒:魔力の石(1)]"+"</html>");
+        if (ui.cb_buff[W_FAR].isSelected()) {
             buff.ER += 5;
-            if (ui.cb_buff[W_FA].getForeground().equals(Color.BLUE)) {
+            if (ui.cb_buff[W_FAR].getForeground().equals(Color.BLUE)) {
                 cons_mp += (10.0 * (1.0 - red_mp * 0.01) - red_mp2) / 5;
             }
         }
@@ -2391,6 +2391,19 @@ public class Calculator implements Common {
                 ui.cb_buff[F_PIZ].setSelected(false);
             }
         }
+        //ドラゴンの祝福1(所持重量増加+500は別で処理)2か所の判定で実装している:5806行目参照
+        ui.cb_buff[DRAGON_BLESS].setToolTipText("<html>"+ "ダメージ減少+4"
+                                                + "<br>"+ "全ての耐性+5"
+                                                + "<br>"+ "PVPダメージ低下+5"
+                                                + "<br>"+ "所持重量増加+500"+"</html>");
+        if (ui.cb_buff[DRAGON_BLESS].isSelected()) {
+            buff.DR += 4;                               //ダメージ減少+4
+            buff.ailment[STUN] += 5;                    //技術耐性+5
+            buff.ailment[SPIRIT] += 5;                  //精霊耐性+5
+            buff.ailment[SECRET] += 5;                  //秘技耐性+5
+            buff.ailment[TERROR] += 5;                  //恐怖耐性+5
+            buff.PVP_DR += 5;                           //PVPダメージ低下+5
+        }
         //クレイ
         ui.cb_buff[CLAY].setToolTipText("<html>"+ "HP+100 MP+50 HPR+3 MPR+3"
                                         + "<br>"+ "近距離ダメージ+1 遠距離ダメージ+1 近距離命中+5"
@@ -2404,7 +2417,7 @@ public class Calculator implements Common {
             buff.DMG_LONG += 1;
             buff.HIT_SHORT += 5;
             buff.element_resist[EARTH] += 30;
-            ui.cb_buff[UI.W_DW].setSelected(true);
+            ui.cb_buff[W_DWT].setSelected(true);
         }
         //もみじリング
         ui.cb_buff[MOMIJI].setToolTipText("HP+200 全ステータス+1");
@@ -5762,7 +5775,7 @@ buki.arrow_elementdmg=0;
                                          + "<br>"+ "ディクリースウェイトの上位魔法"
                                          + "<br>"+ "[習得レベル:75][持続時間:30分][対象:術者]"+"</html>");
         if (ui.cb_buff[E_ELY].isSelected()) {
-            ui.cb_buff[W_DW].setSelected(false);
+            ui.cb_buff[W_DWT].setSelected(false);
             weight += 300;
             if (ui.cb_buff[E_ELY].getForeground().equals(Color.BLUE)) {
                 cons_mp += (30.0 * (1.0 - red_mp * 0.01) - red_mp2) / 30;
@@ -5774,22 +5787,26 @@ buki.arrow_elementdmg=0;
                                          + "<br>"+ "ディクリースウェイトの上位版なので重複不可能"
                                          + "<br>"+ "[習得レベル:60][持続時間:30分][対象:術者]"+"</html>");
         if (ui.cb_buff[I_RWT].isSelected()) {
-            ui.cb_buff[W_DW].setSelected(false);
+            ui.cb_buff[W_DWT].setSelected(false);
             weight += 480;
             if (ui.cb_buff[I_RWT].getForeground().equals(Color.BLUE)) {
                 cons_mp += (50.0 * (1.0 - red_mp * 0.01) - red_mp2) / 30;
             }
         }
         //ディクリースウェイト      消費MP:10/30mins 所持重量増加+180
-        ui.cb_buff[W_DW].setToolTipText("<html>"+ "[消費MP:10][消費HP:50]"
-                                        + "<br>"+ "所持重量増加+180"
-                                        + "<br>"+ "[習得レベル:80][持続時間:30分][対象:術者]"+"</html>");
-        if (ui.cb_buff[W_DW].isSelected()) {
+        ui.cb_buff[W_DWT].setToolTipText("<html>"+ "[消費MP:10][消費HP:50]"
+                                         + "<br>"+ "所持重量増加+180"
+                                         + "<br>"+ "[習得レベル:80][持続時間:30分][対象:術者]"+"</html>");
+        if (ui.cb_buff[W_DWT].isSelected()) {
             weight += 180;
-            if (ui.cb_buff[W_DW].getForeground().equals(Color.BLUE)) {
+            if (ui.cb_buff[W_DWT].getForeground().equals(Color.BLUE)) {
                 cons_mp += (10.0 * (1.0 - red_mp * 0.01) - red_mp2) / 30;
             }
         }
+        //ドラゴンの祝福2(重量のみの処理)2か所の判定で実装している
+        if (ui.cb_buff[DRAGON_BLESS].isSelected()) {
+            weight += 500;                              //所持重量増加+500
+        }        
         //所持可能な重量の上限を5400から無制限に変更
         //if (weight > 5400) {
         //    weight = 5400;
