@@ -1,6 +1,31 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2020/02/09
+Update 3.9.6
+LSS/src/lss/Bougu.java
+LSS/src/lss/Buff.java
+LSS/src/lss/Calculator.java
+LSS/data/E.zip
+修正
+	血戦防具を選択した時に強化+10が標準で選択されるように修正
+	防具のツールチップ(重さが1以上ある物を表示するように変更)
+	エリクサールーンのツールチップ
+	アルカの遺物のツールチップ
+	守護の紋章の重さ
+	各種矢/スティングの重さ(仮で1)
+	エルシャベのヘルムの重さ(仮で1)
+追加
+	防具の材質:の表示
+	防具の重さ:の表示
+	防具のEXP:の表示
+
+	英雄のヘルム
+	(確率DR+20と強化+1あたりDR発動率+1%増加効果は未実装)
+	英雄のブーツ
+	英雄のデスナイト変身リング
+	英雄の支配リング
+
 2020/02/08
 Update 3.9.5
 LSS/src/lss/Calculator.java

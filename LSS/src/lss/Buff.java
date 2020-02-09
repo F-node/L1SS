@@ -39,6 +39,7 @@ public class Buff implements Common {
     int PVP;
     int PVP_DR;
     int DR_IGNORED;
+    String MATERIAL="";
     int WEIGHT;
 
     int[] ailment = new int[AILMENT_LIST.length];
@@ -125,6 +126,9 @@ public class Buff implements Common {
             if (line.startsWith("MR=")) {
                 MR = Integer.parseInt(line.split("=")[1]);
             }
+            if (line.startsWith("材質=")) {
+                MATERIAL = line.split("=")[1];
+            }
             if (line.startsWith("重さ=")) {
                 WEIGHT = Integer.parseInt(line.split("=")[1]);
             }
@@ -169,6 +173,9 @@ public class Buff implements Common {
             }
             if (line.startsWith("魔法クリティカル=")) {
                CRI_MAGIC = Integer.parseInt(line.split("=")[1]);
+            }
+            if (line.startsWith("獲得経験値=")) {
+               MEXP = Integer.parseInt(line.split("=")[1]);
             }
 
         }

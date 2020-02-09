@@ -86,166 +86,173 @@ public class Bougu implements Common {
 
     public String getText() {
         String text = "";
-        text += "AC" + (op.AC + op2.AC);
+        if (op.WEIGHT > 0) {
+            text += "<html>"+ "AC: " + (op.AC * -1) + "+" + (op2.AC * -1);
+        }
         if (op.HP + op2.HP > 0) {
-            text += " HP+" + (op.HP + op2.HP);
+            text += "<br>"+ "最大HP: +" + (op.HP + op2.HP);
         }
         if (op.MP + op2.MP > 0) {
-            text += " MP+" + (op.MP + op2.MP);
+            text += "<br>"+ "最大MP: +" + (op.MP + op2.MP);
         }
         if (op.HPR + op2.HPR > 0) {
-            text += " HP自然回復+" + (op.HPR + op2.HPR);
+            text += "<br>"+ "HP自然回復: +" + (op.HPR + op2.HPR);
         }
         if (op.HPR + op2.HPR < 0) {
-            text += " HP自然回復" + (op.HPR + op2.HPR);
+            text += "<br>"+ "HP自然回復: " + (op.HPR + op2.HPR);
         }
         if (op.MPR + op2.MPR > 0) {
-            text += " MP自然回復+" + (op.MPR + op2.MPR);
+            text += "<br>"+ "MP自然回復: +" + (op.MPR + op2.MPR);
         }
         if (op.MPR + op2.MPR < 0) {
-            text += " MP自然回復" + (op.MPR + op2.MPR);
+            text += "<br>"+ "MP自然回復: " + (op.MPR + op2.MPR);
         }
         if (op.ST[STR] + op2.ST[STR] > 0) {
-            text += " STR+" + (op.ST[STR] + op2.ST[STR]);
+            text += "<br>"+ "STR: +" + (op.ST[STR] + op2.ST[STR]);
         }
         if (op.ST[DEX] + op2.ST[DEX] > 0) {
-            text += " DEX+" + (op.ST[DEX] + op2.ST[DEX]);
+            text += "<br>"+ "DEX: +" + (op.ST[DEX] + op2.ST[DEX]);
         }
         if (op.ST[CON] + op2.ST[CON] > 0) {
-            text += " CON+" + (op.ST[CON] + op2.ST[CON]);
+            text += "<br>"+ "CON: +" + (op.ST[CON] + op2.ST[CON]);
         }
         if (op.ST[INT] + op2.ST[INT] > 0) {
-            text += " INT+" + (op.ST[INT] + op2.ST[INT]);
+            text += "<br>"+ "INT: +" + (op.ST[INT] + op2.ST[INT]);
         }
         if (op.ST[WIS] + op2.ST[WIS] > 0) {
-            text += " WIS+" + (op.ST[WIS] + op2.ST[WIS]);
+            text += "<br>"+ "WIS: +" + (op.ST[WIS] + op2.ST[WIS]);
         }
         if (op.ST[CHA] + op2.ST[CHA] > 0) {
-            text += " CHA+" + (op.ST[CHA] + op2.ST[CHA]);
+            text += "<br>"+ "CHA: +" + (op.ST[CHA] + op2.ST[CHA]);
         }
         if (op.ST[STR] < 0) {
-            text += " STR" + op.ST[STR];
+            text += "<br>"+ "STR: " + op.ST[STR];
         }
         if (op.ST[DEX] < 0) {
-            text += " DEX" + op.ST[DEX];
+            text += "<br>"+ "DEX: " + op.ST[DEX];
         }
         if (op.ST[CON] < 0) {
-            text += " CON" + op.ST[CON];
+            text += "<br>"+ "CON:" + op.ST[CON];
         }
         if (op.ST[INT] < 0) {
-            text += " INT" + op.ST[INT];
+            text += "<br>"+ "INT: " + op.ST[INT];
         }
         if (op.ST[WIS] < 0) {
-            text += " WIS" + op.ST[WIS];
+            text += "<br>"+ "WIS: " + op.ST[WIS];
         }
         if (op.ST[CHA] < 0) {
-            text += " CHA" + op.ST[CHA];
+            text += "<br>"+ "CHA: " + op.ST[CHA];
         }
         if (op.DMG_SHORT + op2.DMG_SHORT > 0) {
-            text += " 近距離ダメージ+" + (op.DMG_SHORT + op2.DMG_SHORT);
+            text += "<br>"+ "近距離ダメージ: +" + (op.DMG_SHORT + op2.DMG_SHORT);
         }
         if (op.HIT_SHORT + op2.HIT_SHORT > 0) {
-            text += " 近距離命中+" + (op.HIT_SHORT + op2.HIT_SHORT);
+            text += "<br>"+ "近距離命中: +" + (op.HIT_SHORT + op2.HIT_SHORT);
         }
         if (op.DMG_LONG + op2.DMG_LONG > 0) {
-            text += " 遠距離ダメージ+" + (op.DMG_LONG + op2.DMG_LONG);
+            text += "<br>"+ "遠距離ダメージ: +" + (op.DMG_LONG + op2.DMG_LONG);
         }
         if (op.HIT_LONG + op2.HIT_LONG > 0) {
-            text += " 遠距離命中+" + (op.HIT_LONG + op2.HIT_LONG);
+            text += "<br>"+ "遠距離命中: +" + (op.HIT_LONG + op2.HIT_LONG);
         }
         if (op.SP + op2.SP > 0) {
-            text += " SP+" + (op.SP + op2.SP);
+            text += "<br>"+ "SP: +" + (op.SP + op2.SP);
         }
         if (op.SP < 0) {
-            text += " SP" + op.SP;
+            text += "<br>"+ "SP: " + op.SP;
         }
         if (op.HIT_MAGIC + op2.HIT_MAGIC > 0) {
-            text += " 魔法命中+" + (op.HIT_MAGIC + op2.HIT_MAGIC);
+            text += "<br>"+ "魔法命中: +" + (op.HIT_MAGIC + op2.HIT_MAGIC);
         }
         if (op.CRI_SHORT + op2.CRI_SHORT > 0) {
-            text += " 近距離クリティカル+" + (op.CRI_SHORT + op2.CRI_SHORT);
+            text += "<br>"+ "近距離クリティカル: +" + (op.CRI_SHORT + op2.CRI_SHORT);
         }
         if (op.CRI_LONG + op2.CRI_LONG > 0) {
-            text += " 遠距離クリティカル+" + (op.CRI_LONG + op2.CRI_LONG);
+            text += "<br>"+ "遠距離クリティカル: +" + (op.CRI_LONG + op2.CRI_LONG);
         }
         if (op.CRI_MAGIC + op2.CRI_MAGIC > 0) {
-            text += " 魔法クリティカル+" + (op.CRI_MAGIC + op2.CRI_MAGIC);
+            text += "<br>"+ "魔法クリティカル: +" + (op.CRI_MAGIC + op2.CRI_MAGIC);
         }
         if (op.element_resist[FIRE] > 0) {
-            text += " 火属性MR" + op.element_resist[FIRE];
+            text += "<br>"+ "火属性MR: " + op.element_resist[FIRE];
         }
         if (op.element_resist[WATER] > 0) {
-            text += " 水属性MR" + op.element_resist[WATER];
+            text += "<br>"+ "水属性MR: " + op.element_resist[WATER];
         }
         if (op.element_resist[WIND] > 0) {
-            text += " 風属性MR" + op.element_resist[WIND];
+            text += "<br>"+ "風属性MR: " + op.element_resist[WIND];
         }
         if (op.element_resist[EARTH] > 0) {
-            text += " 地属性MR" + op.element_resist[EARTH];
+            text += "<br>"+ "地属性MR: " + op.element_resist[EARTH];
         }
         if (op.MR + op2.MR > 0) {
-            text += " MR+" + (op.MR + op2.MR);
+            text += "<br>"+ "MR:+" + (op.MR + op2.MR);
         }
         if (mr_enchant > 0) {
-            text += " (強化毎にMR+" + mr_enchant + ")";
+            text += "<br>"+ "(強化毎にMR+" + mr_enchant + ")";
         }
         if (op.ailment[STUN] + op2.ailment[STUN] > 0) {
-            text += " 技術耐性+" + (op.ailment[STUN] + op2.ailment[STUN]);
+            text += "<br>"+ "技術耐性: +" + (op.ailment[STUN] + op2.ailment[STUN]);
         }
         if (op.ailment[SPIRIT] + op2.ailment[SPIRIT] > 0) {
-            text += " 精霊耐性+" + (op.ailment[SPIRIT] + op2.ailment[SPIRIT]);
+            text += "<br>"+ "精霊耐性: +" + (op.ailment[SPIRIT] + op2.ailment[SPIRIT]);
         }
         if (op.ailment[SECRET] + op2.ailment[SECRET] > 0) {
-            text += " 秘技耐性+" + (op.ailment[SECRET] + op2.ailment[SECRET]);
+            text += "<br>"+ "秘技耐性: +" + (op.ailment[SECRET] + op2.ailment[SECRET]);
         }
         if (op.ailment[TERROR] + op2.ailment[TERROR] > 0) {
-            text += " 恐怖耐性+" + (op.ailment[TERROR] + op2.ailment[TERROR]);
+            text += "<br>"+ "恐怖耐性: +" + (op.ailment[TERROR] + op2.ailment[TERROR]);
         }
         if (op.ailment[HIT_STUN] + op2.ailment[HIT_STUN] > 0) {
-            text += " 技術命中+" + (op.ailment[HIT_STUN] + op2.ailment[HIT_STUN]);
+            text += "<br>"+ "技術命中: +" + (op.ailment[HIT_STUN] + op2.ailment[HIT_STUN]);
         }
         if (op.ailment[HIT_SPIRIT] + op2.ailment[HIT_SPIRIT] > 0) {
-            text += " 精霊命中+" + (op.ailment[HIT_SPIRIT] + op2.ailment[HIT_SPIRIT]);
+            text += "<br>"+ "精霊命中: +" + (op.ailment[HIT_SPIRIT] + op2.ailment[HIT_SPIRIT]);
         }
         if (op.ailment[HIT_SECRET] + op2.ailment[HIT_SECRET] > 0) {
-            text += " 秘技命中+" + (op.ailment[HIT_SECRET] + op2.ailment[HIT_SECRET]);
+            text += "<br>"+ "秘技命中: +" + (op.ailment[HIT_SECRET] + op2.ailment[HIT_SECRET]);
         }
         if (op.ailment[HIT_TERROR] + op2.ailment[HIT_TERROR] > 0) {
-            text += " 恐怖命中+" + (op.ailment[HIT_TERROR] + op2.ailment[HIT_TERROR]);
+            text += "<br>"+ "恐怖命中: +" + (op.ailment[HIT_TERROR] + op2.ailment[HIT_TERROR]);
         }
         if (op.DR + op2.DR > 0) {
-            text += " ダメージ低下+" + (op.DR + op2.DR);
+            text += "<br>"+ "ダメージ低下: +" + (op.DR + op2.DR);
         }
         if (op.DR_IGNORED + op2.DR_IGNORED > 0) {
-            text += " ダメージ低下無視+" + (op.DR_IGNORED + op2.DR_IGNORED);
+            text += "<br>"+ "ダメージ低下無視: +" + (op.DR_IGNORED + op2.DR_IGNORED);
         }
         if (op.PVP + op2.PVP > 0) {
-            text += " PVP追加ダメージ+" + (op.PVP + op2.PVP);
+            text += "<br>"+ "PVP追加ダメージ: +" + (op.PVP + op2.PVP);
         }
         if (op.PVP_DR + op2.PVP_DR > 0) {
-            text += " PVPダメージ低下+" + (op.PVP_DR + op2.PVP_DR);
+            text += "<br>"+ "PVPダメージ低下: +" + (op.PVP_DR + op2.PVP_DR);
         }
         if (op.MHP + op2.MHP > 0) {
-            text += " 最大HP+" + (op.MHP + op2.MHP) + "%";
+            text += "<br>"+ "最大HP: +" + (op.MHP + op2.MHP) + "%";
         }
         if (op.MMP + op2.MMP > 0) {
-            text += " 最大MP+" + (op.MMP + op2.MMP) + "%";
+            text += "<br>"+ "最大MP: +" + (op.MMP + op2.MMP) + "%";
         }
         if (op.MEXP + op2.MEXP > 0) {
-            text += " 獲得経験値+" + (op.MEXP + op2.MEXP) + "%";
+            text += "<br>"+ "EXP: +" + (op.MEXP + op2.MEXP) + "%";
         }
         if (op.c_weight + op2.c_weight > 0) {
-            text += " 所持重量増加+" + (op.c_weight + op2.c_weight);
+            text += "<br>"+ "所持重量増加: +" + (op.c_weight + op2.c_weight);
+        }
+        if (!op.MATERIAL.isEmpty()) {
+            text += "<br>"+ "材質: " + op.MATERIAL;
         }
         if (op.WEIGHT > 0) {
-            text += " 重さ " + op.WEIGHT;
+            text += "<br>"+ "重さ: " + op.WEIGHT;
         }
-
         if (!op.effect.isEmpty()) {
-            text += " " + op.effect;
+            text += "<br>"+ op.effect;
         }
         if (!op2.effect.isEmpty()) {
-            text += " " + op2.effect;
+            text += "<br>"+ op2.effect;
+        }
+        if (op.WEIGHT > 0) {
+            text += "</html>";
         }
         return text;
     }
