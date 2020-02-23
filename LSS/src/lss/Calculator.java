@@ -2104,10 +2104,10 @@ public class Calculator implements Common {
                                          + "<br>"+ "[習得レベル:60][持続時間:常時][対象:術者/PC]"+"</html>");
         if (ui.cb_buff[D_FBN].isSelected()) {
             //HPが70%以下の時、近距離クリティカル+5%(レベル80から2つレベルが上がる毎に+1%)
-            if (level <= 80) {
-            buff.CRI_SHORT += 5;
-            } else if (level > 80) {
-            buff.CRI_SHORT += 5+(level/2-40);
+            if (level < 80) {
+                buff.CRI_SHORT += 5;
+            } else if (level >= 80) {
+                buff.CRI_SHORT += 5 + ((level - 80) / 2 + 1);
             }
         }
         //アクアプロテクター 消費MP30/16mins
@@ -6061,9 +6061,9 @@ buki.arrow_elementdmg=0;
         if (ui.cb_buff[F_PIE].isSelected()) {
             if (cls == F) {            	
 		if (level >= 89) {
-		    dg += 20;                                                   //最大DG+20(LV89)
+                    dg += 20;                                                   //最大DG+20(LV89)
         	} else if (level >= 70) {
-		    dg += (level - 70) / 2 + 1;                                 //DG+((level - 70) / 2 + 1)
+                    dg += 5 + ((level - 70) / 2 + 1);                           //基本DG+5 + ((level - 70) / 2 + 1)
         	}
             } else {
                 ui.cb_buff[F_PIE].setSelected(false);
@@ -6760,7 +6760,7 @@ buki.arrow_elementdmg=0;
                 buki_text += "ダメージ" + buki.small + "+" + (buki.enchant + buki.op2.DMG_LONG) + "/" + buki.big + "+" + (buki.enchant + buki.op2.DMG_LONG);      
             } else {
                 buki_text += "ダメージ" + buki.small + "+" + (buki.enchant + buki.op2.DMG_SHORT) + "/" + buki.big + "+" + (buki.enchant + buki.op2.DMG_SHORT);
-            }
+        }
         }
         if (buki.two_hands) {
             buki_text += " 両手武器";
@@ -6768,7 +6768,7 @@ buki.arrow_elementdmg=0;
         if (buki.op.DMG_SHORT > 0) {
 //            buki_text += " 近距離追加ダメージ+" + buki.op.DMG_SHORT;
             buki_text += " 近距離ダメージ+" + buki.op.DMG_SHORT;
-        }
+            }
         if (buki.op.DMG_LONG < 0) {
 //            buki_text += " 近距離追加ダメージ" + buki.op.DMG_LONG;
             buki_text += " 近距離ダメージ" + buki.op.DMG_LONG;
