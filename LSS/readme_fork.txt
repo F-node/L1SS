@@ -1,6 +1,13 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2020/02/23
+Update 3.9.7
+LSS/src/lss/Calculator.java
+修正
+	インフィニティ:ドッジの計算式(LV70の基本DG+5が未反映 LV70時DG+6)
+	ファイナルバーンの計算式(LV80からクリティカル+1%が未反映 LV80時クリティカル+6%)
+
 2020/02/09
 Update 3.9.6
 LSS/src/lss/Bougu.java
