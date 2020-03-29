@@ -1,6 +1,13 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2020/03/30
+Update 3.9.8
+LSS/data/E.zip
+修正
+	フェンサー装備不可能を修正
+	ストーングローブ
+
 2020/02/23
 Update 3.9.7
 LSS/src/lss/Calculator.java
