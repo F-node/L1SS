@@ -4570,10 +4570,10 @@ public class Calculator implements Common {
                     ml = 7;
                 }
                 break;
-            case W:                     //ウィザード:マジックレベル最大13から14へ変更
-                ml = level / 4;
-                if (ml > 14) {
-                    ml = 14;
+            case W:                     //ウィザード:マジックレベル最大13から15へ変更
+                ml = level / 6;
+                if (ml > 15) {
+                    ml = 15;
                 }
                 break;
             case D:
