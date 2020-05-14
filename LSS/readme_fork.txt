@@ -1,6 +1,15 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2020/05/14
+Update 3.10.0
+LSS/src/lss/Calculator.java
+修正
+	ウィザードのマジックレベルについて指摘を受け
+	修正前：0スタート 4レベル毎上限14
+	修正後：0スタート 6レベル毎上限15（レベル90時）
+		上限16(レベル96時)以降は未確認の為、今回は上限15で修正
+
 2020/04/27
 Update 3.9.9
 LSS/src/lss/Common.java
