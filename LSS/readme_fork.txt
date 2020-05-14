@@ -2,6 +2,12 @@ LineageStatusSimulator_fork2018
 
 変更点
 2020/05/14
+Update 4.0.0
+LSS/version.txt
+修正
+	3.9.9から3.10.0へバージョンナンバーを変更したら自動Updateが有効にならない為、4.0.0へ変更
+
+2020/05/14
 Update 3.10.0
 LSS/src/lss/Calculator.java
 修正
