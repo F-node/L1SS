@@ -1,6 +1,13 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2020/05/30
+Update 4.0.1
+LSS/data/E.zip
+修正
+	プリ装備不可能を修正
+	ナイトバルドのゲートル
+
 2020/05/14
 Update 4.0.0
 LSS/version.txt
