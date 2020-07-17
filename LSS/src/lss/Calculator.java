@@ -2391,19 +2391,43 @@ public class Calculator implements Common {
                 ui.cb_buff[F_PIZ].setSelected(false);
             }
         }
-        //ドラゴンの祝福1(所持重量増加+500は別で処理)2か所の判定で実装している:5806行目参照
-        ui.cb_buff[DRAGON_BLESS].setToolTipText("<html>"+ "ダメージ減少+4"
+        //ドラゴンの祝福1と加護1(所持重量増加+500は別で処理)2か所の判定で実装している:6165行目参照
+        ui.cb_buff[DRAGON_BLESS].setToolTipText("<html>"+ "ドラゴンの祝福:"
+                                                + "<br>"+ "ダメージ減少+4"
                                                 + "<br>"+ "全ての耐性+5"
                                                 + "<br>"+ "PVPダメージ低下+5"
-                                                + "<br>"+ "所持重量増加+500"+"</html>");
+                                                + "<br>"+ "所持重量増加+500"
+                                                + "<br>"
+                                                + "<br>"+ "ドラゴンの加護:"
+                                                + "<br>"+ "<ダメージ減少+2"
+                                                + "<br>"+ "所持重量増加+100"+"</html>");
+
         if (ui.cb_buff[DRAGON_BLESS].isSelected()) {
-            buff.DR += 4;                               //ダメージ減少+4
-            buff.ailment[STUN] += 5;                    //技術耐性+5
-            buff.ailment[SPIRIT] += 5;                  //精霊耐性+5
-            buff.ailment[SECRET] += 5;                  //秘技耐性+5
-            buff.ailment[TERROR] += 5;                  //恐怖耐性+5
-            buff.PVP_DR += 5;                           //PVPダメージ低下+5
+            switch ((String) ui.cb_buff_group[DRAGON_BLESS].getSelectedItem()) {
+                case "祝福":
+                    ui.cb_buff[DRAGON_BLESS].setToolTipText("<html>"+ "ドラゴンの祝福:"
+                                                            + "<br>"+ "ダメージ減少+4"
+                                                            + "<br>"+ "全ての耐性+5"
+                                                            + "<br>"+ "PVPダメージ低下+5"
+                                                            + "<br>"+ "所持重量増加+500"+"</html>");
+                    buff.DR += 4;                               //ダメージ減少+4
+                    buff.ailment[STUN] += 5;                    //技術耐性+5
+                    buff.ailment[SPIRIT] += 5;                  //精霊耐性+5
+                    buff.ailment[SECRET] += 5;                  //秘技耐性+5
+                    buff.ailment[TERROR] += 5;                  //恐怖耐性+5
+                    buff.PVP_DR += 5;                           //PVPダメージ低下+5
+                    break;
+                case "加護":
+                    ui.cb_buff[DRAGON_BLESS].setToolTipText("<html>"+ "ドラゴンの加護:"
+                                                            + "<br>"+ "ダメージ減少+2"
+                                                            + "<br>"+ "所持重量増加+100"+"</html>");
+                    buff.DR += 2;                               //ダメージ減少+2
+                    break;
+                default:
+                    break;
+            }
         }
+
         //クレイ
         ui.cb_buff[CLAY].setToolTipText("<html>"+ "HP+100 MP+50 HPR+3 MPR+3"
                                         + "<br>"+ "近距離ダメージ+1 遠距離ダメージ+1 近距離命中+5"
@@ -6139,10 +6163,20 @@ buki.arrow_elementdmg=0;
                 cons_mp += (10.0 * (1.0 - red_mp * 0.01) - red_mp2) / 30;
             }
         }
-        //ドラゴンの祝福2(重量のみの処理)2か所の判定で実装している
+        //ドラゴンの祝福2と加護2(重量のみの処理)2か所の判定で実装している
         if (ui.cb_buff[DRAGON_BLESS].isSelected()) {
-            weight += 500;                              //所持重量増加+500
-        }        
+            switch ((String) ui.cb_buff_group[DRAGON_BLESS].getSelectedItem()) {
+                case "祝福":
+                    weight += 500;                              //所持重量増加+500
+                    break;
+                case "加護":
+                    weight += 100;                              //所持重量増加+100
+                    break;
+                default:
+                    break;
+            }
+        }
+        
         //所持可能な重量の上限を5400から無制限に変更
         //if (weight > 5400) {
         //    weight = 5400;
