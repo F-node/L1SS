@@ -1,6 +1,15 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2020/07/17
+Update 4.0.2
+LSS/src/lss/Calculator.java
+LSS/src/lss/UI.java
+追加
+	ドラゴンの加護
+	効果：ダメージ減少+2、所持重量+100
+	またドラゴンの祝福の効果とは重複しない為、UIを一本化
+
 2020/05/30
 Update 4.0.1
 LSS/data/E.zip

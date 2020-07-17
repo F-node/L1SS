@@ -1204,6 +1204,13 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[VIP] = new JCheckBox("VIP");
         cb_buff[VIP].setBounds(200 * row, 20 * col++, 100, 20);
 
+        //ドラゴンの祝福
+        String list_DRAGON_BLESS[] = {"祝福", "加護"};
+        cb_buff_group[DRAGON_BLESS] = new WideComboBox(list_DRAGON_BLESS);
+        cb_buff_group[DRAGON_BLESS].setBounds(200 * row + 100, 20 * col, 80, 20);
+        cb_buff[DRAGON_BLESS] = new JCheckBox("ドラゴンの");
+        cb_buff[DRAGON_BLESS].setBounds(200 * row, 20 * col++, 100, 20);
+
 //        col++;
 
         lab_tmp = new JLabel("一般魔法");
@@ -1769,10 +1776,6 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         lab_tmp = new JLabel("その他");
         lab_tmp.setBounds(200 * row, 20 * col++, 200, 20);
         panels[2].add(lab_tmp);
-
-        //ドラゴンの祝福
-        cb_buff[DRAGON_BLESS] = new JCheckBox("ドラゴンの祝福");
-        cb_buff[DRAGON_BLESS].setBounds(200 * row, 20 * col++, 150, 20);
 
         //魔力回復ポーション(魔力回復ポーション/古代の魔力回復ポーション/神秘の濃縮マナポーション)
         cb_buff[ITEM_BLUE] = new JCheckBox("魔力回復ポーション");
