@@ -3,9 +3,9 @@
 LineageStatusSimulator is a character simulation of PC game "Lineage".
 
 # Screen shot
-<img src="https://raw.githubusercontent.com/TrickMasterJP/L1SS_2018/master/LSS_ScreenShot/LSS_SS_1_7.bmp" alt="image" width="996" height="638">
+<img src="https://raw.githubusercontent.com/TrickMasterJP/L1SS_2018/master/LSS_ScreenShot/LSS_SS_1_7.bmp" alt="image" width="498" height="319">
 
-<img src="https://raw.githubusercontent.com/TrickMasterJP/L1SS_2018/master/LSS_ScreenShot/LSS_SS_3_7.bmp" alt="image" width="996" height="638">
+<img src="https://raw.githubusercontent.com/TrickMasterJP/L1SS_2018/master/LSS_ScreenShot/LSS_SS_3_7.bmp" alt="image" width="498" height="319">
 
 # How to use
 - Push:Green button"Clone or download"
