@@ -20,9 +20,9 @@ public interface Common {
     final int CON = 4;
     final int CHA = 5;
 
-    //9種の職業
-    final String[] CLASS_LIST = {"P", "K", "E", "W", "D", "R", "I", "S", "F"};
-    final String[] CLASS_LIST2 = {"君主", "ナイト", "エルフ", "ウィザード", "ダークエルフ", "ドラゴンナイト", "イリュージョニスト", "ウォリアー", "フェンサー"};
+    //10種の職業
+    final String[] CLASS_LIST = {"P", "K", "E", "W", "D", "R", "I", "S", "F", "L"};
+    final String[] CLASS_LIST2 = {"君主", "ナイト", "エルフ", "ウィザード", "ダークエルフ", "ドラゴンナイト", "イリュージョニスト", "ウォリアー", "フェンサー", "ランサー"};
     final int P = 0;
     final int K = 1;
     final int E = 2;
@@ -32,6 +32,7 @@ public interface Common {
     final int I = 6;
     final int S = 7;
     final int F = 8;
+    final int L = 9;
 
     //4種の属性
     final String[] ELEM_LIST = {"地", "火", "水", "風"};
@@ -92,8 +93,7 @@ public interface Common {
     final int EARRING1 = 11;
     final int EARRING2 = 12;
 
-//エンチャント(0から103までの合計104個分)　UI.javaの217行目も合わせて変更必須
-//仮設定で119までの130個で処理
+//エンチャント(0から139までの合計140個分)　UI.javaの223行目も合わせて変更必須
 //基本エンチャント
     final int ACC1 = 0;             //1段加速
     final int ACC2 = 1;             //2段加速
@@ -431,6 +431,24 @@ public interface Common {
     final int F_PFE = 109;          //FramE                         フレイム
     final int F_PDS = 125;          //DamascuS                      ダマスカス
 
+//ランサーの槍術
+//  アクティブスキル
+//    final int L_ALE = 127;        //LV50  ALternatE               オルタネート
+//    final int L_FWE = 128;        //LV60  Force WavE              フォースウェーブ
+//    final int L_VAD = 129;        //LV70  VAnguarD                ヴァンガード
+//    final int L_REY = 130;        //LV75  REcoverY                リカバリー
+//    final int L_PRE = 131;        //LV75  PRessurE                プレッシャー
+//    final int L_KUU = 132;        //LV80  KUruorU                 クルオル
+//  パッシブスキル
+//    final int L_DSE = 133;        //LV65  Deadly StrikE           デッドリーストライク
+//    final int L_VEE = 134;        //LV70  VEngeancE               ベンジェンス
+//    final int L_TAE = 135;        //LV70  Tactical AdvancE        タクティカルアドバンス
+//    final int L_DBE = 136;        //LV75  Dodge BrakE             ダッジブレーキ
+//    final int L_MAM = 137;        //LV75  MAelstroM               マエルストローム
+//    final int L_IRE = 138;        //LV80  Increase RangE          インクリーズレンジ
+//    final int L_KCN = 139;        //LV80  Kuruoru:CombinatioN     クルオル:コンビクション
+//    final int L_PDR = 140;        //LV85  Pressure:Death Recall   プレッシャー:デスリコール
+    
 //その他
     final int DRAGON_BLESS = 126;   //ドラゴンの祝福
     final int ITEM_BLUE = 50;       //魔力回復ポーション

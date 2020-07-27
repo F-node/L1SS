@@ -277,6 +277,21 @@ public class Calculator implements Common {
         st_data[F][REM][CHA] = 4;
         rem_data[F] = 4;
 
+        //ランサーの初期ステータスと割り振り可能ステータス数
+        st_data[L][BASE][STR] = 14;
+        st_data[L][BASE][DEX] = 12;
+        st_data[L][BASE][CON] = 16;
+        st_data[L][BASE][INT] = 9;
+        st_data[L][BASE][WIS] = 12;
+        st_data[L][BASE][CHA] = 6;
+        st_data[L][REM][STR] = 4;
+        st_data[L][REM][DEX] = 4;
+        st_data[L][REM][CON] = 4;
+        st_data[L][REM][INT] = 4;
+        st_data[L][REM][WIS] = 4;
+        st_data[L][REM][CHA] = 4;
+        rem_data[L] = 4;
+
         //ステータスボーナス
         _C[D_SHORT][STR][P] = 30;
         _C[D_SHORT][STR][K] = 10;
@@ -287,6 +302,7 @@ public class Calculator implements Common {
         _C[D_SHORT][STR][I] = 10;
         _C[D_SHORT][STR][S] = 10;
         _C[D_SHORT][STR][F] = 10;
+        _C[D_SHORT][STR][L] = 10;
 
         _C[H_SHORT][STR][P] = 4;
         _C[H_SHORT][STR][K] = 3;
@@ -297,6 +313,7 @@ public class Calculator implements Common {
         _C[H_SHORT][STR][I] = 5;
         _C[H_SHORT][STR][S] = 3;
         _C[H_SHORT][STR][F] = 3;
+        _C[H_SHORT][STR][L] = 3;
 
         _C[C_SHORT][STR][P] = 20;
         _C[C_SHORT][STR][K] = 20;
@@ -307,6 +324,7 @@ public class Calculator implements Common {
         _C[C_SHORT][STR][I] = 30;
         _C[C_SHORT][STR][S] = 20;
         _C[C_SHORT][STR][F] = 20;
+        _C[C_SHORT][STR][L] = 20;
 
         _C[D_LONG][DEX][P] = 40;
         _C[D_LONG][DEX][K] = 40;
@@ -317,6 +335,7 @@ public class Calculator implements Common {
         _C[D_LONG][DEX][I] = 80;
         _C[D_LONG][DEX][S] = 40;
         _C[D_LONG][DEX][F] = 40;
+        _C[D_LONG][DEX][L] = 40;
 
         _C[H_LONG][DEX][P] = 6;
         _C[H_LONG][DEX][K] = 6;
@@ -327,6 +346,7 @@ public class Calculator implements Common {
         _C[H_LONG][DEX][I] = 8;
         _C[H_LONG][DEX][S] = 6;
         _C[H_LONG][DEX][F] = 6;
+        _C[H_LONG][DEX][L] = 6;
 
         _C[C_LONG][DEX][P] = 30;
         _C[C_LONG][DEX][K] = 40;
@@ -337,6 +357,7 @@ public class Calculator implements Common {
         _C[C_LONG][DEX][I] = 50;
         _C[C_LONG][DEX][S] = 40;
         _C[C_LONG][DEX][F] = 40;
+        _C[C_LONG][DEX][L] = 40;
 
         _C[ER][DEX][P] = 6;
         _C[ER][DEX][K] = 4;
@@ -347,6 +368,7 @@ public class Calculator implements Common {
         _C[ER][DEX][I] = 9;
         _C[ER][DEX][S] = 4;
         _C[ER][DEX][F] = 4;
+        _C[ER][DEX][L] = 4;
 
         _C[D_MAGIC][INT][P] = 40;
         _C[D_MAGIC][INT][K] = 40;
@@ -357,6 +379,7 @@ public class Calculator implements Common {
         _C[D_MAGIC][INT][I] = 25;
         _C[D_MAGIC][INT][S] = 40;
         _C[D_MAGIC][INT][F] = 40;
+        _C[D_MAGIC][INT][L] = 40;
 
         _C[H_MAGIC][INT][P] = 20;
         _C[H_MAGIC][INT][K] = 100;
@@ -367,6 +390,7 @@ public class Calculator implements Common {
         _C[H_MAGIC][INT][I] = 12;
         _C[H_MAGIC][INT][S] = 100;
         _C[H_MAGIC][INT][F] = 100;
+        _C[H_MAGIC][INT][L] = 100;
 
         _C[C_MAGIC][INT][P] = 80;
         _C[C_MAGIC][INT][K] = 100;
@@ -377,6 +401,7 @@ public class Calculator implements Common {
         _C[C_MAGIC][INT][I] = 20;
         _C[C_MAGIC][INT][S] = 100;
         _C[C_MAGIC][INT][F] = 100;
+        _C[C_MAGIC][INT][L] = 100;
 
         _C[MB][INT][P] = 0;
         _C[MB][INT][K] = 0;
@@ -387,6 +412,7 @@ public class Calculator implements Common {
         _C[MB][INT][I] = 1;
         _C[MB][INT][S] = 0;
         _C[MB][INT][F] = 0;
+        _C[MB][INT][L] = 0;
 
         _C[HP][CON][P] = 11;
         _C[HP][CON][K] = 16;
@@ -397,6 +423,7 @@ public class Calculator implements Common {
         _C[HP][CON][I] = 8;
         _C[HP][CON][S] = 16;
         _C[HP][CON][F] = 16;
+        _C[HP][CON][L] = 16;
 
         _C[MR][WIS][P] = 10;
         _C[MR][WIS][K] = 0;
@@ -407,6 +434,7 @@ public class Calculator implements Common {
         _C[MR][WIS][I] = 20;
         _C[MR][WIS][S] = 0;
         _C[MR][WIS][F] = 0;
+        _C[MR][WIS][L] = 0;
     }
 
     private final UI ui;
@@ -3118,6 +3146,65 @@ public class Calculator implements Common {
                             break;
                     }
                     break;
+                case L:
+                    buff.DR += 3;
+                    ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
+                                                  + "<br>"+ "DR: +3"
+                                                  + "<br>"+ "材質: 鉱石"
+                                                  + "<br>"+ "重さ: 1"+"</html>");
+                    switch (q) {
+                        case 1:
+                            buff.HIT_SHORT += 3;            //近距離命中+3
+                            ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
+                                                          + "<br>"+ "DR: +3"
+                                                          + "<br>"+ "近距離命中: +3"
+                                                          + "<br>"+ "材質: 鉱石"
+                                                          + "<br>"+ "重さ: 1"+"</html>");
+                            break;
+                        case 2:
+                            buff.HIT_SHORT += 3;            //近距離命中+3
+                                                            //祝福消耗効率+5%
+                                                            //PVP魔法ダメージ減少+1%
+                            ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
+                                                          + "<br>"+ "DR: +3"
+                                                          + "<br>"+ "近距離命中: +3"
+                                                          + "<br>"+ "祝福消耗効率: +5%"
+                                                          + "<br>"+ "PVP魔法ダメージ減少: +1%"
+                                                          + "<br>"+ "材質: 鉱石"
+                                                          + "<br>"+ "重さ: 1"+"</html>");
+                            break;
+                        case 3:
+                            buff.HIT_SHORT += 3;            //近距離命中+3
+                                                            //祝福消耗効率+5%
+                            buff.ailment[HIT_TERROR] += 5;  //恐怖命中+5
+                                                            //PVP魔法ダメージ減少+2%
+                            ui.elixir_rune.setToolTipText("<html>"+  "ステ: +1"
+                                                          + "<br>"+ "DR: +3"
+                                                          + "<br>"+ "近距離命中: +3"
+                                                          + "<br>"+ "祝福消耗効率: +5%"
+                                                          + "<br>"+ "恐怖命中: +5"
+                                                          + "<br>"+ "PVP魔法ダメージ減少: +2%"
+                                                          + "<br>"+ "材質: 鉱石"
+                                                          + "<br>"+ "重さ: 1"+"</html>");
+                            break;
+                        case 4:
+                            buff.HIT_SHORT += 3;            //近距離命中+3
+                                                            //祝福消耗効率+5%
+                            buff.ailment[HIT_TERROR] += 10; //恐怖命中+10
+                                                            //PVP魔法ダメージ減少+3%
+                            ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
+                                                          + "<br>"+ "DR: +3"
+                                                          + "<br>"+ "近距離命中: +3"
+                                                          + "<br>"+ "祝福消耗効率: +5%"
+                                                          + "<br>"+ "恐怖命中: +10"
+                                                          + "<br>"+ "PVP魔法ダメージ減少: +3%"
+                                                          + "<br>"+ "材質: 鉱石"
+                                                          + "<br>"+ "重さ: 1"+"</html>");
+                            break;
+                        default:
+                            break;
+                    }
+                    break;
                 default:
                     break;
             }
@@ -4386,7 +4473,7 @@ public class Calculator implements Common {
         //STR+1[君主][ナイト][ダークエルフ][ドラゴンナイト][ウォリアー][フェンサー]
         //DEX+1[エルフ]
         //INT+1[ウィザード][イリュージョニスト]
-        ui.cb_buff[H_RK].setToolTipText("<html>"+ "STR+1[君主][ナイト][ダークエルフ][ドラゴンナイト][ウォリアー][フェンサー]"
+        ui.cb_buff[H_RK].setToolTipText("<html>"+ "STR+1[君主][ナイト][ダークエルフ][ドラゴンナイト][ウォリアー][フェンサー][ランサー]"
                                         + "<br>"+ "DEX+1[エルフ]"
                                         + "<br>"+ "INT+1[ウィザード][イリュージョニスト]"+"</html>");
         if (ui.cb_buff[H_RK].isSelected()) {
@@ -4424,6 +4511,10 @@ public class Calculator implements Common {
                     buff.ST[STR] += 1;
                     break;
                 case F:
+                    ui.cb_buff[H_RK].setToolTipText("STR+1");
+                    buff.ST[STR] += 1;
+                    break;
+                case L:
                     ui.cb_buff[H_RK].setToolTipText("STR+1");
                     buff.ST[STR] += 1;
                     break;
@@ -4625,6 +4716,12 @@ public class Calculator implements Common {
                 }
                 break;
             case F:
+                ml = level / 15;
+                if (ml > 2) {
+                    ml = 2;
+                }
+                break;
+            case L:
                 ml = level / 15;
                 if (ml > 2) {
                     ml = 2;
@@ -5970,6 +6067,10 @@ buki.arrow_elementdmg=0;
                 c = 6;
 //                d = 3;
                 break;
+            case L:
+                c = 6;
+//                d = 3;
+                break;
             default:
                 break;
         }
@@ -6431,6 +6532,10 @@ buki.arrow_elementdmg=0;
                 hp = 16;
                 mp = 2;
                 break;
+            case L:
+                hp = 16;
+                mp = 2;
+                break;
             default:
                 break;
         }
@@ -6438,8 +6543,10 @@ buki.arrow_elementdmg=0;
 //種族が増えた場合配列を1つ増やす必要あり c1とc2の値が不明　mpの量を決定する為の値と思われる
 //        double[] c1 = {1.0, 2.0 / 3.0, 1.5, 2.0, 1.5, 0.7, 1.7, 2.0 / 3.0};
 //        int[] c2 = {1, 0, 1, 2, 1, 1, 1, 0};
-        double[] c1 = {1.0, 2.0 / 3.0, 1.5, 2.0, 1.5, 0.7, 1.7, 2.0 / 3.0, 2.0 / 3.0};
-        int[] c2 = {1, 0, 1, 2, 1, 1, 1, 0, 0};
+//        double[] c1 = {1.0, 2.0 / 3.0, 1.5, 2.0, 1.5, 0.7, 1.7, 2.0 / 3.0, 2.0 / 3.0};
+//        int[] c2 = {1, 0, 1, 2, 1, 1, 1, 0, 0};
+        double[] c1 = {1.0, 2.0 / 3.0, 1.5, 2.0, 1.5, 0.7, 1.7, 2.0 / 3.0, 2.0 / 3.0, 2.0 / 3.0};
+        int[] c2 = {1, 0, 1, 2, 1, 1, 1, 0, 0, 0};
         
         for (int i = 2; i <= level; i++) {
             for (int j = 0; j < 5; j++) {
@@ -6555,6 +6662,9 @@ buki.arrow_elementdmg=0;
                 eq_hp += _ST[ENCHANT][CON] * 16;
                 break;
             case F:
+                eq_hp += _ST[ENCHANT][CON] * 16;
+                break;
+            case L:
                 eq_hp += _ST[ENCHANT][CON] * 16;
                 break;
             default:

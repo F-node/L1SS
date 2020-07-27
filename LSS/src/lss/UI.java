@@ -220,8 +220,8 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
     //ファイナルバーンで計104個分(0から103)
 //    JCheckBox[] cb_buff = new JCheckBox[104];
 //    JComboBox[] cb_buff_group = new JComboBox[104];
-    JCheckBox[] cb_buff = new JCheckBox[130];
-    JComboBox[] cb_buff_group = new JComboBox[130];
+    JCheckBox[] cb_buff = new JCheckBox[139];
+    JComboBox[] cb_buff_group = new JComboBox[139];
     //パネル4
     JComboBox cb_npc_level;
     JSlider[] s_target_res = new JSlider[ELEM_LIST.length];
