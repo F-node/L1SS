@@ -1,6 +1,26 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2020/07/27
+Update 4.0.3
+LSS/src/lss/Calculator.java
+LSS/src/lss/Common.java
+LSS/src/lss/UI.java
+クラス追加
+	2020/07/23 Test Server Update
+	https://lineage.plaync.com/board/tsupdate/view?articleId=5f1980b661985e000195bd8d
+	L(Lanser)       	ランサー
+	初期ステ
+	STR：14、DEX：12、INT：9、WIS：12、CON：16、CHA：6
+	スキル14個(変数127-140)
+	エリクサールーン(仮設定:フェンサーのコピー)
+	ランカーボーナス(仮設定:フェンサーのコピー)
+	マジックレベル更新
+	初期AC/ER(仮設定:フェンサーのコピー)
+	初期HP/MP(仮設定:フェンサーのコピー)
+	LVUP時MP補正(仮設定:フェンサーのコピー)
+	LVUP時HP補正(仮設定:フェンサーのコピー)
+
 2020/07/17
 Update 4.0.2
 LSS/src/lss/Calculator.java
