@@ -1,6 +1,18 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2020/07/29
+Update 4.0.4
+LSS/src/lss/Calculator.java
+LSS/src/lss/Common.java
+LSS/src/lss/Morph.java
+LSS/src/lss/UI.java
+追加
+	LV90で変身リスト(速度設定[仮速度])を追加しLV90のドロップリスト
+	君主/ナイト/エルフのスキル取得レベルと新魔法
+修正	
+	戦士にて双斧時、攻撃魔法速度と補助魔法速度が0になるバグ
+
 2020/07/27
 Update 4.0.3
 LSS/src/lss/Calculator.java
