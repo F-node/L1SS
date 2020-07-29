@@ -4866,13 +4866,20 @@ buki.arrow_elementdmg=0;
                 switch (ui.cb_morph_level.getSelectedIndex()) {
                     case 0:
                         speed = polymorph.getSpeed(level, ui.cb_morph_type.getSelectedIndex(), W_DA);
+                        magic_main = polymorph.getSpeed(level, ui.cb_morph_type.getSelectedIndex(), MAIN);
+                        magic_sub = polymorph.getSpeed(level, ui.cb_morph_type.getSelectedIndex(), SUB);
                         break;
-                    case 15:
+        //Heroïœêgéûèàóù
+                    case 16:
                         speed = polymorph.getSpeed(99, ui.cb_morph_type.getSelectedIndex(), W_DA);
+                        magic_main = polymorph.getSpeed(99, ui.cb_morph_type.getSelectedIndex(), MAIN);
+                        magic_sub = polymorph.getSpeed(99, ui.cb_morph_type.getSelectedIndex(), SUB);
                         break;
                     default:
                         int l = Integer.parseInt((String) ui.cb_morph_level.getSelectedItem());
                         speed = polymorph.getSpeed(l, ui.cb_morph_type.getSelectedIndex(), W_DA);
+                        magic_main = polymorph.getSpeed(l, ui.cb_morph_type.getSelectedIndex(), MAIN);
+                        magic_sub = polymorph.getSpeed(l, ui.cb_morph_type.getSelectedIndex(), SUB);
                         break;
                 }
                 buki_id = W_DA;
@@ -4886,7 +4893,8 @@ buki.arrow_elementdmg=0;
                                 magic_main = polymorph.getSpeed(level, ui.cb_morph_type.getSelectedIndex(), MAIN);
                                 magic_sub = polymorph.getSpeed(level, ui.cb_morph_type.getSelectedIndex(), SUB);
                                 break;
-                            case 15:
+        //Heroïœêgéûèàóù
+                            case 16:
                                 speed = polymorph.getSpeed(99, ui.cb_morph_type.getSelectedIndex(), i);
                                 magic_main = polymorph.getSpeed(99, ui.cb_morph_type.getSelectedIndex(), MAIN);
                                 magic_sub = polymorph.getSpeed(99, ui.cb_morph_type.getSelectedIndex(), SUB);

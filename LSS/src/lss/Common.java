@@ -78,7 +78,8 @@ public interface Common {
     final int L80 = 11;
     final int L82 = 12;
     final int L84 = 13;
-    final int L99 = 14;             //Hero用
+    final int L90 = 14;
+    final int L99 = 15;             //Hero用
 
     //パネル1のアミュレット/イアリング/リング/インシグニア/スポールダー/紋章/ペンダント等の順と位置
     final String[] EQ_LIST = {"武器", "武器", "シールド", "ヘルム", "グローブ", "シャツ",
@@ -105,88 +106,91 @@ public interface Common {
     final int SEC = 75;             //セキュリティ
     final int VIP = 72;             //VIPエンチャント
 
-//君主の魔法 合計10種類
-    final int P_PRE = 110;          //PRimE                         プライム
-//    final int P_EME = X;          //EMpirE                        エンパイア(未実装)
-    final int P_GRE = 87;           //GRacE                         グレース(グレースアバター)
-    final int P_AUA = 59;           //AUrA                          オーラ(ブレイブアバター)
-    final int P_MAY = 100;          //MAjestY                       マジェスティ
-    final int P_SAR = 99;           //Shining ArmoR                 シャイニングアーマー
-    final int P_SSD = 9;            //Shining ShielD                シャイニングシールド
-    final int P_BML = 8;            //Brave MentaL                  ブレイブメンタル
-    final int P_GWN = 7;            //Glowing WeapoN                グローイングウェポン
-//    final int P_TTT = X;          //True TargeT                   トゥルーターゲット(未実装)
+//君主の魔法    合計11種類
+//    final int P_CCA = X;          //LV85  Call Clan Advance             コールクランアドバンス(未実装)
+    final int P_PRE = 110;          //LV85  PRimE                         プライム
+//    final int P_EME = X;          //LV80  EMpirE                        エンパイア(未実装)
+    final int P_GRE = 87;           //LV80  GRacE                         グレース(グレースアバター)
+    final int P_AUA = 59;           //LV80  AUrA                          オーラ(ブレイブアバター)
+    final int P_MAY = 100;          //LV80  MAjestY                       マジェスティ
+    final int P_SAR = 99;           //LV80  Shining ArmoR                 シャイニングアーマー
+    final int P_SSD = 9;            //LV75  Shining ShielD                シャイニングシールド
+    final int P_BML = 8;            //LV70  Brave MentaL                  ブレイブメンタル
+    final int P_GWN = 7;            //LV60  Glowing WeapoN                グローイングウェポン
+//    final int P_TTT = X;          //LV50  True TargeT                   トゥルーターゲット(未実装)
 
-//ナイトの技術
+//ナイトの技術  合計12種類
     //アクティブスキル
-//    final int K_FSN = X;          //Force StaN                    フォーススタン(未実装)
-//    final int K_ABE = X;          //Absolute BladE                アブソルートブレイド(未実装)
-    final int K_CBR = 36;           //Counter BarrieR               カウンターバリア(未実装)
-    final int K_BLK = 89;           //BLow attacK                   ブローアタック
-    final int K_BOK = 65;           //BOunce attacK                 バウンスアタック
-//    final int K_SSN = X;          //Shock StaN                    ショックスタン(未実装)
-    final int K_PRE = 88;           //PRidE                         プライド
-    final int K_SCE = 35;           //Solid CarriagE                ソリッドキャリッジ
-    final int K_RAR = 34;           //Reduction ArmoR               リダクションアーマー
+//    final int K_FSN = X;          //LV85  Force StaN                    フォーススタン(未実装)
+//    final int K_ABE = X;          //LV85  Absolute BladE                アブソルートブレイド(未実装)
+    final int K_CBR = 36;           //LV80  Counter BarrieR               カウンターバリア(未実装)
+    final int K_BLK = 89;           //LV75  BLow attacK                   ブローアタック
+    final int K_BOK = 65;           //LV65  BOunce attacK                 バウンスアタック
+//    final int K_SSN = X;          //LV60  Shock StaN                    ショックスタン(未実装)
+    final int K_PRE = 88;           //LV60  PRidE                         プライド
+    final int K_SCE = 35;           //LV55  Solid CarriagE                ソリッドキャリッジ
+    final int K_RAR = 34;           //LV50  Reduction ArmoR               リダクションアーマー
     //パッシブスキル
-    final int K_CBV = 73;           //Counter Barrier:Veteran       カウンターバリア:ベテラン
-    final int K_RFE = 111;          //Raging ForcE                  レイジングフォース
-    final int K_RAV = 112;          //Reduction Armor:Veteran       リダクションアーマー:ベテラン
+    final int K_CBV = 73;           //LV85  Counter Barrier:Veteran       カウンターバリア:ベテラン
+    final int K_RFE = 111;          //LV80  Raging ForcE                  レイジングフォース
+    final int K_RAV = 112;          //LV80  Reduction Armor:Veteran       リダクションアーマー:ベテラン
 
-//エルフの精霊魔法
-    //共通
-//    final int E_MAE = X;          //MArblE                        マーブル(未実装)
-    final int E_GEH = 113;          //Glory EartH                   グローリーアース(未実装)
-//    final int E_SBR = X;          //Seoul BarrieR                 ソウルバリア(未実装)
-//    final int E_ASE = X;          //Area SilencE                  エリアサイレンス(未実装)
-    final int E_ELY = 57;           //ELvengravitY                  エルヴングラヴィティー
-//    final int E_GEL = X;          //Greater ElementaL             グレーターエレメンタル(未実装)
-//    final int E_EMC = X;          //Erase MagiC                   イレースマジック(未実装)
-//    final int E_EFN = X;          //Elemental FalldowN            エレメンタルフォールダウン(未実装)
-//    final int E_SLE = X;          //Summon Lesser Elemental       サモンレッサーエレメンタル(未実装)
-//    final int E_TAW = X;          //Triple ArroW                  トリプルアロー(未実装)
-//    final int E_BSL = X;          //Bloody SouL                   ブラッディソウル(未実装)
-    final int E_EPN = 114;          //Elemental ProtectioN          エレメンタルプロテクション(未実装)
-    final int E_RET = 19;           //Resist ElemenT                レジストエレメント
-    final int E_CMD = 12;           //Clear MinD                    クリアマインド
-//    final int E_TTM = X;          //Teleport To Mother            テレポートトゥマザー(未実装)
-//    final int E_BTM = X;          //Body To Mind                  ボディトゥマインド(未実装)
-    final int E_RMC = 20;           //Resist MagiC                  レジストマジック
+//エルフの精霊魔法  19+7+7+6+7=46  合計46種類
+    //共通  合計19種類
+//    final int E_ESE = X;          //LV85  Elven StrikE                  エルブンストライク(未実装)
+//    final int E_REN = X;          //LV85  REvalatioN                    リバレーション(未実装)
+    final int E_GEH = 113;          //LV85  Glory EartH                   グローリーアース(未実装)
+//    final int E_SBR = X;          //LV80  Seoul BarrieR                 ソウルバリア(未実装)
+//    final int E_ASE = X;          //LV75  Area SilencE                  エリアサイレンス(未実装)
+      final int E_ELY = 57;         //LV75  ELvengravitY                  エルヴングラヴィティー
+//    final int E_GEL = X;          //LV75  Greater ElementaL             グレーターエレメンタル(未実装)
+//    final int E_EFN = X;          //LV60  Elemental FalldowN            エレメンタルフォールダウン(未実装)
+//    final int E_SLE = X;          //LV60  Summon Lesser Elemental       サモンレッサーエレメンタル(未実装)
+//    final int E_EMC = X;          //LV60  Erase MagiC                   イレースマジック(未実装)
+//    final int E_TAW = X;          //LV45  Triple ArroW                  トリプルアロー(未実装)
+    final int E_EPN = 114;          //LV45  Elemental ProtectioN          エレメンタルプロテクション(未実装)
+//    final int E_BSL = X;          //LV45  Bloody SouL                   ブラッディソウル(未実装)
+//    final int E_RTN = X;          //LV45  Return To Nature              リターントゥネイチャー(未実装)    
+    final int E_RET = 19;           //LV30  Resist ElemenT                レジストエレメント
+    final int E_CMD = 12;           //LV30  Clear MinD                    クリアマインド
+//    final int E_TTM = X;          //LV15  Teleport To Mother            テレポートトゥマザー(未実装)
+//    final int E_BTM = X;          //LV15  Body To Mind                  ボディトゥマインド(未実装)
+    final int E_RMC = 20;           //LV15  Resist MagiC                  レジストマジック
 
-    //火系列
-    final int E_INO = 86;           //INfernO                       インフェルノ(未実装)
-    final int E_SOF = 15;           //Soul Of Flame                 ソウルオブフレイム
-    final int E_AFE = 23;           //Additional FirE               アディショナルファイヤー
-    final int E_EFE = 11;           //Elemental FirE                エレメンタルファイアー
-    final int E_BWN = 17;           //Burning WeapoN                バーニングウェポン
-//    final int E_DBE = X;          //Dancing BlazE                 ダンシングブレイズ(基本エンチャントの2段加速で実装)
-//    final int E_FSD = X;          //Fire ShielD                   ファイアーシールド(基本エンチャントのACで実装)
+    //火系列    合計7種類
+    final int E_INO = 86;           //LV80  INfernO                       インフェルノ(未実装)
+    final int E_SOF = 15;           //LV80  Soul Of Flame                 ソウルオブフレイム
+    final int E_AFE = 23;           //LV75  Additional FirE               アディショナルファイヤー
+    final int E_EFE = 11;           //LV75  Elemental FirE                エレメンタルファイアー
+    final int E_BWN = 17;           //LV75  Burning WeapoN                バーニングウェポン
+//    final int E_DBE = X;          //LV60  Dancing BlazE                 ダンシングブレイズ(基本エンチャントの2段加速で実装)
+//    final int E_FSD = X;          //LV45  Fire ShielD                   ファイアーシールド(基本エンチャントのACで実装)
 
-    //水系列
-//    final int E_PWR = X;          //Pollute WateR                 ポルートウォーター(未実装)
-//    final int E_NBG = X;          //Natures BlessinG              ネイチャーズブレッシング(未実装)
-//    final int E_FWE = X;          //Focus WavE                    フォーカスウェーブ(基本エンチャントの2段加速で実装)
-    final int E_APR = 21;           //Aqua ProtectoR                アクアプロテクター
-    final int E_NTH = 16;           //Natures ToucH                 ネイチャーズタッチ
-//    final int E_WLE = X;          //Water LifE                    ウォーターライフ(未実装)
-    final int E_AST = 10;           //Aqua ShoT                     アクアショット
+    //水系列    合計7種類
+//    final int E_PWR = X;          //LV80  Pollute WateR                 ポルートウォーター(未実装)
+//    final int E_NBG = X;          //LV75  Natures BlessinG              ネイチャーズブレッシング(未実装)
+//    final int E_FWE = X;          //LV60  Focus WavE                    フォーカスウェーブ(基本エンチャントの2段加速で実装)
+    final int E_APR = 21;           //LV60  Aqua ProtectoR                アクアプロテクター
+    final int E_NTH = 16;           //LV60  Natures ToucH                 ネイチャーズタッチ
+//    final int E_WLE = X;          //LV45  Water LifE                    ウォーターライフ(未実装)
+    final int E_AST = 10;           //LV45  Aqua ShoT                     アクアショット
 
-    //風系列
-//    final int E_SGL = X;          //Striker GaiL                  ストライカーゲイル(未実装)
-//    final int E_HUE = X;          //HUrricanE                     ハリケーン(基本エンチャントの2段加速で実装)
-    final int E_CYE = 85;           //CYclonE                       サイクロン
-    final int E_SST = 14;           //Storm ShoT                    ストームショット
-    final int E_SEE = 13;           //Storm EyE                     ストームアイ
-    final int E_EEE = 84;           //Eagle EyE                     イーグルアイ
+    //風系列    合計6種類
+//    final int E_SGL = X;          //LV80  Striker GaiL                  ストライカーゲイル(未実装)
+//    final int E_HUE = X;          //LV75  HUrricanE                     ハリケーン(基本エンチャントの2段加速で実装)
+    final int E_CYE = 85;           //LV75  CYclonE                       サイクロン
+    final int E_SST = 14;           //LV75  Storm ShoT                    ストームショット
+    final int E_SEE = 13;           //LV60  Storm EyE                     ストームアイ
+    final int E_EEE = 84;           //LV45  Eagle EyE                     イーグルアイ
 
-    //地系列
-//    final int E_XX = X;           //Earth BinD                    アースバインド(未実装)
-    final int E_EVE = 22;           //Exotic VitalizE               エキゾチックバイタライズ
-//    final int E_XX = X;           //Iron SkiN                     アイアンスキン(基本エンチャントのACで実装)
-//    final int E_XX = X;           //Sand StorM                    サンドストーム(基本エンチャントの2段加速で実装)
-    final int E_EGN = 61;           //Earth GuardiaN                アースガーディアン
-    final int E_QUE = 81;           //QUakE                         クエイク
-    final int E_EWN = 18;           //Earth WeapoN                  アースウェポン
+    //地系列    合計7種類
+//    final int E_XX = X;           //LV80  Earth BinD                    アースバインド(未実装)
+    final int E_EVE = 22;           //LV75  Exotic VitalizE               エキゾチックバイタライズ
+//    final int E_XX = X;           //LV75  Iron SkiN                     アイアンスキン(基本エンチャントのACで実装)
+//    final int E_XX = X;           //LV60  Sand StorM                    サンドストーム(基本エンチャントの2段加速で実装)
+    final int E_EGN = 61;           //LV60  Earth GuardiaN                アースガーディアン
+    final int E_QUE = 81;           //LV45  QUakE                         クエイク
+    final int E_EWN = 18;           //LV45  Earth WeapoN                  アースウェポン
 
 //ウィザードの魔法
     //LV11魔法

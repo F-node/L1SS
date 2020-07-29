@@ -897,8 +897,8 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_morph_level.addItem("84");       //14
                 //cb_morph_level.addItem("86");
                 //cb_morph_level.addItem("88");
-                //cb_morph_level.addItem("90");
-        cb_morph_level.addItem("Hero");     //Œ»Žž“_‚Å‚Í15
+        cb_morph_level.addItem("90");       //15
+        cb_morph_level.addItem("Hero");     //Œ»Žž“_‚Å‚Í16
 
         cb_morph_level.setBounds(420+60 + 280, 200, 80, 20);
         cb_morph_level.addActionListener(this);
