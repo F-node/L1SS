@@ -779,7 +779,7 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_eq_en[1].setEnabled(false);
         
         //エリクサールーンレベル
-        String[] elixir_rune_en_list = {"L55", "L70", "L80", "L85", "L90"};
+        String[] elixir_rune_en_list = {"L55", "L70", "L80", "L85", "L90", "L91", "L92"};
         elixir_rune_en = new JComboBox(elixir_rune_en_list);
         elixir_rune_en.setBounds(0, 460, 50, 20);
         elixir_rune_en.addActionListener(this);
