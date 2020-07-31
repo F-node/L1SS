@@ -2599,20 +2599,21 @@ public class Calculator implements Common {
                 break;
         }
 
-        //エリクサールーン(LV70/80/85/90)
+        //エリクサールーン(LV70/80/85/90/91/92)
         int e = ui.elixir_rune.getSelectedIndex();
         int q = ui.elixir_rune_en.getSelectedIndex();
         if (e > 0 && e<6) {
             buff.ST[e - 1]++;
             switch (cls) {
                 case P:
+                                //LV55
                     buff.DR += 3;
                     ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
                                                   + "<br>"+ "ダメージ低下: +3"
                                                   + "<br>"+ "材質: 鉱石"
                                                   + "<br>"+ "重さ: 1"+"</html>");
                     switch (q) {
-                        case 1:
+                        case 1: //LV70
                             buff.HIT_SHORT += 2;            //近距離命中+2
                             ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
                                                           + "<br>"+ "ダメージ低下: +3"
@@ -2620,7 +2621,7 @@ public class Calculator implements Common {
                                                           + "<br>"+ "材質: 鉱石"
                                                           + "<br>"+ "重さ: 1"+"</html>");
                             break;
-                        case 2:
+                        case 2: //LV80
                             buff.HIT_SHORT += 2;            //近距離命中+2
                                                             //祝福消耗効率+5%
                                                             //PVP魔法ダメージ減少+1%
@@ -2632,31 +2633,67 @@ public class Calculator implements Common {
                                                           + "<br>"+ "材質: 鉱石"
                                                           + "<br>"+ "重さ: 1"+"</html>");
                             break;
-                        case 3:
+                        case 3: //LV85
                             buff.HIT_SHORT += 2;            //近距離命中+2
                                                             //祝福消耗効率+5%
                             buff.ailment[HIT_STUN] += 5;    //技術命中+5
                                                             //PVP魔法ダメージ減少+2%
+                                                            //エリクサーブースター効果
                             ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
                                                           + "<br>"+ "ダメージ低下: +3"
                                                           + "<br>"+ "近距離命中: +2"
                                                           + "<br>"+ "祝福消耗効率: +5%"
                                                           + "<br>"+ "技術命中: +5"
                                                           + "<br>"+ "PVP魔法ダメージ減少: +2%"
+                                                          + "<br>"+ "エリクサーブースター効果"
                                                           + "<br>"+ "材質: 鉱石"
                                                           + "<br>"+ "重さ: 1"+"</html>");
                             break;
-                        case 4:
+                        case 4: //LV90
                             buff.HIT_SHORT += 2;            //近距離命中+2
                                                             //祝福消耗効率+5%
                             buff.ailment[HIT_STUN] += 10;   //技術命中+10
                                                             //PVP魔法ダメージ減少+3%
+                                                            //エリクサーブースター効果
                             ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
                                                           + "<br>"+ "ダメージ低下: +3"
                                                           + "<br>"+ "近距離命中: +2"
                                                           + "<br>"+ "祝福消耗効率: +5%"
                                                           + "<br>"+ "技術命中: +10"
                                                           + "<br>"+ "PVP魔法ダメージ減少: +3%"
+                                                          + "<br>"+ "エリクサーブースター効果"
+                                                          + "<br>"+ "材質: 鉱石"
+                                                          + "<br>"+ "重さ: 1"+"</html>");
+                            break;
+                        case 5: //LV91
+                            buff.HIT_SHORT += 2;            //近距離命中+2
+                                                            //祝福消耗効率+5%
+                            buff.ailment[HIT_STUN] += 11;   //技術命中+11
+                                                            //PVP魔法ダメージ減少+3%
+                                                            //エリクサーブースター効果
+                            ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
+                                                          + "<br>"+ "ダメージ低下: +3"
+                                                          + "<br>"+ "近距離命中: +2"
+                                                          + "<br>"+ "祝福消耗効率: +5%"
+                                                          + "<br>"+ "技術命中: +11"
+                                                          + "<br>"+ "PVP魔法ダメージ減少: +3%"
+                                                          + "<br>"+ "エリクサーブースター効果"
+                                                          + "<br>"+ "材質: 鉱石"
+                                                          + "<br>"+ "重さ: 1"+"</html>");
+                            break;
+                        case 6: //LV92
+                            buff.HIT_SHORT += 2;            //近距離命中+2
+                                                            //祝福消耗効率+5%
+                            buff.ailment[HIT_STUN] += 12;   //技術命中+12
+                                                            //PVP魔法ダメージ減少+3%
+                                                            //エリクサーブースター効果
+                            ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
+                                                          + "<br>"+ "ダメージ低下: +3"
+                                                          + "<br>"+ "近距離命中: +2"
+                                                          + "<br>"+ "祝福消耗効率: +5%"
+                                                          + "<br>"+ "技術命中: +12"
+                                                          + "<br>"+ "PVP魔法ダメージ減少: +3%"
+                                                          + "<br>"+ "エリクサーブースター効果"
                                                           + "<br>"+ "材質: 鉱石"
                                                           + "<br>"+ "重さ: 1"+"</html>");
                             break;
@@ -2666,13 +2703,14 @@ public class Calculator implements Common {
                     }
                     break;
                 case K:
+                                //LV55
                     buff.HP += 50;
                     ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
                                                   + "<br>"+ "HP: +50"
                                                   + "<br>"+ "材質: 鉱石"
                                                   + "<br>"+ "重さ: 1"+"</html>");
                     switch (q) {
-                        case 1:
+                        case 1: //LV70
                             buff.DMG_SHORT += 1;            //近距離ダメージ+1
                             ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
                                                           + "<br>"+ "HP: +50"
@@ -2680,7 +2718,7 @@ public class Calculator implements Common {
                                                           + "<br>"+ "材質: 鉱石"
                                                           + "<br>"+ "重さ: 1"+"</html>");
                             break;
-                        case 2:
+                        case 2: //LV80
                             buff.DMG_SHORT += 1;            //近距離ダメージ+1
                                                             //祝福消耗効率+5%
                                                             //PVP魔法ダメージ減少+1%
@@ -2692,31 +2730,67 @@ public class Calculator implements Common {
                                                           + "<br>"+ "材質: 鉱石"
                                                           + "<br>"+ "重さ: 1"+"</html>");
                             break;
-                        case 3:
+                        case 3: //LV85
                             buff.DMG_SHORT += 1;            //近距離ダメージ+1
                                                             //祝福消耗効率+5%
                             buff.ailment[HIT_STUN] += 5;    //技術命中+5
                                                             //PVP魔法ダメージ減少+2%
+                                                            //エリクサーブースター効果
                             ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
                                                           + "<br>"+ "HP: +50"
                                                           + "<br>"+ "近距離ダメージ: +1"
                                                           + "<br>"+ "祝福消耗効率: +5%"
                                                           + "<br>"+ "技術命中: +5"
                                                           + "<br>"+ "PVP魔法ダメージ減少: +2%"
+                                                          + "<br>"+ "エリクサーブースター効果"
                                                           + "<br>"+ "材質: 鉱石"
                                                           + "<br>"+ "重さ: 1"+"</html>");
                             break;
-                        case 4:
+                        case 4: //LV90
                             buff.DMG_SHORT += 1;            //近距離ダメージ+1
                                                             //祝福消耗効率+5%
                             buff.ailment[HIT_STUN] += 10;   //技術命中+10
                                                             //PVP魔法ダメージ減少+3%
+                                                            //エリクサーブースター効果
                             ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
                                                           + "<br>"+ "HP: +50"
                                                           + "<br>"+ "近距離ダメージ: +1"
                                                           + "<br>"+ "祝福消耗効率: +5%"
                                                           + "<br>"+ "技術命中: +10"
                                                           + "<br>"+ "PVP魔法ダメージ減少: +3%"
+                                                          + "<br>"+ "エリクサーブースター効果"
+                                                          + "<br>"+ "材質: 鉱石"
+                                                          + "<br>"+ "重さ: 1"+"</html>");
+                            break;
+                        case 5: //LV91
+                            buff.DMG_SHORT += 1;            //近距離ダメージ+1
+                                                            //祝福消耗効率+5%
+                            buff.ailment[HIT_STUN] += 11;   //技術命中+11
+                                                            //PVP魔法ダメージ減少+3%
+                                                            //エリクサーブースター効果
+                            ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
+                                                          + "<br>"+ "HP: +50"
+                                                          + "<br>"+ "近距離ダメージ: +1"
+                                                          + "<br>"+ "祝福消耗効率: +5%"
+                                                          + "<br>"+ "技術命中: +11"
+                                                          + "<br>"+ "PVP魔法ダメージ減少: +3%"
+                                                          + "<br>"+ "エリクサーブースター効果"
+                                                          + "<br>"+ "材質: 鉱石"
+                                                          + "<br>"+ "重さ: 1"+"</html>");
+                            break;
+                        case 6: //LV92
+                            buff.DMG_SHORT += 1;            //近距離ダメージ+1
+                                                            //祝福消耗効率+5%
+                            buff.ailment[HIT_STUN] += 12;   //技術命中+12
+                                                            //PVP魔法ダメージ減少+3%
+                                                            //エリクサーブースター効果
+                            ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
+                                                          + "<br>"+ "HP: +50"
+                                                          + "<br>"+ "近距離ダメージ: +1"
+                                                          + "<br>"+ "祝福消耗効率: +5%"
+                                                          + "<br>"+ "技術命中: +12"
+                                                          + "<br>"+ "PVP魔法ダメージ減少: +3%"
+                                                          + "<br>"+ "エリクサーブースター効果"
                                                           + "<br>"+ "材質: 鉱石"
                                                           + "<br>"+ "重さ: 1"+"</html>");
                             break;
@@ -2725,13 +2799,14 @@ public class Calculator implements Common {
                     }
                     break;
                 case E:
+                                //LV55
                     buff.MP += 50;
                     ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
                                                   + "<br>"+ "MP: +50"
                                                   + "<br>"+ "材質: 鉱石"
                                                   + "<br>"+ "重さ: 1"+"</html>");
                     switch (q) {
-                        case 1:
+                        case 1: //LV70
                             buff.DMG_SHORT += 1;            //近距離ダメージ+1
                             buff.DMG_LONG += 1;             //遠距離ダメージ+1
                             ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
@@ -2741,7 +2816,7 @@ public class Calculator implements Common {
                                                           + "<br>"+ "材質: 鉱石"
                                                           + "<br>"+ "重さ: 1"+"</html>");
                             break;
-                        case 2:
+                        case 2: //LV80
                             buff.DMG_SHORT += 1;            //近距離ダメージ+1
                             buff.DMG_LONG += 1;             //遠距離ダメージ+1
                                                             //祝福消耗効率+5%
@@ -2755,12 +2830,13 @@ public class Calculator implements Common {
                                                           + "<br>"+ "材質: 鉱石"
                                                           + "<br>"+ "重さ: 1"+"</html>");
                             break;
-                        case 3:
+                        case 3: //LV85
                             buff.DMG_SHORT += 1;            //近距離ダメージ+1
                             buff.DMG_LONG += 1;             //遠距離ダメージ+1
                                                             //祝福消耗効率+5%
                             buff.ailment[HIT_SPIRIT] += 5;  //精霊命中+5
                                                             //PVP魔法ダメージ減少+2%
+                                                            //エリクサーブースター効果
                             ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
                                                           + "<br>"+ "MP: +50"
                                                           + "<br>"+ "近距離ダメージ: +1"
@@ -2768,15 +2844,17 @@ public class Calculator implements Common {
                                                           + "<br>"+ "祝福消耗効率: +5%"
                                                           + "<br>"+ "精霊命中: +5"
                                                           + "<br>"+ "PVP魔法ダメージ減少: +2%"
+                                                          + "<br>"+ "エリクサーブースター効果"
                                                           + "<br>"+ "材質: 鉱石"
                                                           + "<br>"+ "重さ: 1"+"</html>");
                             break;
-                        case 4:
+                        case 4: //LV90
                             buff.DMG_SHORT += 1;            //近距離ダメージ+1
                             buff.DMG_LONG += 1;             //遠距離ダメージ+1
                                                             //祝福消耗効率+5%
                             buff.ailment[HIT_SPIRIT] += 10; //精霊命中+10
                                                             //PVP魔法ダメージ減少+3%
+                                                            //エリクサーブースター効果
                             ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
                                                           + "<br>"+ "MP: +50"
                                                           + "<br>"+ "近距離ダメージ: +1"
@@ -2784,6 +2862,43 @@ public class Calculator implements Common {
                                                           + "<br>"+ "祝福消耗効率: +5%"
                                                           + "<br>"+ "精霊命中: +10"
                                                           + "<br>"+ "PVP魔法ダメージ減少: +3%"
+                                                          + "<br>"+ "エリクサーブースター効果"
+                                                          + "<br>"+ "材質: 鉱石"
+                                                          + "<br>"+ "重さ: 1"+"</html>");
+                            break;
+                        case 5: //LV91
+                            buff.DMG_SHORT += 1;            //近距離ダメージ+1
+                            buff.DMG_LONG += 1;             //遠距離ダメージ+1
+                                                            //祝福消耗効率+5%
+                            buff.ailment[HIT_SPIRIT] += 11; //精霊命中+11
+                                                            //PVP魔法ダメージ減少+3%
+                                                            //エリクサーブースター効果
+                            ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
+                                                          + "<br>"+ "MP: +50"
+                                                          + "<br>"+ "近距離ダメージ: +1"
+                                                          + "<br>"+ "遠距離ダメージ: +1"
+                                                          + "<br>"+ "祝福消耗効率: +5%"
+                                                          + "<br>"+ "精霊命中: +11"
+                                                          + "<br>"+ "PVP魔法ダメージ減少: +3%"
+                                                          + "<br>"+ "エリクサーブースター効果"
+                                                          + "<br>"+ "材質: 鉱石"
+                                                          + "<br>"+ "重さ: 1"+"</html>");
+                            break;
+                        case 6: //LV92
+                            buff.DMG_SHORT += 1;            //近距離ダメージ+1
+                            buff.DMG_LONG += 1;             //遠距離ダメージ+1
+                                                            //祝福消耗効率+5%
+                            buff.ailment[HIT_SPIRIT] += 12; //精霊命中+12
+                                                            //PVP魔法ダメージ減少+3%
+                                                            //エリクサーブースター効果
+                            ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
+                                                          + "<br>"+ "MP: +50"
+                                                          + "<br>"+ "近距離ダメージ: +1"
+                                                          + "<br>"+ "遠距離ダメージ: +1"
+                                                          + "<br>"+ "祝福消耗効率: +5%"
+                                                          + "<br>"+ "精霊命中: +12"
+                                                          + "<br>"+ "PVP魔法ダメージ減少: +3%"
+                                                          + "<br>"+ "エリクサーブースター効果"
                                                           + "<br>"+ "材質: 鉱石"
                                                           + "<br>"+ "重さ: 1"+"</html>");
                             break;
@@ -2792,13 +2907,14 @@ public class Calculator implements Common {
                     }
                     break;
                 case W:
+                                //LV55
                     buff.MPR += 3;
                     ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
                                                   + "<br>"+ "MPR: +3"
                                                   + "<br>"+ "材質: 鉱石"
                                                   + "<br>"+ "重さ: 1"+"</html>");
                     switch (q) {
-                        case 1:
+                        case 1: //LV70
                             buff.SP += 1;                   //SP+1
                             ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
                                                           + "<br>"+ "MPR: +3"
@@ -2806,7 +2922,7 @@ public class Calculator implements Common {
                                                           + "<br>"+ "材質: 鉱石"
                                                           + "<br>"+ "重さ: 1"+"</html>");
                             break;
-                        case 2:
+                        case 2: //LV80
                             buff.SP += 1;                   //SP+1
                                                             //祝福消耗効率+5%
                                                             //PVP魔法ダメージ減少+1%
@@ -2818,31 +2934,67 @@ public class Calculator implements Common {
                                                           + "<br>"+ "材質: 鉱石"
                                                           + "<br>"+ "重さ: 1"+"</html>");
                             break;
-                        case 3:
+                        case 3: //LV85
                             buff.SP += 1;                   //SP+1
                                                             //祝福消耗効率+5%
                             buff.HIT_MAGIC += 5;            //魔法命中+5
                                                             //PVP魔法ダメージ減少+2%
+                                                            //エリクサーブースター効果
                             ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
                                                           + "<br>"+ "MPR: +3"
                                                           + "<br>"+ "SP: +1"
                                                           + "<br>"+ "祝福消耗効率: +5%"
                                                           + "<br>"+ "魔法命中: +5"
                                                           + "<br>"+ "PVP魔法ダメージ減少: +2%"
+                                                          + "<br>"+ "エリクサーブースター効果"
                                                           + "<br>"+ "材質: 鉱石"
                                                           + "<br>"+ "重さ: 1"+"</html>");
                             break;
-                        case 4:
+                        case 4: //LV90
                             buff.SP += 1;                   //SP+1
                                                             //祝福消耗効率+5%
                             buff.HIT_MAGIC += 10;           //魔法命中+10
                                                             //PVP魔法ダメージ減少+3%
+                                                            //エリクサーブースター効果
                             ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
                                                           + "<br>"+ "MPR: +3"
                                                           + "<br>"+ "SP: +1"
                                                           + "<br>"+ "祝福消耗効率: +5%"
                                                           + "<br>"+ "魔法命中: +10"
                                                           + "<br>"+ "PVP魔法ダメージ減少: +3%"
+                                                          + "<br>"+ "エリクサーブースター効果"
+                                                          + "<br>"+ "材質: 鉱石"
+                                                          + "<br>"+ "重さ: 1"+"</html>");
+                            break;
+                        case 5: //LV91
+                            buff.SP += 1;                   //SP+1
+                                                            //祝福消耗効率+5%
+                            buff.HIT_MAGIC += 11;           //魔法命中+11
+                                                            //PVP魔法ダメージ減少+3%
+                                                            //エリクサーブースター効果
+                            ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
+                                                          + "<br>"+ "MPR: +3"
+                                                          + "<br>"+ "SP: +1"
+                                                          + "<br>"+ "祝福消耗効率: +5%"
+                                                          + "<br>"+ "魔法命中: +11"
+                                                          + "<br>"+ "PVP魔法ダメージ減少: +3%"
+                                                          + "<br>"+ "エリクサーブースター効果"
+                                                          + "<br>"+ "材質: 鉱石"
+                                                          + "<br>"+ "重さ: 1"+"</html>");
+                            break;
+                        case 6: //LV92
+                            buff.SP += 1;                   //SP+1
+                                                            //祝福消耗効率+5%
+                            buff.HIT_MAGIC += 12;           //魔法命中+12
+                                                            //PVP魔法ダメージ減少+3%
+                                                            //エリクサーブースター効果
+                            ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
+                                                          + "<br>"+ "MPR: +3"
+                                                          + "<br>"+ "SP: +1"
+                                                          + "<br>"+ "祝福消耗効率: +5%"
+                                                          + "<br>"+ "魔法命中: +12"
+                                                          + "<br>"+ "PVP魔法ダメージ減少: +3%"
+                                                          + "<br>"+ "エリクサーブースター効果"
                                                           + "<br>"+ "材質: 鉱石"
                                                           + "<br>"+ "重さ: 1"+"</html>");
                             break;
@@ -2851,13 +3003,14 @@ public class Calculator implements Common {
                     }
                     break;
                 case D:
+                                //LV55
                     buff.AC -= 3;
                     ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
                                                   + "<br>"+ "AC: -3"
                                                   + "<br>"+ "材質: 鉱石"
                                                   + "<br>"+ "重さ: 1"+"</html>");
                     switch (q) {
-                        case 1:
+                        case 1: //LV70
                             buff.MP += 30;                  //最大MP+30
                             ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
                                                           + "<br>"+ "AC: -3"
@@ -2865,7 +3018,7 @@ public class Calculator implements Common {
                                                           + "<br>"+ "材質: 鉱石"
                                                           + "<br>"+ "重さ: 1"+"</html>");
                             break;
-                        case 2:
+                        case 2: //LV80
                             buff.MP += 30;                  //最大MP+30
                                                             //祝福消耗効率+5%
                                                             //PVP魔法ダメージ減少+1%
@@ -2877,31 +3030,67 @@ public class Calculator implements Common {
                                                           + "<br>"+ "材質: 鉱石"
                                                           + "<br>"+ "重さ: 1"+"</html>");
                             break;
-                        case 3:
+                        case 3: //LV85
                             buff.MP += 30;                  //最大MP+30
                                                             //祝福消耗効率+5%
                             buff.ailment[HIT_SPIRIT] += 5;  //精霊命中+5
                                                             //PVP魔法ダメージ減少+2%
+                                                            //エリクサーブースター効果
                             ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
                                                           + "<br>"+ "AC: -3"
                                                           + "<br>"+ "最大MP: +30"
                                                           + "<br>"+ "祝福消耗効率: +5%"
                                                           + "<br>"+ "精霊命中: +5"
                                                           + "<br>"+ "PVP魔法ダメージ減少: +2%"
+                                                          + "<br>"+ "エリクサーブースター効果"
                                                           + "<br>"+ "材質: 鉱石"
                                                           + "<br>"+ "重さ: 1"+"</html>");
                             break;
-                        case 4:
+                        case 4: //LV90
                             buff.MP += 30;                  //最大MP+30
                                                             //祝福消耗効率+5%
                             buff.ailment[HIT_SPIRIT] += 10; //精霊命中+10
                                                             //PVP魔法ダメージ減少+3%
+                                                            //エリクサーブースター効果
                             ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
                                                           + "<br>"+ "AC: -3"
                                                           + "<br>"+ "最大MP: +30"
                                                           + "<br>"+ "祝福消耗効率: +5%"
                                                           + "<br>"+ "精霊命中: +10"
                                                           + "<br>"+ "PVP魔法ダメージ減少: +3%"
+                                                          + "<br>"+ "エリクサーブースター効果"
+                                                          + "<br>"+ "材質: 鉱石"
+                                                          + "<br>"+ "重さ: 1"+"</html>");
+                            break;
+                        case 5: //LV91
+                            buff.MP += 30;                  //最大MP+30
+                                                            //祝福消耗効率+5%
+                            buff.ailment[HIT_SPIRIT] += 11; //精霊命中+11
+                                                            //PVP魔法ダメージ減少+3%
+                                                            //エリクサーブースター効果
+                            ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
+                                                          + "<br>"+ "AC: -3"
+                                                          + "<br>"+ "最大MP: +30"
+                                                          + "<br>"+ "祝福消耗効率: +5%"
+                                                          + "<br>"+ "精霊命中: +11"
+                                                          + "<br>"+ "PVP魔法ダメージ減少: +3%"
+                                                          + "<br>"+ "エリクサーブースター効果"
+                                                          + "<br>"+ "材質: 鉱石"
+                                                          + "<br>"+ "重さ: 1"+"</html>");
+                            break;
+                        case 6: //LV92
+                            buff.MP += 30;                  //最大MP+30
+                                                            //祝福消耗効率+5%
+                            buff.ailment[HIT_SPIRIT] += 12; //精霊命中+12
+                                                            //PVP魔法ダメージ減少+3%
+                                                            //エリクサーブースター効果
+                            ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
+                                                          + "<br>"+ "AC: -3"
+                                                          + "<br>"+ "最大MP: +30"
+                                                          + "<br>"+ "祝福消耗効率: +5%"
+                                                          + "<br>"+ "精霊命中: +12"
+                                                          + "<br>"+ "PVP魔法ダメージ減少: +3%"
+                                                          + "<br>"+ "エリクサーブースター効果"
                                                           + "<br>"+ "材質: 鉱石"
                                                           + "<br>"+ "重さ: 1"+"</html>");
                             break;
@@ -2910,13 +3099,14 @@ public class Calculator implements Common {
                     }
                     break;
                 case R:
+                                //LV55
                     buff.HIT_SHORT += 3;
                     ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
                                                   + "<br>"+ "近距離命中: +3"
                                                   + "<br>"+ "材質: 鉱石"
                                                   + "<br>"+ "重さ: 1"+"</html>");
                     switch (q) {
-                        case 1:
+                        case 1: //LV70
                             buff.DR += 1;                   //ダメージ低下+1
                             ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
                                                           + "<br>"+ "近距離命中: +3"
@@ -2924,7 +3114,7 @@ public class Calculator implements Common {
                                                           + "<br>"+ "材質: 鉱石"
                                                           + "<br>"+ "重さ: 1"+"</html>");
                             break;
-                        case 2:
+                        case 2: //LV80
                             buff.DR += 1;                   //ダメージ低下+1
                                                             //祝福消耗効率+5%
                                                             //PVP魔法ダメージ減少+1%
@@ -2936,31 +3126,67 @@ public class Calculator implements Common {
                                                           + "<br>"+ "材質: 鉱石"
                                                           + "<br>"+ "重さ: 1"+"</html>");
                             break;
-                        case 3:
+                        case 3: //LV85
                             buff.DR += 1;                   //ダメージ低下+1
                                                             //祝福消耗効率+5%
                             buff.ailment[HIT_SECRET] += 5;  //秘技命中+5
                                                             //PVP魔法ダメージ減少+2%
+                                                            //エリクサーブースター効果
                             ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
                                                           + "<br>"+ "近距離命中: +3"
                                                           + "<br>"+ "ダメージ低下: +1"
                                                           + "<br>"+ "祝福消耗効率: +5%"
                                                           + "<br>"+ "秘技命中: +5"
                                                           + "<br>"+ "PVP魔法ダメージ減少: +2%"
+                                                          + "<br>"+ "エリクサーブースター効果"
                                                           + "<br>"+ "材質: 鉱石"
                                                           + "<br>"+ "重さ: 1"+"</html>");
                             break;
-                        case 4:
+                        case 4: //LV90
                             buff.DR += 1;                   //ダメージ低下+1
                                                             //祝福消耗効率+5%
                             buff.ailment[HIT_SECRET] += 10; //秘技命中+10
                                                             //PVP魔法ダメージ減少+3%
+                                                            //エリクサーブースター効果
                             ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
                                                           + "<br>"+ "近距離命中: +3"
                                                           + "<br>"+ "ダメージ低下: +1"
                                                           + "<br>"+ "祝福消耗効率: +5%"
                                                           + "<br>"+ "秘技命中: +10"
                                                           + "<br>"+ "PVP魔法ダメージ減少: +3%"
+                                                          + "<br>"+ "エリクサーブースター効果"
+                                                          + "<br>"+ "材質: 鉱石"
+                                                          + "<br>"+ "重さ: 1"+"</html>");
+                            break;
+                        case 5: //LV91
+                            buff.DR += 1;                   //ダメージ低下+1
+                                                            //祝福消耗効率+5%
+                            buff.ailment[HIT_SECRET] += 11; //秘技命中+11
+                                                            //PVP魔法ダメージ減少+3%
+                                                            //エリクサーブースター効果
+                            ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
+                                                          + "<br>"+ "近距離命中: +3"
+                                                          + "<br>"+ "ダメージ低下: +1"
+                                                          + "<br>"+ "祝福消耗効率: +5%"
+                                                          + "<br>"+ "秘技命中: +11"
+                                                          + "<br>"+ "PVP魔法ダメージ減少: +3%"
+                                                          + "<br>"+ "エリクサーブースター効果"
+                                                          + "<br>"+ "材質: 鉱石"
+                                                          + "<br>"+ "重さ: 1"+"</html>");
+                            break;
+                        case 6: //LV92
+                            buff.DR += 1;                   //ダメージ低下+1
+                                                            //祝福消耗効率+5%
+                            buff.ailment[HIT_SECRET] += 12; //秘技命中+12
+                                                            //PVP魔法ダメージ減少+3%
+                                                            //エリクサーブースター効果
+                            ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
+                                                          + "<br>"+ "近距離命中: +3"
+                                                          + "<br>"+ "ダメージ低下: +1"
+                                                          + "<br>"+ "祝福消耗効率: +5%"
+                                                          + "<br>"+ "秘技命中: +12"
+                                                          + "<br>"+ "PVP魔法ダメージ減少: +3%"
+                                                          + "<br>"+ "エリクサーブースター効果"
                                                           + "<br>"+ "材質: 鉱石"
                                                           + "<br>"+ "重さ: 1"+"</html>");
                             break;
@@ -2969,6 +3195,7 @@ public class Calculator implements Common {
                     }
                     break;
                 case I:
+                                //LV55
                     buff.r_weight += 0.12;
 //                    buff.c_weight += 300;
                     ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
@@ -2976,7 +3203,7 @@ public class Calculator implements Common {
                                                   + "<br>"+ "材質: 鉱石"
                                                   + "<br>"+ "重さ: 1"+"</html>");
                     switch (q) {
-                        case 1:
+                        case 1: //LV70
                             buff.HP += 50;                  //最大HP+50
                             ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
                                                           + "<br>"+ "所持重量増加: +300"
@@ -2984,7 +3211,7 @@ public class Calculator implements Common {
                                                           + "<br>"+ "材質: 鉱石"
                                                           + "<br>"+ "重さ: 1"+"</html>");
                             break;
-                        case 2:
+                        case 2: //LV80
                             buff.HP += 50;                  //最大HP+50
                                                             //祝福消耗効率+5%
                                                             //PVP魔法ダメージ減少+1%
@@ -2996,31 +3223,67 @@ public class Calculator implements Common {
                                                           + "<br>"+ "材質: 鉱石"
                                                           + "<br>"+ "重さ: 1"+"</html>");
                             break;
-                        case 3:
+                        case 3: //LV85
                             buff.HP += 50;                  //最大HP+50
                                                             //祝福消耗効率+5%
                             buff.ailment[HIT_SECRET] += 5;  //秘技命中+5
                                                             //PVP魔法ダメージ減少+2%
+                                                            //エリクサーブースター効果
                             ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
                                                           + "<br>"+ "所持重量増加: +300"
                                                           + "<br>"+ "最大HP: +50"
                                                           + "<br>"+ "祝福消耗効率: +5%"
                                                           + "<br>"+ "秘技命中: +5"
                                                           + "<br>"+ "PVP魔法ダメージ減少: +2%"
+                                                          + "<br>"+ "エリクサーブースター効果"
                                                           + "<br>"+ "材質: 鉱石"
                                                           + "<br>"+ "重さ: 1"+"</html>");
                             break;
-                        case 4:
+                        case 4: //LV90
                             buff.HP += 50;                  //最大HP+50
                                                             //祝福消耗効率+5%
                             buff.ailment[HIT_SECRET] += 10; //秘技命中+10
                                                             //PVP魔法ダメージ減少+3%
+                                                            //エリクサーブースター効果
                             ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
                                                           + "<br>"+ "所持重量増加: +300"
                                                           + "<br>"+ "最大HP: +50"
                                                           + "<br>"+ "祝福消耗効率: +5%"
                                                           + "<br>"+ "秘技命中: +10"
                                                           + "<br>"+ "PVP魔法ダメージ減少: +3%"
+                                                          + "<br>"+ "エリクサーブースター効果"
+                                                          + "<br>"+ "材質: 鉱石"
+                                                          + "<br>"+ "重さ: 1"+"</html>");
+                            break;
+                        case 5: //LV91
+                            buff.HP += 50;                  //最大HP+50
+                                                            //祝福消耗効率+5%
+                            buff.ailment[HIT_SECRET] += 11; //秘技命中+11
+                                                            //PVP魔法ダメージ減少+3%
+                                                            //エリクサーブースター効果
+                            ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
+                                                          + "<br>"+ "所持重量増加: +300"
+                                                          + "<br>"+ "最大HP: +50"
+                                                          + "<br>"+ "祝福消耗効率: +5%"
+                                                          + "<br>"+ "秘技命中: +11"
+                                                          + "<br>"+ "PVP魔法ダメージ減少: +3%"
+                                                          + "<br>"+ "エリクサーブースター効果"
+                                                          + "<br>"+ "材質: 鉱石"
+                                                          + "<br>"+ "重さ: 1"+"</html>");
+                            break;
+                        case 6: //LV92
+                            buff.HP += 50;                  //最大HP+50
+                                                            //祝福消耗効率+5%
+                            buff.ailment[HIT_SECRET] += 12; //秘技命中+12
+                                                            //PVP魔法ダメージ減少+3%
+                                                            //エリクサーブースター効果
+                            ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
+                                                          + "<br>"+ "所持重量増加: +300"
+                                                          + "<br>"+ "最大HP: +50"
+                                                          + "<br>"+ "祝福消耗効率: +5%"
+                                                          + "<br>"+ "秘技命中: +12"
+                                                          + "<br>"+ "PVP魔法ダメージ減少: +3%"
+                                                          + "<br>"+ "エリクサーブースター効果"
                                                           + "<br>"+ "材質: 鉱石"
                                                           + "<br>"+ "重さ: 1"+"</html>");
                             break;
@@ -3029,13 +3292,14 @@ public class Calculator implements Common {
                     }
                     break;
                 case S:
+                                //LV55
                     buff.HP += 50;
                     ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
                                                   + "<br>"+ "最大HP: +50"
                                                   + "<br>"+ "材質: 鉱石"
                                                   + "<br>"+ "重さ: 1"+"</html>");
                     switch (q) {
-                        case 1:
+                        case 1: //LV70
                             buff.MR += 5;                   //MR+5%
                             ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
                                                           + "<br>"+ "最大HP: +50"
@@ -3043,7 +3307,7 @@ public class Calculator implements Common {
                                                           + "<br>"+ "材質: 鉱石"
                                                           + "<br>"+ "重さ: 1"+"</html>");
                             break;
-                        case 2:
+                        case 2: //LV80
                             buff.MR += 5;                   //MR+5%
                                                             //祝福消耗効率+5%
                                                             //PVP魔法ダメージ減少+1%
@@ -3055,31 +3319,67 @@ public class Calculator implements Common {
                                                           + "<br>"+ "材質: 鉱石"
                                                           + "<br>"+ "重さ: 1"+"</html>");
                             break;
-                        case 3:
+                        case 3: //LV85
                             buff.MR += 5;                   //MR+5%
                                                             //祝福消耗効率+5%
                             buff.ailment[HIT_TERROR] += 5;  //恐怖命中+5
                                                             //PVP魔法ダメージ減少+2%
+                                                            //エリクサーブースター効果
                             ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
                                                           + "<br>"+ "最大HP: +50"
                                                           + "<br>"+ "MR: +5%"
                                                           + "<br>"+ "祝福消耗効率: +5%"
                                                           + "<br>"+ "恐怖命中: +5"
                                                           + "<br>"+ "PVP魔法ダメージ減少: +2%"
+                                                          + "<br>"+ "エリクサーブースター効果"
                                                           + "<br>"+ "材質: 鉱石"
                                                           + "<br>"+ "重さ: 1"+"</html>");
                             break;
-                        case 4:
+                        case 4: //LV90
                             buff.MR += 5;                   //MR+5%
                                                             //祝福消耗効率+5%
                             buff.ailment[HIT_TERROR] += 10; //恐怖命中+10
                                                             //PVP魔法ダメージ減少+3%
+                                                            //エリクサーブースター効果
                             ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
                                                           + "<br>"+ "最大HP: +50"
                                                           + "<br>"+ "MR: +5%"
                                                           + "<br>"+ "祝福消耗効率: +5%"
                                                           + "<br>"+ "恐怖命中: +10"
                                                           + "<br>"+ "PVP魔法ダメージ減少: +3%"
+                                                          + "<br>"+ "エリクサーブースター効果"
+                                                          + "<br>"+ "材質: 鉱石"
+                                                          + "<br>"+ "重さ: 1"+"</html>");
+                            break;
+                        case 5: //LV91
+                            buff.MR += 5;                   //MR+5%
+                                                            //祝福消耗効率+5%
+                            buff.ailment[HIT_TERROR] += 11; //恐怖命中+11
+                                                            //PVP魔法ダメージ減少+3%
+                                                            //エリクサーブースター効果
+                            ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
+                                                          + "<br>"+ "最大HP: +50"
+                                                          + "<br>"+ "MR: +5%"
+                                                          + "<br>"+ "祝福消耗効率: +5%"
+                                                          + "<br>"+ "恐怖命中: +11"
+                                                          + "<br>"+ "PVP魔法ダメージ減少: +3%"
+                                                          + "<br>"+ "エリクサーブースター効果"
+                                                          + "<br>"+ "材質: 鉱石"
+                                                          + "<br>"+ "重さ: 1"+"</html>");
+                            break;
+                        case 6: //LV92
+                            buff.MR += 5;                   //MR+5%
+                                                            //祝福消耗効率+5%
+                            buff.ailment[HIT_TERROR] += 12; //恐怖命中+12
+                                                            //PVP魔法ダメージ減少+3%
+                                                            //エリクサーブースター効果
+                            ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
+                                                          + "<br>"+ "最大HP: +50"
+                                                          + "<br>"+ "MR: +5%"
+                                                          + "<br>"+ "祝福消耗効率: +5%"
+                                                          + "<br>"+ "恐怖命中: +12"
+                                                          + "<br>"+ "PVP魔法ダメージ減少: +3%"
+                                                          + "<br>"+ "エリクサーブースター効果"
                                                           + "<br>"+ "材質: 鉱石"
                                                           + "<br>"+ "重さ: 1"+"</html>");
                             break;
@@ -3088,13 +3388,14 @@ public class Calculator implements Common {
                     }
                     break;
                 case F:
+                                //LV55
                     buff.DR += 3;
                     ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
                                                   + "<br>"+ "DR: +3"
                                                   + "<br>"+ "材質: 鉱石"
                                                   + "<br>"+ "重さ: 1"+"</html>");
                     switch (q) {
-                        case 1:
+                        case 1: //LV70
                             buff.HIT_SHORT += 3;            //近距離命中+3
                             ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
                                                           + "<br>"+ "DR: +3"
@@ -3102,7 +3403,7 @@ public class Calculator implements Common {
                                                           + "<br>"+ "材質: 鉱石"
                                                           + "<br>"+ "重さ: 1"+"</html>");
                             break;
-                        case 2:
+                        case 2: //LV80
                             buff.HIT_SHORT += 3;            //近距離命中+3
                                                             //祝福消耗効率+5%
                                                             //PVP魔法ダメージ減少+1%
@@ -3114,31 +3415,67 @@ public class Calculator implements Common {
                                                           + "<br>"+ "材質: 鉱石"
                                                           + "<br>"+ "重さ: 1"+"</html>");
                             break;
-                        case 3:
+                        case 3: //LV85
                             buff.HIT_SHORT += 3;            //近距離命中+3
                                                             //祝福消耗効率+5%
                             buff.ailment[HIT_TERROR] += 5;  //恐怖命中+5
                                                             //PVP魔法ダメージ減少+2%
+                                                            //エリクサーブースター効果
                             ui.elixir_rune.setToolTipText("<html>"+  "ステ: +1"
                                                           + "<br>"+ "DR: +3"
                                                           + "<br>"+ "近距離命中: +3"
                                                           + "<br>"+ "祝福消耗効率: +5%"
                                                           + "<br>"+ "恐怖命中: +5"
                                                           + "<br>"+ "PVP魔法ダメージ減少: +2%"
+                                                          + "<br>"+ "エリクサーブースター効果"
                                                           + "<br>"+ "材質: 鉱石"
                                                           + "<br>"+ "重さ: 1"+"</html>");
                             break;
-                        case 4:
+                        case 4: //LV90
                             buff.HIT_SHORT += 3;            //近距離命中+3
                                                             //祝福消耗効率+5%
                             buff.ailment[HIT_TERROR] += 10; //恐怖命中+10
                                                             //PVP魔法ダメージ減少+3%
+                                                            //エリクサーブースター効果
                             ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
                                                           + "<br>"+ "DR: +3"
                                                           + "<br>"+ "近距離命中: +3"
                                                           + "<br>"+ "祝福消耗効率: +5%"
                                                           + "<br>"+ "恐怖命中: +10"
                                                           + "<br>"+ "PVP魔法ダメージ減少: +3%"
+                                                          + "<br>"+ "エリクサーブースター効果"
+                                                          + "<br>"+ "材質: 鉱石"
+                                                          + "<br>"+ "重さ: 1"+"</html>");
+                            break;
+                        case 5: //LV91
+                            buff.HIT_SHORT += 3;            //近距離命中+3
+                                                            //祝福消耗効率+5%
+                            buff.ailment[HIT_TERROR] += 11; //恐怖命中+11
+                                                            //PVP魔法ダメージ減少+3%
+                                                            //エリクサーブースター効果
+                            ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
+                                                          + "<br>"+ "DR: +3"
+                                                          + "<br>"+ "近距離命中: +3"
+                                                          + "<br>"+ "祝福消耗効率: +5%"
+                                                          + "<br>"+ "恐怖命中: +11"
+                                                          + "<br>"+ "PVP魔法ダメージ減少: +3%"
+                                                          + "<br>"+ "エリクサーブースター効果"
+                                                          + "<br>"+ "材質: 鉱石"
+                                                          + "<br>"+ "重さ: 1"+"</html>");
+                            break;
+                        case 6: //LV92
+                            buff.HIT_SHORT += 3;            //近距離命中+3
+                                                            //祝福消耗効率+5%
+                            buff.ailment[HIT_TERROR] += 12; //恐怖命中+12
+                                                            //PVP魔法ダメージ減少+3%
+                                                            //エリクサーブースター効果
+                            ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
+                                                          + "<br>"+ "DR: +3"
+                                                          + "<br>"+ "近距離命中: +3"
+                                                          + "<br>"+ "祝福消耗効率: +5%"
+                                                          + "<br>"+ "恐怖命中: +12"
+                                                          + "<br>"+ "PVP魔法ダメージ減少: +3%"
+                                                          + "<br>"+ "エリクサーブースター効果"
                                                           + "<br>"+ "材質: 鉱石"
                                                           + "<br>"+ "重さ: 1"+"</html>");
                             break;
@@ -3147,13 +3484,14 @@ public class Calculator implements Common {
                     }
                     break;
                 case L:
+                                //LV55
                     buff.DR += 3;
                     ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
                                                   + "<br>"+ "DR: +3"
                                                   + "<br>"+ "材質: 鉱石"
                                                   + "<br>"+ "重さ: 1"+"</html>");
                     switch (q) {
-                        case 1:
+                        case 1: //LV70
                             buff.HIT_SHORT += 3;            //近距離命中+3
                             ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
                                                           + "<br>"+ "DR: +3"
@@ -3161,7 +3499,7 @@ public class Calculator implements Common {
                                                           + "<br>"+ "材質: 鉱石"
                                                           + "<br>"+ "重さ: 1"+"</html>");
                             break;
-                        case 2:
+                        case 2: //LV80
                             buff.HIT_SHORT += 3;            //近距離命中+3
                                                             //祝福消耗効率+5%
                                                             //PVP魔法ダメージ減少+1%
@@ -3173,31 +3511,67 @@ public class Calculator implements Common {
                                                           + "<br>"+ "材質: 鉱石"
                                                           + "<br>"+ "重さ: 1"+"</html>");
                             break;
-                        case 3:
+                        case 3: //LV85
                             buff.HIT_SHORT += 3;            //近距離命中+3
                                                             //祝福消耗効率+5%
                             buff.ailment[HIT_TERROR] += 5;  //恐怖命中+5
                                                             //PVP魔法ダメージ減少+2%
+                                                            //エリクサーブースター効果
                             ui.elixir_rune.setToolTipText("<html>"+  "ステ: +1"
                                                           + "<br>"+ "DR: +3"
                                                           + "<br>"+ "近距離命中: +3"
                                                           + "<br>"+ "祝福消耗効率: +5%"
                                                           + "<br>"+ "恐怖命中: +5"
                                                           + "<br>"+ "PVP魔法ダメージ減少: +2%"
+                                                          + "<br>"+ "エリクサーブースター効果"
                                                           + "<br>"+ "材質: 鉱石"
                                                           + "<br>"+ "重さ: 1"+"</html>");
                             break;
-                        case 4:
+                        case 4: //LV90
                             buff.HIT_SHORT += 3;            //近距離命中+3
                                                             //祝福消耗効率+5%
                             buff.ailment[HIT_TERROR] += 10; //恐怖命中+10
                                                             //PVP魔法ダメージ減少+3%
+                                                            //エリクサーブースター効果
                             ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
                                                           + "<br>"+ "DR: +3"
                                                           + "<br>"+ "近距離命中: +3"
                                                           + "<br>"+ "祝福消耗効率: +5%"
                                                           + "<br>"+ "恐怖命中: +10"
                                                           + "<br>"+ "PVP魔法ダメージ減少: +3%"
+                                                          + "<br>"+ "エリクサーブースター効果"
+                                                          + "<br>"+ "材質: 鉱石"
+                                                          + "<br>"+ "重さ: 1"+"</html>");
+                            break;
+                        case 5: //LV91
+                            buff.HIT_SHORT += 3;            //近距離命中+3
+                                                            //祝福消耗効率+5%
+                            buff.ailment[HIT_TERROR] += 11; //恐怖命中+11
+                                                            //PVP魔法ダメージ減少+3%
+                                                            //エリクサーブースター効果
+                            ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
+                                                          + "<br>"+ "DR: +3"
+                                                          + "<br>"+ "近距離命中: +3"
+                                                          + "<br>"+ "祝福消耗効率: +5%"
+                                                          + "<br>"+ "恐怖命中: +11"
+                                                          + "<br>"+ "PVP魔法ダメージ減少: +3%"
+                                                          + "<br>"+ "エリクサーブースター効果"
+                                                          + "<br>"+ "材質: 鉱石"
+                                                          + "<br>"+ "重さ: 1"+"</html>");
+                            break;
+                        case 6: //LV92
+                            buff.HIT_SHORT += 3;            //近距離命中+3
+                                                            //祝福消耗効率+5%
+                            buff.ailment[HIT_TERROR] += 12; //恐怖命中+12
+                                                            //PVP魔法ダメージ減少+3%
+                                                            //エリクサーブースター効果
+                            ui.elixir_rune.setToolTipText("<html>"+ "ステ: +1"
+                                                          + "<br>"+ "DR: +3"
+                                                          + "<br>"+ "近距離命中: +3"
+                                                          + "<br>"+ "祝福消耗効率: +5%"
+                                                          + "<br>"+ "恐怖命中: +12"
+                                                          + "<br>"+ "PVP魔法ダメージ減少: +3%"
+                                                          + "<br>"+ "エリクサーブースター効果"
                                                           + "<br>"+ "材質: 鉱石"
                                                           + "<br>"+ "重さ: 1"+"</html>");
                             break;

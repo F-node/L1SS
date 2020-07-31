@@ -2,6 +2,15 @@ LineageStatusSimulator_fork2018
 
 変更点
 2020/07/31
+Update 4.0.6
+LSS/src/lss/Calculator.java
+LSS/src/lss/UI.java
+追加
+	エリクサールーン　LV91/LV92
+修正
+	エリクサールーン　LV85/LV90
+
+2020/07/31
 Update 4.0.5
 LSS/src/lss/Common.java
 LSS/src/lss/UI.java
