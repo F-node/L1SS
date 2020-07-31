@@ -220,8 +220,8 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
     //ファイナルバーンで計104個分(0から103)
 //    JCheckBox[] cb_buff = new JCheckBox[104];
 //    JComboBox[] cb_buff_group = new JComboBox[104];
-    JCheckBox[] cb_buff = new JCheckBox[139];
-    JComboBox[] cb_buff_group = new JComboBox[139];
+    JCheckBox[] cb_buff = new JCheckBox[142];
+    JComboBox[] cb_buff_group = new JComboBox[142];
     //パネル4
     JComboBox cb_npc_level;
     JSlider[] s_target_res = new JSlider[ELEM_LIST.length];
@@ -1899,6 +1899,9 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
 
         cb_buff[H_RK] = new JCheckBox("ランカーボーナス");
         cb_buff[H_RK].setBounds(200 * row, 20 * col++, 100, 20);       
+
+        cb_buff[H_RKT] = new JCheckBox("クラス加護");
+        cb_buff[H_RKT].setBounds(200 * row, 20 * col++, 100, 20); 
 
         MP mp = new MP();
 

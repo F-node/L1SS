@@ -486,6 +486,7 @@ public interface Common {
     final int H_PVPDR = 95;         //生存のボーナス
     final int H_PVP = 96;           //暗殺のボーナス
     final int H_RK = 97;            //ランカーボーナス
+    final int H_RKT = 141;          //各クラス別1位
     
     final String[] AILMENT_LIST = {"技術命中", "技術耐性", "精霊命中", "精霊耐性", "秘技命中","秘技耐性", "恐怖命中", "恐怖耐性"};
 //    final String[] AILMENT_LIST = {"技術", "技術", "精霊", "精霊", "秘技","秘技", "恐怖", "恐怖"};
