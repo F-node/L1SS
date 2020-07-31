@@ -4896,7 +4896,19 @@ public class Calculator implements Common {
                     break;
             }
         }
-        //重量ペナルティ
+        
+        //クラス加護
+        ui.cb_buff[H_RKT].setToolTipText("<html>"+ "クラス別全サーバー総合1位"
+                                         + "<br>"+ "3,600秒ごとに1回の使用が可能"
+                                         + "<br>"+ "コスト:結晶1,000個"
+                                         + "<br>"+ "HP+200 PVPダメージ減少+10 [600秒]"+"</html>");
+        if (ui.cb_buff[H_RKT].isSelected()) {
+                    ui.cb_buff[H_RKT].setToolTipText("HP+200 PVPダメージ減少+10 [600秒]");
+                    buff.HP += 200;
+                    buff.PVP += 10;
+        }
+
+//重量ペナルティ
         switch (ui.cb_weight.getSelectedIndex()) {
             case 0:
                 break;

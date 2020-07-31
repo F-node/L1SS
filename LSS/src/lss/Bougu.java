@@ -503,7 +503,9 @@ public class Bougu implements Common {
         }
 //シールド&ガーダー
         if (name.equals("シアーの心眼")) {
-            if (enchant >= 9) {
+            if (enchant >= 10) {
+                op2.ailment[SPIRIT] = 6;    //精霊耐性+6
+            } else if (enchant >= 9) {
                 op2.ailment[SPIRIT] = 5;    //精霊耐性+5
             } else if (enchant >= 8) {
                 op2.ailment[SPIRIT] = 4;    //精霊耐性+4
@@ -516,7 +518,9 @@ public class Bougu implements Common {
             }
         }
         if (name.equals("エヴァのシールド")) {
-            if (enchant >= 9) {
+            if (enchant >= 10) {
+                op2.ailment[SECRET] = 6;    //秘技耐性+6
+            } else if (enchant >= 9) {
                 op2.ailment[SECRET] = 5;    //秘技耐性+5
             } else if (enchant >= 8) {
                 op2.ailment[SECRET] = 4;    //秘技耐性+4
@@ -655,7 +659,13 @@ public class Bougu implements Common {
             }
         }
         if (name.equals("クーガーのガーダー")) {
-            if (enchant >= 9) {
+            if (enchant >= 10) {
+                op2.HIT_SHORT = 6;          //近距離命中
+                op2.ailment[STUN] = 6;      //技術耐性
+                op2.ailment[SPIRIT] = 6;    //精霊耐性 
+                op2.ailment[SECRET] = 6;    //秘技耐性
+                op2.ailment[TERROR] = 6;    //恐怖耐性
+            } else if (enchant >= 9) {
                 op2.HIT_SHORT = 5;          //近距離命中
                 op2.ailment[STUN] = 5;      //技術耐性
                 op2.ailment[SPIRIT] = 5;    //精霊耐性 
@@ -688,12 +698,18 @@ public class Bougu implements Common {
             }
         }
         if (name.equals("ウグヌスのガーダー")) {
-            if (enchant >= 9) {
-                op2.HIT_LONG = 5;           //遠距離命中+5
-                op2.ailment[STUN] = 5;      //技術耐性+5
-                op2.ailment[SPIRIT] = 5;    //精霊耐性+5
-                op2.ailment[SECRET] = 5;    //秘技耐性+5
-                op2.ailment[TERROR] = 5;    //恐怖耐性+5
+            if (enchant >= 10) {
+                op2.HIT_LONG = 6;           //遠距離命中+5
+                op2.ailment[STUN] = 6;      //技術耐性+5
+                op2.ailment[SPIRIT] = 6;    //精霊耐性+5
+                op2.ailment[SECRET] = 6;    //秘技耐性+5
+                op2.ailment[TERROR] = 6;    //恐怖耐性+5
+            } else if (enchant >= 9) {
+                op2.HIT_LONG = 5;           //遠距離命中+4
+                op2.ailment[STUN] = 5;      //技術耐性+4
+                op2.ailment[SPIRIT] = 5;    //精霊耐性+4
+                op2.ailment[SECRET] = 5;    //秘技耐性+4
+                op2.ailment[TERROR] = 5;    //恐怖耐性+4
             } else if (enchant >= 8) {
                 op2.HIT_LONG = 4;           //遠距離命中+4
                 op2.ailment[STUN] = 4;      //技術耐性+4
@@ -884,8 +900,10 @@ public class Bougu implements Common {
             }
         }
         if (name.equals("大魔術師の帽子")) {
-            op2.MP = 10 * enchant;
-            if (enchant >= 9) {
+            op2.MR = 2 * enchant;
+            if (enchant >= 10) {
+                op2.ailment[SPIRIT] = 6;         //精霊耐性+6
+            } else if (enchant >= 9) {
                 op2.ailment[SPIRIT] = 5;         //精霊耐性+5
             } else if (enchant >= 8) {
                 op2.ailment[SPIRIT] = 4;         //精霊耐性+4
@@ -898,8 +916,11 @@ public class Bougu implements Common {
             }
         }
         if (name.equals("エルシャベのヘルム")) {
-            op2.MP = 10 * enchant;
-            if (enchant >= 9) {
+            op2.MR = 2 * enchant;
+            if (enchant >= 10) {
+                op2.ailment[STUN] = 6;           //技術耐性+6
+                op2.ailment[TERROR] = 6;         //恐怖耐性+6
+            } else if (enchant >= 9) {
                 op2.ailment[STUN] = 5;           //技術耐性+5
                 op2.ailment[TERROR] = 5;         //恐怖耐性+5
             } else if (enchant >= 8) {
@@ -923,7 +944,10 @@ public class Bougu implements Common {
         }
 //ブーツ
         if (name.equals("腕力のブーツ")) {
-            if (enchant >= 9) {
+            if (enchant >= 10) {
+                op2.DR = 1;
+                op2.HP = 80;
+            } else if (enchant >= 9) {
                 op2.DR = 1;
                 op2.HP = 60;
             } else if (enchant >= 8) {
@@ -933,7 +957,10 @@ public class Bougu implements Common {
             }
         }
         if (name.equals("機敏のブーツ")) {
-            if (enchant >= 9) {
+            if (enchant >= 10) {
+                op2.DR = 1;
+                op2.HP = 80;
+            } else if (enchant >= 9) {
                 op2.DR = 1;
                 op2.HP = 60;
             } else if (enchant >= 8) {
@@ -943,7 +970,10 @@ public class Bougu implements Common {
             }
         }
         if (name.equals("知力のブーツ")) {
-            if (enchant >= 9) {
+            if (enchant >= 10) {
+                op2.DR = 1;
+                op2.HP = 80;
+            } else if (enchant >= 9) {
                 op2.DR = 1;
                 op2.HP = 60;
             } else if (enchant >= 8) {
@@ -953,7 +983,10 @@ public class Bougu implements Common {
             }
         }
         if (name.equals("知恵のブーツ")) {
-            if (enchant >= 9) {
+            if (enchant >= 10) {
+                op2.DR = 1;
+                op2.HP = 80;
+            } else if (enchant >= 9) {
                 op2.DR = 1;
                 op2.HP = 60;
             } else if (enchant >= 8) {
@@ -1026,7 +1059,12 @@ public class Bougu implements Common {
             }
         }
         if (name.equals("アイリスのブーツ")) {
-            if (enchant >= 9) {
+            if (enchant >= 10) {
+                op2.ailment[STUN] = 6;      //技術耐性+6
+                op2.ailment[SPIRIT] = 6;    //精霊耐性+6
+                op2.ailment[SECRET] = 6;    //秘技耐性+6
+                op2.ailment[TERROR] = 6;    //恐怖耐性+6
+            } else if (enchant >= 9) {
                 op2.ailment[STUN] = 5;      //技術耐性+5
                 op2.ailment[SPIRIT] = 5;    //精霊耐性+5
                 op2.ailment[SECRET] = 5;    //秘技耐性+5
@@ -1055,7 +1093,9 @@ public class Bougu implements Common {
         }
 //クローク
         if (name.equals("漆黒のマント")) {
-            if (enchant >= 9) {
+            if (enchant >= 10) {
+                op2.ST[CHA] = 4;
+            } else if (enchant >= 9) {
                 op2.ST[CHA] = 3;
             } else if (enchant >= 8) {
                 op2.ST[CHA] = 2;
@@ -1064,20 +1104,20 @@ public class Bougu implements Common {
             }
         }
         if (name.equals("フィアバンパイアマント")) {
-            if (enchant >= 9) {
-                op2.ailment[TERROR] = 5;    //恐怖耐性+5
-            } else if (enchant >= 8) {
+            if (enchant >= 10) {
                 op2.ailment[TERROR] = 4;    //恐怖耐性+4
-            } else if (enchant >= 7) {
+            } else if (enchant >= 9) {
                 op2.ailment[TERROR] = 3;    //恐怖耐性+3
-            } else if (enchant >= 6) {
+            } else if (enchant >= 8) {
                 op2.ailment[TERROR] = 2;    //恐怖耐性+2
-            } else if (enchant >= 5) {
+            } else if (enchant >= 7) {
                 op2.ailment[TERROR] = 1;    //恐怖耐性+1
             }
         }
         if (name.equals("アントクイーンゴールデンウィング")) {
-            if (enchant >= 9) {
+            if (enchant >= 10) {
+                op2.ailment[SPIRIT] = 6;    //精霊耐性+6
+            } else if (enchant >= 9) {
                 op2.ailment[SPIRIT] = 5;    //精霊耐性+5
             } else if (enchant >= 8) {
                 op2.ailment[SPIRIT] = 4;    //精霊耐性+4
@@ -1090,7 +1130,10 @@ public class Bougu implements Common {
             }
         }
         if (name.equals("アントクイーンシルバーウィング")) {
-            if (enchant >= 9) {
+            if (enchant >= 10) {
+                op2.ailment[SPIRIT] = 6;    //精霊耐性+6
+                op2.ER= 6;                  //ER+6
+            } else if (enchant >= 9) {
                 op2.ailment[SPIRIT] = 5;    //精霊耐性+5
                 op2.ER= 5;                  //ER+5
             } else if (enchant >= 8) {
@@ -1308,7 +1351,9 @@ public class Bougu implements Common {
             }
         }
         if (name.equals("マミーロードのグローブ")) {
-            if (enchant >= 9) {
+            if (enchant >= 10) {
+                op2.SP = 4;
+            } else if (enchant >= 9) {
                 op2.SP = 3;
             } else if (enchant >= 8) {
                 op2.SP = 2;
@@ -1320,24 +1365,24 @@ public class Bougu implements Common {
             if (enchant >= 7) {
                 op2.HIT_SHORT = enchant - 3;
             }
-            if (enchant >= 9) {
-                op2.HIT_SHORT =6;
+            if (enchant >= 10) {
+                op2.HIT_SHORT =7;
             }
         }
         if (name.equals("守護騎士のパワーグローブ")) {
             if (enchant >= 5) {
                 op2.HIT_SHORT = enchant - 4;
             }
-            if (enchant >= 9) {
-                op2.HIT_SHORT =5;
+            if (enchant >= 10) {
+                op2.HIT_SHORT =6;
             }
         }
         if (name.equals("守護騎士のブレイサー")) {
             if (enchant >= 5) {
                 op2.HIT_LONG = enchant - 4;
             }
-            if (enchant >= 9) {
-                op2.HIT_LONG =5;
+            if (enchant >= 10) {
+                op2.HIT_LONG =6;
             }
         }
         if (name.equals("血戦のグローブ")) {
@@ -1997,9 +2042,11 @@ public class Bougu implements Common {
                 op2.MR = 2;                 //MR+2
             }
         }
-        //ナイトバルドのゲートルは+5から[近距離命中]+1増加(最大+5)
+        //ナイトバルドのゲートルは+5から[近距離命中]+1増加(最大+6)
         if (name.equals("ナイトバルドのゲートル")) {
-            if (enchant >= 9) {
+            if (enchant >= 10) {
+                op2.HIT_SHORT = 6;          //近距離命中+6
+            } else if (enchant >= 9) {
                 op2.HIT_SHORT = 5;          //近距離命中+5
             } else if (enchant >= 8) {
                 op2.HIT_SHORT = 4;          //近距離命中+4
@@ -2011,9 +2058,11 @@ public class Bougu implements Common {
                 op2.HIT_SHORT = 1;          //近距離命中+1
             }
         }
-        //アイリスのゲートルは+5から[遠距離命中]+1増加(最大+5)
+        //アイリスのゲートルは+5から[遠距離命中]+1増加(最大+6)
         if (name.equals("アイリスのゲートル")) {
-            if (enchant >= 9) {
+            if (enchant >= 10) {
+                op2.HIT_LONG = 6;          //遠距離命中+6
+            } else if (enchant >= 9) {
                 op2.HIT_LONG = 5;          //遠距離命中+5
             } else if (enchant >= 8) {
                 op2.HIT_LONG = 4;          //遠距離命中+4
@@ -2025,9 +2074,11 @@ public class Bougu implements Common {
                 op2.HIT_LONG = 1;          //遠距離命中+1
             }
         }
-        //バンパイアのゲートルは+5から[魔法命中]+1増加(最大+5)
+        //バンパイアのゲートルは+5から[魔法命中]+1増加(最大+6)
         if (name.equals("バンパイアのゲートル")) {
-            if (enchant >= 9) {
+            if (enchant >= 10) {
+                op2.HIT_MAGIC = 6;          //魔法命中+6
+            } else if (enchant >= 9) {
                 op2.HIT_MAGIC = 5;          //魔法命中+5
             } else if (enchant >= 8) {
                 op2.HIT_MAGIC = 4;          //魔法命中+4
