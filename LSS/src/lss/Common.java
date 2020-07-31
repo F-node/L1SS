@@ -192,266 +192,276 @@ public interface Common {
     final int E_QUE = 81;           //LV45  QUakE                         クエイク
     final int E_EWN = 18;           //LV45  Earth WeapoN                  アースウェポン
 
-//ウィザードの魔法
-    //LV11魔法
-//    final int W_XX = X;           //Eternity                      エタニティ(未実装)
-//    final int W_XX = X;           //Meister Accuracy              マイスターアキュラシー(未実装)
-//    final int W_XX = x;           //Immun To Harm: Saint          イミューントゥハーム:セイント(未実装)
+//ウィザードの魔法  8+2+3=84    合計84種類
+    //パッシブ    合計3種類
+//    final int W_XX = X;           //LV85  Meister Accuracy              マイスターアキュラシー(未実装)
+//    final int W_XX = x;           //LV85  Meditation: BeyonD            メディテーション:ビヨンド(未実装)
+//    final int W_XX = x;           //LV80  Immun To Harm: Saint          イミューントゥハーム:セイント(未実装)
 
-    //LV10魔法
-//    final int W_XX = X;           //Death heel                    デスヒール(未実装)
-//    final int W_XX = X;           //Meteor strike                 メテオストライク(未実装)
-//    final int W_XX = X;           //Greater Resurrection          グレーターリザレクション(未実装)
-//    final int W_XX = X;           //Ice Meteor                    アイスメテオ(未実装)
-//    final int W_XX = X;           //Disintegrate                  ディスインテグレート(未実装)
-//    final int W_XX = X;           //Absolute barrier              アブソルートバリア(未実装)
-    final int W_ADS = 24;           //Advanced spirits              アドバンスドスピリッツ
-//    final int W_XX = X;           //Ice spike                     アイススパイク(未実装)
+    //LV11魔法    合計2種類
+//    final int W_XX = X;           //LV85  ETernity                      エタニティ(未実装)
+//    final int W_XX = x;           //LV85  Mas Immun To                  マスイミューントゥ(未実装)    
 
-    //LV9魔法
-//    final int W_XX = X;           //Lightning stormライトニングストーム(未実装)
-//    final int W_XX = X;           //Fog of sleepingフォグオブスリーピング(未実装)
-//    final int W_XX = X;           //Shape changeシェイプチェンジ(未実装)
-//    final int W_XX = X;           //Immun To Harmイミューントゥハーム(未実装)
-//    final int W_XX = X;           //Massteleportマステレポート(未実装)
-//    final int W_XX = X;           //Fire stormファイアーストーム(未実装)
-//    final int W_XX = X;           //Decay potionディケイポーション(未実装)
-//    final int W_XX = X;           //Counter detectionカウンターディテクション(未実装)
+    //LV10魔法    合計8種類
+//    final int W_XX = X;           //LV80  Death Heel                    デスヒール(未実装)
+//    final int W_XX = X;           //LV80  Meteor Strike                 メテオストライク(未実装)
+//    final int W_XX = X;           //LV80  Greater Resurrection          グレーターリザレクション(未実装)
+//    final int W_XX = X;           //LV80  Ice Meteor                    アイスメテオ(未実装)
+//    final int W_XX = X;           //LV80  Disintegrate                  ディスインテグレート(未実装)
+//    final int W_XX = X;           //LV80  Absolute barrier              アブソルートバリア(未実装)
+    final int W_ADS = 24;           //LV80  Advanced spirits              アドバンスドスピリッツ
+//    final int W_XX = X;           //LV80  Ice spike                     アイススパイク(未実装)
 
-    //LV8魔法
-//    final int W_FHL = X;          //Full HeeL                     フルヒール(未実装)
-//    final int W_FWL = X;          //Fire WalL                     ファイアーウォール(未実装)
-//    final int W_BLD = X;          //BLizzarD                      ブリザード(未実装)
-//    final int W_INY = X;          //INvisibilitY                  インビジビリティー(未実装)
-//    final int W_REN = X;          //REsurrectioN                  リザレクション(未実装)
-//    final int W_EAE = X;          //EArthquakE                    アースクエイク(未実装)
-//    final int W_LSM = X;          //Life StreaM                   ライフストリーム(未実装)
-//    final int W_SIE = X;          //SIlencE                       サイレンス(未実装)
+    //LV9魔法    合計8種類
+//    final int W_XX = X;           //LV72  Lightning storm               ライトニングストーム(未実装)
+//    final int W_XX = X;           //LV72  Fog of sleeping               フォグオブスリーピング(未実装)
+//    final int W_XX = X;           //LV72  Shape change                  シェイプチェンジ(未実装)
+//    final int W_XX = X;           //LV72  Immun To Harm                 イミューントゥハーム(未実装)
+//    final int W_XX = X;           //LV72  Massteleport                  マステレポート(未実装)
+//    final int W_XX = X;           //LV72  Fire storm                    ファイアーストーム(未実装)
+//    final int W_XX = X;           //LV72  Decay potion                  ディケイポーション(未実装)
+//    final int W_XX = X;           //LV72  Counter detection             カウンターディテクション(未実装)
 
-    //LV7魔法
-//    final int W_HAL = X;          //Heel AlL                      ヒールオール(未実装)
-    final int W_FAR = 102;          //Freezing ArmoR                フリージングアーマー
-//    final int W_SMR = X;          //Summon MonsteR                サモンモンスター(未実装)
-//    final int W_HWK = X;          //Holy WalK                     ホーリーウォーク(未実装)
-//    final int W_TOO = X;          //TOrnadO                       トルネード(未実装)
-//    final int W_GHT = X;          //Greater HeisT                 グレーターヘイスト(未実装)
-    final int W_BER = 25;           //BErserkeR                     バーサーカー
-    final int W_EAY = 101;          //Enchant Accuracy              エンチャントアキュラシー
+    //LV8魔法    合計8種類
+//    final int W_FHL = X;          //LV64  Full HeeL                     フルヒール(未実装)
+//    final int W_FWL = X;          //LV64  Fire WalL                     ファイアーウォール(未実装)
+//    final int W_BLD = X;          //LV64  BLizzarD                      ブリザード(未実装)
+//    final int W_INY = X;          //LV64  INvisibilitY                  インビジビリティー(未実装)
+//    final int W_REN = X;          //LV64  REsurrectioN                  リザレクション(未実装)
+//    final int W_EAE = X;          //LV64  EArthquakE                    アースクエイク(未実装)
+//    final int W_LSM = X;          //LV64  Life StreaM                   ライフストリーム(未実装)
+//    final int W_SIE = X;          //LV64  SIlencE                       サイレンス(未実装)
 
-    //LV6魔法
-//    final int W_CZE = X;          //Create ZombiE                 クリエイトゾンビ(未実装)
-//    final int W_PES = X;          //Physical Enchant:STR          フィジカルエンチャント:STR(未実装)
-//    final int W_HET = X;          //HEisT                         ヘイスト(未実装)
-//    final int W_CAN = X;          //CAncellatioN                  キャンセレーション(未実装)
-//    final int W_IRN = X;          //IRaptioN                      イラプション(未実装)
-//    final int W_SUT = X;          //SUnbursT                      サンバースト(未実装)
-//    final int W_WES = X;          //WEaknesS                      ウィークネス(未実装)
-//    final int W_BWN = X;          //Breath WeapoN                 ブレスウェポン(未実装)
+    //LV7魔法    合計8種類
+//    final int W_HAL = X;          //LV56  Heel AlL                      ヒールオール(未実装)
+    final int W_FAR = 102;          //LV56  Freezing ArmoR                フリージングアーマー
+//    final int W_SMR = X;          //LV56  Summon MonsteR                サモンモンスター(未実装)
+//    final int W_HWK = X;          //LV56  Holy WalK                     ホーリーウォーク(未実装)
+//    final int W_TOO = X;          //LV56  TOrnadO                       トルネード(未実装)
+//    final int W_GHT = X;          //LV56  Greater HeisT                 グレーターヘイスト(未実装)
+    final int W_BER = 25;           //LV56  BErserkeR                     バーサーカー
+    final int W_EAY = 101;          //LV56  Enchant Accuracy              エンチャントアキュラシー
 
-    //LV5魔法
-//    final int W_CPE = X;          //Curse ParalyzE                カーズパラライズ(未実装)
-//    final int W_CLG = X;          //Call LightninG                コールライトニング(未実装)
-//    final int W_GHL = X;          //Greater HeeL                  グレーターヒール(未実装)
-//    final int W_TMR = X;          //Taming MonsteR                テイミングモンスター(未実装)
-//    final int W_RCE = X;          //Remove CursE                  リムーブカーズ(未実装)
-//    final int W_COC = X;          //Corn Of Cold                  コーンオブコールド(未実装)
-//    final int W_MDN = X;          //Mana DraiN                    マナドレイン(未実装)
-//    final int W_DAS = X;          //DArknesS                      ダークネス(未実装)
+    //LV6魔法    合計8種類
+//    final int W_CZE = X;          //LV48  Create ZombiE                 クリエイトゾンビ(未実装)
+//    final int W_PES = X;          //LV48  Physical Enchant:STR          フィジカルエンチャント:STR(未実装)
+//    final int W_HET = X;          //LV48  HEisT                         ヘイスト(未実装)
+//    final int W_CAN = X;          //LV48  CAncellatioN                  キャンセレーション(未実装)
+//    final int W_IRN = X;          //LV48  IRaptioN                      イラプション(未実装)
+//    final int W_SUT = X;          //LV48  SUnbursT                      サンバースト(未実装)
+//    final int W_WES = X;          //LV48  WEaknesS                      ウィークネス(未実装)
+//    final int W_BWN = X;          //LV48  Breath WeapoN                 ブレスウェポン(未実装)
 
-    //LV4魔法
-//    final int W_FIL = X;          //FIrebalL                      ファイアーボール(未実装)
-//    final int W_PED = X;          //Physical Enchant:DEX          フィジカルエンチャント:DEX(未実装)
-//    final int W_WBK = X;          //Weapon BreaK                  ウェポンブレイク(未実装)
-//    final int W_VTH = X;          //Vampiric ToucH                バンパイアリックタッチ(未実装)
-//    final int W_THW = X;          //THroW                         スロー(未実装)
-//    final int W_EJL = X;          //Earth JaiL                    アースジェイル(未実装)
-//    final int W_CMC = X;          //Counter MagiC                 カウンターマジック(未実装)
-//    final int W_MEN = X;          //MEditatioN                    メディテーション(未実装)
+    //LV5魔法    合計8種類
+//    final int W_CPE = X;          //LV40  Curse ParalyzE                カーズパラライズ(未実装)
+//    final int W_CLG = X;          //LV40  Call LightninG                コールライトニング(未実装)
+//    final int W_GHL = X;          //LV40  Greater HeeL                  グレーターヒール(未実装)
+//    final int W_TMR = X;          //LV40  Taming MonsteR                テイミングモンスター(未実装)
+//    final int W_RCE = X;          //LV40  Remove CursE                  リムーブカーズ(未実装)
+//    final int W_COC = X;          //LV40  Corn Of Cold                  コーンオブコールド(未実装)
+//    final int W_MDN = X;          //LV40  Mana DraiN                    マナドレイン(未実装)
+//    final int W_DAS = X;          //LV40  DArknesS                      ダークネス(未実装)
 
-    //LV3魔法
-//    final int W_LIG = X;          //LIghtninG                     ライトニング(未実装)
-//    final int W_TUD = X;          //Turn UndeaD                   ターンアンデッド(未実装)
-//    final int W_EHL = X;          //Extra HeeL                    エキストラヒール(未実装)
-//    final int W_CBD = X;          //Curse BlinD                   カーズブラインド(未実装)
-    final int W_BAR = 27;           //Blessed ArmoR                 ブレスドアーマー
-//    final int W_FCD = X;          //Frozen ClouD                  フローズンクラウド(未実装)
-//    final int W_WEL = X;          //Week ElementaL                ウィークエレメンタル(未実装)
+    //LV4魔法    合計8種類
+//    final int W_FIL = X;          //LV32  FIrebalL                      ファイアーボール(未実装)
+//    final int W_PED = X;          //LV32  Physical Enchant:DEX          フィジカルエンチャント:DEX(未実装)
+//    final int W_WBK = X;          //LV32  Weapon BreaK                  ウェポンブレイク(未実装)
+//    final int W_VTH = X;          //LV32  Vampiric ToucH                バンパイアリックタッチ(未実装)
+//    final int W_THW = X;          //LV32  THroW                         スロー(未実装)
+//    final int W_EJL = X;          //LV32  Earth JaiL                    アースジェイル(未実装)
+//    final int W_CMC = X;          //LV32  Counter MagiC                 カウンターマジック(未実装)
+//    final int W_MEN = X;          //LV32  MEditatioN                    メディテーション(未実装)
 
-    //LV2魔法
-//    final int W_CPN = X;          //Cure PoisoN                   キュアポイズン(未実装)
-//    final int W_CRH = X;          //Chill ToucH                   チルタッチ(未実装)
-//    final int W_CPN = X;          //Cars PoisoN                   カーズポイズン(未実装)
-//    final int W_EWN = X;          //Enchant WeapoN                エンチャントウェポン(未実装)
-//    final int W_DEN = X;          //DEtectioN                     ディテクション(未実装)
-    final int W_DWT = 26;           //Decrease WeighT               ディクリースウェイト
-//    final int W_FAW = X;          //Fire ArroW                    ファイアーアロー(未実装)
-//    final int W_STK = X;          //STarracK                      スタラック(未実装)
+    //LV3魔法    合計7種類
+//    final int W_LIG = X;          //LV24  LIghtninG                     ライトニング(未実装)
+//    final int W_TUD = X;          //LV24  Turn UndeaD                   ターンアンデッド(未実装)
+//    final int W_EHL = X;          //LV24  Extra HeeL                    エキストラヒール(未実装)
+//    final int W_CBD = X;          //LV24  Curse BlinD                   カーズブラインド(未実装)
+    final int W_BAR = 27;           //LV24  Blessed ArmoR                 ブレスドアーマー
+//    final int W_FCD = X;          //LV24  Frozen ClouD                  フローズンクラウド(未実装)
+//    final int W_WEL = X;          //LV24  Week ElementaL                ウィークエレメンタル(未実装)
 
-    //LV1魔法
-//    final int W_HEL = X;          //HEaL                          ヒール(未実装)
-//    final int W_LIT = X;          //LIghT                         ライト(未実装)
-//    final int W_SHD = X;          //SHielD                        シールド(未実装)
-//    final int W_EBT = X;          //Energy BolT                   エネルギーボルト(未実装)
-//    final int W_TET = X;          //TEleporT                      テレポート(未実装)
-//    final int W_IDR = X;          //Ice DaggeR                    アイスダガー(未実装)
-//    final int W_WCR = X;          //Wind CutteR                   ウィンドカッター(未実装)
-//    final int W_HWS = X;          //Holy WeaponS                  ホーリーウェポン(未実装)
+    //LV2魔法    合計8種類
+//    final int W_CPN = X;          //LV16  Cure PoisoN                   キュアポイズン(未実装)
+//    final int W_CRH = X;          //LV16  Chill ToucH                   チルタッチ(未実装)
+//    final int W_CPN = X;          //LV16  Cars PoisoN                   カーズポイズン(未実装)
+//    final int W_EWN = X;          //LV16  Enchant WeapoN                エンチャントウェポン(未実装)
+//    final int W_DEN = X;          //LV16  DEtectioN                     ディテクション(未実装)
+    final int W_DWT = 26;           //LV16  Decrease WeighT               ディクリースウェイト
+//    final int W_FAW = X;          //LV16  Fire ArroW                    ファイアーアロー(未実装)
+//    final int W_STK = X;          //LV16  STarracK                      スタラック(未実装)
+
+    //LV1魔法    合計8種類
+//    final int W_HEL = X;          //LV8   HEaL                          ヒール(未実装)
+//    final int W_LIT = X;          //LV8   LIghT                         ライト(未実装)
+//    final int W_SHD = X;          //LV8   SHielD                        シールド(未実装)
+//    final int W_EBT = X;          //LV8   Energy BolT                   エネルギーボルト(未実装)
+//    final int W_TET = X;          //LV8   TEleporT                      テレポート(未実装)
+//    final int W_IDR = X;          //LV8   Ice DaggeR                    アイスダガー(未実装)
+//    final int W_WCR = X;          //LV8   Wind CutteR                   ウィンドカッター(未実装)
+//    final int W_HWS = X;          //LV8   Holy WeaponS                  ホーリーウェポン(未実装)
     
 //ダークエルフの闇の精霊魔法
+    //LV4魔法    合計8種類
+    final int D_LUD = 123;          //LV85  LUcifer:Destiny               ルシファー:デスティニー(未実装)
+//    final int D_MAM = X;          //LV85  Moving Acceleration:Maximum   ムービングアクセレーション:マキシマム(未実装)
+    final int D_AVR = 119;          //LV85  AVengeR                       アベンジャー(未実装)
+    
+    final int D_SHS = 120;          //LV80  SHadow Step                   シャドウステップ(未実装)
+    final int D_ABK = 121;          //LV80  Armor BreaK                   アーマーブレイク(未実装)
+    final int D_LUR = 122;          //LV80  LUcifeR                       ルシファー(未実装)
+    final int D_DBD = 28;           //LV80  Double Break:Destiny          ダブルブレイク:デスティニー
+    final int D_ABD = 124;          //LV85  Armor Break:Destiny           アーマーブレイク:デスティニー(未実装)
+
+    //LV3魔法    合計5種類
+    final int D_DBK = 29;           //LV60  Double BreaK                  ダブルブレイク
+    final int D_UDE = 32;           //LV60  Uncanny DodgE                 アンキャニードッジ
+//    final int D_SFG = X;          //LV60  Shadow FanG                   シャドウファング(基本エンチャントのキャラ/武器で実装)
+    final int D_FBN = 103;          //LV60  Final BurN                    ファイナルバーン
+    final int D_DEN = 31;           //LV60  Dress EvasioN                 ドレスイベイジョン
+
+    //LV2魔法    合計4種類
+    final int D_MAN = 79;           //LV40  Moving AcceleratioN           ムービングアクセレーション(未実装)
+    final int D_BSS = 30;           //LV40  Burning SpiritS               バーニングスピリッツ
+//    final int D_SSP = X;          //LV40  Shadow SleeP                  シャドウスリープ(未実装)
+    final int D_VRT = 80;           //LV40  Venom ResisT                  ベノムレジスト(未実装)
+
+    //LV1魔法    合計5種類
+//    final int D_BHG = X;          //LV20  Blind HidinG                  ブラインドハイディング(未実装)
+//    final int D_EVM = X;          //LV20  Enchantment VenoM             エンチャントベノム(未実装)
+//    final int D_BRE = X;          //LV20  BRingstonE                    ブリングストーン(未実装)
+    final int D_SAR = 33;           //LV20  Shadow ArmoR                  シャドウアーマー
+//    final int D_DMY = X;          //LV20  Dress MightY                  ドレスマイティー(未実装)
+
+//ドラゴンナイトの秘技    合計22種類
     //LV4魔法
-    final int D_AVR = 119;          //AVengeR                       アベンジャー(未実装)
-    final int D_SHS = 120;          //SHadow Step                   シャドウステップ(未実装)
-    final int D_ABK = 121;          //Armor BreaK                   アーマーブレイク(未実装)
-    final int D_LUR = 122;          //LUcifeR                       ルシファー(未実装)
-    final int D_LUD = 123;          //LUcifer:Destiny               ルシファー:デスティニー(未実装)
-    final int D_DBD = 28;           //Double Break:Destiny          ダブルブレイク:デスティニー
-    final int D_ABD = 124;          //Armor Break:Destiny           アーマーブレイク:デスティニー(未実装)
+//    final int R_SNE = X;          //LV80  Solid NotE                    ソリッドノート
+//    final int R_RAE = X;          //LV80  RAmpagE                       ランペイジ
+    final int R_HAS = 116;          //LV85  HAlpaS                        ハルパス
+    final int R_LINDVIOL = 90;      //LV80  Arousal[LINDVIOL]             覚醒[リンドビオル]
+    final int R_AUA = 117;          //LV80  AUrakiA                       アウラキア
+//    final int R_TGB = X;          //LV80  Thunder Grap:Brave            サンダーグラップ:ブレイブ
+    final int R_FSB = 60;           //LV85  Four Slayer:Brave             フォースレイヤー:ブレイブ(未実装)
 
     //LV3魔法
-    final int D_DBK = 29;           //Double BreaK                  ダブルブレイク
-    final int D_UDE = 32;           //Uncanny DodgE                 アンキャニードッジ
-//    final int D_SFG = X;          //Shadow FanG                   シャドウファング(基本エンチャントのキャラ/武器で実装)
-    final int D_FBN = 103;          //Final BurN                    ファイナルバーン
-    final int D_DEN = 31;           //Dress EvasioN                 ドレスイベイジョン
+    final int R_MBY = 38;           //LV60  Mortal BodY                   モータルボディー
+//    final int R_TGP = X;          //LV60  Thunder GraP                  サンダーグラップ
+//    final int R_DHR = X;          //LV60  Destroy:HorroR                デストロイ:ホラー
+//    final int R_EOD = X;          //LV60  Eye Of Dragon                 アイオブドラゴン
+    final int R_VALAKAS = 41;       //LV60  Arousal[VALAKAS]              覚醒[ヴァラカス]
 
     //LV2魔法
-    final int D_MAN = 79;           //Moving AcceleratioN           ムービングアクセレーション(未実装)
-    final int D_BSS = 30;           //Burning SpiritS               バーニングスピリッツ
-//    final int D_SSP = X;          //Shadow SleeP                  シャドウスリープ(未実装)
-    final int D_VRT = 80;           //Venom ResisT                  ベノムレジスト(未実装)
+//    final int R_BLT = X;          //LV40  Blood LasT                    ブラッドラスト(基本エンチャントの2段加速で実装)
+//    final int R_FSR = X;          //LV40  Four SlayeR                   フォースレイヤー
+//    final int R_DFR = X;          //LV40  Destroy:FeaR                  デストロイ:フィアー
+//    final int R_MAW = X;          //LV40  Magma ArroW                   マグマアロー
+    final int R_FAFURION = 40;      //LV40  Arousal[FAFURION]             覚醒[パプリオン](未実装)
 
     //LV1魔法
-//    final int D_BHG = X;          //Blind HidinG                  ブラインドハイディング(未実装)
-//    final int D_EVM = X;          //Enchantment VenoM             エンチャントベノム(未実装)
-//    final int D_BRE = X;          //BRingstonE                    ブリングストーン(未実装)
-    final int D_SAR = 33;           //Shadow ArmoR                  シャドウアーマー
-//    final int D_DMY = X;          //Dress MightY                  ドレスマイティー(未実装)
+    final int R_DSN = 37;           //LV20  Dragon SkiN                   ドラゴンスキン
+//    final int R_BSH = X;          //LV20  Burning SlasH                 バーニングスラッシュ
+//    final int R_DEY = X;          //LV20  DEstroY                       デストロイ
+//    final int R_MBH = X;          //LV20  Magma BreatH                  マグマブレス
+    final int R_ANTHARAS = 39;      //LV20  Arousal[ANTHARAS]             覚醒[アンタラス]
 
-//ドラゴンナイトの秘技
-    //LV4魔法
-    final int R_HAS = 116;          //HAlpaS                        ハルパス
-    final int R_LINDVIOL = 90;      //Arousal[LINDVIOL]             覚醒[リンドビオル]
-    final int R_AUA = 117;          //AUrakiA                       アウラキア
-//    final int R_TGB = X;          //Thunder Grap:Brave            サンダーグラップ:ブレイブ
-    final int R_FSB = 60;           //Four Slayer:Brave             フォースレイヤー:ブレイブ(未実装)
-
-    //LV3魔法
-    final int R_MBY = 38;           //Mortal BodY                   モータルボディー
-//    final int R_TGP = X;          //Thunder GraP                  サンダーグラップ
-//    final int R_DHR = X;          //Destroy:HorroR                デストロイ:ホラー
-//    final int R_EOD = X;          //Eye Of Dragon                 アイオブドラゴン
-    final int R_VALAKAS = 41;       //Arousal[VALAKAS]              覚醒[ヴァラカス]
-
-    //LV2魔法
-//    final int R_BLT = X;          //Blood LasT                    ブラッドラスト(基本エンチャントの2段加速で実装)
-//    final int R_FSR = X;          //Four SlayeR                   フォースレイヤー
-//    final int R_DFR = X;          //Destroy:FeaR                  デストロイ:フィアー
-//    final int R_MAW = X;          //Magma ArroW                   マグマアロー
-    final int R_FAFURION = 40;      //Arousal[FAFURION]             覚醒[パプリオン](未実装)
-
-    //LV1魔法
-    final int R_DSN = 37;           //Dragon SkiN                   ドラゴンスキン
-//    final int R_BSH = X;          //Burning SlasH                 バーニングスラッシュ
-//    final int R_DEY = X;          //DEstroY                       デストロイ
-//    final int R_MBH = X;          //Magma BreatH                  マグマブレス
-    final int R_ANTHARAS = 39;      //Arousal[ANTHARAS]             覚醒[アンタラス]
-
-//イリュージョニストの幻術魔法
+//イリュージョニストの幻術魔法    合計26種類
     //LV5魔法
-    final int I_POL = 118;          //POtentiaL                     ポテンシャル
-//    final int I_MES = X;          //MEviuS                        メビウス
-    final int I_IMT = 92;           //IMpacT                        インパクト
-//    final int I_DHE = X;          //Dark HorsE                    ダークホース(基本エンチャントの2段加速で実装)
-    final int I_FSZ = 91;           //Focus SpitZ                   フォーカススピッツ
+//    final int I_BBR = X;          //LV85  Bone BreaK:Raster             ボーンブレイク:ラスタ
+    final int I_POL = 118;          //LV85  POtentiaL                     ポテンシャル
+//    final int I_MES = X;          //LV85  MEviuS                        メビウス
+    final int I_IMT = 92;           //LV80  IMpacT                        インパクト
+//    final int I_DHE = X;          //LV80  Dark HorsE                    ダークホース(基本エンチャントの2段加速で実装)
+    final int I_FSZ = 91;           //LV75  Focus SpitZ                   フォーカススピッツ
 
     //LV4魔法             
-    final int I_INS = 46;           //INsighT                       インサイト
-//    final int I_PAC = X;          //PAniC                         パニック
-    final int I_RWT = 62;           //Reduce WeighT                 リデュースウェイト
-    final int I_IAR = 45;           //Illusion[AvataR]              幻術[アバター]
-//    final int I_CAR = X;          //Cube[AvataR]                  キューブ[アバター]
+    final int I_INS = 46;           //LV60  INsighT                       インサイト
+//    final int I_PAC = X;          //LV60  PAniC                         パニック
+    final int I_RWT = 62;           //LV60  Reduce WeighT                 リデュースウェイト
+    final int I_IAR = 45;           //LV60  Illusion[AvataR]              幻術[アバター]
+//    final int I_CAR = X;          //LV60  Cube[AvataR]                  キューブ[アバター]
 
     //LV3魔法     
-    final int I_PAE = 47;           //PAtiencE                      ペイシェンス
-//    final int I_PHM = X;          //PHantasM                      ファンタズム
-//    final int I_EBR = X;          //Eyes BreakeR                  アイズブレイカー
-    final int I_IGM = 44;           //Illusion[GoleM]               幻術[ゴーレム]
-//    final int I_CRH = X;          //Cube[RicH]                    キューブ[リッチ]
+    final int I_PAE = 47;           //LV45  PAtiencE                      ペイシェンス
+//    final int I_PHM = X;          //LV45  PHantasM                      ファンタズム
+//    final int I_EBR = X;          //LV45  Eyes BreakeR                  アイズブレイカー
+    final int I_IGM = 44;           //LV45  Illusion[GoleM]               幻術[ゴーレム]
+//    final int I_CRH = X;          //LV45  Cube[RicH]                    キューブ[リッチ]
 
     //LV2魔法 
-    final int I_CON = 48;           //COncentratioN                 コンセントレーション
-//    final int I_MBK = X;          //Mind BreaK                    マインドブレイク
-//    final int I_BBK = X;          //Bone BreaK                    ボーンブレイク
-    final int I_IRH = 43;           //Illusion[RicH]                幻術[リッチ]
-//    final int I_CGM = X;          //Cube[GoleM]                   キューブ[ゴーレム]
+    final int I_CON = 48;           //LV30  COncentratioN                 コンセントレーション
+//    final int I_MBK = X;          //LV30  Mind BreaK                    マインドブレイク
+//    final int I_BBK = X;          //LV30  Bone BreaK                    ボーンブレイク
+    final int I_IRH = 43;           //LV30  Illusion[RicH]                幻術[リッチ]
+//    final int I_CGM = X;          //LV30  Cube[GoleM]                   キューブ[ゴーレム]
 
     //LV1魔法 
-    final int I_MIE = 49;           //Mirror ImagE                  ミラーイメージ
-//    final int I_CFN = X;          //ConFusioN                     コンフュージョン
-//    final int I_SEY = X;          //Smash EnergY                  スマッシュエネルギー
-    final int I_IOE = 42;           //Illusion[OgrE]                幻術[オーガ]
-//    final int I_COE = X;          //Cube[OgrE]                    キューブ[オーガ]
+    final int I_MIE = 49;           //LV15  Mirror ImagE                  ミラーイメージ
+//    final int I_CFN = X;          //LV15  ConFusioN                     コンフュージョン
+//    final int I_SEY = X;          //LV15  Smash EnergY                  スマッシュエネルギー
+    final int I_IOE = 42;           //LV15  Illusion[OgrE]                幻術[オーガ]
+//    final int I_COE = X;          //LV15  Cube[OgrE]                    キューブ[オーガ]
 
-//ウォリアーの技術
+//ウォリアーの技術    合計16種類
     //アクティブスキル
-//    final int S_DEN = X;          //DEmolitioN                    デモリッション
-//    final int S_DEO = X;          //DEsperadO                     デスペラード
-    final int S_TRG = 115;          //Titan RisinG                  タイタンライジング
-//    final int S_PGP = X;          //Power GriP                    パワーグリップ
-    final int S_GIC = 76;           //GIgantiC                      ギガンティック
-//    final int S_TOK = X;          //TOmahawK                      トマホーク
-//    final int S_HOL = X;          //HOwL                          ハウル
+//    final int S_DEN = X;          //LV85  DEmolitioN                    デモリッション
+//    final int S_BEK = X;          //LV85  BErserK                       バーサーク
+//    final int S_DEO = X;          //LV80  DEsperadO                     デスペラード
+    final int S_TRG = 115;          //LV80  Titan RisinG                  タイタンライジング
+//    final int S_PGP = X;          //LV75  Power GriP                    パワーグリップ
+    final int S_GIC = 76;           //LV60  GIgantiC                      ギガンティック
+//    final int S_TOK = X;          //LV45  TOmahawK                      トマホーク
+//    final int S_HOL = X;          //LV30  HOwL                          ハウル
 
     //パッシブスキル
-    final int S_TLK = 69;           //Titan Lock                    タイタンロック
-    final int S_TMC = 70;           //Titan MagiC                   タイタンマジック
-    final int S_TBZ = 71;           //Titan BlitZ                   タイタンブリッツ     
-//    final int S_SLR = X;          //SLayeR                        スレイヤー
-    final int S_CRH = 67;           //CRasH                         クラッシュ
-    final int S_AGD = 66;           //Armor GuarD                   アーマーガード
-    final int S_FUY = 68;           //FUrY                          フューリー
-//    final int S_DAE = X;          //Desperado:AbsolutE            デスペラード:アブソリュート
+    final int S_TLK = 69;           //LV75  Titan Lock                    タイタンロック
+    final int S_TMC = 70;           //LV75  Titan MagiC                   タイタンマジック
+    final int S_TBZ = 71;           //LV80  Titan BlitZ                   タイタンブリッツ     
+//    final int S_SLR = X;          //LV15  SLayeR                        スレイヤー
+    final int S_CRH = 67;           //LV45  CRasH                         クラッシュ
+    final int S_AGD = 66;           //LV60  Armor GuarD                   アーマーガード
+    final int S_FUY = 68;           //LV60  FUrY                          フューリー
+//    final int S_DAE = X;          //LV85  Desperado:AbsolutE            デスペラード:アブソリュート
 
-//フェンサーの技術
+//フェンサーの技術    合計19種類
 //  アクティブスキル
-//    final int F_AAA = XXX;        //AshurA                        アシュラ
-//    final int F_ABE = XXX;        //BladE                         ブレード
-//    final int F_APA = XXX;        //Pantera                       パンテラ
-//    final int F_AJT = XXX;        //JudgmenT                      ジャッジメント
-//    final int F_AHE = XXX;        //HellfirE                      ヘルファイア
-//    final int F_APM = XXX;        //PhantoM                       ファントム
+//    final int F_AAA = XXX;        //LV85  AshurA                        アシュラ
+//    final int F_ABE = XXX;        //LV60  BladE                         ブレード
+//    final int F_APA = XXX;        //LV75  Pantera                       パンテラ
+//    final int F_AJT = XXX;        //LV80  JudgmenT                      ジャッジメント
+//    final int F_AHE = XXX;        //LV70  HellfirE                      ヘルファイア
+//    final int F_APM = XXX;        //LV70  PhantoM                       ファントム
 //  パッシブスキル
-//    final int F_PPH = XXX;        //Phantom:DeatH                 ファントム:デス
-//    final int F_PPR = XXX;        //Phantom:ReapeR                ファントム:リーパー
-//    final int F_PPK = XXX;        //Pantera:ShocK                 パンテラ:ショック
-//    final int F_PSE = XXX;        //SurvivE                       サヴァイヴ
-    final int F_PIZ = 104;          //Infinity:BlitZ                インフィニティ:ブリッツ
-//    final int F_PPX = XXX;        //ParadoX                       パラドックス
-    final int F_PIE = 105;          //Infinity:DodgE                インフィニティ:ドッジ
-//    final int F_PGE = XXX;        //GrousE                        グロウス
-    final int F_PID = 106;          //Infinity:BlooD                インフィニティ:ブラッド
-    final int F_PRE = 107;          //RagE                          レイジ
-    final int F_PIR = 108;          //Infinity:ArmoR                インフィニティ:アーマー
-    final int F_PFE = 109;          //FramE                         フレイム
-    final int F_PDS = 125;          //DamascuS                      ダマスカス
+//    final int F_PPH = XXX;        //LV80  Phantom:DeatH                 ファントム:デス
+//    final int F_PPR = XXX;        //LV80  Phantom:ReapeR                ファントム:リーパー
+//    final int F_PPK = XXX;        //LV80  Pantera:ShocK                 パンテラ:ショック
+    final int F_PIZ = 104;          //LV75  Infinity:BlitZ                インフィニティ:ブリッツ
+//    final int F_PPX = XXX;        //LV75  ParadoX                       パラドックス
+//    final int F_PSE = XXX;        //LV70  SurvivE                       サヴァイヴ
+    final int F_PIE = 105;          //LV70  Infinity:DodgE                インフィニティ:ドッジ
+//    final int F_PGE = XXX;        //LV60  GrousE                        グロウス
+    final int F_PID = 106;          //LV60  Infinity:BlooD                インフィニティ:ブラッド
+    final int F_PRE = 107;          //LV60  RagE                          レイジ
+    final int F_PIR = 108;          //LV45  Infinity:ArmoR                インフィニティ:アーマー
+    final int F_PFE = 109;          //LV45  FramE                         フレイム
+    final int F_PDS = 125;          //LV45  DamascuS                      ダマスカス
 
-//ランサーの槍術
+//ランサーの槍術    合計14種類
 //  アクティブスキル
-//    final int L_ALE = 127;        //LV50  ALternatE               オルタネート
-//    final int L_FWE = 128;        //LV60  Force WavE              フォースウェーブ
-//    final int L_VAD = 129;        //LV70  VAnguarD                ヴァンガード
-//    final int L_REY = 130;        //LV75  REcoverY                リカバリー
-//    final int L_PRE = 131;        //LV75  PRessurE                プレッシャー
-//    final int L_KUU = 132;        //LV80  KUruorU                 クルオル
+//    final int L_ALE = 127;        //LV50  ALternatE                     オルタネート
+//    final int L_FWE = 128;        //LV60  Force WavE                    フォースウェーブ
+//    final int L_VAD = 129;        //LV70  VAnguarD                      ヴァンガード
+//    final int L_REY = 130;        //LV75  REcoverY                      リカバリー
+//    final int L_PRE = 131;        //LV75  PRessurE                      プレッシャー
+//    final int L_KUU = 132;        //LV80  KUruorU                       クルオル
 //  パッシブスキル
-//    final int L_DSE = 133;        //LV65  Deadly StrikE           デッドリーストライク
-//    final int L_VEE = 134;        //LV70  VEngeancE               ベンジェンス
-//    final int L_TAE = 135;        //LV70  Tactical AdvancE        タクティカルアドバンス
-//    final int L_DBE = 136;        //LV75  Dodge BrakE             ダッジブレーキ
-//    final int L_MAM = 137;        //LV75  MAelstroM               マエルストローム
-//    final int L_IRE = 138;        //LV80  Increase RangE          インクリーズレンジ
-//    final int L_KCN = 139;        //LV80  Kuruoru:CombinatioN     クルオル:コンビクション
-//    final int L_PDR = 140;        //LV85  Pressure:Death Recall   プレッシャー:デスリコール
+//    final int L_DSE = 133;        //LV65  Deadly StrikE                 デッドリーストライク
+//    final int L_VEE = 134;        //LV70  VEngeancE                     ベンジェンス
+//    final int L_TAE = 135;        //LV70  Tactical AdvancE              タクティカルアドバンス
+//    final int L_DBE = 136;        //LV75  Dodge BrakE                   ダッジブレーキ
+//    final int L_MAM = 137;        //LV75  MAelstroM                     マエルストローム
+//    final int L_IRE = 138;        //LV80  Increase RangE                インクリーズレンジ
+//    final int L_KCN = 139;        //LV80  Kuruoru:CombinatioN           クルオル:コンビクション
+//    final int L_PDR = 140;        //LV85  Pressure:Death Recall         プレッシャー:デスリコール
     
 //その他
     final int DRAGON_BLESS = 126;   //ドラゴンの祝福

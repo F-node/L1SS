@@ -1,6 +1,15 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2020/07/31
+Update 4.0.5
+LSS/src/lss/Common.java
+LSS/src/lss/UI.java
+追加
+	ウィザード/ダークエルフ/ドラゴンナイト/イリュージョニスト/ウォリアー/フェンサーのスキル取得レベルと新魔法
+修正
+	パネル2(レベル/エリクサー)の用語
+
 2020/07/29
 Update 4.0.4
 LSS/src/lss/Calculator.java
