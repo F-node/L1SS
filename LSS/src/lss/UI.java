@@ -1078,24 +1078,24 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         pure_status_bonus[0][5] = new JLabel("遠距離ダメージ");
         pure_status_bonus[0][6] = new JLabel("遠距離命中");
         pure_status_bonus[0][7] = new JLabel("遠距離クリティカル");
-        pure_status_bonus[0][8] = new JLabel("AC");
-        pure_status_bonus[0][9] = new JLabel("ER");
+        pure_status_bonus[0][8] = new JLabel("物理防御力(AC)");
+        pure_status_bonus[0][9] = new JLabel("遠距離回避力(ER)");
         
         pure_status_bonus[0][10] = new JLabel("魔法ダメージ");
         pure_status_bonus[0][11] = new JLabel("魔法命中");
         pure_status_bonus[0][12] = new JLabel("魔法クリティカル");
-        pure_status_bonus[0][13] = new JLabel("MB");
+        pure_status_bonus[0][13] = new JLabel("魔法ボーナス(MB)");
         pure_status_bonus[0][14] = new JLabel("MP消費減少");
         
-        pure_status_bonus[0][15] = new JLabel("MP増加");
-        pure_status_bonus[0][16] = new JLabel("MPR");
-        pure_status_bonus[0][17] = new JLabel("MPポーション");
-        pure_status_bonus[0][18] = new JLabel("MR");
+        pure_status_bonus[0][15] = new JLabel("LVアップ時MP増加");
+        pure_status_bonus[0][16] = new JLabel("MP回復(Tick)");
+        pure_status_bonus[0][17] = new JLabel("MPポーション回復");
+        pure_status_bonus[0][18] = new JLabel("魔法防御力(MR)");
         pure_status_bonus[0][19] = new JLabel("");
 
-        pure_status_bonus[0][20] = new JLabel("HP増加");
-        pure_status_bonus[0][21] = new JLabel("HPR");
-        pure_status_bonus[0][22] = new JLabel("HPポーション");
+        pure_status_bonus[0][20] = new JLabel("LVアップ時HP増加");
+        pure_status_bonus[0][21] = new JLabel("HP回復(Tick)");
+        pure_status_bonus[0][22] = new JLabel("HPポーション回復");
         pure_status_bonus[0][23] = new JLabel("最大所持重量");
         pure_status_bonus[0][24] = new JLabel("");
 
