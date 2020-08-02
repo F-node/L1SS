@@ -1,6 +1,23 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2020/08/02
+Update 4.0.8
+LSS/data/E.zip
+LSS/src/lss/Bougu.java
+追加
+	ミソフィアのスポールダー(イベント)
+	全クラス装備可能
+	AC+4/ダメージ低下+1/MR+4/最大HP+40/EXP+20%(トレード/削除不可)
+	重量:40
+	材質:プラチナ
+
+	ミソフィアのスポールダー
+	全クラス装備可能
+	AC+4/ダメージ低下+1/MR+4/最大HP+40
+	重量:40
+	材質:プラチナ
+
 2020/08/01
 Update 4.0.7
 LSS/src/lss/Bougu.java
