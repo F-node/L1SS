@@ -280,7 +280,8 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         setTitle("Lineage Status Simulator ver " + version);
 //        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         //初期画面設定　setSize(800, 600); >>> setSize(800, 640);
-        setSize(1000, 640);
+        //setSize(1000, 640); 幅10*高さ5を追加
+        setSize(1010, 645);
         setResizable(false);
 
         ToolTipManager.sharedInstance().setInitialDelay(100);       //初期値:750   次のアクションイベントがトリガーされるまでの初期遅延時間
