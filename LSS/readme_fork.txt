@@ -1,6 +1,16 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2020/08/05
+Update 4.0.9
+LSS/src/lss/UI.java
+修正
+	JAVAの最新verでウィンドウサイズが変わるために(アプリのタイトル幅が広がった)
+	パネル(エンチャント)の下部の文字が欠ける
+	JAVA ver8のビルド1.8.0_251	旧表示範囲　996*638
+	JAVA ver8のビルド1.8.0_261	新表示範囲　986*633
+	幅10*高さ5の調整
+
 2020/08/02
 Update 4.0.8
 LSS/data/E.zip
