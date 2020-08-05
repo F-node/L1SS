@@ -2,6 +2,12 @@ LineageStatusSimulator_fork2018
 
 変更点
 2020/08/05
+Update 4.1.0
+LSS/data/E.zip
+修正
+	ポルセの剣
+
+2020/08/05
 Update 4.0.9
 LSS/src/lss/UI.java
 修正
