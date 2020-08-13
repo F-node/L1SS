@@ -601,8 +601,28 @@ public class Calculator implements Common {
         int set13 = 0;//軍王セット
         int set14 = 0;//DKセット
         int set15 = 0;//セマオリムセット セマのリング+オリムのアミュレット
+        int set16 = 0;//ボーンセット ボーンヘルム+ボーンアーマー+ボーンシールド
+        int set17 = 0;//アイアンセット アイアンヘルム+アイアンプレートメイル+アイアングローブ+アイアンブーツ+アイアンシールド
+        int set18 = 0;//ウィザードセット ウィザードの帽子+ウィザードの服
 
         for (Bougu bougu1 : bougu) {
+            if (bougu1.name.equals("ウィザードの帽子")
+                    || bougu1.name.equals("ウィザードの服")) {
+                set18++;
+            }
+            if (bougu1.name.equals("アイアンヘルム")
+                    || bougu1.name.equals("アイアンプレートメイル")
+                    || bougu1.name.equals("アイアングローブ")
+                    || bougu1.name.equals("アイアンブーツ")
+                    || bougu1.name.equals("アイアンシールド")) {
+                set17++;
+            }
+            if (bougu1.name.equals("ボーンヘルム")
+                    || bougu1.name.equals("ボーンアーマー")
+                    || bougu1.name.equals("ボーンシールド")) {
+                set16++;
+            }
+
             if (bougu1.name.equals("セマのリング")
                     || bougu1.name.equals("オリムのアミュレット")) {
                 set15++;
@@ -767,6 +787,26 @@ public class Calculator implements Common {
             buff.ST[INT] += 1;
             buff.ST[WIS] += 1;
             buff.ST[CHA] += 1;
+            buff.HP += 50;
+        }
+        //ボーンセット AC-5 MR+5 最大HP+50
+        if (set16 == 3) {
+            buff.AC -= 5;
+            buff.MR += 5;
+            buff.HP += 50;
+        }
+        //アイアンセット AC-5 STR+1 MR+10 最大HP+50
+        if (set17 == 5) {
+            buff.AC -= 5;
+            buff.ST[STR] += 1;
+            buff.MR += 10;
+            buff.HP += 50;
+        }
+        //ウィザードセット AC-3 MR+8 MPR+8 最大MP+50
+        if (set18 == 2) {
+            buff.AC -= 3;
+            buff.MP += 8;
+            buff.MPR += 8;
             buff.HP += 50;
         }
         //ウィズダムポーション
@@ -1748,26 +1788,21 @@ public class Calculator implements Common {
                     ui.cb_buff[ITEM_DESSERT].setToolTipText("ダメージ低下+5 獲得経験値+3% 15分20秒");
                     break;
                 case 3:                                 //幻想のショートケーキ
-                    buff.DR += 3;
-                    buff.MEXP += 5;                     //獲得経験値+5%
-                    ui.cb_buff[ITEM_DESSERT].setToolTipText("ダメージ低下+3 獲得経験値+5% 15分20秒");
-                    break;
-                case 4:                                 //幻想のショートケーキ(KR版)
                     buff.DR += 5;
                     buff.MEXP += 10;                    //獲得経験値+10%
                     ui.cb_buff[ITEM_DESSERT].setToolTipText("ダメージ低下+5 獲得経験値+10% 15分20秒");
                     break;
-                case 5:                                 //小粋な携帯飲料
+                case 4:                                 //小粋な携帯飲料
                     buff.DR += 5;
                     buff.MEXP += 5;                     //獲得経験値+5%
                     ui.cb_buff[ITEM_DESSERT].setToolTipText("ダメージ低下+5 獲得経験値+5% 15分20秒");
                     break;
-                case 6:                                 //真心がこもったスープ
+                case 5:                                 //真心がこもったスープ
                     buff.DR += 5;
                     buff.MEXP += 5;                     //獲得経験値+5%
                     ui.cb_buff[ITEM_DESSERT].setToolTipText("ダメージ低下+5 獲得経験値+5% 15分20秒");
                     break;
-                case 7:                                 //パタラシのキノコスープ
+                case 6:                                 //パタラシのキノコスープ
                     buff.DR += 2;
                     buff.MEXP += 10;                    //獲得経験値+10%
                     ui.cb_buff[ITEM_DESSERT].setToolTipText("ダメージ低下+2 獲得経験値+10% 15分");
