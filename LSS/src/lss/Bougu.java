@@ -505,12 +505,16 @@ public class Bougu implements Common {
         if (name.equals("シアーの心眼")) {
             if (enchant >= 10) {
                 op2.ailment[SPIRIT] = 6;    //精霊耐性+6
+                op2.HIT_MAGIC = 4;          //魔法命中+4
             } else if (enchant >= 9) {
                 op2.ailment[SPIRIT] = 5;    //精霊耐性+5
+                op2.HIT_MAGIC = 3;          //魔法命中+3
             } else if (enchant >= 8) {
                 op2.ailment[SPIRIT] = 4;    //精霊耐性+4
+                op2.HIT_MAGIC = 2;          //魔法命中+2
             } else if (enchant >= 7) {
                 op2.ailment[SPIRIT] = 3;    //精霊耐性+3
+                op2.HIT_MAGIC = 1;          //魔法命中+1
             } else if (enchant >= 6) {
                 op2.ailment[SPIRIT] = 2;    //精霊耐性+2
             } else if (enchant >= 5) {
@@ -530,6 +534,27 @@ public class Bougu implements Common {
                 op2.ailment[SECRET] = 2;    //秘技耐性+2
             } else if (enchant >= 5) {
                 op2.ailment[SECRET] = 1;    //秘技耐性+1
+            }
+        }
+        if (name.equals("反逆者のシールド")) {
+            if (enchant >= 10) {
+                op2.HP = 120;                 //HP+120
+                op2.ailment[HIT_STUN] = 6;    //技術命中+6
+            } else if (enchant >= 9) {
+                op2.HP = 100;                 //HP+100
+                op2.ailment[HIT_STUN] = 5;    //技術命中+5
+            } else if (enchant >= 8) {
+                op2.HP = 80;                  //HP+80
+                op2.ailment[HIT_STUN] = 4;    //技術命中+4
+            } else if (enchant >= 7) {
+                op2.HP = 60;                  //HP+60
+                op2.ailment[HIT_STUN] = 3;    //技術命中+3
+            } else if (enchant >= 6) {
+                op2.HP = 40;                  //HP+40
+                op2.ailment[HIT_STUN] = 2;    //技術命中+2
+            } else if (enchant >= 5) {
+                op2.HP = 20;                  //HP+20
+                op2.ailment[HIT_STUN] = 1;    //技術命中+1
             }
         }
         if (name.equals("古代弓射手のガーダー")) {
@@ -886,12 +911,24 @@ public class Bougu implements Common {
         }
 //ヘルム
         if (name.equals("マミーロードクラウン")) {
-            if (enchant >= 9) {
-                op2.DMG_LONG = 3;
+            if (enchant >= 10) {
+                op2.DMG_LONG = 6;               //遠距離ダメージ+6
+                op2.MR = 18;                    //MR+18
+            } else if (enchant >= 9) {
+                op2.DMG_LONG = 5;               //遠距離ダメージ+5
+                op2.MR = 15;                    //MR+15
             } else if (enchant >= 8) {
-                op2.DMG_LONG = 2;
+                op2.DMG_LONG = 4;               //遠距離ダメージ+4
+                op2.MR = 12;                    //MR+12
             } else if (enchant >= 7) {
-                op2.DMG_LONG = 1;
+                op2.DMG_LONG = 3;               //遠距離ダメージ+3
+                op2.MR = 9;                     //MR+9
+            } else if (enchant >= 6) {
+                op2.DMG_LONG = 2;               //遠距離ダメージ+2
+                op2.MR = 6;                     //MR+6
+            } else if (enchant >= 5) {
+                op2.DMG_LONG = 1;               //遠距離ダメージ+1
+                op2.MR = 3;                     //MR+3
             }
         }
         if (name.equals("ブラックナイトヘルム")) {
@@ -900,7 +937,6 @@ public class Bougu implements Common {
             }
         }
         if (name.equals("大魔術師の帽子")) {
-            op2.MR = 2 * enchant;
             if (enchant >= 10) {
                 op2.ailment[SPIRIT] = 6;         //精霊耐性+6
             } else if (enchant >= 9) {
@@ -940,6 +976,21 @@ public class Bougu implements Common {
         if (name.equals("マンボハット")) {
             if (enchant >= 7) {
                 op2.ST[CHA] = 1;
+            }
+        }
+        if (name.equals("指揮官のヘルム")) {
+            if (enchant >= 10) {
+                op2.ailment[STUN] = 6;         //技術耐性+6
+            } else if (enchant >= 9) {
+                op2.ailment[STUN] = 5;         //技術耐性+5
+            } else if (enchant >= 8) {
+                op2.ailment[STUN] = 4;         //技術耐性+4
+            } else if (enchant >= 7) {
+                op2.ailment[STUN] = 3;         //技術耐性+3
+            } else if (enchant >= 6) {
+                op2.ailment[STUN] = 2;         //技術耐性+2
+            } else if (enchant >= 5) {
+                op2.ailment[STUN] = 1;         //技術耐性+1
             }
         }
 //ブーツ
