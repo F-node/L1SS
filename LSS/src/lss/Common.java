@@ -457,7 +457,7 @@ public interface Common {
 //    final int L_DSE = 133;        //LV65  Deadly StrikE                 デッドリーストライク
 //    final int L_VEE = 134;        //LV70  VEngeancE                     ベンジェンス
 //    final int L_TAE = 135;        //LV70  Tactical AdvancE              タクティカルアドバンス
-//    final int L_DBE = 136;        //LV75  Dodge BrakE                   ダッジブレーキ
+//    final int L_DBE = 136;        //LV75  Dodge BrakE                   ドッジブレーキ
 //    final int L_MAM = 137;        //LV75  MAelstroM                     マエルストローム
 //    final int L_IRE = 138;        //LV80  Increase RangE                インクリーズレンジ
 //    final int L_KCN = 139;        //LV80  Kuruoru:CombinatioN           クルオル:コンビクション

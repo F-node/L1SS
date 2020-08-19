@@ -1,6 +1,17 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2020/08/19
+Update 4.1.4
+LSS/data/E.zip
+LSS/src/lss/Bougu.java
+LSS/src/lss/Common.java
+修正
+	2020/08/19 Update
+	https://event2.ncsoft.jp/1.0/lineage/2008pendant/
+	ペンダントの名称とオプション
+	ランサースキル
+
 2020/08/14
 Update 4.1.3
 LSS/data/E.zip
