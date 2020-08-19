@@ -3610,8 +3610,12 @@ public class Bougu implements Common {
                 }
             }
         //ペンダント
-            if (name.equals("ルームティス闘士のペンダント")) {
+            if (name.equals("ルームティスの闘士のペンダント")) {
                 switch (enchant) {
+                    case 0:
+                        op2.MHP = 2;                //最大HP+2%
+                        op2.MMP = 1;                //最大MP+1%
+                        break;
                     case 1:
                         op2.MHP = 4;                //最大HP+4%
                         op2.MMP = 2;                //最大MP+2%
@@ -3684,8 +3688,12 @@ public class Bougu implements Common {
                         break;
                 }
             }
-            if (name.equals("ルームティス名弓のペンダント")) {
+            if (name.equals("ルームティスの射手のペンダント")) {
                 switch (enchant) {
+                    case 0:
+                        op2.MHP = 1;                //最大HP+1%
+                        op2.MMP = 1;                //最大MP+1%
+                        break;
                     case 1:
                         op2.MHP = 2;                //最大HP+2%
                         op2.MMP = 2;                //最大MP+2%
@@ -3758,8 +3766,12 @@ public class Bougu implements Common {
                         break;
                 }
             }
-            if (name.equals("ルームティス賢者のペンダント")) {
+            if (name.equals("ルームティスの賢者のペンダント")) {
                 switch (enchant) {
+                    case 0:
+                        op2.MHP = 1;                //最大HP+1%
+                        op2.MMP = 2;                //最大MP+2%
+                        break;
                     case 1:
                         op2.MHP = 2;                //最大HP+2%
                         op2.MMP = 4;                //最大MP+4%
@@ -3832,8 +3844,12 @@ public class Bougu implements Common {
                         break;
                 }
             }
-            if (name.equals("ルームティス狩猟のペンダント")) {
+            if (name.equals("ルームティスのハンターのペンダント")) {
                 switch (enchant) {
+                    case 0:
+                        op2.MHP = 1;                //最大HP+1%
+                        op2.MMP = 1;                //最大MP+1%
+                        break;
                     case 1:
                         op2.MHP = 2;                //最大HP+2%
                         op2.MMP = 2;                //最大MP+2%
