@@ -1,6 +1,15 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2020/08/27
+Update 4.1.5
+LSS/src/lss/Common.java
+LSS/src/lss/UI.java
+修正
+	タブ:エンチャントのスキルのスペースを拡張(タブ:エンチャント2を追加)
+追加
+	UIにランサースキル追加
+
 2020/08/19
 Update 4.1.4
 LSS/data/E.zip

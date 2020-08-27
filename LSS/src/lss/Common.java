@@ -447,21 +447,21 @@ public interface Common {
 
 //ランサーの槍術    合計14種類
 //  アクティブスキル
-//    final int L_ALE = 127;        //LV50  ALternatE                     オルタネート
-//    final int L_FWE = 128;        //LV60  Force WavE                    フォースウェーブ
-//    final int L_VAD = 129;        //LV70  VAnguarD                      ヴァンガード
-//    final int L_REY = 130;        //LV75  REcoverY                      リカバリー
-//    final int L_PRE = 131;        //LV75  PRessurE                      プレッシャー
-//    final int L_KUU = 132;        //LV80  KUruorU                       クルオル
+    final int L_ALE = 127;          //LV50  ALternatE                     オルタネート
+    final int L_FWE = 128;          //LV60  Force WavE                    フォースウェーブ
+    final int L_VAD = 129;          //LV70  VAnguarD                      ヴァンガード
+    final int L_REY = 130;          //LV75  REcoverY                      リカバリー
+    final int L_PRE = 131;          //LV75  PRessurE                      プレッシャー
+    final int L_KUU = 132;          //LV80  KUruorU                       クルオル
 //  パッシブスキル
-//    final int L_DSE = 133;        //LV65  Deadly StrikE                 デッドリーストライク
-//    final int L_VEE = 134;        //LV70  VEngeancE                     ベンジェンス
-//    final int L_TAE = 135;        //LV70  Tactical AdvancE              タクティカルアドバンス
-//    final int L_DBE = 136;        //LV75  Dodge BrakE                   ドッジブレーキ
-//    final int L_MAM = 137;        //LV75  MAelstroM                     マエルストローム
-//    final int L_IRE = 138;        //LV80  Increase RangE                インクリーズレンジ
-//    final int L_KCN = 139;        //LV80  Kuruoru:CombinatioN           クルオル:コンビクション
-//    final int L_PDR = 140;        //LV85  Pressure:Death Recall         プレッシャー:デスリコール
+    final int L_DSE = 133;          //LV65  Deadly StrikE                 デッドリーストライク
+    final int L_VEE = 134;          //LV70  VEngeancE                     ベンジェンス
+    final int L_TAE = 135;          //LV70  Tactical AdvancE              タクティカルアドバンス
+    final int L_DBE = 136;          //LV75  Dodge BrakE                   ドッジブレーキ
+    final int L_MAM = 137;          //LV75  MAelstroM                     マエルストローム
+    final int L_IRE = 138;          //LV80  Increase RangE                インクリーズレンジ
+    final int L_KCN = 139;          //LV80  Kuruoru:CombinatioN           クルオル:コンビクション
+    final int L_PDR = 140;          //LV85  Pressure:Death Recall         プレッシャー:デスリコール
     
 //その他
     final int DRAGON_BLESS = 126;   //ドラゴンの祝福
