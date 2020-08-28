@@ -220,8 +220,8 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
     //ファイナルバーンで計104個分(0から103)
 //    JCheckBox[] cb_buff = new JCheckBox[104];
 //    JComboBox[] cb_buff_group = new JComboBox[104];
-    JCheckBox[] cb_buff = new JCheckBox[142];
-    JComboBox[] cb_buff_group = new JComboBox[142];
+    JCheckBox[] cb_buff = new JCheckBox[162];
+    JComboBox[] cb_buff_group = new JComboBox[162];
     //パネル5
     JComboBox cb_npc_level;
     JSlider[] s_target_res = new JSlider[ELEM_LIST.length];
@@ -1309,8 +1309,20 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[P_PRE].addActionListener(this);
         panels[2].add(cb_buff[P_PRE]);
 
+        //コールクラン：アドバンス
+        cb_buff[P_CCA] = new JCheckBox("[UP待ち]コールクラン：アドバンス");
+        cb_buff[P_CCA].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[P_CCA].addActionListener(this);
+        panels[2].add(cb_buff[P_CCA]);
+
+        //エンパイア
+        cb_buff[P_EME] = new JCheckBox("エンパイア(未実装)");
+        cb_buff[P_EME].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[P_EME].addActionListener(this);
+        panels[2].add(cb_buff[P_EME]);
+
         //グレース
-        String list_P_GRE[] = {"君主L80", "君主L81", "君主L82", "君主L83", "君主L84", "君主L85","君主L86","君主L87","君主L88","君主L89","君主L90+"};
+        String list_P_GRE[] = {"君主L80", "君主L81", "君主L82", "君主L83", "君主L84", "君主L85","君主L86","君主L87","君主L88","君主L89","君主L90","君主L91","君主L92","君主L93","君主L94+"};
         cb_buff_group[P_GRE] = new WideComboBox(list_P_GRE);
         cb_buff_group[P_GRE].setBounds(200 * row + 100, 20 * col, 80, 20);
         cb_buff_group[P_GRE].addActionListener(this);
@@ -1319,12 +1331,6 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[P_GRE].setBounds(200 * row, 20 * col++, 100, 20);
         cb_buff[P_GRE].addActionListener(this);
         panels[2].add(cb_buff[P_GRE]);
-
-        //オーラ
-        cb_buff[P_AUA] = new JCheckBox("オーラ");
-        cb_buff[P_AUA].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[P_AUA].addActionListener(this);
-        panels[2].add(cb_buff[P_AUA]);
 
         //マジェスティ
         cb_buff[P_MAY] = new JCheckBox("マジェスティ");
@@ -1361,13 +1367,37 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[P_GWN].addActionListener(this);
         panels[2].add(cb_buff[P_GWN]);
 
+        //トゥルーターゲット
+        cb_buff[P_TTT] = new JCheckBox("トゥルーターゲット(未実装)");
+        cb_buff[P_TTT].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[P_TTT].addActionListener(this);
+        panels[2].add(cb_buff[P_TTT]);
+
+        //オーラ
+        cb_buff[P_AUA] = new JCheckBox("オーラ");
+        cb_buff[P_AUA].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[P_AUA].addActionListener(this);
+        panels[2].add(cb_buff[P_AUA]);
+
 //        col = 0;
 //        row = 1;
         col++;
 
-        lab_tmp = new JLabel("騎士技術");
+        lab_tmp = new JLabel("騎士の技術");
         lab_tmp.setBounds(200 * row, 20 * col++, 200, 20);
         panels[2].add(lab_tmp);
+
+        //フォーススタン
+        cb_buff[K_FSN] = new JCheckBox("フォーススタン(未実装)");
+        cb_buff[K_FSN].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[K_FSN].addActionListener(this);
+        panels[2].add(cb_buff[K_FSN]);
+
+        //アブソルートブレイド
+        cb_buff[K_ABE] = new JCheckBox("アブソルートブレイド(未実装)");
+        cb_buff[K_ABE].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[K_ABE].addActionListener(this);
+        panels[2].add(cb_buff[K_ABE]);
 
         //カウンターバリア
         cb_buff[K_CBR] = new JCheckBox("カウンターバリア(未実装)");
@@ -1387,17 +1417,11 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[K_BOK].addActionListener(this);
         panels[2].add(cb_buff[K_BOK]);
 
-        //プライド
-        cb_buff[K_PRE] = new JCheckBox("プライド");
-        cb_buff[K_PRE].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[K_PRE].addActionListener(this);
-        panels[2].add(cb_buff[K_PRE]);
-
-        //ソリッドキャリッジ
-        cb_buff[K_SCE] = new JCheckBox("ソリッドキャリッジ");
-        cb_buff[K_SCE].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[K_SCE].addActionListener(this);
-        panels[2].add(cb_buff[K_SCE]);
+        //ショックスタン
+        cb_buff[K_SSN] = new JCheckBox("ショックスタン(未実装)");
+        cb_buff[K_SSN].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[K_SSN].addActionListener(this);
+        panels[2].add(cb_buff[K_SSN]);
 
         //リダクションアーマー
         cb_buff[K_RAR] = new JCheckBox("リダクションアーマー");
@@ -1412,16 +1436,28 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         panels[2].add(cb_buff[K_CBV]);
 
         //レイジングフォース
-        cb_buff[K_RFE] = new JCheckBox("レイジングフォース");
+        cb_buff[K_RFE] = new JCheckBox("[UP待ち]レイジングフォース");
         cb_buff[K_RFE].setBounds(200 * row, 20 * col++, 150, 20);
         cb_buff[K_RFE].addActionListener(this);
         panels[2].add(cb_buff[K_RFE]);
 
         //リダクションアーマー:ベテラン
-        cb_buff[K_RAV] = new JCheckBox("リダクションアーマー:ベテラン");
+        cb_buff[K_RAV] = new JCheckBox("[UP待ち]リダクションアーマー:ベテラン");
         cb_buff[K_RAV].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[K_RAV].addActionListener(this);
         panels[2].add(cb_buff[K_RAV]);
+
+        //プライド
+        cb_buff[K_PRE] = new JCheckBox("プライド");
+        cb_buff[K_PRE].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[K_PRE].addActionListener(this);
+        panels[2].add(cb_buff[K_PRE]);
+
+        //ソリッドキャリッジ
+        cb_buff[K_SCE] = new JCheckBox("ソリッドキャリッジ");
+        cb_buff[K_SCE].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[K_SCE].addActionListener(this);
+        panels[2].add(cb_buff[K_SCE]);
 
         col = 0;
         row = 2;
@@ -1432,19 +1468,81 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
 
         //グローリーアース
         cb_buff[E_GEH] = new JCheckBox("グローリーアース(未実装)");
-        cb_buff[E_GEH].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[E_GEH].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
-                                      + "<br>"+ "2つの属性系列を使用可能にする"
-                                      + "<br>"+ "属性系列に関係する魔法は同時に効果を得る サモンはランダムで召喚される"
-                                      + "<br>"+ "[習得レベル:85][持続時間:常時][対象:術者]"+"</html>");
+        cb_buff[E_GEH].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[E_GEH].addActionListener(this);
         panels[2].add(cb_buff[E_GEH]);
 
+        //エルヴンストライク
+        cb_buff[E_ESE] = new JCheckBox("[UP待ち]エルヴンストライク");
+        cb_buff[E_ESE].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[E_ESE].addActionListener(this);
+        panels[2].add(cb_buff[E_ESE]);
+
+        //リバーレベーション
+        cb_buff[E_REN] = new JCheckBox("[UP待ち]リバーレベーション");
+        cb_buff[E_REN].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[E_REN].addActionListener(this);
+        panels[2].add(cb_buff[E_REN]);
+
+        //マジックシールド
+        cb_buff[E_MSD] = new JCheckBox("[UP待ち]マジックシールド");
+        cb_buff[E_MSD].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[E_MSD].addActionListener(this);
+        panels[2].add(cb_buff[E_MSD]);
+
+        //ソウルバリア
+        cb_buff[E_SBR] = new JCheckBox("ソウルバリア(未実装)");
+        cb_buff[E_SBR].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[E_SBR].addActionListener(this);
+        panels[2].add(cb_buff[E_SBR]);
+
+        //エリアサイレンス
+        cb_buff[E_ASE] = new JCheckBox("エリアサイレンス(未実装)");
+        cb_buff[E_ASE].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[E_ASE].addActionListener(this);
+        panels[2].add(cb_buff[E_ASE]);
+
         //エルヴングラヴィティー
         cb_buff[E_ELY] = new JCheckBox("エルヴングラヴィティー");
-        cb_buff[E_ELY].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[E_ELY].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[E_ELY].addActionListener(this);
         panels[2].add(cb_buff[E_ELY]);
+
+        //グレーターエレメンタル
+        cb_buff[E_GEL] = new JCheckBox("グレーターエレメンタル(未実装)");
+        cb_buff[E_GEL].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[E_GEL].addActionListener(this);
+        panels[2].add(cb_buff[E_GEL]);
+
+        //イレースマジック
+        cb_buff[E_EMC] = new JCheckBox("イレースマジック(未実装)");
+        cb_buff[E_EMC].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[E_EMC].addActionListener(this);
+        panels[2].add(cb_buff[E_EMC]);
+
+        //エレメンタルフォールダウン
+        cb_buff[E_EFN] = new JCheckBox("エレメンタルフォールダウン(未実装)");
+        cb_buff[E_EFN].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[E_EFN].addActionListener(this);
+        panels[2].add(cb_buff[E_EFN]);
+
+        //サモンレッサーエレメンタル
+        cb_buff[E_SLE] = new JCheckBox("サモンレッサーエレメンタル(未実装)");
+        cb_buff[E_SLE].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[E_SLE].addActionListener(this);
+        panels[2].add(cb_buff[E_SLE]);
+        
+        //トリプルアロー
+        cb_buff[E_TAW] = new JCheckBox("トリプルアロー(未実装)");
+        cb_buff[E_TAW].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[E_TAW].addActionListener(this);
+        panels[2].add(cb_buff[E_TAW]);
+        
+        //ブラッディソウル
+        cb_buff[E_BSL] = new JCheckBox("ブラッディソウル(未実装)");
+        cb_buff[E_BSL].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[E_BSL].addActionListener(this);
+        panels[2].add(cb_buff[E_BSL]);
 
         //エレメンタルプロテクション
         String list_E_EPN[] = {"火エルフ", "水エルフ", "風エルフ", "地エルフ", "火*水エルフ", "火*風エルフ", "火*地エルフ", "水*風エルフ", "水*地エルフ", "風*地エルフ"};
@@ -1459,21 +1557,39 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
 
         //レジストエレメント
         cb_buff[E_RET] = new JCheckBox("レジストエレメント");
-        cb_buff[E_RET].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[E_RET].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[E_RET].addActionListener(this);
         panels[2].add(cb_buff[E_RET]);
 
         //クリアマインド
         cb_buff[E_CMD] = new JCheckBox("クリアマインド");
-        cb_buff[E_CMD].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[E_CMD].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[E_CMD].addActionListener(this);
         panels[2].add(cb_buff[E_CMD]);
 
+        //テレポートトゥマザー
+        cb_buff[E_TTM] = new JCheckBox("テレポートトゥマザー(未実装)");
+        cb_buff[E_TTM].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[E_TTM].addActionListener(this);
+        panels[2].add(cb_buff[E_TTM]);
+
+        //ボディトゥマインド
+        cb_buff[E_BTM] = new JCheckBox("ボディトゥマインド(未実装)");
+        cb_buff[E_BTM].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[E_BTM].addActionListener(this);
+        panels[2].add(cb_buff[E_BTM]);
+
         //レジストマジック
         cb_buff[E_RMC] = new JCheckBox("レジストマジック");
-        cb_buff[E_RMC].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[E_RMC].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[E_RMC].addActionListener(this);
         panels[2].add(cb_buff[E_RMC]);
+
+        //リターントゥネイチャー
+        cb_buff[E_RTN] = new JCheckBox("リターントゥネイチャー(未実装)");
+        cb_buff[E_RTN].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[E_RTN].addActionListener(this);
+        panels[2].add(cb_buff[E_RTN]);
 
         col++;
 
@@ -1511,7 +1627,8 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[E_BWN].addActionListener(this);
         panels[2].add(cb_buff[E_BWN]);
 
-//        col++;
+        col = 0;
+        row = 3;
 
         lab_tmp = new JLabel("精霊魔法(水)");
         lab_tmp.setBounds(200 * row, 20 * col++, 200, 20);
@@ -1534,6 +1651,8 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[E_AST].setBounds(200 * row, 20 * col++, 150, 20);
         cb_buff[E_AST].addActionListener(this);
         panels[2].add(cb_buff[E_AST]);
+
+        col++;
 
         lab_tmp = new JLabel("精霊魔法(風)");
         lab_tmp.setBounds(200 * row, 20 * col++, 200, 20);
@@ -1562,6 +1681,8 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[E_EEE].setBounds(200 * row, 20 * col++, 150, 20);
         cb_buff[E_EEE].addActionListener(this);
         panels[2].add(cb_buff[E_EEE]);
+
+        col++;
 
         lab_tmp = new JLabel("精霊魔法(地)");
         lab_tmp.setBounds(200 * row, 20 * col++, 200, 20);
@@ -1592,7 +1713,7 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         panels[2].add(cb_buff[E_EWN]);
 
         col = 0;
-        row = 3;
+        row = 4;
 
         lab_tmp = new JLabel("闇の精霊魔法");
         lab_tmp.setBounds(200 * row, 20 * col++, 200, 20);
@@ -1722,8 +1843,7 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[D_SAR].addActionListener(this);
         panels[2].add(cb_buff[D_SAR]);
 
-        col = 0;
-        row = 4;
+        col++;
 
         lab_tmp = new JLabel("竜騎士秘技");
         lab_tmp.setBounds(200 * row, 20 * col++, 200, 20);

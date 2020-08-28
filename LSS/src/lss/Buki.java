@@ -22,6 +22,7 @@ public class Buki implements Common {
     int max_enchant = 0;                //最高可能強化値
     int safety = 0;                     //安全強化値
     boolean element_enchant = false;    //属性強化数
+    boolean damage_resistance = false;  //損傷耐性
     // キーリンク用
     int x, y, z;                        //キーリンク用ダメージダイス
     // 魔法武器用
@@ -61,6 +62,7 @@ public class Buki implements Common {
         max_enchant = 0;                //最高可能強化値
         safety = 0;                     //安全強化値
         element_enchant = false;        //属性強化数
+        damage_resistance = false;      //損傷耐性
         magic_name = "";                //魔法武器の魔法の名前
 //        magic_motion = false;           //魔法モーションの有無
         magic_rate = 0;                 //魔法発動率
@@ -133,6 +135,9 @@ public class Buki implements Common {
                 }
                 if (line.startsWith("属性強化=")) {
                     element_enchant = Boolean.parseBoolean(line.split("=")[1]);
+                }
+                if (line.startsWith("損傷耐性=")) {
+                    damage_resistance = Boolean.parseBoolean(line.split("=")[1]);
                 }
                 if (line.startsWith("魔法ダメージ=")) {
                     magic_power = Double.parseDouble(line.split("=")[1]);
