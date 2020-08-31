@@ -7,6 +7,7 @@ package lss;
 
 import java.awt.Color;
 import java.text.DecimalFormat;
+import static lss.Common.E_SGL;
 import static lss.Common.R;
 
 /**
@@ -98,9 +99,9 @@ public class Calculator implements Common {
     final Bougu bougu[] = new Bougu[EQ_LIST.length - 2];
     private int base_ac;
     private int equip_ac;
-    private int base_dg;   
+    private int base_dg;
     private int base_er;
-    private int base_me;    
+    private int base_me;
 //    private int base_pvp_dr;
 
     Buff buff;
@@ -459,7 +460,8 @@ public class Calculator implements Common {
     double db_rate = 0.3333;    //ダブルブレイクの確率33%
     double ef_rate = 0.4000;    //エレメンタルファイアーの確率40%
     double qe_rate = 0.4000;    //クエイクの確率40%
-    double pb_rate = 0.4000;    //ブレイブメンタルの確率40% 
+    double pb_rate = 0.4000;    //ブレイブメンタルの確率40%
+    double re_rate = 0.1800;    //レイジの確率18%
 
     public Calculator(UI ui) {
         this.ui = ui;
@@ -521,8 +523,8 @@ public class Calculator implements Common {
                         ui.lev.isOverflow[i] = false;
                     } else if (i + 51 <= level) {
                     ui.lev.isOverflow[i] = true;
-                    }              
-                }                        
+                    }
+                }
                 else{
                     if (_ST[BASE][st] + _ST[REM][st] + _ST[LEVEL][st] + _ST[ELIXIR][st] < 45) {
                         if (i + 51 <= level) {
@@ -774,7 +776,7 @@ public class Calculator implements Common {
             buff.AC -= 10;
             buff.ST[STR] += 2;
             buff.DMG_SHORT += 2;
-            //  下記メソッド実行のたびに追加ボーナスが累積される模様（本来+2個で追加ボーナスが3倍になる）
+            //下記メソッド実行のたびに追加ボーナスが累積される模様(本来+2個で追加ボーナスが3倍になる)
             //ui.cb_morph_level.setSelectedItem("80");
             //ui.cb_morph_type.setSelectedItem("近/遠特化");
         }
@@ -1676,9 +1678,9 @@ public class Calculator implements Common {
                     buff.element_resist[WIND] += 10;
                     buff.element_resist[EARTH] += 10;
                     buff.ailment[HIT_STUN] += 3;            //技術命中+3
-        	    buff.ailment[HIT_SPIRIT] += 3;          //精霊命中+3
-        	    buff.ailment[HIT_SECRET] += 3;          //秘技命中+3
-        	    buff.ailment[HIT_TERROR] += 3;          //恐怖命中+3
+                    buff.ailment[HIT_SPIRIT] += 3;          //精霊命中+3
+                    buff.ailment[HIT_SECRET] += 3;          //秘技命中+3
+                    buff.ailment[HIT_TERROR] += 3;          //恐怖命中+3
                     ui.cb_buff[ITEM_COOKING].setToolTipText("<html>"+"水属性抵抗+10 地属性抵抗+10 風属性抵抗+10 火属性抵抗+10"
                                                             + "<br>"+ "MR+10 HPR+2 MPR+3 SP+2 ダメージ低下+2 全クラススキル命中+3 30分"+"</html>");
                     break;
@@ -1707,9 +1709,9 @@ public class Calculator implements Common {
                     buff.element_resist[WIND] += 10;
                     buff.element_resist[EARTH] += 10;
                     buff.ailment[HIT_STUN] += 3;            //技術命中+3
-        	    buff.ailment[HIT_SPIRIT] += 3;          //精霊命中+3
-        	    buff.ailment[HIT_SECRET] += 3;          //秘技命中+3
-        	    buff.ailment[HIT_TERROR] += 3;          //恐怖命中+3
+                    buff.ailment[HIT_SPIRIT] += 3;          //精霊命中+3
+                    buff.ailment[HIT_SECRET] += 3;          //秘技命中+3
+                    buff.ailment[HIT_TERROR] += 3;          //恐怖命中+3
                     ui.cb_buff[ITEM_COOKING].setToolTipText("<html>"+"水属性抵抗+10 地属性抵抗+10 風属性抵抗+10 火属性抵抗+10"
                                                             + "<br>"+ "MR+10 HPR+2 MPR+3 遠距離ダメージ+2 遠距離命中+1 ダメージ低下+2 全クラススキル命中+3 30分"+"</html>");
                     break;
@@ -1940,7 +1942,7 @@ public class Calculator implements Common {
             }
         }
 
-        //リダクションアーマー:ベテラン 
+        //リダクションアーマー:ベテラン
         ui.cb_buff[K_RAV].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
                                          + "<br>"+ "リダクションアーマーに恐怖耐性+3を追加"
                                          + "<br>"+ "リダクションアーマーを覚えていないと習得する事が出来ない"
@@ -2215,20 +2217,10 @@ public class Calculator implements Common {
         //スキル効果未実装
         }
 
-        //バーニングウエポン 消費MP30/16mins
-        ui.cb_buff[E_BWN].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
-                                         + "<br>"+ "火属性の近距離ダメージ+6 近距離命中+6"
-                                         + "<br>"+ "[習得レベル:75][持続時間:16分][対象:術者]"+"</html>");
-        if (ui.cb_buff[E_BWN].isSelected()) {
-            if (cls == E) {
-                buff.ELEM_DMG_SHORT[FIRE] += 6;
-                buff.HIT_SHORT += 6;
-            } else {
-                ui.cb_buff[E_BWN].setSelected(false);
-            }
-        }
-        //インフェルノ 消費MP50 HP70/2mins
+//精霊魔法(火)
+        //インフェルノ
         ui.cb_buff[E_INO].setToolTipText("<html>"+ "[消費MP:50][消費HP:70]"
+                                         + "<br>"+ "ソード専用スキル"
                                          + "<br>"+ "一定確率(不明)で近距離ダメージを50%軽減しカウンター攻撃"
                                          + "<br>"+ "カウンターダメージは武器の[SMALL打撃値]+[追加ダメージ]+[強化数]x[1~4(ランダム)]"
                                          + "<br>"+ "[習得レベル:80][持続時間:2分8秒][対象:術者][触媒:精霊の玉(5)]"+"</html>");
@@ -2239,8 +2231,241 @@ public class Calculator implements Common {
                 ui.cb_buff[E_INO].setSelected(false);
             }
         }
-        //アースウェポン 消費MP15/16mins
+
+        //ソウルオブフレイム
+        //5828行にて処理
+
+        //アディショナルファイアー
+        ui.cb_buff[E_AFE].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
+                                         + "<br>"+ "重量ゲージが50%を超えてもHPとMPが自然回復する"
+                                         + "<br>"+ "[習得レベル:75][持続時間:16分][対象:術者]"+"</html>");
+        if (ui.cb_buff[E_AFE].isSelected()) {
+        
+        }
+
+        //エレメンタルファイヤー
+        //6241行にて処理
+
+        //バーニングウエポン
+        ui.cb_buff[E_BWN].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
+                                         + "<br>"+ "火属性の近距離ダメージ+6 近距離命中+6"
+                                         + "<br>"+ "[習得レベル:75][持続時間:16分][対象:術者]"+"</html>");
+        if (ui.cb_buff[E_BWN].isSelected()) {
+                buff.ELEM_DMG_SHORT[FIRE] += 6;
+                buff.HIT_SHORT += 6;
+        }
+
+        //ダンシングブレイズ
+        ui.cb_buff[E_DBE].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
+                                         + "<br>"+ "ダガー/ソード専用スキル"
+                                         + "<br>"+ "移動速度と攻撃速度が上昇する[2段加速]x1.3333"
+                                         + "<br>"+ "[習得レベル:60][持続時間:8分][対象:術者][触媒:エルブンワッフル(1)]"+"</html>");
+        if (ui.cb_buff[E_DBE].isSelected()) {
+        //[2段加速]をONにする
+        ui.cb_buff[ACC2].setSelected(true);
+        //"x1.3333"を選択する
+        ui.cb_buff_group[ACC2].setSelectedItem("x1.3333");
+        }
+
+        //ファイアーシールド
+        ui.cb_buff[E_FSD].setToolTipText("<html>"+ "[消費MP:15][消費HP:--]"
+                                         + "<br>"+ "AC-4"
+                                         + "<br>"+ "シールドの上位魔法"
+                                         + "<br>"+ "[習得レベル:45][持続時間:16分][対象:術者]"+"</html>");
+        if (ui.cb_buff[E_FSD].isSelected()) {
+        //[AC]をONにする
+        ui.cb_buff[B_AC].setSelected(true);
+        //"AC-4"を選択する
+        ui.cb_buff_group[B_AC].setSelectedItem("-4");
+        }
+        
+//精霊魔法(水) 
+        //ポルートウォーター
+        ui.cb_buff[E_PWR].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
+                                         + "<br>"+ "5セル内の対象に、一定確率でヒール/ポーションの回復効果を半減"
+                                         + "<br>"+ "[習得レベル:80][持続時間:32秒][対象:PC/NPC][触媒:精霊の玉(1)]"+"</html>");
+        if (ui.cb_buff[E_PWR].isSelected()) {
+
+        }
+
+        //ネイチャーズブレッシング
+        ui.cb_buff[E_NBG].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
+                                         + "<br>"+ "15セル内のPTメンバーのHPを回復する"
+                                         + "<br>"+ "術者とPTメンバーの間に障害物があると効果が無い"
+                                         + "<br>"+ "[習得レベル:75][持続時間:瞬間][対象:PT][触媒:精霊の玉(1)]"+"</html>");
+        if (ui.cb_buff[E_NBG].isSelected()) {
+
+        }
+
+        //フォーカスウェーブ
+        ui.cb_buff[E_FWE].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
+                                         + "<br>"+ "弓専用スキル"
+                                         + "<br>"+ "移動速度と攻撃速度が上昇する[2段加速]x1.1547"
+                                         + "<br>"+ "*リニューアル 移動速度と攻撃速度がBP速度に変更"
+                                         + "<br>"+ "[習得レベル:60][持続時間:8分][対象:術者][触媒:エルブンワッフル(1)]"+"</html>");
+        if (ui.cb_buff[E_FWE].isSelected()) {
+        //[2段加速]をONにする
+        ui.cb_buff[ACC2].setSelected(true);
+        //"x1.1547"を選択する
+        ui.cb_buff_group[ACC2].setSelectedItem("x1.1547");
+        }
+
+        //アクアプロテクター
+        ui.cb_buff[E_APR].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
+                                         + "<br>"+ "8セル内のプレイヤーに、遠距離回避(ER)+5"
+                                         + "<br>"+ "[習得レベル:60][持続時間:16分][対象:術者/PC]"+"</html>");
+        if (ui.cb_buff[E_APR].isSelected()) {
+            if (ui.cb_buff[D_DEN].isSelected()) {
+                ui.cb_buff[E_APR].setSelected(false);
+            } else {
+                buff.ER += 5;
+            }
+        }
+
+        //ネイチャーズタッチ
+        ui.cb_buff[E_NTH].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
+                                         + "<br>"+ "攻撃を受けた時に一定確率でHPが回復する"
+                                         + "<br>"+ "他のHPが回復する加護の効果と重複します"
+                                         + "<br>"+ "*リニューアル HP自然回復+15からHP回復加護に変更"
+                                         + "<br>"+ "[習得レベル:60][持続時間:5分20秒][対象:術者]"+"</html>");
+        if (ui.cb_buff[E_NTH].isSelected()) {
+            if (level > 9) {
+                if (level < 24) {
+                    buff.HPR += level - 9;
+                } else {
+                    buff.HPR += 15;
+                }
+            }
+        }
+
+        //ウォーターライフ
+        ui.cb_buff[E_WLE].setToolTipText("<html>"+ "[消費MP:1][消費HP:--]"
+                                         + "<br>"+ "15セル内のプレイヤーに、1回だけ回復魔法の効果を2倍にする"
+                                         + "<br>"+ "生存の叫び、一部アーマーの加護にも効果が適用される"
+                                         + "<br>"+ "[習得レベル:45][持続時間:1分4秒][対象:PC][触媒:精霊の玉(1)]"+"</html>");
+        if (ui.cb_buff[E_WLE].isSelected()) {
+
+        }
+
+        //アクアショット
+        ui.cb_buff[E_AST].setToolTipText("<html>"+ "[消費MP:15][消費HP:--]"
+                                         + "<br>"+ "遠距離命中+4"
+                                         + "<br>"+ "[習得レベル:45][持続時間:16分][対象:術者]"+"</html>");
+        if (ui.cb_buff[E_AST].isSelected()) {
+            if (cls == E) {
+                buff.HIT_LONG += 4;
+            } else {
+                ui.cb_buff[E_AST].setSelected(false);
+            }
+        } 
+
+//精霊魔法(風)
+        //ストライカーゲイル
+        ui.cb_buff[E_SGL].setToolTipText("<html>"+ "[消費MP:15][消費HP:--]"
+                                         + "<br>"+ "6セル内の対象を、一定確率で遠距離回避[ER]を3分の1にする"
+                                         + "<br>"+ "[習得レベル:80][持続時間:12秒][対象:PC/NPC][触媒:精霊の玉(2)]"+"</html>");
+        if (ui.cb_buff[E_SGL].isSelected()) {
+            
+        }
+
+        //ハリケーン
+        ui.cb_buff[E_HUE].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
+                                         + "<br>"+ "弓専用スキル"
+                                         + "<br>"+ "移動速度と攻撃速度が上昇する[2段加速]x1.3333"
+                                         + "<br>"+ "[習得レベル:75][持続時間:8分][対象:術者][触媒:エルブンワッフル(1)]"+"</html>");
+        if (ui.cb_buff[E_HUE].isSelected()) {
+        //[2段加速]をONにする
+        ui.cb_buff[ACC2].setSelected(true);
+        //"x1.3333"を選択する
+        ui.cb_buff_group[ACC2].setSelectedItem("x1.3333");
+        }
+
+        //サイクロン
+        //6380行にｔｒ処理
+
+        //ストームショット
+        ui.cb_buff[E_SST].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
+                                         + "<br>"+ "風属性の遠距離ダメージ+6 遠距離命中+3"
+                                         + "<br>"+ "[習得レベル:75][持続時間:16分][対象:術者]"+"</html>");
+            if (ui.cb_buff[E_SST].isSelected()) {
+                ui.cb_buff[E_SEE].setSelected(false);
+            buff.ELEM_DMG_LONG[WIND] += 6;
+            buff.HIT_LONG += 3;
+        }
+
+        //ストームアイ
+        ui.cb_buff[E_SEE].setToolTipText("<html>"+ "[消費MP:40][消費HP:--]"
+                                         + "<br>"+ "15セル内のPTメンバーに風属性の遠距離ダメージ+3 遠距離命中+2"
+                                         + "<br>"+ "[習得レベル:60][持続時間:16分][対象:術者/PTメンバー]"+"</html>");
+            if (ui.cb_buff[E_SEE].isSelected()) {
+                buff.ELEM_DMG_LONG[WIND] += 3;
+                buff.HIT_LONG += 2;
+            }
+
+        //イーグルアイ
+        //5903行にて処理
+
+//精霊魔法(土)
+        //アースバインド
+        ui.cb_buff[E_EBD].setToolTipText("<html>"+ "[消費MP:18][消費HP:--]"
+                                         + "<br>"+ "6セル内の対象を、一定確率で封鎖して行動不可能・攻撃を受けない状態にする"
+                                         + "<br>"+ "封鎖された対象は回復魔法を受け付けない"
+                                         + "<br>"+ "封鎖中にカーズパラライズを受けたら、アースバインドとカーズパラライズどちらの効果も解除"
+                                         + "<br>"+ "[習得レベル:80][持続時間:8秒][対象:PC/NPC][触媒:精霊の玉(2)]"+"</html>");
+        if (ui.cb_buff[E_EBD].isSelected()) {
+            
+        }
+
+        //エキゾチックバイタライズ
+        ui.cb_buff[E_EVE].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
+                                         + "<br>"+ "重量ゲージが50%を超えてもHPとMPが自然回復する"
+                                         + "<br>"+ "[習得レベル:75][持続時間:16分][対象:術者]"+"</html>");
+        if (ui.cb_buff[E_EVE].isSelected()) {
+        
+        }
+        //アイアンスキン
+        ui.cb_buff[E_ISN].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
+                                         + "<br>"+ "AC-10"
+                                         + "<br>"+ "シールドの上位魔法"
+                                         + "<br>"+ "[習得レベル:75][持続時間:16分][対象:術者]"+"</html>");
+        if (ui.cb_buff[E_ISN].isSelected()) {
+        //[AC]をONにする
+        ui.cb_buff[B_AC].setSelected(true);
+        //"AC-10"を選択する
+        ui.cb_buff_group[B_AC].setSelectedItem("-10");
+        }
+
+        //サンドストーム
+        ui.cb_buff[E_SSM].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
+                                         + "<br>"+ "ダガー/ソード専用スキル"
+                                         + "<br>"+ "移動速度と攻撃速度が上昇する[2段加速]x1.3333"
+                                         + "<br>"+ "[習得レベル:75][持続時間:8分][対象:術者][触媒:エルブンワッフル(1)]"+"</html>");
+        if (ui.cb_buff[E_SSM].isSelected()) {
+        //[2段加速]をONにする
+        ui.cb_buff[ACC2].setSelected(true);
+        //"x1.3333"を選択する
+        ui.cb_buff_group[ACC2].setSelectedItem("x1.3333");
+        }
+
+        //アースガーディアン
+        ui.cb_buff[E_EGN].setToolTipText("<html>"+ "[消費MP:30][消費HP:10]"
+                                         + "<br>"+ "DR+2"
+                                         + "<br>"+ "レベル80からレベル4毎にダメージ低下が+1ずつ増加"
+                                         + "<br>"+ "*リニューアル ダメージ低下の効果がレベル80から増加"
+                                         + "<br>"+ "[習得レベル:60][持続時間:10分][対象:術者]"+"</html>");
+        if (ui.cb_buff[E_EGN].isSelected()) {
+            buff.DR += 2;
+            if (level >= 80 ) {
+                buff.DR += (level - 80) / 4 + 1;                 //DR(level - 80) / 4 + 1
+            }
+        }
+
+        //クエイク
+        //6396行にて処理
+
+        //アースウェポン
         ui.cb_buff[E_EWN].setToolTipText("<html>"+ "[消費MP:15][消費HP:--]"
+                                         + "<br>"+ "ダガー/ソード専用スキル"
                                          + "<br>"+ "地属性の近距離ダメージ+2 近距離命中+4"
                                          + "<br>"+ "[習得レベル:45][持続時間:16分][対象:術者]"+"</html>");
         if (ui.cb_buff[E_EWN].isSelected()) {
@@ -2251,36 +2476,7 @@ public class Calculator implements Common {
                 ui.cb_buff[E_EWN].setSelected(false);
             }
         }
-        //アクアショット 消費MP15/16mins
-        ui.cb_buff[E_AST].setToolTipText("<html>"+ "[消費MP:15][消費HP:--]"
-                                         + "<br>"+ "遠距離命中+4"
-                                         + "<br>"+ "[習得レベル:45][持続時間:16分][対象:術者]"+"</html>");
-        if (ui.cb_buff[E_AST].isSelected()) {
-            if (cls == E) {
-                buff.HIT_LONG += 4;
-                if (ui.cb_buff[E_AST].getForeground().equals(Color.BLUE)) {
-                    cons_mp += (15.0 * (1.0 - red_mp * 0.01) - red_mp2) / 16;
-                }
-            } else {
-                ui.cb_buff[E_AST].setSelected(false);
-            }
-        }  
-        //ネイチャーズタッチ 消費MP20/5mins
-        ui.cb_buff[E_NTH].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
-                                         + "<br>"+ "HPR+15"
-                                         + "<br>"+ "[習得レベル:60][持続時間:5分20秒][対象:術者/PC]"+"</html>");
-        if (ui.cb_buff[E_NTH].isSelected()) {
-            if (level > 9) {
-                if (level < 24) {
-                    buff.HPR += level - 9;
-                } else {
-                    buff.HPR += 15;
-                }
-            }
-            if (ui.cb_buff[E_NTH].getForeground().equals(Color.BLUE)) {
-                cons_mp += (20.0 * (1.0 - red_mp * 0.01) - red_mp2) / 5;
-            }
-        }
+
         //ドレスイベイジョン 消費MP15/3mins
         ui.cb_buff[D_DEN].setToolTipText("<html>"+ "[消費MP:15][消費HP:--]"
                                          + "<br>"+ "遠距離回避(ER)+18"
@@ -2328,59 +2524,7 @@ public class Calculator implements Common {
                 buff.CRI_SHORT += 5 + ((level - 80) / 2 + 1);
             }
         }
-        //アクアプロテクター 消費MP30/16mins
-        ui.cb_buff[E_APR].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
-                                         + "<br>"+ "遠距離回避(ER)+5"
-                                         + "<br>"+ "[習得レベル:60][持続時間:16分][対象:術者/PC]"+"</html>");
-        if (ui.cb_buff[E_APR].isSelected()) {
-            if (ui.cb_buff[D_DEN].isSelected()) {
-                ui.cb_buff[E_APR].setSelected(false);
-            } else {
-                buff.ER += 5;
-                if (ui.cb_buff[E_APR].getForeground().equals(Color.BLUE)) {
-                    cons_mp += (30.0 * (1.0 - red_mp * 0.01) - red_mp2) / 16;
-                }
-            }
-        }
-        //ストームショット 消費MP30/16mins
-        ui.cb_buff[E_SST].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
-                                         + "<br>"+ "風属性の遠距離ダメージ+6 遠距離命中+3"
-                                         + "<br>"+ "[習得レベル:75][持続時間:16分][対象:術者]"+"</html>");
-            if (ui.cb_buff[E_SST].isSelected()) {
-                ui.cb_buff[E_SEE].setSelected(false);
-            buff.ELEM_DMG_LONG[WIND] += 6;
-            buff.HIT_LONG += 3;
-                if (ui.cb_buff[E_SST].getForeground().equals(Color.BLUE)) {
-                    cons_mp += (30.0 * (1.0 - red_mp * 0.01) - red_mp2) / 16;
-                }
-        }
-        //ストームアイ 消費MP40/16mins
-        ui.cb_buff[E_SEE].setToolTipText("<html>"+ "[消費MP:40][消費HP:--]"
-                                         + "<br>"+ "15セル内のPTメンバーに風属性の遠距離ダメージ+3 遠距離命中+2"
-                                         + "<br>"+ "[習得レベル:60][持続時間:16分][対象:術者/PTメンバー]"+"</html>");
-            if (ui.cb_buff[E_SEE].isSelected()) {
-                buff.ELEM_DMG_LONG[WIND] += 3;
-                buff.HIT_LONG += 2;
-                if (ui.cb_buff[E_SEE].getForeground().equals(Color.BLUE)) {
-                    cons_mp += (40.0 * (1.0 - red_mp * 0.01) - red_mp2) / 16;
-                }
-            }
 
-        //アースガーディアン 消費MP30/10mins
-        ui.cb_buff[E_EGN].setToolTipText("<html>"+ "[消費MP:30][消費HP:10]"
-                                         + "<br>"+ "DR+2"
-                                         + "<br>"+ "レベル80からレベル4毎にダメージ低下が+1ずつ増加"
-                                         + "<br>"+ "[習得レベル:60][持続時間:10分][対象:術者]"+"</html>");
-        if (ui.cb_buff[E_EGN].isSelected()) {
-            buff.DR += 2;
-
-            if (level >= 80 ) {
-                buff.DR += (level - 80) / 4 + 1;                 //DR(level - 80) / 4 + 1
-            }
-                    if (ui.cb_buff[E_EGN].getForeground().equals(Color.BLUE)) {
-                cons_mp += (30.0 * (1.0 - red_mp * 0.01) - red_mp2) / 10;
-            }
-        }
         //バーサーカー 消費MP40/5mins
         ui.cb_buff[W_BER].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
                                          + "<br>"+ "近距離ダメージ+2 近距離命中+8 AC+10 HP自然回復不可"
@@ -5390,7 +5534,7 @@ public class Calculator implements Common {
         hit_short += buki.op.HIT_SHORT + buki.enchant / 2 + buff.HIT_SHORT;
         //hit_long += buki.op.HIT_LONG + buki.enchant / 2 + buff.HIT_LONG + buff.HIT_SHORT;
         hit_long += buki.arrow_hit + buki.op.HIT_LONG + buki.enchant / 2 + buff.HIT_LONG;
-        
+
 //System.out.print(" 遠距離命中 合計:");
 //System.out.print(hit_long);
 //System.out.print(" 遠距離命中(矢分):");
@@ -5435,7 +5579,7 @@ buki.arrow_hit=0;
                 buff.ELEM_DMG_LONG[EARTH] += buki.arrow_elementdmg;
             }
         }
-        
+
 //System.out.print(" 火属性ダメージ:");
 //System.out.print(buff.ELEM_DMG_LONG[FIRE]);
 //System.out.print(" 水属性ダメージ:");
@@ -5807,13 +5951,15 @@ buki.arrow_elementdmg=0;
                 dmg_small_ave -= 0.5;
                 break;
             case "ボウ":
-                //エルフ イーグルアイ 2% 消費MP20/2mins
+                //イーグルアイ
 //                cri_long += cr * 100;
+                ui.cb_buff[E_EEE].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
+                                                 + "<br>"+ "弓専用スキル"
+                                                 + "<br>"+ "遠距離クリティカル+2%"
+                                                 + "<br>"+ "キャンセレーションで解除されない"
+                                                 + "<br>"+ "[習得レベル:45][持続時間:2分8秒][対象:術者][触媒:精霊の玉(1)]"+"</html>");
                 if (ui.cb_buff[E_EEE].isSelected()) {
                     cri_long += 2;
-                    if (ui.cb_buff[E_EEE].getForeground().equals(Color.BLUE)) {
-                            cons_mp += (20.0 * (1.0 - red_mp * 0.01) - red_mp2) / 2;
-                    }
                 }
                 dmg_big_ave = (cri_long * 0.01) * dmg_big_max
                         + (1.0 - cri_long * 0.01) * dmg_big_ave;
@@ -5821,7 +5967,8 @@ buki.arrow_elementdmg=0;
                         + (1.0 - cri_long * 0.01) * dmg_small_ave;
                 break;
             default:
-                //エルフ ソウルオブフレイム 100% 消費MP40/5mins
+
+                //エルフ ソウルオブフレイム
                 cri_short += cr * 100;
                 ui.cb_buff[E_SOF].setToolTipText("<html>"+ "[消費MP:40][消費HP:--]"
                                                  + "<br>"+ "装備している武器の最大ダメージで攻撃する"
@@ -5829,11 +5976,6 @@ buki.arrow_elementdmg=0;
                                                  + "<br>"+ "[習得レベル:80][持続時間:5分20秒][対象:術者][触媒:精霊の玉(5)]"+"</html>");
                 if (ui.cb_buff[E_SOF].isSelected()) {
                     cri_short = 100;
-                    if (ui.cb_buff[E_SOF].isSelected()) {
-                        if (ui.cb_buff[E_SOF].getForeground().equals(Color.BLUE)) {
-                            cons_mp += (40.0 * (1.0 - red_mp * 0.01) - red_mp2) / 5;
-                        }
-                    }
                 }
                 dmg_big_ave = (cri_short * 0.01) * dmg_big_max
                         + (1.0 - cri_short * 0.01) * dmg_big_ave;
@@ -6224,7 +6366,8 @@ buki.arrow_elementdmg=0;
                 }
             }
         }
-        //エレメンタルファイアー 消費MP20/5mins
+
+       //エレメンタルファイアー
         ui.cb_buff[E_EFE].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
                                          + "<br>"+ "一定確率(40%)で近距離ダメージ1.5倍にする"
                                          + "<br>"+ "[習得レベル:75][持続時間:5分20秒][対象:術者][触媒:精霊の玉(1)]"+"</html>");
@@ -6254,8 +6397,9 @@ buki.arrow_elementdmg=0;
                 }
             }
         }
-        //クエイク 消費MP20/5mins
-        ui.cb_buff[E_QUE].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
+
+        //クエイク
+        ui.cb_buff[E_QUE].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
                                          + "<br>"+ "一定確率(40%)で近距離ダメージ1.5倍にする"
                                          + "<br>"+ "[習得レベル:45][持続時間:5分20秒][対象:術者][触媒:精霊の玉(1)]"+"</html>");
         if (ui.cb_buff[E_QUE].isSelected()) {
@@ -6279,12 +6423,10 @@ buki.arrow_elementdmg=0;
                 if (dmg_cursed != 0) {
                     dmg_cursed -= 0.25 * qe_rate;
                 }
-                if (ui.cb_buff[E_QUE].getForeground().equals(Color.BLUE)) {
-                    cons_mp += (20.0 * (1.0 - red_mp * 0.01) - red_mp2) / 5;
-                }
             }
         }
-        //サイクロン 消費MP30/16mins LV75取得可能 一定確率で遠距離ダメージ1.5倍 LV85からLV1毎に発動率1%増加
+
+        //サイクロン
         ui.cb_buff[E_CYE].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
                                          + "<br>"+ "一定確率(5%)で遠距離ダメージ1.5倍にする"
                                          + "<br>"+ "LV85からLV1毎に発動率1%増加"
@@ -6317,9 +6459,6 @@ buki.arrow_elementdmg=0;
                 if (dmg_cursed != 0) {
                     dmg_cursed -= 0.25 * (ce_rate + ce_lv_bonus);
                 }
-                if (ui.cb_buff[E_CYE].getForeground().equals(Color.BLUE)) {
-                    cons_mp += (30.0 * (1.0 - red_mp * 0.01) - red_mp2) / 16;
-                }
             } else {
                 ui.cb_buff[E_CYE].setSelected(false);
             }
@@ -6350,12 +6489,38 @@ buki.arrow_elementdmg=0;
                 if (dmg_cursed != 0) {
                     dmg_cursed -= 0.25 * pb_rate;
                 }
-
-                if (ui.cb_buff[P_BML].getForeground().equals(Color.BLUE)) {
-                    cons_mp += 25.0 / 10;
-                }
             } else {
                 ui.cb_buff[P_BML].setSelected(false);
+            }
+        }
+
+        //レイジ
+        ui.cb_buff[F_PRE].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "一定確率(暫定18%)で近距離ダメージ(暫定1.5倍)"
+                                         + "<br>"+ "[習得レベル:60][持続時間:常時][対象:術者]"+"</html>");
+        if (ui.cb_buff[F_PRE].isSelected()) {
+            if (!(buki.type.equals("ボウ") || buki.type.equals("ガントレット"))) {
+                dmg_big_ave *= 1.5 * re_rate
+                        + 1.0 * (1.0 - re_rate);
+                dmg_small_ave *= 1.5 * re_rate
+                        + 1.0 * (1.0 - re_rate);
+
+                dmg_big_ave -= 0.25 * re_rate;
+                dmg_small_ave -= 0.25 * re_rate;
+
+                dmg_undead *= 1.5 * re_rate
+                        + 1.0 * (1.0 - re_rate);
+                dmg_cursed *= 1.5 * re_rate
+                        + 1.0 * (1.0 - re_rate);
+
+                if (dmg_undead != 0) {
+                    dmg_undead -= 0.25 * re_rate;
+                }
+                if (dmg_cursed != 0) {
+                    dmg_cursed -= 0.25 * re_rate;
+                }
+            } else {
+                ui.cb_buff[F_PRE].setSelected(false);
             }
         }
 
@@ -6388,13 +6553,11 @@ buki.arrow_elementdmg=0;
                 if (dmg_cursed != 0) {
                     dmg_cursed -= 0.25 * (bk_rate + bk_lv_bonus);
                 }
-                if (ui.cb_buff[K_BLK].getForeground().equals(Color.BLUE)) {
-                    cons_mp += (10.0 * (1.0 - red_mp * 0.01) - red_mp2) / 5;
-                }
             } else {
                 ui.cb_buff[K_BLK].setSelected(false);
             }
         }
+
         if (buff.effect.contains("特殊攻撃(パック/パオ)")) {
             dmg_big_ave += (75 - Integer.parseInt((String) ui.cb_target_dr.getSelectedItem())) * 0.05;
             dmg_small_ave += (75 - Integer.parseInt((String) ui.cb_target_dr.getSelectedItem())) * 0.05;
@@ -7391,31 +7554,6 @@ buki.arrow_elementdmg=0;
 
         //獲得経験値
         ui.lab_mexp.setText(Integer.toString((int) mexp));
-
-        //エキゾチックバイタライズ 消費MP30/16mins
-        ui.cb_buff[E_EVE].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
-                                         + "<br>"+ "重量ゲージが50%を超えてもHPとMPが自然回復する"
-                                         + "<br>"+ "[習得レベル:75][持続時間:16分][対象:術者]"+"</html>");
-        if (ui.cb_buff[E_EVE].isSelected()) {
-            if (ui.cb_buff[E_EVE].getForeground().equals(Color.BLUE)) {
-                cons_mp += (30.0 * (1.0 - red_mp * 0.01) - red_mp2) / 16;
-            }
-        }
-        //アディショナルファイアー 消費MP30/16mins
-        ui.cb_buff[E_AFE].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
-                                         + "<br>"+ "重量ゲージが50%を超えてもHPとMPが自然回復する"
-                                         + "<br>"+ "[習得レベル:75][持続時間:16分][対象:術者]"+"</html>");
-        if (ui.cb_buff[E_AFE].isSelected()) {
-            if (ui.cb_buff[E_AFE].getForeground().equals(Color.BLUE)) {
-                cons_mp += (30.0 * (1.0 - red_mp * 0.01) - red_mp2) / 16;
-            }
-        }
-        //2018/09/05 Updateでウインドウォークは削除
-        //if (ui.cb_buff[E_WW].isSelected()) {
-        //    if (ui.cb_buff[E_WW].getForeground().equals(Color.BLUE)) {
-        //        cons_mp += (15.0 * (1.0 - red_mp * 0.01) - red_mp2) / 16;
-        //    }
-        //}
 
         ui.lab_cons_mp.setText(Double.toString((int) (cons_mp * 100) / 100.0));
 //        ui.lab_cons_mp.setText(Double.toString((int) (cons_mp * (1.0 - red_mp * 0.01) * 100) / 100.0));

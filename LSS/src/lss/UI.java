@@ -220,8 +220,8 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
     //ファイナルバーンで計104個分(0から103)
 //    JCheckBox[] cb_buff = new JCheckBox[104];
 //    JComboBox[] cb_buff_group = new JComboBox[104];
-    JCheckBox[] cb_buff = new JCheckBox[162];
-    JComboBox[] cb_buff_group = new JComboBox[162];
+    JCheckBox[] cb_buff = new JCheckBox[173];
+    JComboBox[] cb_buff_group = new JComboBox[173];
     //パネル5
     JComboBox cb_npc_level;
     JSlider[] s_target_res = new JSlider[ELEM_LIST.length];
@@ -899,8 +899,6 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_morph_level.addItem("80");       //12
         cb_morph_level.addItem("82");       //13
         cb_morph_level.addItem("84");       //14
-                //cb_morph_level.addItem("86");
-                //cb_morph_level.addItem("88");
         cb_morph_level.addItem("90");       //15
         cb_morph_level.addItem("Hero");     //現時点では16
 
@@ -1027,7 +1025,6 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
 //        panels[0].add(cb_weight_auto);
 //        cb_weight_auto.addActionListener(this);
         lab_tmp = new JLabel("属性抵抗");
-//        lab_tmp.setBounds(420, 440, 80, 25);
         lab_tmp.setBounds(420+60, 520, 100, 20);
         panels[0].add(lab_tmp);
         
@@ -1627,12 +1624,44 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[E_BWN].addActionListener(this);
         panels[2].add(cb_buff[E_BWN]);
 
+        //ダンシングブレイズ
+        cb_buff[E_DBE] = new JCheckBox("ダンシングブレイズ");
+        cb_buff[E_DBE].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[E_DBE].addActionListener(this);
+        panels[2].add(cb_buff[E_DBE]);
+
         col = 0;
         row = 3;
+
+        //ファイアーシールド
+        cb_buff[E_FSD] = new JCheckBox("ファイアーシールド");
+        cb_buff[E_FSD].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[E_FSD].addActionListener(this);
+        panels[2].add(cb_buff[E_FSD]);
+
+        col++;
 
         lab_tmp = new JLabel("精霊魔法(水)");
         lab_tmp.setBounds(200 * row, 20 * col++, 200, 20);
         panels[2].add(lab_tmp);
+
+        //ポルートウォーター
+        cb_buff[E_PWR] = new JCheckBox("ポルートウォーター(未実装)");
+        cb_buff[E_PWR].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[E_PWR].addActionListener(this);
+        panels[2].add(cb_buff[E_PWR]);
+
+        //ネイチャーズブレッシング
+        cb_buff[E_NBG] = new JCheckBox("ネイチャーズブレッシング(未実装)");
+        cb_buff[E_NBG].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[E_NBG].addActionListener(this);
+        panels[2].add(cb_buff[E_NBG]);
+
+        //フォーカスウェーブ
+        cb_buff[E_FWE] = new JCheckBox("フォーカスウェーブ");
+        cb_buff[E_FWE].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[E_FWE].addActionListener(this);
+        panels[2].add(cb_buff[E_FWE]);
 
         //アクアプロテクター
         cb_buff[E_APR] = new JCheckBox("アクアプロテクター");
@@ -1646,6 +1675,12 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[E_NTH].addActionListener(this);
         panels[2].add(cb_buff[E_NTH]);
 
+        //ウォーターライフ
+        cb_buff[E_WLE] = new JCheckBox("ウォーターライフ(未実装)");
+        cb_buff[E_WLE].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[E_WLE].addActionListener(this);
+        panels[2].add(cb_buff[E_WLE]);
+
         //アクアショット
         cb_buff[E_AST] = new JCheckBox("アクアショット");
         cb_buff[E_AST].setBounds(200 * row, 20 * col++, 150, 20);
@@ -1657,6 +1692,18 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         lab_tmp = new JLabel("精霊魔法(風)");
         lab_tmp.setBounds(200 * row, 20 * col++, 200, 20);
         panels[2].add(lab_tmp);
+
+        //ストライカーゲイル
+        cb_buff[E_SGL] = new JCheckBox("ストライカーゲイル(未実装)");
+        cb_buff[E_SGL].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[E_SGL].addActionListener(this);
+        panels[2].add(cb_buff[E_SGL]);
+
+        //ハリケーン
+        cb_buff[E_HUE] = new JCheckBox("ハリケーン");
+        cb_buff[E_HUE].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[E_HUE].addActionListener(this);
+        panels[2].add(cb_buff[E_HUE]);
 
         //サイクロン
         cb_buff[E_CYE] = new JCheckBox("サイクロン");
@@ -1688,18 +1735,36 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         lab_tmp.setBounds(200 * row, 20 * col++, 200, 20);
         panels[2].add(lab_tmp);
 
+        //アースバインド
+        cb_buff[E_EBD] = new JCheckBox("アースバインド(未実装)");
+        cb_buff[E_EBD].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[E_EBD].addActionListener(this);
+        panels[2].add(cb_buff[E_EBD]);
+
         //エキゾチックバイタライズ
         cb_buff[E_EVE] = new JCheckBox("エキゾチックバイタライズ(未実装)");
         cb_buff[E_EVE].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[E_EVE].addActionListener(this);
         panels[2].add(cb_buff[E_EVE]);
 
+        //アイアンスキン
+        cb_buff[E_ISN] = new JCheckBox("アイアンスキン");
+        cb_buff[E_ISN].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[E_ISN].addActionListener(this);
+        panels[2].add(cb_buff[E_ISN]);
+
+        //サンドストーム
+        cb_buff[E_SSM] = new JCheckBox("サンドストーム");
+        cb_buff[E_SSM].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[E_SSM].addActionListener(this);
+        panels[2].add(cb_buff[E_SSM]);
+
         //アースガーディアン
         cb_buff[E_EGN] = new JCheckBox("アースガーディアン");
         cb_buff[E_EGN].setBounds(200 * row, 20 * col++, 150, 20);
         cb_buff[E_EGN].addActionListener(this);
         panels[2].add(cb_buff[E_EGN]);
-
+        
         //クエイク
         cb_buff[E_QUE] = new JCheckBox("クエイク");
         cb_buff[E_QUE].setBounds(200 * row, 20 * col++, 150, 20);
@@ -2108,11 +2173,8 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         panels[3].add(cb_buff[F_PID]);
 
         //レイジ
-        cb_buff[F_PRE] = new JCheckBox("レイジ(未実装)");
+        cb_buff[F_PRE] = new JCheckBox("レイジ");
         cb_buff[F_PRE].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[F_PRE].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
-                                      + "<br>"+ "一定確率で近距離ダメージを増加させる(計算式不明)"
-                                      + "<br>"+ "[習得レベル:60][持続時間:常時][対象:術者]"+"</html>");
         cb_buff[F_PRE].addActionListener(this);
         panels[3].add(cb_buff[F_PRE]);
 
