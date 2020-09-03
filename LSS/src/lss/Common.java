@@ -301,38 +301,39 @@ public interface Common {
 //    final int W_IDR = X;          //LV8   Ice DaggeR                    アイスダガー(未実装)
 //    final int W_WCR = X;          //LV8   Wind CutteR                   ウィンドカッター(未実装)
 //    final int W_HWS = X;          //LV8   Holy WeaponS                  ホーリーウェポン(未実装)
-    
-//ダークエルフの闇の精霊魔法
-    //LV4魔法    合計8種類
-    final int D_LUD = 123;          //LV85  LUcifer:Destiny               ルシファー:デスティニー(未実装)
-//    final int D_MAM = X;          //LV85  Moving Acceleration:Maximum   ムービングアクセレーション:マキシマム(未実装)
+
+//闇の精霊魔法  9+5+5+5=24  合計24種類
+    //LV4魔法    合計9種類
     final int D_AVR = 119;          //LV85  AVengeR                       アベンジャー(未実装)
-    
-    final int D_SHS = 120;          //LV80  SHadow Step                   シャドウステップ(未実装)
+    final int D_SHS = 120;          //LV80  SHadow Step                   [UP待ち]シャドウステップ(未実装)
     final int D_ABK = 121;          //LV80  Armor BreaK                   アーマーブレイク(未実装)
     final int D_LUR = 122;          //LV80  LUcifeR                       ルシファー(未実装)
-    final int D_DBD = 28;           //LV80  Double Break:Destiny          ダブルブレイク:デスティニー
+    final int D_MAM = 173;          //LV85  Moving Acceleration:Maximum   [UP待ち]ムービングアクセレーション:マキシマム
+    final int D_SAD = 174;          //LV85  Shadow Armor:Destiny          シャドウアーマー:デスティニー
+    final int D_LUD = 123;          //LV85  LUcifer:Destiny               ルシファー:デスティニー(未実装)
     final int D_ABD = 124;          //LV85  Armor Break:Destiny           アーマーブレイク:デスティニー(未実装)
+    final int D_DBD = 28;           //LV80  Double Break:Destiny          ダブルブレイク:デスティニー
 
     //LV3魔法    合計5種類
     final int D_DBK = 29;           //LV60  Double BreaK                  ダブルブレイク
     final int D_UDE = 32;           //LV60  Uncanny DodgE                 アンキャニードッジ
-//    final int D_SFG = X;          //LV60  Shadow FanG                   シャドウファング(基本エンチャントのキャラ/武器で実装)
+    final int D_SFG = 175;          //LV60  Shadow FanG                   シャドウファング(基本エンチャントのキャラ/武器で実装)
     final int D_FBN = 103;          //LV60  Final BurN                    ファイナルバーン
     final int D_DEN = 31;           //LV60  Dress EvasioN                 ドレスイベイジョン
 
-    //LV2魔法    合計4種類
+    //LV2魔法    合計5種類
     final int D_MAN = 79;           //LV40  Moving AcceleratioN           ムービングアクセレーション(未実装)
     final int D_BSS = 30;           //LV40  Burning SpiritS               バーニングスピリッツ
-//    final int D_SSP = X;          //LV40  Shadow SleeP                  シャドウスリープ(未実装)
+    final int D_SSP = 176;          //LV40  Shadow SleeP                  シャドウスリープ(未実装)
     final int D_VRT = 80;           //LV40  Venom ResisT                  ベノムレジスト(未実装)
+    final int D_DDY = 177;          //LV40  Dress Dexterity               ドレスデクスタリティー
 
     //LV1魔法    合計5種類
-//    final int D_BHG = X;          //LV20  Blind HidinG                  ブラインドハイディング(未実装)
-//    final int D_EVM = X;          //LV20  Enchantment VenoM             エンチャントベノム(未実装)
-//    final int D_BRE = X;          //LV20  BRingstonE                    ブリングストーン(未実装)
+    final int D_BHG = 178;          //LV20  Blind HidinG                  ブラインドハイディング(未実装)
+    final int D_EVM = 179;          //LV20  Enchantment VenoM             エンチャントベノム(未実装)
+    final int D_BRE = 180;          //LV20  BRingstonE                    ブリングストーン(未実装)
     final int D_SAR = 33;           //LV20  Shadow ArmoR                  シャドウアーマー
-//    final int D_DMY = X;          //LV20  Dress MightY                  ドレスマイティー(未実装)
+    final int D_DMY = 181;          //LV20  Dress MightY                  ドレスマイティー
 
 //ドラゴンナイトの秘技    合計22種類
     //LV4魔法

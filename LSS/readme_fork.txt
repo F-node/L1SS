@@ -1,6 +1,25 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2020/09/03
+Update 4.1.8
+LSS/src/lss/Calculator.java
+LSS/src/lss/Common.java
+LSS/src/lss/UI.java
+追加
+	闇の精霊魔法
+		ムービングアクセレーション:マキシマム
+		シャドウアーマー:デスティニー
+		シャドウファング
+		シャドウスリープ
+		ドレスデクスタリティー
+		ブラインドハイディング
+		エンチャントベノム
+		ブリングストーン
+		ドレスマイティー
+修正
+	各魔法/技術のツールチップや処理の修正及び簡略化
+
 2020/08/31
 Update 4.1.7
 LSS/data/E.zip
