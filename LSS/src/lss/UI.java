@@ -220,8 +220,8 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
     //ファイナルバーンで計104個分(0から103)
 //    JCheckBox[] cb_buff = new JCheckBox[104];
 //    JComboBox[] cb_buff_group = new JComboBox[104];
-    JCheckBox[] cb_buff = new JCheckBox[173];
-    JComboBox[] cb_buff_group = new JComboBox[173];
+    JCheckBox[] cb_buff = new JCheckBox[182];
+    JComboBox[] cb_buff_group = new JComboBox[182];
     //パネル5
     JComboBox cb_npc_level;
     JSlider[] s_target_res = new JSlider[ELEM_LIST.length];
@@ -1306,8 +1306,8 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[P_PRE].addActionListener(this);
         panels[2].add(cb_buff[P_PRE]);
 
-        //コールクラン：アドバンス
-        cb_buff[P_CCA] = new JCheckBox("[UP待ち]コールクラン：アドバンス");
+        //コールクラン:アドバンス
+        cb_buff[P_CCA] = new JCheckBox("[UP待ち]コールクラン:アドバンス");
         cb_buff[P_CCA].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[P_CCA].addActionListener(this);
         panels[2].add(cb_buff[P_CCA]);
@@ -1786,73 +1786,57 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
 
         //アベンジャー
         cb_buff[D_AVR] = new JCheckBox("アベンジャー(未実装)");
-        cb_buff[D_AVR].setBounds(200 * row, 20 * col++, 200, 20);       
-        cb_buff[D_AVR].setToolTipText("<html>"+ "[消費MP:25][消費HP:--]"
-                                      + "<br>"+ "1セル内の対象に強力な物理ダメージを与える"
-                                      + "<br>"+ "対象のHPが30%以下だと一定確率(不明)で即死させる"
-                                      + "<br>"+ "ダメージはSTRと武器ダメージの影響を受けます"
-                                      + "<br>"+ "[習得レベル:85][持続時間:16分][対象:術者][触媒:ダークストーン(2)]"+"</html>");
+        cb_buff[D_AVR].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[D_AVR].addActionListener(this);
         panels[2].add(cb_buff[D_AVR]);
 
         //シャドウステップ
-        cb_buff[D_SHS] = new JCheckBox("シャドウステップ(未実装)");
-        cb_buff[D_SHS].setBounds(200 * row, 20 * col++, 200, 20);       
-        cb_buff[D_SHS].setToolTipText("<html>"+ "[消費MP:15][消費HP:--]"
-                                      + "<br>"+ "3セル内の対象に一瞬で接近して物理ダメージを与え一定確率(不明)でホールド状態にする"
-                                      + "<br>"+ "個別クールタイム"
-                                      + "<br>"+ "[習得レベル:80][持続時間:瞬間][対象:PC/NPC]"+"</html>");
+        cb_buff[D_SHS] = new JCheckBox("[UP待ち]シャドウステップ(未実装)");
+        cb_buff[D_SHS].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[D_SHS].addActionListener(this);
         panels[2].add(cb_buff[D_SHS]);
 
         //アーマーブレイク
         cb_buff[D_ABK] = new JCheckBox("アーマーブレイク(未実装)");
-        cb_buff[D_ABK].setBounds(200 * row, 20 * col++, 200, 20);       
-        cb_buff[D_ABK].setToolTipText("<html>"+ "[消費MP:50][消費HP:25]"
-                                      + "<br>"+ "1セル内の対象に一定確率(不明)で近距離攻撃の被ダメージを増加させる"
-                                      + "<br>"+ "術者の攻撃は+58%増加術者以外の攻撃は+20%増加"
-                                      + "<br>"+ "キャンセレーションで解除されない カウンターマジック無視"
-                                      + "<br>"+ "[習得レベル:80][持続時間:8秒][対象:PC][触媒:ダークストーン(2)]"+"</html>");
+        cb_buff[D_ABK].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[D_ABK].addActionListener(this);
         panels[2].add(cb_buff[D_ABK]);
 
         //ルシファー
         cb_buff[D_LUR] = new JCheckBox("ルシファー(未実装)");
-        cb_buff[D_LUR].setBounds(200 * row, 20 * col++, 200, 20);       
-        cb_buff[D_LUR].setToolTipText("<html>"+ "[消費MP:15][消費HP:--]"
-                                      + "<br>"+ "被ダメージを10%低下"
-                                      + "<br>"+ "イミューントゥハームと重複不可能"
-                                      + "<br>"+ "キャンセレーションで解除されない"
-                                      + "<br>"+ "[習得レベル:80][持続時間:30秒][対象:術者][触媒:ダークストーン(2)]"+"</html>");
+        cb_buff[D_LUR].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[D_LUR].addActionListener(this);
         panels[2].add(cb_buff[D_LUR]);
 
+        //ムービングアクセレーション:マキシマム
+        cb_buff[D_MAM] = new JCheckBox("[UP待ち]ムービングアクセレーション:マキシマム");
+        cb_buff[D_MAM].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[D_MAM].addActionListener(this);
+        panels[2].add(cb_buff[D_MAM]);
+
+        //シャドウアーマー:デスティニー
+        cb_buff[D_SAD] = new JCheckBox("[UP待ち]シャドウアーマー:デスティニー");
+        cb_buff[D_SAD].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[D_SAD].addActionListener(this);
+        panels[2].add(cb_buff[D_SAD]);
+
         //ルシファー:デスティニー
         cb_buff[D_LUD] = new JCheckBox("ルシファー:デスティニー(未実装)");
-        cb_buff[D_LUD].setBounds(200 * row, 20 * col++, 200, 20);       
-        cb_buff[D_LUD].setToolTipText("<html>"+ "[消費MP:25][消費HP:--]"
-                                      + "<br>"+ "ルシファーの持続時間を60秒にする"
-                                      + "<br>"+ "PVPダメージ低下+10%を追加"
-                                      + "<br>"+ "[習得レベル:85][持続時間:常時][対象:術者]"+"</html>");
+        cb_buff[D_LUD].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[D_LUD].addActionListener(this);
         panels[2].add(cb_buff[D_LUD]);
+
+        //アーマーブレイク:デスティニー
+        cb_buff[D_ABD] = new JCheckBox("アーマーブレイク:デスティニー(未実装)");
+        cb_buff[D_ABD].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[D_ABD].addActionListener(this);
+        panels[2].add(cb_buff[D_ABD]);
 
         //ダブルブレイク:デスティニー
         cb_buff[D_DBD] = new JCheckBox("ダブルブレイク:デスティニー");
         cb_buff[D_DBD].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[D_DBD].addActionListener(this);
         panels[2].add(cb_buff[D_DBD]);
-
-        //アーマーブレイク:デスティニー
-        cb_buff[D_ABD] = new JCheckBox("アーマーブレイク:デスティニー(未実装)");
-        cb_buff[D_ABD].setBounds(200 * row, 20 * col++, 200, 20);       
-        cb_buff[D_ABD].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
-                                      + "<br>"+ "アーマーブレイクの成功率上昇"
-                                      + "<br>"+ "レベル85からレベル1毎に成功率が3%ずつ増加"
-                                      + "<br>"+ "アーマーブレイクの消費MPを35消費HPを20に低下"
-                                      + "<br>"+ "[習得レベル:85][持続時間:常時][対象:術者]"+"</html>");
-        cb_buff[D_ABD].addActionListener(this);
-        panels[2].add(cb_buff[D_ABD]);
 
         //ダブルブレイク
         cb_buff[D_DBK] = new JCheckBox("ダブルブレイク");
@@ -1865,6 +1849,12 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[D_UDE].setBounds(200 * row, 20 * col++, 150, 20);
         cb_buff[D_UDE].addActionListener(this);
         panels[2].add(cb_buff[D_UDE]);
+
+        //シャドウファング
+        cb_buff[D_SFG] = new JCheckBox("シャドウファング");
+        cb_buff[D_SFG].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[D_SFG].addActionListener(this);
+        panels[2].add(cb_buff[D_SFG]);
 
         //ファイナルバーン
         cb_buff[D_FBN] = new JCheckBox("ファイナルバーン");
@@ -1881,9 +1871,6 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         //ムービングアクセレーション
         cb_buff[D_MAN] = new JCheckBox("ムービングアクセレーション(未実装)");
         cb_buff[D_MAN].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[D_MAN].setToolTipText("<html>"+ "[消費MP:10][消費HP:--]"
-                                      + "<br>"+ "移動速度のみ上昇"
-                                      + "<br>"+ "[習得レベル:40][持続時間:16分][対象:術者]"+"</html>");
         cb_buff[D_MAN].addActionListener(this);
         panels[2].add(cb_buff[D_MAN]);
 
@@ -1893,14 +1880,41 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[D_BSS].addActionListener(this);
         panels[2].add(cb_buff[D_BSS]);
 
-        //ノムレジスト
+        //シャドウスリープ
+        cb_buff[D_SSP] = new JCheckBox("シャドウスリープ(未実装)");
+        cb_buff[D_SSP].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[D_SSP].addActionListener(this);
+        panels[2].add(cb_buff[D_SSP]);
+
+        //ベノムレジスト
         cb_buff[D_VRT] = new JCheckBox("ベノムレジスト(未実装)");
         cb_buff[D_VRT].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[D_VRT].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
-                                      + "<br>"+ "全ての毒を無効化する"
-                                      + "<br>"+ "[習得レベル:40][持続時間:5分20秒][対象:術者]"+"</html>");
         cb_buff[D_VRT].addActionListener(this);
         panels[2].add(cb_buff[D_VRT]);
+
+        //ドレスデクスタリティー
+        cb_buff[D_DDY] = new JCheckBox("ドレスデクスタリティー");
+        cb_buff[D_DDY].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[D_DDY].addActionListener(this);
+        panels[2].add(cb_buff[D_DDY]);
+
+        //ブラインドハイディング
+        cb_buff[D_BHG] = new JCheckBox("ブラインドハイディング(未実装)");
+        cb_buff[D_BHG].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[D_BHG].addActionListener(this);
+        panels[2].add(cb_buff[D_BHG]);
+
+        //エンチャントベノム
+        cb_buff[D_EVM] = new JCheckBox("エンチャントベノム(未実装)");
+        cb_buff[D_EVM].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[D_EVM].addActionListener(this);
+        panels[2].add(cb_buff[D_EVM]);
+
+        //ブリングストーン
+        cb_buff[D_BRE] = new JCheckBox("ブリングストーン(未実装)");
+        cb_buff[D_BRE].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[D_BRE].addActionListener(this);
+        panels[2].add(cb_buff[D_BRE]);
 
         //シャドウアーマー
         cb_buff[D_SAR] = new JCheckBox("シャドウアーマー");
@@ -1908,11 +1922,18 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[D_SAR].addActionListener(this);
         panels[2].add(cb_buff[D_SAR]);
 
-        col++;
+        //ドレスマイティー
+        cb_buff[D_DMY] = new JCheckBox("ドレスマイティー");
+        cb_buff[D_DMY].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[D_DMY].addActionListener(this);
+        panels[2].add(cb_buff[D_DMY]);
+
+        col = 0;
+        row = 0;
 
         lab_tmp = new JLabel("竜騎士秘技");
         lab_tmp.setBounds(200 * row, 20 * col++, 200, 20);
-        panels[2].add(lab_tmp);
+        panels[3].add(lab_tmp);
 
         //ハルパス
         cb_buff[R_HAS] = new JCheckBox("ハルパス(未実装)");
@@ -1922,13 +1943,13 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
                                       + "<br>"+ "カウンターダメージは武器の[Small打撃値]x3"
                                       + "<br>"+ "[習得レベル:85][持続時間:2分8秒][対象:術者][触媒:刻印のボーンピース(1)]"+"</html>");
         cb_buff[R_HAS].addActionListener(this);
-        panels[2].add(cb_buff[R_HAS]);
+        panels[3].add(cb_buff[R_HAS]);
 
         //覚醒[リンドビオル]
         cb_buff[R_LINDVIOL] = new JCheckBox("覚醒[リンドビオル]");
         cb_buff[R_LINDVIOL].setBounds(200 * row, 20 * col++, 180, 20);
         cb_buff[R_LINDVIOL].addActionListener(this);
-        panels[2].add(cb_buff[R_LINDVIOL]);
+        panels[3].add(cb_buff[R_LINDVIOL]);
 
         //アウラキア
         cb_buff[R_AUA] = new JCheckBox("アウラキア(未実装)");
@@ -1938,7 +1959,7 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
                                       + "<br>"+ "覚醒スキルの消費MPを5減少させる"
                                       + "<br>"+ "[習得レベル:80][持続時間:常時][対象:術者][触媒:刻印のボーンピース(1)]"+"</html>");
         cb_buff[R_AUA].addActionListener(this);
-        panels[2].add(cb_buff[R_AUA]);
+        panels[3].add(cb_buff[R_AUA]);
 
         //フォースレイヤー:ブレイブ
         cb_buff[R_FSB] = new JCheckBox("フォースレイヤー:ブレイブ(未実装)");
@@ -1948,7 +1969,7 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
                                       + "<br>"+ "リニューアル後:弱点露出に追加効果 一定確率でスタン状態にする"
                                       + "<br>"+ "[習得レベル:85][持続時間:常時][対象:術者]"+"</html>");
         cb_buff[R_FSB].addActionListener(this);
-        panels[2].add(cb_buff[R_FSB]);
+        panels[3].add(cb_buff[R_FSB]);
 
         //モータルボディー
         cb_buff[R_MBY] = new JCheckBox("モータルボディー(未実装)");
@@ -1958,13 +1979,13 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
                                       + "<br>"+ "カウンターダメージは[AC]/[2]最小は40ダメージ"
                                       + "<br>"+ "[習得レベル:60][持続時間:5分][対象:術者]"+"</html>");
         cb_buff[R_MBY].addActionListener(this);
-        panels[2].add(cb_buff[R_MBY]);
+        panels[3].add(cb_buff[R_MBY]);
 
         //覚醒[ヴァラカス]
         cb_buff[R_VALAKAS] = new JCheckBox("覚醒[ヴァラカス]");
         cb_buff[R_VALAKAS].setBounds(200 * row, 20 * col++, 150, 20);
         cb_buff[R_VALAKAS].addActionListener(this);
-        panels[2].add(cb_buff[R_VALAKAS]);
+        panels[3].add(cb_buff[R_VALAKAS]);
 
         //覚醒[パプリオン]
         cb_buff[R_FAFURION] = new JCheckBox("覚醒[パプリオン](未実装)");
@@ -1975,22 +1996,21 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
                                            + "<br>"+ "キャンセレーションで解除されない"
                                            + "<br>"+ "[習得レベル:40][持続時間:10分][対象:術者][触媒:刻印のボーンピース(1)]"+"</html>");
         cb_buff[R_FAFURION].addActionListener(this);
-        panels[2].add(cb_buff[R_FAFURION]);
+        panels[3].add(cb_buff[R_FAFURION]);
 
         //ドラゴンスキン
         cb_buff[R_DSN] = new JCheckBox("ドラゴンスキン");
         cb_buff[R_DSN].setBounds(200 * row, 20 * col++, 150, 20);
         cb_buff[R_DSN].addActionListener(this);
-        panels[2].add(cb_buff[R_DSN]);
+        panels[3].add(cb_buff[R_DSN]);
 
         //覚醒[アンタラス]
         cb_buff[R_ANTHARAS] = new JCheckBox("覚醒[アンタラス]");
         cb_buff[R_ANTHARAS].setBounds(200 * row, 20 * col++, 150, 20);
         cb_buff[R_ANTHARAS].addActionListener(this);
-        panels[2].add(cb_buff[R_ANTHARAS]);
+        panels[3].add(cb_buff[R_ANTHARAS]);
 
-        col = 0;
-        row = 0;
+        col++;
 
         lab_tmp = new JLabel("幻術魔法");
         lab_tmp.setBounds(200 * row, 20 * col++, 200, 20);
@@ -2286,7 +2306,7 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[L_VEE].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
                                       + "<br>"+ "ダメージを受けた時に、一定確率でダメージ低下の効果が発動"
                                       + "<br>"+ "HPが50%以下になると発動率と効果が上昇する"
-                                      + "<br>"+ "[習得レベル:70][持続時間:常時][対象:術者]【触媒：HP50%以下になると結晶体(5)】"+"</html>");
+                                      + "<br>"+ "[習得レベル:70][持続時間:常時][対象:術者]【触媒:HP50%以下になると結晶体(5)】"+"</html>");
         cb_buff[L_VEE].addActionListener(this);
         panels[3].add(cb_buff[L_VEE]);
         
