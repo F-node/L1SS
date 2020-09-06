@@ -2669,6 +2669,220 @@ public class Calculator implements Common {
         ui.cb_buff_group[B_STR].setSelectedItem("+3");
         }
 
+//竜騎士秘技
+        //ハルパス
+        ui.cb_buff[R_HAS].setToolTipText("<html>"+ "[消費MP:18][消費HP:--]"
+                                         + "<br>"+ "チェーンソード技術"
+                                         + "<br>"+ "攻撃をしてきた対象に一定確率(不明)でカウンターダメージを与える"
+                                         + "<br>"+ "カウンターダメージは武器の[Small打撃値]x3"
+                                         + "<br>"+ "[習得レベル:85][持続時間:2分8秒][対象:術者][触媒:刻印のボーンピース(1)]"+"</html>");
+        if (ui.cb_buff[R_HAS].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //ソリッドノート
+        ui.cb_buff[R_SNE].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "Passive"
+                                         + "<br>"+ "着用した武器が損傷しなくなる"
+                                         + "<br>"+ "[習得レベル:80][持続時間:常時][対象:術者]"+"</html>");
+        if (ui.cb_buff[R_SNE].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //ランペイジ
+        ui.cb_buff[R_RAE].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "Passive"
+                                         + "<br>"+ "スタン・ホールド状態のターゲットに、一定確率で追加ダメージを与える"
+                                         + "<br>"+ "[習得レベル:80][持続時間:常時][対象:術者]"+"</html>");
+        if (ui.cb_buff[R_RAE].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //アウラキア
+        ui.cb_buff[R_AUA].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "Passive"
+                                         + "<br>"+ "覚醒を2種類まで重複が可能になる"
+                                         + "<br>"+ "覚醒スキルの消費MPを5減少させる"
+                                         + "<br>"+ "*リニューアル 覚醒スキルの消費MPを5減らす"
+                                         + "<br>"+ "[習得レベル:80][持続時間:常時][対象:術者]"+"</html>");
+        if (ui.cb_buff[R_AUA].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //サンダーグラップ:ブレイブ
+        ui.cb_buff[R_TGB].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "Passive"
+                                         + "<br>"+ "サンダーグラップのホールド持続時間が3から6秒に増加"
+                                         + "<br>"+ "[習得レベル:80][持続時間:常時][対象:術者]"+"</html>");
+        if (ui.cb_buff[R_TGB].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //フォースレイヤー:ブレイブ
+        ui.cb_buff[R_FSB].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "Passive"
+                                         + "<br>"+ "弱点露出に追加効果 一定確率でスタン状態にする"
+                                         + "<br>"+ "*リニューアル 弱点露出4段階の解放からスタン効果に"
+                                         + "<br>"+ "[習得レベル:85][持続時間:常時][対象:術者]"+"</html>");
+        if (ui.cb_buff[R_FSB].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //リンドビオル
+        //7164行にて処理
+
+        //モータルボディ
+        ui.cb_buff[R_MBY].setToolTipText("<html>"+ "[消費MP:--][消費HP:40]"
+                                         + "<br>"+ "攻撃をしてきた対象に、一定確率でカウンターダメージを与える"
+                                         + "<br>"+ "カウンターダメージは[AC]/2 最小は40ダメージ"
+                                         + "<br>"+ "*リニューアル 消費HP50から40"
+                                         + "<br>"+ "[習得レベル:60][持続時間:5分][対象:術者]"+"</html>");
+        if (ui.cb_buff[R_MBY].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //サンダーグラップ
+        ui.cb_buff[R_TGP].setToolTipText("<html>"+ "[消費MP:--][消費HP:30]"
+                                         + "<br>"+ "5セル内の対象を、一定確率でホールド状態にする"
+                                         + "<br>"+ "個別クールタイム"
+                                         + "<br>"+ "*リニューアル 消費HP35から30 個別クールタイムに"
+                                         + "<br>"+ "[習得レベル:60][持続時間:1から4秒][対象:術者]"+"</html>");
+        if (ui.cb_buff[R_TGP].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //デストロイ:ホラー
+        ui.cb_buff[R_DHR].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "Passive"
+                                         + "<br>"+ "デストロイにDG-20/STR-2/INT-2の効果を追加"
+                                         + "<br>"+ "デストロイ:フィアーを覚えていないと習得する事が出来ない"
+                                         + "<br>"+ "*リニューアル デストロイに追加効果 パッシブに変更"
+                                         + "<br>"+ "[習得レベル:60][持続時間:常時][対象:術者]"+"</html>");
+        if (ui.cb_buff[R_DHR].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //アイオブドラゴン
+        ui.cb_buff[R_EOD].setToolTipText("<html>"+ "[消費MP:10][消費HP:10]"
+                                         + "<br>"+ "15セル内に隠れているPC/NPCを見つける"
+                                         + "<br>"+ "[習得レベル:60][持続時間:常時][対象:PC/NPC]"+"</html>");
+        if (ui.cb_buff[R_EOD].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //覚醒[ヴァラカス]
+        ui.cb_buff[R_VALAKAS].setToolTipText("<html>"+ "[消費MP:50][消費HP:30]"
+                                             + "<br>"+ "近距離命中+5 技術耐性+5 秘技耐性+5 恐怖耐性+5"
+                                             + "<br>"+ "*リニューアル 技術耐性+10から技術/秘技/恐怖+5に"
+                                             + "<br>"+ "[習得レベル:60][持続時間:10分][対象:術者][触媒:刻印のボーンピース(1)]"+"</html>");
+        if (ui.cb_buff[R_VALAKAS].isSelected()) {
+            buff.HIT_SHORT += 5;
+            buff.ailment[STUN] += 5;
+            buff.ailment[SECRET] += 5;
+            buff.ailment[TERROR] += 5;
+        }
+
+        //ブラッドラスト
+        ui.cb_buff[R_BLT].setToolTipText("<html>"+ "[消費MP:--][消費HP:30]"
+                                         + "<br>"+ "移動速度/攻撃速度が上昇する[2段階加速]"
+                                         + "<br>"+ "キャンセレーションで解除されない"
+                                         + "<br>"+ "[習得レベル:40][持続時間:5分][対象:術者][触媒:刻印のボーンピース(1)]"+"</html>");
+        if (ui.cb_buff[R_BLT].isSelected()) {
+        //[2段加速]をONにする
+        ui.cb_buff[ACC2].setSelected(true);
+        //"x1.3333"を選択する
+        ui.cb_buff_group[ACC2].setSelectedItem("x1.3333");
+        }
+
+        //フォースレイヤー
+        ui.cb_buff[R_FSR].setToolTipText("<html>"+ "[消費MP:--][消費HP:10]"
+                                         + "<br>"+ "対象に3連続攻撃をする"
+                                         + "<br>"+ "弱点露出の効果が適用される"
+                                         + "<br>"+ "*リニューアル 消費HP16から10"
+                                         + "<br>"+ "[習得レベル:40][持続時間:瞬間][対象:PC/NPC]"+"</html>");
+        if (ui.cb_buff[R_FSR].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //デストロイ:フィアー
+        ui.cb_buff[R_DFR].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "Passive"
+                                         + "<br>"+ "デストロイにDG-20の効果を追加"
+                                         + "<br>"+ "デストロイを覚えていないと習得する事が出来ない"
+                                         + "<br>"+ "*リニューアル デストロイに追加効果 パッシブに変更"
+                                         + "<br>"+ "[習得レベル:40][持続時間:常時][対象:PC/NPC]"+"</html>");
+        if (ui.cb_buff[R_DFR].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //マグマアロー
+        ui.cb_buff[R_MAW].setToolTipText("<html>"+ "[消費MP:5][消費HP:--]"
+                                         + "<br>"+ "10セル内の対象に、火属性ダメージを与える"
+                                         + "<br>"+ "[習得レベル:40][持続時間:瞬間][対象:PC/NPC]"+"</html>");
+        if (ui.cb_buff[R_MAW].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //覚醒[パプリオン]
+        ui.cb_buff[R_FAFURION].setToolTipText("<html>"+ "[消費MP:30][消費HP:20]"
+                                              + "<br>"+ "重量ゲージが50％を超えてもHPとMPが自然回復する 遠距離回避ER+10"
+                                              + "<br>"+ "重量ゲージの範囲50から82%?"
+                                              + "<br>"+ "キャンセレーションで解除されない"
+                                              + "<br>"+ "リニューアル ER+10追加"
+                                              + "<br>"+ "[習得レベル:40][持続時間:10分][対象:術者][触媒:刻印のボーンピース(1)]"+"</html>");
+        if (ui.cb_buff[R_FAFURION].isSelected()) {
+            buff.ER += 10;
+        }
+
+        //ドラゴンスキン
+        ui.cb_buff[R_DSN].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "Passive"
+                                         + "<br>"+ "ダメージ低下+5"
+                                         + "<br>"+ "レベル80から、レベル2毎に効果が+1ずつ増加(LV80でDR6)"
+                                         + "<br>"+ "*リニューアル パッシブに変更"
+                                         + "<br>"+ "[習得レベル:20][持続時間:常時][対象:PC/NPC]"+"</html>");
+        if (ui.cb_buff[R_DSN].isSelected()) {
+            buff.DR += 5;
+            if (level >= 80) {
+                buff.DR += (int) ((level - 80) / 2) + 1;
+            }
+        }
+
+        //バーニングスラッシュ
+        ui.cb_buff[R_BSH].setToolTipText("<html>"+ "[消費MP:--][消費HP:6]"
+                                         + "<br>"+ "詠唱して最初の攻撃をした時に、火属性ダメージ+7を追加"
+                                         + "<br>"+ "[習得レベル:20][持続時間:1分][対象:術者]"+"</html>");
+        if (ui.cb_buff[R_BSH].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //デストロイ
+        ui.cb_buff[R_DEY].setToolTipText("<html>"+ "[消費MP:10][消費HP:20]"
+                                         + "<br>"+ "5セル内の対象に、一定確率でAC+10"
+                                         + "<br>"+ "[習得レベル:20][持続時間:16秒][対象:PC/NPC]"+"</html>");
+        if (ui.cb_buff[R_DEY].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //マグマブレス
+        ui.cb_buff[R_MBH].setToolTipText("<html>"+ "[消費MP:10][消費HP:--]"
+                                         + "<br>"+ "5セル内の対象1セル内に、火属性ダメージ25から35を与える"
+                                         + "<br>"+ "[習得レベル:20][持続時間:瞬間][対象:PC/NPC]"+"</html>");
+        if (ui.cb_buff[R_MBH].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //覚醒[アンタラス]
+        ui.cb_buff[R_ANTHARAS].setToolTipText("<html>"+ "[消費MP:20][消費HP:10]"
+                                              + "<br>"+ "AC-3 MR+5%"
+                                              + "<br>"+ "キャンセレーションで解除されない"
+                                              + "<br>"+ "*リニューアル MR+5%追加"
+                                              + "<br>"+ "[習得レベル:20][持続時間:10分][対象:術者][触媒:刻印のボーンピース(1)]"+"</html>");
+        if (ui.cb_buff[R_ANTHARAS].isSelected()) {
+            buff.AC -= 3;
+            buff.MR += 5;
+        }
+
         //バーサーカー 消費MP40/5mins
         ui.cb_buff[W_BER].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
                                          + "<br>"+ "近距離ダメージ+2 近距離命中+8 AC+10 HP自然回復不可"
@@ -2703,56 +2917,6 @@ public class Calculator implements Common {
                                          + "<br>"+ "[習得レベル:56][持続時間:5分][対象:術者][触媒:魔力の石(1)]"+"</html>");
         if (ui.cb_buff[W_FAR].isSelected()) {
             buff.ER += 5;
-        }
-
-        //ドラゴンスキン 消費MP0/30mins
-        ui.cb_buff[R_DSN].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
-                                         + "<br>"+ "ダメージ低下[DR]+5"
-                                         + "<br>"+ "レベル80からレベル2毎に効果が+1ずつ増加(LV80でDR6)"
-                                         + "<br>"+ "[習得レベル:20][持続時間:30分][対象:術者]"+"</html>");
-        if (ui.cb_buff[R_DSN].isSelected()) {
-            buff.DR += 5;
-            if (level >= 80) {
-                buff.DR += (int) ((level - 80) / 2) + 1;
-            }
-        }
-
-        //覚醒[アンタラス] 消費MP20/10mins
-        ui.cb_buff[R_ANTHARAS].setToolTipText("<html>"+ "[消費MP:20][消費HP:10]"
-                                              + "<br>"+ "AC-3"
-                                              + "<br>"+ "キャンセレーションで解除されない"
-                                              + "<br>"+ "[習得レベル:20][持続時間:10分][対象:術者][触媒:刻印のボーンピース(1)]"+"</html>");
-        if (ui.cb_buff[R_ANTHARAS].isSelected()) {
-            buff.AC -= 3;
-            if (ui.cb_buff[R_ANTHARAS].getForeground().equals(Color.BLUE)) {
-                cons_mp += (20.0 * (1.0 - red_mp * 0.01) - red_mp2) / 10;
-            }
-        }
-
-        //覚醒[パプリオン] 消費MP30/10mins
-        //if (ui.cb_buff[R_FAFURION].isSelected()) {
-        //    if (ui.cb_buff[R_ANTHARAS].isSelected()
-        //            || ui.cb_buff[R_VALAKAS].isSelected()
-        //            || ui.cb_buff[R_LINDVIOL].isSelected()) {
-        //        ui.cb_buff[R_FAFURION].setSelected(false);
-        //    } else {
-        //        if (ui.cb_buff[R_FAFURION].getForeground().equals(Color.BLUE)) {
-        //            cons_mp += (30.0 * (1.0 - red_mp * 0.01) - red_mp2) / 10;
-        //        }
-        //    }
-        //}
-
-        //覚醒[ヴァラカス] 消費MP50/10mins
-        ui.cb_buff[R_VALAKAS].setToolTipText("<html>"+ "[消費MP:50][消費HP:30]"
-                                             + "<br>"+ "近距離命中+5 技術耐性+10"
-                                             + "<br>"+ "キャンセレーションで解除されない"
-                                             + "<br>"+ "[習得レベル:60][持続時間:10分][対象:術者][触媒:刻印のボーンピース(1)]"+"</html>");
-        if (ui.cb_buff[R_VALAKAS].isSelected()) {
-            buff.HIT_SHORT += 5;
-            buff.ailment[STUN] += 10;
-            if (ui.cb_buff[R_VALAKAS].getForeground().equals(Color.BLUE)) {
-                cons_mp += (50.0 * (1.0 - red_mp * 0.01) - red_mp2) / 10;
-            }
         }
 
         //コンセントレーション 消費MP30/10mins
@@ -7084,7 +7248,7 @@ buki.arrow_elementdmg=0;
         //アンキャニードッジ
         ui.cb_buff[D_UDE].setToolTipText("<html>"+ "[消費MP:40][消費HP:--]"
                                          + "<br>"+ "近距離回避[DG]+30 AC-100以上だとエフェクトが黄金に変化"
-                                         + "<br>"+ "キャンセレーションで解除されない"                
+                                         + "<br>"+ "キャンセレーションで解除されない"
                                          + "<br>"+ "[習得レベル:60][持続時間:16分][対象:術者][触媒:ダークストーン(1)]"+"</html>");
         if (ui.cb_buff[D_UDE].isSelected()) {
             dg += 30;
@@ -7093,7 +7257,7 @@ buki.arrow_elementdmg=0;
         //ミラーイメージ 消費MP20/20mins
         ui.cb_buff[I_MIE].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
                                          + "<br>"+ "近距離回避[DG]+30"
-                                         + "<br>"+ "キャンセレーションで解除されない"                
+                                         + "<br>"+ "キャンセレーションで解除されない"
                                          + "<br>"+ "[習得レベル:15][持続時間:20分][対象:術者]"+"</html>");
         if (ui.cb_buff[I_MIE].isSelected()) {
             dg += 30;
@@ -7101,17 +7265,16 @@ buki.arrow_elementdmg=0;
                 cons_mp += (20.0 * (1.0 - red_mp * 0.01) - red_mp2) / 20;
             }
         }
-        //覚醒[リンドビオル] 消費MP40/10mins
-        ui.cb_buff[R_LINDVIOL].setToolTipText("<html>"+ "[消費MP:40][消費HP:40]"
-                                              + "<br>"+ "近距離回避[DG]+7"
-                                              + "<br>"+ "キャンセレーションで解除されない"                
+        //覚醒[リンドビオル]
+        ui.cb_buff[R_LINDVIOL].setToolTipText("<html>"+ "[消費MP:40][消費HP:10]"
+                                              + "<br>"+ "近距離回避[DG]+10"
+                                              + "<br>"+ "キャンセレーションで解除されない"
+                                              + "<br>"+ "*リニューアル 消費HP40から10 DG+7から+10"
                                               + "<br>"+ "[習得レベル:80][持続時間:10分][対象:術者][触媒:刻印のボーンピース(1)]"+"</html>");
         if (ui.cb_buff[R_LINDVIOL].isSelected()) {
-            dg += 7;
-            if (ui.cb_buff[R_LINDVIOL].getForeground().equals(Color.BLUE)) {
-                    cons_mp += (40.0 * (1.0 - red_mp * 0.01) - red_mp2) / 10;
-            }
+            dg += 10;
         }
+
         //インフィニティ:ドッジ
         ui.cb_buff[F_PIE].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
                                          + "<br>"+ "DG+5"

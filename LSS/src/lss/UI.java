@@ -220,8 +220,8 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
     //ファイナルバーンで計104個分(0から103)
 //    JCheckBox[] cb_buff = new JCheckBox[104];
 //    JComboBox[] cb_buff_group = new JComboBox[104];
-    JCheckBox[] cb_buff = new JCheckBox[182];
-    JComboBox[] cb_buff_group = new JComboBox[182];
+    JCheckBox[] cb_buff = new JCheckBox[194];
+    JComboBox[] cb_buff_group = new JComboBox[194];
     //パネル5
     JComboBox cb_npc_level;
     JSlider[] s_target_res = new JSlider[ELEM_LIST.length];
@@ -1931,19 +1931,43 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         col = 0;
         row = 0;
 
-        lab_tmp = new JLabel("竜騎士秘技");
+        lab_tmp = new JLabel("竜騎士の秘技");
         lab_tmp.setBounds(200 * row, 20 * col++, 200, 20);
         panels[3].add(lab_tmp);
 
         //ハルパス
         cb_buff[R_HAS] = new JCheckBox("ハルパス(未実装)");
         cb_buff[R_HAS].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[R_HAS].setToolTipText("<html>"+ "[消費MP:18][消費HP:--]"
-                                      + "<br>"+ "攻撃をしてきた対象に一定確率(不明)でカウンターダメージを与える"
-                                      + "<br>"+ "カウンターダメージは武器の[Small打撃値]x3"
-                                      + "<br>"+ "[習得レベル:85][持続時間:2分8秒][対象:術者][触媒:刻印のボーンピース(1)]"+"</html>");
         cb_buff[R_HAS].addActionListener(this);
         panels[3].add(cb_buff[R_HAS]);
+
+        cb_buff[R_SNE] = new JCheckBox("[UP待ち]ソリッドノート");
+        cb_buff[R_SNE].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[R_SNE].addActionListener(this);
+        panels[3].add(cb_buff[R_SNE]);
+
+        cb_buff[R_RAE] = new JCheckBox("[UP待ち]ランペイジ");
+        cb_buff[R_RAE].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[R_RAE].addActionListener(this);
+        panels[3].add(cb_buff[R_RAE]);
+
+        //アウラキア
+        cb_buff[R_AUA] = new JCheckBox("アウラキア");
+        cb_buff[R_AUA].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[R_AUA].addActionListener(this);
+        panels[3].add(cb_buff[R_AUA]);
+
+        //サンダーグラップ:ブレイブ
+        cb_buff[R_TGB] = new JCheckBox("サンダーグラップ:ブレイブ(未実装)");
+        cb_buff[R_TGB].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[R_TGB].addActionListener(this);
+        panels[3].add(cb_buff[R_TGB]);
+
+        //フォースレイヤー:ブレイブ
+        cb_buff[R_FSB] = new JCheckBox("フォースレイヤー:ブレイブ(未実装)");
+        cb_buff[R_FSB].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[R_FSB].addActionListener(this);
+        panels[3].add(cb_buff[R_FSB]);
 
         //覚醒[リンドビオル]
         cb_buff[R_LINDVIOL] = new JCheckBox("覚醒[リンドビオル]");
@@ -1951,35 +1975,29 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[R_LINDVIOL].addActionListener(this);
         panels[3].add(cb_buff[R_LINDVIOL]);
 
-        //アウラキア
-        cb_buff[R_AUA] = new JCheckBox("アウラキア(未実装)");
-        cb_buff[R_AUA].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[R_AUA].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
-                                      + "<br>"+ "覚醒を2種類まで重複が可能になる"
-                                      + "<br>"+ "覚醒スキルの消費MPを5減少させる"
-                                      + "<br>"+ "[習得レベル:80][持続時間:常時][対象:術者][触媒:刻印のボーンピース(1)]"+"</html>");
-        cb_buff[R_AUA].addActionListener(this);
-        panels[3].add(cb_buff[R_AUA]);
-
-        //フォースレイヤー:ブレイブ
-        cb_buff[R_FSB] = new JCheckBox("フォースレイヤー:ブレイブ(未実装)");
-        cb_buff[R_FSB].setBounds(200 * row, 20 * col++, 180, 20);
-        cb_buff[R_FSB].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
-                                      + "<br>"+ "弱点露出4段目が解放"
-                                      + "<br>"+ "リニューアル後:弱点露出に追加効果 一定確率でスタン状態にする"
-                                      + "<br>"+ "[習得レベル:85][持続時間:常時][対象:術者]"+"</html>");
-        cb_buff[R_FSB].addActionListener(this);
-        panels[3].add(cb_buff[R_FSB]);
-
         //モータルボディー
         cb_buff[R_MBY] = new JCheckBox("モータルボディー(未実装)");
         cb_buff[R_MBY].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[R_MBY].setToolTipText("<html>"+ "[消費MP:--][消費HP:50]"
-                                      + "<br>"+ "攻撃をしてきた対象に一定確率(25%)でカウンターダメージを与える"
-                                      + "<br>"+ "カウンターダメージは[AC]/[2]最小は40ダメージ"
-                                      + "<br>"+ "[習得レベル:60][持続時間:5分][対象:術者]"+"</html>");
         cb_buff[R_MBY].addActionListener(this);
         panels[3].add(cb_buff[R_MBY]);
+
+        //サンダーグラップ
+        cb_buff[R_TGP] = new JCheckBox("サンダーグラップ(未実装)");
+        cb_buff[R_TGP].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[R_TGP].addActionListener(this);
+        panels[3].add(cb_buff[R_TGP]);
+
+        //デストロイ:ホラー
+        cb_buff[R_DHR] = new JCheckBox("デストロイ:ホラー(未実装)");
+        cb_buff[R_DHR].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[R_DHR].addActionListener(this);
+        panels[3].add(cb_buff[R_DHR]);
+
+        //アイオブドラゴン
+        cb_buff[R_EOD] = new JCheckBox("アイオブドラゴン(未実装)");
+        cb_buff[R_EOD].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[R_EOD].addActionListener(this);
+        panels[3].add(cb_buff[R_EOD]);
 
         //覚醒[ヴァラカス]
         cb_buff[R_VALAKAS] = new JCheckBox("覚醒[ヴァラカス]");
@@ -1987,14 +2005,33 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[R_VALAKAS].addActionListener(this);
         panels[3].add(cb_buff[R_VALAKAS]);
 
+        //ブラッドラスト
+        cb_buff[R_BLT] = new JCheckBox("ブラッドラスト(未実装)");
+        cb_buff[R_BLT].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[R_BLT].addActionListener(this);
+        panels[3].add(cb_buff[R_BLT]);
+
+        //フォースレイヤー
+        cb_buff[R_FSR] = new JCheckBox("フォースレイヤー(未実装)");
+        cb_buff[R_FSR].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[R_FSR].addActionListener(this);
+        panels[3].add(cb_buff[R_FSR]);
+
+        //デストロイ:フィアー
+        cb_buff[R_DFR] = new JCheckBox("デストロイ:フィアー(未実装)");
+        cb_buff[R_DFR].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[R_DFR].addActionListener(this);
+        panels[3].add(cb_buff[R_DFR]);
+
+        //マグマアロー
+        cb_buff[R_MAW] = new JCheckBox("マグマアロー(未実装)");
+        cb_buff[R_MAW].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[R_MAW].addActionListener(this);
+        panels[3].add(cb_buff[R_MAW]);
+
         //覚醒[パプリオン]
-        cb_buff[R_FAFURION] = new JCheckBox("覚醒[パプリオン](未実装)");
+        cb_buff[R_FAFURION] = new JCheckBox("覚醒[パプリオン]");
         cb_buff[R_FAFURION].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[R_FAFURION].setToolTipText("<html>"+ "[消費MP:30][消費HP:20]"
-                                           + "<br>"+ "重量ゲージが50％を超えてもHPとMPが自然回復する"
-                                           + "<br>"+ "重量ゲージの範囲50から82%?"
-                                           + "<br>"+ "キャンセレーションで解除されない"
-                                           + "<br>"+ "[習得レベル:40][持続時間:10分][対象:術者][触媒:刻印のボーンピース(1)]"+"</html>");
         cb_buff[R_FAFURION].addActionListener(this);
         panels[3].add(cb_buff[R_FAFURION]);
 
@@ -2004,13 +2041,32 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[R_DSN].addActionListener(this);
         panels[3].add(cb_buff[R_DSN]);
 
+        //バーニングスラッシュ
+        cb_buff[R_BSH] = new JCheckBox("バーニングスラッシュ(未実装)");
+        cb_buff[R_BSH].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[R_BSH].addActionListener(this);
+        panels[3].add(cb_buff[R_BSH]);
+
+        //デストロイ
+        cb_buff[R_DEY] = new JCheckBox("デストロイ(未実装)");
+        cb_buff[R_DEY].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[R_DEY].addActionListener(this);
+        panels[3].add(cb_buff[R_DEY]);
+
+        //マグマブレス
+        cb_buff[R_MBH] = new JCheckBox("マグマブレス(未実装)");
+        cb_buff[R_MBH].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[R_MBH].addActionListener(this);
+        panels[3].add(cb_buff[R_MBH]);
+
         //覚醒[アンタラス]
         cb_buff[R_ANTHARAS] = new JCheckBox("覚醒[アンタラス]");
         cb_buff[R_ANTHARAS].setBounds(200 * row, 20 * col++, 150, 20);
         cb_buff[R_ANTHARAS].addActionListener(this);
         panels[3].add(cb_buff[R_ANTHARAS]);
 
-        col++;
+        col = 0;
+        row = 1;
 
         lab_tmp = new JLabel("幻術魔法");
         lab_tmp.setBounds(200 * row, 20 * col++, 200, 20);
@@ -2093,8 +2149,7 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[I_IOE].addActionListener(this);
         panels[3].add(cb_buff[I_IOE]);
 
-        col = 0;
-        row = 1;
+        col++;
 
         lab_tmp = new JLabel("戦士技術");
         lab_tmp.setBounds(200 * row, 20 * col++, 200, 20);

@@ -335,35 +335,35 @@ public interface Common {
     final int D_SAR = 33;           //LV20  Shadow ArmoR                  シャドウアーマー
     final int D_DMY = 181;          //LV20  Dress MightY                  ドレスマイティー
 
-//ドラゴンナイトの秘技    合計22種類
+//竜騎士の秘技    合計22種類
     //LV4魔法
-//    final int R_SNE = X;          //LV80  Solid NotE                    ソリッドノート
-//    final int R_RAE = X;          //LV80  RAmpagE                       ランペイジ
     final int R_HAS = 116;          //LV85  HAlpaS                        ハルパス
-    final int R_LINDVIOL = 90;      //LV80  Arousal[LINDVIOL]             覚醒[リンドビオル]
+    final int R_SNE = 181;          //LV80  Solid NotE                    [UP待ち]ソリッドノート
+    final int R_RAE = 182;          //LV80  RAmpagE                       [UP待ち]ランペイジ
     final int R_AUA = 117;          //LV80  AUrakiA                       アウラキア
-//    final int R_TGB = X;          //LV80  Thunder Grap:Brave            サンダーグラップ:ブレイブ
+    final int R_TGB = 183;          //LV80  Thunder Grap:Brave            サンダーグラップ:ブレイブ
     final int R_FSB = 60;           //LV85  Four Slayer:Brave             フォースレイヤー:ブレイブ(未実装)
+    final int R_LINDVIOL = 90;      //LV80  Arousal[LINDVIOL]             覚醒[リンドビオル]
 
     //LV3魔法
     final int R_MBY = 38;           //LV60  Mortal BodY                   モータルボディー
-//    final int R_TGP = X;          //LV60  Thunder GraP                  サンダーグラップ
-//    final int R_DHR = X;          //LV60  Destroy:HorroR                デストロイ:ホラー
-//    final int R_EOD = X;          //LV60  Eye Of Dragon                 アイオブドラゴン
+    final int R_TGP = 184;          //LV60  Thunder GraP                  サンダーグラップ
+    final int R_DHR = 185;          //LV60  Destroy:HorroR                デストロイ:ホラー
+    final int R_EOD = 186;          //LV60  Eye Of Dragon                 アイオブドラゴン
     final int R_VALAKAS = 41;       //LV60  Arousal[VALAKAS]              覚醒[ヴァラカス]
 
     //LV2魔法
-//    final int R_BLT = X;          //LV40  Blood LasT                    ブラッドラスト(基本エンチャントの2段加速で実装)
-//    final int R_FSR = X;          //LV40  Four SlayeR                   フォースレイヤー
-//    final int R_DFR = X;          //LV40  Destroy:FeaR                  デストロイ:フィアー
-//    final int R_MAW = X;          //LV40  Magma ArroW                   マグマアロー
+    final int R_BLT = 187;          //LV40  Blood LasT                    ブラッドラスト(基本エンチャントの2段加速で実装)
+    final int R_FSR = 188;          //LV40  Four SlayeR                   フォースレイヤー
+    final int R_DFR = 189;          //LV40  Destroy:FeaR                  デストロイ:フィアー
+    final int R_MAW = 190;          //LV40  Magma ArroW                   マグマアロー
     final int R_FAFURION = 40;      //LV40  Arousal[FAFURION]             覚醒[パプリオン](未実装)
 
     //LV1魔法
     final int R_DSN = 37;           //LV20  Dragon SkiN                   ドラゴンスキン
-//    final int R_BSH = X;          //LV20  Burning SlasH                 バーニングスラッシュ
-//    final int R_DEY = X;          //LV20  DEstroY                       デストロイ
-//    final int R_MBH = X;          //LV20  Magma BreatH                  マグマブレス
+    final int R_BSH = 191;          //LV20  Burning SlasH                 バーニングスラッシュ
+    final int R_DEY = 192;          //LV20  DEstroY                       デストロイ
+    final int R_MBH = 193;          //LV20  Magma BreatH                  マグマブレス
     final int R_ANTHARAS = 39;      //LV20  Arousal[ANTHARAS]             覚醒[アンタラス]
 
 //イリュージョニストの幻術魔法    合計26種類
