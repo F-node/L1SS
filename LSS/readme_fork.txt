@@ -1,6 +1,29 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2020/09/06
+Update 4.1.9
+LSS/src/lss/Calculator.java
+LSS/src/lss/Common.java
+LSS/src/lss/UI.java
+追加
+	竜騎士の秘技
+		ソリッドノート
+		ランペイジ
+		サンダーグラップ:ブレイブ
+		サンダーグラップ
+		デストロイ:ホラー
+		アイオブドラゴン
+		ブラッドラスト
+		フォースレイヤー
+		デストロイ:フィアー
+		マグマアロー
+		バーニングスラッシュ
+		デストロイ
+		マグマブレス
+修正
+	各魔法/技術のツールチップや処理の修正及び簡略化
+
 2020/09/03
 Update 4.1.8
 LSS/src/lss/Calculator.java
