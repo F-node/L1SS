@@ -85,7 +85,7 @@ public interface Common {
     final String[] EQ_LIST = {"武器", "武器", "シールド", "ヘルム", "グローブ", "シャツ",
         "アーマー", "クローク", "ブーツ", "ゲートル", "ベルト", "アミュレット", "イアリング", "イアリング", "リング", "リング",
         "リング", "リング", "インシグニア", "スポールダー", "紋章", "ペンダント"};
-    
+
     final int RING1 = 14;
     final int RING2 = 15;
     final int RING3 = 16;
@@ -368,40 +368,40 @@ public interface Common {
 
 //イリュージョニストの幻術魔法    合計26種類
     //LV5魔法
-//    final int I_BBR = X;          //LV85  Bone BreaK:Raster             ボーンブレイク:ラスタ
     final int I_POL = 118;          //LV85  POtentiaL                     ポテンシャル
-//    final int I_MES = X;          //LV85  MEviuS                        メビウス
+    final int I_BBR = 194;          //LV85  Bone BreaK:Raster             ボーンブレイク:ラスタ
+    final int I_MES = 195;          //LV85  MEviuS                        メビウス
     final int I_IMT = 92;           //LV80  IMpacT                        インパクト
-//    final int I_DHE = X;          //LV80  Dark HorsE                    ダークホース(基本エンチャントの2段加速で実装)
+    final int I_DHE = 196;          //LV80  Dark HorsE                    ダークホース(基本エンチャントの2段加速で実装)
     final int I_FSZ = 91;           //LV75  Focus SpitZ                   フォーカススピッツ
 
     //LV4魔法             
     final int I_INS = 46;           //LV60  INsighT                       インサイト
-//    final int I_PAC = X;          //LV60  PAniC                         パニック
+    final int I_PAC = 197;          //LV60  PAniC                         パニック
     final int I_RWT = 62;           //LV60  Reduce WeighT                 リデュースウェイト
-    final int I_IAR = 45;           //LV60  Illusion[AvataR]              幻術[アバター]
-//    final int I_CAR = X;          //LV60  Cube[AvataR]                  キューブ[アバター]
+    final int I_IAR = 45;           //LV60  Illusion[AvataR]              イリュージョン[アバター]
+    final int I_CAR = 198;          //LV60  Cube[AvataR]                  キューブ[アバター]
 
     //LV3魔法     
     final int I_PAE = 47;           //LV45  PAtiencE                      ペイシェンス
-//    final int I_PHM = X;          //LV45  PHantasM                      ファンタズム
-//    final int I_EBR = X;          //LV45  Eyes BreakeR                  アイズブレイカー
-    final int I_IGM = 44;           //LV45  Illusion[GoleM]               幻術[ゴーレム]
-//    final int I_CRH = X;          //LV45  Cube[RicH]                    キューブ[リッチ]
+    final int I_PHM = 199;          //LV45  PHantasM                      ファンタズム
+    final int I_IBR = 200;          //LV45  Ices BreakeR                  アイズブレイカー
+    final int I_IGM = 44;           //LV45  Illusion[GoleM]               イリュージョン[ゴーレム]
+    final int I_CRH = 201;          //LV45  Cube[RicH]                    キューブ[リッチ]
 
     //LV2魔法 
     final int I_CON = 48;           //LV30  COncentratioN                 コンセントレーション
-//    final int I_MBK = X;          //LV30  Mind BreaK                    マインドブレイク
-//    final int I_BBK = X;          //LV30  Bone BreaK                    ボーンブレイク
-    final int I_IRH = 43;           //LV30  Illusion[RicH]                幻術[リッチ]
-//    final int I_CGM = X;          //LV30  Cube[GoleM]                   キューブ[ゴーレム]
+    final int I_MBK = 202;          //LV30  Mind BreaK                    マインドブレイク
+    final int I_BBK = 203;          //LV30  Bone BreaK                    ボーンブレイク
+    final int I_IRH = 43;           //LV30  Illusion[RicH]                イリュージョン[リッチ]
+    final int I_CGM = 204;          //LV30  Cube[GoleM]                   キューブ[ゴーレム]
 
     //LV1魔法 
     final int I_MIE = 49;           //LV15  Mirror ImagE                  ミラーイメージ
-//    final int I_CFN = X;          //LV15  ConFusioN                     コンフュージョン
-//    final int I_SEY = X;          //LV15  Smash EnergY                  スマッシュエネルギー
-    final int I_IOE = 42;           //LV15  Illusion[OgrE]                幻術[オーガ]
-//    final int I_COE = X;          //LV15  Cube[OgrE]                    キューブ[オーガ]
+    final int I_CFN = 205;          //LV15  ConFusioN                     コンフュージョン
+    final int I_SEY = 206;          //LV15  Smash EnergY                  スマッシュエネルギー
+    final int I_IOE = 42;           //LV15  Illusion[OgrE]                イリュージョン[オーガ]
+    final int I_COE = 207;          //LV15  Cube[OgrE]                    キューブ[オーガ]
 
 //ウォリアーの技術    合計16種類
     //アクティブスキル
