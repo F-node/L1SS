@@ -291,7 +291,7 @@ public class Calculator implements Common {
         st_data[L][REM][INT] = 4;
         st_data[L][REM][WIS] = 4;
         st_data[L][REM][CHA] = 4;
-        rem_data[L] = 4;
+        rem_data[L] = 6;
 
         //ステータスボーナス
         _C[D_SHORT][STR][P] = 30;
@@ -445,7 +445,7 @@ public class Calculator implements Common {
     double acc_1 = 1.3333;
     // 二段加速(BP イビルブラッド ブラッドラスト 名誉のコイン ダンシングブレイズ フォーカスウェーブ ハリケーン サンドストーム)
     double acc_2 = 1.3333;
-    // 二段加速(EW 濃縮集中ポーション)
+    // 二段加速(EW 濃縮集中ポーション ムービングアクセレーション:マキシマム)
     double acc_ew = 1.1547;
     // 二段加速(ダークホース)
     double acc_df = 1.0800;
@@ -2029,7 +2029,7 @@ public class Calculator implements Common {
         }
 
         //エルヴングラヴィティー
-        //6805行にて処理
+        //7360行にて処理
 
         //グレーターエレメンタル
         ui.cb_buff[E_GEL].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
@@ -2246,12 +2246,12 @@ public class Calculator implements Common {
                                          + "<br>"+ "ダガー/ソード専用スキル"
                                          + "<br>"+ "移動速度と攻撃速度が上昇する[2段加速]x1.3333"
                                          + "<br>"+ "[習得レベル:60][持続時間:8分][対象:術者][触媒:エルブンワッフル(1)]"+"</html>");
-        if (ui.cb_buff[E_DBE].isSelected()) {
+        //if (ui.cb_buff[E_DBE].isSelected()) {
         //[2段加速]をONにする
-        ui.cb_buff[ACC2].setSelected(true);
+        //ui.cb_buff[ACC2].setSelected(true);
         //"x1.3333"を選択する
-        ui.cb_buff_group[ACC2].setSelectedItem("x1.3333");
-        }
+        //ui.cb_buff_group[ACC2].setSelectedItem("x1.3333");
+        //}
 
         //ファイアーシールド
         ui.cb_buff[E_FSD].setToolTipText("<html>"+ "[消費MP:15][消費HP:--]"
@@ -2289,12 +2289,12 @@ public class Calculator implements Common {
                                          + "<br>"+ "移動速度と攻撃速度が上昇する[2段加速]x1.1547"
                                          + "<br>"+ "*リニューアル 移動速度と攻撃速度がBP速度に変更"
                                          + "<br>"+ "[習得レベル:60][持続時間:8分][対象:術者][触媒:エルブンワッフル(1)]"+"</html>");
-        if (ui.cb_buff[E_FWE].isSelected()) {
+        //if (ui.cb_buff[E_FWE].isSelected()) {
         //[2段加速]をONにする
-        ui.cb_buff[ACC2].setSelected(true);
+        //ui.cb_buff[ACC2].setSelected(true);
         //"x1.1547"を選択する
-        ui.cb_buff_group[ACC2].setSelectedItem("x1.1547");
-        }
+        //ui.cb_buff_group[ACC2].setSelectedItem("x1.1547");
+        //}
 
         //アクアプロテクター
         ui.cb_buff[E_APR].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
@@ -2355,12 +2355,12 @@ public class Calculator implements Common {
                                          + "<br>"+ "弓専用スキル"
                                          + "<br>"+ "移動速度と攻撃速度が上昇する[2段加速]x1.3333"
                                          + "<br>"+ "[習得レベル:75][持続時間:8分][対象:術者][触媒:エルブンワッフル(1)]"+"</html>");
-        if (ui.cb_buff[E_HUE].isSelected()) {
+        //if (ui.cb_buff[E_HUE].isSelected()) {
         //[2段加速]をONにする
-        ui.cb_buff[ACC2].setSelected(true);
+        //ui.cb_buff[ACC2].setSelected(true);
         //"x1.3333"を選択する
-        ui.cb_buff_group[ACC2].setSelectedItem("x1.3333");
-        }
+        //ui.cb_buff_group[ACC2].setSelectedItem("x1.3333");
+        //}
 
         //サイクロン
         //6380行にて処理
@@ -2422,12 +2422,12 @@ public class Calculator implements Common {
                                          + "<br>"+ "ダガー/ソード専用スキル"
                                          + "<br>"+ "移動速度と攻撃速度が上昇する[2段加速]x1.3333"
                                          + "<br>"+ "[習得レベル:75][持続時間:8分][対象:術者][触媒:エルブンワッフル(1)]"+"</html>");
-        if (ui.cb_buff[E_SSM].isSelected()) {
+        //if (ui.cb_buff[E_SSM].isSelected()) {
         //[2段加速]をONにする
-        ui.cb_buff[ACC2].setSelected(true);
+        //ui.cb_buff[ACC2].setSelected(true);
         //"x1.3333"を選択する
-        ui.cb_buff_group[ACC2].setSelectedItem("x1.3333");
-        }
+        //ui.cb_buff_group[ACC2].setSelectedItem("x1.3333");
+        //}
 
         //アースガーディアン
         ui.cb_buff[E_EGN].setToolTipText("<html>"+ "[消費MP:30][消費HP:10]"
@@ -2501,12 +2501,12 @@ public class Calculator implements Common {
                                          + "<br>"+ "Passive"
                                          + "<br>"+ "ムービングアクセレーションを詠唱した時に、攻撃速度が上昇する(ワッフル速度x1.1547)"
                                          + "<br>"+ "[習得レベル:85][持続時間:30秒][対象:術者][触媒:ダークストーン(2)]"+"</html>");
-        if (ui.cb_buff[D_MAM].isSelected()) {
+        //if (ui.cb_buff[D_MAM].isSelected()) {
         //[2段加速]をONにする
-        ui.cb_buff[ACC2].setSelected(true);
+        //ui.cb_buff[ACC2].setSelected(true);
         //"x1.1547"を選択する
-        ui.cb_buff_group[ACC2].setSelectedItem("x1.1547");
-        }
+        //ui.cb_buff_group[ACC2].setSelectedItem("x1.1547");
+        //}
 
         //シャドウアーマー:デスティニー
         ui.cb_buff[D_SAD].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
@@ -2787,12 +2787,12 @@ public class Calculator implements Common {
                                          + "<br>"+ "移動速度/攻撃速度が上昇する[2段階加速]"
                                          + "<br>"+ "キャンセレーションで解除されない"
                                          + "<br>"+ "[習得レベル:40][持続時間:5分][対象:術者][触媒:刻印のボーンピース(1)]"+"</html>");
-        if (ui.cb_buff[R_BLT].isSelected()) {
+        //if (ui.cb_buff[R_BLT].isSelected()) {
         //[2段加速]をONにする
-        ui.cb_buff[ACC2].setSelected(true);
+        //ui.cb_buff[ACC2].setSelected(true);
         //"x1.3333"を選択する
-        ui.cb_buff_group[ACC2].setSelectedItem("x1.3333");
-        }
+        //ui.cb_buff_group[ACC2].setSelectedItem("x1.3333");
+        //}
 
         //フォースレイヤー
         ui.cb_buff[R_FSR].setToolTipText("<html>"+ "[消費MP:--][消費HP:10]"
@@ -2883,7 +2883,251 @@ public class Calculator implements Common {
             buff.MR += 5;
         }
 
-        //バーサーカー 消費MP40/5mins
+//幻術魔法
+        //ポテンシャル
+        ui.cb_buff[I_POL].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
+                                      + "<br>"+ "装備品や魔法が適用された状態の"
+                                      + "<br>"+ "[最大HP][最大MP][MR][SP][DG][ER]を20%上昇させる"
+                                      + "<br>"+ "アドバンスドスピリッツと重複する"
+                                      + "<br>"+ "[習得レベル:85][持続時間:2分8秒][対象:術者][触媒:属性石(2)]"+"</html>");
+        if (ui.cb_buff[I_POL].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //ボーンブレイク:ラスタ
+        ui.cb_buff[I_BBR].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "Passive"
+                                         + "<br>"+ "ボーンブレイクのスタン持続時間+1秒"
+                                         + "<br>"+ "[習得レベル:85]");
+        if (ui.cb_buff[I_BBR].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //メビウス
+        ui.cb_buff[I_MES].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
+                                         + "<br>"+ "遠距離ダメージを20%低下"
+                                         + "<br>"+ "レベル85から、レベル1毎に[遠距離ダメージ低下]1%増加(最大10%)"
+                                         + "<br>"+ "イミューントゥハームと重複する"
+                                         + "<br>"+ "個別クールタイム"
+                                         + "<br>"+ "*リニューアル 遠距離攻撃を無効化から30%低下に変更"
+                                         + "<br>"+ "*リニューアル第2 30%低下から20%に　レベル85から効果が上昇　"
+                                         + "<br>"+ "[習得レベル:85][持続時間:6秒][対象:術者][触媒:属性石(1)]"+"</html>");
+        if (ui.cb_buff[I_MES].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //インパクト
+        ui.cb_buff[I_IMT].setToolTipText("<html>"+ "[消費MP:40][消費HP:--]"
+                                         + "<br>"+ "15セル内のPTメンバーに"
+                                         + "<br>"+ "技術命中+5 精霊命中+5 竜語命中+5 恐怖命中+5"
+                                         + "<br>"+ "レベル80からレベル1毎に効果が+1ずつ増加[最大+10]"
+                                         + "<br>"+ "キャンセレーションで解除されない"
+                                         + "<br>"+ "[習得レベル:80][持続時間:15秒][対象:PT][触媒:属性石(5)]"+"</html>");
+        if (ui.cb_buff[I_IMT].isSelected()) {
+            if (level >= 80 && cls == I) {
+            	if (level >= 85) {
+                    buff.ailment[HIT_STUN] += 10;                       //技術命中+10
+                    buff.ailment[HIT_SPIRIT] += 10;                     //精霊命中+10
+                    buff.ailment[HIT_SECRET] += 10;                     //秘技命中+10
+                    buff.ailment[HIT_TERROR] += 10;                     //恐怖命中+10
+                } else if (level >= 80) {
+                    buff.ailment[HIT_STUN] += 5 + (level - 80);         //技術命中+(level - 75)
+                    buff.ailment[HIT_SPIRIT] += 5 + (level - 80);       //精霊命中+(level - 75)
+                    buff.ailment[HIT_SECRET] += 5 + (level - 80);       //秘技命中+(level - 75)
+                    buff.ailment[HIT_TERROR] += 5 + (level - 80);       //恐怖命中+(level - 75)
+                }
+            } else {
+                ui.cb_buff[I_IMT].setSelected(false);
+            }
+        }
+
+        //ダークホース
+        ui.cb_buff[I_DHE].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "Passive"
+                                         + "<br>"+ "攻撃速度が上昇する[2段階加速]x1.0800"
+                                         + "<br>"+ "[習得レベル:80][持続時間:常時][対象:術者]"+"</html>");
+        //if (ui.cb_buff[I_DHE].isSelected()) {
+        //[2段加速]をONにする
+        //ui.cb_buff[ACC2].setSelected(true);
+        //"x1.0800"を選択する
+        //ui.cb_buff_group[ACC2].setSelectedItem("x1.0800");
+        //}
+
+        //フォーカススピリッツ
+        ui.cb_buff[I_FSZ].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
+                                         + "<br>"+ "魔法クリティカル+5%"
+                                         + "<br>"+ "キャンセレーションで解除されない"
+                                         + "<br>"+ "[習得レベル:75][持続時間:5分][対象:術者][触媒:属性石(1)]"+"</html>");
+        if (ui.cb_buff[I_FSZ].isSelected()) {
+            buff.CRI_MAGIC += 5;
+        }
+
+        //インサイト
+        ui.cb_buff[I_INS].setToolTipText("<html>"+ "[消費MP:60][消費HP:--]"
+                                         + "<br>"+ "STR+1 DEX+1 INT+1 CON+1 WIS+1"
+                                         + "<br>"+ "[習得レベル:60][持続時間:10分40秒][対象:術者]"+"</html>");
+        if (ui.cb_buff[I_INS].isSelected()) {
+            buff.ST[STR]++;
+            buff.ST[DEX]++;
+            buff.ST[CON]++;
+            buff.ST[INT]++;
+            buff.ST[WIS]++;
+        }
+
+        //パニック
+        ui.cb_buff[I_PAC].setToolTipText("<html>"+ "[消費MP:30][消費HP:30]"
+                                         + "<br>"+ "5セル内の対象にSTR-1/DEX-1/CON-1/INT-1/WIS-1"
+                                         + "<br>"+ "[習得レベル:60][持続時間:1分4秒][対象:PC/NPC]"+"</html>");
+        if (ui.cb_buff[I_PAC].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //リデュースウェイト
+        //7370行にて処理
+
+        //イリュージョン[アバター]
+        //6606行にて処理
+
+        //キューブ[アバター]
+        //6616行にて処理
+
+        //ペイシェンス
+        ui.cb_buff[I_PAE].setToolTipText("<html>"+ "[消費MP:25][消費HP:--]"
+                                         + "<br>"+ "DR+2"
+                                         + "<br>"+ "レベル80から、レベル4毎に効果が+1ずつ増加"
+                                         + "<br>"+ "*リニューアル レベル80から効果が上昇"
+                                         + "<br>"+ "[習得レベル:45][持続時間:10分][対象:術者/PC]"+"</html>");
+        if (ui.cb_buff[I_PAE].isSelected()) {
+            buff.DR += 2;
+        }
+
+        //ファンタズム
+        ui.cb_buff[I_PHM].setToolTipText("<html>"+ "[消費MP:30][消費HP:25]"
+                                         + "<br>"+ "3セル内の対象を30%の確率で睡眠状態にする"
+                                         + "<br>"+ "[習得レベル:45][持続時間:最大4秒][対象:PC/NPC]"+"</html>");
+        if (ui.cb_buff[I_PHM].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //アイズブレイカー
+        ui.cb_buff[I_IBR].setToolTipText("<html>"+ "[消費MP:10][消費HP:--]"
+                                         + "<br>"+ "15セル内に隠れているPC/NPCを見つける"
+                                         + "<br>"+ "[習得レベル:45][持続時間:瞬間][対象:PC/NPC]"+"</html>");
+        if (ui.cb_buff[I_IBR].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //イリュージョン[ゴーレム]
+        ui.cb_buff[I_IGM].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "Passive"
+                                         + "<br>"+ "AC-10"
+                                         + "<br>"+ "キャンセレーションで解除されない"
+                                         + "<br>"+ "*リニューアル パッシブに変更"
+                                         + "<br>"+ "*リニューアル2 AC-8から10に"
+                                         + "<br>"+ "[習得レベル:45][持続時間:常時][対象:術者]"+"</html>");
+        if (ui.cb_buff[I_IGM].isSelected()) {
+            buff.AC -= 8;
+        }
+
+        //キューブ[リッチ]
+        ui.cb_buff[I_CRH].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
+                                         + "<br>"+ "15セル内のPTメンバーにSP+2"
+                                         + "<br>"+ "[習得レベル:45][持続時間:2分8秒][対象:PT][触媒:属性石(3)]"+"</html>");
+        if (ui.cb_buff[I_CRH].isSelected()) {
+            buff.SP += 2;
+        }
+
+        //コンセントレーション
+        ui.cb_buff[I_CON].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
+                                         + "<br>"+ "5セル内の対象に、MP自然回復+4"
+                                         + "<br>"+ "[習得レベル:30][持続時間:10分][対象:術者/PC]"+"</html>");
+        if (ui.cb_buff[I_CON].isSelected()) {
+            buff.MPR += 2;
+        }
+
+        //マインドブレイク
+        ui.cb_buff[I_MBK].setToolTipText("<html>"+ "[消費MP:20][消費HP:15]"
+                                         + "<br>"+ "5セル内の対象にダメージを与え、MPを5排出させる"
+                                         + "<br>"+ "ダメージは[SP]x[3.8]"
+                                         + "<br>"+ "[習得レベル:30][持続時間:瞬間][対象:PC/NPC]"+"</html>");
+        if (ui.cb_buff[I_MBK].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //ボーンブレイク
+        ui.cb_buff[I_BBK].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
+                                         + "<br>"+ "1セル内の対象に10ダメージを与え、30から50%の確率でスタン状態にする"
+                                         + "<br>"+ "沈黙状態でも詠唱可能"
+                                         + "<br>"+ "[習得レベル:30][持続時間:最大2秒][対象:PC/NPC]"+"</html>");
+        if (ui.cb_buff[I_BBK].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //イリュージョン[リッチ]
+        ui.cb_buff[I_IRH].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "Passive"
+                                         + "<br>"+ "SP+4"
+                                         + "*リニューアル パッシブに変更"
+                                         + "*リニューアル2段 SP+2から+4に"
+                                         + "<br>"+ "[習得レベル:30][持続時間:常時][対象:術者]"+"</html>");
+        if (ui.cb_buff[I_IRH].isSelected()) {
+            buff.SP += 4;
+        }
+
+        //キューブ[ゴーレム]
+        ui.cb_buff[I_CGM].setToolTipText("<html>"+ "[消費MP:--/40][消費HP:--]"
+                                         + "<br>"+ "15セル内のPTメンバーにAC-8"
+                                         + "<br>"+ "キャンセレーションで解除されない(術者のみ)"
+                                         + "<br>"+ "[習得レベル:30][持続時間:2分8秒][対象:PT][触媒:属性石(5)]"+"</html>");
+        if (ui.cb_buff[I_CGM].isSelected()) {
+            buff.AC -= 8;
+        }
+
+        //ミラーイメージ
+        //7384行にて処理
+
+        //コンフュージョン
+        ui.cb_buff[I_CFN].setToolTipText("<html>"+ "[消費MP:15][消費HP:10]"
+                                         + "<br>"+ "3セル内の対象にダメージを与え、20から30%の確率で沈黙状態にする"
+                                         + "<br>"+ "ダメージは「SP]x[2.2]"
+                                         + "<br>"+ "[習得レベル:15][持続時間:8秒][対象:PC/NPC]"+"</html>");
+        if (ui.cb_buff[I_CFN].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //スマッシュエネルギー
+        ui.cb_buff[I_SEY].setToolTipText("<html>"+ "[消費MP:5][消費HP:--]"
+                                         + "<br>"+ "10セル内の対象に光線系ダメージを与える"
+                                         + "<br>"+ "[習得レベル:15][持続時間:瞬間][対象:PC/NPC]"+"</html>");
+        if (ui.cb_buff[I_SEY].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //イリュージョン[オーガ]
+        ui.cb_buff[I_IOE].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
+                                         + "<br>"+ "近距離ダメージ+4 近距離命中+4 遠距離ダメージ+4 遠距離命中+4"
+                                         + "<br>"+ "キャンセレーションで解除されない"
+                                         + "<br>"+ "[習得レベル:15][持続時間:2分8秒][対象:術者]"+"</html>");
+        if (ui.cb_buff[I_IOE].isSelected()) {
+            buff.DMG_SHORT += 4;
+            buff.HIT_SHORT += 4;
+            buff.DMG_LONG += 4;
+            buff.HIT_LONG += 4;
+        }
+
+        //キューブ[オーガ]
+        ui.cb_buff[I_COE].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
+                                         + "<br>"+ "15セル内のPTメンバーに近距離ダメージ+4 近距離命中+4 遠距離ダメージ+4 遠距離命中+4"
+                                         + "<br>"+ "[習得レベル:15][持続時間:2分8秒][対象:PT][触媒:属性石(3)]"+"</html>");
+        if (ui.cb_buff[I_COE].isSelected()) {
+            buff.DMG_SHORT += 4;
+            buff.HIT_SHORT += 4;
+            buff.DMG_LONG += 4;
+            buff.HIT_LONG += 4;
+        }
+
+        
+        //バーサーカー
         ui.cb_buff[W_BER].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
                                          + "<br>"+ "近距離ダメージ+2 近距離命中+8 AC+10 HP自然回復不可"
                                          + "<br>"+ "[習得レベル:56][持続時間:5分20秒][対象:術者/PTメンバー(15セル)]"+"</html>");
@@ -2917,121 +3161,6 @@ public class Calculator implements Common {
                                          + "<br>"+ "[習得レベル:56][持続時間:5分][対象:術者][触媒:魔力の石(1)]"+"</html>");
         if (ui.cb_buff[W_FAR].isSelected()) {
             buff.ER += 5;
-        }
-
-        //コンセントレーション 消費MP30/10mins
-        ui.cb_buff[I_CON].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
-                                         + "<br>"+ "MPR+4"
-                                         + "<br>"+ "[習得レベル:30][持続時間:10分][対象:術者/PC]"+"</html>");
-        if (ui.cb_buff[I_CON].isSelected()) {
-            buff.MPR += 2;
-            if (ui.cb_buff[I_CON].getForeground().equals(Color.BLUE)) {
-                cons_mp += (30.0 * (1.0 - red_mp * 0.01) - red_mp2) / 10;
-            }
-        }
-
-        //ペイシェンス 消費MP25/10mins
-        ui.cb_buff[I_PAE].setToolTipText("<html>"+ "[消費MP:25][消費HP:--]"
-                                         + "<br>"+ "DR+2"
-                                         + "<br>"+ "[習得レベル:45][持続時間:10分][対象:術者/PC]"+"</html>");
-        if (ui.cb_buff[I_PAE].isSelected()) {
-            buff.DR += 2;
-            if (ui.cb_buff[I_PAE].getForeground().equals(Color.BLUE)) {
-                cons_mp += (25.0 * (1.0 - red_mp * 0.01) - red_mp2) / 10;
-            }
-        }
-
-        //インサイト 消費MP60/10mins
-        ui.cb_buff[I_INS].setToolTipText("<html>"+ "[消費MP:60][消費HP:--]"
-                                         + "<br>"+ "STR+1 DEX+1 INT+1 CON+1 WIS+1"
-                                         + "<br>"+ "[習得レベル:60][持続時間:10分40秒][対象:術者]"+"</html>");
-        if (ui.cb_buff[I_INS].isSelected()) {
-            buff.ST[STR]++;
-            buff.ST[DEX]++;
-            buff.ST[CON]++;
-            buff.ST[INT]++;
-            buff.ST[WIS]++;
-            if (ui.cb_buff[I_INS].getForeground().equals(Color.BLUE)) {
-                cons_mp += (60.0 * (1.0 - red_mp * 0.01) - red_mp2) / 10;
-            }
-        }
-
-        //幻術/キューブ[オーガ] 消費MP20/2mins
-        ui.cb_buff[I_IOE].setToolTipText("<html>"+ "[消費MP:20/30][消費HP:--]"
-                                         + "<br>"+ "15セル内のPTメンバーに近距離ダメージ+4 近距離命中+4 遠距離ダメージ+4 遠距離命中+4"
-                                         + "<br>"+ "キャンセレーションで解除されない(術者のみ)"
-                                         + "<br>"+ "[習得レベル:15/15][持続時間:2分8秒][対象:術者/PT][触媒:属性石(0/3)]"+"</html>");
-        if (ui.cb_buff[I_IOE].isSelected()) {
-            buff.DMG_SHORT += 4;
-            buff.HIT_SHORT += 4;
-            buff.DMG_LONG += 4;
-            buff.HIT_LONG += 4;
-            if (ui.cb_buff[I_IOE].getForeground().equals(Color.BLUE)) {
-                cons_mp += (20.0 * (1.0 - red_mp * 0.01) - red_mp2) / 2;
-            }
-        }
-
-        //幻術/キューブ[リッチ] 消費MP20/2mins
-        ui.cb_buff[I_IRH].setToolTipText("<html>"+ "[消費MP:--/20][消費HP:--]"
-                                         + "<br>"+ "15セル内のPTメンバーにSP+2"
-                                         + "<br>"+ "[習得レベル:30/45][持続時間:常時/2分8秒][対象:術者/PT][触媒:属性石(0/3)]"+"</html>");
-        if (ui.cb_buff[I_IRH].isSelected()) {
-            buff.SP += 2;
-            if (ui.cb_buff[I_IRH].getForeground().equals(Color.BLUE)) {
-                cons_mp += (20.0 * (1.0 - red_mp * 0.01) - red_mp2) / 2;
-            }
-        }
-
-        //幻術/キューブ[ゴーレム] 消費MP40/2mins
-        ui.cb_buff[I_IGM].setToolTipText("<html>"+ "[消費MP:--/40][消費HP:--]"
-                                         + "<br>"+ "15セル内のPTメンバーにAC-8"
-                                         + "<br>"+ "キャンセレーションで解除されない(術者のみ)"
-                                         + "<br>"+ "[習得レベル:45/30][持続時間:常時/2分8秒][対象:術者/PT][触媒:属性石(0/5)]"+"</html>");
-        if (ui.cb_buff[I_IGM].isSelected()) {
-            buff.AC -= 8;
-            if (ui.cb_buff[I_IGM].getForeground().equals(Color.BLUE)) {
-                cons_mp += (40.0 * (1.0 - red_mp * 0.01) - red_mp2) / 2;
-            }
-        }
-
-        //フォーカススピリッツ 消費MP30/5mins
-        ui.cb_buff[I_FSZ].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
-                                         + "<br>"+ "魔法クリティカル+5%"
-                                         + "<br>"+ "キャンセレーションで解除されない"
-                                         + "<br>"+ "[習得レベル:75][持続時間:5分][対象:術者][触媒:属性石(1)]"+"</html>");
-        if (ui.cb_buff[I_FSZ].isSelected()) {
-            buff.CRI_MAGIC += 5;
-            if (ui.cb_buff[I_FSZ].getForeground().equals(Color.BLUE)) {
-                cons_mp += (30.0 * (1.0 - red_mp * 0.01) - red_mp2) / 5;
-            }
-        }
-
-        //インパクト 消費MP25/0.25mins
-        ui.cb_buff[I_IMT].setToolTipText("<html>"+ "[消費MP:40][消費HP:--]"
-                                         + "<br>"+ "15セル内のPTメンバーに"
-                                         + "<br>"+ "技術命中+5 精霊命中+5 竜語命中+5 恐怖命中+5"
-                                         + "<br>"+ "レベル80からレベル1毎に効果が+1ずつ増加[最大+10]"
-                                         + "<br>"+ "キャンセレーションで解除されない"
-                                         + "<br>"+ "[習得レベル:80][持続時間:15秒][対象:PT][触媒:属性石(5)]"+"</html>");
-        if (ui.cb_buff[I_IMT].isSelected()) {
-            if (level >= 80 && cls == I) {
-                if (ui.cb_buff[I_IMT].getForeground().equals(Color.BLUE)) {
-                    cons_mp += (25.0 * (1.0 - red_mp * 0.01) - red_mp2) / 0.25;
-                }
-            	if (level >= 85) {
-                    buff.ailment[HIT_STUN] += 10;                       //技術命中+10
-                    buff.ailment[HIT_SPIRIT] += 10;                     //精霊命中+10
-                    buff.ailment[HIT_SECRET] += 10;                     //秘技命中+10
-                    buff.ailment[HIT_TERROR] += 10;                     //恐怖命中+10
-                } else if (level >= 80) {
-                    buff.ailment[HIT_STUN] += 5 + (level - 80);         //技術命中+(level - 75)
-                    buff.ailment[HIT_SPIRIT] += 5 + (level - 80);       //精霊命中+(level - 75)
-                    buff.ailment[HIT_SECRET] += 5 + (level - 80);       //秘技命中+(level - 75)
-                    buff.ailment[HIT_TERROR] += 5 + (level - 80);       //恐怖命中+(level - 75)
-                }
-            } else {
-                ui.cb_buff[I_IMT].setSelected(false);
-            }
         }
 
         //インフィニティ:アーマー
@@ -4839,30 +4968,24 @@ public class Calculator implements Common {
                 break;
             }
         }
+
         //POTによるヘイスト効果
         ui.cb_buff[ACC1].setToolTipText("x1.3333:GP GGP ワイン ウイスキー");
         if (ui.cb_buff[ACC1].isSelected()) {
-            if (ui.cb_buff[ACC1].getForeground().equals(Color.BLUE)) {
-                cons_mp += (40.0 * (1.0 - red_mp * 0.01) - red_mp2) / 20;
-            }
             acc *= acc_1;
         }
+
         ui.cb_buff[ACC2].setToolTipText("<html>"+ "x1.3333:BP イビルブラッド ブラッドラスト 名誉のコイン ダンシングブレイズ フォーカスウェーブ ハリケーン サンドストーム"
-                                        + "<br>"+ "x1.1547:EW 濃縮集中ポーション"
+                                        + "<br>"+ "x1.1547:EW 濃縮集中ポーション ムービングアクセレーション:マキシマム"
                                         + "<br>"+ "x1.0800:ダークホース"+"</html>");
         if (ui.cb_buff[ACC2].isSelected()) {
             switch (ui.cb_buff_group[ACC2].getSelectedIndex()) {
                 case 0:
                     ui.cb_buff[ACC2].setToolTipText("x1.3333:BP イビルブラッド ブラッドラスト 名誉のコイン ダンシングブレイズ フォーカスウェーブ ハリケーン サンドストーム");
                     acc *= acc_2;
-                    if (ui.cb_buff[ACC2].getForeground().equals(Color.BLUE)) {
-                        if (cls == E) {
-                            cons_mp = (20.0 * (1.0 - red_mp * 0.01) - red_mp2) / 8;
-                        }
-                    }
                     break;
                 case 1:
-                    ui.cb_buff[ACC2].setToolTipText("x1.1547:EW 濃縮集中ポーション");
+                    ui.cb_buff[ACC2].setToolTipText("x1.1547:EW 濃縮集中ポーション ムービングアクセレーション:マキシマム");
                     acc *= acc_ew;
                     break;
                 case 2:
@@ -4873,11 +4996,11 @@ public class Calculator implements Common {
                     break;
             }
         }
-        ui.cb_buff[ACC3].setToolTipText("x1.1250:ドラゴンブラッド 蔵出し秘蔵酒");
+        ui.cb_buff[ACC3].setToolTipText("x1.1250:ドラゴンブラッド 生命のパール 蔵出し秘蔵酒");
         if (ui.cb_buff[ACC3].isSelected()) {
             acc *= acc_3;
         }
-        
+
 //2019/11/20Update HW/EW/BW/SFの仕様変更
 //今までは武器にエンチャント効果があったが今後はキャラに効果が発生
 //2019/12/25に旧計算方法でのダメージ計算もできるように項目追加
@@ -4933,6 +5056,7 @@ public class Calculator implements Common {
                     break;
             }
         }
+
 //君主魔法（プリンス・プリンセス)
         //プライム
         ui.cb_buff[P_PRE].setToolTipText("<html>"+ "[消費MP:25][消費HP:--]"
@@ -4942,7 +5066,6 @@ public class Calculator implements Common {
                                          + "<br>"+ "攻城戦ではバフの効果が3倍になり最大HP+500が追加される"
                                          + "<br>"+ "*リニューアル　PVPダメージ低下を追加"
                                          + "<br>"+ "[習得レベル:85][持続時間:20分][対象:血盟員][触媒:結晶体(200)]"+"</html>");
-
         if (ui.cb_buff[P_PRE].isSelected()) {
             //PVPダメージ低下+5(レベル85から、レベル5毎にPVPダメージ低下+5(最大+15))
             if (level >= 90) {
@@ -4952,7 +5075,6 @@ public class Calculator implements Common {
             } else if (level >= 80) {
                 buff.PVP_DR += 5;
             }
-
             switch ((String) ui.cb_buff_group[P_PRE].getSelectedItem()) {
                 case "術者":
                     ui.cb_buff[P_PRE].setToolTipText("近距離ダメージ+3 近距離命中+3 遠距離ダメージ+3 遠距離命中+3 SP+2 魔法命中+2 技術命中+5");
@@ -6566,17 +6688,25 @@ buki.arrow_elementdmg=0;
             dmg_big_ave += dmg_element1;
             dmg_small_ave += dmg_element1;
         }
-        //幻術/キューブ[アバター]
-        ui.cb_buff[I_IAR].setToolTipText("<html>"+ "[消費MP:50/40][消費HP:--]"
-                                         + "<br>"+ "近距離ダメージ+10 遠距離ダメージ+10 魔法ダメージ+10 被ダメージ+5%"
-                                         + "<br>"+ "キャンセレーションで解除されない(術者のみ)"
-                                         + "<br>"+ "[習得レベル:60][持続時間:2分8秒][対象:術者/PT][触媒:属性石(0/5]"+"</html>");
+
+        //イリュージョン[アバター]
+        ui.cb_buff[I_IAR].setToolTipText("<html>"+ "[消費MP:50][消費HP:--]"
+                                         + "<br>"+ "近距離ダメージ+10 遠距離ダメージ+10 魔法ダメージ+10"
+                                         + "<br>"+ "キャンセレーションで解除されない"
+                                         + "<br>"+ "*リニューアル 被ダメージ+5%を削除"
+                                         + "<br>"+ "[習得レベル:60][持続時間:2分8秒][対象:術者]"+"</html>");
         if (ui.cb_buff[I_IAR].isSelected()) {
             dmg_big_ave += 10;
             dmg_small_ave += 10;
-            if (ui.cb_buff[I_IAR].getForeground().equals(Color.BLUE)) {
-                cons_mp += (50.0 * (1.0 - red_mp * 0.01) - red_mp2) / 2;
-            }
+        }
+
+        //キューブ[アバター]
+        ui.cb_buff[I_CAR].setToolTipText("<html>"+ "[消費MP:40][消費HP:--]"
+                                         + "<br>"+ "15セル内のPTメンバーに近距離ダメージ+10 遠距離ダメージ+10 魔法ダメージ+10 被ダメージ+5%"
+                                         + "<br>"+ "[習得レベル:60][持続時間:2分8秒][対象:PT][触媒:属性石(5)]"+"</html>");
+        if (ui.cb_buff[I_CAR].isSelected()) {
+            dmg_big_ave += 10;
+            dmg_small_ave += 10;
         }
 
         //PVP
@@ -7254,16 +7384,13 @@ buki.arrow_elementdmg=0;
             dg += 30;
         }
 
-        //ミラーイメージ 消費MP20/20mins
+        //ミラーイメージ
         ui.cb_buff[I_MIE].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
                                          + "<br>"+ "近距離回避[DG]+30"
                                          + "<br>"+ "キャンセレーションで解除されない"
                                          + "<br>"+ "[習得レベル:15][持続時間:20分][対象:術者]"+"</html>");
         if (ui.cb_buff[I_MIE].isSelected()) {
             dg += 30;
-            if (ui.cb_buff[I_MIE].getForeground().equals(Color.BLUE)) {
-                cons_mp += (20.0 * (1.0 - red_mp * 0.01) - red_mp2) / 20;
-            }
         }
         //覚醒[リンドビオル]
         ui.cb_buff[R_LINDVIOL].setToolTipText("<html>"+ "[消費MP:40][消費HP:10]"
@@ -7327,7 +7454,7 @@ buki.arrow_elementdmg=0;
         }
 
         weight += c_eq;
-        //エルヴングラヴィティー    消費MP:30/30mins 所持重量増加+300
+        //エルヴングラヴィティー
         ui.cb_buff[E_ELY].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
                                          + "<br>"+ "所持重量増加+300"
                                          + "<br>"+ "ディクリースウェイトの上位魔法"
@@ -7335,11 +7462,9 @@ buki.arrow_elementdmg=0;
         if (ui.cb_buff[E_ELY].isSelected()) {
             ui.cb_buff[W_DWT].setSelected(false);
             weight += 300;
-            if (ui.cb_buff[E_ELY].getForeground().equals(Color.BLUE)) {
-                cons_mp += (30.0 * (1.0 - red_mp * 0.01) - red_mp2) / 30;
-            }
         }
-        //リデュースウェイト        消費MP:50/30mins 所持重量増加+480 
+
+        //リデュースウェイト
         ui.cb_buff[I_RWT].setToolTipText("<html>"+ "[消費MP:50][消費HP:--]"
                                          + "<br>"+ "所持重量増加+480"
                                          + "<br>"+ "ディクリースウェイトの上位版なので重複不可能"
@@ -7347,10 +7472,8 @@ buki.arrow_elementdmg=0;
         if (ui.cb_buff[I_RWT].isSelected()) {
             ui.cb_buff[W_DWT].setSelected(false);
             weight += 480;
-            if (ui.cb_buff[I_RWT].getForeground().equals(Color.BLUE)) {
-                cons_mp += (50.0 * (1.0 - red_mp * 0.01) - red_mp2) / 30;
-            }
         }
+
         //ディクリースウェイト      消費MP:10/30mins 所持重量増加+180
         ui.cb_buff[W_DWT].setToolTipText("<html>"+ "[消費MP:10][消費HP:50]"
                                          + "<br>"+ "所持重量増加+180"

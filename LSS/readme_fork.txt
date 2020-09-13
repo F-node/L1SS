@@ -1,6 +1,31 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2020/09/13
+Update 4.2.0
+LSS/src/lss/Calculator.java
+LSS/src/lss/Common.java
+LSS/src/lss/UI.java
+追加
+	幻術魔法
+		ボーンブレイク:ラスタ
+		メビウス
+		ダークホース
+		パニック
+		キューブ[アバター]
+		ファンタズム
+		アイズブレイカー
+		キューブ[リッチ]
+		マインドブレイク
+		ボーンブレイク
+		キューブ[ゴーレム]
+		コンフュージョン
+		スマッシュエネルギー
+		キューブ[オーガ]
+修正
+	ランサーの初期ステータス 割り振り可能数4から6へ
+	各職の2段階加速スキルをバグにて一時凍結
+
 2020/09/06
 Update 4.1.9
 LSS/src/lss/Calculator.java
