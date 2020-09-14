@@ -3126,7 +3126,134 @@ public class Calculator implements Common {
             buff.HIT_LONG += 4;
         }
 
-        
+//戦士技術
+        //デモリッション
+        ui.cb_buff[S_DEN].setToolTipText("<html>"+ "[消費MP:25][消費HP:--]"
+                                         + "<br>"+ "5セル内の対象を、帰還不可能＋出血状態にする"
+                                         + "<br>"+ "デモリッションのダメージは、STRと武器ダメージの影響を受けます"
+                                         + "<br>"+ "リニューアル 持続時間:最大5秒から4秒に 射程が6セルから5セルに ディレイ増加"
+                                         + "<br>"+ "[習得レベル:85][持続時間:最大4秒][対象:PC][触媒:結晶体(100)]"+"</html>");
+        if (ui.cb_buff[S_DEN].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //[UP待ち]バーサク
+        ui.cb_buff[S_BEK].setToolTipText("<html>"+ "[消費MP:--][消費HP:100]"
+                                         + "<br>"+ "近距離ダメージ+20 全スキル耐性+20"
+                                         + "<br>"+ "[習得レベル:85][持続時間:16秒][対象:術者][触媒:結晶体(100)]"+"</html>");
+        if (ui.cb_buff[S_BEK].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //デスペラード
+        ui.cb_buff[S_DEO].setToolTipText("<html>"+ "[消費MP:10][消費HP:--]"
+                                         + "<br>"+ "1セル内の対象にダメージを与え、一定確率で移動不可、テレポート不可、装備の着脱不可、HP回復効果を悪化"
+                                         + "<br>"+ "術者のレベルが上がると回復悪化の効果が上昇する"
+                                         + "<br>"+ "*リニューアル スキル命中時にダメージ追加 命中率増加 最小持続時間+1秒"
+                                         + "<br>"+ "[習得レベル:80][持続時間:最大4秒][対象:PC/NPC][触媒:結晶体(100)]"+"</html>");
+        if (ui.cb_buff[S_DEO].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //タイタンライジング
+        ui.cb_buff[S_TRG].setToolTipText("<html>"+ "[消費MP:10][消費HP:--]"
+                                         + "<br>"+ "タイタン系列発動区間+5%"
+                                         + "<br>"+ "レベル80からレベル1毎に効果が1%増加[最大10%]"
+                                         + "<br>"+ "標準35%+ライジング(5%+10%)+武器(5%+5%)=最大60%発動区間?"
+                                         + "<br>"+ "キャンセレーションで解除されない"
+                                         + "<br>"+ "[習得レベル:80][持続時間:40分][対象:術者][触媒:結晶体(100)]"+"</html>");
+        if (ui.cb_buff[S_TRG].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //パワーグリップ
+        ui.cb_buff[S_PGP].setToolTipText("<html>"+ "[消費MP:5][消費HP:--]"
+                                         + "<br>"+ "6セル内の対象を、一定確率でホールド状態にする"
+                                         + "<br>"+ "[習得レベル:75][持続時間:最大6秒][対象:PC/NPC][触媒:結晶体(20)]"+"</html>");
+        if (ui.cb_buff[S_PGP].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //ギガンティック
+        //8073行にて処理
+
+        //トマホーク
+        ui.cb_buff[S_TOK].setToolTipText("<html>"+ "[消費MP:5][消費HP:--]"
+                                         + "<br>"+ "6セル内の対象に強力な物理ダメージを与える"
+                                         + "<br>"+ "個別クールタイム(8秒)"
+                                         + "<br>"+ "*リニューアル ダメージ増加 個別クールタイム適用"
+                                         + "<br>"+ "*リニューアル2 ディレイ10秒から8秒 射程10セルから6セル 出血ダメージから物理ダメージ"
+                                         + "<br>"+ "[習得レベル:45][持続時間:6秒][対象:PC/NPC][触媒:結晶体(50)]"+"</html>");
+        if (ui.cb_buff[S_TOK].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //ハウル
+        ui.cb_buff[S_HOL].setToolTipText("<html>"+ "[消費MP:5][消費HP:--]"
+                                         + "<br>"+ "範囲5セル内の対象に、50ダメージを与える"
+                                         + "<br>"+ "[習得レベル:30][持続時間:瞬間][対象:PC/NPC][触媒:結晶体(10)]"+"</html>");
+        if (ui.cb_buff[S_HOL].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //タイタンロック
+        ui.cb_buff[S_TLK].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "HP40%以下時一定確率(35%)で近距離攻撃を回避してカウンターダメージを与える"
+                                         + "<br>"+ "カウンターダメージは武器の[BIG打撃値]+[追加ダメージ]+[強化数]x[2]"
+                                         + "<br>"+ "[習得レベル:75][持続時間:常時][対象:術者][触媒:結晶体(10)]"+"</html>");
+        if (ui.cb_buff[S_TLK].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //タイタンマジック
+        ui.cb_buff[S_TMC].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "HP40%以下時一定確率(35%)で魔法攻撃を回避してカウンターダメージを与える"
+                                         + "<br>"+ "カウンターダメージは武器の[BIG打撃値]+[追加ダメージ]+[強化数]x[2]"
+                                         + "<br>"+ "[習得レベル:75][持続時間:常時][対象:術者][触媒:結晶体(10)]"+"</html>");
+        if (ui.cb_buff[S_TMC].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //タイタンブリッツ
+        ui.cb_buff[S_TBZ].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                     + "<br>"+ "HP40%以下時一定確率(35%)で遠距離攻撃を回避してカウンターダメージを与える"
+                                     + "<br>"+ "カウンターダメージは武器の[BIG打撃値]+[追加ダメージ]+[強化数]x[2]"
+                                     + "<br>"+ "[習得レベル:80][持続時間:常時][対象:術者][触媒:結晶体(10)]"+"</html>");
+        if (ui.cb_buff[S_TBZ].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //スレイヤー
+        ui.cb_buff[S_SLR].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "Passive"
+                                         + "<br>"+ "片手斧を両手に装備して交互に攻撃"
+                                         + "<br>"+ "攻撃速度がソードと同じになる"
+                                         + "<br>"+ "[習得レベル:15][持続時間:常時][対象:術者]"+"</html>");
+        if (ui.cb_buff[S_SLR].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //クラッシュ
+        //6864行にて処理
+
+        //アーマーガード
+        //7471行にて処理
+
+        //フューリー
+        //6875行にて処理
+
+        //デスペラード:アブソリュート
+        ui.cb_buff[S_DAE].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "Passive"
+                                         + "<br>"+ "デスペラードの最大持続時間を増加"
+                                         + "<br>"+ "[習得レベル:85][持続時間:常時][対象:術者]"+"</html>");
+        if (ui.cb_buff[S_DAE].isSelected()) {
+        //スキル効果未実装
+        }
+
+//剣士技術
+        //
+
         //バーサーカー
         ui.cb_buff[W_BER].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
                                          + "<br>"+ "近距離ダメージ+2 近距離命中+8 AC+10 HP自然回復不可"
@@ -6737,15 +6864,19 @@ buki.arrow_elementdmg=0;
         //クラッシュ
         double ex = 0.0;
         ui.cb_buff[S_CRH].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
-                                         + "<br>"+ "近距離攻撃時に一定確率(15%)で追加ダメージ"
+                                         + "<br>"+ "近距離攻撃時に一定確率(15%)で追加ダメージを与える"
                                          + "<br>"+ "[レベル]/[2]を与える"
+                                         + "<br>"+ "*リニューアル 発動率上昇"
                                          + "<br>"+ "[習得レベル:45][持続時間:常時][対象:術者]"+"</html>");
         if (ui.cb_buff[S_CRH].isSelected()) {
             ex = level / 2.0;
         }
+
         //フューリー
         ui.cb_buff[S_FUY].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "Passive"
                                          + "<br>"+ "クラッシュ発動時に一定確率(10%)でダメージ2倍を与える"
+                                         + "<br>"+ "*リニューアル 発動率上昇 ダメージ2倍から3倍に"
                                          + "<br>"+ "[習得レベル:60][持続時間:常時][対象:術者]"+"</html>");
         if (ui.cb_buff[S_FUY].isSelected()) {
             dmg_big_ave = 0.15 * 0.1 * 2.0 * (dmg_big_ave + ex)
@@ -7340,6 +7471,7 @@ buki.arrow_elementdmg=0;
 
         //アーマーガード
         ui.cb_buff[S_AGD].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "Passive"
                                          + "<br>"+ "ダメージ低下+[AC]/[10]"
                                          + "<br>"+ "[習得レベル:60][持続時間:常時][対象:術者]"+"</html>");
         if (ui.cb_buff[S_AGD].isSelected()) {
@@ -7909,8 +8041,8 @@ buki.arrow_elementdmg=0;
 //        }
 
         //ペンダント等の装備による最大HP+X%/最大MP+X%の処理
-            	hpp += mhp *0.01 * hp;
-            	mpp += mmp *0.01 * mp;
+        hpp += mhp *0.01 * hp;
+        mpp += mmp *0.01 * mp;
 
         //アドバンスドスピリッツ 消費MP20/20mins
         ui.cb_buff[W_ADS].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
@@ -7923,13 +8055,11 @@ buki.arrow_elementdmg=0;
                     || ui.cb_buff[K_PRE].isSelected()) {
                 ui.cb_buff[W_ADS].setSelected(false);
             } else {
-            	hpp += 0.2 * hp;
-            	mpp += 0.2 * mp;
-                if (ui.cb_buff[W_ADS].getForeground().equals(Color.BLUE)) {
-                    cons_mp += (20.0 * (1.0 - red_mp * 0.01) - red_mp2) / 20;
-                }
+            hpp += 0.2 * hp;
+            mpp += 0.2 * mp;
             }
         }
+
         //プライド
         ui.cb_buff[K_PRE].setToolTipText("<html>"+ "[消費MP:10][消費HP:100]"
                                          + "<br>"+ "最大HP LV/4% 増加"
@@ -7940,38 +8070,38 @@ buki.arrow_elementdmg=0;
                     || ui.cb_buff[W_ADS].isSelected()) {
                 ui.cb_buff[K_PRE].setSelected(false);
             } else {
-           	hpp += (level/4)*0.01 * hp;
+           hpp += (level/4)*0.01 * hp;
             }
         }
-        //ギガンテック 消費MP10/5mins
-        ui.cb_buff[S_GIC].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+
+        //ギガンティック
+        ui.cb_buff[S_GIC].setToolTipText("<html>"+ "[消費MP:10][消費HP:--]"
                                          + "<br>"+ "最大HPを増加する"
                                          + "<br>"+ "[レベル]/[2]%"
-                                         + "<br>"+ "[習得レベル:60][持続時間:5分][対象:術者][触媒:結晶体(100)]"+"</html>");
+                                         + "<br>"+ "*リニューアル 持続時間:5分から10分に"
+                                         + "<br>"+ "[習得レベル:60][持続時間:10分][対象:術者][触媒:結晶体(100)]"+"</html>");
         if (ui.cb_buff[S_GIC].isSelected()) {
             if (ui.cb_buff[W_ADS].isSelected()
                     || ui.cb_buff[K_PRE].isSelected()) {
                 ui.cb_buff[S_GIC].setSelected(false);
             } else {
-            	hpp += (level/2)*0.01 * hp;
-                if (ui.cb_buff[S_GIC].getForeground().equals(Color.BLUE)) {
-                    cons_mp += (10.0 * (1.0 - red_mp * 0.01) - red_mp2) / 5;
-                }
+            hpp += (level/2)*0.01 * hp;
             }
         }
+
         //インフィニティ:ブラッド
         ui.cb_buff[F_PID].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
                                          + "<br>"+ "レベル60からレベル3毎に最大HPが+50ずつ増加[最大+650]"
                                          + "<br>"+ "[習得レベル:60][持続時間:常時][対象:術者]"+"</html>");
         if (ui.cb_buff[F_PID].isSelected()) {
             if (cls == F) {            	
-		if (level >= 89) {
-		    hpp += 650;                                                 //最大HP+15(LV89)
-        	} else if (level >= 60) {
-		    hpp += 50 * ((level - 60) / 3 + 1);                         //HP+50*((level - 60) / 3 + 1)
-        	}
+                if (level >= 89) {
+                hpp += 650;                                                 //最大HP+15(LV89)
+                } else if (level >= 60) {
+                hpp += 50 * ((level - 60) / 3 + 1);                         //HP+50*((level - 60) / 3 + 1)
+                }
             } else {
-                ui.cb_buff[F_PID].setSelected(false);
+            ui.cb_buff[F_PID].setSelected(false);
             }
         }
 

@@ -405,34 +405,35 @@ public interface Common {
 
 //ウォリアーの技術    合計16種類
     //アクティブスキル
-//    final int S_DEN = X;          //LV85  DEmolitioN                    デモリッション
-//    final int S_BEK = X;          //LV85  BErserK                       バーサーク
-//    final int S_DEO = X;          //LV80  DEsperadO                     デスペラード
+    final int S_DEN = 208;          //LV85  DEmolitioN                    デモリッション
+    final int S_BEK = 209;          //LV85  BErserK                       バーサーク
+    final int S_DEO = 210;          //LV80  DEsperadO                     デスペラード
     final int S_TRG = 115;          //LV80  Titan RisinG                  タイタンライジング
-//    final int S_PGP = X;          //LV75  Power GriP                    パワーグリップ
+    final int S_PGP = 211;          //LV75  Power GriP                    パワーグリップ
     final int S_GIC = 76;           //LV60  GIgantiC                      ギガンティック
-//    final int S_TOK = X;          //LV45  TOmahawK                      トマホーク
-//    final int S_HOL = X;          //LV30  HOwL                          ハウル
+    final int S_TOK = 212;          //LV45  TOmahawK                      トマホーク
+    final int S_HOL = 213;          //LV30  HOwL                          ハウル
 
     //パッシブスキル
     final int S_TLK = 69;           //LV75  Titan Lock                    タイタンロック
     final int S_TMC = 70;           //LV75  Titan MagiC                   タイタンマジック
-    final int S_TBZ = 71;           //LV80  Titan BlitZ                   タイタンブリッツ     
-//    final int S_SLR = X;          //LV15  SLayeR                        スレイヤー
+    final int S_TBZ = 71;           //LV80  Titan BlitZ                   タイタンブリッツ
+    final int S_SLR = 214;          //LV15  SLayeR                        スレイヤー
     final int S_CRH = 67;           //LV45  CRasH                         クラッシュ
     final int S_AGD = 66;           //LV60  Armor GuarD                   アーマーガード
     final int S_FUY = 68;           //LV60  FUrY                          フューリー
-//    final int S_DAE = X;          //LV85  Desperado:AbsolutE            デスペラード:アブソリュート
+    final int S_DAE = 215;          //LV85  Desperado:AbsolutE            デスペラード:アブソリュート
 
 //フェンサーの技術    合計19種類
-//  アクティブスキル
+    //  アクティブスキル
 //    final int F_AAA = XXX;        //LV85  AshurA                        アシュラ
 //    final int F_ABE = XXX;        //LV60  BladE                         ブレード
 //    final int F_APA = XXX;        //LV75  Pantera                       パンテラ
 //    final int F_AJT = XXX;        //LV80  JudgmenT                      ジャッジメント
 //    final int F_AHE = XXX;        //LV70  HellfirE                      ヘルファイア
 //    final int F_APM = XXX;        //LV70  PhantoM                       ファントム
-//  パッシブスキル
+
+    //  パッシブスキル
 //    final int F_PPH = XXX;        //LV80  Phantom:DeatH                 ファントム:デス
 //    final int F_PPR = XXX;        //LV80  Phantom:ReapeR                ファントム:リーパー
 //    final int F_PPK = XXX;        //LV80  Pantera:ShocK                 パンテラ:ショック
@@ -440,7 +441,7 @@ public interface Common {
 //    final int F_PPX = XXX;        //LV75  ParadoX                       パラドックス
 //    final int F_PSE = XXX;        //LV70  SurvivE                       サヴァイヴ
     final int F_PIE = 105;          //LV70  Infinity:DodgE                インフィニティ:ドッジ
-//    final int F_PGE = XXX;        //LV60  GrousE                        グロウス
+//    final int F_PGE = XXX;        //LV60  GrousE                        グロース
     final int F_PID = 106;          //LV60  Infinity:BlooD                インフィニティ:ブラッド
     final int F_PRE = 107;          //LV60  RagE                          レイジ
     final int F_PIR = 108;          //LV45  Infinity:ArmoR                インフィニティ:アーマー
@@ -448,14 +449,15 @@ public interface Common {
     final int F_PDS = 125;          //LV45  DamascuS                      ダマスカス
 
 //ランサーの槍術    合計14種類
-//  アクティブスキル
+    //  アクティブスキル
     final int L_ALE = 127;          //LV50  ALternatE                     オルタネート
     final int L_FWE = 128;          //LV60  Force WavE                    フォースウェーブ
     final int L_VAD = 129;          //LV70  VAnguarD                      ヴァンガード
     final int L_REY = 130;          //LV75  REcoverY                      リカバリー
     final int L_PRE = 131;          //LV75  PRessurE                      プレッシャー
     final int L_KUU = 132;          //LV80  KUruorU                       クルオル
-//  パッシブスキル
+
+    //  パッシブスキル
     final int L_DSE = 133;          //LV65  Deadly StrikE                 デッドリーストライク
     final int L_VEE = 134;          //LV70  VEngeancE                     ベンジェンス
     final int L_TAE = 135;          //LV70  Tactical AdvancE              タクティカルアドバンス
@@ -464,7 +466,7 @@ public interface Common {
     final int L_IRE = 138;          //LV80  Increase RangE                インクリーズレンジ
     final int L_KCN = 139;          //LV80  Kuruoru:CombinatioN           クルオル:コンビクション
     final int L_PDR = 140;          //LV85  Pressure:Death Recall         プレッシャー:デスリコール
-    
+
 //その他
     final int DRAGON_BLESS = 126;   //ドラゴンの祝福
     final int ITEM_BLUE = 50;       //魔力回復ポーション
@@ -489,7 +491,7 @@ public interface Common {
     final int H_PVP = 96;           //暗殺のボーナス
     final int H_RK = 97;            //ランカーボーナス
     final int H_RKT = 141;          //各クラス別1位
-    
+
     final String[] AILMENT_LIST = {"技術命中", "技術耐性", "精霊命中", "精霊耐性", "秘技命中","秘技耐性", "恐怖命中", "恐怖耐性"};
 //    final String[] AILMENT_LIST = {"技術", "技術", "精霊", "精霊", "秘技","秘技", "恐怖", "恐怖"};
     final int HIT_STUN = 0;

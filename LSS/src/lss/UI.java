@@ -220,8 +220,8 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
     //ファイナルバーンで計104個分(0から103)
 //    JCheckBox[] cb_buff = new JCheckBox[104];
 //    JComboBox[] cb_buff_group = new JComboBox[104];
-    JCheckBox[] cb_buff = new JCheckBox[208];
-    JComboBox[] cb_buff_group = new JComboBox[208];
+    JCheckBox[] cb_buff = new JCheckBox[216];
+    JComboBox[] cb_buff_group = new JComboBox[216];
     //パネル5
     JComboBox cb_npc_level;
     JSlider[] s_target_res = new JSlider[ELEM_LIST.length];
@@ -2242,17 +2242,35 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         lab_tmp.setBounds(200 * row, 20 * col++, 200, 20);
         panels[3].add(lab_tmp);
 
+        //デモリッション
+        cb_buff[S_DEN] = new JCheckBox("デモリッション(未実装)");
+        cb_buff[S_DEN].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[S_DEN].addActionListener(this);
+        panels[3].add(cb_buff[S_DEN]);
+
+        //[UP待ち]バーサク
+        cb_buff[S_BEK] = new JCheckBox("[UP待ち]バーサク(未実装)");
+        cb_buff[S_BEK].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[S_BEK].addActionListener(this);
+        panels[3].add(cb_buff[S_BEK]);
+
+        //デスペラード
+        cb_buff[S_DEO] = new JCheckBox("デスペラード(未実装)");
+        cb_buff[S_DEO].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[S_DEO].addActionListener(this);
+        panels[3].add(cb_buff[S_DEO]);
+
         //タイタンライジング
         cb_buff[S_TRG] = new JCheckBox("タイタンライジング(未実装)");
         cb_buff[S_TRG].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[S_TRG].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
-                                     + "<br>"+ "タイタン系列発動区間+5%"
-                                     + "<br>"+ "レベル80からレベル1毎に効果が1%増加[最大10%]"
-                                     + "<br>"+ "標準35%+ライジング(5%+10%)+武器(5%+5%)=最大60%発動区間?"
-                                     + "<br>"+ "キャンセレーションで解除されない"
-                                     + "<br>"+ "[習得レベル:80][持続時間:40分][対象:術者][触媒:結晶体(100)]"+"</html>");
         cb_buff[S_TRG].addActionListener(this);
         panels[3].add(cb_buff[S_TRG]);
+
+        //パワーグリップ
+        cb_buff[S_PGP] = new JCheckBox("パワーグリップ(未実装)");
+        cb_buff[S_PGP].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[S_PGP].addActionListener(this);
+        panels[3].add(cb_buff[S_PGP]);
 
         //ギガンティック
         cb_buff[S_GIC] = new JCheckBox("ギガンティック");
@@ -2260,35 +2278,41 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[S_GIC].addActionListener(this);
         panels[3].add(cb_buff[S_GIC]);
 
+        //トマホーク
+        cb_buff[S_TOK] = new JCheckBox("トマホーク(未実装)");
+        cb_buff[S_TOK].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[S_TOK].addActionListener(this);
+        panels[3].add(cb_buff[S_TOK]);
+
+        //ハウル
+        cb_buff[S_HOL] = new JCheckBox("ハウル(未実装)");
+        cb_buff[S_HOL].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[S_HOL].addActionListener(this);
+        panels[3].add(cb_buff[S_HOL]);
+
         //タイタンロック
         cb_buff[S_TLK] = new JCheckBox("タイタンロック(未実装)");
         cb_buff[S_TLK].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[S_TLK].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
-                                     + "<br>"+ "HP40%以下時一定確率(35%)で近距離攻撃回避+反撃"
-                                     + "<br>"+ "カウンターダメージは武器の[BIG打撃値]+[追加ダメージ]+[強化数]x[2]"
-                                     + "<br>"+ "[習得レベル:75][持続時間:常時][対象:術者][触媒:結晶体(10)]"+"</html>");
         cb_buff[S_TLK].addActionListener(this);
         panels[3].add(cb_buff[S_TLK]);
 
         //タイタンマジック
         cb_buff[S_TMC] = new JCheckBox("タイタンマジック(未実装)");
         cb_buff[S_TMC].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[S_TMC].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
-                                     + "<br>"+ "HP40%以下時一定確率(35%)で魔法攻撃回避+反撃"
-                                     + "<br>"+ "カウンターダメージは武器の[BIG打撃値]+[追加ダメージ]+[強化数]x[2]"
-                                     + "<br>"+ "[習得レベル:75][持続時間:常時][対象:術者][触媒:結晶体(10)]"+"</html>");
         cb_buff[S_TMC].addActionListener(this);
         panels[3].add(cb_buff[S_TMC]);
 
         //タイタンブリッツ
         cb_buff[S_TBZ] = new JCheckBox("タイタンブリッツ(未実装)");
         cb_buff[S_TBZ].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[S_TBZ].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
-                                     + "<br>"+ "HP40%以下時一定確率(35%)で遠距離攻撃回避+反撃"
-                                     + "<br>"+ "カウンターダメージは武器の[BIG打撃値]+[追加ダメージ]+[強化数]x[2]"
-                                     + "<br>"+ "[習得レベル:80][持続時間:常時][対象:術者][触媒:結晶体(10)]"+"</html>");
         cb_buff[S_TBZ].addActionListener(this);
         panels[3].add(cb_buff[S_TBZ]);
+
+        //スレイヤー
+        cb_buff[S_SLR] = new JCheckBox("スレイヤー(未実装)");
+        cb_buff[S_SLR].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[S_SLR].addActionListener(this);
+        panels[3].add(cb_buff[S_SLR]);
 
         //クラッシュ
         cb_buff[S_CRH] = new JCheckBox("クラッシュ");
@@ -2307,6 +2331,12 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[S_FUY].setBounds(200 * row, 20 * col++, 150, 20);
         cb_buff[S_FUY].addActionListener(this);
         panels[3].add(cb_buff[S_FUY]);
+
+        //デスペラード:アブソリュート
+        cb_buff[S_DAE] = new JCheckBox("デスペラード:アブソリュート(未実装)");
+        cb_buff[S_DAE].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[S_DAE].addActionListener(this);
+        panels[3].add(cb_buff[S_DAE]);
 
         col++;
 
