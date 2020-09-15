@@ -1,6 +1,28 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2020/09/15
+Update 4.2.2
+LSS/src/lss/Calculator.java
+LSS/src/lss/Common.java
+LSS/src/lss/UI.java
+追加
+	剣士技術
+		ファントム:デス
+		アシュラ
+		ブレード
+		パンテラ
+		ジャッジメント
+		ヘルファイア
+		ファントム
+		ファントム:リーパー
+		パンテラ:ショック
+		サヴァイヴ
+		パラドックス
+		グロース
+修正
+	槍士技術のUI順序
+
 2020/09/14
 Update 4.2.1
 LSS/src/lss/Calculator.java

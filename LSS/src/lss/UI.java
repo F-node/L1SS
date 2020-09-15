@@ -220,8 +220,8 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
     //ファイナルバーンで計104個分(0から103)
 //    JCheckBox[] cb_buff = new JCheckBox[104];
 //    JComboBox[] cb_buff_group = new JComboBox[104];
-    JCheckBox[] cb_buff = new JCheckBox[216];
-    JComboBox[] cb_buff_group = new JComboBox[216];
+    JCheckBox[] cb_buff = new JCheckBox[228];
+    JComboBox[] cb_buff_group = new JComboBox[228];
     //パネル5
     JComboBox cb_npc_level;
     JSlider[] s_target_res = new JSlider[ELEM_LIST.length];
@@ -2345,17 +2345,92 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         panels[3].add(lab_tmp);
 
         //アクティブスキル
+        //ファントム:デス
+        cb_buff[F_PPH] = new JCheckBox("ファントム:デス(未実装)");
+        cb_buff[F_PPH].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[F_PPH].addActionListener(this);
+        panels[3].add(cb_buff[F_PPH]);
+
+        //アシュラ
+        cb_buff[F_AAA] = new JCheckBox("[UP待ち]アシュラ(未実装)");
+        cb_buff[F_AAA].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[F_AAA].addActionListener(this);
+        panels[3].add(cb_buff[F_AAA]);
+
+        //ブレード
+        cb_buff[F_ABE] = new JCheckBox("ブレード(未実装)");
+        cb_buff[F_ABE].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[F_ABE].addActionListener(this);
+        panels[3].add(cb_buff[F_ABE]);
+
+        //パンテラ
+        cb_buff[F_APA] = new JCheckBox("パンテラ(未実装)");
+        cb_buff[F_APA].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[F_APA].addActionListener(this);
+        panels[3].add(cb_buff[F_APA]);
+
+        //ジャッジメント
+        cb_buff[F_AJT] = new JCheckBox("ジャッジメント(未実装)");
+        cb_buff[F_AJT].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[F_AJT].addActionListener(this);
+        panels[3].add(cb_buff[F_AJT]);
+
+        //ヘルファイア
+        cb_buff[F_AHE] = new JCheckBox("ヘルファイア(未実装)");
+        cb_buff[F_AHE].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[F_AHE].addActionListener(this);
+        panels[3].add(cb_buff[F_AHE]);
+
+        //ファントム
+        cb_buff[F_APM] = new JCheckBox("ファントム(未実装)");
+        cb_buff[F_APM].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[F_APM].addActionListener(this);
+        panels[3].add(cb_buff[F_APM]);
+
+        //ファントム:リーパー
+        cb_buff[F_PPR] = new JCheckBox("ファントム:リーパー(未実装)");
+        cb_buff[F_PPR].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[F_PPR].addActionListener(this);
+        panels[3].add(cb_buff[F_PPR]);
+
+        //パンテラ:ショック
+        cb_buff[F_PPK] = new JCheckBox("パンテラ:ショック(未実装)");
+        cb_buff[F_PPK].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[F_PPK].addActionListener(this);
+        panels[3].add(cb_buff[F_PPK]);
+
+        //サヴァイヴ
+        cb_buff[F_PSE] = new JCheckBox("サヴァイヴ(未実装)");
+        cb_buff[F_PSE].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[F_PSE].addActionListener(this);
+        panels[3].add(cb_buff[F_PSE]);
+
+        col = 0;
+        row = 3;
+
         //インフィニティ:ブリッツ
         cb_buff[F_PIZ] = new JCheckBox("インフィニティ:ブリッツ");
         cb_buff[F_PIZ].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[F_PIZ].addActionListener(this);
         panels[3].add(cb_buff[F_PIZ]);
 
+        //パラドックス
+        cb_buff[F_PPX] = new JCheckBox("パラドックス(未実装)");
+        cb_buff[F_PPX].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[F_PPX].addActionListener(this);
+        panels[3].add(cb_buff[F_PPX]);
+
         //インフィニティ:ドッジ
         cb_buff[F_PIE] = new JCheckBox("インフィニティ:ドッジ");
         cb_buff[F_PIE].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[F_PIE].addActionListener(this);
         panels[3].add(cb_buff[F_PIE]);
+
+        //グロース
+        cb_buff[F_PGE] = new JCheckBox("グロース(未実装)");
+        cb_buff[F_PGE].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[F_PGE].addActionListener(this);
+        panels[3].add(cb_buff[F_PGE]);
 
         //インフィニティ:ブラッド
         cb_buff[F_PID] = new JCheckBox("インフィニティ:ブラッド");
@@ -2378,164 +2453,104 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         //フレイム
         cb_buff[F_PFE] = new JCheckBox("フレイム(未実装)");
         cb_buff[F_PFE].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[F_PFE].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
-                                      + "<br>"+ "対象に攻撃が命中した時に、一定確率で3秒間HPを減少させる(計算式不明)"
-                                      + "<br>"+ "[習得レベル:45][持続時間:常時][対象:術者]"+"</html>");
         cb_buff[F_PFE].addActionListener(this);
         panels[3].add(cb_buff[F_PFE]);
 
         //ダマスカス
         cb_buff[F_PDS] = new JCheckBox("ダマスカス(未実装)");
         cb_buff[F_PDS].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[F_PDS].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
-                                      + "<br>"+ "着用した武器が損傷しなくなる"
-                                      + "<br>"+ "[習得レベル:45][持続時間:常時][対象:術者]"+"</html>");
         cb_buff[F_PDS].addActionListener(this);
         panels[3].add(cb_buff[F_PDS]);
 
-        col = 0;
-        row = 3;
+        col++;
 
         lab_tmp = new JLabel("槍士技術");
         lab_tmp.setBounds(200 * row, 20 * col++, 100, 20);
         panels[3].add(lab_tmp);
 
-        //オルタネート
-        cb_buff[L_ALE] = new JCheckBox("オルタネート(未実装)");
-        cb_buff[L_ALE].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[L_ALE].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
-                                      + "<br>"+ "近距離フォームと遠距離フォームに変更する"
-                                      + "<br>"+ "遠距離フォームでは攻撃速度が減少し、対象との距離が遠くなるほどダメージが減少する"
-                                      + "<br>"+ "遠距離フォームの攻撃はDEX・遠距離ダメージ・遠距離命中の影響を受けない"
-                                      + "<br>"+ "[習得レベル:50][持続時間:瞬間][対象:術者]"+"</html>");
-        cb_buff[L_ALE].addActionListener(this);
-        panels[3].add(cb_buff[L_ALE]);
-
-        //フォースウェーブ
-        cb_buff[L_FWE] = new JCheckBox("フォースウェーブ(未実装)");
-        cb_buff[L_FWE].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[L_FWE].setToolTipText("<html>"+ "[消費MP:15][消費HP:--]"
-                                      + "<br>"+ "【近距離フォーム】周囲1セルにダメージを与える"
-                                      + "<br>"+ "【遠距離フォーム】前方5セル内の対象全てにダメージを与える"
-                                      + "<br>"+ "[習得レベル:60][持続時間:瞬間][対象:PC/NPC]"+"</html>");
-        cb_buff[L_FWE].addActionListener(this);
-        panels[3].add(cb_buff[L_FWE]);
-
-        //ヴァンガード
-        cb_buff[L_VAD] = new JCheckBox("ヴァンガード(未実装)");
-        cb_buff[L_VAD].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[L_VAD].setToolTipText("<html>"+ "[消費MP:--][消費HP:25]"
-                                      + "<br>"+ "【近距離フォーム】移動速度・攻撃速度が大幅に上昇する"
-                                      + "<br>"+ "【遠距離フォーム】攻撃速度が大幅に上昇する"
-                                      + "<br>"+ "[習得レベル:70][持続時間:4秒][対象:術者][触媒:結晶体(50)]"+"</html>");
-        cb_buff[L_VAD].addActionListener(this);
-        panels[3].add(cb_buff[L_VAD]);
+        //プレッシャー:デスリコール
+        cb_buff[L_PDR] = new JCheckBox("プレッシャー:デスリコール(未実装)");
+        cb_buff[L_PDR].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[L_PDR].addActionListener(this);
+        panels[3].add(cb_buff[L_PDR]);
 
         //リカバリー
         cb_buff[L_REY] = new JCheckBox("リカバリー(未実装)");
         cb_buff[L_REY].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[L_REY].setToolTipText("<html>"+ "[消費MP:50][消費HP:--]"
-                                      + "<br>"+ "伝説級を除く[スタン][ホールド][帰還不可能]の効果を消す"
-                                      + "<br>"+ "[習得レベル:80][持続時間:瞬間][対象:術者][触媒:結晶体(300)]"+"</html>");
         cb_buff[L_REY].addActionListener(this);
         panels[3].add(cb_buff[L_REY]);
-
-        //プレッシャー
-        cb_buff[L_PRE] = new JCheckBox("プレッシャー(未実装)");
-        cb_buff[L_PRE].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[L_PRE].setToolTipText("<html>"+ "[消費MP:16][消費HP:--]"
-                                      + "<br>"+ "5セル内の対象に、ホールド状態にする"
-                                      + "<br>"+ "更に持続時間内に与えたダメージの60%を追加ダメージとして与える"
-                                      + "<br>"+ "術者以外のダメージは10%"
-                                      + "<br>"+ "[習得レベル:75][持続時間:4秒][対象:PC]"+"</html>");
-        cb_buff[L_PRE].addActionListener(this);
-        panels[3].add(cb_buff[L_PRE]);
 
         //クルオル
         cb_buff[L_KUU] = new JCheckBox("クルオル(未実装)");
         cb_buff[L_KUU].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[L_KUU].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
-                                      + "<br>"+ "【近距離フォーム】3セル内の対象を、目の前に引き寄せてスタン状態にする"
-                                      + "<br>"+ "【遠距離フォーム】3セル内の対象を、自身から引き離してスタン状態にする"
-                                      + "<br>"+ "NPC相手だと移動させる効果が無くスタンのみ発動"
-                                      + "<br>"+ "[習得レベル:80][持続時間:3秒以下][対象:PC/NPC][触媒:結晶体(100)]"+"</html>");
         cb_buff[L_KUU].addActionListener(this);
         panels[3].add(cb_buff[L_KUU]);
 
-        //デッドリーストライク
-        cb_buff[L_DSE] = new JCheckBox("デッドリーストライク(未実装)");
-        cb_buff[L_DSE].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[L_DSE].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
-                                      + "<br>"+ "一定確率でダメージを2.5倍にする"
-                                      + "<br>"+ "[習得レベル:65][持続時間:常時][対象:術者]"+"</html>");
-        cb_buff[L_DSE].addActionListener(this);
-        panels[3].add(cb_buff[L_DSE]);
+        //プレッシャー
+        cb_buff[L_PRE] = new JCheckBox("プレッシャー(未実装)");
+        cb_buff[L_PRE].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[L_PRE].addActionListener(this);
+        panels[3].add(cb_buff[L_PRE]);
+
+        //ヴァンガード
+        cb_buff[L_VAD] = new JCheckBox("ヴァンガード(未実装)");
+        cb_buff[L_VAD].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[L_VAD].addActionListener(this);
+        panels[3].add(cb_buff[L_VAD]);
+
+        //フォースウェーブ
+        cb_buff[L_FWE] = new JCheckBox("フォースウェーブ(未実装)");
+        cb_buff[L_FWE].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[L_FWE].addActionListener(this);
+        panels[3].add(cb_buff[L_FWE]);
+
+        //オルタネート
+        cb_buff[L_ALE] = new JCheckBox("オルタネート(未実装)");
+        cb_buff[L_ALE].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[L_ALE].addActionListener(this);
+        panels[3].add(cb_buff[L_ALE]);
+
+        //クルオル:コンビクション
+        cb_buff[L_KCN] = new JCheckBox("クルオル:コンビクション(未実装)");
+        cb_buff[L_KCN].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[L_KCN].addActionListener(this);
+        panels[3].add(cb_buff[L_KCN]);
+
+        //インクリーズレンジ
+        cb_buff[L_IRE] = new JCheckBox("インクリーズレンジ(未実装)");
+        cb_buff[L_IRE].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[L_IRE].addActionListener(this);
+        panels[3].add(cb_buff[L_IRE]);
+
+        //マエルストローム
+        cb_buff[L_MAM] = new JCheckBox("マエルストローム(未実装)");
+        cb_buff[L_MAM].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[L_MAM].addActionListener(this);
+        panels[3].add(cb_buff[L_MAM]);
+
+        //ドッジブレーキ
+        cb_buff[L_DBE] = new JCheckBox("ドッジブレーキ(未実装)");
+        cb_buff[L_DBE].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[L_DBE].addActionListener(this);
+        panels[3].add(cb_buff[L_DBE]);
 
         //ベンジェンス
         cb_buff[L_VEE] = new JCheckBox("ベンジェンス(未実装)");
         cb_buff[L_VEE].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[L_VEE].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
-                                      + "<br>"+ "ダメージを受けた時に、一定確率でダメージ低下の効果が発動"
-                                      + "<br>"+ "HPが50%以下になると発動率と効果が上昇する"
-                                      + "<br>"+ "[習得レベル:70][持続時間:常時][対象:術者]【触媒:HP50%以下になると結晶体(5)】"+"</html>");
         cb_buff[L_VEE].addActionListener(this);
         panels[3].add(cb_buff[L_VEE]);
         
         //タクティカルアドバンス
         cb_buff[L_TAE] = new JCheckBox("タクティカルアドバンス(未実装)");
         cb_buff[L_TAE].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[L_TAE].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
-                                      + "<br>"+ "DG+5 ER+5 MR+5%"
-                                      + "<br>"+ "レベル80から、レベル3毎に+2ずつ増加［最大+15］"
-                                      + "<br>"+ "[習得レベル:70][持続時間:常時][対象:術者]"+"</html>");
         cb_buff[L_TAE].addActionListener(this);
         panels[3].add(cb_buff[L_TAE]);
 
-        //ドッジブレーキ
-        cb_buff[L_DBE] = new JCheckBox("ドッジブレーキ(未実装)");
-        cb_buff[L_DBE].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[L_DBE].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
-                                      + "<br>"+ "対象が攻撃を回避した時に、20%の確率で必中する"
-                                      + "<br>"+ "レベル80から、レベル3毎に3%ずつ増加［最大35%］"
-                                      + "<br>"+ "[習得レベル:75][持続時間:常時][対象:術者]"+"</html>");
-        cb_buff[L_DBE].addActionListener(this);
-        panels[3].add(cb_buff[L_DBE]);
-
-        //マエルストローム
-        cb_buff[L_MAM] = new JCheckBox("マエルストローム(未実装)");
-        cb_buff[L_MAM].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[L_MAM].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
-                                      + "<br>"+ "伝説級を除く[スタン][ホールド][帰還不可能]の効果を受けた時に、一定確率で反射して相手に返す"
-                                      + "<br>"+ "[習得レベル:75][持続時間:常時][対象:術者][触媒:結晶体(15)]"+"</html>");
-        cb_buff[L_MAM].addActionListener(this);
-        panels[3].add(cb_buff[L_MAM]);
-
-        //インクリーズレンジ
-        cb_buff[L_IRE] = new JCheckBox("インクリーズレンジ(未実装)");
-        cb_buff[L_IRE].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[L_IRE].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
-                                      + "<br>"+ "遠距離フォームの射程を3セル伸ばし、ダメージを20%増加する"
-                                      + "<br>"+ "[習得レベル:80][持続時間:常時][対象:術者]"+"</html>");
-        cb_buff[L_IRE].addActionListener(this);
-        panels[3].add(cb_buff[L_IRE]);
-
-        //クルオル:コンビクション
-        cb_buff[L_KCN] = new JCheckBox("クルオル:コンビクション(未実装)");
-        cb_buff[L_KCN].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[L_KCN].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
-                                      + "<br>"+ "クルオルの射程を2セル伸ばし、スタン時間を増加する"
-                                      + "<br>"+ "[習得レベル:80][持続時間:常時][対象:術者]"+"</html>");
-        cb_buff[L_KCN].addActionListener(this);
-        panels[3].add(cb_buff[L_KCN]);
-
-        //プレッシャー:デスリコール
-        cb_buff[L_PDR] = new JCheckBox("プレッシャー:デスリコール(未実装)");
-        cb_buff[L_PDR].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[L_PDR].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
-                                      + "<br>"+ "プレッシャーにデステレポートの効果を追加"
-                                      + "<br>"+ "[習得レベル:85][持続時間:常時][対象:術者]"+"</html>");
-        cb_buff[L_PDR].addActionListener(this);
-        panels[3].add(cb_buff[L_PDR]);
+        //デッドリーストライク
+        cb_buff[L_DSE] = new JCheckBox("デッドリーストライク(未実装)");
+        cb_buff[L_DSE].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[L_DSE].addActionListener(this);
+        panels[3].add(cb_buff[L_DSE]);
 
         col = 0;
         row = 4;

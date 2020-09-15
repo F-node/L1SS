@@ -2886,10 +2886,10 @@ public class Calculator implements Common {
 //幻術魔法
         //ポテンシャル
         ui.cb_buff[I_POL].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
-                                      + "<br>"+ "装備品や魔法が適用された状態の"
-                                      + "<br>"+ "[最大HP][最大MP][MR][SP][DG][ER]を20%上昇させる"
-                                      + "<br>"+ "アドバンスドスピリッツと重複する"
-                                      + "<br>"+ "[習得レベル:85][持続時間:2分8秒][対象:術者][触媒:属性石(2)]"+"</html>");
+                                         + "<br>"+ "装備品や魔法が適用された状態の"
+                                         + "<br>"+ "[最大HP][最大MP][MR][SP][DG][ER]を20%上昇させる"
+                                         + "<br>"+ "アドバンスドスピリッツと重複する"
+                                         + "<br>"+ "[習得レベル:85][持続時間:2分8秒][対象:術者][触媒:属性石(2)]"+"</html>");
         if (ui.cb_buff[I_POL].isSelected()) {
         //スキル効果未実装
         }
@@ -3065,10 +3065,10 @@ public class Calculator implements Common {
 
         //イリュージョン[リッチ]
         ui.cb_buff[I_IRH].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
-                                         + "Passive"
+                                         + "<br>"+ "Passive"
                                          + "<br>"+ "SP+4"
-                                         + "*リニューアル パッシブに変更"
-                                         + "*リニューアル2段 SP+2から+4に"
+                                         + "<br>"+ "*リニューアル パッシブに変更"
+                                         + "<br>"+ "*リニューアル2段 SP+2から+4に"
                                          + "<br>"+ "[習得レベル:30][持続時間:常時][対象:術者]"+"</html>");
         if (ui.cb_buff[I_IRH].isSelected()) {
             buff.SP += 4;
@@ -3216,9 +3216,9 @@ public class Calculator implements Common {
 
         //タイタンブリッツ
         ui.cb_buff[S_TBZ].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
-                                     + "<br>"+ "HP40%以下時一定確率(35%)で遠距離攻撃を回避してカウンターダメージを与える"
-                                     + "<br>"+ "カウンターダメージは武器の[BIG打撃値]+[追加ダメージ]+[強化数]x[2]"
-                                     + "<br>"+ "[習得レベル:80][持続時間:常時][対象:術者][触媒:結晶体(10)]"+"</html>");
+                                         + "<br>"+ "HP40%以下時一定確率(35%)で遠距離攻撃を回避してカウンターダメージを与える"
+                                         + "<br>"+ "カウンターダメージは武器の[BIG打撃値]+[追加ダメージ]+[強化数]x[2]"
+                                         + "<br>"+ "[習得レベル:80][持続時間:常時][対象:術者][触媒:結晶体(10)]"+"</html>");
         if (ui.cb_buff[S_TBZ].isSelected()) {
         //スキル効果未実装
         }
@@ -3252,7 +3252,312 @@ public class Calculator implements Common {
         }
 
 //剣士技術
-        //
+        //ファントム:デス
+        ui.cb_buff[F_PPH].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "Passive"
+                                         + "<br>"+ "ファントムに移動不可能、デスヒール、デスポーションの効果を追加"
+                                         + "<br>"+ "リーパー、デスのどちらかがランダムで発動する"
+                                         + "<br>"+ "ファントム:リーパーを覚えていないと習得する事が出来ない"
+                                         + "<br>"+ "[習得レベル:80][持続時間:常時][対象:術者]"+"</html>");
+        if (ui.cb_buff[F_PPH].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //アシュラ
+        ui.cb_buff[F_AAA].setToolTipText("<html>"+ "[消費MP:--][消費HP:2000]"
+                                         + "<br>"+ "10秒でMPを400回復"
+                                         + "<br>"+ "個別[D]クールタイム()"
+                                         + "<br>"+ "[習得レベル:85][持続時間:常時][対象:術者]"+"</html>");
+        if (ui.cb_buff[F_AAA].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //ブレード
+        ui.cb_buff[F_ABE].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
+                                         + "<br>"+ "ダガー/ソード/両手剣技術"
+                                         + "<br>"+ "5セル内の対象に物理ダメージを与える"
+                                         + "<br>"+ "ダメージは着用している武器の影響を受ける"
+                                         + "<br>"+ "個別[A]クールタイム()"
+                                         + "<br>"+ "[習得レベル:60][持続時間:瞬間][対象:PC/NPC][触媒:結晶体(50)]"+"</html>");
+        if (ui.cb_buff[F_ABE].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //パンテラ
+        ui.cb_buff[F_APA].setToolTipText("<html>"+ "[消費MP:22][消費HP:--]"
+                                         + "<br>"+ "ソード技術"
+                                         + "<br>"+ "3セル内の対象に一瞬で接近して物理ダメージを与え、一定確率でスタン状態にする"
+                                         + "<br>"+ "スタン効果は恐怖命中の影響を受ける"
+                                         + "<br>"+ "個別[B]クールタイム()"
+                                         + "<br>"+ "[習得レベル:75][持続時間:常時][対象:PC/NPC]"+"</html>");
+        if (ui.cb_buff[F_APA].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //ジャッジメント
+        ui.cb_buff[F_AJT].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
+                                         + "<br>"+ "6セル内の対象の全スキル耐性を減少させる"
+                                         + "<br>"+ "減少量はSTRの影響を受ける"
+                                         + "<br>"+ "個別[C]クールタイム()"
+                                         + "<br>"+ "[習得レベル:80][持続時間:8秒][対象:PC]"+"</html>");
+        if (ui.cb_buff[F_AJT].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //ヘルファイア
+        ui.cb_buff[F_AHE].setToolTipText("<html>"+ "[消費MP:15][消費HP:--]"
+                                         + "<br>"+ "範囲4セル内の対象に物理ダメージを与える"
+                                         + "<br>"+ "ダメージは着用している武器の影響を受ける"
+                                         + "<br>"+ "個別[C]クールタイム()"
+                                         + "<br>"+ "[習得レベル:70][持続時間:常時][対象:PC/NPC][触媒:結晶体(10)]"+"</html>");
+        if (ui.cb_buff[F_AHE].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //ファントム
+        ui.cb_buff[F_APM].setToolTipText("<html>"+ "[消費MP:18][消費HP:--]"
+                                         + "<br>"+ "ソード技術"
+                                         + "<br>"+ "1セル内の対象を一定確率で装備の着脱不可、帰還不可の状態にする"
+                                         + "<br>"+ "個別[C]クールタイム()"
+                                         + "<br>"+ "[習得レベル:70][持続時間:常時][対象:PC][触媒:結晶体(100)]"+"</html>");
+        if (ui.cb_buff[F_APM].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //ファントム:リーパー
+        ui.cb_buff[F_PPR].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "Passive"
+                                         + "<br>"+ "ファントムに移動不可能の効果を追加"
+                                         + "<br>"+ "ファントムを覚えていないと習得する事が出来ない"
+                                         + "<br>"+ "[習得レベル:80][持続時間:常時][対象:術者]"+"</html>");
+        if (ui.cb_buff[F_PPR].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //パンテラ:ショック
+        ui.cb_buff[F_PPK].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "Passive"
+                                         + "<br>"+ "パンテラの射程を1セル伸ばし、スタン時間を増加する"
+                                         + "<br>"+ "*リニューアル 射程2セル増加から1セル増加に"
+                                         + "<br>"+ "[習得レベル:85][持続時間:常時][対象:術者]"+"</html>");
+        if (ui.cb_buff[F_PPK].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //サヴァイヴ
+        ui.cb_buff[F_PSE].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "Passive"
+                                         + "<br>"+ "HPが45%以下になると、一定確率でHP回復ポーションの回復量が増加する"
+                                         + "<br>"+ "CONとHPの%で回復量が変化する"
+                                         + "<br>"+ "回復量に応じて結晶体を消費する"
+                                         + "<br>"+ "[習得レベル:80][持続時間:常時][対象:術者][触媒:結晶体]"+"</html>");
+        if (ui.cb_buff[F_PSE].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //インフィニティ:ブリッツ
+        ui.cb_buff[F_PIZ].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "Passive"
+                                         + "<br>"+ "レベル75からレベル1毎にERが+1ずつ増加[最大+15]"
+                                         + "<br>"+ "[習得レベル:75][持続時間:常時][対象:術者]"+"</html>");
+        if (ui.cb_buff[F_PIZ].isSelected()) {
+            if (cls == F) {
+                if (level >= 89) {
+                    buff.ER += 15;                                      //最大ER+15(LV89)
+                } else if (level >= 75) {
+                    buff.ER += (level - 75) / 1 + 1;                    //ER+((level - 75) / 1 + 1)
+                }
+            } else {
+                ui.cb_buff[F_PIZ].setSelected(false);
+            }
+        }
+
+        //パラドックス
+        ui.cb_buff[F_PPX].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "Passive"
+                                         + "<br>"+ "カウンタースキルの回避を一定確率で貫通して、カウンターダメージを減少させる"
+                                         + "<br>"+ "[習得レベル:75][持続時間:常時][対象:術者]"+"</html>");
+        if (ui.cb_buff[F_PPX].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //インフィニティ:ドッジ
+        //7656行にて処理
+
+        //グロース
+        ui.cb_buff[F_PGE].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "Passive"
+                                         + "<br>"+ "モンスターを倒した時に、一定確率で獲得経験値を2から5倍にする"
+                                         + "<br>"+ "レベル85になると効果が無くなります"
+                                         + "<br>"+ "[習得レベル:60][持続時間:常時][対象:術者]"+"</html>");
+        if (ui.cb_buff[F_PGE].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //インフィニティ:ブラッド
+        //8214行にて処理
+
+        //レイジ
+        //7183行にて処理
+
+        //インフィニティ:アーマー
+        ui.cb_buff[F_PIR].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "Passive"
+                                         + "<br>"+ "レベル45からレベル4毎にダメージ低下が+1ずつ増加[最大+15]"
+                                         + "<br>"+ "[習得レベル:45][持続時間:常時][対象:術者]"+"</html>");
+        if (ui.cb_buff[F_PIR].isSelected()) {
+            if (cls == F) {
+                if (level >= 101) {
+                    buff.DR += 15;                                      //最大DR+15(LV101)
+                } else if (level >= 45) {
+                    buff.DR += (level - 45) / 4 + 1;                    //DR+((level - 45) / 4 + 1)
+                }
+            } else {
+                ui.cb_buff[F_PIR].setSelected(false);
+            }
+        }
+
+        //フレイム
+        ui.cb_buff[F_PFE].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "Passive"
+                                         + "<br>"+ "対象に攻撃が命中した時に、一定確率で3秒間HPを減少させる(計算式不明)"
+                                         + "<br>"+ "[習得レベル:45][持続時間:常時][対象:術者]"+"</html>");
+        if (ui.cb_buff[F_PGE].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //ダマスカス
+        ui.cb_buff[F_PDS].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "Passive"
+                                         + "<br>"+ "着用した武器が損傷しなくなる"
+                                         + "<br>"+ "[習得レベル:45][持続時間:常時][対象:術者]"+"</html>");
+        if (ui.cb_buff[F_PGE].isSelected()) {
+        //スキル効果未実装
+        }
+
+//槍士技術
+        //プレッシャー:デスリコール
+        ui.cb_buff[L_PDR].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "プレッシャーにデステレポートの効果を追加"
+                                         + "<br>"+ "[習得レベル:85][持続時間:常時][対象:術者]"+"</html>");
+        if (ui.cb_buff[L_PDR].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //リカバリー
+        ui.cb_buff[L_REY].setToolTipText("<html>"+ "[消費MP:50][消費HP:--]"
+                                         + "<br>"+ "伝説級を除く[スタン][ホールド][帰還不可能]の効果を消す"
+                                         + "<br>"+ "[習得レベル:80][持続時間:瞬間][対象:術者][触媒:結晶体(300)]"+"</html>");
+        if (ui.cb_buff[L_REY].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //クルオル
+        ui.cb_buff[L_KUU].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
+                                         + "<br>"+ "[近距離フォーム]3セル内の対象を、目の前に引き寄せてスタン状態にする"
+                                         + "<br>"+ "[遠距離フォーム]3セル内の対象を、自身から引き離してスタン状態にする"
+                                         + "<br>"+ "NPC相手だと移動させる効果が無くスタンのみ発動"
+                                         + "<br>"+ "[習得レベル:80][持続時間:3秒以下][対象:PC/NPC][触媒:結晶体(100)]"+"</html>");
+        if (ui.cb_buff[L_KUU].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //プレッシャー
+        ui.cb_buff[L_PRE].setToolTipText("<html>"+ "[消費MP:16][消費HP:--]"
+                                         + "<br>"+ "5セル内の対象に、ホールド状態にする"
+                                         + "<br>"+ "更に持続時間内に与えたダメージの60%を追加ダメージとして与える"
+                                         + "<br>"+ "術者以外のダメージは10%"
+                                         + "<br>"+ "[習得レベル:75][持続時間:4秒][対象:PC]"+"</html>");
+        if (ui.cb_buff[L_PRE].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //ヴァンガード
+        ui.cb_buff[L_VAD].setToolTipText("<html>"+ "[消費MP:--][消費HP:25]"
+                                         + "<br>"+ "[近距離フォーム]移動速度・攻撃速度が大幅に上昇する"
+                                         + "<br>"+ "[遠距離フォーム]攻撃速度が大幅に上昇する"
+                                         + "<br>"+ "[習得レベル:70][持続時間:4秒][対象:術者][触媒:結晶体(50)]"+"</html>");
+        if (ui.cb_buff[L_VAD].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //フォースウェーブ
+        ui.cb_buff[L_FWE].setToolTipText("<html>"+ "[消費MP:15][消費HP:--]"
+                                         + "<br>"+ "[近距離フォーム]周囲1セルにダメージを与える"
+                                         + "<br>"+ "[遠距離フォーム]前方5セル内の対象全てにダメージを与える"
+                                         + "<br>"+ "[習得レベル:60][持続時間:瞬間][対象:PC/NPC]"+"</html>");
+        if (ui.cb_buff[L_FWE].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //オルタネート
+        ui.cb_buff[L_ALE].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "近距離フォームと遠距離フォームに変更する"
+                                         + "<br>"+ "遠距離フォームでは攻撃速度が減少し、対象との距離が遠くなるほどダメージが減少する"
+                                         + "<br>"+ "遠距離フォームの攻撃はDEX・遠距離ダメージ・遠距離命中の影響を受けない"
+                                         + "<br>"+ "[習得レベル:50][持続時間:瞬間][対象:術者]"+"</html>");
+        if (ui.cb_buff[L_ALE].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //クルオル:コンビクション
+        ui.cb_buff[L_KCN].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "クルオルの射程を2セル伸ばし、スタン時間を増加する"
+                                         + "<br>"+ "[習得レベル:80][持続時間:常時][対象:術者]"+"</html>");
+        if (ui.cb_buff[L_KCN].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //インクリーズレンジ
+        ui.cb_buff[L_IRE].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "遠距離フォームの射程を3セル伸ばし、ダメージを20%増加する"
+                                         + "<br>"+ "[習得レベル:80][持続時間:常時][対象:術者]"+"</html>");
+        if (ui.cb_buff[L_IRE].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //マエルストローム
+        ui.cb_buff[L_MAM].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "伝説級を除く[スタン][ホールド][帰還不可能]の効果を受けた時に、一定確率で反射して相手に返す"
+                                         + "<br>"+ "[習得レベル:75][持続時間:常時][対象:術者][触媒:結晶体(15)]"+"</html>");
+        if (ui.cb_buff[L_MAM].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //ドッジブレーキ
+        ui.cb_buff[L_DBE].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "対象が攻撃を回避した時に、20%の確率で必中する"
+                                         + "<br>"+ "レベル80から、レベル3毎に3%ずつ増加［最大35%］"
+                                         + "<br>"+ "[習得レベル:75][持続時間:常時][対象:術者]"+"</html>");
+        if (ui.cb_buff[L_DBE].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //ベンジェンス
+        ui.cb_buff[L_VEE].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "ダメージを受けた時に、一定確率でダメージ低下の効果が発動"
+                                         + "<br>"+ "HPが50%以下になると発動率と効果が上昇する"
+                                         + "<br>"+ "[習得レベル:70][持続時間:常時][対象:術者][触媒:HP50%以下になると結晶体(5)]"+"</html>");
+        if (ui.cb_buff[L_VEE].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //タクティカルアドバンス
+        ui.cb_buff[L_TAE].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "DG+5 ER+5 MR+5%"
+                                         + "<br>"+ "レベル80から、レベル3毎に+2ずつ増加［最大+15］"
+                                         + "<br>"+ "[習得レベル:70][持続時間:常時][対象:術者]"+"</html>");
+        if (ui.cb_buff[L_TAE].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //デッドリーストライク
+        ui.cb_buff[L_DSE].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "一定確率でダメージを2.5倍にする"
+                                         + "<br>"+ "[習得レベル:65][持続時間:常時][対象:術者]"+"</html>");
+        if (ui.cb_buff[L_DBE].isSelected()) {
+        //スキル効果未実装
+        }
 
         //バーサーカー
         ui.cb_buff[W_BER].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
@@ -3288,38 +3593,6 @@ public class Calculator implements Common {
                                          + "<br>"+ "[習得レベル:56][持続時間:5分][対象:術者][触媒:魔力の石(1)]"+"</html>");
         if (ui.cb_buff[W_FAR].isSelected()) {
             buff.ER += 5;
-        }
-
-        //インフィニティ:アーマー
-        ui.cb_buff[F_PIR].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
-                                                 + "<br>"+ "レベル45からレベル4毎にダメージ低下が+1ずつ増加[最大+15]"
-                                                 + "<br>"+ "[習得レベル:45][持続時間:常時][対象:術者]"+"</html>");
-        if (ui.cb_buff[F_PIR].isSelected()) {
-            if (cls == F) {
-                if (level >= 101) {
-                    buff.DR += 15;                                      //最大DR+15(LV101)
-                } else if (level >= 45) {
-                    buff.DR += (level - 45) / 4 + 1;                    //DR+((level - 45) / 4 + 1)
-                }
-            } else {
-                ui.cb_buff[F_PIR].setSelected(false);
-            }
-        }
-
-        //インフィニティ:ブリッツ
-        ui.cb_buff[F_PIZ].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
-                                         + "<br>"+ "レベル75からレベル1毎にERが+1ずつ増加[最大+15]"
-                                         + "<br>"+ "[習得レベル:75][持続時間:常時][対象:術者]"+"</html>");
-        if (ui.cb_buff[F_PIZ].isSelected()) {
-            if (cls == F) {
-                if (level >= 89) {
-                    buff.ER += 15;                                      //最大ER+15(LV89)
-                } else if (level >= 75) {
-                    buff.ER += (level - 75) / 1 + 1;                    //ER+((level - 75) / 1 + 1)
-                }
-            } else {
-                ui.cb_buff[F_PIZ].setSelected(false);
-            }
         }
 
         //ドラゴンの祝福1と加護1(所持重量増加+500は別で処理)2か所の判定で実装している:6165行目参照
@@ -7066,6 +7339,7 @@ buki.arrow_elementdmg=0;
 
         //レイジ
         ui.cb_buff[F_PRE].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "Passive"
                                          + "<br>"+ "一定確率(暫定18%)で近距離ダメージ(暫定1.5倍)"
                                          + "<br>"+ "[習得レベル:60][持続時間:常時][対象:術者]"+"</html>");
         if (ui.cb_buff[F_PRE].isSelected()) {
@@ -7536,6 +7810,7 @@ buki.arrow_elementdmg=0;
 
         //インフィニティ:ドッジ
         ui.cb_buff[F_PIE].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "Passive"
                                          + "<br>"+ "DG+5"
                                          + "<br>"+ "レベル70からレベル2毎にDGが+1ずつ増加[最大+20]"
                                          + "<br>"+ "[習得レベル:70][持続時間:常時][対象:術者]"+"</html>");
@@ -7550,6 +7825,7 @@ buki.arrow_elementdmg=0;
                 ui.cb_buff[F_PIE].setSelected(false);
             }
         }
+
         ui.lab_ac.setText(Integer.toString(ac));
         ui.lab_dg.setText(Integer.toString(dg));
         ui.lab_er.setText(Integer.toString(er));
@@ -8091,6 +8367,7 @@ buki.arrow_elementdmg=0;
 
         //インフィニティ:ブラッド
         ui.cb_buff[F_PID].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "Passive"
                                          + "<br>"+ "レベル60からレベル3毎に最大HPが+50ずつ増加[最大+650]"
                                          + "<br>"+ "[習得レベル:60][持続時間:常時][対象:術者]"+"</html>");
         if (ui.cb_buff[F_PID].isSelected()) {

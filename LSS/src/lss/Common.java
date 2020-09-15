@@ -426,22 +426,22 @@ public interface Common {
 
 //フェンサーの技術    合計19種類
     //  アクティブスキル
-//    final int F_AAA = XXX;        //LV85  AshurA                        アシュラ
-//    final int F_ABE = XXX;        //LV60  BladE                         ブレード
-//    final int F_APA = XXX;        //LV75  Pantera                       パンテラ
-//    final int F_AJT = XXX;        //LV80  JudgmenT                      ジャッジメント
-//    final int F_AHE = XXX;        //LV70  HellfirE                      ヘルファイア
-//    final int F_APM = XXX;        //LV70  PhantoM                       ファントム
+    final int F_PPH = 216;          //LV80  Phantom:DeatH                 ファントム:デス
+    final int F_AAA = 217;          //LV85  AshurA                        アシュラ
+    final int F_ABE = 218;          //LV60  BladE                         ブレード
+    final int F_APA = 219;          //LV75  Pantera                       パンテラ
+    final int F_AJT = 220;          //LV80  JudgmenT                      ジャッジメント
+    final int F_AHE = 221;          //LV70  HellfirE                      ヘルファイア
+    final int F_APM = 222;          //LV70  PhantoM                       ファントム
 
     //  パッシブスキル
-//    final int F_PPH = XXX;        //LV80  Phantom:DeatH                 ファントム:デス
-//    final int F_PPR = XXX;        //LV80  Phantom:ReapeR                ファントム:リーパー
-//    final int F_PPK = XXX;        //LV80  Pantera:ShocK                 パンテラ:ショック
+    final int F_PPR = 223;          //LV80  Phantom:ReapeR                ファントム:リーパー
+    final int F_PPK = 224;          //LV80  Pantera:ShocK                 パンテラ:ショック
+    final int F_PSE = 225;          //LV70  SurvivE                       サヴァイヴ
     final int F_PIZ = 104;          //LV75  Infinity:BlitZ                インフィニティ:ブリッツ
-//    final int F_PPX = XXX;        //LV75  ParadoX                       パラドックス
-//    final int F_PSE = XXX;        //LV70  SurvivE                       サヴァイヴ
+    final int F_PPX = 226;          //LV75  ParadoX                       パラドックス
     final int F_PIE = 105;          //LV70  Infinity:DodgE                インフィニティ:ドッジ
-//    final int F_PGE = XXX;        //LV60  GrousE                        グロース
+    final int F_PGE = 227;          //LV60  GrousE                        グロース
     final int F_PID = 106;          //LV60  Infinity:BlooD                インフィニティ:ブラッド
     final int F_PRE = 107;          //LV60  RagE                          レイジ
     final int F_PIR = 108;          //LV45  Infinity:ArmoR                インフィニティ:アーマー
@@ -450,22 +450,22 @@ public interface Common {
 
 //ランサーの槍術    合計14種類
     //  アクティブスキル
-    final int L_ALE = 127;          //LV50  ALternatE                     オルタネート
-    final int L_FWE = 128;          //LV60  Force WavE                    フォースウェーブ
-    final int L_VAD = 129;          //LV70  VAnguarD                      ヴァンガード
+    final int L_PDR = 140;          //LV85  Pressure:Death Recall         プレッシャー:デスリコール
     final int L_REY = 130;          //LV75  REcoverY                      リカバリー
-    final int L_PRE = 131;          //LV75  PRessurE                      プレッシャー
     final int L_KUU = 132;          //LV80  KUruorU                       クルオル
+    final int L_PRE = 131;          //LV75  PRessurE                      プレッシャー
+    final int L_VAD = 129;          //LV70  VAnguarD                      ヴァンガード
+    final int L_FWE = 128;          //LV60  Force WavE                    フォースウェーブ
+    final int L_ALE = 127;          //LV50  ALternatE                     オルタネート
 
     //  パッシブスキル
-    final int L_DSE = 133;          //LV65  Deadly StrikE                 デッドリーストライク
+    final int L_KCN = 139;          //LV80  Kuruoru:CombinatioN           クルオル:コンビクション
+    final int L_IRE = 138;          //LV80  Increase RangE                インクリーズレンジ
+    final int L_MAM = 137;          //LV75  MAelstroM                     マエルストローム
+    final int L_DBE = 136;          //LV75  Dodge BrakE                   ドッジブレーキ
     final int L_VEE = 134;          //LV70  VEngeancE                     ベンジェンス
     final int L_TAE = 135;          //LV70  Tactical AdvancE              タクティカルアドバンス
-    final int L_DBE = 136;          //LV75  Dodge BrakE                   ドッジブレーキ
-    final int L_MAM = 137;          //LV75  MAelstroM                     マエルストローム
-    final int L_IRE = 138;          //LV80  Increase RangE                インクリーズレンジ
-    final int L_KCN = 139;          //LV80  Kuruoru:CombinatioN           クルオル:コンビクション
-    final int L_PDR = 140;          //LV85  Pressure:Death Recall         プレッシャー:デスリコール
+    final int L_DSE = 133;          //LV65  Deadly StrikE                 デッドリーストライク
 
 //その他
     final int DRAGON_BLESS = 126;   //ドラゴンの祝福
