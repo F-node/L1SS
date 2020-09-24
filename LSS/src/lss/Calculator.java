@@ -108,12 +108,12 @@ public class Calculator implements Common {
     boolean md_dmg = false;
     int equip_pattern = 0;
     int ac;
-    int dg;                                                 //近距離回避力
-    int er;                                                 //遠距離回避力
-    int me;                                                 //確率魔法回避力
-    int mhp;                                                //最大HP+X%
-    int mmp;                                                //最大MP+X%
-    int mexp;                                               //獲得経験値+X%
+    int dg;                                                                     //近距離回避力
+    int er;                                                                     //遠距離回避力
+    int me;                                                                     //確率魔法回避力
+    int mhp;                                                                    //最大HP+X%
+    int mmp;                                                                    //最大MP+X%
+    int mexp;                                                                   //獲得経験値+X%
     double enemy_hit_rate;
     int cbdmg;
     double hp;
@@ -454,14 +454,14 @@ public class Calculator implements Common {
     // キー入力ディレイ
     double key_delay = 0.1815;
 
-    double ce_rate = 0.0500;    //サイクロンの確率5%
-    double bk_rate = 0.0500;    //ブローアタックの確率5%
-    double bs_rate = 0.3333;    //バーニングスピッツの確率33%
-    double db_rate = 0.3333;    //ダブルブレイクの確率33%
-    double ef_rate = 0.4000;    //エレメンタルファイアーの確率40%
-    double qe_rate = 0.4000;    //クエイクの確率40%
-    double pb_rate = 0.4000;    //ブレイブメンタルの確率40%
-    double re_rate = 0.1800;    //レイジの確率18%
+    double ce_rate = 0.0500;                                                    //サイクロンの確率5%
+    double bk_rate = 0.0500;                                                    //ブローアタックの確率5%
+    double bs_rate = 0.3333;                                                    //バーニングスピッツの確率33%
+    double db_rate = 0.3333;                                                    //ダブルブレイクの確率33%
+    double ef_rate = 0.4000;                                                    //エレメンタルファイアーの確率40%
+    double qe_rate = 0.4000;                                                    //クエイクの確率40%
+    double pb_rate = 0.4000;                                                    //ブレイブメンタルの確率40%
+    double re_rate = 0.1800;                                                    //レイジの確率18%
 
     public Calculator(UI ui) {
         this.ui = ui;
@@ -595,23 +595,24 @@ public class Calculator implements Common {
         }
 
         // セット効果
-        int set1 = 0, set2 = 0, set3 = 0;// 王家セット
-        int set4 = 0, set5 = 0, set6 = 0;// 浄化セット
-        int set7 = 0, set8 = 0;// 極寒、アイスクイーンセット
-        int set9 = 0;// 修練者セット
-        int set10 = 0, set11 = 0, set12 = 0;//釣りセット
-        int set13 = 0;//軍王セット
-        int set14 = 0;//DKセット
-        int set15 = 0;//セマオリムセット セマのリング+オリムのアミュレット
-        int set16 = 0;//ボーンセット ボーンヘルム+ボーンアーマー+ボーンシールド
-        int set17 = 0;//アイアンセット アイアンヘルム+アイアンプレートメイル+アイアングローブ+アイアンブーツ+アイアンシールド
-        int set18 = 0;//ウィザードセット ウィザードの帽子+ウィザードの服
+        int set1 = 0, set2 = 0, set3 = 0;                                       //王家セット
+        int set4 = 0, set5 = 0, set6 = 0;                                       //浄化セット
+        int set7 = 0, set8 = 0;                                                 //極寒、アイスクイーンセット
+        int set9 = 0;                                                           //修練者セット
+        int set10 = 0, set11 = 0, set12 = 0;                                    //釣りセット
+        int set13 = 0;                                                          //軍王セット
+        int set14 = 0;                                                          //DKセット
+        int set15 = 0;                                                          //セマオリムセット セマのリング+オリムのアミュレット
+        int set16 = 0;                                                          //ボーンセット ボーンヘルム+ボーンアーマー+ボーンシールド
+        int set17 = 0;                                                          //アイアンセット アイアンヘルム+アイアンプレートメイル+アイアングローブ+アイアンブーツ+アイアンシールド
+        int set18 = 0;                                                          //ウィザードセット ウィザードの帽子+ウィザードの服
 
         for (Bougu bougu1 : bougu) {
             if (bougu1.name.equals("ウィザードの帽子")
                     || bougu1.name.equals("ウィザードの服")) {
                 set18++;
             }
+
             if (bougu1.name.equals("アイアンヘルム")
                     || bougu1.name.equals("アイアンプレートメイル")
                     || bougu1.name.equals("アイアングローブ")
@@ -619,6 +620,7 @@ public class Calculator implements Common {
                     || bougu1.name.equals("アイアンシールド")) {
                 set17++;
             }
+
             if (bougu1.name.equals("ボーンヘルム")
                     || bougu1.name.equals("ボーンアーマー")
                     || bougu1.name.equals("ボーンシールド")) {
@@ -649,12 +651,15 @@ public class Calculator implements Common {
                 set11++;
                 set12++;
             }
+
             if (bougu1.name.equals("レッドムーンネックレス")) {
                 set10 += 2;
             }
+
             if (bougu1.name.equals("ホワイトムーンネックレス")) {
                 set11 += 2;
             }
+
             if (bougu1.name.equals("ブラックムーンネックレス")) {
                 set12 += 2;
             }
@@ -664,35 +669,45 @@ public class Calculator implements Common {
                 set2++;
                 set3++;
             }
+
             if (bougu1.name.equals("浄化のイアリング")) {
                 set4++;
                 set5++;
                 set6++;
             }
+
             if (bougu1.name.equals("王家の猛きアミュレット")) {
                 set1 += 2;
             }
+
             if (bougu1.name.equals("王家の賢きアミュレット")) {
                 set2 += 2;
             }
+
             if (bougu1.name.equals("王家の強きアミュレット")) {
                 set3 += 2;
             }
+
             if (bougu1.name.equals("青呪のアミュレット")) {
                 set4 += 2;
             }
+
             if (bougu1.name.equals("赤呪のアミュレット")) {
                 set5 += 2;
             }
+
             if (bougu1.name.equals("緑呪のアミュレット")) {
                 set6 += 2;
             }
+
             if (bougu1.name.contains("極寒")) {
                 set7++;
             }
+
             if (bougu1.name.contains("アイスクイーン")) {
                 set8++;
             }
+
             if (bougu1.name.contains("修練者")) {
                 set9++;
             }
@@ -780,6 +795,7 @@ public class Calculator implements Common {
             //ui.cb_morph_level.setSelectedItem("80");
             //ui.cb_morph_type.setSelectedItem("近/遠特化");
         }
+
         //セマ・オリムセット AC-5 STR+1 DEX+1 CON+1 INT+1 WIS+1 CHA+1 最大HP+50
         if (set15 >= 2) {
             buff.AC -= 5;
@@ -791,12 +807,14 @@ public class Calculator implements Common {
             buff.ST[CHA] += 1;
             buff.HP += 50;
         }
+
         //ボーンセット AC-5 MR+5 最大HP+50
         if (set16 == 3) {
             buff.AC -= 5;
             buff.MR += 5;
             buff.HP += 50;
         }
+
         //アイアンセット AC-5 STR+1 MR+10 最大HP+50
         if (set17 == 5) {
             buff.AC -= 5;
@@ -804,6 +822,7 @@ public class Calculator implements Common {
             buff.MR += 10;
             buff.HP += 50;
         }
+
         //ウィザードセット AC-3 MR+8 MPR+8 最大MP+50
         if (set18 == 2) {
             buff.AC -= 3;
@@ -811,6 +830,7 @@ public class Calculator implements Common {
             buff.MPR += 8;
             buff.HP += 50;
         }
+
         //ウィズダムポーション
         ui.cb_buff[ITEM_WIZP].setToolTipText("SP+2 MPR+2");
         if (ui.cb_buff[ITEM_WIZP].isSelected()) {
@@ -1598,7 +1618,7 @@ public class Calculator implements Common {
                     buff.element_resist[WIND] += 10;
                     buff.element_resist[EARTH] += 10;
                     buff.element_resist[WATER] += 10;
-                    ui.cb_buff[ITEM_COOKING].setToolTipText("<html>"+"水属性抵抗+10 地属性抵抗+10 風属性抵抗+10 火属性抵抗+10"
+                    ui.cb_buff[ITEM_COOKING].setToolTipText("<html>"+ "水属性抵抗+10 地属性抵抗+10 風属性抵抗+10 火属性抵抗+10"
                                                             + "<br>"+ "MR+10 HPR+2 MPR+3 SP+2 獲得経験値+10% ダメージ低下+2 15分"+"</html>");
                     break;
                 case 9:                                 //パタラシのサーモンカナッペ
@@ -1613,7 +1633,7 @@ public class Calculator implements Common {
                     buff.element_resist[WIND] += 10;
                     buff.element_resist[EARTH] += 10;
                     buff.element_resist[WATER] += 10;
-                    ui.cb_buff[ITEM_COOKING].setToolTipText("<html>"+"水属性抵抗+10 地属性抵抗+10 風属性抵抗+10 火属性抵抗+10"
+                    ui.cb_buff[ITEM_COOKING].setToolTipText("<html>"+ "水属性抵抗+10 地属性抵抗+10 風属性抵抗+10 火属性抵抗+10"
                                                             + "<br>"+ "MR+10 HPR+2 MPR+2 遠距離ダメージ+2 遠距離命中+1 獲得経験値+10% ダメージ低下+2 15分"+"</html>");
                     break;
                 case 8:                                 //パタラシの和牛ステーキ
@@ -1628,7 +1648,7 @@ public class Calculator implements Common {
                     buff.element_resist[WIND] += 10;
                     buff.element_resist[EARTH] += 10;
                     buff.element_resist[WATER] += 10;
-                    ui.cb_buff[ITEM_COOKING].setToolTipText("<html>"+"水属性抵抗+10 地属性抵抗+10 風属性抵抗+10 火属性抵抗+10"
+                    ui.cb_buff[ITEM_COOKING].setToolTipText("<html>"+ "水属性抵抗+10 地属性抵抗+10 風属性抵抗+10 火属性抵抗+10"
                                                             + "<br>"+ "MR+10 HPR+2 MPR+2 近距離ダメージ+2 近距離命中+1 獲得経験値+10% ダメージ低下+2 15分"+"</html>");
                     break;
                 case 7:                                 //真心がこもった料理
@@ -1645,7 +1665,7 @@ public class Calculator implements Common {
                     buff.element_resist[WIND] += 10;
                     buff.element_resist[EARTH] += 10;
                     buff.element_resist[WATER] += 10;
-                    ui.cb_buff[ITEM_COOKING].setToolTipText("<html>"+"水属性抵抗+10 地属性抵抗+10 風属性抵抗+10 火属性抵抗+10"
+                    ui.cb_buff[ITEM_COOKING].setToolTipText("<html>"+ "水属性抵抗+10 地属性抵抗+10 風属性抵抗+10 火属性抵抗+10"
                                                             + "<br>"+ "近距離ダメージ+2 近距離命中+2 遠距離ダメージ+2 遠距離命中+2"
                                                             + "<br>"+ "MR+15 HPR+3 MPR+4 SP+2 ダメージ低下+5 15分20秒"+"</html>");
                     break;
@@ -1663,7 +1683,7 @@ public class Calculator implements Common {
                     buff.element_resist[WIND] += 10;
                     buff.element_resist[EARTH] += 10;
                     buff.element_resist[WATER] += 10;
-                    ui.cb_buff[ITEM_COOKING].setToolTipText("<html>"+"水属性抵抗+10 地属性抵抗+10 風属性抵抗+10 火属性抵抗+10"
+                    ui.cb_buff[ITEM_COOKING].setToolTipText("<html>"+ "水属性抵抗+10 地属性抵抗+10 風属性抵抗+10 火属性抵抗+10"
                                                             + "<br>"+ "近距離ダメージ+2 近距離命中+2 遠距離ダメージ+2 遠距離命中+2"
                                                             + "<br>"+ "MR+15 HPR+3 MPR+4 SP+2 ダメージ低下+5 15分20秒"+"</html>");
                     break;
@@ -1681,7 +1701,7 @@ public class Calculator implements Common {
                     buff.ailment[HIT_SPIRIT] += 3;          //精霊命中+3
                     buff.ailment[HIT_SECRET] += 3;          //秘技命中+3
                     buff.ailment[HIT_TERROR] += 3;          //恐怖命中+3
-                    ui.cb_buff[ITEM_COOKING].setToolTipText("<html>"+"水属性抵抗+10 地属性抵抗+10 風属性抵抗+10 火属性抵抗+10"
+                    ui.cb_buff[ITEM_COOKING].setToolTipText("<html>"+ "水属性抵抗+10 地属性抵抗+10 風属性抵抗+10 火属性抵抗+10"
                                                             + "<br>"+ "MR+10 HPR+2 MPR+3 SP+2 ダメージ低下+2 全クラススキル命中+3 30分"+"</html>");
                     break;
                 case 4:                                 //賢い七面鳥焼き
@@ -1694,7 +1714,7 @@ public class Calculator implements Common {
                     buff.element_resist[WATER] += 10;
                     buff.element_resist[WIND] += 10;
                     buff.element_resist[EARTH] += 10;
-                    ui.cb_buff[ITEM_COOKING].setToolTipText("<html>"+"水属性抵抗+10 地属性抵抗+10 風属性抵抗+10 火属性抵抗+10"
+                    ui.cb_buff[ITEM_COOKING].setToolTipText("<html>"+ "水属性抵抗+10 地属性抵抗+10 風属性抵抗+10 火属性抵抗+10"
                                                             + "<br>"+ "MR+10 HPR+2 MPR+3 SP+2 ダメージ低下+2 30分"+"</html>");
                     break;
                 case 3:                                 //祝福された素早い鮭の煮付
@@ -1712,7 +1732,7 @@ public class Calculator implements Common {
                     buff.ailment[HIT_SPIRIT] += 3;          //精霊命中+3
                     buff.ailment[HIT_SECRET] += 3;          //秘技命中+3
                     buff.ailment[HIT_TERROR] += 3;          //恐怖命中+3
-                    ui.cb_buff[ITEM_COOKING].setToolTipText("<html>"+"水属性抵抗+10 地属性抵抗+10 風属性抵抗+10 火属性抵抗+10"
+                    ui.cb_buff[ITEM_COOKING].setToolTipText("<html>"+ "水属性抵抗+10 地属性抵抗+10 風属性抵抗+10 火属性抵抗+10"
                                                             + "<br>"+ "MR+10 HPR+2 MPR+3 遠距離ダメージ+2 遠距離命中+1 ダメージ低下+2 全クラススキル命中+3 30分"+"</html>");
                     break;
                 case 2:                                 //素早い鮭の煮付
@@ -1726,7 +1746,7 @@ public class Calculator implements Common {
                     buff.element_resist[WATER] += 10;
                     buff.element_resist[WIND] += 10;
                     buff.element_resist[EARTH] += 10;
-                    ui.cb_buff[ITEM_COOKING].setToolTipText("<html>"+"水属性抵抗+10 地属性抵抗+10 風属性抵抗+10 火属性抵抗+10"
+                    ui.cb_buff[ITEM_COOKING].setToolTipText("<html>"+ "水属性抵抗+10 地属性抵抗+10 風属性抵抗+10 火属性抵抗+10"
                                                             + "<br>"+ "MR+10 HPR+2 MPR+3 遠距離ダメージ+2 遠距離命中+1 ダメージ低下+2 30分"+"</html>");
                     break;
                 case 1:                                 //祝福された力強い和牛ステーキ
@@ -1744,7 +1764,7 @@ public class Calculator implements Common {
                     buff.ailment[HIT_SPIRIT] += 3;          //精霊命中+3
                     buff.ailment[HIT_SECRET] += 3;          //秘技命中+3
                     buff.ailment[HIT_TERROR] += 3;          //恐怖命中+3
-                    ui.cb_buff[ITEM_COOKING].setToolTipText("<html>"+"水属性抵抗+10 地属性抵抗+10 風属性抵抗+10 火属性抵抗+10"
+                    ui.cb_buff[ITEM_COOKING].setToolTipText("<html>"+ "水属性抵抗+10 地属性抵抗+10 風属性抵抗+10 火属性抵抗+10"
                                                             + "<br>"+ "MR+10 HPR+2 MPR+3 近距離ダメージ+2 近距離命中+1 ダメージ低下+2 全クラススキル命中+3 30分"+"</html>");
                     break;
                 case 0:                                 //力強い和牛ステーキ
@@ -1758,7 +1778,7 @@ public class Calculator implements Common {
                     buff.element_resist[WATER] += 10;
                     buff.element_resist[WIND] += 10;
                     buff.element_resist[EARTH] += 10;
-                    ui.cb_buff[ITEM_COOKING].setToolTipText("<html>"+"水属性抵抗+10 地属性抵抗+10 風属性抵抗+10 火属性抵抗+10"
+                    ui.cb_buff[ITEM_COOKING].setToolTipText("<html>"+ "水属性抵抗+10 地属性抵抗+10 風属性抵抗+10 火属性抵抗+10"
                                                             + "<br>"+ "MR+10 HPR+2 MPR+3 近距離ダメージ+2 近距離命中+1 ダメージ低下+2 30分"+"</html>");
                     break;
                 default:
@@ -4955,6 +4975,7 @@ public class Calculator implements Common {
                                                   + "<br>"+ "材質: 鉱石"
                                                   + "<br>"+ "重さ: 1"+"</html>");
         }
+
         //タリスマン
             switch (ui.cb_pattern_l2.getSelectedIndex()) {
                 case 0:
@@ -4984,7 +5005,8 @@ public class Calculator implements Common {
                 default:
                     break;
             }
-        //オルターストーン
+
+            //オルターストーン
         if (ui.cb_pattern_r2.getSelectedIndex() >= 6 && ui.cb_pattern_r2.getSelectedIndex() <= 8) {
 
             ui.cb_alterstone_en.setEnabled(true);
@@ -5316,6 +5338,7 @@ public class Calculator implements Common {
                     break;
             }
         }
+
         //DEX
         ui.cb_buff[B_DEX].setToolTipText("<html>"+ "DEX+3 ドレスデクスタリティー"
                                          + "<br>"+ "DEX+5 フィジカルエンチャント"

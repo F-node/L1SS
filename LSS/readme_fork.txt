@@ -1,6 +1,16 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2020/09/25
+Update 4.2.3
+LSS/src/lss/Bougu.java
+LSS/src/lss/Calculator.java
+LSS/src/lss/UI.java
+修正
+	コメントとコメントの位置
+	エリクサルーンのUI順序
+	[体力/知力/知恵]を[知力/知恵/体力]の順へ
+
 2020/09/15
 Update 4.2.2
 LSS/src/lss/Calculator.java
