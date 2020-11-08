@@ -1,6 +1,25 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2020/11/08
+Update 4.2.4
+LSS/data/E.zip
+LSS/src/lss/Bougu.java
+LSS/src/lss/Buff.java
+LSS/src/lss/Buki.java
+LSS/src/lss/Common.java
+修正	
+	フェンサーが装備不可能とのことで修正	
+	ディヴァインエルブンプレートメイル
+	真レイピア
+	パイレーツクローク
+	ホノオノ外套
+	コオリノ外套
+	アラシノ外套
+	ダイチノ外套
+
+	ソースファイルのコメント位置の調整
+
 2020/09/25
 Update 4.2.3
 LSS/src/lss/Bougu.java
