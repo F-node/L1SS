@@ -149,7 +149,7 @@ public interface Common {
     final int E_EFN = 155;          //LV60  Elemental FalldowN            エレメンタルフォールダウン(未実装)
     final int E_SLE = 156;          //LV60  Summon Lesser Elemental       サモンレッサーエレメンタル(未実装)
     final int E_TAW = 157;          //LV45  Triple ArroW                  トリプルアロー(未実装)
-    final int E_BSL = 158;          //LV45  Bloody SouL                   ブラッディソウル(未実装)   
+    final int E_BSL = 158;          //LV45  Bloody SouL                   ブラッディソウル(未実装)
     final int E_EPN = 114;          //LV45  Elemental ProtectioN          エレメンタルプロテクション
     final int E_RET = 19;           //LV30  Resist ElemenT                レジストエレメント
     final int E_CMD = 12;           //LV30  Clear MinD                    クリアマインド

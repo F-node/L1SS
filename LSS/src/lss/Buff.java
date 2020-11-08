@@ -114,7 +114,7 @@ public class Buff implements Common {
             if (line.startsWith("ダメージ低下=")) {
                 DR = Integer.parseInt(line.split("=")[1]);
             }           
-            if (line.startsWith("ダメージ低下無視=")) {           
+            if (line.startsWith("ダメージ低下無視=")) {
                 DR_IGNORED = Integer.parseInt(line.split("=")[1]);
             }
             if (line.startsWith("PVP追加ダメージ=")) {
@@ -177,7 +177,6 @@ public class Buff implements Common {
             if (line.startsWith("獲得経験値=")) {
                MEXP = Integer.parseInt(line.split("=")[1]);
             }
-
         }
     }
 }
