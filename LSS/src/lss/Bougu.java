@@ -1550,7 +1550,8 @@ public class Bougu implements Common {
 //スナッパーリング
         if (name.contains("スナッパー")) {
             if (name.contains("祝福された")) {
-                if (name.contains("勇士")) {
+//祝福された勇士のスナッパーリング
+if (name.contains("勇士")) {
                     switch (enchant) {
                         case 8:
                                                                                 //AC-7
@@ -1608,7 +1609,8 @@ public class Bougu implements Common {
                                                                                 //HP自然回復+2
                                                                                 //所持重量増加+360
                     }
-                } else if (name.contains("知恵")) {
+//祝福された知恵のスナッパーリング
+} else if (name.contains("知恵")) {
                     switch (enchant) {
                         case 8:
                                                                                 //AC-6
@@ -1660,7 +1662,8 @@ public class Bougu implements Common {
                                                                                 //MP自然回復+1
                                                                                 //所持重量増加+360
                     }
-                } else if (name.contains("体力")) {
+//祝福された体力のスナッパーリング
+        } else if (name.contains("体力")) {
                     switch (enchant) {
                         case 8:
                                                                                 //AC-7
@@ -1708,7 +1711,8 @@ public class Bougu implements Common {
                              op2.HP += 30;              //HP+30                 //HP+80
                                                                                 //所持重量増加+360
                     }
-                } else if (name.contains("魔法抵抗")) {
+//祝福された魔法抵抗のスナッパーリング
+        } else if (name.contains("魔法抵抗")) {
                     switch (enchant) {
                         case 8:
                                                                                 //AC-7
@@ -1759,7 +1763,8 @@ public class Bougu implements Common {
                             op2.HP += 30;               //HP+30                 //HP+30
                                                                                 //所持重量増加+360
                     }
-                } else if (name.contains("集中") || name.contains("マナ") || name.contains("回復")) {
+//祝福された集中/マナ/回復のスナッパーリング
+        } else if (name.contains("集中") || name.contains("マナ") || name.contains("回復")) {
                     switch (enchant) {
                         case 8:
                                                                                 //AC-5
@@ -1820,6 +1825,7 @@ public class Bougu implements Common {
                                                                                 //所持重量増加+360
                     }
                 }
+//勇士のスナッパーリング
             } else if (name.contains("勇士")) {
                 switch (enchant) {
                     case 8:
@@ -1882,6 +1888,7 @@ public class Bougu implements Common {
                                                                                 //HP自然回復+2
                                                                                 //所持重量増加+360
                 }
+//知恵のスナッパーリング
             } else if (name.contains("知恵")) {
                 switch (enchant) {
                     case 8:
@@ -1944,6 +1951,7 @@ public class Bougu implements Common {
                                                                                 //MP自然回復+1
                                                                                 //所持重量増加+360
                 }
+//体力のスナッパーリング
             } else if (name.contains("体力")) {
                 switch (enchant) {
                     case 8:
@@ -1996,6 +2004,7 @@ public class Bougu implements Common {
                         op2.HP += 15;                    //HP+5                 //HP+65
                                                                                 //所持重量増加+360
                 }
+//魔法抵抗のスナッパーリング
             } else if (name.contains("魔法抵抗")) {
                 switch (enchant) {
                     case 8:
