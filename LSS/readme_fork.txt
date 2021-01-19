@@ -1,6 +1,20 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2021/01/19
+Update 4.2.6
+LSS/data/E.zip
+追加
+	2021年記念リング
+	 0 AC2 情熱 MR5 HP+21 MP+21 ゴールド 重さ3
+	+1 AC2 情熱 MR5 HP+26 MP+21 ゴールド 重さ3
+	+2 AC2 情熱 MR5 HP+31 MP+21 ゴールド 重さ3
+	+3 AC2 情熱 MR5 HP+41 MP+21 ゴールド 重さ3
+	+4 AC2 情熱 MR5 HP+51 MP+21 ゴールド 重さ3
+	+5 AC2 情熱 近距離ダメージ+1 遠距離ダメージ+1      MR5 HP+61 MP+21                   ゴールド 重さ3
+	+6 AC2 情熱 近距離ダメージ+2 遠距離ダメージ+2      MR6 HP+61 MP+21 PVP追加ダメージ+1 ゴールド 重さ3
+	+7 AC2 情熱 近距離ダメージ+3 遠距離ダメージ+3 SP+1 MR8 HP+71 MP+21 PVP追加ダメージ+2 ゴールド 重さ3
+
 2020/12/18
 Update 4.2.5
 LSS/data/E.zip
