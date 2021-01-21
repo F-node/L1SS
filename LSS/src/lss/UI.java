@@ -793,7 +793,8 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         String elixir_rune_list[] = {"エリクサールーン", "力のエリクサールーン", "機敏のエリクサールーン", "知力のエリクサールーン", "知恵のエリクサールーン", "体力のエリクサールーン"
                 ,"アルカの遺物","強化されたアルカの遺物"
                 ,"ドラゴンの遺物","強化されたドラゴンの遺物(腕力)","強化されたドラゴンの遺物(知力)","強化されたドラゴンの遺物(機敏)"
-                ,"真デスナイトの遺物","強化された真デスナイトの遺物(腕力)","強化された真デスナイトの遺物(知力)","強化された真デスナイトの遺物(機敏)"};
+                ,"真デスナイトの遺物","強化された真デスナイトの遺物(腕力)","強化された真デスナイトの遺物(知力)","強化された真デスナイトの遺物(機敏)"
+                ,"英雄の遺物","強化された英雄の遺物(腕力)","強化された英雄の遺物(知力)","強化された英雄の遺物袋(機敏)"};
         elixir_rune = new WideComboBox(elixir_rune_list);
         elixir_rune.setBounds(50, 460, 150, 20);
         elixir_rune.addActionListener(this);
@@ -1859,6 +1860,7 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[D_SFG] = new JCheckBox("シャドウファング");
         cb_buff[D_SFG].setBounds(200 * row, 20 * col++, 150, 20);
         cb_buff[D_SFG].addActionListener(this);
+        cb_buff[D_SFG].setEnabled(false);
         panels[2].add(cb_buff[D_SFG]);
 
         //ファイナルバーン
