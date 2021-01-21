@@ -2572,12 +2572,12 @@ public class Calculator implements Common {
                                          + "<br>"+ "近距離ダメージ+5"
                                          + "<br>"+ "ホーリーウェポン、エンチャントウェポン、ブレスウェポンの上位魔法"
                                          + "<br>"+ "[習得レベル:60][持続時間:3分12秒][対象:術者][触媒:ダークストーン(1)]"+"</html>");
-        if (ui.cb_buff[D_SFG].isSelected()) {
-        //[キャラ/武器]をONにする
-        ui.cb_buff[BUKI].setSelected(true);
-        //"武器 +5"を選択する
-        ui.cb_buff_group[BUKI].setSelectedItem("武器 +5");
-        }
+//        if (ui.cb_buff[D_SFG].isSelected()) {
+//        //[キャラ/武器]をONにする
+//        ui.cb_buff[BUKI].setSelected(true);
+//        //"武器 +5"を選択する
+//        ui.cb_buff_group[BUKI].setSelectedItem("武器 +5");
+//        }
 
         //ファイナルバーン
         ui.cb_buff[D_FBN].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
@@ -4967,6 +4967,95 @@ public class Calculator implements Common {
                                                   + "<br>"+ "遠距離ダメージ: +4"
                                                   + "<br>"+ "遠距離命中: +6"
                                                   + "<br>"+ "獲得経験値: +10%"
+                                                  + "<br>"+ "祝福消耗効率: +5%"
+                                                  + "<br>"+ "技術耐性: +3"
+                                                  + "<br>"+ "精霊耐性: +3"
+                                                  + "<br>"+ "秘技耐性: +3"
+                                                  + "<br>"+ "恐怖耐性: +3"
+                                                  + "<br>"+ "材質: 鉱石"
+                                                  + "<br>"+ "重さ: 1"+"</html>");
+        }else if (e == 16){                             //英雄の遺物
+                    buff.MEXP += 2;                     //EXP+2%
+                    buff.AC -= 3;                       //AC-3
+                    buff.DMG_SHORT += 2;                //近距離ダメージ+2
+                    buff.DMG_LONG += 2;                 //遠距離ダメージ+2
+                    buff.SP += 2;                       //SP+2
+                    buff.HIT_SHORT += 2;                //近距離命中+2
+                    buff.HIT_LONG += 2;                 //遠距離命中+2
+                    buff.HIT_MAGIC += 2;                //魔法命中+2
+                    ui.elixir_rune.setToolTipText("<html>"+ "獲得経験値: +2%"
+                                                  + "<br>"+ "AC: -3"
+                                                  + "<br>"+ "近距離ダメージ: +2"
+                                                  + "<br>"+ "遠距離ダメージ: +2"
+                                                  + "<br>"+ "SP: +2"
+                                                  + "<br>"+ "近距離命中: +2"
+                                                  + "<br>"+ "遠距離命中: +2"
+                                                  + "<br>"+ "魔法命中: +2"
+                                                  + "<br>"+ "材質: 鉱石"
+                                                  + "<br>"+ "重さ: 1"+"</html>");
+        }else if (e == 17){                             //強化された英雄の遺物(腕力)
+                    buff.MEXP += 10;                    //獲得経験値+10%
+                    buff.AC -= 4;                       //AC-4
+                    buff.ST[STR] += 1;                  //STR+1
+                    buff.DMG_SHORT += 4;                //近距離ダメージ+4
+                    buff.HIT_SHORT += 6;                //近距離命中+6
+                                                        //祝福消耗効率+5%
+                                                        //全耐性+3
+                    buff.ailment[STUN] += 3;            //技術耐性+3
+                    buff.ailment[SPIRIT] += 3;          //精霊耐性+3
+                    buff.ailment[SECRET] += 3;          //秘儀耐性+3
+                    buff.ailment[TERROR] += 3;          //恐怖耐性+3
+                    ui.elixir_rune.setToolTipText("<html>"+ "獲得経験値: +10%"
+                                                  + "<br>"+ "AC: -4"
+                                                  + "<br>"+ "STR: +1"
+                                                  + "<br>"+ "近距離ダメージ: +4"
+                                                  + "<br>"+ "近距離命中: +6"
+                                                  + "<br>"+ "祝福消耗効率: +5%"
+                                                  + "<br>"+ "技術耐性: +3"
+                                                  + "<br>"+ "精霊耐性: +3"
+                                                  + "<br>"+ "秘技耐性: +3"
+                                                  + "<br>"+ "恐怖耐性: +3"
+                                                  + "<br>"+ "材質: 鉱石"
+                                                  + "<br>"+ "重さ: 1"+"</html>");
+        }else if (e == 18){                             //強化された英雄の遺物(知力)
+                    buff.MEXP += 10;                    //獲得経験値+10%
+                    buff.AC -= 4;                       //AC-4
+                    buff.ST[INT] += 1;                  //INT+1
+                    buff.SP += 4;                       //SP+4
+                    buff.HIT_MAGIC += 6;                //魔法命中+6
+                                                        //祝福消耗効率+5%
+                                                        //全耐性+3
+                    buff.ailment[STUN] += 3;            //技術耐性+3
+                    buff.ailment[SPIRIT] += 3;          //精霊耐性+3
+                    buff.ailment[SECRET] += 3;          //秘儀耐性+3
+                    buff.ailment[TERROR] += 3;          //恐怖耐性+3
+                    ui.elixir_rune.setToolTipText("<html>"+ "獲得経験値: +10%"
+                                                  + "<br>"+ "INT: +1"
+                                                  + "<br>"+ "SP: +4"
+                                                  + "<br>"+ "魔法命中: +6"
+                                                  + "<br>"+ "祝福消耗効率: +5%"
+                                                  + "<br>"+ "技術耐性: +3"
+                                                  + "<br>"+ "精霊耐性: +3"
+                                                  + "<br>"+ "秘技耐性: +3"
+                                                  + "<br>"+ "恐怖耐性: +3"
+                                                  + "<br>"+ "材質: 鉱石"
+                                                  + "<br>"+ "重さ: 1"+"</html>");
+        }else if (e == 19){                             //強化された英雄の遺物(機敏)
+                    buff.MEXP += 10;                    //獲得経験値+10%
+                    buff.AC -= 4;                       //AC-4
+                    buff.ST[DEX] += 1;                  //DEX+1
+                    buff.DMG_LONG += 4;                 //遠距離ダメージ+4
+                    buff.HIT_LONG += 6;                 //遠距離命中+6
+                                                        //祝福消耗効率+5%
+                                                        //全耐性+3
+                    buff.ailment[STUN] += 3;            //技術耐性+3
+                    buff.ailment[SPIRIT] += 3;          //精霊耐性+3
+                    buff.ailment[SECRET] += 3;          //秘儀耐性+3
+                    buff.ailment[TERROR] += 3;          //恐怖耐性+3
+                    ui.elixir_rune.setToolTipText("<html>"+ "獲得経験値: +2%"
+                                                  + "<br>"+ "DEX: +1"
+                                                  + "<br>"+ "遠距離ダメージ: +4"
+                                                  + "<br>"+ "遠距離命中: +6"
                                                   + "<br>"+ "祝福消耗効率: +5%"
                                                   + "<br>"+ "技術耐性: +3"
                                                   + "<br>"+ "精霊耐性: +3"
