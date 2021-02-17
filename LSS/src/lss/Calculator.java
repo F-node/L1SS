@@ -5052,7 +5052,7 @@ public class Calculator implements Common {
                     buff.ailment[SPIRIT] += 3;          //精霊耐性+3
                     buff.ailment[SECRET] += 3;          //秘儀耐性+3
                     buff.ailment[TERROR] += 3;          //恐怖耐性+3
-                    ui.elixir_rune.setToolTipText("<html>"+ "獲得経験値: +2%"
+                    ui.elixir_rune.setToolTipText("<html>"+ "獲得経験値: +10%"
                                                   + "<br>"+ "DEX: +1"
                                                   + "<br>"+ "遠距離ダメージ: +4"
                                                   + "<br>"+ "遠距離命中: +6"
