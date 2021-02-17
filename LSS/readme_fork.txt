@@ -1,6 +1,26 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2021/02/17
+Update 4.2.8
+LSS/data/E.zip
+LSS/src/lss/Bougu.java
+LSS/src/lss/Calculator.java
+修正
+	強化された英雄の遺物袋(機敏)のツールチップ
+追加
+	鬼のマント
+		着用クラス:共通
+		材質:ブラックミスリル
+		重量:0
+		基本オプション:AC-7/MR+12
+		追加オプション
+		+1    :AC-6/MR14
+		+2～+5:HP+20/MP+10/MR+2
+		+3～+5:全耐性+1
+		+5    :ER+4/ME+3
+		注意:追加オプションについては今後確認必須
+
 2021/01/21
 Update 4.2.7
 LSS/src/lss/Calculator.java

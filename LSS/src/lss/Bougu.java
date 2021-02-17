@@ -86,7 +86,7 @@ public class Bougu implements Common {
 
     public String getText() {
         String text = "";
-        if (op.WEIGHT > 0) {
+        if (op.WEIGHT >= 0) {
             text += "<html>"+ "AC: " + (op.AC * -1) + "+" + (op2.AC * -1);
         }
         if (op.HP + op2.HP > 0) {
@@ -242,7 +242,7 @@ public class Bougu implements Common {
         if (!op.MATERIAL.isEmpty()) {
             text += "<br>"+ "ÞŽ¿: " + op.MATERIAL;
         }
-        if (op.WEIGHT > 0) {
+        if (op.WEIGHT >= 0) {
             text += "<br>"+ "d‚³: " + op.WEIGHT;
         }
         if (!op.effect.isEmpty()) {
@@ -1168,6 +1168,51 @@ public class Bougu implements Common {
         }
 
 //ƒNƒ[ƒN
+        if (name.equals("‹S‚Ìƒ}ƒ“ƒg")) {
+            if (enchant >= 1) {
+                op2.AC = -6;                                                    //AC-6
+                op2.MR = 14;                                                    //MR+14
+            }
+            if (enchant >= 2) {
+                op2.HP = 20;                                                    //HP+20
+                op2.MP = 10;                                                    //MP+10
+                op2.AC = -6;                                                    //AC-6
+                op2.MR = 16;                                                    //MR+16
+            }
+            if (enchant >= 3) {
+                op2.ailment[STUN] = 1;                                          //‹Zp‘Ï«+1
+                op2.ailment[SPIRIT] = 1;                                        //¸—ì‘Ï«+1
+                op2.ailment[SECRET] = 1;                                        //”é‹Z‘Ï«+1
+                op2.ailment[TERROR] = 1;                                        //‹°•|‘Ï«+1
+                op2.HP = 40;                                                    //HP+40
+                op2.MP = 20;                                                    //MP+20
+                op2.AC = -6;                                                    //AC-6
+                op2.MR = 18;                                                    //MR+18
+            }
+            if (enchant >= 4) {
+                op2.ailment[STUN] = 2;                                          //‹Zp‘Ï«+2
+                op2.ailment[SPIRIT] = 2;                                        //¸—ì‘Ï«+2
+                op2.ailment[SECRET] = 2;                                        //”é‹Z‘Ï«+2
+                op2.ailment[TERROR] = 2;                                        //‹°•|‘Ï«+2
+                op2.HP = 60;                                                    //HP+60
+                op2.MP = 30;                                                    //MP+30
+                op2.AC = -6;                                                    //AC-6
+                op2.MR = 20;                                                    //MR+20
+            }
+            if (enchant >= 5) {
+                op2.ailment[STUN] = 3;                                          //‹Zp‘Ï«+3
+                op2.ailment[SPIRIT] = 3;                                        //¸—ì‘Ï«+3
+                op2.ailment[SECRET] = 3;                                        //”é‹Z‘Ï«+3
+                op2.ailment[TERROR] = 3;                                        //‹°•|‘Ï«+3
+                op2.HP = 80;                                                    //HP+80
+                op2.MP = 40;                                                    //MP+40
+                op2.AC = -6;                                                    //AC-6
+                op2.MR = 22;                                                    //MR+22
+                op2.ER = 4;                                                     //ER+4
+                op2.ME = 3;                                                     //ME+3
+            }
+        }
+
         if (name.equals("Ž½•‚Ìƒ}ƒ“ƒg")) {
             if (enchant >= 10) {
                 op2.ST[CHA] = 4;
