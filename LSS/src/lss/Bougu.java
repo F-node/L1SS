@@ -86,174 +86,178 @@ public class Bougu implements Common {
 
     public String getText() {
         String text = "";
-        if (op.WEIGHT >= 0) {
-            text += "<html>"+ "AC: " + (op.AC * -1) + "+" + (op2.AC * -1);
-        }
-        if (op.HP + op2.HP > 0) {
-            text += "<br>"+ "最大HP: +" + (op.HP + op2.HP);
-        }
-        if (op.MP + op2.MP > 0) {
-            text += "<br>"+ "最大MP: +" + (op.MP + op2.MP);
-        }
-        if (op.HPR + op2.HPR > 0) {
-            text += "<br>"+ "HP自然回復: +" + (op.HPR + op2.HPR);
-        }
-        if (op.HPR + op2.HPR < 0) {
-            text += "<br>"+ "HP自然回復: " + (op.HPR + op2.HPR);
-        }
-        if (op.MPR + op2.MPR > 0) {
-            text += "<br>"+ "MP自然回復: +" + (op.MPR + op2.MPR);
-        }
-        if (op.MPR + op2.MPR < 0) {
-            text += "<br>"+ "MP自然回復: " + (op.MPR + op2.MPR);
-        }
-        if (op.ST[STR] + op2.ST[STR] > 0) {
-            text += "<br>"+ "STR: +" + (op.ST[STR] + op2.ST[STR]);
-        }
-        if (op.ST[DEX] + op2.ST[DEX] > 0) {
-            text += "<br>"+ "DEX: +" + (op.ST[DEX] + op2.ST[DEX]);
-        }
-        if (op.ST[CON] + op2.ST[CON] > 0) {
-            text += "<br>"+ "CON: +" + (op.ST[CON] + op2.ST[CON]);
-        }
-        if (op.ST[INT] + op2.ST[INT] > 0) {
-            text += "<br>"+ "INT: +" + (op.ST[INT] + op2.ST[INT]);
-        }
-        if (op.ST[WIS] + op2.ST[WIS] > 0) {
-            text += "<br>"+ "WIS: +" + (op.ST[WIS] + op2.ST[WIS]);
-        }
-        if (op.ST[CHA] + op2.ST[CHA] > 0) {
-            text += "<br>"+ "CHA: +" + (op.ST[CHA] + op2.ST[CHA]);
-        }
-        if (op.ST[STR] < 0) {
-            text += "<br>"+ "STR: " + op.ST[STR];
-        }
-        if (op.ST[DEX] < 0) {
-            text += "<br>"+ "DEX: " + op.ST[DEX];
-        }
-        if (op.ST[CON] < 0) {
-            text += "<br>"+ "CON:" + op.ST[CON];
-        }
-        if (op.ST[INT] < 0) {
-            text += "<br>"+ "INT: " + op.ST[INT];
-        }
-        if (op.ST[WIS] < 0) {
-            text += "<br>"+ "WIS: " + op.ST[WIS];
-        }
-        if (op.ST[CHA] < 0) {
-            text += "<br>"+ "CHA: " + op.ST[CHA];
-        }
-        if (op.DMG_SHORT + op2.DMG_SHORT > 0) {
-            text += "<br>"+ "近距離ダメージ: +" + (op.DMG_SHORT + op2.DMG_SHORT);
-        }
-        if (op.HIT_SHORT + op2.HIT_SHORT > 0) {
-            text += "<br>"+ "近距離命中: +" + (op.HIT_SHORT + op2.HIT_SHORT);
-        }
-        if (op.DMG_LONG + op2.DMG_LONG > 0) {
-            text += "<br>"+ "遠距離ダメージ: +" + (op.DMG_LONG + op2.DMG_LONG);
-        }
-        if (op.HIT_LONG + op2.HIT_LONG > 0) {
-            text += "<br>"+ "遠距離命中: +" + (op.HIT_LONG + op2.HIT_LONG);
-        }
-        if (op.SP + op2.SP > 0) {
-            text += "<br>"+ "SP: +" + (op.SP + op2.SP);
-        }
-        if (op.SP < 0) {
-            text += "<br>"+ "SP: " + op.SP;
-        }
-        if (op.HIT_MAGIC + op2.HIT_MAGIC > 0) {
-            text += "<br>"+ "魔法命中: +" + (op.HIT_MAGIC + op2.HIT_MAGIC);
-        }
-        if (op.CRI_SHORT + op2.CRI_SHORT > 0) {
-            text += "<br>"+ "近距離クリティカル: +" + (op.CRI_SHORT + op2.CRI_SHORT);
-        }
-        if (op.CRI_LONG + op2.CRI_LONG > 0) {
-            text += "<br>"+ "遠距離クリティカル: +" + (op.CRI_LONG + op2.CRI_LONG);
-        }
-        if (op.CRI_MAGIC + op2.CRI_MAGIC > 0) {
-            text += "<br>"+ "魔法クリティカル: +" + (op.CRI_MAGIC + op2.CRI_MAGIC);
-        }
-        if (op.element_resist[FIRE] > 0) {
-            text += "<br>"+ "火属性MR: " + op.element_resist[FIRE];
-        }
-        if (op.element_resist[WATER] > 0) {
-            text += "<br>"+ "水属性MR: " + op.element_resist[WATER];
-        }
-        if (op.element_resist[WIND] > 0) {
-            text += "<br>"+ "風属性MR: " + op.element_resist[WIND];
-        }
-        if (op.element_resist[EARTH] > 0) {
-            text += "<br>"+ "地属性MR: " + op.element_resist[EARTH];
-        }
-        if (op.MR + op2.MR > 0) {
-            text += "<br>"+ "MR:+" + (op.MR + op2.MR);
-        }
-        if (mr_enchant > 0) {
-            text += "<br>"+ "(強化毎にMR+" + mr_enchant + ")";
-        }
-        if (op.ailment[STUN] + op2.ailment[STUN] > 0) {
-            text += "<br>"+ "技術耐性: +" + (op.ailment[STUN] + op2.ailment[STUN]);
-        }
-        if (op.ailment[SPIRIT] + op2.ailment[SPIRIT] > 0) {
-            text += "<br>"+ "精霊耐性: +" + (op.ailment[SPIRIT] + op2.ailment[SPIRIT]);
-        }
-        if (op.ailment[SECRET] + op2.ailment[SECRET] > 0) {
-            text += "<br>"+ "秘技耐性: +" + (op.ailment[SECRET] + op2.ailment[SECRET]);
-        }
-        if (op.ailment[TERROR] + op2.ailment[TERROR] > 0) {
-            text += "<br>"+ "恐怖耐性: +" + (op.ailment[TERROR] + op2.ailment[TERROR]);
-        }
-        if (op.ailment[HIT_STUN] + op2.ailment[HIT_STUN] > 0) {
-            text += "<br>"+ "技術命中: +" + (op.ailment[HIT_STUN] + op2.ailment[HIT_STUN]);
-        }
-        if (op.ailment[HIT_SPIRIT] + op2.ailment[HIT_SPIRIT] > 0) {
-            text += "<br>"+ "精霊命中: +" + (op.ailment[HIT_SPIRIT] + op2.ailment[HIT_SPIRIT]);
-        }
-        if (op.ailment[HIT_SECRET] + op2.ailment[HIT_SECRET] > 0) {
-            text += "<br>"+ "秘技命中: +" + (op.ailment[HIT_SECRET] + op2.ailment[HIT_SECRET]);
-        }
-        if (op.ailment[HIT_TERROR] + op2.ailment[HIT_TERROR] > 0) {
-            text += "<br>"+ "恐怖命中: +" + (op.ailment[HIT_TERROR] + op2.ailment[HIT_TERROR]);
-        }
-        if (op.DR + op2.DR > 0) {
-            text += "<br>"+ "ダメージ低下: +" + (op.DR + op2.DR);
-        }
-        if (op.DR_IGNORED + op2.DR_IGNORED > 0) {
-            text += "<br>"+ "ダメージ低下無視: +" + (op.DR_IGNORED + op2.DR_IGNORED);
-        }
-        if (op.PVP + op2.PVP > 0) {
-            text += "<br>"+ "PVP追加ダメージ: +" + (op.PVP + op2.PVP);
-        }
-        if (op.PVP_DR + op2.PVP_DR > 0) {
-            text += "<br>"+ "PVPダメージ低下: +" + (op.PVP_DR + op2.PVP_DR);
-        }
+        text += "<html>";
         if (op.MHP + op2.MHP > 0) {
-            text += "<br>"+ "最大HP: +" + (op.MHP + op2.MHP) + "%";
+            text += "最大HP: +" + (op.MHP + op2.MHP) + "%"+ "<br>";
         }
         if (op.MMP + op2.MMP > 0) {
-            text += "<br>"+ "最大MP: +" + (op.MMP + op2.MMP) + "%";
-        }
-        if (op.MEXP + op2.MEXP > 0) {
-            text += "<br>"+ "EXP: +" + (op.MEXP + op2.MEXP) + "%";
-        }
-        if (op.c_weight + op2.c_weight > 0) {
-            text += "<br>"+ "所持重量増加: +" + (op.c_weight + op2.c_weight);
-        }
-        if (!op.MATERIAL.isEmpty()) {
-            text += "<br>"+ "材質: " + op.MATERIAL;
+            text += "最大MP: +" + (op.MMP + op2.MMP) + "%"+ "<br>";
         }
         if (op.WEIGHT >= 0) {
-            text += "<br>"+ "重さ: " + op.WEIGHT;
+            text += "AC: " + (op.AC * -1) + "+" + (op2.AC * -1)+ "<br>";
+        }
+        if (op.HP + op2.HP > 0) {
+            text += "最大HP: +" + (op.HP + op2.HP)+ "<br>";
+        }
+        if (op.MP + op2.MP > 0) {
+            text += "最大MP: +" + (op.MP + op2.MP)+ "<br>";
+        }
+        if (op.HPR + op2.HPR > 0) {
+            text += "HP自然回復: +" + (op.HPR + op2.HPR)+ "<br>";
+        }
+        if (op.HPR + op2.HPR < 0) {
+            text += "HP自然回復: " + (op.HPR + op2.HPR)+ "<br>";
+        }
+        if (op.MPR + op2.MPR > 0) {
+            text += "MP自然回復: +" + (op.MPR + op2.MPR)+ "<br>";
+        }
+        if (op.MPR + op2.MPR < 0) {
+            text += "MP自然回復: " + (op.MPR + op2.MPR)+ "<br>";
+        }
+        if (op.ST[STR] + op2.ST[STR] > 0) {
+            text += "STR: +" + (op.ST[STR] + op2.ST[STR])+ "<br>";
+        }
+        if (op.ST[DEX] + op2.ST[DEX] > 0) {
+            text += "DEX: +" + (op.ST[DEX] + op2.ST[DEX])+ "<br>";
+        }
+        if (op.ST[CON] + op2.ST[CON] > 0) {
+            text += "CON: +" + (op.ST[CON] + op2.ST[CON])+ "<br>";
+        }
+        if (op.ST[INT] + op2.ST[INT] > 0) {
+            text += "INT: +" + (op.ST[INT] + op2.ST[INT])+ "<br>";
+        }
+        if (op.ST[WIS] + op2.ST[WIS] > 0) {
+            text += "WIS: +" + (op.ST[WIS] + op2.ST[WIS])+ "<br>";
+        }
+        if (op.ST[CHA] + op2.ST[CHA] > 0) {
+            text += "CHA: +" + (op.ST[CHA] + op2.ST[CHA])+ "<br>";
+        }
+        if (op.ST[STR] < 0) {
+            text += "STR: " + op.ST[STR]+ "<br>";
+        }
+        if (op.ST[DEX] < 0) {
+            text += "DEX: " + op.ST[DEX]+ "<br>";
+        }
+        if (op.ST[CON] < 0) {
+            text += "CON:" + op.ST[CON]+ "<br>";
+        }
+        if (op.ST[INT] < 0) {
+            text += "INT: " + op.ST[INT]+ "<br>";
+        }
+        if (op.ST[WIS] < 0) {
+            text += "WIS: " + op.ST[WIS]+ "<br>";
+        }
+        if (op.ST[CHA] < 0) {
+            text += "CHA: " + op.ST[CHA]+ "<br>";
+        }
+        if (op.DMG_SHORT + op2.DMG_SHORT > 0) {
+            text += "近距離ダメージ: +" + (op.DMG_SHORT + op2.DMG_SHORT)+ "<br>";
+        }
+        if (op.HIT_SHORT + op2.HIT_SHORT > 0) {
+            text += "近距離命中: +" + (op.HIT_SHORT + op2.HIT_SHORT)+ "<br>";
+        }
+        if (op.DMG_LONG + op2.DMG_LONG > 0) {
+            text += "遠距離ダメージ: +" + (op.DMG_LONG + op2.DMG_LONG)+ "<br>";
+        }
+        if (op.HIT_LONG + op2.HIT_LONG > 0) {
+            text += "遠距離命中: +" + (op.HIT_LONG + op2.HIT_LONG)+ "<br>";
+        }
+        if (op.SP + op2.SP > 0) {
+            text += "SP: +" + (op.SP + op2.SP)+ "<br>";
+        }
+        if (op.SP < 0) {
+            text += "SP: " + op.SP+ "<br>";
+        }
+        if (op.HIT_MAGIC + op2.HIT_MAGIC > 0) {
+            text += "魔法命中: +" + (op.HIT_MAGIC + op2.HIT_MAGIC)+ "<br>";
+        }
+        if (op.CRI_SHORT + op2.CRI_SHORT > 0) {
+            text += "近距離クリティカル: +" + (op.CRI_SHORT + op2.CRI_SHORT)+ "<br>";
+        }
+        if (op.CRI_LONG + op2.CRI_LONG > 0) {
+            text += "遠距離クリティカル: +" + (op.CRI_LONG + op2.CRI_LONG)+ "<br>";
+        }
+        if (op.CRI_MAGIC + op2.CRI_MAGIC > 0) {
+            text += "魔法クリティカル: +" + (op.CRI_MAGIC + op2.CRI_MAGIC)+ "<br>";
+        }
+        if (op.element_resist[FIRE] > 0) {
+            text += "火属性MR: " + op.element_resist[FIRE]+ "<br>";
+        }
+        if (op.element_resist[WATER] > 0) {
+            text += "水属性MR: " + op.element_resist[WATER]+ "<br>";
+        }
+        if (op.element_resist[WIND] > 0) {
+            text += "風属性MR: " + op.element_resist[WIND]+ "<br>";
+        }
+        if (op.element_resist[EARTH] > 0) {
+            text += "地属性MR: " + op.element_resist[EARTH]+ "<br>";
+        }
+        if (op.MR + op2.MR > 0) {
+            text += "MR:+" + (op.MR + op2.MR)+ "<br>";
+        }
+        if (mr_enchant > 0) {
+            text += "(強化毎にMR+" + mr_enchant + ")"+ "<br>";
+        }
+        if (op.DG + op2.DG != 0||op.ER + op2.ER != 0||op.ME + op2.ME != 0) {
+            text += "回避:DG +" + (op.DG + op2.DG);
+            text += ",ER +" + (op.ER + op2.ER);
+            text += ",ME +" + (op.ME + op2.ME)+ "<br>";
+        }
+        if (op.DR + op2.DR > 0) {
+            text += "ダメージ低下: +" + (op.DR + op2.DR)+ "<br>";
+        }
+        if (op.DR_IGNORED + op2.DR_IGNORED > 0) {
+            text += "ダメージ低下無視: +" + (op.DR_IGNORED + op2.DR_IGNORED)+ "<br>";
+        }
+        if (op.PVP + op2.PVP > 0) {
+            text += "PVP追加ダメージ: +" + (op.PVP + op2.PVP)+ "<br>";
+        }
+        if (op.PVP_DR + op2.PVP_DR > 0) {
+            text += "PVPダメージ低下: +" + (op.PVP_DR + op2.PVP_DR)+ "<br>";
+        }
+        if (op.MEXP + op2.MEXP > 0) {
+            text += "EXP: +" + (op.MEXP + op2.MEXP) + "%"+ "<br>";
+        }
+        if (op.c_weight + op2.c_weight > 0) {
+            text += "所持重量増加: +" + (op.c_weight + op2.c_weight)+ "<br>";
+        }
+        if (op.ailment[STUN] + op2.ailment[STUN] > 0) {
+            text += "技術耐性: +" + (op.ailment[STUN] + op2.ailment[STUN])+ "<br>";
+        }
+        if (op.ailment[SPIRIT] + op2.ailment[SPIRIT] > 0) {
+            text += "精霊耐性: +" + (op.ailment[SPIRIT] + op2.ailment[SPIRIT])+ "<br>";
+        }
+        if (op.ailment[SECRET] + op2.ailment[SECRET] > 0) {
+            text += "秘技耐性: +" + (op.ailment[SECRET] + op2.ailment[SECRET])+ "<br>";
+        }
+        if (op.ailment[TERROR] + op2.ailment[TERROR] > 0) {
+            text += "恐怖耐性: +" + (op.ailment[TERROR] + op2.ailment[TERROR])+ "<br>";
+        }
+        if (op.ailment[HIT_STUN] + op2.ailment[HIT_STUN] > 0) {
+            text += "技術命中: +" + (op.ailment[HIT_STUN] + op2.ailment[HIT_STUN])+ "<br>";
+        }
+        if (op.ailment[HIT_SPIRIT] + op2.ailment[HIT_SPIRIT] > 0) {
+            text += "精霊命中: +" + (op.ailment[HIT_SPIRIT] + op2.ailment[HIT_SPIRIT])+ "<br>";
+        }
+        if (op.ailment[HIT_SECRET] + op2.ailment[HIT_SECRET] > 0) {
+            text += "秘技命中: +" + (op.ailment[HIT_SECRET] + op2.ailment[HIT_SECRET])+ "<br>";
+        }
+        if (op.ailment[HIT_TERROR] + op2.ailment[HIT_TERROR] > 0) {
+            text += "恐怖命中: +" + (op.ailment[HIT_TERROR] + op2.ailment[HIT_TERROR])+ "<br>";
+        }
+        if (!op.MATERIAL.isEmpty()) {
+            text += "材質: " + op.MATERIAL+ "<br>";
+        }
+        if (op.WEIGHT >= 0) {
+            text += "重さ: " + op.WEIGHT+ "<br>";
         }
         if (!op.effect.isEmpty()) {
-            text += "<br>"+ op.effect;
+            text += op.effect+ "<br>";
         }
         if (!op2.effect.isEmpty()) {
-            text += "<br>"+ op2.effect;
+            text += op2.effect+ "<br>";
         }
-        if (op.WEIGHT > 0) {
-            text += "</html>";
-        }
+        text += "</html>";
         return text;
     }
 
@@ -3773,38 +3777,44 @@ if (name.contains("勇士")) {
                     case 0:
                         op2.MHP = 2;                                            //最大HP+2%
                         op2.MMP = 1;                                            //最大MP+1%
+                                                                                //所持重量増加+360
                         break;
                     case 1:
                         op2.MHP = 4;                                            //最大HP+4%
                         op2.MMP = 2;                                            //最大MP+2%
+                                                                                //所持重量増加+360
                         break;
                     case 2:
                         op2.MHP = 6;                                            //最大HP+6%
                         op2.MMP = 3;                                            //最大MP+3%
                         op2.MR = 2;                                             //MR+2
+                                                                                //所持重量増加+360
                         break;
                     case 3:
                         op2.MHP = 8;                                            //最大HP+8%
                         op2.MMP = 4;                                            //最大MP+4%
                         op2.MR = 4;                                             //MR+4
+                                                                                //所持重量増加+360
                         break;
                     case 4:
                         op2.MHP = 10;                                           //最大HP+10%
                         op2.MMP = 5;                                            //最大MP+5%
-                        op2.MR = 6;                                             //MR+6
                         op2.DMG_SHORT = 1;                                      //近距離ダメージ+1
+                        op2.MR = 6;                                             //MR+6
+                                                                                //所持重量増加+360
                         break;
                     case 5:
                         op2.MHP = 12;                                           //最大HP+12%
                         op2.MMP = 6;                                            //最大MP+6%
-                        op2.MR = 10;                                            //MR+10
                         op2.DMG_SHORT = 2;                                      //近距離ダメージ+2
+                        op2.MR = 10;                                            //MR+10
+                                                                                //所持重量増加+360
                         break;
                     case 6:
                         op2.MHP = 14;                                           //最大HP+14%
                         op2.MMP = 7;                                            //最大MP+7%
-                        op2.MR = 12;                                            //MR+12
                         op2.DMG_SHORT = 3;                                      //近距離ダメージ+3
+                        op2.MR = 12;                                            //MR+12
                         op2.DG = 2;                                             //DG+2
                         op2.ER = 2;                                             //ER+2
                         op2.ME = 2;                                             //ME+2
@@ -3813,12 +3823,13 @@ if (name.contains("勇士")) {
                         op2.ailment[SECRET] = 2;                                //秘技耐性+2
                         op2.ailment[TERROR] = 2;                                //恐怖耐性+2
                         op2.PVP_DR = 2;                                         //PVPダメージ低下+2
+                                                                                //所持重量増加+360
                         break;
                     case 7:
                         op2.MHP = 17;                                           //最大HP+17%
                         op2.MMP = 8;                                            //最大MP+8%
-                        op2.MR = 14;                                            //MR+14
                         op2.DMG_SHORT = 4;                                      //近距離ダメージ+4
+                        op2.MR = 14;                                            //MR+14
                         op2.DG = 4;                                             //DG+4
                         op2.ER = 4;                                             //ER+4
                         op2.ME = 4;                                             //ME+4
@@ -3827,12 +3838,13 @@ if (name.contains("勇士")) {
                         op2.ailment[SECRET] = 4;                                //秘技耐性+4
                         op2.ailment[TERROR] = 4;                                //恐怖耐性+4
                         op2.PVP_DR = 4;                                         //PVPダメージ低下+4
+                                                                                //所持重量増加+360
                         break;
                     case 8:
                         op2.MHP = 20;                                           //最大HP+20%
                         op2.MMP = 10;                                           //最大MP+10%
-                        op2.MR = 16;                                            //MR+16
                         op2.DMG_SHORT = 5;                                      //近距離ダメージ+5
+                        op2.MR = 16;                                            //MR+16
                         op2.DG = 6;                                             //DG+6
                         op2.ER = 6;                                             //ER+6
                         op2.ME = 6;                                             //ME+6
@@ -3841,6 +3853,78 @@ if (name.contains("勇士")) {
                         op2.ailment[SECRET] = 6;                                //秘技耐性+6
                         op2.ailment[TERROR] = 6;                                //恐怖耐性+6
                         op2.PVP_DR = 6;                                         //PVPダメージ低下+6
+                                                                                //所持重量増加+360
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+            if (name.equals("祝福されたルームティスの闘士のペンダント")) {
+                switch (enchant) {
+                    case 5:
+                        op2.MHP = 12;                                           //最大HP+12%
+                        op2.MMP = 6;                                            //最大MP+6%
+                        op2.DMG_SHORT = 2;                                      //近距離ダメージ+2
+                        op2.MR = 10;                                            //MR+10
+                        op2.DG = 1;                                             //DG+1
+                        op2.ER = 1;                                             //ER+1
+                        op2.ME = 1;                                             //ME+1
+                        op2.ailment[STUN] = 1;                                  //技術耐性+1
+                        op2.ailment[SPIRIT] = 1;                                //精霊耐性+1
+                        op2.ailment[SECRET] = 1;                                //秘技耐性+1
+                        op2.ailment[TERROR] = 1;                                //恐怖耐性+1
+                        op2.PVP_DR = 1;                                         //PVPダメージ低下+1
+                        op2.AC =-1;                                             //AC-1
+                        op2.c_weight =500;                                      //所持重量増加+500
+                        break;
+                    case 6:
+                        op2.MHP = 14;                                           //最大HP+14%
+                        op2.MMP = 7;                                            //最大MP+7%
+                        op2.DMG_SHORT = 3;                                      //近距離ダメージ+3
+                        op2.MR = 12;                                            //MR+12
+                        op2.DG = 3;                                             //DG+3
+                        op2.ER = 3;                                             //ER+3
+                        op2.ME = 3;                                             //ME+3
+                        op2.ailment[STUN] = 3;                                  //技術耐性+3
+                        op2.ailment[SPIRIT] = 3;                                //精霊耐性+3
+                        op2.ailment[SECRET] = 3;                                //秘技耐性+3
+                        op2.ailment[TERROR] = 3;                                //恐怖耐性+3
+                        op2.PVP_DR = 3;                                         //PVPダメージ低下+3
+                        op2.AC =-1;                                             //AC-1
+                        op2.c_weight =500;                                      //所持重量増加+500
+                        break;
+                    case 7:
+                        op2.MHP = 17;                                           //最大HP+17%
+                        op2.MMP = 8;                                            //最大MP+8%
+                        op2.DMG_SHORT = 4;                                      //近距離ダメージ+4
+                        op2.MR = 14;                                            //MR+14
+                        op2.DG = 5;                                             //DG+5
+                        op2.ER = 5;                                             //ER+5
+                        op2.ME = 5;                                             //ME+5
+                        op2.ailment[STUN] = 5;                                  //技術耐性+5
+                        op2.ailment[SPIRIT] = 5;                                //精霊耐性+5
+                        op2.ailment[SECRET] = 5;                                //秘技耐性+5
+                        op2.ailment[TERROR] = 5;                                //恐怖耐性+5
+                        op2.PVP_DR = 5;                                         //PVPダメージ低下+5
+                        op2.AC =-1;                                             //AC-1
+                        op2.c_weight =500;                                      //所持重量増加+500
+                        break;
+                    case 8:
+                        op2.MHP = 20;                                           //最大HP+20%
+                        op2.MMP = 10;                                           //最大MP+10%
+                        op2.DMG_SHORT = 5;                                      //近距離ダメージ+5
+                        op2.MR = 16;                                            //MR+16
+                        op2.DG = 7;                                             //DG+7
+                        op2.ER = 7;                                             //ER+7
+                        op2.ME = 7;                                             //ME+7
+                        op2.ailment[STUN] = 7;                                  //技術耐性+7
+                        op2.ailment[SPIRIT] = 7;                                //精霊耐性+7
+                        op2.ailment[SECRET] = 7;                                //秘技耐性+7
+                        op2.ailment[TERROR] = 7;                                //恐怖耐性+7
+                        op2.PVP_DR = 7;                                         //PVPダメージ低下+7
+                        op2.AC =-1;                                             //AC-1
+                        op2.c_weight =500;                                      //所持重量増加+500
                         break;
                     default:
                         break;
@@ -3852,38 +3936,44 @@ if (name.contains("勇士")) {
                     case 0:
                         op2.MHP = 1;                                            //最大HP+1%
                         op2.MMP = 1;                                            //最大MP+1%
+                                                                                //所持重量増加+360
                         break;
                     case 1:
                         op2.MHP = 2;                                            //最大HP+2%
                         op2.MMP = 2;                                            //最大MP+2%
+                                                                                //所持重量増加+360
                         break;
                     case 2:
                         op2.MHP = 3;                                            //最大HP+3%
                         op2.MMP = 3;                                            //最大MP+3%
                         op2.MR = 2;                                             //MR+2
+                                                                                //所持重量増加+360
                         break;
                     case 3:
                         op2.MHP = 5;                                            //最大HP+5%
                         op2.MMP = 5;                                            //最大MP+5%
                         op2.MR = 4;                                             //MR+4
+                                                                                //所持重量増加+360
                         break;
                     case 4:
                         op2.MHP = 7;                                            //最大HP+7%
                         op2.MMP = 7;                                            //最大MP+7%
-                        op2.MR = 6;                                             //MR+6
                         op2.DMG_LONG = 1;                                       //遠距離ダメージ+1
+                        op2.MR = 6;                                             //MR+6
+                                                                                //所持重量増加+360
                         break;
                     case 5:
                         op2.MHP = 9;                                            //最大HP+9%
                         op2.MMP = 9;                                            //最大MP+9%
-                        op2.MR = 10;                                            //MR+10
                         op2.DMG_LONG = 2;                                       //遠距離ダメージ+2
+                        op2.MR = 10;                                            //MR+10
+                                                                                //所持重量増加+360
                         break;
                     case 6:
                         op2.MHP = 11;                                           //最大HP+11%
                         op2.MMP = 11;                                           //最大MP+11%
-                        op2.MR = 12;                                            //MR+12
                         op2.DMG_LONG = 3;                                       //遠距離ダメージ+3
+                        op2.MR = 12;                                            //MR+12
                         op2.DG = 2;                                             //DG+2
                         op2.ER = 2;                                             //ER+2
                         op2.ME = 2;                                             //ME+2
@@ -3892,12 +3982,13 @@ if (name.contains("勇士")) {
                         op2.ailment[SECRET] = 2;                                //秘技耐性+2
                         op2.ailment[TERROR] = 2;                                //恐怖耐性+2
                         op2.PVP_DR = 2;                                         //PVPダメージ低下+2
+                                                                                //所持重量増加+360
                         break;
                     case 7:
                         op2.MHP = 13;                                           //最大HP+13%
                         op2.MMP = 13;                                           //最大MP+13%
-                        op2.MR = 14;                                            //MR+14
                         op2.DMG_LONG = 4;                                       //遠距離ダメージ+4
+                        op2.MR = 14;                                            //MR+14
                         op2.DG = 4;                                             //DG+4
                         op2.ER = 4;                                             //ER+4
                         op2.ME = 4;                                             //ME+4
@@ -3906,12 +3997,13 @@ if (name.contains("勇士")) {
                         op2.ailment[SECRET] = 4;                                //秘技耐性+4
                         op2.ailment[TERROR] = 4;                                //恐怖耐性+4
                         op2.PVP_DR = 4;                                         //PVPダメージ低下+4
+                                                                                //所持重量増加+360
                         break;
                     case 8:
                         op2.MHP = 15;                                           //最大HP+15%
                         op2.MMP = 15;                                           //最大MP+15%
-                        op2.MR = 16;                                            //MR+16
                         op2.DMG_LONG = 5;                                       //遠距離ダメージ+5
+                        op2.MR = 16;                                            //MR+16
                         op2.DG = 6;                                             //DG+6
                         op2.ER = 6;                                             //ER+6
                         op2.ME = 6;                                             //ME+6
@@ -3920,6 +4012,78 @@ if (name.contains("勇士")) {
                         op2.ailment[SECRET] = 6;                                //秘技耐性+6
                         op2.ailment[TERROR] = 6;                                //恐怖耐性+6
                         op2.PVP_DR = 6;                                         //PVPダメージ低下+6
+                                                                                //所持重量増加+360
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+            if (name.equals("祝福されたルームティスの射手のペンダント")) {
+                switch (enchant) {
+                    case 5:
+                        op2.MHP = 9;                                            //最大HP+9%
+                        op2.MMP = 9;                                            //最大MP+9%
+                        op2.DMG_LONG = 2;                                       //遠距離ダメージ+2
+                        op2.MR = 10;                                            //MR+10
+                        op2.DG = 1;                                             //DG+1
+                        op2.ER = 1;                                             //ER+1
+                        op2.ME = 1;                                             //ME+1
+                        op2.ailment[STUN] = 1;                                  //技術耐性+1
+                        op2.ailment[SPIRIT] = 1;                                //精霊耐性+1
+                        op2.ailment[SECRET] = 1;                                //秘技耐性+1
+                        op2.ailment[TERROR] = 1;                                //恐怖耐性+1
+                        op2.PVP_DR = 1;                                         //PVPダメージ低下+1
+                        op2.AC =-1;                                             //AC-1
+                        op2.c_weight =500;                                      //所持重量増加+500
+                        break;
+                    case 6:
+                        op2.MHP = 11;                                           //最大HP+11%
+                        op2.MMP = 11;                                           //最大MP+11%
+                        op2.DMG_LONG = 3;                                       //遠距離ダメージ+3
+                        op2.MR = 12;                                            //MR+12
+                        op2.DG = 3;                                             //DG+3
+                        op2.ER = 3;                                             //ER+3
+                        op2.ME = 3;                                             //ME+3
+                        op2.ailment[STUN] = 3;                                  //技術耐性+3
+                        op2.ailment[SPIRIT] = 3;                                //精霊耐性+3
+                        op2.ailment[SECRET] = 3;                                //秘技耐性+3
+                        op2.ailment[TERROR] = 3;                                //恐怖耐性+3
+                        op2.PVP_DR = 3;                                         //PVPダメージ低下+3
+                        op2.AC =-1;                                             //AC-1
+                        op2.c_weight =500;                                      //所持重量増加+500
+                        break;
+                    case 7:
+                        op2.MHP = 13;                                           //最大HP+13%
+                        op2.MMP = 13;                                           //最大MP+13%
+                        op2.DMG_LONG = 4;                                       //遠距離ダメージ+4
+                        op2.MR = 14;                                            //MR+14
+                        op2.DG = 5;                                             //DG+5
+                        op2.ER = 5;                                             //ER+5
+                        op2.ME = 5;                                             //ME+5
+                        op2.ailment[STUN] = 5;                                  //技術耐性+5
+                        op2.ailment[SPIRIT] = 5;                                //精霊耐性+5
+                        op2.ailment[SECRET] = 5;                                //秘技耐性+5
+                        op2.ailment[TERROR] = 5;                                //恐怖耐性+5
+                        op2.PVP_DR = 5;                                         //PVPダメージ低下+5
+                        op2.AC =-1;                                             //AC-1
+                        op2.c_weight =500;                                      //所持重量増加+500
+                        break;
+                    case 8:
+                        op2.MHP = 15;                                           //最大HP+15%
+                        op2.MMP = 15;                                           //最大MP+15%
+                        op2.DMG_LONG = 5;                                       //遠距離ダメージ+5
+                        op2.MR = 16;                                            //MR+16
+                        op2.DG = 7;                                             //DG+7
+                        op2.ER = 7;                                             //ER+7
+                        op2.ME = 7;                                             //ME+7
+                        op2.ailment[STUN] = 7;                                  //技術耐性+7
+                        op2.ailment[SPIRIT] = 7;                                //精霊耐性+7
+                        op2.ailment[SECRET] = 7;                                //秘技耐性+7
+                        op2.ailment[TERROR] = 7;                                //恐怖耐性+7
+                        op2.PVP_DR = 7;                                         //PVPダメージ低下+7
+                        op2.AC =-1;                                             //AC-1
+                        op2.c_weight =500;                                      //所持重量増加+500
                         break;
                     default:
                         break;
@@ -3931,38 +4095,44 @@ if (name.contains("勇士")) {
                     case 0:
                         op2.MHP = 1;                                            //最大HP+1%
                         op2.MMP = 2;                                            //最大MP+2%
+                                                                                //所持重量増加+360
                         break;
                     case 1:
                         op2.MHP = 2;                                            //最大HP+2%
                         op2.MMP = 4;                                            //最大MP+4%
+                                                                                //所持重量増加+360
                         break;
                     case 2:
                         op2.MHP = 3;                                            //最大HP+3%
                         op2.MMP = 6;                                            //最大MP+6%
                         op2.MR = 2;                                             //MR+2
+                                                                                //所持重量増加+360
                         break;
                     case 3:
                         op2.MHP = 4;                                            //最大HP+4%
                         op2.MMP = 8;                                            //最大MP+8%
                         op2.MR = 4;                                             //MR+4
+                                                                                //所持重量増加+360
                         break;
                     case 4:
                         op2.MHP = 5;                                            //最大HP+5%
                         op2.MMP = 10;                                           //最大MP+10%
-                        op2.MR = 6;                                             //MR+6
                         op2.SP = 1;                                             //SP+1
+                        op2.MR = 6;                                             //MR+6
+                                                                                //所持重量増加+360
                         break;
                     case 5:
                         op2.MHP = 6;                                            //最大HP+6%
                         op2.MMP = 12;                                           //最大MP+12%
-                        op2.MR = 10;                                            //MR+10
                         op2.SP = 2;                                             //SP+2
+                        op2.MR = 10;                                            //MR+10
+                                                                                //所持重量増加+360
                         break;
                     case 6:
                         op2.MHP = 7;                                            //最大HP+7%
                         op2.MMP = 14;                                           //最大MP+14%
-                        op2.MR = 12;                                            //MR+12
                         op2.SP = 3;                                             //SP+3
+                        op2.MR = 12;                                            //MR+12
                         op2.DG = 2;                                             //DG+2
                         op2.ER = 2;                                             //ER+2
                        op2.ME = 2;                                              //ME+2
@@ -3971,12 +4141,13 @@ if (name.contains("勇士")) {
                         op2.ailment[SECRET] = 2;                                //秘技耐性+2
                         op2.ailment[TERROR] = 2;                                //恐怖耐性+2
                         op2.PVP_DR = 2;                                         //PVPダメージ低下+2
+                                                                                //所持重量増加+360
                         break;
                     case 7:
                         op2.MHP = 8;                                            //最大HP+8%
                         op2.MMP = 17;                                           //最大MP+17%
-                        op2.MR = 14;                                            //MR+14
                         op2.SP = 4;                                             //SP+4
+                        op2.MR = 14;                                            //MR+14
                         op2.DG = 4;                                             //DG+4
                         op2.ER = 4;                                             //ER+4
                         op2.ME = 4;                                             //ME+4
@@ -3985,12 +4156,13 @@ if (name.contains("勇士")) {
                         op2.ailment[SECRET] = 4;                                //秘技耐性+4
                         op2.ailment[TERROR] = 4;                                //恐怖耐性+4
                         op2.PVP_DR = 4;                                         //PVPダメージ低下+4
+                                                                                //所持重量増加+360
                         break;
                     case 8:
                         op2.MHP = 10;                                           //最大HP+10%
                         op2.MMP = 20;                                           //最大MP+20%
-                        op2.MR = 16;                                            //MR+16
                         op2.SP = 5;                                             //SP+5
+                        op2.MR = 16;                                            //MR+16
                         op2.DG = 6;                                             //DG+6
                         op2.ER = 6;                                             //ER+6
                         op2.ME = 6;                                             //ME+6
@@ -3999,6 +4171,78 @@ if (name.contains("勇士")) {
                         op2.ailment[SECRET] = 6;                                //秘技耐性+6
                         op2.ailment[TERROR] = 6;                                //恐怖耐性+6
                         op2.PVP_DR = 6;                                         //PVPダメージ低下+6
+                                                                                //所持重量増加+360
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+            if (name.equals("祝福されたルームティスの賢者のペンダント")) {
+                switch (enchant) {
+                    case 5:
+                        op2.MHP = 6;                                            //最大HP+6%
+                        op2.MMP = 12;                                           //最大MP+12%
+                        op2.SP = 2;                                             //SP+2
+                        op2.MR = 10;                                            //MR+10
+                        op2.DG = 1;                                             //DG+1
+                        op2.ER = 1;                                             //ER+1
+                        op2.ME = 1;                                             //ME+1
+                        op2.ailment[STUN] = 1;                                  //技術耐性+1
+                        op2.ailment[SPIRIT] = 1;                                //精霊耐性+1
+                        op2.ailment[SECRET] = 1;                                //秘技耐性+1
+                        op2.ailment[TERROR] = 1;                                //恐怖耐性+1
+                        op2.PVP_DR = 1;                                         //PVPダメージ低下+1
+                        op2.AC =-1;                                             //AC-1
+                        op2.c_weight =500;                                      //所持重量増加+500
+                        break;
+                    case 6:
+                        op2.MHP = 7;                                            //最大HP+7%
+                        op2.MMP = 14;                                           //最大MP+14%
+                        op2.SP = 3;                                             //SP+3
+                        op2.MR = 12;                                            //MR+12
+                        op2.DG = 3;                                             //DG+3
+                        op2.ER = 3;                                             //ER+3
+                        op2.ME = 3;                                             //ME+3
+                        op2.ailment[STUN] = 3;                                  //技術耐性+3
+                        op2.ailment[SPIRIT] = 3;                                //精霊耐性+3
+                        op2.ailment[SECRET] = 3;                                //秘技耐性+3
+                        op2.ailment[TERROR] = 3;                                //恐怖耐性+3
+                        op2.PVP_DR = 3;                                         //PVPダメージ低下+3
+                        op2.AC =-1;                                             //AC-1
+                        op2.c_weight =500;                                      //所持重量増加+500
+                        break;
+                    case 7:
+                        op2.MHP = 8;                                            //最大HP+8%
+                        op2.MMP = 17;                                           //最大MP+17%
+                        op2.SP = 4;                                             //SP+4
+                        op2.MR = 14;                                            //MR+14
+                        op2.DG = 5;                                             //DG+5
+                        op2.ER = 5;                                             //ER+5
+                        op2.ME = 5;                                             //ME+5
+                        op2.ailment[STUN] = 5;                                  //技術耐性+5
+                        op2.ailment[SPIRIT] = 5;                                //精霊耐性+5
+                        op2.ailment[SECRET] = 5;                                //秘技耐性+5
+                        op2.ailment[TERROR] = 5;                                //恐怖耐性+5
+                        op2.PVP_DR = 5;                                         //PVPダメージ低下+5
+                        op2.AC =-1;                                             //AC-1
+                        op2.c_weight =500;                                      //所持重量増加+500
+                        break;
+                    case 8:
+                        op2.MHP = 10;                                           //最大HP+10%
+                        op2.MMP = 20;                                           //最大MP+20%
+                        op2.SP = 5;                                             //SP+5
+                        op2.MR = 16;                                            //MR+16
+                        op2.DG = 7;                                             //DG+7
+                        op2.ER = 7;                                             //ER+7
+                        op2.ME = 7;                                             //ME+7
+                        op2.ailment[STUN] = 7;                                  //技術耐性+7
+                        op2.ailment[SPIRIT] = 7;                                //精霊耐性+7
+                        op2.ailment[SECRET] = 7;                                //秘技耐性+7
+                        op2.ailment[TERROR] = 7;                                //恐怖耐性+7
+                        op2.PVP_DR = 7;                                         //PVPダメージ低下+7
+                        op2.AC =-1;                                             //AC-1
+                        op2.c_weight =500;                                      //所持重量増加+500
                         break;
                     default:
                         break;
@@ -4010,74 +4254,105 @@ if (name.contains("勇士")) {
                     case 0:
                         op2.MHP = 1;                                            //最大HP+1%
                         op2.MMP = 1;                                            //最大MP+1%
+                                                                                //所持重量増加+360
                         break;
                     case 1:
                         op2.MHP = 2;                                            //最大HP+2%
                         op2.MMP = 2;                                            //最大MP+2%
+                                                                                //所持重量増加+360
                         break;
                     case 2:
                         op2.MHP = 3;                                            //最大HP+3%
                         op2.MMP = 3;                                            //最大MP+3%
                         op2.MR = 2;                                             //MR+2
+                                                                                //所持重量増加+360
                         break;
                     case 3:
                         op2.MHP = 4;                                            //最大HP+4%
                         op2.MMP = 4;                                            //最大MP+4%
                         op2.MR = 4;                                             //MR+4
+                                                                                //所持重量増加+360
                         break;
                     case 4:
                         op2.MHP = 5;                                            //最大HP+5%
                         op2.MMP = 5;                                            //最大MP+5%
-                        op2.MR = 6;                                             //MR+6
                         op2.MEXP = 4;                                           //獲得経験値+4%
+                        op2.MR = 6;                                             //MR+6
+                                                                                //所持重量増加+360
                         break;
                     case 5:
                         op2.MHP = 6;                                            //最大HP+6%
                         op2.MMP = 6;                                            //最大MP+6%
-                        op2.MR = 10;                                            //MR+10
                         op2.MEXP = 8;                                           //獲得経験値+8%
+                        op2.MR = 10;                                            //MR+10
+                                                                                //所持重量増加+360
                         break;
                     case 6:
                         op2.MHP = 7;                                            //最大HP+7%
                         op2.MMP = 7;                                            //最大MP+7%
-                        op2.MR = 12;                                            //MR+12
                         op2.MEXP = 12;                                          //獲得経験値+12%
-                        op2.DG = 2;                                             //DG+2
-                        op2.ER = 2;                                             //ER+2
-                        op2.ME = 2;                                             //ME+2
-                        op2.ailment[STUN] = 2;                                  //技術耐性+2
-                        op2.ailment[SPIRIT] = 2;                                //精霊耐性+2
-                        op2.ailment[SECRET] = 2;                                //秘技耐性+2
-                        op2.ailment[TERROR] = 2;                                //恐怖耐性+2
-                        op2.PVP_DR = 2;                                         //PVPダメージ低下+2
+                        op2.MR = 12;                                            //MR+12
+                        op2.DR= 2;                                              //ダメージ低下+2
+                                                                                //所持重量増加+360
                         break;
                     case 7:
                         op2.MHP = 8;                                            //最大HP+8%
                         op2.MMP = 8;                                            //最大MP+8%
-                        op2.MR = 14;                                            //MR+14
                         op2.MEXP = 16;                                          //獲得経験値+16%
-                        op2.DG = 4;                                             //DG+4
-                        op2.ER = 4;                                             //ER+4
-                        op2.ME = 4;                                             //ME+4
-                        op2.ailment[STUN] = 4;                                  //技術耐性+4
-                        op2.ailment[SPIRIT] = 4;                                //精霊耐性+4
-                        op2.ailment[SECRET] = 4;                                //秘技耐性+4
-                        op2.ailment[TERROR] = 4;                                //恐怖耐性+4
-                        op2.PVP_DR = 4;                                         //PVPダメージ低下+4
+                        op2.MR = 14;                                            //MR+14
+                        op2.DR = 4;                                             //ダメージ低下+4
+                                                                                //所持重量増加+360
                         break;
                     case 8:
                         op2.MHP = 10;                                           //最大HP+10%
                         op2.MMP = 10;                                           //最大MP+10%
-                        op2.MR = 16;                                            //MR+16
                         op2.MEXP = 20;                                          //獲得経験値+20%
-                        op2.DG = 6;                                             //DG+6
-                        op2.ER = 6;                                             //ER+6
-                        op2.ME = 6;                                             //ME+6
-                        op2.ailment[STUN] = 6;                                  //技術耐性+6
-                        op2.ailment[SPIRIT] = 6;                                //精霊耐性+6
-                        op2.ailment[SECRET] = 6;                                //秘技耐性+6
-                        op2.ailment[TERROR] = 6;                                //恐怖耐性+6
-                        op2.PVP_DR = 6;                                         //PVPダメージ低下+6
+                        op2.MR = 16;                                            //MR+16
+                        op2.DR = 6;                                             //ダメージ低下+6
+                                                                                //所持重量増加+360
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+            if (name.equals("祝福されたルームティスのハンターのペンダント")) {
+                switch (enchant) {
+                    case 5:
+                        op2.MHP = 6;                                            //最大HP+6%
+                        op2.MMP = 6;                                            //最大MP+6%
+                        op2.MEXP = 10;                                          //獲得経験値+10%
+                        op2.MR = 11;                                            //MR+11
+                        op2.DR = 1;                                             //ダメージ低下+1
+                        op2.AC =-1;                                             //AC-1
+                        op2.c_weight =500;                                      //所持重量増加+500
+                        break;
+                    case 6:
+                        op2.MHP = 7;                                            //最大HP+7%
+                        op2.MMP = 7;                                            //最大MP+7%
+                        op2.MEXP = 14;                                          //獲得経験値+14%
+                        op2.MR = 13;                                            //MR+13
+                        op2.DR = 3;                                             //ダメージ低下+3
+                        op2.AC =-1;                                             //AC-1
+                        op2.c_weight =500;                                      //所持重量増加+500
+                        break;
+                    case 7:
+                        op2.MHP = 8;                                            //最大HP+8%
+                        op2.MMP = 8;                                            //最大MP+8%
+                        op2.MEXP = 18;                                          //獲得経験値+18%
+                        op2.MR = 15;                                            //MR+15
+                        op2.DR = 5;                                             //ダメージ低下+5
+                        op2.AC =-1;                                             //AC-1
+                        op2.c_weight =500;                                      //所持重量増加+500
+                        break;
+                    case 8:
+                        op2.MHP = 10;                                           //最大HP+10%
+                        op2.MMP = 10;                                           //最大MP+10%
+                        op2.MEXP = 22;                                          //獲得経験値+22%
+                        op2.MR = 16;                                            //MR+17
+                        op2.DR = 7;                                             //ダメージ低下+7
+                        op2.AC =-1;                                             //AC-1
+                        op2.c_weight =500;                                      //所持重量増加+500
                         break;
                     default:
                         break;
