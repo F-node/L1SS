@@ -1,6 +1,24 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2021/02/18
+Update 4.2.9
+LSS/data/E.zip
+LSS/src/lss/Bougu.java
+修正
+	装備のツールチップ
+	ルームティスの闘志のペンダントのコメント
+	ルームティスの射手のペンダントのコメント
+	ルームティスの賢者のペンダントのコメント
+	ルームティスのハンターのペンダントのコメント
+追加
+	2021/02/17 Update
+	https://press.ncsoft.jp/notice/lineage/2102pendant/
+	祝福されたルームティスの闘志のペンダント
+	祝福されたルームティスの射手のペンダント
+	祝福されたルームティスの賢者のペンダント
+	祝福されたルームティスのハンターのペンダント
+
 2021/02/17
 Update 4.2.8
 LSS/data/E.zip
