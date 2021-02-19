@@ -299,8 +299,8 @@ public class Buki implements Common {
             }
         }
 
-        //ヴァラカスのソード                                                     +8以降強化1毎に技術/精霊/恐怖命中+1(最大+3)(+10強化まで適用)
-        if (name.equals("ヴァラカスのソード") || name.equals("ヴァラカスのソード(ヴァラカスの魂発動)")) {
+        //ヴァラカスのロングソード                                               +8以降強化1毎に技術/精霊/恐怖命中+1(最大+3)(+10強化まで適用)
+        if (name.equals("ヴァラカスのロングソード") || name.equals("ヴァラカスのロングソード(ヴァラカスの魂発動)")) {
             if (enchant >= 10) {
             op2.ailment[HIT_STUN] += 3;                                         //技術命中+3
             op2.ailment[HIT_SPIRIT] += 3;                                       //精霊命中+3
@@ -316,8 +316,8 @@ public class Buki implements Common {
             }
         }
 
-        //ヴァラカスの両手剣                                                     +8以降強化1毎に技術命中+1(最大+3)(+10強化まで適用)
-        if (name.equals("ヴァラカスの両手剣") || name.equals("ヴァラカスの両手剣(ヴァラカスの魂発動)")) {
+        //ヴァラカスのツーハンドソード                                           +8以降強化1毎に技術命中+1(最大+3)(+10強化まで適用)
+        if (name.equals("ヴァラカスのツーハンドソード") || name.equals("ヴァラカスのツーハンドソード(ヴァラカスの魂発動)")) {
             if (enchant >= 10) {
             op2.ailment[HIT_STUN] += 3;                                         //技術命中+3
             } else if (enchant >= 9) {
