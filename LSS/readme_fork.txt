@@ -1,6 +1,14 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2021/03/15
+Update 4.3.1
+LSS/data/E.zip
+LSS/src/lss/Bougu.java
+追加
+	ミソフィアのブーツ(イベント)
+	ミソフィアのブーツ
+
 2021/02/19
 Update 4.3.0
 LSS/data/E.zip
