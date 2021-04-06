@@ -195,8 +195,8 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
     //JLabel[][] pure_status_bonus = new JLabel[2][25];
     JLabel[][] pure_status_bonus = new JLabel[2][30];
 
-    JComboBox[] cb_elixir = new JComboBox[10];
-    JComboBox[] cb_elixir_level = new JComboBox[10];
+    JComboBox[] cb_elixir = new JComboBox[16];              //エリクサの最大MAX16個
+    JComboBox[] cb_elixir_level = new JComboBox[16];        //エリクサーのLV
     LEV lev = new LEV();
 
     //パネル3
@@ -1123,18 +1123,21 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         lev.addActionListener(this);
         lev.setSelfCheck();
 
+//エリクサー
         lab_tmp = new JLabel("エリクサー");
         lab_tmp.setBounds(30, 480, 100, 20);
         panels[1].add(lab_tmp);
 
         String elixir_list[] = {"---", "STR", "DEX", "INT", "WIS", "CON", "CHA"};
-        for (int i = 0; i < 10; i++) {
+        //for (int i = 0; i < 10; i++) {                                            //最大10個まで使用
+        for (int i = 0; i < 16; i++) {                                              //最大16個まで使用
             cb_elixir[i] = new JComboBox(elixir_list);
             cb_elixir_level[i] = new JComboBox(lev_list);
             cb_elixir[i].setBounds(30 +60 * i, 500, 60, 20);
             cb_elixir[i].addActionListener(this);
             cb_elixir_level[i].setBounds(30 + 60 * i, 520, 60, 20);
-            cb_elixir_level[i].setSelectedItem(Integer.toString(50 + 5 * i));
+            //cb_elixir_level[i].setSelectedItem(Integer.toString(50 + 5 * i));     //50レベルから5レベル単位
+            cb_elixir_level[i].setSelectedItem(Integer.toString(50 + 3 * i));       //50レベルから3レベル単位
             cb_elixir_level[i].addActionListener(this);
             panels[1].add(cb_elixir[i]);
             panels[1].add(cb_elixir_level[i]);

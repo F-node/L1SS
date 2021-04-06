@@ -503,7 +503,10 @@ public class Calculator implements Common {
             _ST[LEVEL][i] = 0;
             _ST[ELIXIR][i] = 0;
         }
-        for (int i = 0; i < 10; i++) {
+
+//エリクサーの最大使用数(10から16個へ)
+        //for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 16; i++) {
             int st = ui.cb_elixir[i].getSelectedIndex() - 1;
             if (st >= 0) {
                 if (ui.cb_elixir_level[i].getSelectedIndex() + 1 <= level) {
@@ -511,12 +514,16 @@ public class Calculator implements Common {
                 }
             }
         }
+
+        //純粋ステータス最大値増加
         for (int i = 0; i < ui.lev.size; i++) {
             int st = ui.lev.field[i];
             if (st >= 0) {
-                ///LV90以上の最大ステータス50/LV90未満の最大ステータス45の処理
+                //LV90以上の最大ステータス50/LV90未満の最大ステータス45の処理
+                //LV90以上の最大ステータス55/LV90未満の最大ステータス50の処理
                 if (level >= 90) {
-                    if(_ST[BASE][st] + _ST[REM][st] + _ST[LEVEL][st] + _ST[ELIXIR][st] < 50) {
+                    //if(_ST[BASE][st] + _ST[REM][st] + _ST[LEVEL][st] + _ST[ELIXIR][st] < 50) {
+                    if(_ST[BASE][st] + _ST[REM][st] + _ST[LEVEL][st] + _ST[ELIXIR][st] < 55) {
                         if (i + 51 <= level) {
                             _ST[LEVEL][st]++;
                         }
@@ -526,7 +533,8 @@ public class Calculator implements Common {
                     }
                 }
                 else{
-                    if (_ST[BASE][st] + _ST[REM][st] + _ST[LEVEL][st] + _ST[ELIXIR][st] < 45) {
+                    //if (_ST[BASE][st] + _ST[REM][st] + _ST[LEVEL][st] + _ST[ELIXIR][st] < 45) {
+                    if (_ST[BASE][st] + _ST[REM][st] + _ST[LEVEL][st] + _ST[ELIXIR][st] < 50) {
                         if (i + 51 <= level) {
                             _ST[LEVEL][st]++;
                         }
@@ -6287,6 +6295,8 @@ public class Calculator implements Common {
 
         red_mp = Math.min(30, (int) (_int * 2 / 3));
 
+//各ステータスの上限値
+//STR:
         if (pure_str >= 25) {
             base_dmg_short += 1;                //近距離ダメージ+1
             base_hit_short += 1;                //近距離命中+1
@@ -6300,11 +6310,13 @@ public class Calculator implements Common {
             base_hit_short += 3;                //近距離命中+3
             cri_short += 1;                     //近距離クリティカル+1%
         }
-//        if (pure_str >= 55) {
-//            base_dmg_short += 5;                //近距離ダメージ+5
-//            base_hit_short += 5;                //近距離命中+5
-//            cri_short += 2;                     //近距離クリティカル+2%
-//        }
+        if (pure_str >= 55) {
+            base_dmg_short += 5;                //近距離ダメージ+5
+            base_hit_short += 5;                //近距離命中+5
+            cri_short += 2;                     //近距離クリティカル+2%
+        }
+
+//DEX:
         if (pure_dex >= 25) {
             base_dmg_long += 1;                 //遠距離ダメージ+1
             base_hit_long += 1;                 //遠距離命中+1
@@ -6318,11 +6330,13 @@ public class Calculator implements Common {
             base_hit_long += 3;                 //遠距離命中+3
             cri_long += 1;                      //遠距離クリティカル+1%
         }
-//        if (pure_dex >= 55) {
-//            base_dmg_long += 5;                 //遠距離ダメージ+5
-//            base_hit_long += 5;                 //遠距離命中+5
-//            cri_long += 2;                      //遠距離クリティカル+2%
-//        }
+        if (pure_dex >= 55) {
+            base_dmg_long += 5;                 //遠距離ダメージ+5
+            base_hit_long += 5;                 //遠距離命中+5
+            cri_long += 2;                      //遠距離クリティカル+2%
+        }
+
+//INT:
         if (pure_int >= 25) {
             base_dmg_magic += 1;                //魔法ダメージ+1
             base_hit_magic += 1;                //魔法命中+1
@@ -6336,11 +6350,12 @@ public class Calculator implements Common {
             base_hit_magic += 3;                //魔法命中+3
             cri_magic += 1;                     //魔法クリティカル+1%
         }
-//        if (pure_int >= 55) {
-//            base_dmg_magic += 5;                //魔法ダメージ+5
-//            base_hit_magic += 5;                //魔法命中+5
-//            cri_magic += 2;                     //魔法クリティカル+2%
-//        }
+        if (pure_int >= 55) {
+            base_dmg_magic += 5;                //魔法ダメージ+5
+            base_hit_magic += 5;                //魔法命中+5
+            cri_magic += 2;                     //魔法クリティカル+2%
+        }
+
         dmg_short = base_dmg_short + buff.DMG_SHORT;
         dmg_long = base_dmg_long + buff.DMG_LONG;
         dmg_magic = base_dmg_magic + buff.DMG_MAGIC;
@@ -8103,6 +8118,7 @@ buki.arrow_elementdmg=0;
             }
         }
 
+//WIS:
         int tmp = (int) (wis / 5) + (int) (level / 40);
         mpr += tmp;
         if (pure_wis >= 25) {
@@ -8144,6 +8160,7 @@ buki.arrow_elementdmg=0;
         
         ui.pure_status_bonus[1][16].setText(Integer.toString(tmp));             //MP増加
 
+//CON:
         hpr += (con / 2 + level / 20);
         hp_pot = (int) (minasToZero(con - 10) / 10);
 
