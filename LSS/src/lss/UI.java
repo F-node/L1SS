@@ -1437,13 +1437,13 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         panels[2].add(cb_buff[K_CBV]);
 
         //レイジングフォース
-        cb_buff[K_RFE] = new JCheckBox("[UP待ち]レイジングフォース");
+        cb_buff[K_RFE] = new JCheckBox("レイジングフォース");
         cb_buff[K_RFE].setBounds(200 * row, 20 * col++, 150, 20);
         cb_buff[K_RFE].addActionListener(this);
         panels[2].add(cb_buff[K_RFE]);
 
         //リダクションアーマー:ベテラン
-        cb_buff[K_RAV] = new JCheckBox("[UP待ち]リダクションアーマー:ベテラン");
+        cb_buff[K_RAV] = new JCheckBox("リダクションアーマー:ベテラン");
         cb_buff[K_RAV].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[K_RAV].addActionListener(this);
         panels[2].add(cb_buff[K_RAV]);
@@ -1485,11 +1485,11 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[E_REN].addActionListener(this);
         panels[2].add(cb_buff[E_REN]);
 
-        //マジックシールド
-        cb_buff[E_MSD] = new JCheckBox("[UP待ち]マジックシールド");
-        cb_buff[E_MSD].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[E_MSD].addActionListener(this);
-        panels[2].add(cb_buff[E_MSD]);
+//        //マーブル(次回リニューアルでマジックシールド)
+//        cb_buff[E_MSD] = new JCheckBox("マーブル");
+//        cb_buff[E_MSD].setBounds(200 * row, 20 * col++, 200, 20);
+//        cb_buff[E_MSD].addActionListener(this);
+//        panels[2].add(cb_buff[E_MSD]);
 
         //ソウルバリア
         cb_buff[E_SBR] = new JCheckBox("ソウルバリア(未実装)");
@@ -1784,6 +1784,12 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[E_EWN].setBounds(200 * row, 20 * col++, 150, 20);
         cb_buff[E_EWN].addActionListener(this);
         panels[2].add(cb_buff[E_EWN]);
+
+        //マーブル(次回リニューアルでマジックシールド)　リニューアル時は1488行へ
+        cb_buff[E_MSD] = new JCheckBox("マーブル");
+        cb_buff[E_MSD].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[E_MSD].addActionListener(this);
+        panels[2].add(cb_buff[E_MSD]);
 
         col = 0;
         row = 4;
@@ -2357,7 +2363,7 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         panels[3].add(cb_buff[F_PPH]);
 
         //アシュラ
-        cb_buff[F_AAA] = new JCheckBox("[UP待ち]アシュラ(未実装)");
+        cb_buff[F_AAA] = new JCheckBox("アシュラ(未実装)");
         cb_buff[F_AAA].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[F_AAA].addActionListener(this);
         panels[3].add(cb_buff[F_AAA]);

@@ -1884,7 +1884,6 @@ public class Calculator implements Common {
                                          + "<br>"+ "攻撃をした時に、一定確率でアブソルートバリアを破壊して強制的に解除する"
                                          + "<br>"+ "レベル80から、レベル1毎に発動率+1%(最大+8%)"
                                          + "<br>"+ "キャンセレーションで解除されない"
-                                         + "<br>"+ "*リニューアル 消費MP10から15 持続時間16秒から32秒"
                                          + "<br>"+ "[習得レベル:85][持続時間:32秒][対象:術者]"+"</html>");
         if (ui.cb_buff[K_ABE].isSelected()) {
         //スキル効果未実装
@@ -1905,7 +1904,7 @@ public class Calculator implements Common {
         }
 
         //ブローアタック
-        //6241行にて処理
+        //7497行にて処理
 
         //バウンスアタック
         ui.cb_buff[K_BOK].setToolTipText("<html>"+ "[消費MP:10][消費HP:60]"
@@ -2103,8 +2102,8 @@ public class Calculator implements Common {
         }
 
         //ブラッディソウル
-        ui.cb_buff[E_BSL].setToolTipText("<html>"+ "[消費MP:--][消費HP:63]"
-                                         + "<br>"+ "MPを19回復する"
+        ui.cb_buff[E_BSL].setToolTipText("<html>"+ "[消費MP:--][消費HP:25]"
+                                         + "<br>"+ "MPを15回復する"
                                          + "<br>"+ "ON/OFFの設定が可能 ONにすると5秒間隔で自動詠唱する"
                                          + "<br>"+ "[習得レベル:45][持続時間:瞬間][対象:術者]"+"</html>");
         if (ui.cb_buff[E_BSL].isSelected()) {
@@ -2314,8 +2313,7 @@ public class Calculator implements Common {
         //フォーカスウェーブ
         ui.cb_buff[E_FWE].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
                                          + "<br>"+ "弓専用スキル"
-                                         + "<br>"+ "移動速度と攻撃速度が上昇する[2段加速]x1.1547"
-                                         + "<br>"+ "*リニューアル 移動速度と攻撃速度がBP速度に変更"
+                                         + "<br>"+ "移動速度と攻撃速度が上昇する[2段加速]x1.3333"
                                          + "<br>"+ "[習得レベル:60][持続時間:8分][対象:術者][触媒:エルブンワッフル(1)]"+"</html>");
         //if (ui.cb_buff[E_FWE].isSelected()) {
         //[2段加速]をONにする
@@ -2340,7 +2338,6 @@ public class Calculator implements Common {
         ui.cb_buff[E_NTH].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
                                          + "<br>"+ "攻撃を受けた時に一定確率でHPが回復する"
                                          + "<br>"+ "他のHPが回復する加護の効果と重複します"
-                                         + "<br>"+ "*リニューアル HP自然回復+15からHP回復加護に変更"
                                          + "<br>"+ "[習得レベル:60][持続時間:5分20秒][対象:術者]"+"</html>");
         if (ui.cb_buff[E_NTH].isSelected()) {
             if (level > 9) {
@@ -2461,7 +2458,6 @@ public class Calculator implements Common {
         ui.cb_buff[E_EGN].setToolTipText("<html>"+ "[消費MP:30][消費HP:10]"
                                          + "<br>"+ "DR+2"
                                          + "<br>"+ "レベル80からレベル4毎にダメージ低下が+1ずつ増加"
-                                         + "<br>"+ "*リニューアル ダメージ低下の効果がレベル80から増加"
                                          + "<br>"+ "[習得レベル:60][持続時間:10分][対象:術者]"+"</html>");
         if (ui.cb_buff[E_EGN].isSelected()) {
             buff.DR += 2;
@@ -2731,7 +2727,6 @@ public class Calculator implements Common {
                                          + "<br>"+ "Passive"
                                          + "<br>"+ "覚醒を2種類まで重複が可能になる"
                                          + "<br>"+ "覚醒スキルの消費MPを5減少させる"
-                                         + "<br>"+ "*リニューアル 覚醒スキルの消費MPを5減らす"
                                          + "<br>"+ "[習得レベル:80][持続時間:常時][対象:術者]"+"</html>");
         if (ui.cb_buff[R_AUA].isSelected()) {
         //スキル効果未実装
@@ -2750,7 +2745,6 @@ public class Calculator implements Common {
         ui.cb_buff[R_FSB].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
                                          + "<br>"+ "Passive"
                                          + "<br>"+ "弱点露出に追加効果 一定確率でスタン状態にする"
-                                         + "<br>"+ "*リニューアル 弱点露出4段階の解放からスタン効果に"
                                          + "<br>"+ "[習得レベル:85][持続時間:常時][対象:術者]"+"</html>");
         if (ui.cb_buff[R_FSB].isSelected()) {
         //スキル効果未実装
@@ -2784,7 +2778,6 @@ public class Calculator implements Common {
                                          + "<br>"+ "Passive"
                                          + "<br>"+ "デストロイにDG-20/STR-2/INT-2の効果を追加"
                                          + "<br>"+ "デストロイ:フィアーを覚えていないと習得する事が出来ない"
-                                         + "<br>"+ "*リニューアル デストロイに追加効果 パッシブに変更"
                                          + "<br>"+ "[習得レベル:60][持続時間:常時][対象:術者]"+"</html>");
         if (ui.cb_buff[R_DHR].isSelected()) {
         //スキル効果未実装
@@ -2837,7 +2830,6 @@ public class Calculator implements Common {
                                          + "<br>"+ "Passive"
                                          + "<br>"+ "デストロイにDG-20の効果を追加"
                                          + "<br>"+ "デストロイを覚えていないと習得する事が出来ない"
-                                         + "<br>"+ "*リニューアル デストロイに追加効果 パッシブに変更"
                                          + "<br>"+ "[習得レベル:40][持続時間:常時][対象:PC/NPC]"+"</html>");
         if (ui.cb_buff[R_DFR].isSelected()) {
         //スキル効果未実装
@@ -3292,10 +3284,10 @@ public class Calculator implements Common {
         }
 
         //アシュラ
-        ui.cb_buff[F_AAA].setToolTipText("<html>"+ "[消費MP:--][消費HP:2000]"
+        ui.cb_buff[F_AAA].setToolTipText("<html>"+ "[消費MP:--][消費HP:2,000]"
                                          + "<br>"+ "10秒でMPを400回復"
-                                         + "<br>"+ "個別[D]クールタイム()"
-                                         + "<br>"+ "[習得レベル:85][持続時間:常時][対象:術者]"+"</html>");
+                                         + "<br>"+ "個別[D]クールタイム(30分)"
+                                         + "<br>"+ "[習得レベル:85][持続時間:常時][対象:術者][触媒:結晶体(2,000)]"+"</html>");
         if (ui.cb_buff[F_AAA].isSelected()) {
         //スキル効果未実装
         }
@@ -7499,12 +7491,12 @@ buki.arrow_elementdmg=0;
         ui.cb_buff[K_BLK].setToolTipText("<html>"+ "[消費MP:10][消費HP:50]"
                                          + "<br>"+ "一定確率(5%)で近距離ダメージを1.5倍"
                                          + "<br>"+ "LV75からLV1毎に発動率1%増加"
-                                         + "<br>"+ "*リニューアル [盾専用技術]から[近距離武器技術]"
+                                         + "<br>"+ "[近距離武器技術]"
                                          + "<br>"+ "[習得レベル:75][持続時間:5分][対象:術者]"+"</html>");
         if (ui.cb_buff[K_BLK].isSelected()) {
             if (level >= 75 && cls == K && buki_id == W_D || buki_id == W_LS || buki_id == W_TS || buki_id == W_A|| buki_id == W_L) {
                 double bk_lv_bonus =((level - 74) * 0.01);
-            
+
                 dmg_big_ave *= 1.5 * (bk_rate + bk_lv_bonus)
                         + 1.0 * (1.0 - (bk_rate + bk_lv_bonus));
                 dmg_small_ave *= 1.5 * (bk_rate + bk_lv_bonus)
