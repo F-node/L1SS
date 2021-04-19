@@ -44,19 +44,19 @@ public interface Common {
     //13種の武器
     final String[] BUKI_TYPE_LIST = {"ダガー", "片手剣", "両手剣", "スタッフ", "鈍器",
         "デュアルブレード", "クロウ", "槍", "ボウ", "ガントレット", "キーリンク", "チェーンソード", "双斧"};
-    final int W_D = 0;
-    final int W_LS = 1;
-    final int W_TS = 2;
-    final int W_S = 3;
-    final int W_A = 4;
-    final int W_DB = 5;
-    final int W_C = 6;
-    final int W_L = 7;
-    final int W_B = 8;
-    final int W_G = 9;
-    final int W_K = 10;
-    final int W_CS = 11;
-    final int W_DA = 12;
+    final int W_D = 0;      //ダガー
+    final int W_LS = 1;     //片手剣
+    final int W_TS = 2;     //両手剣
+    final int W_S = 3;      //スタッフ
+    final int W_A = 4;      //鈍器
+    final int W_DB = 5;     //デュアルブレード
+    final int W_C = 6;      //クロウ
+    final int W_L = 7;      //槍
+    final int W_B = 8;      //ボウ
+    final int W_G = 9;      //ガントレット
+    final int W_K = 10;     //キーリンク
+    final int W_CS = 11;    //チェーンソード
+    final int W_DA = 12;    //双斧
     
     final int MAIN = 13;
     final int SUB = 14;
