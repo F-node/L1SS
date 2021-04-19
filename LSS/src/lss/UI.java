@@ -1642,6 +1642,7 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[E_FSD] = new JCheckBox("ファイアーシールド");
         cb_buff[E_FSD].setBounds(200 * row, 20 * col++, 150, 20);
         cb_buff[E_FSD].addActionListener(this);
+        cb_buff[E_FSD].setEnabled(false);
         panels[2].add(cb_buff[E_FSD]);
 
         col++;

@@ -2285,13 +2285,14 @@ public class Calculator implements Common {
                                          + "<br>"+ "AC-4"
                                          + "<br>"+ "シールドの上位魔法"
                                          + "<br>"+ "[習得レベル:45][持続時間:16分][対象:術者]"+"</html>");
-        if (ui.cb_buff[E_FSD].isSelected()) {
+        //不具合の為、コメントアウトにて修正
+        //if (ui.cb_buff[E_FSD].isSelected()) {
         //[AC]をONにする
-        ui.cb_buff[B_AC].setSelected(true);
+        //ui.cb_buff[B_AC].setSelected(true);
         //"AC-4"を選択する
-        ui.cb_buff_group[B_AC].setSelectedItem("-4");
-        }
-        
+        //ui.cb_buff_group[B_AC].setSelectedItem("-4");
+        //}
+
 //精霊魔法(水) 
         //ポルートウォーター
         ui.cb_buff[E_PWR].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"

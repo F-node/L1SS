@@ -1,6 +1,14 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2021/04/20
+Update 4.3.5
+LSS/src/lss/Calculator.java
+LSS/src/lss/UI.java
+修正
+	精霊魔法のファイアーシールドをONにするとステータス各種が異常な数値になる不具合について指摘を受け
+	精霊魔法(火)のファイヤーシールドは選択不可にして、ACのAC-4を選択して使用して頂く。
+
 2021/04/19
 Update 4.3.4
 LSS/src/lss/Calculator.java
