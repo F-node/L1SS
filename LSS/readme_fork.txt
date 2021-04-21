@@ -1,6 +1,17 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2021/04/21
+Update 4.3.6
+LSS/src/lss/Calculator.java
+LSS/src/lss/Common.java
+LSS/src/lss/UI.java
+修正
+	Common.javaの登録とエンチャント1とエンチャント2のタブの順番を修正
+	(ゲームにて表示されるスキルの順番で統一)
+	また、ダメージ計算されないスキルの頭に*を付けた。
+	ウィザードのスキルは一部のみ修正
+
 2021/04/20
 Update 4.3.5
 LSS/src/lss/Calculator.java
