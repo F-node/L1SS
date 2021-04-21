@@ -1256,14 +1256,20 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         lab_tmp.setBounds(200 * row, 20 * col++, 200, 20);
         panels[2].add(lab_tmp);
 
-        //アドバンスドスピリッツ
-        cb_buff[W_ADS] = new JCheckBox("アドバンスドスピリッツ");
-        cb_buff[W_ADS].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[W_ADS].addActionListener(this);
-        panels[2].add(cb_buff[W_ADS]);
+        //ディクリース ウェイト
+        cb_buff[W_DWT] = new JCheckBox("ディクリース ウェイト");
+        cb_buff[W_DWT].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[W_DWT].addActionListener(this);
+        panels[2].add(cb_buff[W_DWT]);
 
-        //フリージングアーマー
-        cb_buff[W_FAR] = new JCheckBox("フリージングアーマー");
+        //ブレスド アーマー
+        cb_buff[W_BAR] = new JCheckBox("ブレスド アーマー");
+        cb_buff[W_BAR].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[W_BAR].addActionListener(this);
+        panels[2].add(cb_buff[W_BAR]);
+
+        //フリージング アーマー
+        cb_buff[W_FAR] = new JCheckBox("フリージング アーマー");
         cb_buff[W_FAR].setBounds(200 * row, 20 * col++, 150, 20);
         cb_buff[W_FAR].addActionListener(this);
         panels[2].add(cb_buff[W_FAR]);
@@ -1280,17 +1286,11 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[W_EAY].addActionListener(this);
         panels[2].add(cb_buff[W_EAY]);
 
-        //ブレスドアーマー
-        cb_buff[W_BAR] = new JCheckBox("ブレスドアーマー");
-        cb_buff[W_BAR].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[W_BAR].addActionListener(this);
-        panels[2].add(cb_buff[W_BAR]);
-
-        //ディクリースウェイト
-        cb_buff[W_DWT] = new JCheckBox("ディクリースウェイト");
-        cb_buff[W_DWT].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[W_DWT].addActionListener(this);
-        panels[2].add(cb_buff[W_DWT]);
+        //アドバンスド スピリッツ
+        cb_buff[W_ADS] = new JCheckBox("アドバンスド スピリッツ");
+        cb_buff[W_ADS].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[W_ADS].addActionListener(this);
+        panels[2].add(cb_buff[W_ADS]);
 
         col = 0;
         row = 1;
@@ -1299,28 +1299,47 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         lab_tmp.setBounds(200 * row, 20 * col++, 200, 20);
         panels[2].add(lab_tmp);
 
-        //プライム
-        String list_P_PRE[] = {"術者", "血盟員", "術者(攻城戦)", "血盟員(攻城戦)"};
-        cb_buff_group[P_PRE] = new WideComboBox(list_P_PRE);
-        cb_buff_group[P_PRE].setBounds(200 * row + 100, 20 * col, 80, 20);
-        cb_buff_group[P_PRE].addActionListener(this);
-        panels[2].add(cb_buff_group[P_PRE]);
-        cb_buff[P_PRE] = new JCheckBox("プライム");
-        cb_buff[P_PRE].setBounds(200 * row, 20 * col++, 100, 20);
-        cb_buff[P_PRE].addActionListener(this);
-        panels[2].add(cb_buff[P_PRE]);
+        //*トゥルーターゲット
+        cb_buff[P_TTT] = new JCheckBox("*トゥルーターゲット");
+        cb_buff[P_TTT].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[P_TTT].addActionListener(this);
+        cb_buff[P_TTT].setEnabled(false);
+        panels[2].add(cb_buff[P_TTT]);
 
-        //コールクラン:アドバンス
-        cb_buff[P_CCA] = new JCheckBox("[UP待ち]コールクラン:アドバンス");
-        cb_buff[P_CCA].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[P_CCA].addActionListener(this);
-        panels[2].add(cb_buff[P_CCA]);
+        //グローイング ウェポン
+        cb_buff[P_GWN] = new JCheckBox("グローイング ウェポン");
+        cb_buff[P_GWN].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[P_GWN].addActionListener(this);
+        panels[2].add(cb_buff[P_GWN]);
 
-        //エンパイア
-        cb_buff[P_EME] = new JCheckBox("エンパイア(未実装)");
-        cb_buff[P_EME].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[P_EME].addActionListener(this);
-        panels[2].add(cb_buff[P_EME]);
+        //シャイニング シールド
+        String list_P_SSD[] = {"術者", "PTメンバー"};
+        cb_buff_group[P_SSD] = new WideComboBox(list_P_SSD);
+        cb_buff_group[P_SSD].setBounds(200 * row + 100, 20 * col, 80, 20);
+        cb_buff_group[P_SSD].addActionListener(this);
+        panels[2].add(cb_buff_group[P_SSD]);
+        cb_buff[P_SSD] = new JCheckBox("シャイニング シールド");
+        cb_buff[P_SSD].setBounds(200 * row, 20 * col++, 100, 20);
+        cb_buff[P_SSD].addActionListener(this);
+        panels[2].add(cb_buff[P_SSD]);
+
+        //シャイニング アーマー
+        cb_buff[P_SAR] = new JCheckBox("シャイニング アーマー");
+        cb_buff[P_SAR].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[P_SAR].addActionListener(this);
+        panels[2].add(cb_buff[P_SAR]);
+
+        //ブレイブ メンタル
+        cb_buff[P_BML] = new JCheckBox("ブレイブ メンタル");
+        cb_buff[P_BML].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[P_BML].addActionListener(this);
+        panels[2].add(cb_buff[P_BML]);
+
+        //マジェスティ
+        cb_buff[P_MAY] = new JCheckBox("マジェスティ");
+        cb_buff[P_MAY].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[P_MAY].addActionListener(this);
+        panels[2].add(cb_buff[P_MAY]);
 
         //グレース
         String list_P_GRE[] = {"君主L80", "君主L81", "君主L82", "君主L83", "君主L84", "君主L85","君主L86","君主L87","君主L88","君主L89","君主L90","君主L91","君主L92","君主L93","君主L94+"};
@@ -1333,46 +1352,23 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[P_GRE].addActionListener(this);
         panels[2].add(cb_buff[P_GRE]);
 
-        //マジェスティ
-        cb_buff[P_MAY] = new JCheckBox("マジェスティ");
-        cb_buff[P_MAY].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[P_MAY].addActionListener(this);
-        panels[2].add(cb_buff[P_MAY]);
+        //*エンパイア
+        cb_buff[P_EME] = new JCheckBox("*エンパイア");
+        cb_buff[P_EME].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[P_EME].addActionListener(this);
+        cb_buff[P_EME].setEnabled(false);
+        panels[2].add(cb_buff[P_EME]);
 
-        //シャイニングアーマー
-        cb_buff[P_SAR] = new JCheckBox("シャイニングアーマー");
-        cb_buff[P_SAR].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[P_SAR].addActionListener(this);
-        panels[2].add(cb_buff[P_SAR]);
-
-        //シャイニングシールド
-        String list_P_SSD[] = {"術者", "PTメンバー"};
-        cb_buff_group[P_SSD] = new WideComboBox(list_P_SSD);
-        cb_buff_group[P_SSD].setBounds(200 * row + 100, 20 * col, 80, 20);
-        cb_buff_group[P_SSD].addActionListener(this);
-        panels[2].add(cb_buff_group[P_SSD]);
-        cb_buff[P_SSD] = new JCheckBox("シャイニングシールド");
-        cb_buff[P_SSD].setBounds(200 * row, 20 * col++, 100, 20);
-        cb_buff[P_SSD].addActionListener(this);
-        panels[2].add(cb_buff[P_SSD]);
-
-        //ブレイブメンタル
-        cb_buff[P_BML] = new JCheckBox("ブレイブメンタル");
-        cb_buff[P_BML].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[P_BML].addActionListener(this);
-        panels[2].add(cb_buff[P_BML]);
-
-        //グローイングウェポン
-        cb_buff[P_GWN] = new JCheckBox("グローイングウェポン");
-        cb_buff[P_GWN].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[P_GWN].addActionListener(this);
-        panels[2].add(cb_buff[P_GWN]);
-
-        //トゥルーターゲット
-        cb_buff[P_TTT] = new JCheckBox("トゥルーターゲット(未実装)");
-        cb_buff[P_TTT].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[P_TTT].addActionListener(this);
-        panels[2].add(cb_buff[P_TTT]);
+        //プライム
+        String list_P_PRE[] = {"術者", "血盟員", "術者(攻城戦)", "血盟員(攻城戦)"};
+        cb_buff_group[P_PRE] = new WideComboBox(list_P_PRE);
+        cb_buff_group[P_PRE].setBounds(200 * row + 100, 20 * col, 80, 20);
+        cb_buff_group[P_PRE].addActionListener(this);
+        panels[2].add(cb_buff_group[P_PRE]);
+        cb_buff[P_PRE] = new JCheckBox("プライム");
+        cb_buff[P_PRE].setBounds(200 * row, 20 * col++, 100, 20);
+        cb_buff[P_PRE].addActionListener(this);
+        panels[2].add(cb_buff[P_PRE]);
 
         //オーラ
         cb_buff[P_AUA] = new JCheckBox("オーラ");
@@ -1380,48 +1376,24 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[P_AUA].addActionListener(this);
         panels[2].add(cb_buff[P_AUA]);
 
-//        col = 0;
-//        row = 1;
+        //*[UP後]コール クラン:アドバンス
+        cb_buff[P_CCA] = new JCheckBox("*[UP後]コール クラン:アドバンス");
+        cb_buff[P_CCA].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[P_CCA].addActionListener(this);
+        cb_buff[P_CCA].setEnabled(false);
+        panels[2].add(cb_buff[P_CCA]);
+
         col++;
 
         lab_tmp = new JLabel("騎士の技術");
         lab_tmp.setBounds(200 * row, 20 * col++, 200, 20);
         panels[2].add(lab_tmp);
 
-        //フォーススタン
-        cb_buff[K_FSN] = new JCheckBox("フォーススタン(未実装)");
-        cb_buff[K_FSN].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[K_FSN].addActionListener(this);
-        panels[2].add(cb_buff[K_FSN]);
-
-        //アブソルートブレイド
-        cb_buff[K_ABE] = new JCheckBox("アブソルートブレイド(未実装)");
-        cb_buff[K_ABE].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[K_ABE].addActionListener(this);
-        panels[2].add(cb_buff[K_ABE]);
-
-        //カウンターバリア
-        cb_buff[K_CBR] = new JCheckBox("カウンターバリア(未実装)");
-        cb_buff[K_CBR].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[K_CBR].addActionListener(this);
-        panels[2].add(cb_buff[K_CBR]);
-
-        //ブローアタック
-        cb_buff[K_BLK] = new JCheckBox("ブローアタック");
-        cb_buff[K_BLK].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[K_BLK].addActionListener(this);
-        panels[2].add(cb_buff[K_BLK]);
-
-        //バウンスアタック
-        cb_buff[K_BOK] = new JCheckBox("バウンスアタック");
-        cb_buff[K_BOK].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[K_BOK].addActionListener(this);
-        panels[2].add(cb_buff[K_BOK]);
-
-        //ショックスタン
-        cb_buff[K_SSN] = new JCheckBox("ショックスタン(未実装)");
+        //*ショック スタン
+        cb_buff[K_SSN] = new JCheckBox("*ショック スタン");
         cb_buff[K_SSN].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[K_SSN].addActionListener(this);
+        cb_buff[K_SSN].setEnabled(false);
         panels[2].add(cb_buff[K_SSN]);
 
         //リダクションアーマー
@@ -1430,23 +1402,31 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[K_RAR].addActionListener(this);
         panels[2].add(cb_buff[K_RAR]);
 
-        //カウンターバリア:ベテラン
-        cb_buff[K_CBV] = new JCheckBox("カウンターバリア:ベテラン(未実装)");
-        cb_buff[K_CBV].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[K_CBV].addActionListener(this);
-        panels[2].add(cb_buff[K_CBV]);
+       //バウンスアタック
+        cb_buff[K_BOK] = new JCheckBox("バウンスアタック");
+        cb_buff[K_BOK].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[K_BOK].addActionListener(this);
+        panels[2].add(cb_buff[K_BOK]);
 
-        //レイジングフォース
-        cb_buff[K_RFE] = new JCheckBox("レイジングフォース");
-        cb_buff[K_RFE].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[K_RFE].addActionListener(this);
-        panels[2].add(cb_buff[K_RFE]);
+        //ソリッドキャリッジ
+        cb_buff[K_SCE] = new JCheckBox("ソリッドキャリッジ");
+        cb_buff[K_SCE].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[K_SCE].addActionListener(this);
+        panels[2].add(cb_buff[K_SCE]);
 
-        //リダクションアーマー:ベテラン
-        cb_buff[K_RAV] = new JCheckBox("リダクションアーマー:ベテラン");
-        cb_buff[K_RAV].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[K_RAV].addActionListener(this);
-        panels[2].add(cb_buff[K_RAV]);
+        //*カウンターバリア
+        cb_buff[K_CBR] = new JCheckBox("*カウンターバリア");
+        cb_buff[K_CBR].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[K_CBR].addActionListener(this);
+        cb_buff[K_CBR].setEnabled(false);
+        panels[2].add(cb_buff[K_CBR]);
+
+        //*アブソルート ブレイド
+        cb_buff[K_ABE] = new JCheckBox("*アブソルート ブレイド");
+        cb_buff[K_ABE].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[K_ABE].addActionListener(this);
+        cb_buff[K_ABE].setEnabled(false);
+        panels[2].add(cb_buff[K_ABE]);
 
         //プライド
         cb_buff[K_PRE] = new JCheckBox("プライド");
@@ -1454,11 +1434,37 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[K_PRE].addActionListener(this);
         panels[2].add(cb_buff[K_PRE]);
 
-        //ソリッドキャリッジ
-        cb_buff[K_SCE] = new JCheckBox("ソリッドキャリッジ");
-        cb_buff[K_SCE].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[K_SCE].addActionListener(this);
-        panels[2].add(cb_buff[K_SCE]);
+        //ブロー アタック
+        cb_buff[K_BLK] = new JCheckBox("ブロー アタック");
+        cb_buff[K_BLK].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[K_BLK].addActionListener(this);
+        panels[2].add(cb_buff[K_BLK]);
+
+        //*フォース スタン
+        cb_buff[K_FSN] = new JCheckBox("*フォース スタン");
+        cb_buff[K_FSN].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[K_FSN].addActionListener(this);
+        cb_buff[K_FSN].setEnabled(false);
+        panels[2].add(cb_buff[K_FSN]);
+
+        //*カウンター バリア:ベテラン
+        cb_buff[K_CBV] = new JCheckBox("*カウンター バリア:ベテラン");
+        cb_buff[K_CBV].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[K_CBV].addActionListener(this);
+        cb_buff[K_CBV].setEnabled(false);
+        panels[2].add(cb_buff[K_CBV]);
+
+        //リダクション アーマー:ベテラン
+        cb_buff[K_RAV] = new JCheckBox("リダクション アーマー:ベテラン");
+        cb_buff[K_RAV].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[K_RAV].addActionListener(this);
+        panels[2].add(cb_buff[K_RAV]);
+
+        //レイジング フォース
+        cb_buff[K_RFE] = new JCheckBox("レイジング フォース");
+        cb_buff[K_RFE].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[K_RFE].addActionListener(this);
+        panels[2].add(cb_buff[K_RFE]);
 
         col = 0;
         row = 2;
@@ -1467,183 +1473,199 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         lab_tmp.setBounds(200 * row, 20 * col++, 200, 20);
         panels[2].add(lab_tmp);
 
-        //グローリーアース
-        cb_buff[E_GEH] = new JCheckBox("グローリーアース(未実装)");
-        cb_buff[E_GEH].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[E_GEH].addActionListener(this);
-        panels[2].add(cb_buff[E_GEH]);
+        //レジスト マジック
+        cb_buff[E_RMC] = new JCheckBox("レジスト マジック");
+        cb_buff[E_RMC].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[E_RMC].addActionListener(this);
+        panels[2].add(cb_buff[E_RMC]);
 
-        //エルヴンストライク
-        cb_buff[E_ESE] = new JCheckBox("[UP待ち]エルヴンストライク");
-        cb_buff[E_ESE].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[E_ESE].addActionListener(this);
-        panels[2].add(cb_buff[E_ESE]);
+        //*ボディ トゥ マインド
+        cb_buff[E_BTM] = new JCheckBox("*ボディ トゥ マインド");
+        cb_buff[E_BTM].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[E_BTM].addActionListener(this);
+        cb_buff[E_BTM].setEnabled(false);
+        panels[2].add(cb_buff[E_BTM]);
 
-        //リバーレベーション
-        cb_buff[E_REN] = new JCheckBox("[UP待ち]リバーレベーション");
-        cb_buff[E_REN].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[E_REN].addActionListener(this);
-        panels[2].add(cb_buff[E_REN]);
+        //*テレポート トゥ マザー
+        cb_buff[E_TTM] = new JCheckBox("*テレポート トゥ マザー");
+        cb_buff[E_TTM].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[E_TTM].addActionListener(this);
+        cb_buff[E_TTM].setEnabled(false);
+        panels[2].add(cb_buff[E_TTM]);
 
-//        //マーブル(次回リニューアルでマジックシールド)
-//        cb_buff[E_MSD] = new JCheckBox("マーブル");
-//        cb_buff[E_MSD].setBounds(200 * row, 20 * col++, 200, 20);
-//        cb_buff[E_MSD].addActionListener(this);
-//        panels[2].add(cb_buff[E_MSD]);
-
-        //ソウルバリア
-        cb_buff[E_SBR] = new JCheckBox("ソウルバリア(未実装)");
-        cb_buff[E_SBR].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[E_SBR].addActionListener(this);
-        panels[2].add(cb_buff[E_SBR]);
-
-        //エリアサイレンス
-        cb_buff[E_ASE] = new JCheckBox("エリアサイレンス(未実装)");
-        cb_buff[E_ASE].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[E_ASE].addActionListener(this);
-        panels[2].add(cb_buff[E_ASE]);
-
-        //エルヴングラヴィティー
-        cb_buff[E_ELY] = new JCheckBox("エルヴングラヴィティー");
-        cb_buff[E_ELY].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[E_ELY].addActionListener(this);
-        panels[2].add(cb_buff[E_ELY]);
-
-        //グレーターエレメンタル
-        cb_buff[E_GEL] = new JCheckBox("グレーターエレメンタル(未実装)");
-        cb_buff[E_GEL].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[E_GEL].addActionListener(this);
-        panels[2].add(cb_buff[E_GEL]);
-
-        //イレースマジック
-        cb_buff[E_EMC] = new JCheckBox("イレースマジック(未実装)");
-        cb_buff[E_EMC].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[E_EMC].addActionListener(this);
-        panels[2].add(cb_buff[E_EMC]);
-
-        //エレメンタルフォールダウン
-        cb_buff[E_EFN] = new JCheckBox("エレメンタルフォールダウン(未実装)");
-        cb_buff[E_EFN].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[E_EFN].addActionListener(this);
-        panels[2].add(cb_buff[E_EFN]);
-
-        //サモンレッサーエレメンタル
-        cb_buff[E_SLE] = new JCheckBox("サモンレッサーエレメンタル(未実装)");
-        cb_buff[E_SLE].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[E_SLE].addActionListener(this);
-        panels[2].add(cb_buff[E_SLE]);
-        
-        //トリプルアロー
-        cb_buff[E_TAW] = new JCheckBox("トリプルアロー(未実装)");
+        //*トリプル アロー
+        cb_buff[E_TAW] = new JCheckBox("*トリプル アロー");
         cb_buff[E_TAW].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[E_TAW].addActionListener(this);
+        cb_buff[E_TAW].setEnabled(false);
         panels[2].add(cb_buff[E_TAW]);
-        
-        //ブラッディソウル
-        cb_buff[E_BSL] = new JCheckBox("ブラッディソウル(未実装)");
-        cb_buff[E_BSL].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[E_BSL].addActionListener(this);
-        panels[2].add(cb_buff[E_BSL]);
 
-        //エレメンタルプロテクション
+        //クリアー マインド
+        cb_buff[E_CMD] = new JCheckBox("クリアー マインド");
+        cb_buff[E_CMD].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[E_CMD].addActionListener(this);
+        panels[2].add(cb_buff[E_CMD]);
+
+        //*リターン トゥ ネイチャー
+        cb_buff[E_RTN] = new JCheckBox("*リターン トゥ ネイチャー");
+        cb_buff[E_RTN].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[E_RTN].addActionListener(this);
+        cb_buff[E_RTN].setEnabled(false);
+        panels[2].add(cb_buff[E_RTN]);
+
+        //エレメンタル プロテクション
         String list_E_EPN[] = {"火エルフ", "水エルフ", "風エルフ", "地エルフ", "火*水エルフ", "火*風エルフ", "火*地エルフ", "水*風エルフ", "水*地エルフ", "風*地エルフ"};
         cb_buff_group[E_EPN] = new WideComboBox(list_E_EPN);
         cb_buff_group[E_EPN].setBounds(200 * row + 100, 20 * col, 80, 20);
         cb_buff_group[E_EPN].addActionListener(this);
         panels[2].add(cb_buff_group[E_EPN]);
-        cb_buff[E_EPN] = new JCheckBox("エレメンタルプロテクション");
+        cb_buff[E_EPN] = new JCheckBox("エレメンタル プロテクション");
         cb_buff[E_EPN].setBounds(200 * row, 20 * col++, 100, 20);
         cb_buff[E_EPN].addActionListener(this);
         panels[2].add(cb_buff[E_EPN]);
 
-        //レジストエレメント
-        cb_buff[E_RET] = new JCheckBox("レジストエレメント");
+        //*エレメンタル フォールダウン
+        cb_buff[E_EFN] = new JCheckBox("*エレメンタル フォールダウン");
+        cb_buff[E_EFN].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[E_EFN].addActionListener(this);
+        cb_buff[E_EFN].setEnabled(false);
+        panels[2].add(cb_buff[E_EFN]);
+
+        //*イレース マジック
+        cb_buff[E_EMC] = new JCheckBox("*イレース マジック");
+        cb_buff[E_EMC].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[E_EMC].addActionListener(this);
+        cb_buff[E_EMC].setEnabled(false);
+        panels[2].add(cb_buff[E_EMC]);
+
+        //*サモン レッサーエレメンタル
+        cb_buff[E_SLE] = new JCheckBox("*サモン レッサーエレメンタル");
+        cb_buff[E_SLE].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[E_SLE].addActionListener(this);
+        cb_buff[E_SLE].setEnabled(false);
+        panels[2].add(cb_buff[E_SLE]);
+
+        //エルヴン グラヴィティー
+        cb_buff[E_ELY] = new JCheckBox("エルヴン グラヴィティー");
+        cb_buff[E_ELY].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[E_ELY].addActionListener(this);
+        panels[2].add(cb_buff[E_ELY]);
+
+        //*エリア サイレンス
+        cb_buff[E_ASE] = new JCheckBox("*エリア サイレンス");
+        cb_buff[E_ASE].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[E_ASE].addActionListener(this);
+        cb_buff[E_ASE].setEnabled(false);
+        panels[2].add(cb_buff[E_ASE]);
+
+        //*グレーター エレメンタル
+        cb_buff[E_GEL] = new JCheckBox("*グレーター エレメンタル");
+        cb_buff[E_GEL].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[E_GEL].addActionListener(this);
+        cb_buff[E_GEL].setEnabled(false);
+        panels[2].add(cb_buff[E_GEL]);
+
+        //*ソウル バリア
+        cb_buff[E_SBR] = new JCheckBox("*ソウル バリア");
+        cb_buff[E_SBR].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[E_SBR].addActionListener(this);
+        cb_buff[E_SBR].setEnabled(false);
+        panels[2].add(cb_buff[E_SBR]);
+
+        //レジスト エレメント
+        cb_buff[E_RET] = new JCheckBox("レジスト エレメント");
         cb_buff[E_RET].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[E_RET].addActionListener(this);
         panels[2].add(cb_buff[E_RET]);
 
-        //クリアマインド
-        cb_buff[E_CMD] = new JCheckBox("クリアマインド");
-        cb_buff[E_CMD].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[E_CMD].addActionListener(this);
-        panels[2].add(cb_buff[E_CMD]);
+        //*グローリーアース
+        cb_buff[E_GEH] = new JCheckBox("*グローリーアース");
+        cb_buff[E_GEH].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[E_GEH].addActionListener(this);
+        cb_buff[E_GEH].setEnabled(false);
+        panels[2].add(cb_buff[E_GEH]);
 
-        //テレポートトゥマザー
-        cb_buff[E_TTM] = new JCheckBox("テレポートトゥマザー(未実装)");
-        cb_buff[E_TTM].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[E_TTM].addActionListener(this);
-        panels[2].add(cb_buff[E_TTM]);
+        //*ブラッディソウル
+        cb_buff[E_BSL] = new JCheckBox("*ブラッディソウル");
+        cb_buff[E_BSL].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[E_BSL].addActionListener(this);
+        cb_buff[E_BSL].setEnabled(false);
+        panels[2].add(cb_buff[E_BSL]);
 
-        //ボディトゥマインド
-        cb_buff[E_BTM] = new JCheckBox("ボディトゥマインド(未実装)");
-        cb_buff[E_BTM].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[E_BTM].addActionListener(this);
-        panels[2].add(cb_buff[E_BTM]);
+//        //マーブル(次回リニューアルでマジックシールド)
+//        cb_buff[E_MSD] = new JCheckBox("マーブル");
+//        cb_buff[E_MSD].setBounds(200 * row, 20 * col++, 200, 20);
+//        cb_buff[E_MSD].addActionListener(this);
+//        cb_buff[E_MSD].setEnabled(false);
+//        panels[2].add(cb_buff[E_MSD]);
 
-        //レジストマジック
-        cb_buff[E_RMC] = new JCheckBox("レジストマジック");
-        cb_buff[E_RMC].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[E_RMC].addActionListener(this);
-        panels[2].add(cb_buff[E_RMC]);
+        //*エルヴンストライク
+        cb_buff[E_ESE] = new JCheckBox("*[UP待ち]エルヴンストライク");
+        cb_buff[E_ESE].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[E_ESE].addActionListener(this);
+        cb_buff[E_ESE].setEnabled(false);
+        panels[2].add(cb_buff[E_ESE]);
 
-        //リターントゥネイチャー
-        cb_buff[E_RTN] = new JCheckBox("リターントゥネイチャー(未実装)");
-        cb_buff[E_RTN].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[E_RTN].addActionListener(this);
-        panels[2].add(cb_buff[E_RTN]);
+        //*リバーレベーション
+        cb_buff[E_REN] = new JCheckBox("*[UP待ち]リバーレベーション");
+        cb_buff[E_REN].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[E_REN].addActionListener(this);
+        cb_buff[E_REN].setEnabled(false);
+        panels[2].add(cb_buff[E_REN]);
 
-        col++;
+col++;
 
         lab_tmp = new JLabel("精霊魔法(火)");
         lab_tmp.setBounds(200 * row, 20 * col++, 200, 20);
         panels[2].add(lab_tmp);
 
-        //インフェルノ
-        cb_buff[E_INO] = new JCheckBox("インフェルノ(未実装)");
-        cb_buff[E_INO].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[E_INO].addActionListener(this);
-        panels[2].add(cb_buff[E_INO]);
+        //*ファイアー シールド
+        cb_buff[E_FSD] = new JCheckBox("*ファイアー シールド");
+        cb_buff[E_FSD].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[E_FSD].addActionListener(this);
+        cb_buff[E_FSD].setEnabled(false);
+        panels[2].add(cb_buff[E_FSD]);
 
-        //ソウルオブフレイム
-        cb_buff[E_SOF] = new JCheckBox("ソウルオブフレイム");
-        cb_buff[E_SOF].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[E_SOF].addActionListener(this);
-        panels[2].add(cb_buff[E_SOF]);
-
-        //アディショナルファイアー
-        cb_buff[E_AFE] = new JCheckBox("アディショナルファイアー");
-        cb_buff[E_AFE].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[E_AFE].addActionListener(this);
-        panels[2].add(cb_buff[E_AFE]);
-
-        //エレメンタルファイアー
-        cb_buff[E_EFE] = new JCheckBox("エレメンタルファイアー");
-        cb_buff[E_EFE].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[E_EFE].addActionListener(this);
-        panels[2].add(cb_buff[E_EFE]);
-
-        //バーニングウエポン
-        cb_buff[E_BWN] = new JCheckBox("バーニングウエポン");
-        cb_buff[E_BWN].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[E_BWN].addActionListener(this);
-        panels[2].add(cb_buff[E_BWN]);
-
-        //ダンシングブレイズ
-        cb_buff[E_DBE] = new JCheckBox("ダンシングブレイズ");
+        //*ダンシング ブレイズ
+        cb_buff[E_DBE] = new JCheckBox("*ダンシング ブレイズ");
         cb_buff[E_DBE].setBounds(200 * row, 20 * col++, 150, 20);
         cb_buff[E_DBE].addActionListener(this);
         cb_buff[E_DBE].setEnabled(false);
         panels[2].add(cb_buff[E_DBE]);
 
+        //バーニング ウエポン
+        cb_buff[E_BWN] = new JCheckBox("バーニング ウエポン");
+        cb_buff[E_BWN].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[E_BWN].addActionListener(this);
+        panels[2].add(cb_buff[E_BWN]);
+
+        //エレメンタル ファイアー
+        cb_buff[E_EFE] = new JCheckBox("エレメンタル ファイアー");
+        cb_buff[E_EFE].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[E_EFE].addActionListener(this);
+        panels[2].add(cb_buff[E_EFE]);
+
+        //ソウル オブ フレイム
+        cb_buff[E_SOF] = new JCheckBox("ソウル オブ フレイム");
+        cb_buff[E_SOF].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[E_SOF].addActionListener(this);
+        panels[2].add(cb_buff[E_SOF]);
+
+        //アディショナル ファイアー
+        cb_buff[E_AFE] = new JCheckBox("アディショナル ファイアー");
+        cb_buff[E_AFE].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[E_AFE].addActionListener(this);
+        panels[2].add(cb_buff[E_AFE]);
+
         col = 0;
         row = 3;
 
-        //ファイアーシールド
-        cb_buff[E_FSD] = new JCheckBox("ファイアーシールド");
-        cb_buff[E_FSD].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[E_FSD].addActionListener(this);
-        cb_buff[E_FSD].setEnabled(false);
-        panels[2].add(cb_buff[E_FSD]);
+        //*インフェルノ
+        cb_buff[E_INO] = new JCheckBox("*インフェルノ");
+        cb_buff[E_INO].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[E_INO].addActionListener(this);
+        cb_buff[E_INO].setEnabled(false);
+        panels[2].add(cb_buff[E_INO]);
 
         col++;
 
@@ -1651,48 +1673,51 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         lab_tmp.setBounds(200 * row, 20 * col++, 200, 20);
         panels[2].add(lab_tmp);
 
-        //ポルートウォーター
-        cb_buff[E_PWR] = new JCheckBox("ポルートウォーター(未実装)");
-        cb_buff[E_PWR].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[E_PWR].addActionListener(this);
-        panels[2].add(cb_buff[E_PWR]);
+        //アクア ショット
+        cb_buff[E_AST] = new JCheckBox("アクア ショット");
+        cb_buff[E_AST].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[E_AST].addActionListener(this);
+        panels[2].add(cb_buff[E_AST]);
 
-        //ネイチャーズブレッシング
-        cb_buff[E_NBG] = new JCheckBox("ネイチャーズブレッシング(未実装)");
-        cb_buff[E_NBG].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[E_NBG].addActionListener(this);
-        panels[2].add(cb_buff[E_NBG]);
+        //*ウォーター ライフ
+        cb_buff[E_WLE] = new JCheckBox("*ウォーター ライフ");
+        cb_buff[E_WLE].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[E_WLE].addActionListener(this);
+        cb_buff[E_INO].setEnabled(false);
+        panels[2].add(cb_buff[E_WLE]);
 
-        //フォーカスウェーブ
-        cb_buff[E_FWE] = new JCheckBox("フォーカスウェーブ");
+        //ネイチャーズ タッチ
+        cb_buff[E_NTH] = new JCheckBox("ネイチャーズ タッチ");
+        cb_buff[E_NTH].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[E_NTH].addActionListener(this);
+        panels[2].add(cb_buff[E_NTH]);
+
+        //アクア プロテクター
+        cb_buff[E_APR] = new JCheckBox("アクア プロテクター");
+        cb_buff[E_APR].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[E_APR].addActionListener(this);
+        panels[2].add(cb_buff[E_APR]);
+
+        //*フォーカス ウェーブ
+        cb_buff[E_FWE] = new JCheckBox("*フォーカス ウェーブ");
         cb_buff[E_FWE].setBounds(200 * row, 20 * col++, 150, 20);
         cb_buff[E_FWE].addActionListener(this);
         cb_buff[E_FWE].setEnabled(false);
         panels[2].add(cb_buff[E_FWE]);
 
-        //アクアプロテクター
-        cb_buff[E_APR] = new JCheckBox("アクアプロテクター");
-        cb_buff[E_APR].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[E_APR].addActionListener(this);
-        panels[2].add(cb_buff[E_APR]);
+        //*ネイチャーズ ブレッシング
+        cb_buff[E_NBG] = new JCheckBox("*ネイチャーズ ブレッシング");
+        cb_buff[E_NBG].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[E_NBG].addActionListener(this);
+        cb_buff[E_NBG].setEnabled(false);
+        panels[2].add(cb_buff[E_NBG]);
 
-        //ネイチャーズタッチ
-        cb_buff[E_NTH] = new JCheckBox("ネイチャーズタッチ");
-        cb_buff[E_NTH].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[E_NTH].addActionListener(this);
-        panels[2].add(cb_buff[E_NTH]);
-
-        //ウォーターライフ
-        cb_buff[E_WLE] = new JCheckBox("ウォーターライフ(未実装)");
-        cb_buff[E_WLE].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[E_WLE].addActionListener(this);
-        panels[2].add(cb_buff[E_WLE]);
-
-        //アクアショット
-        cb_buff[E_AST] = new JCheckBox("アクアショット");
-        cb_buff[E_AST].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[E_AST].addActionListener(this);
-        panels[2].add(cb_buff[E_AST]);
+        //*ポルート ウォーター
+        cb_buff[E_PWR] = new JCheckBox("*ポルート ウォーター");
+        cb_buff[E_PWR].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[E_PWR].addActionListener(this);
+        cb_buff[E_PWR].setEnabled(false);
+        panels[2].add(cb_buff[E_PWR]);
 
         col++;
 
@@ -1700,18 +1725,23 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         lab_tmp.setBounds(200 * row, 20 * col++, 200, 20);
         panels[2].add(lab_tmp);
 
-        //ストライカーゲイル
-        cb_buff[E_SGL] = new JCheckBox("ストライカーゲイル(未実装)");
-        cb_buff[E_SGL].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[E_SGL].addActionListener(this);
-        panels[2].add(cb_buff[E_SGL]);
+        //イーグル アイ
+        cb_buff[E_EEE] = new JCheckBox("イーグル アイ");
+        cb_buff[E_EEE].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[E_EEE].addActionListener(this);
+        panels[2].add(cb_buff[E_EEE]);
 
-        //ハリケーン
-        cb_buff[E_HUE] = new JCheckBox("ハリケーン");
-        cb_buff[E_HUE].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[E_HUE].addActionListener(this);
-        cb_buff[E_HUE].setEnabled(false);
-        panels[2].add(cb_buff[E_HUE]);
+        //ストーム アイ
+        cb_buff[E_SEE] = new JCheckBox("ストーム アイ");
+        cb_buff[E_SEE].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[E_SEE].addActionListener(this);
+        panels[2].add(cb_buff[E_SEE]);
+
+        //ストーム ショット
+        cb_buff[E_SST] = new JCheckBox("ストーム ショット");
+        cb_buff[E_SST].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[E_SST].addActionListener(this);
+        panels[2].add(cb_buff[E_SST]);
 
         //サイクロン
         cb_buff[E_CYE] = new JCheckBox("サイクロン");
@@ -1719,23 +1749,19 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[E_CYE].addActionListener(this);
         panels[2].add(cb_buff[E_CYE]);
 
-        //ストームショット
-        cb_buff[E_SST] = new JCheckBox("ストームショット");
-        cb_buff[E_SST].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[E_SST].addActionListener(this);
-        panels[2].add(cb_buff[E_SST]);
+        //*ストライカー ゲイル
+        cb_buff[E_SGL] = new JCheckBox("*ストライカー ゲイル");
+        cb_buff[E_SGL].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[E_SGL].addActionListener(this);
+        cb_buff[E_SGL].setEnabled(false);
+        panels[2].add(cb_buff[E_SGL]);
 
-        //ストームアイ
-        cb_buff[E_SEE] = new JCheckBox("ストームアイ");
-        cb_buff[E_SEE].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[E_SEE].addActionListener(this);
-        panels[2].add(cb_buff[E_SEE]);
-
-        //イーグルアイ
-        cb_buff[E_EEE] = new JCheckBox("イーグルアイ");
-        cb_buff[E_EEE].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[E_EEE].addActionListener(this);
-        panels[2].add(cb_buff[E_EEE]);
+        //*ハリケーン
+        cb_buff[E_HUE] = new JCheckBox("*ハリケーン");
+        cb_buff[E_HUE].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[E_HUE].addActionListener(this);
+        cb_buff[E_HUE].setEnabled(false);
+        panels[2].add(cb_buff[E_HUE]);
 
         col++;
 
@@ -1743,53 +1769,56 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         lab_tmp.setBounds(200 * row, 20 * col++, 200, 20);
         panels[2].add(lab_tmp);
 
-        //アースバインド
-        cb_buff[E_EBD] = new JCheckBox("アースバインド(未実装)");
-        cb_buff[E_EBD].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[E_EBD].addActionListener(this);
-        panels[2].add(cb_buff[E_EBD]);
+        //アース ウェポン
+        cb_buff[E_EWN] = new JCheckBox("アース ウェポン");
+        cb_buff[E_EWN].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[E_EWN].addActionListener(this);
+        panels[2].add(cb_buff[E_EWN]);
 
-        //エキゾチックバイタライズ
-        cb_buff[E_EVE] = new JCheckBox("エキゾチックバイタライズ(未実装)");
-        cb_buff[E_EVE].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[E_EVE].addActionListener(this);
-        panels[2].add(cb_buff[E_EVE]);
-
-        //アイアンスキン
-        cb_buff[E_ISN] = new JCheckBox("アイアンスキン");
-        cb_buff[E_ISN].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[E_ISN].addActionListener(this);
-        panels[2].add(cb_buff[E_ISN]);
-
-        //サンドストーム
-        cb_buff[E_SSM] = new JCheckBox("サンドストーム");
-        cb_buff[E_SSM].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[E_SSM].addActionListener(this);
-        cb_buff[E_SSM].setEnabled(false);
-        panels[2].add(cb_buff[E_SSM]);
-
-        //アースガーディアン
-        cb_buff[E_EGN] = new JCheckBox("アースガーディアン");
-        cb_buff[E_EGN].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[E_EGN].addActionListener(this);
-        panels[2].add(cb_buff[E_EGN]);
-        
         //クエイク
         cb_buff[E_QUE] = new JCheckBox("クエイク");
         cb_buff[E_QUE].setBounds(200 * row, 20 * col++, 150, 20);
         cb_buff[E_QUE].addActionListener(this);
         panels[2].add(cb_buff[E_QUE]);
 
-        //アースウェポン
-        cb_buff[E_EWN] = new JCheckBox("アースウェポン");
-        cb_buff[E_EWN].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[E_EWN].addActionListener(this);
-        panels[2].add(cb_buff[E_EWN]);
+        //*アース バインド
+        cb_buff[E_EBD] = new JCheckBox("*アース バインド");
+        cb_buff[E_EBD].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[E_EBD].addActionListener(this);
+        cb_buff[E_EBD].setEnabled(false);
+        panels[2].add(cb_buff[E_EBD]);
 
-        //マーブル(次回リニューアルでマジックシールド)　リニューアル時は1488行へ
-        cb_buff[E_MSD] = new JCheckBox("マーブル");
+        //アース ガーディアン
+        cb_buff[E_EGN] = new JCheckBox("アース ガーディアン");
+        cb_buff[E_EGN].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[E_EGN].addActionListener(this);
+        panels[2].add(cb_buff[E_EGN]);
+
+        //*サンド ストーム
+        cb_buff[E_SSM] = new JCheckBox("*サンド ストーム");
+        cb_buff[E_SSM].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[E_SSM].addActionListener(this);
+        cb_buff[E_SSM].setEnabled(false);
+        panels[2].add(cb_buff[E_SSM]);
+
+        //アイアン スキン
+        cb_buff[E_ISN] = new JCheckBox("アイアン スキン");
+        cb_buff[E_ISN].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[E_ISN].addActionListener(this);
+        panels[2].add(cb_buff[E_ISN]);
+
+        //*エキゾチック バイタライズ
+        cb_buff[E_EVE] = new JCheckBox("*エキゾチック バイタライズ");
+        cb_buff[E_EVE].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[E_EVE].addActionListener(this);
+        cb_buff[E_EVE].setEnabled(false);
+        panels[2].add(cb_buff[E_EVE]);
+
+        //*マーブル(次回リニューアルでマジックシールド)　リニューアル時は1488行へ
+        cb_buff[E_MSD] = new JCheckBox("*マーブル");
         cb_buff[E_MSD].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[E_MSD].addActionListener(this);
+        cb_buff[E_MSD].setEnabled(false);
         panels[2].add(cb_buff[E_MSD]);
 
         col = 0;
@@ -1799,85 +1828,131 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         lab_tmp.setBounds(200 * row, 20 * col++, 200, 20);
         panels[2].add(lab_tmp);
 
-        //アベンジャー
-        cb_buff[D_AVR] = new JCheckBox("アベンジャー(未実装)");
-        cb_buff[D_AVR].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[D_AVR].addActionListener(this);
-        panels[2].add(cb_buff[D_AVR]);
+        //*ブラインド ハイディング
+        cb_buff[D_BHG] = new JCheckBox("*ブラインド ハイディング");
+        cb_buff[D_BHG].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[D_BHG].addActionListener(this);
+        cb_buff[D_BHG].setEnabled(false);
+        panels[2].add(cb_buff[D_BHG]);
 
-        //シャドウステップ
-        cb_buff[D_SHS] = new JCheckBox("[UP待ち]シャドウステップ(未実装)");
-        cb_buff[D_SHS].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[D_SHS].addActionListener(this);
-        panels[2].add(cb_buff[D_SHS]);
+        //*エンチャント ベノム
+        cb_buff[D_EVM] = new JCheckBox("*エンチャント ベノム");
+        cb_buff[D_EVM].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[D_EVM].addActionListener(this);
+        cb_buff[D_EVM].setEnabled(false);
+        panels[2].add(cb_buff[D_EVM]);
 
-        //アーマーブレイク
-        cb_buff[D_ABK] = new JCheckBox("アーマーブレイク(未実装)");
-        cb_buff[D_ABK].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[D_ABK].addActionListener(this);
-        panels[2].add(cb_buff[D_ABK]);
+        //シャドウ アーマー
+        cb_buff[D_SAR] = new JCheckBox("シャドウ アーマー");
+        cb_buff[D_SAR].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[D_SAR].addActionListener(this);
+        panels[2].add(cb_buff[D_SAR]);
 
-        //ルシファー
-        cb_buff[D_LUR] = new JCheckBox("ルシファー(未実装)");
-        cb_buff[D_LUR].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[D_LUR].addActionListener(this);
-        panels[2].add(cb_buff[D_LUR]);
+        //ドレス マイティー
+        cb_buff[D_DMY] = new JCheckBox("ドレス マイティー");
+        cb_buff[D_DMY].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[D_DMY].addActionListener(this);
+        panels[2].add(cb_buff[D_DMY]);
 
-        //ムービングアクセレーション:マキシマム
-        cb_buff[D_MAM] = new JCheckBox("[UP待ち]ムービングアクセレーション:マキシマム");
-        cb_buff[D_MAM].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[D_MAM].addActionListener(this);
-        cb_buff[D_MAM].setEnabled(false);
-        panels[2].add(cb_buff[D_MAM]);
+        //*ムービング アクセレーション
+        cb_buff[D_MAN] = new JCheckBox("*ムービング アクセレーション");
+        cb_buff[D_MAN].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[D_MAN].addActionListener(this);
+        cb_buff[D_MAN].setEnabled(false);
+        panels[2].add(cb_buff[D_MAN]);
 
-        //シャドウアーマー:デスティニー
-        cb_buff[D_SAD] = new JCheckBox("[UP待ち]シャドウアーマー:デスティニー");
-        cb_buff[D_SAD].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[D_SAD].addActionListener(this);
-        panels[2].add(cb_buff[D_SAD]);
+        //*シャドウ スリープ
+        cb_buff[D_SSP] = new JCheckBox("*シャドウ スリープ");
+        cb_buff[D_SSP].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[D_SSP].addActionListener(this);
+        cb_buff[D_SSP].setEnabled(false);
+        panels[2].add(cb_buff[D_SSP]);
 
-        //ルシファー:デスティニー
-        cb_buff[D_LUD] = new JCheckBox("ルシファー:デスティニー(未実装)");
-        cb_buff[D_LUD].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[D_LUD].addActionListener(this);
-        panels[2].add(cb_buff[D_LUD]);
+        //*ベノム レジスト
+        cb_buff[D_VRT] = new JCheckBox("*ベノム レジスト");
+        cb_buff[D_VRT].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[D_VRT].addActionListener(this);
+        cb_buff[D_VRT].setEnabled(false);
+        panels[2].add(cb_buff[D_VRT]);
 
-        //アーマーブレイク:デスティニー
-        cb_buff[D_ABD] = new JCheckBox("アーマーブレイク:デスティニー(未実装)");
-        cb_buff[D_ABD].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[D_ABD].addActionListener(this);
-        panels[2].add(cb_buff[D_ABD]);
+        //ドレス デクスタリティー
+        cb_buff[D_DDY] = new JCheckBox("ドレス デクスタリティー");
+        cb_buff[D_DDY].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[D_DDY].addActionListener(this);
+        panels[2].add(cb_buff[D_DDY]);
 
-        //ダブルブレイク:デスティニー
-        cb_buff[D_DBD] = new JCheckBox("ダブルブレイク:デスティニー");
-        cb_buff[D_DBD].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[D_DBD].addActionListener(this);
-        panels[2].add(cb_buff[D_DBD]);
-
-        //ダブルブレイク
-        cb_buff[D_DBK] = new JCheckBox("ダブルブレイク");
+        //ダブル ブレイク
+        cb_buff[D_DBK] = new JCheckBox("ダブル ブレイク");
         cb_buff[D_DBK].setBounds(200 * row, 20 * col++, 150, 20);
         cb_buff[D_DBK].addActionListener(this);
         panels[2].add(cb_buff[D_DBK]);
 
-        //アンキャニードッジ
-        cb_buff[D_UDE] = new JCheckBox("アンキャニードッジ");
+        //アンキャニー ドッジ
+        cb_buff[D_UDE] = new JCheckBox("アンキャニー ドッジ");
         cb_buff[D_UDE].setBounds(200 * row, 20 * col++, 150, 20);
         cb_buff[D_UDE].addActionListener(this);
         panels[2].add(cb_buff[D_UDE]);
 
-        //シャドウファング
-        cb_buff[D_SFG] = new JCheckBox("シャドウファング");
+        //*シャドウ ファング
+        cb_buff[D_SFG] = new JCheckBox("*シャドウ ファング");
         cb_buff[D_SFG].setBounds(200 * row, 20 * col++, 150, 20);
         cb_buff[D_SFG].addActionListener(this);
         cb_buff[D_SFG].setEnabled(false);
         panels[2].add(cb_buff[D_SFG]);
 
-        //ファイナルバーン
-        cb_buff[D_FBN] = new JCheckBox("ファイナルバーン");
+        //*アーマー ブレイク
+        cb_buff[D_ABK] = new JCheckBox("*アーマー ブレイク");
+        cb_buff[D_ABK].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[D_ABK].addActionListener(this);
+        cb_buff[D_ABK].setEnabled(false);
+        panels[2].add(cb_buff[D_ABK]);
+
+        //*ルシファー
+        cb_buff[D_LUR] = new JCheckBox("*ルシファー");
+        cb_buff[D_LUR].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[D_LUR].addActionListener(this);
+        cb_buff[D_LUR].setEnabled(false);
+        panels[2].add(cb_buff[D_LUR]);
+
+        //*アベンジャー
+        cb_buff[D_AVR] = new JCheckBox("*アベンジャー");
+        cb_buff[D_AVR].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[D_AVR].addActionListener(this);
+        cb_buff[D_AVR].setEnabled(false);
+        panels[2].add(cb_buff[D_AVR]);
+
+        //*シャドウ ステップ
+        cb_buff[D_SHS] = new JCheckBox("*シャドウ ステップ");
+        cb_buff[D_SHS].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[D_SHS].addActionListener(this);
+        cb_buff[D_SHS].setEnabled(false);
+        panels[2].add(cb_buff[D_SHS]);
+
+        //*アーマーブレイク:デスティニー
+        cb_buff[D_ABD] = new JCheckBox("*アーマーブレイク:デスティニー");
+        cb_buff[D_ABD].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[D_ABD].addActionListener(this);
+        cb_buff[D_ABD].setEnabled(false);
+        panels[2].add(cb_buff[D_ABD]);
+
+        //ダブル ブレイク:デスティニー
+        cb_buff[D_DBD] = new JCheckBox("ダブル ブレイク:デスティニー");
+        cb_buff[D_DBD].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[D_DBD].addActionListener(this);
+        panels[2].add(cb_buff[D_DBD]);
+
+        //*ファイナル バーン
+        cb_buff[D_FBN] = new JCheckBox("*ファイナル バーン");
         cb_buff[D_FBN].setBounds(200 * row, 20 * col++, 150, 20);
         cb_buff[D_FBN].addActionListener(this);
+        cb_buff[D_FBN].setEnabled(false);
         panels[2].add(cb_buff[D_FBN]);
+
+        //バーニング スピリッツ
+        cb_buff[D_BSS] = new JCheckBox("バーニング スピリッツ");
+        cb_buff[D_BSS].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[D_BSS].addActionListener(this);
+        panels[2].add(cb_buff[D_BSS]);
 
         //ドレスイベイジョン
         cb_buff[D_DEN] = new JCheckBox("ドレスイベイジョン");
@@ -1885,65 +1960,26 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[D_DEN].addActionListener(this);
         panels[2].add(cb_buff[D_DEN]);
 
-        //ムービングアクセレーション
-        cb_buff[D_MAN] = new JCheckBox("ムービングアクセレーション(未実装)");
-        cb_buff[D_MAN].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[D_MAN].addActionListener(this);
-        panels[2].add(cb_buff[D_MAN]);
+       //*ルシファー:デスティニー
+        cb_buff[D_LUD] = new JCheckBox("*ルシファー:デスティニー");
+        cb_buff[D_LUD].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[D_LUD].addActionListener(this);
+        cb_buff[D_LUD].setEnabled(false);
+        panels[2].add(cb_buff[D_LUD]);
 
-        //バーニングスピリッツ
-        cb_buff[D_BSS] = new JCheckBox("バーニングスピリッツ");
-        cb_buff[D_BSS].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[D_BSS].addActionListener(this);
-        panels[2].add(cb_buff[D_BSS]);
+        //*[UP後]ムービング アクセレーション:マキシマム
+        cb_buff[D_MAM] = new JCheckBox("*[UP後]ムービング アクセレーション:マキシマム");
+        cb_buff[D_MAM].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[D_MAM].addActionListener(this);
+        cb_buff[D_MAM].setEnabled(false);
+        panels[2].add(cb_buff[D_MAM]);
 
-        //シャドウスリープ
-        cb_buff[D_SSP] = new JCheckBox("シャドウスリープ(未実装)");
-        cb_buff[D_SSP].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[D_SSP].addActionListener(this);
-        panels[2].add(cb_buff[D_SSP]);
-
-        //ベノムレジスト
-        cb_buff[D_VRT] = new JCheckBox("ベノムレジスト(未実装)");
-        cb_buff[D_VRT].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[D_VRT].addActionListener(this);
-        panels[2].add(cb_buff[D_VRT]);
-
-        //ドレスデクスタリティー
-        cb_buff[D_DDY] = new JCheckBox("ドレスデクスタリティー");
-        cb_buff[D_DDY].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[D_DDY].addActionListener(this);
-        panels[2].add(cb_buff[D_DDY]);
-
-        //ブラインドハイディング
-        cb_buff[D_BHG] = new JCheckBox("ブラインドハイディング(未実装)");
-        cb_buff[D_BHG].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[D_BHG].addActionListener(this);
-        panels[2].add(cb_buff[D_BHG]);
-
-        //エンチャントベノム
-        cb_buff[D_EVM] = new JCheckBox("エンチャントベノム(未実装)");
-        cb_buff[D_EVM].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[D_EVM].addActionListener(this);
-        panels[2].add(cb_buff[D_EVM]);
-
-        //ブリングストーン
-        cb_buff[D_BRE] = new JCheckBox("ブリングストーン(未実装)");
-        cb_buff[D_BRE].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[D_BRE].addActionListener(this);
-        panels[2].add(cb_buff[D_BRE]);
-
-        //シャドウアーマー
-        cb_buff[D_SAR] = new JCheckBox("シャドウアーマー");
-        cb_buff[D_SAR].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[D_SAR].addActionListener(this);
-        panels[2].add(cb_buff[D_SAR]);
-
-        //ドレスマイティー
-        cb_buff[D_DMY] = new JCheckBox("ドレスマイティー");
-        cb_buff[D_DMY].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[D_DMY].addActionListener(this);
-        panels[2].add(cb_buff[D_DMY]);
+        //*[UP後]シャドウ アーマー:デスティニー
+        cb_buff[D_SAD] = new JCheckBox("*[UP後]シャドウ アーマー:デスティニー");
+        cb_buff[D_SAD].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[D_SAD].addActionListener(this);
+        cb_buff[D_SAD].setEnabled(false);
+        panels[2].add(cb_buff[D_SAD]);
 
         col = 0;
         row = 0;
@@ -1952,129 +1988,31 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         lab_tmp.setBounds(200 * row, 20 * col++, 200, 20);
         panels[3].add(lab_tmp);
 
-        //ハルパス
-        cb_buff[R_HAS] = new JCheckBox("ハルパス(未実装)");
-        cb_buff[R_HAS].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[R_HAS].addActionListener(this);
-        panels[3].add(cb_buff[R_HAS]);
-
-        cb_buff[R_SNE] = new JCheckBox("[UP待ち]ソリッドノート");
-        cb_buff[R_SNE].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[R_SNE].addActionListener(this);
-        panels[3].add(cb_buff[R_SNE]);
-
-        cb_buff[R_RAE] = new JCheckBox("[UP待ち]ランペイジ");
-        cb_buff[R_RAE].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[R_RAE].addActionListener(this);
-        panels[3].add(cb_buff[R_RAE]);
-
-        //アウラキア
-        cb_buff[R_AUA] = new JCheckBox("アウラキア");
-        cb_buff[R_AUA].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[R_AUA].addActionListener(this);
-        panels[3].add(cb_buff[R_AUA]);
-
-        //サンダーグラップ:ブレイブ
-        cb_buff[R_TGB] = new JCheckBox("サンダーグラップ:ブレイブ(未実装)");
-        cb_buff[R_TGB].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[R_TGB].addActionListener(this);
-        panels[3].add(cb_buff[R_TGB]);
-
-        //フォースレイヤー:ブレイブ
-        cb_buff[R_FSB] = new JCheckBox("フォースレイヤー:ブレイブ(未実装)");
-        cb_buff[R_FSB].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[R_FSB].addActionListener(this);
-        panels[3].add(cb_buff[R_FSB]);
-
-        //覚醒[リンドビオル]
-        cb_buff[R_LINDVIOL] = new JCheckBox("覚醒[リンドビオル]");
-        cb_buff[R_LINDVIOL].setBounds(200 * row, 20 * col++, 180, 20);
-        cb_buff[R_LINDVIOL].addActionListener(this);
-        panels[3].add(cb_buff[R_LINDVIOL]);
-
-        //モータルボディー
-        cb_buff[R_MBY] = new JCheckBox("モータルボディー(未実装)");
-        cb_buff[R_MBY].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[R_MBY].addActionListener(this);
-        panels[3].add(cb_buff[R_MBY]);
-
-        //サンダーグラップ
-        cb_buff[R_TGP] = new JCheckBox("サンダーグラップ(未実装)");
-        cb_buff[R_TGP].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[R_TGP].addActionListener(this);
-        panels[3].add(cb_buff[R_TGP]);
-
-        //デストロイ:ホラー
-        cb_buff[R_DHR] = new JCheckBox("デストロイ:ホラー(未実装)");
-        cb_buff[R_DHR].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[R_DHR].addActionListener(this);
-        panels[3].add(cb_buff[R_DHR]);
-
-        //アイオブドラゴン
-        cb_buff[R_EOD] = new JCheckBox("アイオブドラゴン(未実装)");
-        cb_buff[R_EOD].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[R_EOD].addActionListener(this);
-        panels[3].add(cb_buff[R_EOD]);
-
-        //覚醒[ヴァラカス]
-        cb_buff[R_VALAKAS] = new JCheckBox("覚醒[ヴァラカス]");
-        cb_buff[R_VALAKAS].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[R_VALAKAS].addActionListener(this);
-        panels[3].add(cb_buff[R_VALAKAS]);
-
-        //ブラッドラスト
-        cb_buff[R_BLT] = new JCheckBox("ブラッドラスト");
-        cb_buff[R_BLT].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[R_BLT].addActionListener(this);
-        cb_buff[R_BLT].setEnabled(false);
-        panels[3].add(cb_buff[R_BLT]);
-
-        //フォースレイヤー
-        cb_buff[R_FSR] = new JCheckBox("フォースレイヤー(未実装)");
-        cb_buff[R_FSR].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[R_FSR].addActionListener(this);
-        panels[3].add(cb_buff[R_FSR]);
-
-        //デストロイ:フィアー
-        cb_buff[R_DFR] = new JCheckBox("デストロイ:フィアー(未実装)");
-        cb_buff[R_DFR].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[R_DFR].addActionListener(this);
-        panels[3].add(cb_buff[R_DFR]);
-
-        //マグマアロー
-        cb_buff[R_MAW] = new JCheckBox("マグマアロー(未実装)");
-        cb_buff[R_MAW].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[R_MAW].addActionListener(this);
-        panels[3].add(cb_buff[R_MAW]);
-
-        //覚醒[パプリオン]
-        cb_buff[R_FAFURION] = new JCheckBox("覚醒[パプリオン]");
-        cb_buff[R_FAFURION].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[R_FAFURION].addActionListener(this);
-        panels[3].add(cb_buff[R_FAFURION]);
-
-        //ドラゴンスキン
-        cb_buff[R_DSN] = new JCheckBox("ドラゴンスキン");
+        //ドラゴン スキン
+        cb_buff[R_DSN] = new JCheckBox("ドラゴン スキン");
         cb_buff[R_DSN].setBounds(200 * row, 20 * col++, 150, 20);
         cb_buff[R_DSN].addActionListener(this);
         panels[3].add(cb_buff[R_DSN]);
 
-        //バーニングスラッシュ
-        cb_buff[R_BSH] = new JCheckBox("バーニングスラッシュ(未実装)");
+        //*バーニング スラッシュ
+        cb_buff[R_BSH] = new JCheckBox("*バーニング スラッシュ");
         cb_buff[R_BSH].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[R_BSH].addActionListener(this);
+        cb_buff[R_BSH].setEnabled(false);
         panels[3].add(cb_buff[R_BSH]);
 
-        //デストロイ
-        cb_buff[R_DEY] = new JCheckBox("デストロイ(未実装)");
+        //*デストロイ
+        cb_buff[R_DEY] = new JCheckBox("*デストロイ");
         cb_buff[R_DEY].setBounds(200 * row, 20 * col++, 150, 20);
         cb_buff[R_DEY].addActionListener(this);
+        cb_buff[R_DEY].setEnabled(false);
         panels[3].add(cb_buff[R_DEY]);
 
-        //マグマブレス
-        cb_buff[R_MBH] = new JCheckBox("マグマブレス(未実装)");
+        //*マグマ ブレス
+        cb_buff[R_MBH] = new JCheckBox("*マグマ ブレス");
         cb_buff[R_MBH].setBounds(200 * row, 20 * col++, 150, 20);
         cb_buff[R_MBH].addActionListener(this);
+        cb_buff[R_MBH].setEnabled(false);
         panels[3].add(cb_buff[R_MBH]);
 
         //覚醒[アンタラス]
@@ -2083,6 +2021,120 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[R_ANTHARAS].addActionListener(this);
         panels[3].add(cb_buff[R_ANTHARAS]);
 
+        //*ブラッドラスト
+        cb_buff[R_BLT] = new JCheckBox("*ブラッドラスト");
+        cb_buff[R_BLT].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[R_BLT].addActionListener(this);
+        cb_buff[R_BLT].setEnabled(false);
+        panels[3].add(cb_buff[R_BLT]);
+
+        //*フォー スレイヤー
+        cb_buff[R_FSR] = new JCheckBox("*フォー スレイヤー");
+        cb_buff[R_FSR].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[R_FSR].addActionListener(this);
+        cb_buff[R_FSR].setEnabled(false);
+        panels[3].add(cb_buff[R_FSR]);
+
+        //*マグマ アロー
+        cb_buff[R_MAW] = new JCheckBox("*マグマ アロー");
+        cb_buff[R_MAW].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[R_MAW].addActionListener(this);
+        cb_buff[R_MAW].setEnabled(false);
+        panels[3].add(cb_buff[R_MAW]);
+
+        //覚醒[パプリオン]
+        cb_buff[R_FAFURION] = new JCheckBox("覚醒[パプリオン]");
+        cb_buff[R_FAFURION].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[R_FAFURION].addActionListener(this);
+        panels[3].add(cb_buff[R_FAFURION]);
+
+        //*モータル ボディー
+        cb_buff[R_MBY] = new JCheckBox("*モータル ボディー");
+        cb_buff[R_MBY].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[R_MBY].addActionListener(this);
+        cb_buff[R_MBY].setEnabled(false);
+        panels[3].add(cb_buff[R_MBY]);
+
+        //*サンダー グラップ
+        cb_buff[R_TGP] = new JCheckBox("*サンダー グラップ");
+        cb_buff[R_TGP].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[R_TGP].addActionListener(this);
+        cb_buff[R_TGP].setEnabled(false);
+        panels[3].add(cb_buff[R_TGP]);
+
+        //*アイ オブ ドラゴン
+        cb_buff[R_EOD] = new JCheckBox("*アイ オブ ドラゴン");
+        cb_buff[R_EOD].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[R_EOD].addActionListener(this);
+        cb_buff[R_EOD].setEnabled(false);
+        panels[3].add(cb_buff[R_EOD]);
+
+        //覚醒[ヴァラカス]
+        cb_buff[R_VALAKAS] = new JCheckBox("覚醒[ヴァラカス]");
+        cb_buff[R_VALAKAS].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[R_VALAKAS].addActionListener(this);
+        panels[3].add(cb_buff[R_VALAKAS]);
+
+        //*ハルパス
+        cb_buff[R_HAS] = new JCheckBox("*ハルパス");
+        cb_buff[R_HAS].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[R_HAS].addActionListener(this);
+        cb_buff[R_HAS].setEnabled(false);
+        panels[3].add(cb_buff[R_HAS]);
+
+        //覚醒[リンドビオル]
+        cb_buff[R_LINDVIOL] = new JCheckBox("覚醒[リンドビオル]");
+        cb_buff[R_LINDVIOL].setBounds(200 * row, 20 * col++, 180, 20);
+        cb_buff[R_LINDVIOL].addActionListener(this);
+        panels[3].add(cb_buff[R_LINDVIOL]);
+
+        //*サンダー グラップ:ブレイブ
+        cb_buff[R_TGB] = new JCheckBox("*サンダー グラップ:ブレイブ");
+        cb_buff[R_TGB].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[R_TGB].addActionListener(this);
+        cb_buff[R_TGB].setEnabled(false);
+        panels[3].add(cb_buff[R_TGB]);
+
+        //*フォー スレイヤー:ブレイブ
+        cb_buff[R_FSB] = new JCheckBox("*フォー スレイヤー:ブレイブ");
+        cb_buff[R_FSB].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[R_FSB].addActionListener(this);
+        cb_buff[R_FSB].setEnabled(false);
+        panels[3].add(cb_buff[R_FSB]);
+        //アウラキア
+        cb_buff[R_AUA] = new JCheckBox("アウラキア");
+        cb_buff[R_AUA].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[R_AUA].addActionListener(this);
+        panels[3].add(cb_buff[R_AUA]);
+
+        //*デストロイ:フィアー
+        cb_buff[R_DFR] = new JCheckBox("*デストロイ:フィアー");
+        cb_buff[R_DFR].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[R_DFR].addActionListener(this);
+        cb_buff[R_DFR].setEnabled(false);
+        panels[3].add(cb_buff[R_DFR]);
+
+        //*デストロイ:ホラー
+        cb_buff[R_DHR] = new JCheckBox("*デストロイ:ホラー");
+        cb_buff[R_DHR].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[R_DHR].addActionListener(this);
+        cb_buff[R_DHR].setEnabled(false);
+        panels[3].add(cb_buff[R_DHR]);
+
+        //*[UP後]ソリッドノート
+        cb_buff[R_SNE] = new JCheckBox("*[UP後]ソリッドノート");
+        cb_buff[R_SNE].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[R_SNE].addActionListener(this);
+        cb_buff[R_SNE].setEnabled(false);
+        panels[3].add(cb_buff[R_SNE]);
+
+        //*[UP後]ランペイジ
+        cb_buff[R_RAE] = new JCheckBox("*[UP後]ランペイジ");
+        cb_buff[R_RAE].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[R_RAE].addActionListener(this);
+        cb_buff[R_RAE].setEnabled(false);
+        panels[3].add(cb_buff[R_RAE]);
+
         col = 0;
         row = 1;
 
@@ -2090,42 +2142,89 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         lab_tmp.setBounds(200 * row, 20 * col++, 200, 20);
         panels[3].add(lab_tmp);
 
-        //ポテンシャル
-        cb_buff[I_POL] = new JCheckBox("ポテンシャル(未実装)");
-        cb_buff[I_POL].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[I_POL].addActionListener(this);
-        panels[3].add(cb_buff[I_POL]);
+        //ミラーイメージ
+        cb_buff[I_MIE] = new JCheckBox("ミラーイメージ");
+        cb_buff[I_MIE].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[I_MIE] .addActionListener(this);
+        panels[3].add(cb_buff[I_MIE] );
 
-        //[UP待ち]ボーンブレイク:ラスタ
-        cb_buff[I_BBR] = new JCheckBox("[UP待ち]ボーンブレイク:ラスタ");
-        cb_buff[I_BBR].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[I_BBR].addActionListener(this);
-        panels[3].add(cb_buff[I_BBR]);
+        //*コンフュージョン
+        cb_buff[I_CFN] = new JCheckBox("*コンフュージョン");
+        cb_buff[I_CFN].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[I_CFN] .addActionListener(this);
+        cb_buff[I_CFN].setEnabled(false);
+        panels[3].add(cb_buff[I_CFN] );
 
-        //メビウス
-        cb_buff[I_MES] = new JCheckBox("メビウス(未実装)");
-        cb_buff[I_MES].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[I_MES].addActionListener(this);
-        panels[3].add(cb_buff[I_MES]);
+        //*スマッシュエネルギー
+        cb_buff[I_SEY] = new JCheckBox("*スマッシュエネルギー");
+        cb_buff[I_SEY].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[I_SEY] .addActionListener(this);
+        cb_buff[I_SEY].setEnabled(false);
+        panels[3].add(cb_buff[I_SEY] );
 
-        //インパクト
-        cb_buff[I_IMT] = new JCheckBox("インパクト");
-        cb_buff[I_IMT].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[I_IMT].addActionListener(this);
-        panels[3].add(cb_buff[I_IMT]);
+        //イリュージョン[オーガ]
+        cb_buff[I_IOE] = new JCheckBox("イリュージョン[オーガ]");
+        cb_buff[I_IOE].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[I_IOE].addActionListener(this);
+        panels[3].add(cb_buff[I_IOE]);
 
-        //ダークホース
-        cb_buff[I_DHE] = new JCheckBox("ダークホース");
-        cb_buff[I_DHE].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[I_DHE].addActionListener(this);
-        cb_buff[I_DHE].setEnabled(false);
-        panels[3].add(cb_buff[I_DHE]);
+        //キューブ[オーガ]
+        cb_buff[I_COE] = new JCheckBox("キューブ[オーガ]");
+        cb_buff[I_COE].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[I_COE].addActionListener(this);
+        panels[3].add(cb_buff[I_COE]);
 
-        //フォーカススピリッツ
-        cb_buff[I_FSZ] = new JCheckBox("フォーカススピリッツ");
-        cb_buff[I_FSZ].setBounds(200 * row, 20 * col++, 180, 20);
-        cb_buff[I_FSZ].addActionListener(this);
-        panels[3].add(cb_buff[I_FSZ]);
+        //コンセントレーション
+        cb_buff[I_CON] = new JCheckBox("コンセントレーション");
+        cb_buff[I_CON].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[I_CON].addActionListener(this);
+        panels[3].add(cb_buff[I_CON]);
+
+        //*マインドブレイク
+        cb_buff[I_MBK] = new JCheckBox("*マインドブレイク");
+        cb_buff[I_MBK].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[I_MBK].addActionListener(this);
+        cb_buff[I_MBK].setEnabled(false);
+        panels[3].add(cb_buff[I_MBK]);
+
+        //*ボーンブレイク
+        cb_buff[I_BBK] = new JCheckBox("*ボーンブレイク");
+        cb_buff[I_BBK].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[I_BBK].addActionListener(this);
+        cb_buff[I_BBK].setEnabled(false);
+        panels[3].add(cb_buff[I_BBK]);
+
+        //キューブ[ゴーレム]
+        cb_buff[I_CGM] = new JCheckBox("キューブ[ゴーレム]");
+        cb_buff[I_CGM].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[I_CGM].addActionListener(this);
+        panels[3].add(cb_buff[I_CGM]);
+
+        //ペイシェンス
+        cb_buff[I_PAE] = new JCheckBox("ペイシェンス");
+        cb_buff[I_PAE].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[I_PAE].addActionListener(this);
+        panels[3].add(cb_buff[I_PAE]);
+
+        //*ファンタズム
+        cb_buff[I_PHM] = new JCheckBox("*ファンタズム");
+        cb_buff[I_PHM].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[I_PHM].addActionListener(this);
+        cb_buff[I_PHM].setEnabled(false);
+        panels[3].add(cb_buff[I_PHM]);
+
+        //*アイズブレイカー
+        cb_buff[I_IBR] = new JCheckBox("*アイズブレイカー");
+        cb_buff[I_IBR].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[I_IBR].addActionListener(this);
+        cb_buff[I_IBR].setEnabled(false);
+        panels[3].add(cb_buff[I_IBR]);
+
+        //キューブ[リッチ]
+        cb_buff[I_CRH] = new JCheckBox("キューブ[リッチ]");
+        cb_buff[I_CRH].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[I_CRH].addActionListener(this);
+        panels[3].add(cb_buff[I_CRH]);
 
         //インサイト
         cb_buff[I_INS] = new JCheckBox("インサイト");
@@ -2133,10 +2232,11 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[I_INS].addActionListener(this);
         panels[3].add(cb_buff[I_INS]);
 
-        //パニック
-        cb_buff[I_PAC] = new JCheckBox("パニック(未実装)");
+        //*パニック
+        cb_buff[I_PAC] = new JCheckBox("*パニック");
         cb_buff[I_PAC].setBounds(200 * row, 20 * col++, 150, 20);
         cb_buff[I_PAC].addActionListener(this);
+        cb_buff[I_PAC].setEnabled(false);
         panels[3].add(cb_buff[I_PAC]);
 
         //リデュースウェイト
@@ -2157,53 +2257,31 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[I_CAR].addActionListener(this);
         panels[3].add(cb_buff[I_CAR]);
 
-        //ペイシェンス
-        cb_buff[I_PAE] = new JCheckBox("ペイシェンス");
-        cb_buff[I_PAE].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[I_PAE].addActionListener(this);
-        panels[3].add(cb_buff[I_PAE]);
+        //インパクト
+        cb_buff[I_IMT] = new JCheckBox("インパクト");
+        cb_buff[I_IMT].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[I_IMT].addActionListener(this);
+        panels[3].add(cb_buff[I_IMT]);
 
-        //ファンタズム
-        cb_buff[I_PHM] = new JCheckBox("ファンタズム(未実装)");
-        cb_buff[I_PHM].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[I_PHM].addActionListener(this);
-        panels[3].add(cb_buff[I_PHM]);
+        //フォーカススピリッツ
+        cb_buff[I_FSZ] = new JCheckBox("フォーカススピリッツ");
+        cb_buff[I_FSZ].setBounds(200 * row, 20 * col++, 180, 20);
+        cb_buff[I_FSZ].addActionListener(this);
+        panels[3].add(cb_buff[I_FSZ]);
 
-        //アイズブレイカー
-        cb_buff[I_IBR] = new JCheckBox("アイズブレイカー(未実装)");
-        cb_buff[I_IBR].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[I_IBR].addActionListener(this);
-        panels[3].add(cb_buff[I_IBR]);
+        //*メビウス
+        cb_buff[I_MES] = new JCheckBox("*メビウス");
+        cb_buff[I_MES].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[I_MES].addActionListener(this);
+        cb_buff[I_MES].setEnabled(false);
+        panels[3].add(cb_buff[I_MES]);
 
-        //イリュージョン[ゴーレム]
-        cb_buff[I_IGM] = new JCheckBox("イリュージョン[ゴーレム]");
-        cb_buff[I_IGM].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[I_IGM].addActionListener(this);
-        panels[3].add(cb_buff[I_IGM]);
-
-        //キューブ[リッチ]
-        cb_buff[I_CRH] = new JCheckBox("キューブ[リッチ]");
-        cb_buff[I_CRH].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[I_CRH].addActionListener(this);
-        panels[3].add(cb_buff[I_CRH]);
-
-        //コンセントレーション
-        cb_buff[I_CON] = new JCheckBox("コンセントレーション");
-        cb_buff[I_CON].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[I_CON].addActionListener(this);
-        panels[3].add(cb_buff[I_CON]);
-
-        //マインドブレイク
-        cb_buff[I_MBK] = new JCheckBox("マインドブレイク(未実装)");
-        cb_buff[I_MBK].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[I_MBK].addActionListener(this);
-        panels[3].add(cb_buff[I_MBK]);
-
-        //ボーンブレイク
-        cb_buff[I_BBK] = new JCheckBox("ボーンブレイク(未実装)");
-        cb_buff[I_BBK].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[I_BBK].addActionListener(this);
-        panels[3].add(cb_buff[I_BBK]);
+        //*ポテンシャル
+        cb_buff[I_POL] = new JCheckBox("*ポテンシャル");
+        cb_buff[I_POL].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[I_POL].addActionListener(this);
+        cb_buff[I_POL].setEnabled(false);
+        panels[3].add(cb_buff[I_POL]);
 
         //イリュージョン[リッチ]
         cb_buff[I_IRH] = new JCheckBox("イリュージョン[リッチ]");
@@ -2211,41 +2289,25 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[I_IRH].addActionListener(this);
         panels[3].add(cb_buff[I_IRH]);
 
-        //キューブ[ゴーレム]
-        cb_buff[I_CGM] = new JCheckBox("キューブ[ゴーレム]");
-        cb_buff[I_CGM].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[I_CGM].addActionListener(this);
-        panels[3].add(cb_buff[I_CGM]);
+        //イリュージョン[ゴーレム]
+        cb_buff[I_IGM] = new JCheckBox("イリュージョン[ゴーレム]");
+        cb_buff[I_IGM].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[I_IGM].addActionListener(this);
+        panels[3].add(cb_buff[I_IGM]);
 
-        //ミラーイメージ
-        cb_buff[I_MIE] = new JCheckBox("ミラーイメージ");
-        cb_buff[I_MIE].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[I_MIE] .addActionListener(this);
-        panels[3].add(cb_buff[I_MIE] );
+        //*ダークホース
+        cb_buff[I_DHE] = new JCheckBox("*ダークホース");
+        cb_buff[I_DHE].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[I_DHE].addActionListener(this);
+        cb_buff[I_DHE].setEnabled(false);
+        panels[3].add(cb_buff[I_DHE]);
 
-        //コンフュージョン
-        cb_buff[I_CFN] = new JCheckBox("コンフュージョン(未実装)");
-        cb_buff[I_CFN].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[I_CFN] .addActionListener(this);
-        panels[3].add(cb_buff[I_CFN] );
-
-        //スマッシュエネルギー
-        cb_buff[I_SEY] = new JCheckBox("スマッシュエネルギー(未実装)");
-        cb_buff[I_SEY].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[I_SEY] .addActionListener(this);
-        panels[3].add(cb_buff[I_SEY] );
-
-        //イリュージョン[オーガ]
-        cb_buff[I_IOE] = new JCheckBox("イリュージョン[オーガ]");
-        cb_buff[I_IOE].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[I_IOE].addActionListener(this);
-        panels[3].add(cb_buff[I_IOE]);
-
-        //キューブ[オーガ]
-        cb_buff[I_COE] = new JCheckBox("キューブ[オーガ]");
-        cb_buff[I_COE].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[I_COE].addActionListener(this);
-        panels[3].add(cb_buff[I_COE]);
+        //*[UP後]ボーンブレイク:ラスタ
+        cb_buff[I_BBR] = new JCheckBox("*[UP後]ボーンブレイク:ラスタ");
+        cb_buff[I_BBR].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[I_BBR].addActionListener(this);
+        cb_buff[I_BBR].setEnabled(false);
+        panels[3].add(cb_buff[I_BBR]);
 
         col = 0;
         row = 2;
@@ -2254,35 +2316,12 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         lab_tmp.setBounds(200 * row, 20 * col++, 200, 20);
         panels[3].add(lab_tmp);
 
-        //デモリッション
-        cb_buff[S_DEN] = new JCheckBox("デモリッション(未実装)");
-        cb_buff[S_DEN].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[S_DEN].addActionListener(this);
-        panels[3].add(cb_buff[S_DEN]);
-
-        //[UP待ち]バーサク
-        cb_buff[S_BEK] = new JCheckBox("[UP待ち]バーサク(未実装)");
-        cb_buff[S_BEK].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[S_BEK].addActionListener(this);
-        panels[3].add(cb_buff[S_BEK]);
-
-        //デスペラード
-        cb_buff[S_DEO] = new JCheckBox("デスペラード(未実装)");
-        cb_buff[S_DEO].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[S_DEO].addActionListener(this);
-        panels[3].add(cb_buff[S_DEO]);
-
-        //タイタンライジング
-        cb_buff[S_TRG] = new JCheckBox("タイタンライジング(未実装)");
-        cb_buff[S_TRG].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[S_TRG].addActionListener(this);
-        panels[3].add(cb_buff[S_TRG]);
-
-        //パワーグリップ
-        cb_buff[S_PGP] = new JCheckBox("パワーグリップ(未実装)");
-        cb_buff[S_PGP].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[S_PGP].addActionListener(this);
-        panels[3].add(cb_buff[S_PGP]);
+        //*ハウル
+        cb_buff[S_HOL] = new JCheckBox("*ハウル");
+        cb_buff[S_HOL].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[S_HOL].addActionListener(this);
+        cb_buff[S_HOL].setEnabled(false);
+        panels[3].add(cb_buff[S_HOL]);
 
         //ギガンティック
         cb_buff[S_GIC] = new JCheckBox("ギガンティック");
@@ -2290,40 +2329,52 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[S_GIC].addActionListener(this);
         panels[3].add(cb_buff[S_GIC]);
 
-        //トマホーク
-        cb_buff[S_TOK] = new JCheckBox("トマホーク(未実装)");
+        //*パワーグリップ
+        cb_buff[S_PGP] = new JCheckBox("*パワーグリップ");
+        cb_buff[S_PGP].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[S_PGP].addActionListener(this);
+        cb_buff[S_PGP].setEnabled(false);
+        panels[3].add(cb_buff[S_PGP]);
+
+        //*トマホーク
+        cb_buff[S_TOK] = new JCheckBox("*トマホーク");
         cb_buff[S_TOK].setBounds(200 * row, 20 * col++, 150, 20);
         cb_buff[S_TOK].addActionListener(this);
+        cb_buff[S_TOK].setEnabled(false);
         panels[3].add(cb_buff[S_TOK]);
 
-        //ハウル
-        cb_buff[S_HOL] = new JCheckBox("ハウル(未実装)");
-        cb_buff[S_HOL].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[S_HOL].addActionListener(this);
-        panels[3].add(cb_buff[S_HOL]);
+        //*デスペラード
+        cb_buff[S_DEO] = new JCheckBox("*デスペラード");
+        cb_buff[S_DEO].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[S_DEO].addActionListener(this);
+        cb_buff[S_DEO].setEnabled(false);
+        panels[3].add(cb_buff[S_DEO]);
 
-        //タイタンロック
-        cb_buff[S_TLK] = new JCheckBox("タイタンロック(未実装)");
-        cb_buff[S_TLK].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[S_TLK].addActionListener(this);
-        panels[3].add(cb_buff[S_TLK]);
+        //*タイタンライジング
+        cb_buff[S_TRG] = new JCheckBox("*タイタンライジング");
+        cb_buff[S_TRG].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[S_TRG].addActionListener(this);
+        cb_buff[S_TRG].setEnabled(false);
+        panels[3].add(cb_buff[S_TRG]);
 
-        //タイタンマジック
-        cb_buff[S_TMC] = new JCheckBox("タイタンマジック(未実装)");
-        cb_buff[S_TMC].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[S_TMC].addActionListener(this);
-        panels[3].add(cb_buff[S_TMC]);
+        //*デモリッション
+        cb_buff[S_DEN] = new JCheckBox("*デモリッション");
+        cb_buff[S_DEN].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[S_DEN].addActionListener(this);
+        cb_buff[S_DEN].setEnabled(false);
+        panels[3].add(cb_buff[S_DEN]);
 
-        //タイタンブリッツ
-        cb_buff[S_TBZ] = new JCheckBox("タイタンブリッツ(未実装)");
-        cb_buff[S_TBZ].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[S_TBZ].addActionListener(this);
-        panels[3].add(cb_buff[S_TBZ]);
+        //フューリー
+        cb_buff[S_FUY] = new JCheckBox("フューリー");
+        cb_buff[S_FUY].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[S_FUY].addActionListener(this);
+        panels[3].add(cb_buff[S_FUY]);
 
-        //スレイヤー
-        cb_buff[S_SLR] = new JCheckBox("スレイヤー(未実装)");
+        //*スレイヤー
+        cb_buff[S_SLR] = new JCheckBox("*スレイヤー");
         cb_buff[S_SLR].setBounds(200 * row, 20 * col++, 150, 20);
         cb_buff[S_SLR].addActionListener(this);
+        cb_buff[S_SLR].setEnabled(false);
         panels[3].add(cb_buff[S_SLR]);
 
         //クラッシュ
@@ -2338,17 +2389,40 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[S_AGD].addActionListener(this);
         panels[3].add(cb_buff[S_AGD]);
 
-        //フューリー
-        cb_buff[S_FUY] = new JCheckBox("フューリー");
-        cb_buff[S_FUY].setBounds(200 * row, 20 * col++, 150, 20);
-        cb_buff[S_FUY].addActionListener(this);
-        panels[3].add(cb_buff[S_FUY]);
+        //*タイタンロック
+        cb_buff[S_TLK] = new JCheckBox("*タイタンロック");
+        cb_buff[S_TLK].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[S_TLK].addActionListener(this);
+        cb_buff[S_TLK].setEnabled(false);
+        panels[3].add(cb_buff[S_TLK]);
 
-        //デスペラード:アブソリュート
-        cb_buff[S_DAE] = new JCheckBox("デスペラード:アブソリュート(未実装)");
+        //*タイタンマジック
+        cb_buff[S_TMC] = new JCheckBox("*タイタンマジック");
+        cb_buff[S_TMC].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[S_TMC].addActionListener(this);
+        cb_buff[S_TMC].setEnabled(false);
+        panels[3].add(cb_buff[S_TMC]);
+
+        //*タイタンブリッツ
+        cb_buff[S_TBZ] = new JCheckBox("*タイタンブリッツ");
+        cb_buff[S_TBZ].setBounds(200 * row, 20 * col++, 150, 20);
+        cb_buff[S_TBZ].addActionListener(this);
+        cb_buff[S_TBZ].setEnabled(false);
+        panels[3].add(cb_buff[S_TBZ]);
+
+        //*デスペラード:アブソリュート
+        cb_buff[S_DAE] = new JCheckBox("*デスペラード:アブソリュート");
         cb_buff[S_DAE].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[S_DAE].addActionListener(this);
+        cb_buff[S_DAE].setEnabled(false);
         panels[3].add(cb_buff[S_DAE]);
+
+        //*[UP後]バーサク
+        cb_buff[S_BEK] = new JCheckBox("*[UP後]バーサク");
+        cb_buff[S_BEK].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[S_BEK].addActionListener(this);
+        cb_buff[S_BEK].setEnabled(false);
+        panels[3].add(cb_buff[S_BEK]);
 
         col++;
 
@@ -2357,68 +2431,78 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         panels[3].add(lab_tmp);
 
         //アクティブスキル
-        //ファントム:デス
-        cb_buff[F_PPH] = new JCheckBox("ファントム:デス(未実装)");
+        //*ファントム:デス
+        cb_buff[F_PPH] = new JCheckBox("*ファントム:デス");
         cb_buff[F_PPH].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[F_PPH].addActionListener(this);
+        cb_buff[F_PPH].setEnabled(false);
         panels[3].add(cb_buff[F_PPH]);
 
-        //アシュラ
-        cb_buff[F_AAA] = new JCheckBox("アシュラ(未実装)");
+        //*アシュラ
+        cb_buff[F_AAA] = new JCheckBox("*アシュラ");
         cb_buff[F_AAA].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[F_AAA].addActionListener(this);
+        cb_buff[F_AAA].setEnabled(false);
         panels[3].add(cb_buff[F_AAA]);
 
-        //ブレード
-        cb_buff[F_ABE] = new JCheckBox("ブレード(未実装)");
+        //*ブレード
+        cb_buff[F_ABE] = new JCheckBox("*ブレード");
         cb_buff[F_ABE].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[F_ABE].addActionListener(this);
+        cb_buff[F_ABE].setEnabled(false);
         panels[3].add(cb_buff[F_ABE]);
 
-        //パンテラ
-        cb_buff[F_APA] = new JCheckBox("パンテラ(未実装)");
+        //*パンテラ
+        cb_buff[F_APA] = new JCheckBox("*パンテラ");
         cb_buff[F_APA].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[F_APA].addActionListener(this);
+        cb_buff[F_APA].setEnabled(false);
         panels[3].add(cb_buff[F_APA]);
 
-        //ジャッジメント
-        cb_buff[F_AJT] = new JCheckBox("ジャッジメント(未実装)");
+        //*ジャッジメント
+        cb_buff[F_AJT] = new JCheckBox("*ジャッジメント");
         cb_buff[F_AJT].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[F_AJT].addActionListener(this);
+        cb_buff[F_AJT].setEnabled(false);
         panels[3].add(cb_buff[F_AJT]);
 
-        //ヘルファイア
-        cb_buff[F_AHE] = new JCheckBox("ヘルファイア(未実装)");
+        //*ヘルファイア
+        cb_buff[F_AHE] = new JCheckBox("*ヘルファイア");
         cb_buff[F_AHE].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[F_AHE].addActionListener(this);
+        cb_buff[F_AHE].setEnabled(false);
         panels[3].add(cb_buff[F_AHE]);
 
-        //ファントム
-        cb_buff[F_APM] = new JCheckBox("ファントム(未実装)");
+        //*ファントム
+        cb_buff[F_APM] = new JCheckBox("*ファントム");
         cb_buff[F_APM].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[F_APM].addActionListener(this);
+        cb_buff[F_APM].setEnabled(false);
         panels[3].add(cb_buff[F_APM]);
 
-        //ファントム:リーパー
-        cb_buff[F_PPR] = new JCheckBox("ファントム:リーパー(未実装)");
+        //*ファントム:リーパー
+        cb_buff[F_PPR] = new JCheckBox("*ファントム:リーパー");
         cb_buff[F_PPR].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[F_PPR].addActionListener(this);
+        cb_buff[F_PPR].setEnabled(false);
         panels[3].add(cb_buff[F_PPR]);
 
-        //パンテラ:ショック
-        cb_buff[F_PPK] = new JCheckBox("パンテラ:ショック(未実装)");
+        //*パンテラ:ショック
+        cb_buff[F_PPK] = new JCheckBox("*パンテラ:ショック");
         cb_buff[F_PPK].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[F_PPK].addActionListener(this);
+        cb_buff[F_PPK].setEnabled(false);
         panels[3].add(cb_buff[F_PPK]);
-
-        //サヴァイヴ
-        cb_buff[F_PSE] = new JCheckBox("サヴァイヴ(未実装)");
-        cb_buff[F_PSE].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[F_PSE].addActionListener(this);
-        panels[3].add(cb_buff[F_PSE]);
 
         col = 0;
         row = 3;
+
+        //*サヴァイヴ
+        cb_buff[F_PSE] = new JCheckBox("*サヴァイヴ");
+        cb_buff[F_PSE].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[F_PSE].addActionListener(this);
+        cb_buff[F_PSE].setEnabled(false);
+        panels[3].add(cb_buff[F_PSE]);
 
         //インフィニティ:ブリッツ
         cb_buff[F_PIZ] = new JCheckBox("インフィニティ:ブリッツ");
@@ -2426,10 +2510,11 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[F_PIZ].addActionListener(this);
         panels[3].add(cb_buff[F_PIZ]);
 
-        //パラドックス
-        cb_buff[F_PPX] = new JCheckBox("パラドックス(未実装)");
+        //*パラドックス
+        cb_buff[F_PPX] = new JCheckBox("*パラドックス");
         cb_buff[F_PPX].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[F_PPX].addActionListener(this);
+        cb_buff[F_PPX].setEnabled(false);
         panels[3].add(cb_buff[F_PPX]);
 
         //インフィニティ:ドッジ
@@ -2438,10 +2523,11 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[F_PIE].addActionListener(this);
         panels[3].add(cb_buff[F_PIE]);
 
-        //グロース
-        cb_buff[F_PGE] = new JCheckBox("グロース(未実装)");
+        //*グロース
+        cb_buff[F_PGE] = new JCheckBox("*グロース");
         cb_buff[F_PGE].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[F_PGE].addActionListener(this);
+        cb_buff[F_PGE].setEnabled(false);
         panels[3].add(cb_buff[F_PGE]);
 
         //インフィニティ:ブラッド
@@ -2462,16 +2548,18 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[F_PIR].addActionListener(this);
         panels[3].add(cb_buff[F_PIR]);
 
-        //フレイム
-        cb_buff[F_PFE] = new JCheckBox("フレイム(未実装)");
+        //*フレイム
+        cb_buff[F_PFE] = new JCheckBox("*フレイム");
         cb_buff[F_PFE].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[F_PFE].addActionListener(this);
+        cb_buff[F_PFE].setEnabled(false);
         panels[3].add(cb_buff[F_PFE]);
 
-        //ダマスカス
-        cb_buff[F_PDS] = new JCheckBox("ダマスカス(未実装)");
+        //*ダマスカス
+        cb_buff[F_PDS] = new JCheckBox("*ダマスカス");
         cb_buff[F_PDS].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[F_PDS].addActionListener(this);
+        cb_buff[F_PDS].setEnabled(false);
         panels[3].add(cb_buff[F_PDS]);
 
         col++;
@@ -2480,88 +2568,102 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         lab_tmp.setBounds(200 * row, 20 * col++, 100, 20);
         panels[3].add(lab_tmp);
 
-        //プレッシャー:デスリコール
-        cb_buff[L_PDR] = new JCheckBox("プレッシャー:デスリコール(未実装)");
+        //*プレッシャー:デスリコール
+        cb_buff[L_PDR] = new JCheckBox("*プレッシャー:デスリコール");
         cb_buff[L_PDR].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[L_PDR].addActionListener(this);
+        cb_buff[L_PDR].setEnabled(false);
         panels[3].add(cb_buff[L_PDR]);
 
-        //リカバリー
-        cb_buff[L_REY] = new JCheckBox("リカバリー(未実装)");
+        //*リカバリー
+        cb_buff[L_REY] = new JCheckBox("*リカバリー");
         cb_buff[L_REY].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[L_REY].addActionListener(this);
+        cb_buff[L_REY].setEnabled(false);
         panels[3].add(cb_buff[L_REY]);
 
-        //クルオル
-        cb_buff[L_KUU] = new JCheckBox("クルオル(未実装)");
+        //*クルオル
+        cb_buff[L_KUU] = new JCheckBox("*クルオル");
         cb_buff[L_KUU].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[L_KUU].addActionListener(this);
+        cb_buff[L_KUU].setEnabled(false);
         panels[3].add(cb_buff[L_KUU]);
 
-        //プレッシャー
-        cb_buff[L_PRE] = new JCheckBox("プレッシャー(未実装)");
+        //*プレッシャー
+        cb_buff[L_PRE] = new JCheckBox("*プレッシャー");
         cb_buff[L_PRE].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[L_PRE].addActionListener(this);
+        cb_buff[L_PRE].setEnabled(false);
         panels[3].add(cb_buff[L_PRE]);
 
-        //ヴァンガード
-        cb_buff[L_VAD] = new JCheckBox("ヴァンガード(未実装)");
+        //*ヴァンガード
+        cb_buff[L_VAD] = new JCheckBox("*ヴァンガード");
         cb_buff[L_VAD].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[L_VAD].addActionListener(this);
+        cb_buff[L_VAD].setEnabled(false);
         panels[3].add(cb_buff[L_VAD]);
 
-        //フォースウェーブ
-        cb_buff[L_FWE] = new JCheckBox("フォースウェーブ(未実装)");
+        //*フォースウェーブ
+        cb_buff[L_FWE] = new JCheckBox("*フォースウェーブ");
         cb_buff[L_FWE].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[L_FWE].addActionListener(this);
+        cb_buff[L_FWE].setEnabled(false);
         panels[3].add(cb_buff[L_FWE]);
 
-        //オルタネート
-        cb_buff[L_ALE] = new JCheckBox("オルタネート(未実装)");
+        //*オルタネート
+        cb_buff[L_ALE] = new JCheckBox("*オルタネート");
         cb_buff[L_ALE].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[L_ALE].addActionListener(this);
+        cb_buff[L_ALE].setEnabled(false);
         panels[3].add(cb_buff[L_ALE]);
 
-        //クルオル:コンビクション
-        cb_buff[L_KCN] = new JCheckBox("クルオル:コンビクション(未実装)");
+        //*クルオル:コンビクション
+        cb_buff[L_KCN] = new JCheckBox("*クルオル:コンビクション");
         cb_buff[L_KCN].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[L_KCN].addActionListener(this);
+        cb_buff[L_KCN].setEnabled(false);
         panels[3].add(cb_buff[L_KCN]);
 
-        //インクリーズレンジ
-        cb_buff[L_IRE] = new JCheckBox("インクリーズレンジ(未実装)");
+        //*インクリーズレンジ
+        cb_buff[L_IRE] = new JCheckBox("*インクリーズレンジ");
         cb_buff[L_IRE].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[L_IRE].addActionListener(this);
+        cb_buff[L_IRE].setEnabled(false);
         panels[3].add(cb_buff[L_IRE]);
 
-        //マエルストローム
-        cb_buff[L_MAM] = new JCheckBox("マエルストローム(未実装)");
+        //*マエルストローム
+        cb_buff[L_MAM] = new JCheckBox("*マエルストローム");
         cb_buff[L_MAM].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[L_MAM].addActionListener(this);
+        cb_buff[L_MAM].setEnabled(false);
         panels[3].add(cb_buff[L_MAM]);
 
-        //ドッジブレーキ
-        cb_buff[L_DBE] = new JCheckBox("ドッジブレーキ(未実装)");
+        //*ドッジブレーキ
+        cb_buff[L_DBE] = new JCheckBox("*ドッジブレーキ");
         cb_buff[L_DBE].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[L_DBE].addActionListener(this);
+        cb_buff[L_DBE].setEnabled(false);
         panels[3].add(cb_buff[L_DBE]);
 
-        //ベンジェンス
-        cb_buff[L_VEE] = new JCheckBox("ベンジェンス(未実装)");
+        //*ベンジェンス
+        cb_buff[L_VEE] = new JCheckBox("*ベンジェンス");
         cb_buff[L_VEE].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[L_VEE].addActionListener(this);
+        cb_buff[L_VEE].setEnabled(false);
         panels[3].add(cb_buff[L_VEE]);
         
-        //タクティカルアドバンス
-        cb_buff[L_TAE] = new JCheckBox("タクティカルアドバンス(未実装)");
+        //*タクティカルアドバンス
+        cb_buff[L_TAE] = new JCheckBox("*タクティカルアドバンス");
         cb_buff[L_TAE].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[L_TAE].addActionListener(this);
+        cb_buff[L_TAE].setEnabled(false);
         panels[3].add(cb_buff[L_TAE]);
 
-        //デッドリーストライク
-        cb_buff[L_DSE] = new JCheckBox("デッドリーストライク(未実装)");
+        //*デッドリーストライク
+        cb_buff[L_DSE] = new JCheckBox("*デッドリーストライク");
         cb_buff[L_DSE].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[L_DSE].addActionListener(this);
+        cb_buff[L_DSE].setEnabled(false);
         panels[3].add(cb_buff[L_DSE]);
 
         col = 0;

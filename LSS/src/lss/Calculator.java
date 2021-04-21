@@ -455,12 +455,12 @@ public class Calculator implements Common {
     double key_delay = 0.1815;
 
     double ce_rate = 0.0500;                                                    //サイクロンの確率5%
-    double bk_rate = 0.0500;                                                    //ブローアタックの確率5%
-    double bs_rate = 0.3333;                                                    //バーニングスピッツの確率33%
-    double db_rate = 0.3333;                                                    //ダブルブレイクの確率33%
-    double ef_rate = 0.4000;                                                    //エレメンタルファイアーの確率40%
+    double bk_rate = 0.0500;                                                    //ブロー アタックの確率5%
+    double bs_rate = 0.3333;                                                    //バーニング スピッツの確率33%
+    double db_rate = 0.3333;                                                    //ダブル ブレイクの確率33%
+    double ef_rate = 0.4000;                                                    //エレメンタル ファイアーの確率40%
     double qe_rate = 0.4000;                                                    //クエイクの確率40%
-    double pb_rate = 0.4000;                                                    //ブレイブメンタルの確率40%
+    double pb_rate = 0.4000;                                                    //ブレイブ メンタルの確率40%
     double re_rate = 0.1800;                                                    //レイジの確率18%
 
     public Calculator(UI ui) {
@@ -2601,7 +2601,7 @@ public class Calculator implements Common {
         //ドレスイベイジョン
         ui.cb_buff[D_DEN].setToolTipText("<html>"+ "[消費MP:15][消費HP:--]"
                                          + "<br>"+ "遠距離回避(ER)+18"
-                                         + "<br>"+ "*リニューアル パッシブに変更"
+                                         + "<br>"+ "パッシブ魔法"
                                          + "<br>"+ "[習得レベル:60][持続時間:常時][対象:術者]"+"</html>");
         if (ui.cb_buff[D_DEN].isSelected()) {
             buff.ER += 18;
@@ -2615,8 +2615,8 @@ public class Calculator implements Common {
         //スキル効果未実装
         }
 
-        //バーニングスピリッツ
-        //6444行にて処理
+        //バーニング スピリッツ
+        //7299行にて処理
 
         //シャドウスリープ
         ui.cb_buff[D_SSP].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
@@ -2661,15 +2661,6 @@ public class Calculator implements Common {
                                          + "<br>"+ "武器に毒属性を付与し、攻撃した対象を一定確率でダメージ毒状態にする"
                                          + "<br>"+ "[習得レベル:20][持続時間:5分20秒][対象:術者][触媒:ダークストーン(1)]"+"</html>");
         if (ui.cb_buff[D_EVM].isSelected()) {
-        //スキル効果未実装
-        }
-
-        //ブリングストーン
-        ui.cb_buff[D_BRE].setToolTipText("<html>"+ "[消費MP:5][消費HP:--]"
-                                         + "<br>"+ "黒魔石、ダークストーン、ブレイブストーン、ワイズストーンを一定確率で上位の鉱石に変換する"
-                                         + "<br>"+ "変換に失敗すると蒸発する"
-                                         + "<br>"+ "[習得レベル:20][持続時間:32秒][対象:アイテム]"+"</html>");
-        if (ui.cb_buff[D_BRE].isSelected()) {
         //スキル効果未実装
         }
 
@@ -5644,9 +5635,9 @@ public class Calculator implements Common {
         }
 
         //エンパイア(未実装)
-        ui.cb_buff[P_EME].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
+        ui.cb_buff[P_EME].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
                                          + "<br>"+ "1セル内の対象にダメージを与え、一定確率でスタン状態にする"
-                                         + "<br>"+ "*リニューアル ディレイ8秒から6秒 消費MP30から20"
+                                         + "<br>"+ "*リニューアル後 ディレイ8秒から6秒 消費MP30から20"
                                          + "<br>"+ "[習得レベル:80][持続時間:最大6秒][対象:PC/NPC]"+"</html>");
         if (ui.cb_buff[P_EME].isSelected()) {
         //スキル効果未実装
@@ -7304,9 +7295,11 @@ buki.arrow_elementdmg=0;
                 dmg_small_ave += 0.01 * 50;
             }
         }
-        //バーニングスピリッツ
+
+        //バーニング スピリッツ
        ui.cb_buff[D_BSS].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
                                         + "<br>"+ "一定確率(33%)で近距離ダメージ1.5倍"
+                                        + "<br>"+ "パッシブ魔法"
                                         + "<br>"+ "[習得レベル:40][持続時間:常時][対象:術者]"+"</html>");
        if (ui.cb_buff[D_BSS].isSelected()) {
             if (!(buki.type.equals("ボウ") || buki.type.equals("ガントレット"))) {
