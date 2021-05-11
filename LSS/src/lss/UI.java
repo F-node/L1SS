@@ -195,8 +195,8 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
     //JLabel[][] pure_status_bonus = new JLabel[2][25];
     JLabel[][] pure_status_bonus = new JLabel[2][30];
 
-    JComboBox[] cb_elixir = new JComboBox[16];              //エリクサの最大MAX16個
-    JComboBox[] cb_elixir_level = new JComboBox[16];        //エリクサーのLV
+    JComboBox[] cb_elixir = new JComboBox[20];              //エリクサの最大MAX20個
+    JComboBox[] cb_elixir_level = new JComboBox[20];        //エリクサーのLV
     LEV lev = new LEV();
 
     //パネル3
@@ -220,8 +220,9 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
     //ファイナルバーンで計104個分(0から103)
 //    JCheckBox[] cb_buff = new JCheckBox[104];
 //    JComboBox[] cb_buff_group = new JComboBox[104];
-    JCheckBox[] cb_buff = new JCheckBox[312];
-    JComboBox[] cb_buff_group = new JComboBox[312];
+    JCheckBox[] cb_buff = new JCheckBox[313];
+    JComboBox[] cb_buff_group = new JComboBox[313];
+
     //パネル5
     JComboBox cb_npc_level;
     JSlider[] s_target_res = new JSlider[ELEM_LIST.length];
@@ -1129,16 +1130,36 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         panels[1].add(lab_tmp);
 
         String elixir_list[] = {"---", "STR", "DEX", "INT", "WIS", "CON", "CHA"};
-        //for (int i = 0; i < 10; i++) {                                            //最大10個まで使用
-        for (int i = 0; i < 16; i++) {                                              //最大16個まで使用
-            cb_elixir[i] = new JComboBox(elixir_list);
-            cb_elixir_level[i] = new JComboBox(lev_list);
-            cb_elixir[i].setBounds(30 +60 * i, 500, 60, 20);
-            cb_elixir[i].addActionListener(this);
-            cb_elixir_level[i].setBounds(30 + 60 * i, 520, 60, 20);
-            //cb_elixir_level[i].setSelectedItem(Integer.toString(50 + 5 * i));     //50レベルから5レベル単位
-            cb_elixir_level[i].setSelectedItem(Integer.toString(50 + 3 * i));       //50レベルから3レベル単位
-            cb_elixir_level[i].addActionListener(this);
+        //for (int i = 0; i < 10; i++) {                                                //最大10個まで使用
+        for (int i = 0; i < 20; i++) {                                                  //最大20個まで使用
+            if (i >= 17) {
+                cb_elixir[i] = new JComboBox(elixir_list);
+                cb_elixir_level[i] = new JComboBox(lev_list);
+                cb_elixir[i].setBounds(30 +60 * i-300, 540, 60, 20);
+                cb_elixir[i].addActionListener(this);
+                cb_elixir_level[i].setBounds(30 + 60 * i-300, 560, 60, 20);
+                cb_elixir_level[i].setSelectedItem(Integer.toString(100));              //50レベルから3レベル単位
+                cb_elixir_level[i].addActionListener(this);
+                }
+            else if (i >= 10) {
+                cb_elixir[i] = new JComboBox(elixir_list);
+                cb_elixir_level[i] = new JComboBox(lev_list);
+                cb_elixir[i].setBounds(30 +60 * i-300, 540, 60, 20);
+                cb_elixir[i].addActionListener(this);
+                cb_elixir_level[i].setBounds(30 + 60 * i-300, 560, 60, 20);
+                cb_elixir_level[i].setSelectedItem(Integer.toString(50 + 3 * i));       //50レベルから3レベル単位
+                cb_elixir_level[i].addActionListener(this);
+                }
+            else {
+                cb_elixir[i] = new JComboBox(elixir_list);
+                cb_elixir_level[i] = new JComboBox(lev_list);
+                cb_elixir[i].setBounds(30 +60 * i, 500, 60, 20);
+                cb_elixir[i].addActionListener(this);
+                cb_elixir_level[i].setBounds(30 + 60 * i, 520, 60, 20);
+                //cb_elixir_level[i].setSelectedItem(Integer.toString(50 + 5 * i));     //50レベルから5レベル単位
+                cb_elixir_level[i].setSelectedItem(Integer.toString(50 + 3 * i));       //50レベルから3レベル単位
+                cb_elixir_level[i].addActionListener(this);
+                }
             panels[1].add(cb_elixir[i]);
             panels[1].add(cb_elixir_level[i]);
         }
@@ -1174,6 +1195,12 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[ACC3].setBounds(200 * row, 20 * col++, 100, 20);
         cb_buff[ACC3].addActionListener(this);
         panels[2].add(cb_buff[ACC3]);
+
+        //3段加速
+        cb_buff[ACC4] = new JCheckBox("4段加速");
+        cb_buff[ACC4].setBounds(200 * row, 20 * col++, 100, 20);
+        cb_buff[ACC4].addActionListener(this);
+        panels[2].add(cb_buff[ACC4]);
 
         //STR
         String list_str[] = {"+3", "+5", "+6", "+7"};
