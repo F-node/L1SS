@@ -1,6 +1,25 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2021/05/11
+Update 4.3.7
+LSS/src/lss/Common.java
+LSS/src/lss/UI.java
+追加
+	2021/05/06 KR Update
+	https://lineage.plaync.com/board/update/view?articleId=60936af92ca8620001246185
+修正
+	ナイト/エルフのスキルと変数とツールチップ
+新規
+	ナイト
+		ショック アタック(変数:306):未実装
+		レイジング ウェポン(変数:307):未実装
+		カウンターバリア：マスター(変数:308):未実装
+	エルフ
+		バーニングショット(変数:309):未実装
+		ソウルバリア：アーマー(変数:310):未実装
+		ストライカーゲイル：ショット(変数:311):未実装
+
 2021/04/21
 Update 4.3.6
 LSS/src/lss/Calculator.java

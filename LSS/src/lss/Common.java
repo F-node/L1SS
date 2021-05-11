@@ -57,13 +57,13 @@ public interface Common {
     final int W_K = 10;     //キーリンク
     final int W_CS = 11;    //チェーンソード
     final int W_DA = 12;    //双斧
-    
+
     final int MAIN = 13;
     final int SUB = 14;
-    
+
     final int PHI = 0;
     final int MAG = 1;
-   
+
     final int L1 = 0;
     final int L15 = 1;
     final int L30 = 2;
@@ -94,7 +94,7 @@ public interface Common {
     final int EARRING1 = 11;
     final int EARRING2 = 12;
 
-//エンチャント(0から161までの合計162個分)　UI.javaの223行目も合わせて変更必須
+//エンチャント(0から311までの合計312個分)　UI.javaの223行目も合わせて変更必須
 //基本エンチャント
     final int ACC1 = 0;             //1段加速
     final int ACC2 = 1;             //2段加速
@@ -105,6 +105,31 @@ public interface Common {
     final int BUKI = 6;             //武器エンチャ魔法
     final int SEC = 75;             //セキュリティ
     final int VIP = 72;             //VIPエンチャント
+
+//その他
+    final int DRAGON_BLESS = 126;   //ドラゴンの祝福
+    final int ITEM_BLUE = 50;       //魔力回復ポーション
+    final int ITEM_WIZP = 51;       //ウィズダムポーション
+    final int ITEM_COOKING = 54;    //料理
+    final int ITEM_DESSERT = 55;    //デザート
+    final int ITEM_BREEZE = 52;     //潮風の力
+    final int ITEM_SEA = 53;        //深海の力
+    final int ITEM_MD = 56;         //マジックドール
+    final int ITEM_MD_OP = 64;      //パック/パオ OP
+    final int KOMA = 58;            //コマのエンチャ
+    final int ITEM_MAGAN = 98;      //魔眼
+    final int CLAY = 77;            //クレイ
+    final int MOMIJI = 78;          //もみじリング
+    final int BUFF_COIN = 63;       //バフコイン
+    final int BS_COIN = 82;         //黒蛇のコイン
+    final int MBSC = 74;            //真心のこもった祝福スクロール
+    final int L_HST = 83;           //成長の果実
+    final int H_HP = 93;            //生命のボーナス
+    final int H_AC = 94;            //鉄甲のボーナス
+    final int H_PVPDR = 95;         //生存のボーナス
+    final int H_PVP = 96;           //暗殺のボーナス
+    final int H_RK = 97;            //ランカーボーナス
+    final int H_RKT = 141;          //各クラス別1位
 
 //君主魔法          合計11種類
     //アクティブスキル
@@ -122,7 +147,7 @@ public interface Common {
     //[UP待ち]
     final int P_CCA = 142;          //LV85  Call Clan Advance             コール クラン:アドバンス
 
-//騎士の技術        合計12種類
+//騎士の技術        12+3+3=18             合計18種類
     //アクティブスキル
     final int K_SSN = 147;          //LV60  Shock StaN                    ショックスタン
     final int K_RAR = 34;           //LV50  Reduction ArmoR               リダクションアーマー
@@ -137,8 +162,12 @@ public interface Common {
     final int K_CBV = 73;           //LV85  Counter Barrier:Veteran       カウンター バリア:ベテラン
     final int K_RAV = 112;          //LV80  Reduction Armor:Veteran       リダクション アーマー:ベテラン
     final int K_RFE = 111;          //LV80  Raging ForcE                  レイジング フォース
+    //[UP待ち]
+    final int K_SAK = 306;          //LV85  Shock AttacK                  ショックアタック
+    final int K_RWN = 307;          //LV88  Raging WeapoN                 レイジングウェポン
+    final int K_CBM = 308;          //LV86  Counter Barrier:Master        カウンターバリア：マスター
 
-//エルフの精霊魔法  4+1+8+11+18+3+2=47  合計47種類
+//エルフの精霊魔法  4+1+8+11+18+3+5=50  合計50種類
     //アクティブスキル
     //LV1魔法    合計4種類
     final int E_RMC = 20;           //LV15  Resist MagiC                  レジスト マジック
@@ -191,109 +220,112 @@ public interface Common {
     final int E_RET = 19;           //LV30  Resist ElemenT                レジスト エレメント
     final int E_GEH = 113;          //LV85  Glory EartH                   グローリーアース
     final int E_BSL = 158;          //LV45  Bloody SouL                   ブラッディ ソウル
-    //[UP待ち]    合計2種類
+    //[UP待ち]    合計5種類
     final int E_ESE = 148;          //LV85  Elven StrikE                  [UP待ち]エルブンストライク
     final int E_REN = 149;          //LV85  REvalatioN                    [UP待ち]リバレーション
+    final int E_BST = 309;          //LV90  Burning ShoT                  [UP待ち]バーニングショット
+    final int E_SBA = 310;          //LV85  Seoul Barrier Armor           [UP待ち]ソウルバリア：アーマー
+    final int E_SGS = 311;          //LV85  Striker Gail:Shot             [UP待ち]ストライカーゲイル：ショット
 
 //ウィザードの魔法  8+8+7+8+8+8+8+8+8+8+1+2+2=84    合計84種類
     //アクティブスキル
     //LV1魔法    合計8種類
-//    final int W_HEL = X;          //LV8   HEaL                          ヒール
-//    final int W_LIT = X;          //LV8   LIghT                         ライト
-//    final int W_SHD = X;          //LV8   SHielD                        シールド
-//    final int W_EBT = X;          //LV8   Energy BolT                   エネルギー ボルト
-//    final int W_TET = X;          //LV8   TEleporT                      テレポート
-//    final int W_IDR = X;          //LV8   Ice DaggeR                    アイス ダガー
-//    final int W_WCR = X;          //LV8   Wind CutteR                   ウィンド カッター
-//    final int W_HWS = X;          //LV8   Holy WeaponS                  ホーリー ウェポン
+//    final int W_HEL = 228;          //LV8   HEaL                          ヒール
+//    final int W_LIT = 229;          //LV8   LIghT                         ライト
+//    final int W_SHD = 230;          //LV8   SHielD                        シールド
+//    final int W_EBT = 231;          //LV8   Energy BolT                   エネルギー ボルト
+//    final int W_TET = 232;          //LV8   TEleporT                      テレポート
+//    final int W_IDR = 233;          //LV8   Ice DaggeR                    アイス ダガー
+//    final int W_WCR = 234;          //LV8   Wind CutteR                   ウィンド カッター
+//    final int W_HWS = 235;          //LV8   Holy WeaponS                  ホーリー ウェポン
     //LV2魔法    合計8種類
-//    final int W_CPN = X;          //LV16  Cure PoisoN                   キュア ポイズン
-//    final int W_CRH = X;          //LV16  Chill ToucH                   チル タッチ
-//    final int W_CPN = X;          //LV16  Cars PoisoN                   カーズ ポイズン
-//    final int W_EWN = X;          //LV16  Enchant WeapoN                エンチャント ウェポン
-//    final int W_DEN = X;          //LV16  DEtectioN                     ディテクション
+//    final int W_CPN = 236;          //LV16  Cure PoisoN                   キュア ポイズン
+//    final int W_CRH = 237;          //LV16  Chill ToucH                   チル タッチ
+//    final int W_CPN = 238;          //LV16  Cars PoisoN                   カーズ ポイズン
+//    final int W_EWN = 239;          //LV16  Enchant WeapoN                エンチャント ウェポン
+//    final int W_DEN = 240;          //LV16  DEtectioN                     ディテクション
     final int W_DWT = 26;           //LV16  Decrease WeighT               ディクリース ウェイト
-//    final int W_FAW = X;          //LV16  Fire ArroW                    ファイアー アロー
-//    final int W_STK = X;          //LV16  STarracK                      スタラック
+//    final int W_FAW = 241;          //LV16  Fire ArroW                    ファイアー アロー
+//    final int W_STK = 242;          //LV16  STarracK                      スタラック
     //LV3魔法    合計7種類
-//    final int W_LIG = X;          //LV24  LIghtninG                     ライトニング
-//    final int W_TUD = X;          //LV24  Turn UndeaD                   ターン アンデッド
-//    final int W_EHL = X;          //LV24  Extra HeeL                    エキストラ ヒール
-//    final int W_CBD = X;          //LV24  Curse BlinD                   カーズ ブラインド
+//    final int W_LIG = 243;          //LV24  LIghtninG                     ライトニング
+//    final int W_TUD = 244;          //LV24  Turn UndeaD                   ターン アンデッド
+//    final int W_EHL = 245;          //LV24  Extra HeeL                    エキストラ ヒール
+//    final int W_CBD = 246;          //LV24  Curse BlinD                   カーズ ブラインド
     final int W_BAR = 27;           //LV24  Blessed ArmoR                 ブレスド アーマー
-//    final int W_FCD = X;          //LV24  Frozen ClouD                  フローズン クラウド
-//    final int W_WEL = X;          //LV24  Week ElementaL                ウィーク エレメンタル
+//    final int W_FCD = 247;        //LV24  Frozen ClouD                  フローズン クラウド
+//    final int W_WEL = 248;          //LV24  Week ElementaL                ウィーク エレメンタル
     //LV4魔法    合計8種類
-//    final int W_FIL = X;          //LV32  FIrebalL                      ファイアー ボール
-//    final int W_PED = X;          //LV32  Physical Enchant:DEX          フィジカル エンチャント:DEX
-//    final int W_WBK = X;          //LV32  Weapon BreaK                  ウェポン ブレイク
-//    final int W_VTH = X;          //LV32  Vampiric ToucH                バンパイアリック タッチ
-//    final int W_THW = X;          //LV32  THroW                         スロー
-//    final int W_EJL = X;          //LV32  Earth JaiL                    アース ジェイル
-//    final int W_CMC = X;          //LV32  Counter MagiC                 カウンター マジック
-//    final int W_MEN = X;          //LV32  MEditatioN                    メディテーション
+//    final int W_FIL = 249;          //LV32  FIrebalL                      ファイアー ボール
+//    final int W_PED = 250;          //LV32  Physical Enchant:DEX          フィジカル エンチャント:DEX
+//    final int W_WBK = 251;          //LV32  Weapon BreaK                  ウェポン ブレイク
+//    final int W_VTH = 252;          //LV32  Vampiric ToucH                バンパイアリック タッチ
+//    final int W_THW = 253;          //LV32  THroW                         スロー
+//    final int W_EJL = 254;          //LV32  Earth JaiL                    アース ジェイル
+//    final int W_CMC = 255;          //LV32  Counter MagiC                 カウンター マジック
+//    final int W_MEN = 256;          //LV32  MEditatioN                    メディテーション
     //LV5魔法    合計8種類
-//    final int W_CPE = X;          //LV40  Curse ParalyzE                カーズ パラライズ
-//    final int W_CLG = X;          //LV40  Call LightninG                コール ライトニング
-//    final int W_GHL = X;          //LV40  Greater HeeL                  グレーター ヒール
-//    final int W_TMR = X;          //LV40  Taming MonsteR                テイミング モンスター
-//    final int W_RCE = X;          //LV40  Remove CursE                  リムーブ カーズ
-//    final int W_COC = X;          //LV40  Corn Of Cold                  コーン オブ コールド
-//    final int W_MDN = X;          //LV40  Mana DraiN                    マナ ドレイン
-//    final int W_DAS = X;          //LV40  DArknesS                      ダークネス
+//    final int W_CPE = 257;          //LV40  Curse ParalyzE                カーズ パラライズ
+//    final int W_CLG = 258;          //LV40  Call LightninG                コール ライトニング
+//    final int W_GHL = 259;          //LV40  Greater HeeL                  グレーター ヒール
+//    final int W_TMR = 260;          //LV40  Taming MonsteR                テイミング モンスター
+//    final int W_RCE = 261;          //LV40  Remove CursE                  リムーブ カーズ
+//    final int W_COC = 262;          //LV40  Corn Of Cold                  コーン オブ コールド
+//    final int W_MDN = 263;          //LV40  Mana DraiN                    マナ ドレイン
+//    final int W_DAS = 264;          //LV40  DArknesS                      ダークネス
     //LV6魔法    合計8種類
-//    final int W_CZE = X;          //LV48  Create ZombiE                 クリエイト ゾンビ
-//    final int W_PES = X;          //LV48  Physical Enchant:STR          フィジカル エンチャント:STR
-//    final int W_HET = X;          //LV48  HEisT                         ヘイスト
-//    final int W_CAN = X;          //LV48  CAncellatioN                  キャンセレーション
-//    final int W_IRN = X;          //LV48  IRaptioN                      イラプション
-//    final int W_SUT = X;          //LV48  SUnbursT                      サン バースト
-//    final int W_WES = X;          //LV48  WEaknesS                      ウィークネス
-//    final int W_BWN = X;          //LV48  Breath WeapoN                 ブレス ウェポン
+//    final int W_CZE = 265;          //LV48  Create ZombiE                 クリエイト ゾンビ
+//    final int W_PES = 266;          //LV48  Physical Enchant:STR          フィジカル エンチャント:STR
+//    final int W_HET = 267;          //LV48  HEisT                         ヘイスト
+//    final int W_CAN = 268;          //LV48  CAncellatioN                  キャンセレーション
+//    final int W_IRN = 269;          //LV48  IRaptioN                      イラプション
+//    final int W_SUT = 270;          //LV48  SUnbursT                      サン バースト
+//    final int W_WES = 271;          //LV48  WEaknesS                      ウィークネス
+//    final int W_BWN = 272;          //LV48  Breath WeapoN                 ブレス ウェポン
     //LV7魔法    合計8種類
-//    final int W_HAL = X;          //LV56  Heel AlL                      ヒール オール
+//    final int W_HAL = 273;          //LV56  Heel AlL                      ヒール オール
     final int W_FAR = 102;          //LV56  Freezing ArmoR                フリージング アーマー
-//    final int W_SMR = X;          //LV56  Summon MonsteR                サモン モンスター
-//    final int W_HWK = X;          //LV56  Holy WalK                     ホーリー ウォーク
-//    final int W_TOO = X;          //LV56  TOrnadO                       トルネード
-//    final int W_GHT = X;          //LV56  Greater HeisT                 グレーター ヘイスト
+//    final int W_SMR = 274;          //LV56  Summon MonsteR                サモン モンスター
+//    final int W_HWK = 275;          //LV56  Holy WalK                     ホーリー ウォーク
+//    final int W_TOO = 276;          //LV56  TOrnadO                       トルネード
+//    final int W_GHT = 277;          //LV56  Greater HeisT                 グレーター ヘイスト
     final int W_BER = 25;           //LV56  BErserkeR                     バーサーカー
     final int W_EAY = 101;          //LV56  Enchant Accuracy              エンチャント アキュラシー
     //LV8魔法    合計8種類
-//    final int W_FHL = X;          //LV64  Full HeeL                     フル ヒール
-//    final int W_FWL = X;          //LV64  Fire WalL                     ファイアー ウォール
-//    final int W_BLD = X;          //LV64  BLizzarD                      ブリザード
-//    final int W_INY = X;          //LV64  INvisibilitY                  インビジビリティー
-//    final int W_REN = X;          //LV64  REsurrectioN                  リザレクション
-//    final int W_EAE = X;          //LV64  EArthquakE                    アース クエイク
-//    final int W_LSM = X;          //LV64  Life StreaM                   ライフ ストリーム
-//    final int W_SIE = X;          //LV64  SIlencE                       サイレンス
+//    final int W_FHL = 278;          //LV64  Full HeeL                     フル ヒール
+//    final int W_FWL = 279;          //LV64  Fire WalL                     ファイアー ウォール
+//    final int W_BLD = 280;          //LV64  BLizzarD                      ブリザード
+//    final int W_INY = 281;          //LV64  INvisibilitY                  インビジビリティー
+//    final int W_REN = 282;          //LV64  REsurrectioN                  リザレクション
+//    final int W_EAE = 283;          //LV64  EArthquakE                    アース クエイク
+//    final int W_LSM = 284;          //LV64  Life StreaM                   ライフ ストリーム
+//    final int W_SIE = 285;          //LV64  SIlencE                       サイレンス
     //LV9魔法    合計8種類
-//    final int W_XX = X;           //LV72  Lightning storm               ライトニング ストーム
-//    final int W_XX = X;           //LV72  Fog of sleeping               フォグ オブ スリーピング
-//    final int W_XX = X;           //LV72  Shape change                  シェイプ チェンジ
-//    final int W_XX = X;           //LV72  Immun To Harm                 イミューン トゥ ハーム
-//    final int W_XX = X;           //LV72  Massteleport                  マス テレポート
-//    final int W_XX = X;           //LV72  Fire storm                    ファイアー ストーム
-//    final int W_XX = X;           //LV72  Decay potion                  ディケイポーション
-//    final int W_XX = X;           //LV72  Counter detection             カウンター ディテクション
+//    final int W_XX = 286;           //LV72  Lightning storm               ライトニング ストーム
+//    final int W_XX = 287;           //LV72  Fog of sleeping               フォグ オブ スリーピング
+//    final int W_XX = 288;           //LV72  Shape change                  シェイプ チェンジ
+//    final int W_XX = 289;           //LV72  Immun To Harm                 イミューン トゥ ハーム
+//    final int W_XX = 290;           //LV72  Massteleport                  マス テレポート
+//    final int W_XX = 291;           //LV72  Fire storm                    ファイアー ストーム
+//    final int W_XX = 292;           //LV72  Decay potion                  ディケイポーション
+//    final int W_XX = 293;           //LV72  Counter detection             カウンター ディテクション
     //LV10魔法    合計8種類
-//    final int W_XX = X;           //LV80  Death Heel                    デス ヒール
-//    final int W_XX = X;           //LV80  Meteor Strike                 メテオ ストライク
-//    final int W_XX = X;           //LV80  Greater Resurrection          グレーター リザレクション
-//    final int W_XX = X;           //LV80  Ice Meteor                    アイス メテオ
-//    final int W_XX = X;           //LV80  Disintegrate                  ディスインテグレート
-//    final int W_XX = X;           //LV80  Absolute barrier              アブソルート バリア
+//    final int W_XX = 294;           //LV80  Death Heel                    デス ヒール
+//    final int W_XX = 295;           //LV80  Meteor Strike                 メテオ ストライク
+//    final int W_XX = 296;           //LV80  Greater Resurrection          グレーター リザレクション
+//    final int W_XX = 297;           //LV80  Ice Meteor                    アイス メテオ
+//    final int W_XX = 298;           //LV80  Disintegrate                  ディスインテグレート
+//    final int W_XX = 299;           //LV80  Absolute barrier              アブソルート バリア
     final int W_ADS = 24;           //LV80  Advanced spirits              アドバンスド スピリッツ
-//    final int W_XX = X;           //LV80  Ice spike                     アイス スパイク
+//    final int W_XX = 300;           //LV80  Ice spike                     アイス スパイク
     //LV11魔法    合計1種類
-//    final int W_XX = X;           //LV85  ETernity                      エタニティ
+//    final int W_XX = 301;           //LV85  ETernity                      エタニティ
     //パッシブ    合計2種類
-//    final int W_XX = X;           //LV80  Immun To Harm: Saint          イミューン トゥ ハーム:セイント
-//    final int W_XX = X;           //LV85  Meister Accuracy              マイスター アキュラシー
+//    final int W_XX = 302;           //LV80  Immun To Harm: Saint          イミューン トゥ ハーム:セイント
+//    final int W_XX = 303;           //LV85  Meister Accuracy              マイスター アキュラシー
     //[UP待ち]    合計2種類
-//    final int W_XX = X;           //LV85  Mas Immun To                  マス イミューン トゥ
-//    final int W_XX = X;           //LV85  Meditation: BeyonD            メディテーション:ビヨンド
+//    final int W_XX = 304;           //LV85  Mas Immun To                  [UP待ち]マス イミューン トゥ
+//    final int W_XX = 305;           //LV85  Meditation: BeyonD            [UP待ち]メディテーション:ビヨンド
 
 //闇の精霊魔法  4+4+3+4+6+2=23  合計23種類
     //アクティブスキル
@@ -339,7 +371,7 @@ public interface Common {
     final int R_BLT = 187;          //LV40  Blood LasT                    ブラッドラスト(基本エンチャントの2段加速で実装)
     final int R_FSR = 188;          //LV40  Four SlayeR                   フォー スレイヤー
     final int R_MAW = 190;          //LV40  Magma ArroW                   マグマ アロー
-    final int R_FAFURION = 40;      //LV40  Arousal[FAFURION]             覚醒[パプリオン](未実装)
+    final int R_FAFURION = 40;      //LV40  Arousal[FAFURION]             覚醒[パプリオン]
     //LV3魔法          合計4種類
     final int R_MBY = 38;           //LV60  Mortal BodY                   モータル ボディー
     final int R_TGP = 184;          //LV60  Thunder GraP                  サンダー グラップ
@@ -456,31 +488,6 @@ public interface Common {
     final int L_TAE = 135;          //LV70  Tactical AdvancE              タクティカルアドバンス
     final int L_DSE = 133;          //LV65  Deadly StrikE                 デッドリーストライク
 
-//その他
-    final int DRAGON_BLESS = 126;   //ドラゴンの祝福
-    final int ITEM_BLUE = 50;       //魔力回復ポーション
-    final int ITEM_WIZP = 51;       //ウィズダムポーション
-    final int ITEM_COOKING = 54;    //料理
-    final int ITEM_DESSERT = 55;    //デザート
-    final int ITEM_BREEZE = 52;     //潮風の力
-    final int ITEM_SEA = 53;        //深海の力
-    final int ITEM_MD = 56;         //マジックドール
-    final int ITEM_MD_OP = 64;      //パック/パオ OP
-    final int KOMA = 58;            //コマのエンチャ
-    final int ITEM_MAGAN = 98;      //魔眼
-    final int CLAY = 77;            //クレイ
-    final int MOMIJI = 78;          //もみじリング
-    final int BUFF_COIN = 63;       //バフコイン
-    final int BS_COIN = 82;         //黒蛇のコイン
-    final int MBSC = 74;            //真心のこもった祝福スクロール
-    final int L_HST = 83;           //成長の果実
-    final int H_HP = 93;            //生命のボーナス
-    final int H_AC = 94;            //鉄甲のボーナス
-    final int H_PVPDR = 95;         //生存のボーナス
-    final int H_PVP = 96;           //暗殺のボーナス
-    final int H_RK = 97;            //ランカーボーナス
-    final int H_RKT = 141;          //各クラス別1位
-
     final String[] AILMENT_LIST = {"技術命中", "技術耐性", "精霊命中", "精霊耐性", "秘技命中","秘技耐性", "恐怖命中", "恐怖耐性"};
     final int HIT_STUN = 0;
     final int STUN = 1;
@@ -497,14 +504,13 @@ public interface Common {
     final int UNDEAD = 2;
 
 //強化値
-    String[] EQ_EN_LIST = {"0", "1", "2", "3", "4", "5", "6", "7", "8",
-        "9", "10", "11", "12", "13", "14", "15"};
+    String[] EQ_EN_LIST = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"};
 
 //属性強化
-    String[] EQ_ELEM_LIST = {"無属性", "地霊:1段", "地霊:2段", "地霊:3段", "地霊:4段","地霊:5段",
-        "火霊:1段", "火霊:2段", "火霊:3段", "火霊:4段", "火霊:5段",
-        "水霊:1段", "水霊:2段", "水霊:3段", "水霊:4段", "水霊:5段",
-        "風霊:1段", "風霊:2段", "風霊:3段", "風霊:4段", "風霊:5段"};
+    String[] EQ_ELEM_LIST = {"無属性", "地霊:1段", "地霊:2段", "地霊:3段", "地霊:4段", "地霊:5段",
+                             "火霊:1段", "火霊:2段", "火霊:3段", "火霊:4段", "火霊:5段",
+                             "水霊:1段", "水霊:2段", "水霊:3段", "水霊:4段", "水霊:5段",
+                             "風霊:1段", "風霊:2段", "風霊:3段", "風霊:4段", "風霊:5段"};
 
 //Tシャツの強化値
     String[] EQ_TS_LIST = {"0段階", "1段階", "2段階", "3段階", "4段階", "5段階"};
