@@ -246,21 +246,21 @@ int data[][][] = new int[16][2][BUKI_TYPE_LIST.length + 2];
         data[L90][PHI][MAIN] = 85;
         data[L90][PHI][SUB] = 75;
        
-        data[L99][PHI][W_D] = 151;
-        data[L99][PHI][W_LS] = 140;
-        data[L99][PHI][W_TS] = 121;
-        data[L99][PHI][W_A] = 121;
-        data[L99][PHI][W_L] = 129;
-        data[L99][PHI][W_CS] = 129;
-        data[L99][PHI][W_S] = 140;
-        data[L99][PHI][W_DB] = 140;
-        data[L99][PHI][W_C] = 140;
-        data[L99][PHI][W_K] = 140;
-        data[L99][PHI][W_DA] = 140;
-        data[L99][PHI][W_B] = 105;
-        data[L99][PHI][W_G] = 105;
-        data[L99][PHI][MAIN] = 93;
-        data[L99][PHI][SUB] = 82;
+        data[L100][PHI][W_D] = 151;
+        data[L100][PHI][W_LS] = 140;
+        data[L100][PHI][W_TS] = 121;
+        data[L100][PHI][W_A] = 121;
+        data[L100][PHI][W_L] = 129;
+        data[L100][PHI][W_CS] = 129;
+        data[L100][PHI][W_S] = 140;
+        data[L100][PHI][W_DB] = 140;
+        data[L100][PHI][W_C] = 140;
+        data[L100][PHI][W_K] = 140;
+        data[L100][PHI][W_DA] = 140;
+        data[L100][PHI][W_B] = 105;
+        data[L100][PHI][W_G] = 105;
+        data[L100][PHI][MAIN] = 93;
+        data[L100][PHI][SUB] = 82;
 
         data[L1][MAG][W_D] = 70;
         data[L1][MAG][W_LS] = 67;
@@ -502,21 +502,21 @@ int data[][][] = new int[16][2][BUKI_TYPE_LIST.length + 2];
         data[L90][MAG][MAIN] = 90;
         data[L90][MAG][SUB] = 79;
 
-        data[L99][MAG][W_D] = 134;
-        data[L99][MAG][W_LS] = 123;
-        data[L99][MAG][W_TS] = 106;
-        data[L99][MAG][W_A] = 106;
-        data[L99][MAG][W_L] = 114;
-        data[L99][MAG][W_CS] = 114;
-        data[L99][MAG][W_S] = 123;
-        data[L99][MAG][W_DB] = 123;
-        data[L99][MAG][W_C] = 123;
-        data[L99][MAG][W_K] = 123;
-        data[L99][MAG][W_DA] = 123;
-        data[L99][MAG][W_B] = 0;
-        data[L99][MAG][W_G] = 0;
-        data[L99][MAG][MAIN] = 99;
-        data[L99][MAG][SUB] = 86;
+        data[L100][MAG][W_D] = 134;
+        data[L100][MAG][W_LS] = 123;
+        data[L100][MAG][W_TS] = 106;
+        data[L100][MAG][W_A] = 106;
+        data[L100][MAG][W_L] = 114;
+        data[L100][MAG][W_CS] = 114;
+        data[L100][MAG][W_S] = 123;
+        data[L100][MAG][W_DB] = 123;
+        data[L100][MAG][W_C] = 123;
+        data[L100][MAG][W_K] = 123;
+        data[L100][MAG][W_DA] = 123;
+        data[L100][MAG][W_B] = 0;
+        data[L100][MAG][W_G] = 0;
+        data[L100][MAG][MAIN] = 99;
+        data[L100][MAG][SUB] = 86;
 
     }
 
@@ -549,10 +549,10 @@ int data[][][] = new int[16][2][BUKI_TYPE_LIST.length + 2];
             return data[L82][mode][type];
         } else if (level < 90) {
             return data[L84][mode][type];
-        } else if (level < 99) {
+        } else if (level < 100) {
             return data[L90][mode][type];
         } else {
-            return data[L99][mode][type];
+            return data[L100][mode][type];
         }
     }
 }

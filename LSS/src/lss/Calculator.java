@@ -451,6 +451,8 @@ public class Calculator implements Common {
     double acc_df = 1.0800;
     // 三段加速(ドラゴンブラッド 蔵出し秘蔵酒)
     double acc_3 = 1.125;
+    // 四段加速(騎士技術(レイジング ウェポン))
+    double acc_4 = 1.100;
     // キー入力ディレイ
     double key_delay = 0.1815;
 
@@ -504,9 +506,9 @@ public class Calculator implements Common {
             _ST[ELIXIR][i] = 0;
         }
 
-//エリクサーの最大使用数(10から16個へ)
+//エリクサーの最大使用数(10から20個へ)
         //for (int i = 0; i < 10; i++) {
-        for (int i = 0; i < 16; i++) {
+        for (int i = 0; i < 20; i++) {
             int st = ui.cb_elixir[i].getSelectedIndex() - 1;
             if (st >= 0) {
                 if (ui.cb_elixir_level[i].getSelectedIndex() + 1 <= level) {
@@ -519,10 +521,18 @@ public class Calculator implements Common {
         for (int i = 0; i < ui.lev.size; i++) {
             int st = ui.lev.field[i];
             if (st >= 0) {
-                //LV90以上の最大ステータス50/LV90未満の最大ステータス45の処理
-                //LV90以上の最大ステータス55/LV90未満の最大ステータス50の処理
-                if (level >= 90) {
-                    //if(_ST[BASE][st] + _ST[REM][st] + _ST[LEVEL][st] + _ST[ELIXIR][st] < 50) {
+                //LV100以上の最大ステータス60/LV90以上の最大ステータス55/LV90未満の最大ステータス50の処理
+                if (level >= 100) {
+                    if(_ST[BASE][st] + _ST[REM][st] + _ST[LEVEL][st] + _ST[ELIXIR][st] < 60) {
+                        if (i + 51 <= level) {
+                            _ST[LEVEL][st]++;
+                        }
+                        ui.lev.isOverflow[i] = false;
+                    } else if (i + 51 <= level) {
+                    ui.lev.isOverflow[i] = true;
+                    }
+                }
+                else if (level >= 90) {
                     if(_ST[BASE][st] + _ST[REM][st] + _ST[LEVEL][st] + _ST[ELIXIR][st] < 55) {
                         if (i + 51 <= level) {
                             _ST[LEVEL][st]++;
@@ -533,7 +543,6 @@ public class Calculator implements Common {
                     }
                 }
                 else{
-                    //if (_ST[BASE][st] + _ST[REM][st] + _ST[LEVEL][st] + _ST[ELIXIR][st] < 45) {
                     if (_ST[BASE][st] + _ST[REM][st] + _ST[LEVEL][st] + _ST[ELIXIR][st] < 50) {
                         if (i + 51 <= level) {
                             _ST[LEVEL][st]++;
@@ -1867,8 +1876,9 @@ public class Calculator implements Common {
         }
 
         cons_mp = 0;
-//騎士の技術    
-        //フォーススタン(未実装)
+
+//騎士の技術
+        //*フォーススタン
         ui.cb_buff[K_FSN].setToolTipText("<html>"+ "[消費MP:17][消費HP:--]"
                                          + "<br>"+ "1セル内の対象にダメージを与え、一定確率でスタン状態にする"
                                          + "<br>"+ "更に一定確率で持続時間が長い、強化スタンが発動する"
@@ -1879,7 +1889,7 @@ public class Calculator implements Common {
         //スキル効果未実装
         }
 
-        //アブソルートブレイド(未実装)
+        //*アブソルートブレイド
         ui.cb_buff[K_ABE].setToolTipText("<html>"+ "[消費MP:15][消費HP:--]"
                                          + "<br>"+ "攻撃をした時に、一定確率でアブソルートバリアを破壊して強制的に解除する"
                                          + "<br>"+ "レベル80から、レベル1毎に発動率+1%(最大+8%)"
@@ -1889,7 +1899,7 @@ public class Calculator implements Common {
         //スキル効果未実装
         }
 
-        //カウンターバリア 消費MP15/2mins
+        //*カウンターバリア 消費MP15/2mins
         ui.cb_buff[K_CBR].setToolTipText("<html>"+ "[消費MP:15][消費HP:--]"
                                          + "<br>"+ "両手剣装備時 一定確率(20%)で近距離攻撃回避+反撃"
                                          + "<br>"+ "カウンターダメージは武器の([BIG打撃値]+[追加ダメージ]+[強化数])x[2]"
@@ -1918,7 +1928,7 @@ public class Calculator implements Common {
             }
         }
 
-        //ショックスタン
+        //*ショックスタン
         ui.cb_buff[K_SSN].setToolTipText("<html>"+ "[消費MP:13][消費HP:--]"
                                          + "<br>"+ "1セル内の対象にダメージを与え、一定確率でスタン状態にする"
                                          + "<br>"+ "攻撃が命中したかどうかは関係なく効果が発動する"
@@ -1940,7 +1950,7 @@ public class Calculator implements Common {
             }
         }
 
-        //カウンターバリア:ベテラン
+        //*カウンターバリア:ベテラン
         ui.cb_buff[K_CBV].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
                                          + "<br>"+ "カウンターバリアの発動率を上げる"
                                          + "<br>"+ "85レベルから1レベル毎に発動確率1%増加"
@@ -1997,6 +2007,33 @@ public class Calculator implements Common {
             }
         }
 
+        //*ショックアタック
+        ui.cb_buff[K_SAK].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
+                                         + "<br>"+ "3セル内の対象に強力な物理的なダメージと移動速度減少"
+                                         + "<br>"+ "移動速度減少時スタン成功確率増加+確率的に帰還不可効果"
+                                         + "<br>"+ "個別クールタイム"
+                                         + "<br>"+ "[習得レベル:85][持続時間:最大4秒][対象:PC/NPC][触媒:結晶体(25)]"+"</html>");
+        if (ui.cb_buff[K_SAK].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //*レイジングウェポン
+        ui.cb_buff[K_RWN].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "両手剣攻撃速度10%向上"
+                                         + "<br>"+ "[習得レベル:88][持続時間:常時][対象:術者]"+"</html>");
+        if (ui.cb_buff[K_RWN].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //*カウンターバリア:マスター
+        ui.cb_buff[K_CBM].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "カウンターバリアー発動時のHPの一定量回復"
+                                         + "<br>"+ "カウンターバリアー発動を無力化するスキルの発動率を減少"
+                                         + "<br>"+ "[習得レベル:86][持続時間:常時][対象:術者]"+"</html>");
+        if (ui.cb_buff[K_CBM].isSelected()) {
+        //スキル効果未実装
+        }
+
 //精霊魔法
         //グローリーアース
         ui.cb_buff[E_GEH].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
@@ -2024,6 +2061,32 @@ public class Calculator implements Common {
                                          + "<br>"+ "状態異常スキルの時間を減少させる"
                                          + "<br>"+ "[習得レベル:85][持続時間:320秒][対象:術者][触媒:精霊の玉(4)]"+"</html>");
         if (ui.cb_buff[E_REN].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //バーニングショット
+        ui.cb_buff[E_BST].setToolTipText("<html>"+ "[消費MP:??][消費HP:--]"
+                                         + "<br>"+ "ダメージを20%増加する 全スキル耐性+3 PvPダメージ低下+10"
+                                         + "<br>"+ "スキル使用中の時、術者は[移動不可能][帰還不可能][弓の射程距離減少]"
+                                         + "<br>"+ "[習得レベル:90][持続時間:??秒][対象:術者][触媒:精霊の玉(2)]"+"</html>");
+        if (ui.cb_buff[E_BST].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //ソウルバリア:アーマー
+        ui.cb_buff[E_SBA].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "ソウルバリアが発動した時に[ダメージ低下+2][PvPダメージ低下+2]の効果を追加"
+                                         + "<br>"+ "レベル90から、レベル2毎に効果が2ずつ増加(最大+10)"
+                                         + "<br>"+ "[習得レベル:85][持続時間:常時][対象:術者]"+"</html>");
+        if (ui.cb_buff[E_SBA].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //ストライカーゲイル:ショット
+        ui.cb_buff[E_SGS].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "ストライカーゲイルに[移動不可能(4秒)][ヒール回復量低下]の効果を追加"
+                                         + "<br>"+ "[習得レベル:85][持続時間:常時][対象:術者]"+"</html>");
+        if (ui.cb_buff[E_SGS].isSelected()) {
         //スキル効果未実装
         }
 
@@ -5500,9 +5563,15 @@ public class Calculator implements Common {
                     break;
             }
         }
+
         ui.cb_buff[ACC3].setToolTipText("x1.1250:ドラゴンブラッド 生命のパール 蔵出し秘蔵酒");
         if (ui.cb_buff[ACC3].isSelected()) {
             acc *= acc_3;
+        }
+
+        ui.cb_buff[ACC4].setToolTipText("x1.1000:騎士技術(レイジング ウェポン)");
+        if (ui.cb_buff[ACC4].isSelected()) {
+            acc *= acc_4;
         }
 
 //2019/11/20Update HW/EW/BW/SFの仕様変更
@@ -6299,6 +6368,11 @@ public class Calculator implements Common {
             base_hit_short += 5;                //近距離命中+5
             cri_short += 2;                     //近距離クリティカル+2%
         }
+        if (pure_str >= 60) {
+            base_dmg_short += 5;                //近距離ダメージ+5
+            base_hit_short += 5;                //近距離命中+5
+            cri_short += 2;                     //近距離クリティカル+2%
+        }
 
 //DEX:
         if (pure_dex >= 25) {
@@ -6319,6 +6393,11 @@ public class Calculator implements Common {
             base_hit_long += 5;                 //遠距離命中+5
             cri_long += 2;                      //遠距離クリティカル+2%
         }
+        if (pure_dex >= 60) {
+            base_dmg_long += 5;                 //遠距離ダメージ+5
+            base_hit_long += 5;                 //遠距離命中+5
+            cri_long += 2;                      //遠距離クリティカル+2%
+        }
 
 //INT:
         if (pure_int >= 25) {
@@ -6335,6 +6414,11 @@ public class Calculator implements Common {
             cri_magic += 1;                     //魔法クリティカル+1%
         }
         if (pure_int >= 55) {
+            base_dmg_magic += 5;                //魔法ダメージ+5
+            base_hit_magic += 5;                //魔法命中+5
+            cri_magic += 2;                     //魔法クリティカル+2%
+        }
+        if (pure_int >= 60) {
             base_dmg_magic += 5;                //魔法ダメージ+5
             base_hit_magic += 5;                //魔法命中+5
             cri_magic += 2;                     //魔法クリティカル+2%
@@ -8114,7 +8198,7 @@ buki.arrow_elementdmg=0;
             }
             mpr++;                          //MP回復+1
             tmp++;                          //MPポーション回復増加+1
-                                            //最大MP+50は5563行目以降で処理
+                                            //最大MP+50は8448行目以降で処理
         }
         if (pure_wis >= 35) {
             if (ui.cb_buff[ITEM_BLUE].isSelected()) {
@@ -8123,7 +8207,7 @@ buki.arrow_elementdmg=0;
             }
             mpr++;                          //MP回復+1
             tmp++;                          //MPポーション回復増加+1
-                                            //最大MP+100は5563行目以降で処理
+                                            //最大MP+100は8448行目以降で処理
         }
         if (pure_wis >= 45) {
             if (ui.cb_buff[ITEM_BLUE].isSelected()) {
@@ -8132,18 +8216,27 @@ buki.arrow_elementdmg=0;
             }
             mpr += 3;                       //MP回復+3
             tmp += 3;                       //MPポーション回復増加+3
-                                            //最大MP+150は5563行目以降で処理
+                                            //最大MP+150は8448行目以降で処理
         }
         if (pure_wis >= 55) {
             if (ui.cb_buff[ITEM_BLUE].isSelected()) {
-                ui.pure_status_bonus[1][17].setText(Integer.toString(10));
+                ui.pure_status_bonus[1][17].setText(Integer.toString(15));
                 mpr += 5;
             }
             mpr += 5;                       //MP回復+5
             tmp += 5;                       //MPポーション回復増加+5
-                                            //最大MP+200は5563行目以降で処理
+                                            //最大MP+200は8448行目以降で処理
         }
-        
+        if (pure_wis >= 60) {
+            if (ui.cb_buff[ITEM_BLUE].isSelected()) {
+                ui.pure_status_bonus[1][17].setText(Integer.toString(20));
+                mpr += 5;
+            }
+            mpr += 5;                       //MP回復+5
+            tmp += 5;                       //MPポーション回復増加+5
+                                            //最大MP+200は8448行目以降で処理
+        }
+
         ui.pure_status_bonus[1][16].setText(Integer.toString(tmp));             //MP増加
 
 //CON:
@@ -8152,22 +8245,27 @@ buki.arrow_elementdmg=0;
 
         if (pure_con >= 25) {
             hpr++;                          //HP回復+1
-                                            //最大HP+50は5549行目以降で処理
+                                            //最大HP+50は8438行目以降で処理
         }
         if (pure_con >= 35) {
             hpr++;                          //HP回復+1
             hp_pot++;                       //HPポーション回復増加+1%
-                                            //最大HP+100は5549行目以降で処理
+                                            //最大HP+100は8438行目以降で処理
         }
         if (pure_con >= 45) {
             hpr += 3;                       //HP回復+3
             hp_pot += 2;                    //HPポーション回復増加+2%
-                                            //最大HP+150は5549行目以降で処理
+                                            //最大HP+150は8438行目以降で処理
         }
         if (pure_con >= 55) {
             hpr += 5;                       //HP回復+5
             hp_pot += 4;                    //HPポーション回復増加+4%
-                                            //最大HP+200は5549行目以降で処理
+                                            //最大HP+200は8438行目以降で処理
+        }
+        if (pure_con >= 60) {
+            hpr += 5;                       //HP回復+5
+            hp_pot += 4;                    //HPポーション回復増加+4%
+                                            //最大HP+200は8438行目以降で処理
         }
 
         ui.pure_status_bonus[1][21].setText(Integer.toString(hpr));             //HP増加
@@ -8356,6 +8454,9 @@ buki.arrow_elementdmg=0;
         if (con >= 55) {
             hp += 200;
         }
+        if (con >= 60) {
+            hp += 200;
+        }
 
 //WISステータスによるMP増加処理
         if (wis >= 25) {
@@ -8368,6 +8469,9 @@ buki.arrow_elementdmg=0;
             mp += 150;
         }
         if (wis >= 55) {
+            mp += 200;
+        }
+        if (wis >= 60) {
             mp += 200;
         }
 

@@ -79,7 +79,7 @@ public interface Common {
     final int L82 = 12;
     final int L84 = 13;
     final int L90 = 14;
-    final int L99 = 15;             //Hero用
+    final int L100 = 15;             //Hero用
 
     //パネル1のアミュレット/イアリング/リング/インシグニア/スポールダー/紋章/ペンダント等の順と位置
     final String[] EQ_LIST = {"武器", "武器", "シールド", "ヘルム", "グローブ", "シャツ",
@@ -94,11 +94,12 @@ public interface Common {
     final int EARRING1 = 11;
     final int EARRING2 = 12;
 
-//エンチャント(0から311までの合計312個分)　UI.javaの223行目も合わせて変更必須
+//エンチャント(0から312までの合計313個分)　UI.javaの223行目も合わせて変更必須
 //基本エンチャント
     final int ACC1 = 0;             //1段加速
     final int ACC2 = 1;             //2段加速
     final int ACC3 = 2;             //3段加速
+    final int ACC4 = 312;           //4段加速
     final int B_STR = 3;            //STR
     final int B_DEX = 4;            //DEX
     final int B_AC = 5;             //AC
@@ -165,7 +166,7 @@ public interface Common {
     //[UP待ち]
     final int K_SAK = 306;          //LV85  Shock AttacK                  ショックアタック
     final int K_RWN = 307;          //LV88  Raging WeapoN                 レイジングウェポン
-    final int K_CBM = 308;          //LV86  Counter Barrier:Master        カウンターバリア：マスター
+    final int K_CBM = 308;          //LV86  Counter Barrier:Master        カウンターバリア:マスター
 
 //エルフの精霊魔法  4+1+8+11+18+3+5=50  合計50種類
     //アクティブスキル
@@ -224,8 +225,8 @@ public interface Common {
     final int E_ESE = 148;          //LV85  Elven StrikE                  [UP待ち]エルブンストライク
     final int E_REN = 149;          //LV85  REvalatioN                    [UP待ち]リバレーション
     final int E_BST = 309;          //LV90  Burning ShoT                  [UP待ち]バーニングショット
-    final int E_SBA = 310;          //LV85  Seoul Barrier Armor           [UP待ち]ソウルバリア：アーマー
-    final int E_SGS = 311;          //LV85  Striker Gail:Shot             [UP待ち]ストライカーゲイル：ショット
+    final int E_SBA = 310;          //LV85  Seoul Barrier Armor           [UP待ち]ソウルバリア:アーマー
+    final int E_SGS = 311;          //LV85  Striker Gail:Shot             [UP待ち]ストライカーゲイル:ショット
 
 //ウィザードの魔法  8+8+7+8+8+8+8+8+8+8+1+2+2=84    合計84種類
     //アクティブスキル
