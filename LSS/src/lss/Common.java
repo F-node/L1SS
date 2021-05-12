@@ -84,15 +84,17 @@ public interface Common {
     //パネル1のアミュレット/イアリング/リング/インシグニア/スポールダー/紋章/ペンダント等の順と位置
     final String[] EQ_LIST = {"武器", "武器", "シールド", "ヘルム", "グローブ", "シャツ",
         "アーマー", "クローク", "ブーツ", "ゲートル", "ベルト", "アミュレット", "イアリング", "イアリング", "リング", "リング",
-        "リング", "リング", "インシグニア", "スポールダー", "紋章", "ペンダント"};
+        "リング", "リング", "リング", "リング", "インシグニア", "スポールダー", "紋章", "ペンダント"};
+
+    final int EARRING1 = 12;
+    final int EARRING2 = 13;
 
     final int RING1 = 14;
     final int RING2 = 15;
     final int RING3 = 16;
     final int RING4 = 17;
-
-    final int EARRING1 = 11;
-    final int EARRING2 = 12;
+    final int RING5 = 18;
+    final int RING6 = 19;
 
 //エンチャント(0から312までの合計313個分)　UI.javaの223行目も合わせて変更必須
 //基本エンチャント
