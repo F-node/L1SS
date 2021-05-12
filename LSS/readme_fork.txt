@@ -2,6 +2,13 @@ LineageStatusSimulator_fork2018
 
 変更点
 2021/05/12
+Update 4.3.9
+LSS/src/lss/Common.java
+LSS/src/lss/UI.java
+修正
+	LV95/LV100リングスロット(計2)の実装によりリングスロット(計6)へ
+
+2021/05/12
 Update 4.3.8
 LSS/src/lss/Calculator.java
 LSS/src/lss/Common.java

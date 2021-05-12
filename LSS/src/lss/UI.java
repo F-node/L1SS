@@ -418,13 +418,12 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         lab_tmp = new JLabel("REM");
         lab_tmp.setBounds(0, 60 + 120, 30, 20);
         panels[0].add(lab_tmp);
-        lab_tmp = new JLabel("REM");
-        lab_tmp.setBounds(0, 60 + 120, 30, 20);
-        panels[1].add(lab_tmp);
+        commons.add(lab_tmp);
 
         lab_rem = new JLabel("", JLabel.CENTER);
         lab_rem.setBounds(30, 60 + 120, 20, 20);
         panels[0].add(lab_rem);
+        commons.add(lab_rem);
 
         lab_tmp = new JLabel("初期", JLabel.CENTER);
         lab_tmp.setBounds(100, 40, 30, 20);
@@ -715,8 +714,8 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
             panels[0].add(cb_eq[i]);
             cb_eq[i].addActionListener(this);
 
-            //リスト19個から21個へ拡張(スポールダー、インシグニア分)2個追加　+ペンダントで22個
-            if (i >= 22) {
+            //リスト19個から21個へ拡張(スポールダー、インシグニア分)2個追加　+ペンダントで22個 +リング2個追加で24個
+            if (i >= 24) {
                 cb_eq[i].setEnabled(false);
                 cb_eq_en[i].setEnabled(false);
             }
@@ -814,11 +813,11 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_pattern_c = new WideComboBox(center_list);
         cb_pattern_l2 = new WideComboBox(left2_list);
         cb_pattern_r2 = new WideComboBox(right2_list);
-        cb_pattern_l.setBounds(280, 400 + 100, 115, 20);
-        cb_pattern_r.setBounds(50, 400 + 100, 115, 20);
-        cb_pattern_c.setBounds(165, 400 + 110, 115, 20);
-        cb_pattern_l2.setBounds(280, 400 + 120, 115, 20);
-        cb_pattern_r2.setBounds(50, 400 + 120, 115, 20);
+        cb_pattern_l.setBounds(280, 400 + 120, 115, 20);
+        cb_pattern_r.setBounds(50, 400 + 120, 115, 20);
+        cb_pattern_c.setBounds(165, 400 + 130, 115, 20);
+        cb_pattern_l2.setBounds(280, 400 + 140, 115, 20);
+        cb_pattern_r2.setBounds(50, 400 + 140, 115, 20);
         cb_pattern_l.addActionListener(this);
         cb_pattern_r.addActionListener(this);
         cb_pattern_c.addActionListener(this);
@@ -833,7 +832,7 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         //オルターストーン
         String[] en_list = {"", "+1", "+2", "+3", "+4", "+5", "+6", "+7"};
         cb_alterstone_en = new JComboBox(en_list);
-        cb_alterstone_en.setBounds(0, 400 + 140, 50, 20);
+        cb_alterstone_en.setBounds(0, 400 + 160, 50, 20);
         cb_alterstone_en.addActionListener(this);
         panels[0].add(cb_alterstone_en);
 
@@ -842,7 +841,7 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
             "遠距離命中 +2", "SP +1", "魔法クリティカル +1", "魔法消耗減少＋2", "一撃必殺(1%確率で追加ダメージ50)"};
         for (int i = 0; i < cb_alterstone_op.length; i++) {
             cb_alterstone_op[i] = new WideComboBox(alterstone_op_list);
-            cb_alterstone_op[i].setBounds(50 + 115 * i, 400 + 140, 115, 20);
+            cb_alterstone_op[i].setBounds(50 + 115 * i, 400 + 160, 115, 20);
             cb_alterstone_op[i].addActionListener(this);
             panels[0].add(cb_alterstone_op[i]);
         }
