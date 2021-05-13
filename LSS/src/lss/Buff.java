@@ -14,6 +14,9 @@ public class Buff implements Common {
     int MP;
     int HPR;
     int MPR;
+    int MHP;
+    int MMP;
+    int MEXP;
     int DMG_SHORT;
     int DMG_LONG;
     int DMG_MAGIC;
@@ -26,12 +29,18 @@ public class Buff implements Common {
     int SP;
     int DR;
     int MR;
+    int DG;
     int ER;
+    int ME;
     double r_weight;
     int c_weight;
     String effect = "";
 
     int PVP;
+    int PVP_DR;
+    int DR_IGNORED;
+    String MATERIAL="";
+    int WEIGHT;
 
     int[] ailment = new int[AILMENT_LIST.length];
 
@@ -84,16 +93,16 @@ public class Buff implements Common {
             if (line.startsWith("MPR=")) {
                 MPR = Integer.parseInt(line.split("=")[1]);
             }
-            if (line.startsWith("追加打撃=")) {
+            if (line.startsWith("近距離追加ダメージ=")) {
                 DMG_SHORT = Integer.parseInt(line.split("=")[1]);
             }
-            if (line.startsWith("弓打撃値=")) {
+            if (line.startsWith("遠距離追加ダメージ=")) {
                 DMG_LONG = Integer.parseInt(line.split("=")[1]);
             }
-            if (line.startsWith("攻撃成功=")) {
+            if (line.startsWith("近距離命中=")) {
                 HIT_SHORT = Integer.parseInt(line.split("=")[1]);
             }
-            if (line.startsWith("弓命中率=")) {
+            if (line.startsWith("遠距離命中=")) {
                 HIT_LONG = Integer.parseInt(line.split("=")[1]);
             }
             if (line.startsWith("魔法命中=")) {
@@ -102,11 +111,26 @@ public class Buff implements Common {
             if (line.startsWith("SP=")) {
                 SP = Integer.parseInt(line.split("=")[1]);
             }
-            if (line.startsWith("DR=")) {
+            if (line.startsWith("ダメージ低下=")) {
                 DR = Integer.parseInt(line.split("=")[1]);
+            }           
+            if (line.startsWith("ダメージ低下無視=")) {
+                DR_IGNORED = Integer.parseInt(line.split("=")[1]);
+            }
+            if (line.startsWith("PVP追加ダメージ=")) {
+                PVP = Integer.parseInt(line.split("=")[1]);
+            }
+            if (line.startsWith("PVPダメージ低下=")) {
+                PVP_DR = Integer.parseInt(line.split("=")[1]);
             }
             if (line.startsWith("MR=")) {
                 MR = Integer.parseInt(line.split("=")[1]);
+            }
+            if (line.startsWith("材質=")) {
+                MATERIAL = line.split("=")[1];
+            }
+            if (line.startsWith("重さ=")) {
+                WEIGHT = Integer.parseInt(line.split("=")[1]);
             }
             if (line.startsWith("重量軽減=")) {
                 r_weight = Double.parseDouble(line.split("=")[1]);
@@ -117,26 +141,29 @@ public class Buff implements Common {
             if (line.startsWith("特殊=")) {
                 effect = line.split("=")[1];
             }
-            if (line.startsWith("スタン=")) {
+            if (line.startsWith("技術耐性=")) {
                 ailment[STUN] = Integer.parseInt(line.split("=")[1]);
             }
-            if (line.startsWith("暗闇=")) {
-                ailment[DARKNESS] = Integer.parseInt(line.split("=")[1]);
+            if (line.startsWith("精霊耐性=")) {
+                ailment[SPIRIT] = Integer.parseInt(line.split("=")[1]);
             }
-            if (line.startsWith("ホールド=")) {
-                ailment[HOLD] = Integer.parseInt(line.split("=")[1]);
+            if (line.startsWith("秘技耐性=")) {
+                ailment[SECRET] = Integer.parseInt(line.split("=")[1]);
             }
-            if (line.startsWith("凍結=")) {
-                ailment[FREEZE] = Integer.parseInt(line.split("=")[1]);
-            }
-            if (line.startsWith("石化=")) {
-                ailment[STONE] = Integer.parseInt(line.split("=")[1]);
-            }
-            if (line.startsWith("睡眠=")) {
-                ailment[SLEEP] = Integer.parseInt(line.split("=")[1]);
-            }
-            if (line.startsWith("恐怖=")) {
+            if (line.startsWith("恐怖耐性=")) {
                 ailment[TERROR] = Integer.parseInt(line.split("=")[1]);
+            }
+            if (line.startsWith("技術命中=")) {
+                ailment[HIT_STUN] = Integer.parseInt(line.split("=")[1]);
+            }
+            if (line.startsWith("精霊命中=")) {
+                ailment[HIT_SPIRIT] = Integer.parseInt(line.split("=")[1]);
+            }
+            if (line.startsWith("秘技命中=")) {
+                ailment[HIT_SECRET] = Integer.parseInt(line.split("=")[1]);
+            }
+            if (line.startsWith("恐怖命中=")) {
+                ailment[HIT_TERROR] = Integer.parseInt(line.split("=")[1]);
             }
             if (line.startsWith("近距離クリティカル=")) {
                CRI_SHORT = Integer.parseInt(line.split("=")[1]);
@@ -147,7 +174,9 @@ public class Buff implements Common {
             if (line.startsWith("魔法クリティカル=")) {
                CRI_MAGIC = Integer.parseInt(line.split("=")[1]);
             }
-
+            if (line.startsWith("獲得経験値=")) {
+               MEXP = Integer.parseInt(line.split("=")[1]);
+            }
         }
     }
 }

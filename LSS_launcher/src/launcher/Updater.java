@@ -91,7 +91,8 @@ public class Updater extends JDialog implements ActionListener, WindowListener {
             curr_data_ver = reader.readLine();
             reader.close();
 
-            URL url = new URL("https://github.com/F-node/L1SS/raw/master/LSS/version.txt");
+//            URL url = new URL("https://github.com/F-node/L1SS/raw/master/LSS/version.txt");
+            URL url = new URL("https://github.com/TrickMasterJP/L1SS_2018/raw/master/LSS/version.txt");
             HttpURLConnection http = (HttpURLConnection) url.openConnection();
             http.setRequestMethod("GET");
             http.connect();
@@ -136,7 +137,8 @@ public class Updater extends JDialog implements ActionListener, WindowListener {
     }
 
     void download_app() throws IOException {
-        URL url = new URL("https://github.com/F-node/L1SS/raw/master/LSS/dist/LSS.jar");
+//        URL url = new URL("https://github.com/F-node/L1SS/raw/master/LSS/dist/LSS.jar");
+        URL url = new URL("https://github.com/TrickMasterJP/L1SS_2018/raw/master/LSS/dist/LSS.jar");
         HttpURLConnection http = (HttpURLConnection) url.openConnection();
         http.setRequestMethod("GET");
         http.connect();
@@ -167,7 +169,8 @@ public class Updater extends JDialog implements ActionListener, WindowListener {
     }
 
     void download_data() throws IOException {
-        URL url = new URL("https://github.com/F-node/L1SS/raw/master/LSS/data/E.zip");
+//        URL url = new URL("https://github.com/F-node/L1SS/raw/master/LSS/data/E.zip");
+        URL url = new URL("https://github.com/TrickMasterJP/L1SS_2018/raw/master/LSS/data/E.zip");
         HttpURLConnection http = (HttpURLConnection) url.openConnection();
         http.setRequestMethod("GET");
         http.connect();

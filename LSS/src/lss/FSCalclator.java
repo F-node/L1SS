@@ -10,8 +10,8 @@ package lss;
  */
 public class FSCalclator {
 
-    static double step = 0.001;//1ƒ~ƒŠ•b‚İ
-    static double calc_time = 1200;//20•ª
+//    static double step = 0.001;//1ƒ~ƒŠ•b‚İ
+//    static double calc_time = 1200;//20•ª
 
     /**
      *

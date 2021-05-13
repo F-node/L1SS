@@ -6,9 +6,9 @@
 
 package lss;
 
+import java.awt.*;
+import java.util.Vector;
 import javax.swing.*; 
-import java.awt.*; 
-import java.util.Vector; 
 /**
  *
  * @author user
@@ -45,8 +45,9 @@ public class WideComboBox extends JComboBox{
     @Override
     public Dimension getSize(){ 
         Dimension dim = super.getSize(); 
-        if(!layingOut) 
+        if(!layingOut) {
             dim.width = Math.max(dim.width, getPreferredSize().width); 
+        } 
         return dim; 
     } 
 }

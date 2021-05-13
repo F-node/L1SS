@@ -21,7 +21,8 @@ import javax.swing.JLabel;
  */
 class LEV implements Common ,ActionListener {
 
-    final int size = 92 - 50;
+    final int size = 100 - 50;      //LV100まで対応
+    //final int size = 94 - 50;     LV94までの場合
     JButton button[][] = new JButton[size][6];
     JLabel label[] = new JLabel[size];
     ImageIcon icons[] = new ImageIcon[5];
@@ -38,7 +39,8 @@ class LEV implements Common ,ActionListener {
 
     int level = 0;
 
-    int w = 18;
+    int w = 19;//18より変更         //ボタン幅18より19へ変更
+//    int w = 17;                   LV94までの場合
     int h = 20;
 
     LEV() {
