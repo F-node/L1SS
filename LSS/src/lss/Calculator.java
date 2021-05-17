@@ -441,19 +441,21 @@ public class Calculator implements Common {
     private final UI ui;
     Morph polymorph = new Morph();
     private double acc = 1.0;
-    // 一段加速(GP GGP ワイン ウイスキー)
+    //1段加速(GP GGP ワイン ウイスキー)
     double acc_1 = 1.3333;
-    // 二段加速(BP イビルブラッド ブラッドラスト 名誉のコイン ダンシングブレイズ フォーカスウェーブ ハリケーン サンドストーム)
+    //2段加速(BP イビルブラッド ブラッドラスト 名誉のコイン ダンシングブレイズ フォーカスウェーブ ハリケーン サンドストーム)
     double acc_2 = 1.3333;
-    // 二段加速(EW 濃縮集中ポーション ムービングアクセレーション:マキシマム)
+    //2段加速(EW 濃縮集中ポーション ムービングアクセレーション:マキシマム)
     double acc_ew = 1.1547;
-    // 二段加速(ダークホース)
+    //2段加速(ダークホース)
     double acc_df = 1.0800;
-    // 三段加速(ドラゴンブラッド 蔵出し秘蔵酒)
+    //3段加速(ドラゴンブラッド 蔵出し秘蔵酒)
     double acc_3 = 1.125;
-    // 四段加速(騎士技術(レイジング ウェポン))
-    double acc_4 = 1.100;
-    // キー入力ディレイ
+    //4段加速(マジックドールの潜在力)
+    double acc_4 = 1.100;                                                       //暫定速度
+    //5段加速(騎士技術(レイジング ウェポン))
+    double acc_5 = 1.100;                                                       //暫定速度
+    //キー入力ディレイ
     double key_delay = 0.1815;
 
     double ce_rate = 0.0500;                                                    //サイクロンの確率5%
@@ -1513,6 +1515,599 @@ public class Calculator implements Common {
                     buff.HIT_SHORT += 4;
                     buff.HIT_LONG += 4;
                     ui.cb_buff[ITEM_MD_OP].setToolTipText("近距離命中+4 遠距離命中+4");
+                    break;
+                default:
+                    break;
+            }
+        }
+
+//マジックドールの潜在力
+        if (ui.cb_buff[ITEM_MD_OP2].isSelected()) {
+            switch (ui.cb_buff_group[ITEM_MD_OP2].getSelectedIndex()) {
+//一般
+                case 0:                                 //近距離クリティカル+1%
+                    buff.CRI_SHORT += 1;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("近距離クリティカル+1%");
+                    break;
+                case 1:                                 //遠距離クリティカル+1%
+                    buff.CRI_LONG += 1;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("遠距離クリティカル+1%");
+                    break;
+                case 2:                                 //魔法クリティカル+1%
+                    buff.CRI_MAGIC += 1;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("魔法クリティカル+1%");
+                    break;
+                case 3:                                 //近距離ダメージ+1
+                    buff.DMG_SHORT += 1;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("近距離ダメージ+1");
+                    break;
+                case 4:                                 //遠距離ダメージ+1
+                    buff.DMG_LONG += 1;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("遠距離ダメージ+1");
+                    break;
+                case 5:                                 //近距離命中+1
+                    buff.HIT_SHORT += 1;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("近距離命中+1");
+                    break;
+                case 6:                                 //遠距離命中+1
+                    buff.HIT_LONG += 1;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("遠距離命中+1");
+                    break;
+                case 7:                                 //ダメージ減少+1
+                    buff.DR += 1;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("ダメージ減少+1");
+                    break;
+                case 8:                                 //AC-1
+                    buff.AC -= 1;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("AC-1");
+                    break;
+                case 9:                                 //MR+3%
+                    buff.MR += 3;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("MR+3%");
+                    break;
+                case 10:                                //最大HP+30
+                    buff.HP += 30;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("最大HP+30");
+                    break;
+                case 11:                                //最大MP+20
+                    buff.MP += 20;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("最大MP+20");
+                    break;
+                case 12:                                //PVP追加ダメージ+1
+                    buff.PVP += 1;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("PVP追加ダメージ+1");
+                    break;
+                case 13:                                //PVPダメージ減少+1
+                    buff.PVP_DR += 1;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("PVPダメージ減少+1");
+                    break;
+                case 14:                                //火の属性抵抗+10
+                    buff.element_resist[FIRE] += 10;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("火の属性抵抗+10");
+                    break;
+                case 15:                                //地の属性抵抗+10
+                    buff.element_resist[EARTH] += 10;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("地の属性抵抗+10");
+                    break;
+                case 16:                                //水の属性抵抗+10
+                    buff.element_resist[WATER] += 10;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("水の属性抵抗+10");
+                    break;
+                case 17:                                //風の属性抵抗+10
+                    buff.element_resist[WIND] += 10;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("風の属性抵抗+10");
+                    break;
+                case 18:                                //所持重量増加+100(未実装)
+                    //未実装
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("所持重量増加+100(未実装)");
+                    break;
+//高級
+                case 19:                                 //近距離クリティカル+3%
+                    buff.CRI_SHORT += 3;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("近距離クリティカル+3%");
+                    break;
+                case 20:                                //遠距離クリティカル+3%
+                    buff.CRI_LONG += 3;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("遠距離クリティカル+3%");
+                    break;
+                case 21:                                //魔法クリティカル+3%
+                    buff.CRI_MAGIC += 3;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("魔法クリティカル+3%");
+                    break;
+                case 22:                                //近距離ダメージ+2
+                    buff.DMG_SHORT += 2;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("近距離ダメージ+2");
+                    break;
+                case 23:                                //遠距離ダメージ+2
+                    buff.DMG_LONG += 2;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("遠距離ダメージ+2");
+                    break;
+                case 24:                                //近距離命中+2
+                    buff.HIT_SHORT += 2;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("近距離命中+2");
+                    break;
+                case 25:                                //遠距離命中+2
+                    buff.HIT_LONG += 2;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("遠距離命中+2");
+                    break;
+                case 26:                                 //ダメージ減少+2
+                    buff.DR += 2;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("ダメージ減少+2");
+                    break;
+                case 27:                                 //AC-2
+                    buff.AC -= 2;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("AC-2");
+                    break;
+                case 28:                                 //MR+6%
+                    buff.MR += 6;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("MR+6%");
+                    break;
+                case 29:                                //最大HP+60
+                    buff.HP += 60;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("最大HP+60");
+                    break;
+                case 30:                                //最大MP+40
+                    buff.MP += 40;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("最大MP+40");
+                    break;
+                case 31:                                //近距離回避(DG)+3
+                    buff.DG += 3;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("近距離回避(DG)+3");
+                    break;
+                case 32:                                //HP絶対回復+30(32秒)(未実装)
+                    //未実装
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("HP絶対回復+30(32秒)(未実装)");
+                    break;
+                case 33:                                //MP絶対回復+10(64秒)(未実装)
+                    //未実装
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("MP絶対回復+10(64秒)(未実装)");
+                    break;
+                case 34:                                //遠距離回避(ER)+3
+                    buff.ER += 3;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("遠距離回避(ER)+3");
+                    break;
+                case 35:                                //PVP追加ダメージ+2
+                    buff.PVP += 2;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("PVP追加ダメージ+2");
+                    break;
+                case 36:                                //PVPダメージ減少+2
+                    buff.PVP_DR += 2;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("PVPダメージ減少+2");
+                    break;
+                case 37:                                //PVP魔法ダメージ減少+2(未実装)
+                    //未実装
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("PVP魔法ダメージ減少+2(未実装)");
+                    break;
+                case 38:                                //技術耐性+3
+                    buff.ailment[STUN] += 3;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("技術耐性+3");
+                    break;
+                case 39:                                //精霊耐性+3
+                    buff.ailment[SPIRIT] += 3;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("精霊耐性+3");
+                    break;
+                case 40:                                //秘技耐性+3
+                    buff.ailment[SECRET] += 3;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("秘技耐性+3");
+                    break;
+                case 41:                                //恐怖耐性+3
+                    buff.ailment[TERROR] += 3;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("恐怖耐性+3");
+                    break;
+                case 42:                                //火の属性抵抗+20
+                    buff.element_resist[FIRE] += 20;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("火の属性抵抗+20");
+                    break;
+                case 43:                                //地の属性抵抗+20
+                    buff.element_resist[EARTH] += 20;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("地の属性抵抗+20");
+                    break;
+                case 44:                                //水の属性抵抗+20
+                    buff.element_resist[WATER] += 20;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("水の属性抵抗+20");
+                    break;
+                case 45:                                //風の属性抵抗+20
+                    buff.element_resist[WIND] += 20;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("風の属性抵抗+20");
+                    break;
+                case 46:                                 //STR+1
+                    buff.ST[STR] += 1;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("STR+1");
+                    break;
+                case 47:                                 //DEX+1
+                    buff.ST[DEX] += 1;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("DEX+1");
+                    break;
+                case 48:                                 //CON+1
+                    buff.ST[CON] += 1;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("CON+1");
+                    break;
+                case 49:                                 //WIS+1
+                    buff.ST[WIS] += 1;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("WIS+1");
+                    break;
+                case 50:                                 //INT+1
+                    buff.ST[INT] += 1;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("INT+1");
+                    break;
+                case 51:                                //所持重量増加+200(未実装)
+                    //未実装
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("所持重量増加+200(未実装)");
+                    break;
+//希少
+                case 52:                                 //近距離クリティカル+5%
+                    buff.CRI_SHORT += 5;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("近距離クリティカル+5%");
+                    break;
+                case 53:                                //遠距離クリティカル+5%
+                    buff.CRI_LONG += 5;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("遠距離クリティカル+5%");
+                    break;
+                case 54:                                //魔法クリティカル+5%
+                    buff.CRI_MAGIC += 5;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("魔法クリティカル+5%");
+                    break;
+                case 55:                                //近距離ダメージ+3
+                    buff.DMG_SHORT += 3;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("近距離ダメージ+3");
+                    break;
+                case 56:                                //遠距離ダメージ+3
+                    buff.DMG_LONG += 3;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("遠距離ダメージ+3");
+                    break;
+                case 57:                                //近距離命中+3
+                    buff.HIT_SHORT += 3;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("近距離命中+3");
+                    break;
+                case 58:                                //遠距離命中+3
+                    buff.HIT_LONG += 3;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("遠距離命中+3");
+                    break;
+                case 59:                                 //SP+3
+                    buff.SP += 3;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("SP+3");
+                    break;
+                case 60:                                 //魔法命中+3
+                    buff.HIT_MAGIC += 3;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("魔法命中+3");
+                    break;
+                case 61:                                 //ダメージ減少+3
+                    buff.DR += 3;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("ダメージ減少+3");
+                    break;
+                case 62:                                 //AC-3
+                    buff.AC -= 3;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("AC-3");
+                    break;
+                case 63:                                 //MR+10%
+                    buff.MR += 10;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("MR+10%");
+                    break;
+                case 64:                                //最大HP+150
+                    buff.HP += 150;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("最大HP+150");
+                    break;
+                case 65:                                //最大MP+100
+                    buff.MP += 100;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("最大MP+100");
+                    break;
+                case 66:                                //近距離回避(DG)+5
+                    buff.DG += 5;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("近距離回避(DG)+5");
+                    break;
+                case 67:                                //HP絶対回復+50(32秒)(未実装)
+                    //未実装
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("HP絶対回復+50(32秒)(未実装)");
+                    break;
+                case 68:                                //MP絶対回復+12(64秒)(未実装)
+                    //未実装
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("MP絶対回復+12(64秒)(未実装)");
+                    break;
+                case 69:                                //遠距離回避(ER)+5
+                    buff.ER += 5;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("遠距離回避(ER)+5");
+                    break;
+                case 70:                                //PVP追加ダメージ+3
+                    buff.PVP += 3;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("PVP追加ダメージ+3");
+                    break;
+                case 71:                                //PVPダメージ減少+3
+                    buff.PVP_DR += 3;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("PVPダメージ減少+3");
+                    break;
+                case 72:                                //PVP魔法ダメージ減少+5(未実装)
+                    //未実装
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("PVP魔法ダメージ減少+5(未実装)");
+                    break;
+                case 73:                                //技術耐性+5
+                    buff.ailment[STUN] += 5;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("技術耐性+5");
+                    break;
+                case 74:                                //精霊耐性+5
+                    buff.ailment[SPIRIT] += 5;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("精霊耐性+5");
+                    break;
+                case 75:                                //秘技耐性+5
+                    buff.ailment[SECRET] += 5;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("秘技耐性+5");
+                    break;
+                case 76:                                //恐怖耐性+5
+                    buff.ailment[TERROR] += 5;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("恐怖耐性+5");
+                    break;
+                case 77:                                //技術命中+3
+                    buff.ailment[HIT_STUN] += 3;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("技術命中+3");
+                    break;
+                case 78:                                //精霊命中+3
+                    buff.ailment[HIT_SPIRIT] += 3;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("精霊命中+3");
+                    break;
+                case 79:                                //秘技命中+3
+                    buff.ailment[HIT_SECRET] += 3;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("秘技命中+3");
+                    break;
+                case 80:                                //恐怖命中+3
+                    buff.ailment[HIT_TERROR] += 3;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("恐怖命中+3");
+                    break;
+                case 81:                                //火の属性抵抗+30
+                    buff.element_resist[FIRE] += 30;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("火の属性抵抗+30");
+                    break;
+                case 82:                                //地の属性抵抗+30
+                    buff.element_resist[EARTH] += 30;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("地の属性抵抗+30");
+                    break;
+                case 83:                                //水の属性抵抗+30
+                    buff.element_resist[WATER] += 30;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("水の属性抵抗+30");
+                    break;
+                case 84:                                //風の属性抵抗+30
+                    buff.element_resist[WIND] += 30;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("風の属性抵抗+30");
+                    break;
+                case 85:                                 //STR+2
+                    buff.ST[STR] += 2;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("STR+2");
+                    break;
+                case 86:                                 //DEX+2
+                    buff.ST[DEX] += 2;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("DEX+2");
+                    break;
+                case 87:                                 //CON+2
+                    buff.ST[CON] += 2;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("CON+2");
+                    break;
+                case 88:                                 //WIS+2
+                    buff.ST[WIS] += 2;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("WIS+2");
+                    break;
+                case 89:                                 //INT+2
+                    buff.ST[INT] += 2;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("INT+2");
+                    break;
+                case 90:                                //所持重量増加+300(未実装)
+                    //未実装
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("所持重量増加+300(未実装)");
+                    break;
+                case 91:                                //1段加速(未実装)
+                    //未実装
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("1段加速(未実装)");
+                    break;
+//英雄
+                case 92:                                //近距離ダメージ+5
+                    buff.DMG_SHORT += 5;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("近距離ダメージ+5");
+                    break;
+                case 93:                                //遠距離ダメージ+5
+                    buff.DMG_LONG += 5;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("遠距離ダメージ+5");
+                    break;
+                case 94:                                //近距離命中+5
+                    buff.HIT_SHORT += 5;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("近距離命中+5");
+                    break;
+                case 95:                                //遠距離命中+5
+                    buff.HIT_LONG += 5;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("遠距離命中+5");
+                    break;
+                case 96:                                 //SP+5
+                    buff.SP += 5;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("SP+5");
+                    break;
+                case 97:                                 //魔法命中+5
+                    buff.HIT_MAGIC += 5;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("魔法命中+5");
+                    break;
+                case 98:                                 //ダメージ減少+5
+                    buff.DR += 5;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("ダメージ減少+5");
+                    break;
+                case 99:                                 //AC-5
+                    buff.AC -= 5;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("AC-5");
+                    break;
+                case 100:                                 //MR+15%
+                    buff.MR += 15;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("MR+15%");
+                    break;
+                case 101:                                //最大HP+300
+                    buff.HP += 300;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("最大HP+300");
+                    break;
+                case 102:                                //最大MP+200
+                    buff.MP += 200;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("最大MP+200");
+                    break;
+                case 103:                                //近距離回避(DG)+10
+                    buff.DG += 10;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("近距離回避(DG)+10");
+                    break;
+                case 104:                                //HP絶対回復+150(32秒)(未実装)
+                    //未実装
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("HP絶対回復+150(32秒)(未実装)");
+                    break;
+                case 105:                                //MP絶対回復+30(64秒)(未実装)
+                    //未実装
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("MP絶対回復+30(64秒)(未実装)");
+                    break;
+                case 106:                                //遠距離回避(ER)+12
+                    buff.ER += 12;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("遠距離回避(ER)+12");
+                    break;
+                case 107:                                //PVP追加ダメージ+7
+                    buff.PVP += 7;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("PVP追加ダメージ+7");
+                    break;
+                case 108:                                //PVPダメージ減少+7
+                    buff.PVP_DR += 7;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("PVPダメージ減少+7");
+                    break;
+                case 109:                                //PVP魔法ダメージ減少+10(未実装)
+                    //未実装
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("PVP魔法ダメージ減少+10(未実装)");
+                    break;
+                case 110:                                //PVPダメージ減少無視+10(未実装)
+                    //未実装
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("PVPダメージ減少無視+10(未実装)");
+                    break;
+                case 111:                                //技術耐性+8
+                    buff.ailment[STUN] += 8;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("技術耐性+8");
+                    break;
+                case 112:                                //精霊耐性+8
+                    buff.ailment[SPIRIT] += 8;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("精霊耐性+8");
+                    break;
+                case 113:                                //秘技耐性+8
+                    buff.ailment[SECRET] += 8;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("秘技耐性+8");
+                    break;
+                case 114:                                //恐怖耐性+8
+                    buff.ailment[TERROR] += 8;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("恐怖耐性+8");
+                    break;
+                case 115:                                //全ての耐性+3
+                    buff.ailment[STUN] += 3;
+                    buff.ailment[SPIRIT] += 3;
+                    buff.ailment[SECRET] += 3;
+                    buff.ailment[TERROR] += 3;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("全ての耐性+3");
+                    break;
+                case 116:                                //技術命中+5
+                    buff.ailment[HIT_STUN] += 5;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("技術命中+5");
+                    break;
+                case 117:                                //精霊命中+5
+                    buff.ailment[HIT_SPIRIT] += 5;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("精霊命中+5");
+                    break;
+                case 118:                                //秘技命中+5
+                    buff.ailment[HIT_SECRET] += 5;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("秘技命中+5");
+                    break;
+                case 119:                                //恐怖命中+5
+                    buff.ailment[HIT_TERROR] += 5;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("恐怖命中+5");
+                    break;
+                case 120:                                //すべてのスキル命中+3
+                    buff.ailment[HIT_STUN] += 3;
+                    buff.ailment[HIT_SPIRIT] += 3;
+                    buff.ailment[HIT_SECRET] += 3;
+                    buff.ailment[HIT_TERROR] += 3;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("すべてのスキル命中+3");
+                    break;
+                case 121:                                //すべての属性抵抗+30
+                    buff.element_resist[FIRE] += 30;
+                    buff.element_resist[EARTH] += 30;
+                    buff.element_resist[WATER] += 30;
+                    buff.element_resist[WIND] += 30;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("すべての属性抵抗+30");
+                    break;
+                case 122:                                 //STR+3
+                    buff.ST[STR] += 3;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("STR+3");
+                    break;
+                case 123:                                 //DEX+3
+                    buff.ST[DEX] += 3;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("DEX+3");
+                    break;
+                case 124:                                 //CON+3
+                    buff.ST[CON] += 3;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("CON+3");
+                    break;
+                case 125:                                 //WIS+3
+                    buff.ST[WIS] += 3;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("WIS+3");
+                    break;
+                case 126:                                 //INT+3
+                    buff.ST[INT] += 3;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("INT+3");
+                    break;
+                case 127:                                 //すべてのステータス+1(CHA以外)
+                    buff.ST[STR] += 1;
+                    buff.ST[DEX] += 1;
+                    buff.ST[CON] += 1;
+                    buff.ST[WIS] += 1;
+                    buff.ST[INT] += 1;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("すべてのステータス+1(CHA以外)");
+                    break;
+                case 128:                                 //MP吸収(少量)
+                    //未実装
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("MP吸収(少量)");
+                    break;
+                case 129:                                //所持重量増加+500(未実装)
+                    //未実装
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("所持重量増加+500(未実装)");
+                    break;
+//伝説
+                case 130:                                //PVPダメージ減少無視+40(未実装)
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("PVPダメージ減少無視+40(未実装)");
+                    break;
+                case 131:                                //イミューン効果減少-30%(未実装)
+                    //未実装
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("イミューン効果減少-30%(未実装)");
+                    break;
+                case 132:                                 //すべてのステータス+3(CHA以外)
+                    buff.ST[STR] += 3;
+                    buff.ST[DEX] += 3;
+                    buff.ST[CON] += 3;
+                    buff.ST[WIS] += 3;
+                    buff.ST[INT] += 3;
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("すべてのステータス+3(CHA以外)");
+                    break;
+                case 133:                                //HP吸収(未実装)
+                    //未実装
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("HP吸収(未実装)");
+                    break;
+                case 134:                                //MP吸収(未実装)
+                    //未実装
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("MP吸収(未実装)");
+                    break;
+                case 135:                                //ソウル オブ フレイム(マジックドール)発動(未実装)
+                    //未実装
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("ソウル オブ フレイム(マジックドール)発動(未実装)");
+                    break;
+                case 136:                                //ジャッジメント(マジックドール)発動(未実装)
+                    //未実装
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("ジャッジメント(マジックドール)発動(未実装)");
+                    break;
+                case 137:                                //ディケイポーション(マジックドール)発動(未実装)
+                    //未実装
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("ディケイポーション(マジックドール)発動(未実装)");
+                    break;
+                case 138:                                //4段階加速(未実装)
+                    //未実装
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("4段階加速(未実装)");
+                    break;
+                case 139:                                //1段階/3段階加速(未実装)
+                    //未実装
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("1段階/3段階加速(未実装)");
+                    break;
+                case 140:                                //所持重量増加+500(未実装)
+                    //未実装
+                    ui.cb_buff[ITEM_MD_OP2].setToolTipText("所持重量増加+500(未実装)");
                     break;
                 default:
                     break;
@@ -5569,9 +6164,14 @@ public class Calculator implements Common {
             acc *= acc_3;
         }
 
-        ui.cb_buff[ACC4].setToolTipText("x1.1000:騎士技術(レイジング ウェポン)");
+        ui.cb_buff[ACC4].setToolTipText("x1.1000:マジックドールの潜在力");
         if (ui.cb_buff[ACC4].isSelected()) {
             acc *= acc_4;
+        }
+
+        ui.cb_buff[ACC5].setToolTipText("x1.1000:騎士技術(レイジング ウェポン)");
+        if (ui.cb_buff[ACC5].isSelected()) {
+            acc *= acc_5;
         }
 
 //2019/11/20Update HW/EW/BW/SFの仕様変更
