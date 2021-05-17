@@ -220,8 +220,8 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
     //ファイナルバーンで計104個分(0から103)
 //    JCheckBox[] cb_buff = new JCheckBox[104];
 //    JComboBox[] cb_buff_group = new JComboBox[104];
-    JCheckBox[] cb_buff = new JCheckBox[313];
-    JComboBox[] cb_buff_group = new JComboBox[313];
+    JCheckBox[] cb_buff = new JCheckBox[315];
+    JComboBox[] cb_buff_group = new JComboBox[315];
 
     //パネル5
     JComboBox cb_npc_level;
@@ -1195,11 +1195,17 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[ACC3].addActionListener(this);
         panels[2].add(cb_buff[ACC3]);
 
-        //3段加速
+        //4段加速
         cb_buff[ACC4] = new JCheckBox("4段加速");
         cb_buff[ACC4].setBounds(200 * row, 20 * col++, 100, 20);
         cb_buff[ACC4].addActionListener(this);
         panels[2].add(cb_buff[ACC4]);
+
+        //5段加速
+        cb_buff[ACC5] = new JCheckBox("5段加速");
+        cb_buff[ACC5].setBounds(200 * row, 20 * col++, 100, 20);
+        cb_buff[ACC5].addActionListener(this);
+        panels[2].add(cb_buff[ACC5]);
 
         //STR
         String list_str[] = {"+3", "+5", "+6", "+7"};
@@ -2833,6 +2839,51 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[ITEM_MD_OP].setBounds(200 * row, 20 * col++, 100, 20);
         cb_buff[ITEM_MD_OP].addActionListener(this);
         panels[3].add(cb_buff[ITEM_MD_OP]);
+
+        String list_md_op2[] = {
+//一般
+            "近距離クリティカル+1%", "遠距離クリティカル+1%", "魔法クリティカル+1%", "近距離ダメージ+1", "遠距離ダメージ+1",
+            "近距離命中+1", "遠距離命中+1", "ダメージ減少+1", "AC-1", "MR+3%",
+            "最大HP+30", "最大MP+20", "PVP追加ダメージ+1", "PVPダメージ減少+1", "火の属性抵抗+10",
+            "地の属性抵抗+10", "水の属性抵抗+10", "風の属性抵抗+10", "所持重量増加+100(未実装)",
+//高級
+            "近距離クリティカル+3%", "遠距離クリティカル+3%", "魔法クリティカル+3%","近距離ダメージ+2", "遠距離ダメージ+2",
+            "近距離命中+2", "遠距離命中+2", "ダメージ減少+2", "AC-2", "MR+6%",
+            "最大HP+60", "最大MP+40", "近距離回避(DG)+3", "HP絶対回復+30(32秒)(未実装)", "MP絶対回復+10(64秒)(未実装)",
+            "遠距離回避(ER)+3", "PVP追加ダメージ+2", "PVPダメージ減少+2", "PVP魔法ダメージ減少+2%(未実装)", "技術耐性+3",
+            "精霊耐性+3", "秘技耐性+3", "恐怖耐性+3", "火の属性抵抗+20", "地の属性抵抗+20",
+            "水の属性抵抗+20", "風の属性抵抗+20", "STR+1", "DEX+1", "CON+1",
+            "WIS+1", "INT+1", "所持重量増加+200(未実装)",
+//希少
+            "近距離クリティカル+5%", "遠距離クリティカル+5%", "魔法クリティカル+5%","近距離ダメージ+3", "遠距離ダメージ+3",
+            "近距離命中+3", "遠距離命中+3", "SP+3", "魔法命中+3", "ダメージ減少+3",
+            "AC-3","MR+10%", "最大HP+150", "最大MP+100", "近距離回避(DG)+5",
+            "HP絶対回復+50(32秒)(未実装)", "MP絶対回復+12(64秒)(未実装)", "遠距離回避(ER)+5","PVP追加ダメージ+3", "PVPダメージ減少+3",
+            "PVP魔法ダメージ減少+5%(未実装)", "技術耐性+5", "精霊耐性+5", "秘技耐性+5", "恐怖耐性+5",
+            "技術命中+3", "精霊命中+3", "秘技命中+3", "恐怖命中+3", "火の属性抵抗+30",
+            "地の属性抵抗+30", "水の属性抵抗+30", "風の属性抵抗+30", "STR+2", "DEX+2",
+            "CON+2", "WIS+2", "INT+2", "所持重量増加+300(未実装)", "1段加速",
+//英雄
+            "近距離ダメージ+5", "遠距離ダメージ+5", "近距離命中+5", "遠距離命中+5", "SP+5",
+            "魔法命中+5", "ダメージ減少+5", "AC-5", "MR+15%", "最大HP+300",
+            "最大MP+200", "近距離回避(DG)+10", "HP絶対回復+150(32秒)", "MP絶対回復+30(64秒)", "遠距離回避(ER)+12",
+            "PVP追加ダメージ+7", "PVPダメージ減少+7", "PVP魔法ダメージ減少+10%(未実装)", "PVPダメージ減少無視+10(未実装)", "技術耐性+8",
+            "精霊耐性+8", "秘技耐性+8", "恐怖耐性+8", "全ての耐性+3", "技術命中+5",
+            "精霊命中+5", "秘技命中+5", "恐怖命中+5", "すべてのスキル命中+3", "すべての属性抵抗+30",
+            "STR+3", "DEX+3", "CON+3", "WIS+3", "INT+3",
+            "すべてのステータス+1(CHA以外)", "MP吸収(少量)(未実装)", "所持重量増加+500(未実装)",
+//伝説
+            "PVPダメージ減少無視+40(未実装)", "イミューン効果減少-30%(未実装)", "すべてのステータス+3(CHA以外)", "HP吸収(未実装)", "MP吸収(未実装)",
+            "ソウル オブ フレイム(マジックドール)発動(未実装)", "ジャッジメント(マジックドール)発動(未実装)", "ディケイポーション(マジックドール)発動(未実装)", "4段階加速(未実装)", "1段階/3段階加速(未実装)", "所持重量増加+500(未実装)"};
+
+        cb_buff_group[ITEM_MD_OP2] = new WideComboBox(list_md_op2);
+        cb_buff_group[ITEM_MD_OP2].setBounds(200 * row + 100, 20 * col, 80, 20);
+        cb_buff_group[ITEM_MD_OP2].addActionListener(this);
+        panels[3].add(cb_buff_group[ITEM_MD_OP2]);
+        cb_buff[ITEM_MD_OP2] = new JCheckBox("MDの潜在力");
+        cb_buff[ITEM_MD_OP2].setBounds(200 * row, 20 * col++, 100, 20);
+        cb_buff[ITEM_MD_OP2].addActionListener(this);
+        panels[3].add(cb_buff[ITEM_MD_OP2]);
 
         String list_koma[] = {"欠片3個", "欠片5個"};
         cb_buff_group[KOMA] = new WideComboBox(list_koma);

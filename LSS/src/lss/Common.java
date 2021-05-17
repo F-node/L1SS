@@ -96,12 +96,13 @@ public interface Common {
     final int RING5 = 18;
     final int RING6 = 19;
 
-//エンチャント(0から312までの合計313個分)　UI.javaの223行目も合わせて変更必須
+//エンチャント(0から314までの合計315個分)　UI.javaの223行目も合わせて変更必須
 //基本エンチャント
     final int ACC1 = 0;             //1段加速
     final int ACC2 = 1;             //2段加速
     final int ACC3 = 2;             //3段加速
-    final int ACC4 = 312;           //4段加速
+    final int ACC4 = 312;           //4段加速               //マジックドールの潜在力
+    final int ACC5 = 313;           //5段加速               //騎士技術(レイジング ウェポン)
     final int B_STR = 3;            //STR
     final int B_DEX = 4;            //DEX
     final int B_AC = 5;             //AC
@@ -119,6 +120,7 @@ public interface Common {
     final int ITEM_SEA = 53;        //深海の力
     final int ITEM_MD = 56;         //マジックドール
     final int ITEM_MD_OP = 64;      //パック/パオ OP
+    final int ITEM_MD_OP2 = 314;    //マジックドールの潜在力
     final int KOMA = 58;            //コマのエンチャ
     final int ITEM_MAGAN = 98;      //魔眼
     final int CLAY = 77;            //クレイ
