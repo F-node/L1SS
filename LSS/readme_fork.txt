@@ -1,6 +1,19 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2021/09/06
+Update 4.4.2
+LSS/src/lss/Calculator.java
+LSS/data/E.zip
+訂正
+	ランサーの装備不可を装備可能へ(暫定)
+	幸運のスピアー
+
+	ランサーの装備可能を装備不可へ
+	反逆のシールド
+
+	LSS上で剣士のMR10少なくなる
+
 2021/09/05
 Update 4.4.1
 LSS/data/E.zip
