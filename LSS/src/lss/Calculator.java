@@ -426,6 +426,7 @@ public class Calculator implements Common {
         _C[HP][CON][F] = 16;
         _C[HP][CON][L] = 16;
 
+        //äeêEÇÃèâä˙MRèCê≥óp
         _C[MR][WIS][P] = 10;
         _C[MR][WIS][K] = 0;
         _C[MR][WIS][E] = 25;
@@ -434,7 +435,7 @@ public class Calculator implements Common {
         _C[MR][WIS][R] = 18;
         _C[MR][WIS][I] = 20;
         _C[MR][WIS][S] = 0;
-        _C[MR][WIS][F] = 0;
+        _C[MR][WIS][F] = 10;
         _C[MR][WIS][L] = 0;
     }
 
