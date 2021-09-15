@@ -150,7 +150,7 @@ public interface Common {
     //パッシブスキル
     final int P_AUA = 59;           //LV80  AUrA                          オーラ
     //[UP待ち]
-    final int P_CCA = 142;          //LV85  Call Clan Advance             コール クラン:アドバンス
+    final int P_CCA = 142;          //LV85  Call Clan Advance             コールクラン アドバンス
 
 //騎士の技術        12+3+3=18             合計18種類
     //アクティブスキル
@@ -227,7 +227,7 @@ public interface Common {
     final int E_BSL = 158;          //LV45  Bloody SouL                   ブラッディ ソウル
     //[UP待ち]    合計5種類
     final int E_ESE = 148;          //LV85  Elven StrikE                  [UP待ち]エルブンストライク
-    final int E_REN = 149;          //LV85  REvalatioN                    [UP待ち]リバレーション
+    final int E_LIN = 149;          //LV85  LIberatioN                    [UP待ち]リベレーション
     final int E_BST = 309;          //LV90  Burning ShoT                  [UP待ち]バーニングショット
     final int E_SBA = 310;          //LV85  Seoul Barrier Armor           [UP待ち]ソウルバリア:アーマー
     final int E_SGS = 311;          //LV85  Striker Gail:Shot             [UP待ち]ストライカーゲイル:ショット
@@ -392,8 +392,8 @@ public interface Common {
     final int R_DFR = 189;          //LV40  Destroy:FeaR                  デストロイ:フィアー
     final int R_DHR = 185;          //LV60  Destroy:HorroR                デストロイ:ホラー
     //[UP待ち]         合計2種類
-    final int R_SNE = 181;          //LV80  Solid NotE                    [UP待ち]ソリッドノート
-    final int R_RAE = 182;          //LV80  RAmpagE                       [UP待ち]ランペイジ
+    final int R_SNT = 181;          //LV80  Solid NoT                     [UP待ち]ソリッドノット
+    final int R_RAE = 182;          //LV80  RAmpagE                       [UP待ち]ランページ
 
 //イリュージョニストの幻術魔法    22+3+1=26　合計26種類
     //アクティブスキル  合計22種類
@@ -429,7 +429,7 @@ public interface Common {
     final int I_IGM = 44;           //LV45  Illusion[GoleM]               イリュージョン[ゴーレム]
     final int I_DHE = 196;          //LV80  Dark HorsE                    ダークホース(基本エンチャントの2段加速で実装)
     //[UP待ち]         合計1種類
-    final int I_BBR = 194;          //LV85  Bone BreaK:Raster             ボーンブレイク:ラスタ
+    final int I_BBL = 194;          //LV85  Bone Break:Last               ボーンブレイク:ラスト
 
 //ウォリアーの技術      7+8+1=16　合計16種類
     //アクティブスキル  合計7種類
@@ -450,7 +450,7 @@ public interface Common {
     final int S_TBZ = 71;           //LV80  Titan BlitZ                   タイタンブリッツ
     final int S_DAE = 215;          //LV85  Desperado:AbsolutE            デスペラード:アブソリュート
     //[UP待ち]          合計1種類
-    final int S_BEK = 209;          //LV85  BErserK                       [UP待ち]バーサーク
+    final int S_BER = 209;          //LV85  BErserkeR                     [UP待ち]バーサーカー
 
 //フェンサーの技術    合計19種類
     //  アクティブスキル
@@ -479,15 +479,15 @@ public interface Common {
     //  アクティブスキル
     final int L_PDR = 140;          //LV85  Pressure:Death Recall         プレッシャー:デスリコール
     final int L_REY = 130;          //LV75  REcoverY                      リカバリー
-    final int L_KUU = 132;          //LV80  KUruorU                       クルオル
+    final int L_KRL = 132;          //LV80  KRueL                         クルーエル
     final int L_PRE = 131;          //LV75  PRessurE                      プレッシャー
     final int L_VAD = 129;          //LV70  VAnguarD                      ヴァンガード
     final int L_FWE = 128;          //LV60  Force WavE                    フォースウェーブ
     final int L_ALE = 127;          //LV50  ALternatE                     オルタネート
     //  パッシブスキル
-    final int L_KCN = 139;          //LV80  Kuruoru:CombinatioN           クルオル:コンビクション
+    final int L_KCN = 139;          //LV80  Kruel:CombinatioN             クルーエル:コンビクション
     final int L_IRE = 138;          //LV80  Increase RangE                インクリーズレンジ
-    final int L_MAM = 137;          //LV75  MAelstroM                     マエルストローム
+    final int L_MAM = 137;          //LV75  MAelstroM                     メイルストロム
     final int L_DBE = 136;          //LV75  Dodge BrakE                   ドッジブレーキ
     final int L_VEE = 134;          //LV70  VEngeancE                     ベンジェンス
     final int L_TAE = 135;          //LV70  Tactical AdvancE              タクティカルアドバンス

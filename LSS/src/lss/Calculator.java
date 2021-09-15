@@ -2652,11 +2652,11 @@ public class Calculator implements Common {
         //スキル効果未実装
         }
 
-        //リバーレベーション
-        ui.cb_buff[E_REN].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
+        //リベレーション
+        ui.cb_buff[E_LIN].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
                                          + "<br>"+ "状態異常スキルの時間を減少させる"
                                          + "<br>"+ "[習得レベル:85][持続時間:320秒][対象:術者][触媒:精霊の玉(4)]"+"</html>");
-        if (ui.cb_buff[E_REN].isSelected()) {
+        if (ui.cb_buff[E_LIN].isSelected()) {
         //スキル効果未実装
         }
 
@@ -3355,16 +3355,16 @@ public class Calculator implements Common {
         //スキル効果未実装
         }
 
-        //ソリッドノート
-        ui.cb_buff[R_SNE].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+        //ソリッドノット
+        ui.cb_buff[R_SNT].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
                                          + "<br>"+ "Passive"
                                          + "<br>"+ "着用した武器が損傷しなくなる"
                                          + "<br>"+ "[習得レベル:80][持続時間:常時][対象:術者]"+"</html>");
-        if (ui.cb_buff[R_SNE].isSelected()) {
+        if (ui.cb_buff[R_SNT].isSelected()) {
         //スキル効果未実装
         }
 
-        //ランペイジ
+        //ランページ
         ui.cb_buff[R_RAE].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
                                          + "<br>"+ "Passive"
                                          + "<br>"+ "スタン・ホールド状態のターゲットに、一定確率で追加ダメージを与える"
@@ -3565,12 +3565,12 @@ public class Calculator implements Common {
         //スキル効果未実装
         }
 
-        //ボーンブレイク:ラスタ
-        ui.cb_buff[I_BBR].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+        //ボーンブレイク:ラスト
+        ui.cb_buff[I_BBL].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
                                          + "<br>"+ "Passive"
                                          + "<br>"+ "ボーンブレイクのスタン持続時間+1秒"
                                          + "<br>"+ "[習得レベル:85]");
-        if (ui.cb_buff[I_BBR].isSelected()) {
+        if (ui.cb_buff[I_BBL].isSelected()) {
         //スキル効果未実装
         }
 
@@ -3808,11 +3808,11 @@ public class Calculator implements Common {
         //スキル効果未実装
         }
 
-        //[UP待ち]バーサク
-        ui.cb_buff[S_BEK].setToolTipText("<html>"+ "[消費MP:--][消費HP:100]"
+        //[UP待ち]バーサーカー
+        ui.cb_buff[S_BER].setToolTipText("<html>"+ "[消費MP:--][消費HP:100]"
                                          + "<br>"+ "近距離ダメージ+20 全スキル耐性+20"
                                          + "<br>"+ "[習得レベル:85][持続時間:16秒][対象:術者][触媒:結晶体(100)]"+"</html>");
-        if (ui.cb_buff[S_BEK].isSelected()) {
+        if (ui.cb_buff[S_BER].isSelected()) {
         //スキル効果未実装
         }
 
@@ -4123,13 +4123,13 @@ public class Calculator implements Common {
         //スキル効果未実装
         }
 
-        //クルオル
-        ui.cb_buff[L_KUU].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
+        //クルーエル
+        ui.cb_buff[L_KRL].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
                                          + "<br>"+ "[近距離フォーム]3セル内の対象を、目の前に引き寄せてスタン状態にする"
                                          + "<br>"+ "[遠距離フォーム]3セル内の対象を、自身から引き離してスタン状態にする"
                                          + "<br>"+ "NPC相手だと移動させる効果が無くスタンのみ発動"
                                          + "<br>"+ "[習得レベル:80][持続時間:3秒以下][対象:PC/NPC][触媒:結晶体(100)]"+"</html>");
-        if (ui.cb_buff[L_KUU].isSelected()) {
+        if (ui.cb_buff[L_KRL].isSelected()) {
         //スキル効果未実装
         }
 
@@ -4171,7 +4171,7 @@ public class Calculator implements Common {
         //スキル効果未実装
         }
 
-        //クルオル:コンビクション
+        //クルーエル:コンビクション
         ui.cb_buff[L_KCN].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
                                          + "<br>"+ "クルオルの射程を2セル伸ばし、スタン時間を増加する"
                                          + "<br>"+ "[習得レベル:80][持続時間:常時][対象:術者]"+"</html>");
@@ -4187,7 +4187,7 @@ public class Calculator implements Common {
         //スキル効果未実装
         }
 
-        //マエルストローム
+        //メイルストロム
         ui.cb_buff[L_MAM].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
                                          + "<br>"+ "伝説級を除く[スタン][ホールド][帰還不可能]の効果を受けた時に、一定確率で反射して相手に返す"
                                          + "<br>"+ "[習得レベル:75][持続時間:常時][対象:術者][触媒:結晶体(15)]"+"</html>");
@@ -6295,7 +6295,7 @@ public class Calculator implements Common {
             }
         }
 
-        //コールクラン:アドバンス
+        //コールクラン アドバンス
         ui.cb_buff[P_CCA].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
                                          + "<br>"+ "8セル内のPTを組んだ血盟員1人を術者の周囲に召喚する"
                                          + "<br>"+ "対象が状態異常でも召喚可能　壁越し召喚は不可能"
