@@ -1,6 +1,14 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2021/09/28
+Update 4.4.7
+LSS/src/lss/Common.java
+LSS/src/lss/UI.java
+訂正
+	各スキルと順序と変数
+	各パネルの見直し
+
 2021/09/15
 Update 4.4.6
 LSS/data/E.zip
