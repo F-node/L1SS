@@ -147,26 +147,25 @@ public interface Common {
     final int P_GRE = 87;           //LV80  GRacE                         グレース
     final int P_EME = 143;          //LV80  EMpirE                        エンパイア
     final int P_PRE = 110;          //LV85  PRimE                         プライム
+    final int P_CCA = 142;          //LV85  Call Clan Advance             コールクラン アドバンス
     //パッシブスキル
     final int P_AUA = 59;           //LV80  AUrA                          オーラ
-    //[UP待ち]
-    final int P_CCA = 142;          //LV85  Call Clan Advance             コールクラン アドバンス
 
 //騎士の技術        12+3+3=18             合計18種類
     //アクティブスキル
     final int K_SSN = 147;          //LV60  Shock StaN                    ショックスタン
     final int K_RAR = 34;           //LV50  Reduction ArmoR               リダクションアーマー
     final int K_BOK = 65;           //LV65  BOunce attacK                 バウンスアタック
-    final int K_SCE = 35;           //LV55  Solid CarriagE                ソリッドキャリッジ
+    final int K_BLK = 89;           //LV75  BLow attacK                   ブロー アタック
     final int K_CBR = 36;           //LV80  Counter BarrieR               カウンターバリア
     final int K_ABE = 146;          //LV85  Absolute BladE                アブソルート ブレイド
-    final int K_PRE = 88;           //LV60  PRidE                         プライド
-    final int K_BLK = 89;           //LV75  BLow attacK                   ブロー アタック
     final int K_FSN = 145;          //LV85  Force StaN                    フォース スタン
     //パッシブスキル
     final int K_CBV = 73;           //LV85  Counter Barrier:Veteran       カウンター バリア:ベテラン
     final int K_RAV = 112;          //LV80  Reduction Armor:Veteran       リダクション アーマー:ベテラン
     final int K_RFE = 111;          //LV80  Raging ForcE                  レイジング フォース
+    final int K_SCE = 35;           //LV55  Solid CarriagE                ソリッドキャリッジ
+    final int K_PRE = 88;           //LV60  PRidE                         プライド
     //[UP待ち]
     final int K_SAK = 306;          //LV85  Shock AttacK                  ショックアタック
     final int K_RWN = 307;          //LV88  Raging WeapoN                 レイジングウェポン
@@ -220,14 +219,14 @@ public interface Common {
     final int E_AFE = 23;           //LV75  Additional FirE               アディショナル ファイヤー
     final int E_HUE = 169;          //LV75  HUrricanE                     ハリケーン(基本エンチャントの2段加速で実装)
     final int E_INO = 86;           //LV80  INfernO                       インフェルノ
-    final int E_MSD = 150;          //LV85  Magic ShielD                  マーブル(リニューアル後 マジック シールド)
+    final int E_MSD = 150;          //LV85  Magic ShielD                  マジック シールド
+    final int E_LIN = 149;          //LV85  LIberatioN                    リベレーション
+    final int E_ESE = 148;          //LV85  Elven StrikE                  エルブンストライク
     //パッシブ    合計3種類
     final int E_RET = 19;           //LV30  Resist ElemenT                レジスト エレメント
     final int E_GEH = 113;          //LV85  Glory EartH                   グローリーアース
     final int E_BSL = 158;          //LV45  Bloody SouL                   ブラッディ ソウル
     //[UP待ち]    合計5種類
-    final int E_ESE = 148;          //LV85  Elven StrikE                  [UP待ち]エルブンストライク
-    final int E_LIN = 149;          //LV85  LIberatioN                    [UP待ち]リベレーション
     final int E_BST = 309;          //LV90  Burning ShoT                  [UP待ち]バーニングショット
     final int E_SBA = 310;          //LV85  Seoul Barrier Armor           [UP待ち]ソウルバリア:アーマー
     final int E_SGS = 311;          //LV85  Striker Gail:Shot             [UP待ち]ストライカーゲイル:ショット
