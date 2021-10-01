@@ -1617,18 +1617,24 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[P_PRE].addActionListener(this);
         panels[3].add(cb_buff[P_PRE]);
 
+        //*コールクラン アドバンス
+        cb_buff[P_CCA] = new JCheckBox("*コールクラン アドバンス");
+        cb_buff[P_CCA].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[P_CCA].addActionListener(this);
+        cb_buff[P_CCA].setEnabled(false);
+        panels[3].add(cb_buff[P_CCA]);
+
+        col++;
+
+        lab_tmp = new JLabel("パッシブスキル");
+        lab_tmp.setBounds(200 * row, 20 * col++, 200, 20);
+        panels[3].add(lab_tmp);
+
         //オーラ
         cb_buff[P_AUA] = new JCheckBox("オーラ");
         cb_buff[P_AUA].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[P_AUA].addActionListener(this);
         panels[3].add(cb_buff[P_AUA]);
-
-        //*[UP待]コールクラン アドバンス
-        cb_buff[P_CCA] = new JCheckBox("*[UP待]コールクラン アドバンス");
-        cb_buff[P_CCA].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[P_CCA].addActionListener(this);
-        cb_buff[P_CCA].setEnabled(false);
-        panels[3].add(cb_buff[P_CCA]);
 
         col = 0;
         row = 1;
@@ -1656,11 +1662,11 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[K_BOK].addActionListener(this);
         panels[3].add(cb_buff[K_BOK]);
 
-        //ソリッドキャリッジ
-        cb_buff[K_SCE] = new JCheckBox("ソリッドキャリッジ");
-        cb_buff[K_SCE].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[K_SCE].addActionListener(this);
-        panels[3].add(cb_buff[K_SCE]);
+        //ブロー アタック
+        cb_buff[K_BLK] = new JCheckBox("ブロー アタック");
+        cb_buff[K_BLK].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[K_BLK].addActionListener(this);
+        panels[3].add(cb_buff[K_BLK]);
 
         //*カウンターバリア
         cb_buff[K_CBR] = new JCheckBox("*カウンターバリア");
@@ -1676,24 +1682,18 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[K_ABE].setEnabled(false);
         panels[3].add(cb_buff[K_ABE]);
 
-        //プライド
-        cb_buff[K_PRE] = new JCheckBox("プライド");
-        cb_buff[K_PRE].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[K_PRE].addActionListener(this);
-        panels[3].add(cb_buff[K_PRE]);
-
-        //ブロー アタック
-        cb_buff[K_BLK] = new JCheckBox("ブロー アタック");
-        cb_buff[K_BLK].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[K_BLK].addActionListener(this);
-        panels[3].add(cb_buff[K_BLK]);
-
         //*フォース スタン
         cb_buff[K_FSN] = new JCheckBox("*フォース スタン");
         cb_buff[K_FSN].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[K_FSN].addActionListener(this);
         cb_buff[K_FSN].setEnabled(false);
         panels[3].add(cb_buff[K_FSN]);
+
+        col++;
+
+        lab_tmp = new JLabel("パッシブスキル");
+        lab_tmp.setBounds(200 * row, 20 * col++, 200, 20);
+        panels[3].add(lab_tmp);
 
         //*カウンター バリア:ベテラン
         cb_buff[K_CBV] = new JCheckBox("*カウンター バリア:ベテラン");
@@ -1713,6 +1713,20 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[K_RFE].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[K_RFE].addActionListener(this);
         panels[3].add(cb_buff[K_RFE]);
+
+        //ソリッドキャリッジ
+        cb_buff[K_SCE] = new JCheckBox("ソリッドキャリッジ");
+        cb_buff[K_SCE].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[K_SCE].addActionListener(this);
+        panels[3].add(cb_buff[K_SCE]);
+
+        //プライド
+        cb_buff[K_PRE] = new JCheckBox("プライド");
+        cb_buff[K_PRE].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[K_PRE].addActionListener(this);
+        panels[3].add(cb_buff[K_PRE]);
+
+        col++;
 
         //*ショック アタック
         cb_buff[K_SAK] = new JCheckBox("*[UP待]ショック アタック");
@@ -1841,6 +1855,33 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[E_SBR].setEnabled(false);
         panels[3].add(cb_buff[E_SBR]);
 
+        //マジックシールド
+        cb_buff[E_MSD] = new JCheckBox("*マジックシールド");
+        cb_buff[E_MSD].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[E_MSD].addActionListener(this);
+        cb_buff[E_MSD].setEnabled(false);
+        panels[3].add(cb_buff[E_MSD]);
+
+        //リベレーション
+        cb_buff[E_LIN] = new JCheckBox("*リベレーション");
+        cb_buff[E_LIN].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[E_LIN].addActionListener(this);
+        cb_buff[E_LIN].setEnabled(false);
+        panels[3].add(cb_buff[E_LIN]);
+
+        //エルヴンストライク
+        cb_buff[E_ESE] = new JCheckBox("*エルヴンストライク");
+        cb_buff[E_ESE].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[E_ESE].addActionListener(this);
+        cb_buff[E_ESE].setEnabled(false);
+        panels[3].add(cb_buff[E_ESE]);
+
+        col++;
+
+        lab_tmp = new JLabel("パッシブスキル");
+        lab_tmp.setBounds(200 * row, 20 * col++, 200, 20);
+        panels[3].add(lab_tmp);
+
         //レジスト エレメント
         cb_buff[E_RET] = new JCheckBox("レジスト エレメント");
         cb_buff[E_RET].setBounds(200 * row, 20 * col++, 200, 20);
@@ -1861,26 +1902,7 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[E_BSL].setEnabled(false);
         panels[3].add(cb_buff[E_BSL]);
 
-//        //マーブル(次回リニューアルでマジックシールド)
-//        cb_buff[E_MSD] = new JCheckBox("マーブル");
-//        cb_buff[E_MSD].setBounds(200 * row, 20 * col++, 200, 20);
-//        cb_buff[E_MSD].addActionListener(this);
-//        cb_buff[E_MSD].setEnabled(false);
-//        panels[3].add(cb_buff[E_MSD]);
-
-        //*エルヴンストライク
-        cb_buff[E_ESE] = new JCheckBox("*[UP待]エルヴンストライク");
-        cb_buff[E_ESE].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[E_ESE].addActionListener(this);
-        cb_buff[E_ESE].setEnabled(false);
-        panels[3].add(cb_buff[E_ESE]);
-
-        //*リベレーション
-        cb_buff[E_LIN] = new JCheckBox("*[UP待]リベレーション");
-        cb_buff[E_LIN].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[E_LIN].addActionListener(this);
-        cb_buff[E_LIN].setEnabled(false);
-        panels[3].add(cb_buff[E_LIN]);
+        col++;
 
         //*バーニングショット
         cb_buff[E_BST] = new JCheckBox("*[UP待]バーニングショット");
@@ -2103,13 +2125,6 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[E_EVE].addActionListener(this);
         cb_buff[E_EVE].setEnabled(false);
         panels[3].add(cb_buff[E_EVE]);
-
-        //*マーブル(次回リニューアルでマジックシールド)　リニューアル時は1488行へ
-        cb_buff[E_MSD] = new JCheckBox("*マーブル");
-        cb_buff[E_MSD].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[E_MSD].addActionListener(this);
-        cb_buff[E_MSD].setEnabled(false);
-        panels[3].add(cb_buff[E_MSD]);
 
         //----------
         //パネル4

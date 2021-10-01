@@ -2510,7 +2510,7 @@ public class Calculator implements Common {
         }
 
         //ブローアタック
-        //7497行にて処理
+        //8167行にて処理
 
         //バウンスアタック
         ui.cb_buff[K_BOK].setToolTipText("<html>"+ "[消費MP:10][消費HP:60]"
@@ -2593,7 +2593,6 @@ public class Calculator implements Common {
         //ソリッドキャリッジ
         ui.cb_buff[K_SCE].setToolTipText("<html>"+ "[消費MP:10][消費HP:100]"
                                          + "<br>"+ "盾装備時 ER+15"
-                                         + "<br>"+ "*リニューアル Passiveに変更"
                                          + "<br>"+ "[習得レベル:55][持続時間:3分12秒][対象:術者]"+"</html>");
         if (ui.cb_buff[K_SCE].isSelected()) {
             if (level >= 50 && cls == K) {
@@ -2637,9 +2636,16 @@ public class Calculator implements Common {
                                          + "<br>"+ "属性系列に関係する魔法は同時に効果を得る サモンはランダムで召喚される"
                                          + "<br>"+ "PVPダメージ低下+30[発動率5%]"
                                          + "<br>"+ "トリプルアローのエフェクトが特別仕様になります"
-                                         + "<br>"+ "*リニューアル PVPダメージ低下を追加 トリプルエフェクト追加"
                                          + "<br>"+ "[習得レベル:85][持続時間:常時][対象:術者]"+"</html>");
         if (ui.cb_buff[E_GEH].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //リベレーション
+        ui.cb_buff[E_LIN].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
+                                         + "<br>"+ "状態異常スキルの時間を減少させる"
+                                         + "<br>"+ "[習得レベル:85][持続時間:320秒][対象:術者][触媒:精霊の玉(4)]"+"</html>");
+        if (ui.cb_buff[E_LIN].isSelected()) {
         //スキル効果未実装
         }
 
@@ -2652,16 +2658,8 @@ public class Calculator implements Common {
         //スキル効果未実装
         }
 
-        //リベレーション
-        ui.cb_buff[E_LIN].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
-                                         + "<br>"+ "状態異常スキルの時間を減少させる"
-                                         + "<br>"+ "[習得レベル:85][持続時間:320秒][対象:術者][触媒:精霊の玉(4)]"+"</html>");
-        if (ui.cb_buff[E_LIN].isSelected()) {
-        //スキル効果未実装
-        }
-
         //バーニングショット
-        ui.cb_buff[E_BST].setToolTipText("<html>"+ "[消費MP:??][消費HP:--]"
+        ui.cb_buff[E_BST].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
                                          + "<br>"+ "ダメージを20%増加する 全スキル耐性+3 PvPダメージ低下+10"
                                          + "<br>"+ "スキル使用中の時、術者は[移動不可能][帰還不可能][弓の射程距離減少]"
                                          + "<br>"+ "[習得レベル:90][持続時間:??秒][対象:術者][触媒:精霊の玉(2)]"+"</html>");
@@ -2690,7 +2688,6 @@ public class Calculator implements Common {
         ui.cb_buff[E_MSD].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
                                          + "<br>"+ "一般的なデバフを防ぎ一定確率で効果が消える(伝説級/レア級は不可能)"
                                          + "<br>"+ "個別クールタイム(60秒)"
-                                         + "<br>"+ "*リニューアル 地属性から共通に変更 魔法名がマーブルからマジックシールドに変更"
                                          + "<br>"+ "[習得レベル:85][持続時間:12秒][対象:術者][触媒:精霊の玉(5)]"+"</html>");
         if (ui.cb_buff[E_MSD].isSelected()) {
         //スキル効果未実装
@@ -6238,7 +6235,7 @@ public class Calculator implements Common {
                                          + "<br>"+ "近距離ダメージ+3 近距離命中+3 遠距離ダメージ+3 遠距離命中+3 SP+2 魔法命中+2"
                                          + "<br>"+ "レベル85から、レベル5毎にPVPダメージ低下+5(最大+15)"
                                          + "<br>"+ "攻城戦ではバフの効果が3倍になり最大HP+500が追加される"
-                                         + "<br>"+ "*リニューアル　PVPダメージ低下を追加"
+                                         + "<br>"+ "PVPダメージ低下を追加"
                                          + "<br>"+ "[習得レベル:85][持続時間:20分][対象:血盟員][触媒:結晶体(200)]"+"</html>");
         if (ui.cb_buff[P_PRE].isSelected()) {
             //PVPダメージ低下+5(レベル85から、レベル5毎にPVPダメージ低下+5(最大+15))
@@ -6299,15 +6296,16 @@ public class Calculator implements Common {
         ui.cb_buff[P_CCA].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
                                          + "<br>"+ "8セル内のPTを組んだ血盟員1人を術者の周囲に召喚する"
                                          + "<br>"+ "対象が状態異常でも召喚可能　壁越し召喚は不可能"
+                                         + "<br>"+ "個別クールタイム適用"
                                          + "<br>"+ "[習得レベル:90][持続時間:瞬間][対象:血盟員][触媒:結晶体(200)]"+"</html>");
         if (ui.cb_buff[P_CCA].isSelected()) {
         //スキル効果未実装
         }
 
-        //エンパイア(未実装)
-        ui.cb_buff[P_EME].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
+        //エンパイア
+        ui.cb_buff[P_EME].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
                                          + "<br>"+ "1セル内の対象にダメージを与え、一定確率でスタン状態にする"
-                                         + "<br>"+ "*リニューアル後 ディレイ8秒から6秒 消費MP30から20"
+                                         + "<br>"+ "ディレイ6秒"
                                          + "<br>"+ "[習得レベル:80][持続時間:最大6秒][対象:PC/NPC]"+"</html>");
         if (ui.cb_buff[P_EME].isSelected()) {
         //スキル効果未実装
@@ -6321,8 +6319,7 @@ public class Calculator implements Common {
                                          + "<br>"+ "レベル80 技術耐性+1 精霊耐性+1 秘技耐性+1 恐怖耐性+1"
                                          + "<br>"+ "レベル84 技術耐性+5 精霊耐性+5 秘技耐性+5 恐怖耐性+5"
                                          + "<br>"+ "レベル94+ 技術耐性+15 精霊耐性+15 秘技耐性+15 恐怖耐性+15"
-                                         + "<br>"+ "*リニューアル 持続時間15秒から60秒　消費MP15から30"
-                                         + "<br>"+ "*第二リニューアル 全スキル耐性+5から+1"
+                                         + "<br>"+ "持続時間60秒　消費MP30"
                                          + "<br>"+ "[習得レベル:80][持続時間:1分][対象:PTメンバー]"+"</html>");
         if (ui.cb_buff[P_GRE].isSelected()) {
             switch ((String) ui.cb_buff_group[P_GRE].getSelectedItem()) {
@@ -6440,7 +6437,6 @@ public class Calculator implements Common {
         ui.cb_buff[P_MAY].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
                                          + "<br>"+ "ダメージ低下+2"
                                          + "<br>"+ "レベル80から、レベル2毎に[ダメージ低下+1]"
-                                         + "<br>"+ "*リニューアル 消費MP20から30に 持続時間が5分から10分"
                                          + "<br>"+ "[習得レベル:80][持続時間:10分][対象:術者]"+"</html>");
         if (ui.cb_buff[P_MAY].isSelected()) {
             //DR+2(レベル80から2つレベルが上がる毎に+1)
@@ -6454,7 +6450,6 @@ public class Calculator implements Common {
         //シャイニングアーマー
         ui.cb_buff[P_SAR].setToolTipText("<html>"+ "[消費MP:30][消費HP:50]"
                                          + "<br>"+ "ER+10"
-                                         + "<br>"+ "*リニューアル 消費MP25から30に 持続時間が5分から10分"
                                          + "<br>"+ "[習得レベル:80][持続時間:10分][対象:術者]"+"</html>");
         if (ui.cb_buff[P_SAR].isSelected()) {
             buff.ER += 10;
@@ -6506,7 +6501,6 @@ public class Calculator implements Common {
         ui.cb_buff[P_AUA].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
                                          + "<br>"+ "術者と18セル内のPTメンバーに常時効果が持続する"
                                          + "<br>"+ "STR+1 DEX+1 INT+1 MR+10 技術耐性+2 精霊耐性+2 竜語耐性+2 恐怖耐性+2"
-                                         + "<br>"+ "*リニューアル 術者はPTが無くても常時適用"
                                          + "<br>"+ "[習得レベル:80][持続時間:常時][対象:術者/PTメンバー]"+"</html>");
         if (ui.cb_buff[P_AUA].isSelected()) {
             buff.MR += 10;
@@ -9159,7 +9153,6 @@ buki.arrow_elementdmg=0;
         //プライド
         ui.cb_buff[K_PRE].setToolTipText("<html>"+ "[消費MP:10][消費HP:100]"
                                          + "<br>"+ "最大HP LV/4% 増加"
-                                         + "<br>"+ "*リニューアル Passiveに変更"
                                          + "<br>"+ "[習得レベル:60][持続時間:5分][対象:術者]"+"</html>");
         if (ui.cb_buff[K_PRE].isSelected()) {
             if (ui.cb_buff[S_GIC].isSelected()
