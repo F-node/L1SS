@@ -171,7 +171,7 @@ public interface Common {
     final int K_RWN = 307;          //LV88  Raging WeapoN                 レイジングウェポン
     final int K_CBM = 308;          //LV86  Counter Barrier:Master        カウンターバリア:マスター
 
-//エルフの精霊魔法  4+1+8+11+18+3+5=50  合計50種類
+//エルフの精霊魔法  4+1+8+11+20+3+3=50  合計50種類
     //アクティブスキル
     //LV1魔法    合計4種類
     final int E_RMC = 20;           //LV15  Resist MagiC                  レジスト マジック
@@ -201,7 +201,7 @@ public interface Common {
     final int E_APR = 21;           //LV60  Aqua ProtectoR                アクア プロテクター
     final int E_FWE = 166;          //LV60  Focus WavE                    フォーカス ウェーブ(基本エンチャントの2段加速で実装)
     final int E_SSM = 172;          //LV60  Sand StorM                    サンド ストーム(基本エンチャントの2段加速で実装)
-    //LV5魔法    合計18種類
+    //LV5魔法    合計20種類
     final int E_ELY = 57;           //LV75  ELvengravitY                  エルヴン グラヴィティー
     final int E_ASE = 152;          //LV75  Area SilencE                  エリア サイレンス
     final int E_GEL = 153;          //LV75  Greater ElementaL             グレーター エレメンタル
@@ -226,12 +226,12 @@ public interface Common {
     final int E_RET = 19;           //LV30  Resist ElemenT                レジスト エレメント
     final int E_GEH = 113;          //LV85  Glory EartH                   グローリーアース
     final int E_BSL = 158;          //LV45  Bloody SouL                   ブラッディ ソウル
-    //[UP待ち]    合計5種類
+    //[UP待ち]    合計3種類
     final int E_BST = 309;          //LV90  Burning ShoT                  [UP待ち]バーニングショット
     final int E_SBA = 310;          //LV85  Seoul Barrier Armor           [UP待ち]ソウルバリア:アーマー
     final int E_SGS = 311;          //LV85  Striker Gail:Shot             [UP待ち]ストライカーゲイル:ショット
 
-//ウィザードの魔法  8+8+7+8+8+8+8+8+8+8+1+2+2=84    合計84種類
+//ウィザードの魔法  8+8+7+8+8+8+8+8+8+8+2+3=84    合計84種類
     //アクティブスキル
     //LV1魔法    合計8種類
     final int W_HEL = 228;          //LV8   HEaL                          ヒール
@@ -322,16 +322,15 @@ public interface Common {
     final int W_ABR = 299;          //LV80  Absolute BarrieR              アブソルート バリア
     final int W_ADS = 24;           //LV80  ADvanced Spirits              アドバンスド スピリッツ
     final int W_ISE = 300;          //LV80  Ice SpikE                     アイス スパイク
-    //LV11魔法    合計1種類
+    //LV11魔法    合計2種類
     final int W_ETY = 301;          //LV85  ETernitY                      エタニティ
-    //パッシブ    合計2種類
+    final int W_MIT = 304;          //LV85  Mas Immun To Harm             マス イミューン トゥ ハーム
+    //パッシブ    合計3種類
     final int W_IHS = 302;          //LV80  Immun to Harm: Saint          イミューン トゥ ハーム:セイント
     final int W_MAY = 303;          //LV85  Meister AccuracY              マイスター アキュラシー
-    //[UP待ち]    合計2種類
-    final int W_MIT = 304;          //LV85  Mas Immun To                  [UP待ち]マス イミューン トゥ
-    final int W_MBD = 305;          //LV85  Meditation: BeyonD            [UP待ち]メディテーション:ビヨンド
+    final int W_MBD = 305;          //LV85  Meditation: BeyonD            メディテーション:ビヨンド
 
-//闇の精霊魔法  4+4+3+4+6+2=23  合計23種類
+//闇の精霊魔法  4+4+3+4+8=23  合計23種類
     //アクティブスキル
     //LV1魔法    合計4種類
     final int D_BHG = 178;          //LV20  Blind HidinG                  ブラインド ハイディング
@@ -352,21 +351,19 @@ public interface Common {
     final int D_LUR = 122;          //LV80  LUcifeR                       ルシファー
     final int D_AVR = 119;          //LV85  AVengeR                       アベンジャー
     final int D_SHS = 120;          //LV80  SHadow Step                   シャドウ ステップ
-    //パッシブ    合計6種類
+    //パッシブ    合計8種類
     final int D_ABD = 124;          //LV85  Armor Break:Destiny           アーマーブレイク:デスティニー
     final int D_DBD = 28;           //LV80  Double Break:Destiny          ダブル ブレイク:デスティニー
     final int D_FBN = 103;          //LV60  Final BurN                    ファイナル バーン
     final int D_BSS = 30;           //LV40  Burning SpiritS               バーニング スピリッツ
     final int D_DEN = 31;           //LV60  Dress EvasioN                 ドレス イベイジョン
     final int D_LUD = 123;          //LV85  LUcifer:Destiny               ルシファー:デスティニー
-    //[UP待ち]    合計2種類
-    final int D_MAM = 173;          //LV85  Moving Acceleration:Maximum   [UP待ち]ムービング アクセレーション:マキシマム
-    final int D_SAD = 174;          //LV85  Shadow Armor:Destiny          [UP待ち]シャドウ アーマー:デスティニー
+    final int D_SAD = 174;          //LV85  Shadow Armor:Destiny          シャドウ アーマー:デスティニー
+    final int D_MAM = 173;          //LV85  Moving Acceleration:Maximum   ムービング アクセレーション:マキシマム
 
-//竜騎士の秘技    5+4+4+2+5+2=合計22種類
+//竜騎士の秘技    4+4+4+2+8=合計22種類
     //アクティブスキル
-    //LV1魔法          合計5種類
-    final int R_DSN = 37;           //LV20  Dragon SkiN                   ドラゴン スキン
+    //LV1魔法          合計4種類
     final int R_BSH = 191;          //LV20  Burning SlasH                 バーニング スラッシュ
     final int R_DEY = 192;          //LV20  DEstroY                       デストロイ
     final int R_MBH = 193;          //LV20  Magma BreatH                  マグマ ブレス
@@ -382,56 +379,55 @@ public interface Common {
     final int R_EOD = 186;          //LV60  Eye Of Dragon                 アイ オブ ドラゴン
     final int R_VALAKAS = 41;       //LV60  Arousal[VALAKAS]              覚醒[ヴァラカス]
     //LV4魔法          合計2種類
-    final int R_HAS = 116;          //LV85  HAlpaS                        ハルパス
     final int R_LINDVIOL = 90;      //LV80  Arousal[LINDVIOL]             覚醒[リンドビオル]
-    //パッシブスキル    合計5種類
+    final int R_HAS = 116;          //LV85  HAlpaS                        ハルパス
+    //パッシブスキル    合計8種類
     final int R_TGB = 183;          //LV80  Thunder Grap:Brave            サンダー グラップ:ブレイブ
     final int R_FSB = 60;           //LV85  Four Slayer:Brave             フォー スレイヤー:ブレイブ
     final int R_AUA = 117;          //LV80  AUrakiA                       アウラキア
     final int R_DFR = 189;          //LV40  Destroy:FeaR                  デストロイ:フィアー
     final int R_DHR = 185;          //LV60  Destroy:HorroR                デストロイ:ホラー
-    //[UP待ち]         合計2種類
-    final int R_SNT = 181;          //LV80  Solid NoT                     [UP待ち]ソリッドノット
-    final int R_RAE = 182;          //LV80  RAmpagE                       [UP待ち]ランページ
+    final int R_DSN = 37;           //LV20  Dragon SkiN                   ドラゴン スキン
+    final int R_SNT = 181;          //LV80  Solid NoT                     ソリッド ノット
+    final int R_RAE = 182;          //LV80  RAmpagE                       ランページ
 
-//イリュージョニストの幻術魔法    22+3+1=26　合計26種類
+//イリュージョニストの幻術魔法    5+4+4+5+4+4=26　合計26種類
     //アクティブスキル  合計22種類
     //LV1魔法 
-    final int I_MIE = 49;           //LV15  Mirror ImagE                  ミラーイメージ
+    final int I_MIE = 49;           //LV15  Mirror ImagE                  ミラー イメージ
     final int I_CFN = 205;          //LV15  ConFusioN                     コンフュージョン
-    final int I_SEY = 206;          //LV15  Smash EnergY                  スマッシュエネルギー
+    final int I_SEY = 206;          //LV15  Smash EnergY                  スマッシュ エネルギー
     final int I_IOE = 42;           //LV15  Illusion[OgrE]                イリュージョン[オーガ]
     final int I_COE = 207;          //LV15  Cube[OgrE]                    キューブ[オーガ]
     //LV2魔法 
     final int I_CON = 48;           //LV30  COncentratioN                 コンセントレーション
-    final int I_MBK = 202;          //LV30  Mind BreaK                    マインドブレイク
-    final int I_BBK = 203;          //LV30  Bone BreaK                    ボーンブレイク
+    final int I_MBK = 202;          //LV30  Mind BreaK                    マインド ブレイク
+    final int I_BBK = 203;          //LV30  Bone BreaK                    ボーン ブレイク
     final int I_CGM = 204;          //LV30  Cube[GoleM]                   キューブ[ゴーレム]
     //LV3魔法
     final int I_PAE = 47;           //LV45  PAtiencE                      ペイシェンス
     final int I_PHM = 199;          //LV45  PHantasM                      ファンタズム
-    final int I_IBR = 200;          //LV45  Ices BreakeR                  アイズブレイカー
+    final int I_IBR = 200;          //LV45  Ices BreakeR                  アイズ ブレイカー
     final int I_CRH = 201;          //LV45  Cube[RicH]                    キューブ[リッチ]
     //LV4魔法
     final int I_INS = 46;           //LV60  INsighT                       インサイト
     final int I_PAC = 197;          //LV60  PAniC                         パニック
-    final int I_RWT = 62;           //LV60  Reduce WeighT                 リデュースウェイト
+    final int I_RWT = 62;           //LV60  Reduce WeighT                 リデュース ウェイト
     final int I_IAR = 45;           //LV60  Illusion[AvataR]              イリュージョン[アバター]
     final int I_CAR = 198;          //LV60  Cube[AvataR]                  キューブ[アバター]
     //LV5魔法
     final int I_IMT = 92;           //LV80  IMpacT                        インパクト
-    final int I_FSZ = 91;           //LV75  Focus SpitZ                   フォーカススピッツ
+    final int I_FSZ = 91;           //LV75  Focus SpitZ                   フォーカス スピリッツ
     final int I_MES = 195;          //LV85  MEviuS                        メビウス
     final int I_POL = 118;          //LV85  POtentiaL                     ポテンシャル
-    //パッシブスキル    合計3種類
+    //パッシブスキル    合計4種類
+    final int I_DHE = 196;          //LV80  Dark HorsE                    ダークホース(基本エンチャントの2段加速で実装)
     final int I_IRH = 43;           //LV30  Illusion[RicH]                イリュージョン[リッチ]
     final int I_IGM = 44;           //LV45  Illusion[GoleM]               イリュージョン[ゴーレム]
-    final int I_DHE = 196;          //LV80  Dark HorsE                    ダークホース(基本エンチャントの2段加速で実装)
-    //[UP待ち]         合計1種類
-    final int I_BBL = 194;          //LV85  Bone Break:Last               ボーンブレイク:ラスト
+    final int I_BBL = 194;          //LV85  Bone Break:Last               ボーン ブレイク:ラスト
 
-//ウォリアーの技術      7+8+1=16　合計16種類
-    //アクティブスキル  合計7種類
+//ウォリアーの技術      8+8+=16　合計16種類
+    //アクティブスキル  合計8種類
     final int S_HOL = 213;          //LV30  HOwL                          ハウル
     final int S_GIC = 76;           //LV60  GIgantiC                      ギガンティック
     final int S_PGP = 211;          //LV75  Power GriP                    パワー グリップ
@@ -439,6 +435,7 @@ public interface Common {
     final int S_DEO = 210;          //LV80  DEsperadO                     デスペラード
     final int S_TRG = 115;          //LV80  Titan RisinG                  タイタン ライジング
     final int S_DEN = 208;          //LV85  DEmolitioN                    デモリッション
+    final int S_BER = 209;          //LV85  BErserkeR                     バーサーカー
     //パッシブスキル    合計8種類
     final int S_FUY = 68;           //LV60  FUrY                          フューリー
     final int S_SLR = 214;          //LV15  SLayeR                        スレイヤー
@@ -448,8 +445,6 @@ public interface Common {
     final int S_TMC = 70;           //LV75  Titan MagiC                   タイタンマジック
     final int S_TBZ = 71;           //LV80  Titan BlitZ                   タイタンブリッツ
     final int S_DAE = 215;          //LV85  Desperado:AbsolutE            デスペラード:アブソリュート
-    //[UP待ち]          合計1種類
-    final int S_BER = 209;          //LV85  BErserkeR                     [UP待ち]バーサーカー
 
 //フェンサーの技術    合計19種類
     //  アクティブスキル
@@ -476,21 +471,21 @@ public interface Common {
 
 //ランサーの槍術    合計14種類
     //  アクティブスキル
-    final int L_PDR = 140;          //LV85  Pressure:Death Recall         プレッシャー:デスリコール
-    final int L_REY = 130;          //LV75  REcoverY                      リカバリー
-    final int L_KRL = 132;          //LV80  KRueL                         クルーエル
-    final int L_PRE = 131;          //LV75  PRessurE                      プレッシャー
+    final int L_ALE = 127;          //LV50  ALternatE                     オルティネート
+    final int L_FWE = 128;          //LV60  Force WavE                    フォース ウェーブ
     final int L_VAD = 129;          //LV70  VAnguarD                      ヴァンガード
-    final int L_FWE = 128;          //LV60  Force WavE                    フォースウェーブ
-    final int L_ALE = 127;          //LV50  ALternatE                     オルタネート
+    final int L_REY = 130;          //LV75  REcoverY                      リカバリー
+    final int L_PRE = 131;          //LV75  PRessurE                      プレッシャー
+    final int L_KRL = 132;          //LV80  KRueL                         クルーエル
     //  パッシブスキル
     final int L_KCN = 139;          //LV80  Kruel:CombinatioN             クルーエル:コンビクション
-    final int L_IRE = 138;          //LV80  Increase RangE                インクリーズレンジ
+    final int L_PDR = 140;          //LV85  Pressure:Death Recall         プレッシャー:デス リコール
+    final int L_DBK = 136;          //LV75  Dodge BreaK                   ドッジ ブレイク
     final int L_MAM = 137;          //LV75  MAelstroM                     メイルストロム
-    final int L_DBE = 136;          //LV75  Dodge BrakE                   ドッジブレーキ
-    final int L_VEE = 134;          //LV70  VEngeancE                     ベンジェンス
-    final int L_TAE = 135;          //LV70  Tactical AdvancE              タクティカルアドバンス
-    final int L_DSE = 133;          //LV65  Deadly StrikE                 デッドリーストライク
+    final int L_DSE = 133;          //LV65  Deadly StrikE                 デッドリー ストライク
+    final int L_VEE = 134;          //LV70  VEngeancE                     ヴェンジェンス
+    final int L_TAE = 135;          //LV70  Tactical AdvancE              タクティカル アドバンス
+    final int L_IRE = 138;          //LV80  Increase RangE                インクリーズ レンジ
 
     final String[] AILMENT_LIST = {"技術命中", "技術耐性", "精霊命中", "精霊耐性", "秘技命中","秘技耐性", "恐怖命中", "恐怖耐性"};
     final int HIT_STUN = 0;
