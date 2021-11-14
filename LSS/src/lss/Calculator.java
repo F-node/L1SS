@@ -2473,6 +2473,59 @@ public class Calculator implements Common {
 
         cons_mp = 0;
 
+//ウィザードの魔法
+        //インビジビリティ
+        ui.cb_buff[W_INY].setToolTipText("<html>"+ "[消費MP:15][消費HP:--]"
+                                         + "<br>"+ "術者に透明効果が適用される"
+                                         + "<br>"+ "移動と補助魔法以外の行動をすると、効果が切れる"
+                                         + "<br>"+ "クールタイム:4秒"
+                                         + "<br>"+ "帰還不可能の状態では詠唱不可能"
+                                         + "<br>"+ "[習得レベル:64][持続時間:解除されるまで][対象:術者][触媒:魔力の石(1]"+"</html>");
+        if (ui.cb_buff[W_INY].isSelected()) {
+        //スキル効果未実装
+        }
+        
+        //イミューントゥハーム:セイント
+        ui.cb_buff[W_IHS].setToolTipText("<html>"+ "[消費MP:15][消費HP:--]"
+                                         + "<br>"+ "自分に使用した時、イミューントゥハームの持続時間を60秒にする"
+                                         + "<br>"+ "レベル82から、レベル2毎にPvPダメージ低下+1%増加"
+                                         + "<br>"+ "レベル91から、レベル1毎にPvPダメージ低下+1%増加(最大+10%)"
+                                         + "<br>"+ "[習得レベル:80][持続時間:常時][対象:術者]"+"</html>");
+        if (ui.cb_buff[W_IHS].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //エタニティ
+        ui.cb_buff[W_ETY].setToolTipText("<html>"+ "[消費MP:80][消費HP:--]"
+                                         + "<br>"+ "10セル内の対象に、強力なダメージと追加魔法ダメージ"
+                                         + "<br>"+ "更に一定確率で[帰還不可能]にする"
+                                         + "<br>"+ "最初のダメージは、カウンターマジックで防ぐことが出来ない"
+                                         + "<br>"+ "7セルから、帰還不可能の効果は距離が離れるほど成功確率が低下する)"
+                                         + "<br>"+ "[習得レベル:85][持続時間:最大4秒][対象:PC/NPC]"+"</html>");
+        if (ui.cb_buff[W_ETY].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //メディテーション:ビヨンド
+        ui.cb_buff[W_MBD].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+                                         + "<br>"+ "メディテーションの効果が移動と戦闘時でも持続する"
+                                         + "<br>"+ "*WIZリブート MP回復ポーション使用時には最大MPの2%追加回復"
+                                         + "<br>"+ "[習得レベル:85][持続時間:--][対象:術者]"+"</html>");
+        if (ui.cb_buff[W_MBD].isSelected()) {
+        //スキル効果未実装
+        }
+
+        //マス イミューン トゥ ハーム
+        ui.cb_buff[W_MIT].setToolTipText("<html>"+ "[消費MP:120][消費HP:--]"
+                                         + "<br>"+ "8セル内に居るPTの血盟員に、イミューントゥハームの効果"
+                                         + "<br>"+ "術者と血盟員の間に障害物があると効果が無い"
+                                         + "<br>"+ "イミューントゥハーム：セイントを習得していると術者はセイント、血盟員は通常の効果"
+                                         + "<br>"+ "*弱体化 15セルから8セルに"
+                                         + "<br>"+ "[習得レベル:85][持続時間:最大32秒][対象:血盟員][触媒:魔力の石(8)]"+"</html>");
+        if (ui.cb_buff[W_MIT].isSelected()) {
+        //スキル効果未実装
+        }
+
 //騎士の技術
         //*フォーススタン
         ui.cb_buff[K_FSN].setToolTipText("<html>"+ "[消費MP:17][消費HP:--]"
@@ -3203,7 +3256,6 @@ public class Calculator implements Common {
         ui.cb_buff[D_LUD].setToolTipText("<html>"+ "[消費MP:25][消費HP:--]"
                                          + "<br>"+ "ルシファーの持続時間を60秒にする"
                                          + "<br>"+ "レベル85から、レベル2毎にPVPダメージ低下+1%(最大+10%)"
-                                         + "<br>"+ "リニューアル PVPダメージ低下+10%の効果がレベルで適用"
                                          + "<br>"+ "[習得レベル:85][持続時間:常時][対象:術者]"+"</html>");
         if (ui.cb_buff[D_LUD].isSelected()) {
         //スキル効果未実装
@@ -3405,7 +3457,6 @@ public class Calculator implements Common {
         ui.cb_buff[R_MBY].setToolTipText("<html>"+ "[消費MP:--][消費HP:40]"
                                          + "<br>"+ "攻撃をしてきた対象に、一定確率でカウンターダメージを与える"
                                          + "<br>"+ "カウンターダメージは[AC]/2 最小は40ダメージ"
-                                         + "<br>"+ "*リニューアル 消費HP50から40"
                                          + "<br>"+ "[習得レベル:60][持続時間:5分][対象:術者]"+"</html>");
         if (ui.cb_buff[R_MBY].isSelected()) {
         //スキル効果未実装
@@ -3415,7 +3466,6 @@ public class Calculator implements Common {
         ui.cb_buff[R_TGP].setToolTipText("<html>"+ "[消費MP:--][消費HP:30]"
                                          + "<br>"+ "5セル内の対象を、一定確率でホールド状態にする"
                                          + "<br>"+ "個別クールタイム"
-                                         + "<br>"+ "*リニューアル 消費HP35から30 個別クールタイムに"
                                          + "<br>"+ "[習得レベル:60][持続時間:1から4秒][対象:術者]"+"</html>");
         if (ui.cb_buff[R_TGP].isSelected()) {
         //スキル効果未実装
@@ -3441,14 +3491,13 @@ public class Calculator implements Common {
 
         //覚醒[ヴァラカス]
         ui.cb_buff[R_VALAKAS].setToolTipText("<html>"+ "[消費MP:50][消費HP:30]"
-                                             + "<br>"+ "近距離命中+5 技術耐性+5 秘技耐性+5 恐怖耐性+5"
-                                             + "<br>"+ "*リニューアル 技術耐性+10から技術/秘技/恐怖+5に"
+                                             + "<br>"+ "近距離命中+5 技術耐性+5 恐怖耐性+5 秘技命中+5"
                                              + "<br>"+ "[習得レベル:60][持続時間:10分][対象:術者][触媒:刻印のボーンピース(1)]"+"</html>");
         if (ui.cb_buff[R_VALAKAS].isSelected()) {
             buff.HIT_SHORT += 5;
             buff.ailment[STUN] += 5;
             buff.ailment[SECRET] += 5;
-            buff.ailment[TERROR] += 5;
+            buff.ailment[HIT_TERROR] += 5;
         }
 
         //ブラッドラスト
@@ -3467,7 +3516,6 @@ public class Calculator implements Common {
         ui.cb_buff[R_FSR].setToolTipText("<html>"+ "[消費MP:--][消費HP:10]"
                                          + "<br>"+ "対象に3連続攻撃をする"
                                          + "<br>"+ "弱点露出の効果が適用される"
-                                         + "<br>"+ "*リニューアル 消費HP16から10"
                                          + "<br>"+ "[習得レベル:40][持続時間:瞬間][対象:PC/NPC]"+"</html>");
         if (ui.cb_buff[R_FSR].isSelected()) {
         //スキル効果未実装
@@ -3496,7 +3544,6 @@ public class Calculator implements Common {
                                               + "<br>"+ "重量ゲージが50％を超えてもHPとMPが自然回復する 遠距離回避ER+10"
                                               + "<br>"+ "重量ゲージの範囲50から82%?"
                                               + "<br>"+ "キャンセレーションで解除されない"
-                                              + "<br>"+ "リニューアル ER+10追加"
                                               + "<br>"+ "[習得レベル:40][持続時間:10分][対象:術者][触媒:刻印のボーンピース(1)]"+"</html>");
         if (ui.cb_buff[R_FAFURION].isSelected()) {
             buff.ER += 10;
@@ -3544,7 +3591,6 @@ public class Calculator implements Common {
         ui.cb_buff[R_ANTHARAS].setToolTipText("<html>"+ "[消費MP:20][消費HP:10]"
                                               + "<br>"+ "AC-3 MR+5%"
                                               + "<br>"+ "キャンセレーションで解除されない"
-                                              + "<br>"+ "*リニューアル MR+5%追加"
                                               + "<br>"+ "[習得レベル:20][持続時間:10分][対象:術者][触媒:刻印のボーンピース(1)]"+"</html>");
         if (ui.cb_buff[R_ANTHARAS].isSelected()) {
             buff.AC -= 3;
@@ -3577,8 +3623,6 @@ public class Calculator implements Common {
                                          + "<br>"+ "レベル85から、レベル1毎に[遠距離ダメージ低下]1%増加(最大10%)"
                                          + "<br>"+ "イミューントゥハームと重複する"
                                          + "<br>"+ "個別クールタイム"
-                                         + "<br>"+ "*リニューアル 遠距離攻撃を無効化から30%低下に変更"
-                                         + "<br>"+ "*リニューアル第2 30%低下から20%に　レベル85から効果が上昇　"
                                          + "<br>"+ "[習得レベル:85][持続時間:6秒][対象:術者][触媒:属性石(1)]"+"</html>");
         if (ui.cb_buff[I_MES].isSelected()) {
         //スキル効果未実装
@@ -3690,11 +3734,9 @@ public class Calculator implements Common {
                                          + "<br>"+ "Passive"
                                          + "<br>"+ "AC-10"
                                          + "<br>"+ "キャンセレーションで解除されない"
-                                         + "<br>"+ "*リニューアル パッシブに変更"
-                                         + "<br>"+ "*リニューアル2 AC-8から10に"
                                          + "<br>"+ "[習得レベル:45][持続時間:常時][対象:術者]"+"</html>");
         if (ui.cb_buff[I_IGM].isSelected()) {
-            buff.AC -= 8;
+            buff.AC -= 10;
         }
 
         //キューブ[リッチ]
@@ -3735,15 +3777,13 @@ public class Calculator implements Common {
         ui.cb_buff[I_IRH].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
                                          + "<br>"+ "Passive"
                                          + "<br>"+ "SP+4"
-                                         + "<br>"+ "*リニューアル パッシブに変更"
-                                         + "<br>"+ "*リニューアル2段 SP+2から+4に"
                                          + "<br>"+ "[習得レベル:30][持続時間:常時][対象:術者]"+"</html>");
         if (ui.cb_buff[I_IRH].isSelected()) {
             buff.SP += 4;
         }
 
         //キューブ[ゴーレム]
-        ui.cb_buff[I_CGM].setToolTipText("<html>"+ "[消費MP:--/40][消費HP:--]"
+        ui.cb_buff[I_CGM].setToolTipText("<html>"+ "[消費MP:40][消費HP:--]"
                                          + "<br>"+ "15セル内のPTメンバーにAC-8"
                                          + "<br>"+ "キャンセレーションで解除されない(術者のみ)"
                                          + "<br>"+ "[習得レベル:30][持続時間:2分8秒][対象:PT][触媒:属性石(5)]"+"</html>");
@@ -3799,13 +3839,12 @@ public class Calculator implements Common {
         ui.cb_buff[S_DEN].setToolTipText("<html>"+ "[消費MP:25][消費HP:--]"
                                          + "<br>"+ "5セル内の対象を、帰還不可能＋出血状態にする"
                                          + "<br>"+ "デモリッションのダメージは、STRと武器ダメージの影響を受けます"
-                                         + "<br>"+ "リニューアル 持続時間:最大5秒から4秒に 射程が6セルから5セルに ディレイ増加"
                                          + "<br>"+ "[習得レベル:85][持続時間:最大4秒][対象:PC][触媒:結晶体(100)]"+"</html>");
         if (ui.cb_buff[S_DEN].isSelected()) {
         //スキル効果未実装
         }
 
-        //[UP待ち]バーサーカー
+        //バーサーカー
         ui.cb_buff[S_BER].setToolTipText("<html>"+ "[消費MP:--][消費HP:100]"
                                          + "<br>"+ "近距離ダメージ+20 全スキル耐性+20"
                                          + "<br>"+ "[習得レベル:85][持続時間:16秒][対象:術者][触媒:結晶体(100)]"+"</html>");
@@ -3849,9 +3888,7 @@ public class Calculator implements Common {
         ui.cb_buff[S_TOK].setToolTipText("<html>"+ "[消費MP:5][消費HP:--]"
                                          + "<br>"+ "6セル内の対象に強力な物理ダメージを与える"
                                          + "<br>"+ "個別クールタイム(8秒)"
-                                         + "<br>"+ "*リニューアル ダメージ増加 個別クールタイム適用"
-                                         + "<br>"+ "*リニューアル2 ディレイ10秒から8秒 射程10セルから6セル 出血ダメージから物理ダメージ"
-                                         + "<br>"+ "[習得レベル:45][持続時間:6秒][対象:PC/NPC][触媒:結晶体(50)]"+"</html>");
+                                         + "<br>"+ "[習得レベル:45][持続時間:--][対象:PC/NPC][触媒:結晶体(50)]"+"</html>");
         if (ui.cb_buff[S_TOK].isSelected()) {
         //スキル効果未実装
         }
@@ -4006,7 +4043,6 @@ public class Calculator implements Common {
         ui.cb_buff[F_PPK].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
                                          + "<br>"+ "Passive"
                                          + "<br>"+ "パンテラの射程を1セル伸ばし、スタン時間を増加する"
-                                         + "<br>"+ "*リニューアル 射程2セル増加から1セル増加に"
                                          + "<br>"+ "[習得レベル:85][持続時間:常時][対象:術者]"+"</html>");
         if (ui.cb_buff[F_PPK].isSelected()) {
         //スキル効果未実装
@@ -4104,7 +4140,7 @@ public class Calculator implements Common {
         }
 
 //槍士技術
-        //プレッシャー:デスリコール
+        //プレッシャー:デス リコール
         ui.cb_buff[L_PDR].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
                                          + "<br>"+ "プレッシャーにデステレポートの効果を追加"
                                          + "<br>"+ "[習得レベル:85][持続時間:常時][対象:術者]"+"</html>");
@@ -4149,7 +4185,7 @@ public class Calculator implements Common {
         //スキル効果未実装
         }
 
-        //フォースウェーブ
+        //フォース ウェーブ
         ui.cb_buff[L_FWE].setToolTipText("<html>"+ "[消費MP:15][消費HP:--]"
                                          + "<br>"+ "[近距離フォーム]周囲1セルにダメージを与える"
                                          + "<br>"+ "[遠距離フォーム]前方5セル内の対象全てにダメージを与える"
@@ -4158,7 +4194,7 @@ public class Calculator implements Common {
         //スキル効果未実装
         }
 
-        //オルタネート
+        //オルティネート
         ui.cb_buff[L_ALE].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
                                          + "<br>"+ "近距離フォームと遠距離フォームに変更する"
                                          + "<br>"+ "遠距離フォームでは攻撃速度が減少し、対象との距離が遠くなるほどダメージが減少する"
@@ -4170,13 +4206,13 @@ public class Calculator implements Common {
 
         //クルーエル:コンビクション
         ui.cb_buff[L_KCN].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
-                                         + "<br>"+ "クルオルの射程を2セル伸ばし、スタン時間を増加する"
+                                         + "<br>"+ "クルーエルの射程を2セル伸ばし、スタン時間を増加する"
                                          + "<br>"+ "[習得レベル:80][持続時間:常時][対象:術者]"+"</html>");
         if (ui.cb_buff[L_KCN].isSelected()) {
         //スキル効果未実装
         }
 
-        //インクリーズレンジ
+        //インクリーズ レンジ
         ui.cb_buff[L_IRE].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
                                          + "<br>"+ "遠距離フォームの射程を3セル伸ばし、ダメージを20%増加する"
                                          + "<br>"+ "[習得レベル:80][持続時間:常時][対象:術者]"+"</html>");
@@ -4192,16 +4228,16 @@ public class Calculator implements Common {
         //スキル効果未実装
         }
 
-        //ドッジブレーキ
-        ui.cb_buff[L_DBE].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
+        //ドッジ ブレイク
+        ui.cb_buff[L_DBK].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
                                          + "<br>"+ "対象が攻撃を回避した時に、20%の確率で必中する"
                                          + "<br>"+ "レベル80から、レベル3毎に3%ずつ増加［最大35%］"
                                          + "<br>"+ "[習得レベル:75][持続時間:常時][対象:術者]"+"</html>");
-        if (ui.cb_buff[L_DBE].isSelected()) {
+        if (ui.cb_buff[L_DBK].isSelected()) {
         //スキル効果未実装
         }
 
-        //ベンジェンス
+        //ヴェンジェンス
         ui.cb_buff[L_VEE].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
                                          + "<br>"+ "ダメージを受けた時に、一定確率でダメージ低下の効果が発動"
                                          + "<br>"+ "HPが50%以下になると発動率と効果が上昇する"
@@ -4210,7 +4246,7 @@ public class Calculator implements Common {
         //スキル効果未実装
         }
 
-        //タクティカルアドバンス
+        //タクティカル アドバンス
         ui.cb_buff[L_TAE].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
                                          + "<br>"+ "DG+5 ER+5 MR+5%"
                                          + "<br>"+ "レベル80から、レベル3毎に+2ずつ増加［最大+15］"
@@ -4219,23 +4255,36 @@ public class Calculator implements Common {
         //スキル効果未実装
         }
 
-        //デッドリーストライク
+        //デッドリー ストライク
         ui.cb_buff[L_DSE].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
                                          + "<br>"+ "一定確率でダメージを2.5倍にする"
                                          + "<br>"+ "[習得レベル:65][持続時間:常時][対象:術者]"+"</html>");
-        if (ui.cb_buff[L_DBE].isSelected()) {
+        if (ui.cb_buff[L_DSE].isSelected()) {
         //スキル効果未実装
         }
 
         //バーサーカー
         ui.cb_buff[W_BER].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
-                                         + "<br>"+ "近距離ダメージ+2 近距離命中+8 AC+10 HP自然回復不可"
+                                         + "<br>"+ "術者に近距離ダメージ+2 近距離命中+8"
+                                         + "<br>"+ "PTメンバーに近距離ダメージ+2 近距離命中+8 AC+10 HP自然回復不可"
                                          + "<br>"+ "[習得レベル:56][持続時間:5分20秒][対象:術者/PTメンバー(15セル)]"+"</html>");
         if (ui.cb_buff[W_BER].isSelected()) {
-            buff.DMG_SHORT += 2;
-            buff.HIT_SHORT += 8;
-            buff.HPR -= 255;
-            buff.AC += 10;
+            switch ((String) ui.cb_buff_group[W_BER].getSelectedItem()) {
+                case "術者":
+                    ui.cb_buff[W_BER].setToolTipText("近距離ダメージ+2 近距離命中+8");
+                    buff.DMG_SHORT += 2;
+                    buff.HIT_SHORT += 8;
+                    break;
+                case "PTメンバー":
+                    ui.cb_buff[W_BER].setToolTipText("近距離ダメージ+2 近距離命中+8 AC+10 HP自然回復不可");
+                    buff.DMG_SHORT += 2;
+                    buff.HIT_SHORT += 8;
+                    buff.HPR -= 255;
+                    buff.AC += 10;
+                    break;
+                default:
+                    break;
+            }
         }
 
         //ブレスドアーマー
@@ -7883,7 +7932,6 @@ buki.arrow_elementdmg=0;
         ui.cb_buff[I_IAR].setToolTipText("<html>"+ "[消費MP:50][消費HP:--]"
                                          + "<br>"+ "近距離ダメージ+10 遠距離ダメージ+10 魔法ダメージ+10"
                                          + "<br>"+ "キャンセレーションで解除されない"
-                                         + "<br>"+ "*リニューアル 被ダメージ+5%を削除"
                                          + "<br>"+ "[習得レベル:60][持続時間:2分8秒][対象:術者]"+"</html>");
         if (ui.cb_buff[I_IAR].isSelected()) {
             dmg_big_ave += 10;
@@ -7927,9 +7975,8 @@ buki.arrow_elementdmg=0;
         //クラッシュ
         double ex = 0.0;
         ui.cb_buff[S_CRH].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
-                                         + "<br>"+ "近距離攻撃時に一定確率(15%)で追加ダメージを与える"
+                                         + "<br>"+ "近距離攻撃時に一定確率(15→20%?)で追加ダメージを与える"
                                          + "<br>"+ "[レベル]/[2]を与える"
-                                         + "<br>"+ "*リニューアル 発動率上昇"
                                          + "<br>"+ "[習得レベル:45][持続時間:常時][対象:術者]"+"</html>");
         if (ui.cb_buff[S_CRH].isSelected()) {
             ex = level / 2.0;
@@ -7938,24 +7985,23 @@ buki.arrow_elementdmg=0;
         //フューリー
         ui.cb_buff[S_FUY].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
                                          + "<br>"+ "Passive"
-                                         + "<br>"+ "クラッシュ発動時に一定確率(10%)でダメージ2倍を与える"
-                                         + "<br>"+ "*リニューアル 発動率上昇 ダメージ2倍から3倍に"
+                                         + "<br>"+ "クラッシュ発動時に一定確率(10→15%?)でダメージ3倍を与える"
                                          + "<br>"+ "[習得レベル:60][持続時間:常時][対象:術者]"+"</html>");
         if (ui.cb_buff[S_FUY].isSelected()) {
-            dmg_big_ave = 0.15 * 0.1 * 2.0 * (dmg_big_ave + ex)
-                    + (0.15 - (0.15 * 0.1)) * (dmg_big_ave + ex)
-                    + (1.0 - 0.15) * dmg_big_ave;
+            dmg_big_ave = 0.20 * 0.15 * 3.0 * (dmg_big_ave + ex)
+                    + (0.20 - (0.20 * 0.15)) * (dmg_big_ave + ex)
+                    + (1.0 - 0.20) * dmg_big_ave;
 
-            dmg_small_ave = 0.15 * 0.1 * 2.0 * (dmg_small_ave + ex)
-                    + (0.15 - (0.15 * 0.1)) * (dmg_small_ave + ex)
-                    + (1.0 - 0.15) * dmg_small_ave;
+            dmg_small_ave = 0.20 * 0.15 * 3.0 * (dmg_small_ave + ex)
+                    + (0.20 - (0.20 * 0.15)) * (dmg_small_ave + ex)
+                    + (1.0 - 0.20) * dmg_small_ave;
             ex = 0.0;
 
-            dmg_undead *= (1 - 0.15 * 0.1) + 0.15 * 0.1 * 2.0;
-            dmg_cursed *= (1 - 0.15 * 0.1) + 0.15 * 0.1 * 2.0;
+            dmg_undead *= (1 - 0.20 * 0.15) + 0.20 * 0.15 * 3.0;
+            dmg_cursed *= (1 - 0.20 * 0.15) + 0.20 * 0.15 * 3.0;
         }
-        dmg_big_ave += ex * 0.15;
-        dmg_small_ave += ex * 0.15;
+        dmg_big_ave += ex * 0.20;
+        dmg_small_ave += ex * 0.20;
 
         if (buff.effect.contains("特殊攻撃(クラスタシアン/ウェアウルフ)")) {
             if (!(buki.type.equals("ボウ") || buki.type.equals("ガントレット") || buki.type
@@ -8594,7 +8640,6 @@ buki.arrow_elementdmg=0;
         ui.cb_buff[R_LINDVIOL].setToolTipText("<html>"+ "[消費MP:40][消費HP:10]"
                                               + "<br>"+ "近距離回避[DG]+10"
                                               + "<br>"+ "キャンセレーションで解除されない"
-                                              + "<br>"+ "*リニューアル 消費HP40から10 DG+7から+10"
                                               + "<br>"+ "[習得レベル:80][持続時間:10分][対象:術者][触媒:刻印のボーンピース(1)]"+"</html>");
         if (ui.cb_buff[R_LINDVIOL].isSelected()) {
             dg += 10;
@@ -9167,7 +9212,6 @@ buki.arrow_elementdmg=0;
         ui.cb_buff[S_GIC].setToolTipText("<html>"+ "[消費MP:10][消費HP:--]"
                                          + "<br>"+ "最大HPを増加する"
                                          + "<br>"+ "[レベル]/[2]%"
-                                         + "<br>"+ "*リニューアル 持続時間:5分から10分に"
                                          + "<br>"+ "[習得レベル:60][持続時間:10分][対象:術者][触媒:結晶体(100)]"+"</html>");
         if (ui.cb_buff[S_GIC].isSelected()) {
             if (ui.cb_buff[W_ADS].isSelected()
