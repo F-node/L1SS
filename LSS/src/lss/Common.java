@@ -96,7 +96,7 @@ public interface Common {
     final int RING5 = 18;
     final int RING6 = 19;
 
-//エンチャント(0から314までの合計315個分)　UI.javaの223行目も合わせて変更必須
+//エンチャント(0から319までの合計320個分)　UI.javaの223行目も合わせて変更必須
 //基本エンチャント
     final int ACC1 = 0;             //1段加速
     final int ACC2 = 1;             //2段加速
@@ -231,7 +231,7 @@ public interface Common {
     final int E_SBA = 310;          //LV85  Seoul Barrier Armor           [UP待ち]ソウルバリア:アーマー
     final int E_SGS = 311;          //LV85  Striker Gail:Shot             [UP待ち]ストライカーゲイル:ショット
 
-//ウィザードの魔法  8+8+7+8+8+8+8+8+8+8+2+3=84    合計84種類
+//ウィザードの魔法  8+8+7+8+8+8+8+8+8+8+3+7=89    合計89種類
     //アクティブスキル
     //LV1魔法    合計8種類
     final int W_HEL = 228;          //LV8   HEaL                          ヒール
@@ -322,13 +322,18 @@ public interface Common {
     final int W_ABR = 299;          //LV80  Absolute BarrieR              アブソルート バリア
     final int W_ADS = 24;           //LV80  ADvanced Spirits              アドバンスド スピリッツ
     final int W_ISE = 300;          //LV80  Ice SpikE                     アイス スパイク
-    //LV11魔法    合計2種類
+    //LV11魔法    合計3種類
     final int W_ETY = 301;          //LV85  ETernitY                      エタニティ
     final int W_MIT = 304;          //LV85  Mas Immun To Harm             マス イミューン トゥ ハーム
-    //パッシブ    合計3種類
+    final int W_DPR = 315;          //LVXX  Divine PRotection             ディバインプロテクション
+    //パッシブ    合計7種類
     final int W_IHS = 302;          //LV80  Immun to Harm: Saint          イミューン トゥ ハーム:セイント
     final int W_MAY = 303;          //LV85  Meister AccuracY              マイスター アキュラシー
-    final int W_MBD = 305;          //LV85  Meditation: BeyonD            メディテーション:ビヨンド
+    final int W_MBD = 305;          //LV85  Meditation:BeyonD             メディテーション:ビヨンド
+    final int W_DNS = 316;          //LVXX  Disintegrate:NemesiS          ディスインテグレート:ネメシス
+    final int W_HWE = 317;          //LVXX  Holy Walk:Evolution           ホーリーウォーク:エボリューション(EW速度)
+    final int W_ERC = 318;          //LVXX  Ether Real Circle             エーテリアルサークル
+    final int W_GSM = 319;          //LV90  Greater Summon Monster        グレーターサモンモンスター
 
 //闇の精霊魔法  4+4+3+4+8=23  合計23種類
     //アクティブスキル
