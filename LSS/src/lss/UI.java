@@ -220,8 +220,8 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
     //ファイナルバーンで計104個分(0から103)
 //    JCheckBox[] cb_buff = new JCheckBox[104];
 //    JComboBox[] cb_buff_group = new JComboBox[104];
-    JCheckBox[] cb_buff = new JCheckBox[315];
-    JComboBox[] cb_buff_group = new JComboBox[315];
+    JCheckBox[] cb_buff = new JCheckBox[320];
+    JComboBox[] cb_buff_group = new JComboBox[320];
 
     //パネル5
     JComboBox cb_npc_level;
@@ -2744,6 +2744,13 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[W_MIT].setEnabled(false);
         panels[4].add(cb_buff[W_MIT]);
 
+        //*ディバインプロテクション
+        cb_buff[W_DPR] = new JCheckBox("*ディバインプロテクション");
+        cb_buff[W_DPR].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[W_DPR].addActionListener(this);
+        cb_buff[W_DPR].setEnabled(false);
+        panels[4].add(cb_buff[W_DPR]);
+
         col++;
 
         lab_tmp = new JLabel("パッシブスキル");
@@ -2770,6 +2777,34 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[W_MBD].addActionListener(this);
         cb_buff[W_MBD].setEnabled(false);
         panels[4].add(cb_buff[W_MBD]);
+
+        //*ディスインテグレート:ネメシス
+        cb_buff[W_DNS] = new JCheckBox("*ディスインテグレート:ネメシス");
+        cb_buff[W_DNS].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[W_DNS].addActionListener(this);
+        cb_buff[W_DNS].setEnabled(false);
+        panels[4].add(cb_buff[W_DNS]);
+
+        //*ホーリーウォーク:エボリューション
+        cb_buff[W_HWE] = new JCheckBox("*ホーリーウォーク:エボリューション");
+        cb_buff[W_HWE].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[W_HWE].addActionListener(this);
+        cb_buff[W_HWE].setEnabled(false);
+        panels[4].add(cb_buff[W_HWE]);
+
+        //*エーテリアルサークル
+        cb_buff[W_ERC] = new JCheckBox("*エーテリアルサークル");
+        cb_buff[W_ERC].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[W_ERC].addActionListener(this);
+        cb_buff[W_ERC].setEnabled(false);
+        panels[4].add(cb_buff[W_ERC]);
+
+        //*グレーターサモンモンスター
+        cb_buff[W_GSM] = new JCheckBox("*グレーターサモンモンスター");
+        cb_buff[W_GSM].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[W_GSM].addActionListener(this);
+        cb_buff[W_GSM].setEnabled(false);
+        panels[4].add(cb_buff[W_GSM]);
 
         col = 0;
         row = 4;
