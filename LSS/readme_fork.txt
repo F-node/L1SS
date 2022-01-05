@@ -1,6 +1,12 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2022/01/05
+Update 4.5.1
+LSS/data/E.zip
+修正
+	レッドシャドウデュアルブレード
+
 2021/12/22
 Update 4.5.0
 LSS/src/lss/Buki.java
