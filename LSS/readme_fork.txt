@@ -1,6 +1,16 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2022/01/09
+Update 4.5.2
+LSS/src/lss/Bougu.java
+LSS/data/E.zip
+新規
+	バルガのゲートル
+	古いバルガのベルト
+	バルガのベルト
+	輝くバルガのベルト
+
 2022/01/05
 Update 4.5.1
 LSS/data/E.zip
