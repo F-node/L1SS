@@ -1,6 +1,18 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2022/01/10
+Update 4.5.3
+LSS/src/lss/Calculator.java
+修正
+	ブローアタック　LV90から+2%
+	75レベルで1%
+	76レベルで2%
+	89レベルで15%
+	90レベルで17%
+	91レベルで19%
+	92レベルで21%
+
 2022/01/09
 Update 4.5.2
 LSS/src/lss/Bougu.java
