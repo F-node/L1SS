@@ -460,7 +460,8 @@ public class Calculator implements Common {
     double key_delay = 0.1815;
 
     double ce_rate = 0.0500;                                                    //サイクロンの確率5%
-    double bk_rate = 0.0500;                                                    //ブロー アタックの確率5%
+    double bk_rate = 0.0000;                                                    //ブローアタックの基本確率0%
+    double bk_lv_bonus = 0.0000;                                                //ブローアタックのレベルアップボーナス0%
     double bs_rate = 0.3333;                                                    //バーニング スピッツの確率33%
     double db_rate = 0.3333;                                                    //ダブル ブレイクの確率33%
     double ef_rate = 0.4000;                                                    //エレメンタル ファイアーの確率40%
@@ -2563,7 +2564,7 @@ public class Calculator implements Common {
         }
 
         //ブローアタック
-        //8167行にて処理
+        //8210行にて処理
 
         //バウンスアタック
         ui.cb_buff[K_BOK].setToolTipText("<html>"+ "[消費MP:10][消費HP:60]"
@@ -8208,14 +8209,21 @@ buki.arrow_elementdmg=0;
 
         //ブローアタック
         ui.cb_buff[K_BLK].setToolTipText("<html>"+ "[消費MP:10][消費HP:50]"
-                                         + "<br>"+ "一定確率(5%)で近距離ダメージを1.5倍"
+                                         + "<br>"+ "一定確率で近距離ダメージを1.5倍"
                                          + "<br>"+ "LV75からLV1毎に発動率1%増加"
+                                         + "<br>"+ "LV90からLV1毎に追加発動率1%増加"
                                          + "<br>"+ "[近距離武器技術]"
                                          + "<br>"+ "[習得レベル:75][持続時間:5分][対象:術者]"+"</html>");
         if (ui.cb_buff[K_BLK].isSelected()) {
-            if (level >= 75 && cls == K && buki_id == W_D || buki_id == W_LS || buki_id == W_TS || buki_id == W_A|| buki_id == W_L) {
-                double bk_lv_bonus =((level - 74) * 0.01);
+            if (level >= 90) {
+            //LV90以上の場合
+                bk_lv_bonus =((level - 74) * 0.01)+((level - 89) * 0.01);
+            } else if (level >= 75) {
+            //LV75以上LV90未満
+                bk_lv_bonus =((level - 74) * 0.01);
+            }
 
+            if (level >= 75 && cls == K && buki_id == W_D || buki_id == W_LS || buki_id == W_TS || buki_id == W_A|| buki_id == W_L) {
                 dmg_big_ave *= 1.5 * (bk_rate + bk_lv_bonus)
                         + 1.0 * (1.0 - (bk_rate + bk_lv_bonus));
                 dmg_small_ave *= 1.5 * (bk_rate + bk_lv_bonus)
