@@ -1306,123 +1306,184 @@ public class Calculator implements Common {
                     buff.HIT_SHORT += 7;
                     ui.cb_buff[ITEM_MD].setToolTipText("AC-5 PVP追加ダメージ+4 PVPダメージ低下+2 ダメージ低下+3 近距離ダメージ+7 近距離命中+7 祝福消耗効率+7%");
                     break;
-        //課金MD
-                case 62:                            //シーダンサー
+        //LV6 MD
+                case 58:                            //ハルパス
+                    buff.DMG_SHORT += 10;
+                    buff.HIT_SHORT += 10;
+                    buff.DR += 8;
+                    buff.ailment[HIT_STUN] += 10;
+                    buff.ailment[HIT_SPIRIT] += 10;
+                    buff.ailment[HIT_SECRET] += 10;
+                    buff.ailment[HIT_TERROR] += 10;
+                    buff.ailment[STUN] += 10;
+                    buff.ailment[SPIRIT] += 10;
+                    buff.ailment[HIT_SECRET] += 10;
+                    buff.ailment[TERROR] += 10;
+                                                    //MP絶対回復+10
+                    buff.AC -= 5;
+                                                    //EXP+25%
+                                                    //祝福消耗効率+10%
+                                                    //4段加速
+                    ui.cb_buff[ITEM_MD].setToolTipText("近距離ダメージ+10 近距離命中+10 ダメージ減少+8 スキル命中：全体+10 スキル耐性：全体+10 MP絶対回復+10 追加防御力+5 EXP+25% 祝福消耗効率+10% 4段加速");
+                    break;
+                case 59:                            //アウラキア
+                    buff.SP += 7;
+                    buff.HIT_MAGIC += 10;
+                    buff.DR += 8;
+                    buff.ailment[HIT_STUN] += 10;
+                    buff.ailment[HIT_SPIRIT] += 10;
+                    buff.ailment[HIT_SECRET] += 10;
+                    buff.ailment[HIT_TERROR] += 10;
+                    buff.ailment[STUN] += 10;
+                    buff.ailment[SPIRIT] += 10;
+                    buff.ailment[HIT_SECRET] += 10;
+                    buff.ailment[TERROR] += 10;
+                                                    //MP絶対回復+20
+                    buff.HP += 300;
+                    buff.AC -= 5;
+                                                    //EXP+25%
+                                                    //祝福消耗効率+10%
+                                                    //4段加速
+                    ui.cb_buff[ITEM_MD].setToolTipText("SP+7 魔法命中+10 ダメージ減少+8 スキル命中：全体+10 スキル耐性：全体+10 MP絶対回復+20 最大HP+300 追加防御力+5 EXP+25% 祝福消耗効率+10% 4段加速");
+                    break;
+                case 60:                            //ベヒモス
+                    buff.DMG_LONG += 10;
+                    buff.HIT_LONG += 10;
+                    buff.DR += 8;
+                    buff.ailment[HIT_STUN] += 10;
+                    buff.ailment[HIT_SPIRIT] += 10;
+                    buff.ailment[HIT_SECRET] += 10;
+                    buff.ailment[HIT_TERROR] += 10;
+                    buff.ailment[STUN] += 10;
+                    buff.ailment[SPIRIT] += 10;
+                    buff.ailment[HIT_SECRET] += 10;
+                    buff.ailment[TERROR] += 10;
+                                                    //MP絶対回復+15
+                    buff.HP += 200;
+                    buff.MP += 100;
+                    buff.AC -= 5;
+                                                    //EXP+25%
+                                                    //祝福消耗効率+10%
+                                                    //4段加速
+                    ui.cb_buff[ITEM_MD].setToolTipText("遠距離ダメージ+10 遠距離命中+10 ダメージ減少+8 スキル命中：全体+10 スキル耐性：全体+10 MP絶対回復+15 最大HP+200 最大MP+100 追加防御力+5 EXP+25% 祝福消耗効率+10% 4段加速");
+                    break;
+//課金MD
+                case 61:                            //シーダンサー
                     buff.effect += "HP回復 +40,";
                     ui.cb_buff[ITEM_MD].setToolTipText("HP絶対回復+40(32秒)");
                     break;
-                case 63:                            //スパルトイ
+                case 62:                            //スパルトイ
                     ui.cb_buff[ITEM_MD].setToolTipText("一定確率(4%)でダメージを無効化");
                     buff.effect += "回避,";
                     break;
-                case 64:                            //ラミア
+                case 63:                            //ラミア
                     buff.MPR += 4;
                     ui.cb_buff[ITEM_MD].setToolTipText("MP自然回復+4 近距離攻撃の時だけ魔法発動:カーズポイズン");
                     break;
-                case 65:                            //スノーマン(課金)
+                case 64:                            //スノーマン(課金)
                     buff.DMG_SHORT += 2;
                     buff.DMG_LONG += 2;
                     buff.MPR += 2;
                     ui.cb_buff[ITEM_MD].setToolTipText("近距離ダメージ+2 遠距離ダメージ+2 MP自然回復+2");
                     break;
-                case 66:                            //グレムリン
+                case 65:                            //グレムリン
                     buff.HP += 30;
                     buff.DMG_SHORT += 2;
                     buff.DMG_LONG += 2;
                     buff.SP += 1;
                     ui.cb_buff[ITEM_MD].setToolTipText("HP+30 近距離ダメージ+2 遠距離ダメージ+2 SP+1");
                     break;
-                case 67:                            //ブルート
+                case 66:                            //ブルート
                     buff.r_weight += 0.10;
                     ui.cb_buff[ACC1].setSelected(true);
                     ui.cb_buff[ITEM_MD].setToolTipText("常時ヘイスト 所持重量増加+250");
                     break;
-                case 68:                            //ブルート(努力する)
+                case 67:                            //ブルート(努力する)
                     buff.r_weight += 0.12;
                     buff.effect += "HP回復 +15,";
                     ui.cb_buff[ACC1].setSelected(true);
                     ui.cb_buff[ITEM_MD].setToolTipText("常時ヘイスト 所持重量増加+300 HP絶対回復+15(64秒)");
                     break;
-                case 69:                            //ブルート(賢い)
+                case 68:                            //ブルート(賢い)
                     buff.r_weight += 0.14;
                     buff.effect += "HP回復 +15,";
                     ui.cb_buff[ACC1].setSelected(true);
                     ui.cb_buff[ITEM_MD].setToolTipText("常時ヘイスト 所持重量増加+350 HP絶対回復+15(64秒)");
                     break;
-                case 70:                            //ブルート(聡明な)
+                case 69:                            //ブルート(聡明な)
                     buff.r_weight += 0.16;
                     buff.effect += "HP回復 +15,";
                     buff.DMG_SHORT++;
                     ui.cb_buff[ACC1].setSelected(true);
                     ui.cb_buff[ITEM_MD].setToolTipText("常時ヘイスト 所持重量増加+400 HP絶対回復+15(64秒) 近距離ダメージ+1");
                     break;
-                case 71:                            //ブルート(光る)
+                case 70:                            //ブルート(光る)
                     buff.r_weight += 0.18;
                     buff.effect += "HP回復 +15,";
                     buff.DMG_SHORT++;
                     ui.cb_buff[ACC1].setSelected(true);
                     ui.cb_buff[ITEM_MD].setToolTipText("常時ヘイスト 所持重量増加+450 HP絶対回復+15(64秒) 近距離ダメージ+1");
                     break;
-                case 72:                            //ブルート(眩しい)
+                case 71:                            //ブルート(眩しい)
                     buff.r_weight += 0.20;
                     buff.effect += "HP回復 +15,";
                     buff.DMG_SHORT++;
                     ui.cb_buff[ACC1].setSelected(true);
                     ui.cb_buff[ITEM_MD].setToolTipText("常時ヘイスト 所持重量増加+500 HP絶対回復+15(64秒) 近距離ダメージ+1");
                     break;
-                case 73:                            //ジャイアント
+                case 72:                            //ジャイアント
                     buff.r_weight += 0.10;
                     buff.effect += "ダメージ低下 +5,";
                     ui.cb_buff[ITEM_MD].setToolTipText("確率ダメージ低下+5 所持重量増加+250");
                     break;
-                case 74:                            //ジャイアント(努力する)
+                case 73:                            //ジャイアント(努力する)
                     buff.r_weight += 0.10;
                     buff.AC--;
                     buff.effect += "ダメージ低下 +8,";
                     ui.cb_buff[ITEM_MD].setToolTipText("確率ダメージ低下+8 所持重量増加+250 AC-1");
                     break;
-                case 75:                            //ジャイアント(賢い)
+                case 74:                            //ジャイアント(賢い)
                     buff.r_weight += 0.10;
                     buff.AC--;
                     buff.effect += "ダメージ低下 +11,";
                     ui.cb_buff[ITEM_MD].setToolTipText("確率ダメージ低下+11 所持重量増加+250 AC-1");
                     break;
-                case 76:                            //ジャイアント(聡明な)
+                case 75:                            //ジャイアント(聡明な)
                     buff.r_weight += 0.10;
                     buff.AC--;
                     buff.MR += 5;
                     buff.effect += "ダメージ低下 +14,";
                     ui.cb_buff[ITEM_MD].setToolTipText("確率ダメージ低下+14 所持重量増加+250 AC-1 MR+5%");
                     break;
-                case 77:                            //ジャイアント(光る)
+                case 76:                            //ジャイアント(光る)
                     buff.r_weight += 0.10;
                     buff.AC--;
                     buff.MR += 5;
                     buff.effect += "ダメージ低下 +17,";
                     ui.cb_buff[ITEM_MD].setToolTipText("確率ダメージ低下+17 所持重量増加+250 AC-1 MR+5%");
                     break;
-                case 78:                            //ジャイアント(眩しい)
+                case 77:                            //ジャイアント(眩しい)
                     buff.r_weight += 0.10;
                     buff.AC--;
                     buff.MR += 5;
                     buff.effect += "ダメージ低下 +20,ヴァンパイアリックタッチ,";
                     ui.cb_buff[ITEM_MD].setToolTipText("確率ダメージ低下+20 所持重量増加+250 AC-1 MR+5% 近距離攻撃時に一定確率で魔法発動:バンパイアリックタッチ");
                     break;
-                case 79:                            //パック/パオ(0段階)
+                case 78:                            //パック/パオ(0段階)
                     buff.DMG_SHORT += 1;
                     ui.cb_buff[ITEM_MD].setToolTipText("近距離ダメージ+1");
-                case 80:                            //パック/パオ(1段階)
+                case 79:                            //パック/パオ(1段階)
                     buff.DMG_SHORT += 1;
                     buff.DMG_LONG += 1;
                     ui.cb_buff[ITEM_MD].setToolTipText("近距離ダメージ+1 遠距離ダメージ+1");
                     break;
-                case 81:                            //パック/パオ(2段階)
+                case 80:                            //パック/パオ(2段階)
                     buff.DMG_SHORT += 1;
                     buff.DMG_LONG += 1;
                     buff.SP += 1;
                     ui.cb_buff[ITEM_MD].setToolTipText("近距離ダメージ+1 遠距離ダメージ+1 SP+1");
                     break;
-                case 82:                            //パック/パオ(3段階)
+                case 81:                            //パック/パオ(3段階)
                     buff.DMG_SHORT += 2;
                     buff.DMG_LONG += 2;
                     buff.SP += 1;
