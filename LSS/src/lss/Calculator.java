@@ -464,6 +464,8 @@ public class Calculator implements Common {
     double bk_lv_bonus = 0.0000;                                                //ブローアタックのレベルアップボーナス0%
     double bs_rate = 0.3333;                                                    //バーニング スピッツの確率33%
     double db_rate = 0.3333;                                                    //ダブル ブレイクの確率33%
+    double db_lv_bonus = 0.0000;                                                //ダブル ブレイクのレベルアップボーナス0%
+    double db2_lv_bonus = 0.0000;                                               //ダブル ブレイク:デスティニーのレベルアップボーナス0%
     double ef_rate = 0.4000;                                                    //エレメンタル ファイアーの確率40%
     double qe_rate = 0.4000;                                                    //クエイクの確率40%
     double pb_rate = 0.4000;                                                    //ブレイブ メンタルの確率40%
@@ -3333,11 +3335,11 @@ public class Calculator implements Common {
         //スキル効果未実装
         }
 
-        //ダブルブレイク:デスティニー
-        //6300行にて処理
-
         //ダブルブレイク
-        //6277行にて処理
+        //7938行にて処理
+
+        //ダブルブレイク:デスティニー
+        //7943行にて処理
 
         //アンキャニードッジ
         //7021行にて処理
@@ -7932,52 +7934,40 @@ buki.arrow_elementdmg=0;
             //VTモーションによる攻撃速度の低下
             speed *= (atk_motion) / (atk_motion + vt_motion * vt_rate);
         }
+
         //ダブルブレイク
         ui.cb_buff[D_DBK].setToolTipText("<html>"+ "[消費MP:12][消費HP:--]"
                                          + "<br>"+ "一定確率(33%)でデュアルブレードとクロウのダメージを2倍にする"
                                          + "<br>"+ "レベル45からレベル5毎に発動率が1%増加"
                                          + "<br>"+ "[習得レベル:60][持続時間:3分12秒][対象:術者][触媒:ダークストーン(1)]"+"</html>");
-        if (ui.cb_buff[D_DBK].isSelected()) {
-            if (buki_id == W_DB || buki_id == W_C) {
-                double db_lv_bonus = ((level - 45) / 5) * 0.01;
-
-                dmg_big_ave *= 2.0 * (db_rate + db_lv_bonus)
-                        + (1.0 - (db_rate + db_lv_bonus));
-                dmg_small_ave *= 2.0 * (db_rate + db_lv_bonus)
-                        + (1.0 - (db_rate + db_lv_bonus));
-
-                dmg_undead *= 2.0 * (db_rate + db_lv_bonus)
-                        + (1.0 - (db_rate + db_lv_bonus));
-                dmg_cursed *= 2.0 * (db_rate + db_lv_bonus)
-                        + (1.0 - (db_rate + db_lv_bonus));
-            } else {
-                ui.cb_buff[D_DBK].setSelected(false);
-                ui.cb_buff[D_DBD].setSelected(false);
-            }
-        }
         //ダブルブレイク:デスティニー
         ui.cb_buff[D_DBD].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
                                          + "<br>"+ "ダブルブレイクの発動率上昇"
                                          + "<br>"+ "80レベルから1レベル毎に発動確率1%増加"
                                          + "<br>"+ "[習得レベル:80][持続時間:3分12秒][対象:術者]"+"</html>");
-        if (ui.cb_buff[D_DBD].isSelected()) {
-            if (level >= 80 && cls == D
-                    && buki_id == W_DB || buki_id == W_C) {
-                double db2_lv_bonus =(((level - 45) / 5) * 0.01)+((level - 79) * 0.01);
+        if (ui.cb_buff[D_DBK].isSelected()) {
+            if (buki_id == W_DB || buki_id == W_C) {
+                db2_lv_bonus = 0;
+                        if (ui.cb_buff[D_DBD].isSelected()) {
+                            if (level >= 80 && cls == D) {
+                            db2_lv_bonus =((level - 79) * 0.01);
+                            } else {
+                            ui.cb_buff[D_DBD].setSelected(false);
+                            }
+                        }
+                db_lv_bonus = ((level - 45) / 5) * 0.01;
 
-                dmg_big_ave *= 2.0 * (db_rate + db2_lv_bonus)
-                        + (1.0 - (db_rate + db2_lv_bonus));
-                dmg_small_ave *= 2.0 * (db_rate + db2_lv_bonus)
-                        + (1.0 - (db_rate + db2_lv_bonus));
+                dmg_big_ave *= 2.0 * (db_rate + db_lv_bonus + db2_lv_bonus)
+                        + (1.0 - (db_rate + db_lv_bonus + db2_lv_bonus));
+                dmg_small_ave *= 2.0 * (db_rate + db_lv_bonus + db2_lv_bonus)
+                        + (1.0 - (db_rate + db_lv_bonus + db2_lv_bonus));
 
-                dmg_undead *= 2.0 * (db_rate + db2_lv_bonus)
-                        + (1.0 - (db_rate + db2_lv_bonus));
-                dmg_cursed *= 2.0 * (db_rate + db2_lv_bonus)
-                        + (1.0 - (db_rate + db2_lv_bonus));
-                ui.cb_buff[D_DBK].setSelected(false);
+                dmg_undead *= 2.0 * (db_rate + db_lv_bonus + db2_lv_bonus)
+                        + (1.0 - (db_rate + db_lv_bonus + db2_lv_bonus));
+                dmg_cursed *= 2.0 * (db_rate + db_lv_bonus + db2_lv_bonus)
+                        + (1.0 - (db_rate + db_lv_bonus + db2_lv_bonus));
             } else {
-                ui.cb_buff[D_DBK].setSelected(false);
-                ui.cb_buff[D_DBD].setSelected(false);
+                //ui.cb_buff[D_DBK].setSelected(false);
             }
         }
         //武器属性

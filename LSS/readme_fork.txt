@@ -1,6 +1,12 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2022/01/17
+Update 4.5.5
+LSS/src/lss/Calculator.java
+修正
+	ダークエルフのキャラ保存/再読み込み時にスキル(ダブルブレイク/ダブルブレイク:デスティニー)がOFFになる
+
 2022/01/16
 Update 4.5.4
 LSS/src/lss/Calculator.java
