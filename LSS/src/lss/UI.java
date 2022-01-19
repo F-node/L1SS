@@ -200,26 +200,7 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
     LEV lev = new LEV();
 
     //パネル3
-
-    //y_ikedaさんによる修正を参考に
-    //JCheckBox[] cb_buff = new JCheckBox[83];
-    //JComboBox[] cb_buff_group = new JComboBox[83];
-    //L_HST = 83;(成長の果実)E_EE = 84;(イーグルアイ)E_CE = 85;(サイクロン)E_IO = 86;(インフェルノ)を追加した為、変更(0から86の計87個分)
-    //JCheckBox[] cb_buff = new JCheckBox[87];
-    //JComboBox[] cb_buff_group = new JComboBox[87];
-    //P_GA = 87;(グレースアバター)K_PD = 88;(プライド)K_BK = 89;(ブローアタック)R_LINDVIOL = 90;覚醒[リンドビオル])
-    //I_FS = 91;(フォーカススピッツ)I_IT = 92;(インパクト)H_HP = 93;(生命のボーナス)H_AC = 94;(鉄甲のボーナス)
-    //H_PVPDR = 95;(生存のボーナス)H_PVP = 96;(暗殺のボーナス)H_RK = 97;(ランカーボーナス)で計98個分(0から97)
-    //JCheckBox[] cb_buff = new JCheckBox[98];
-    //JComboBox[] cb_buff_group = new JComboBox[98]; 
-    //ITEM_MAGAN = 98;(魔眼)で計99個分(0から98)
-    //シャイニングアーマー
-    //マジェスティ
-    //エンチャントアキュラシー
-    //フリージングアーマー
-    //ファイナルバーンで計104個分(0から103)
-//    JCheckBox[] cb_buff = new JCheckBox[104];
-//    JComboBox[] cb_buff_group = new JComboBox[104];
+    //スキル320個   0から319で計320個
     JCheckBox[] cb_buff = new JCheckBox[320];
     JComboBox[] cb_buff_group = new JComboBox[320];
 
@@ -790,7 +771,7 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_eq_en[1].setEnabled(false);
 
         //エリクサールーンレベル
-        String[] elixir_rune_en_list = {"L55", "L70", "L80", "L85", "L90", "L91", "L92"};
+        String[] elixir_rune_en_list = {"L55", "L70", "L80", "L85", "L90", "L91", "L92", "L93", "L94", "L95"};
         elixir_rune_en = new JComboBox(elixir_rune_en_list);
         elixir_rune_en.setBounds(0, 460, 50, 20);
         elixir_rune_en.addActionListener(this);
