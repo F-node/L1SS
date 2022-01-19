@@ -3034,6 +3034,18 @@ if (name.contains("勇士")) {
                         op2.MR = 7;
                         op2.PVP = 5;                                            //PVP追加ダメージ+5
                         break;
+                    case 10:
+                        op2.HP = 70;
+                        op2.DMG_LONG = 6;
+                        op2.DMG_SHORT = 6;
+                        op2.SP = 4;
+                        op2.MR = 9;
+                        op2.PVP = 7;                                            //PVP追加ダメージ+7
+                        op2.ailment[STUN] = 1;                                  //全耐性+1
+                        op2.ailment[SPIRIT] = 1;
+                        op2.ailment[SECRET] = 1;
+                        op2.ailment[TERROR] = 1;
+                        break;
                     default:
                         break;
                 }
@@ -3092,6 +3104,15 @@ if (name.contains("勇士")) {
                         op2.AC -= 5;
                         op2.ailment[STUN] += 4;
                         break;
+                    case 10:
+                        op2.HP = 100;
+                        op2.effect = "ポーション回復量 +11% +9,";
+                        op2.effect += "回復悪化防御 +11% (恐怖),";
+                        op2.MR = 12;
+                        op2.AC -= 6;
+                        op2.ailment[STUN] += 5;
+                        op2.ailment[TERROR] = 2;                                //恐怖耐性+2
+                        break;
                     default:
                         break;
                 }
@@ -3145,6 +3166,16 @@ if (name.contains("勇士")) {
                         op2.AC -= 5;
                         op2.ailment[STUN] += 4;
                         break;
+                    case 10:
+                        op2.HP = 70;
+                        op2.effect = "ポーション回復量 +10% +8,";
+                        op2.effect += "回復悪化防御 +10% (恐怖),";
+                        op2.AC -= 6;
+                        op2.ailment[STUN] += 5;
+                        op2.ailment[SPIRIT] = 1;                                //全耐性+1
+                        op2.ailment[SECRET] = 1;
+                        op2.ailment[TERROR] = 1;
+                        break;
                     default:
                         break;
                 }
@@ -3189,9 +3220,16 @@ if (name.contains("勇士")) {
                         break;
                     case 9:
                         op2.HP = 50;
-                        op2.MP = 50;
+                        op2.MP = 60;
                         op2.DR = 5;
                         op2.PVP_DR=7;                                           //PVPダメージ低下+7
+                        break;
+                    case 10:
+                        op2.HP = 100;
+                        op2.MP = 70;
+                        op2.DR = 6;
+                        op2.PVP_DR=9;                                           //PVPダメージ低下+9
+                        op2.ailment[TERROR] = 2;                                //恐怖耐性+2
                         break;
                     default:
                         break;

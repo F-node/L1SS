@@ -2,6 +2,22 @@ LineageStatusSimulator_fork2018
 
 変更点
 2022/01/19
+Update 4.5.7
+LSS/src/lss/Bougu.java
+LSS/data/E.zip
+追加
+	2022/01/19 Update
+	特性:根性/誓い/情熱/意地が付く装飾品の強化上限が10に変更され、+10強化時のオプションが追加された。
+	https://press.ncsoft.jp/notice/lineage/2201enchant/
+削除
+	10周年記念(回復/集中/体力/マナ/魔法抵抗)リング
+	10周年記念回復リング→スナッパーの回復リングに変更
+	10周年記念集中リング→スナッパーの集中リングに変更
+	10周年記念体力リング→スナッパーの体力リングに変更
+	10周年記念マナリング→スナッパーのマナリングに変更
+	10周年記念魔法抵抗リング→スナッパーの魔法抵抗リングに変更
+
+2022/01/19
 Update 4.5.6
 LSS/src/lss/Calculator.java
 LSS/src/lss/UI.java
