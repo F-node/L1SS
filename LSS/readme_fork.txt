@@ -1,6 +1,25 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2022/02/15
+Update 4.5.8
+LSS/data/E.zip
+修正
+	エルシャベのアミュレット
+	重さ1→20
+
+	幸運のグレートソード
+	フェンサー装備不可→可能
+
+開発環境の変更
+	Java SE Development Kit 8 Update 301(64-Bit)
+	→Java SE Development Kit 8 Update 321(64-Bit)
+
+	NetBeans IDE 8.2
+	→NetBeans IDE 12.6
+	エラーが出る為、元に戻す
+	→NetBeans IDE 8.2
+
 2022/01/19
 Update 4.5.7
 LSS/src/lss/Bougu.java
