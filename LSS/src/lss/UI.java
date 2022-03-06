@@ -3352,8 +3352,8 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[S_DEN].setEnabled(false);
         panels[5].add(cb_buff[S_DEN]);
 
-        //*バーサーカー
-        cb_buff[S_BER] = new JCheckBox("*バーサーカー");
+        //*バーサーク
+        cb_buff[S_BER] = new JCheckBox("*バーサーク");
         cb_buff[S_BER].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[S_BER].addActionListener(this);
         cb_buff[S_BER].setEnabled(false);

@@ -266,6 +266,15 @@ public class Buki implements Common {
             }
         }
 
+        //ナイトバルドのツーハンドソード                                          +9以降強化1毎に技術命中+1(+10強化まで適用)
+        if (name.equals("ナイトバルドのツーハンドソード")) {
+            if (enchant >= 10) {
+            op2.ailment[HIT_STUN] += 2;                                         //技術命中+2
+            } else if (enchant >= 9) {
+            op2.ailment[HIT_STUN] += 1;                                         //技術命中+1
+            }
+        }
+
         //殺意のキーリンク                                                       +7以降強化1毎に秘技命中+1魔法クリティカル+1(+10強化まで適用)
         if (name.equals("殺意のキーリンク")) {
             if (enchant >= 10) {
@@ -419,10 +428,14 @@ public class Buki implements Common {
             }
         }
 
-        //ウィンドブレードソード                                                 +1強化毎に[近距離追加ダメージ+2(既存処理+1)]増加
+        //ウィンドブレードソード                                                 +1強化毎に[近距離追加ダメージ+2(既存処理+1)]増加[技術命中+1]増加[精霊命中+1]増加[秘技命中+1]増加[恐怖命中+1]増加
         if (name.equals("ウィンドブレードソード")) {
             if (enchant >= 0) {
             op2.DMG_SHORT += enchant;                                           //近距離追加ダメージ
+            op2.ailment[HIT_STUN] += enchant;                                   //技術命中
+            op2.ailment[HIT_SPIRIT] += enchant;                                 //精霊命中
+            op2.ailment[HIT_SECRET] += enchant;                                 //秘技命中
+            op2.ailment[HIT_TERROR] += enchant;                                 //恐怖命中
             }
         } 
 

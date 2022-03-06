@@ -3878,7 +3878,7 @@ public class Calculator implements Common {
         //スキル効果未実装
         }
 
-        //バーサーカー
+        //バーサーク
         ui.cb_buff[S_BER].setToolTipText("<html>"+ "[消費MP:--][消費HP:100]"
                                          + "<br>"+ "近距離ダメージ+20 全スキル耐性+20"
                                          + "<br>"+ "[習得レベル:85][持続時間:16秒][対象:術者][触媒:結晶体(100)]"+"</html>");
