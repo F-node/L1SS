@@ -96,7 +96,7 @@ public interface Common {
     final int RING5 = 18;
     final int RING6 = 19;
 
-//エンチャント(0から319までの合計320個分)　UI.javaの223行目も合わせて変更必須
+//エンチャント(0から320までの合計321個分)　UI.javaの223行目も合わせて変更必須
 //基本エンチャント
     final int ACC1 = 0;             //1段加速
     final int ACC2 = 1;             //2段加速
@@ -141,16 +141,17 @@ public interface Common {
     final int P_TTT = 144;          //LV50  True TargeT                   トゥルーターゲット
     final int P_GWN = 7;            //LV60  Glowing WeapoN                グローイング ウェポン
     final int P_SSD = 9;            //LV75  Shining ShielD                シャイニング シールド
-    final int P_SAR = 99;           //LV80  Shining ArmoR                 シャイニング アーマー
     final int P_BML = 8;            //LV70  Brave MentaL                  ブレイブ メンタル
-    final int P_MAY = 100;          //LV80  MAjestY                       マジェスティ
     final int P_GRE = 87;           //LV80  GRacE                         グレース
     final int P_EME = 143;          //LV80  EMpirE                        エンパイア
     final int P_PRE = 110;          //LV85  PRimE                         プライム
     final int P_CCA = 142;          //LV85  Call Clan Advance             コールクラン アドバンス
     //パッシブスキル
     final int P_AUA = 59;           //LV80  AUrA                          オーラ
-
+    final int P_EOD = 320;          //LV80  Empire:OverlorD               エンパイア:オーバーロード
+    final int P_SAR = 99;           //LV80  Shining ArmoR                 シャイニング アーマー
+    final int P_MAY = 100;          //LV80  MAjestY                       マジェスティ
+    
 //騎士の技術        12+3+3=18             合計18種類
     //アクティブスキル
     final int K_SSN = 147;          //LV60  Shock StaN                    ショックスタン

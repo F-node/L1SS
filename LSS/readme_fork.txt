@@ -1,6 +1,34 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2022/04/13
+Update 4.6.1
+LSS/data/E.zip
+LSS/src/lss/Calculator.java
+LSS/src/lss/Common.java
+LSS/src/lss/UI.java
+修正
+	アイアンスキンのチェックを無効化
+
+	スキル
+	君主
+	シャイニング アーマー
+		アクティブ → パッシブ
+	マジェスティ
+		アクティブ → パッシブ
+	シャイニング シールド
+		MP25消費 → MP20消費
+	グローイング ウェポン
+		MP25消費 → MP20消費
+	ブレイブ メンタル
+		MP25消費 → MP20消費
+	エンパイア
+		個別クールタイムへ
+
+新規
+	エンパイア:オーバーロード
+		エンパイアのスタン時間増加＋スタン中DG-10デバフ発動
+
 2022/03/08
 Update 4.6.0
 LSS/data/E.zip

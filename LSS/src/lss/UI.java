@@ -200,9 +200,9 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
     LEV lev = new LEV();
 
     //パネル3
-    //スキル320個   0から319で計320個
-    JCheckBox[] cb_buff = new JCheckBox[320];
-    JComboBox[] cb_buff_group = new JComboBox[320];
+    //スキル321個   0から320で計321個
+    JCheckBox[] cb_buff = new JCheckBox[321];
+    JComboBox[] cb_buff_group = new JComboBox[321];
 
     //パネル5
     JComboBox cb_npc_level;
@@ -1552,23 +1552,11 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[P_SSD].addActionListener(this);
         panels[3].add(cb_buff[P_SSD]);
 
-        //シャイニング アーマー
-        cb_buff[P_SAR] = new JCheckBox("シャイニング アーマー");
-        cb_buff[P_SAR].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[P_SAR].addActionListener(this);
-        panels[3].add(cb_buff[P_SAR]);
-
         //ブレイブ メンタル
         cb_buff[P_BML] = new JCheckBox("ブレイブ メンタル");
         cb_buff[P_BML].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[P_BML].addActionListener(this);
         panels[3].add(cb_buff[P_BML]);
-
-        //マジェスティ
-        cb_buff[P_MAY] = new JCheckBox("マジェスティ");
-        cb_buff[P_MAY].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[P_MAY].addActionListener(this);
-        panels[3].add(cb_buff[P_MAY]);
 
         //グレース
         String list_P_GRE[] = {"君主L80", "君主L81", "君主L82", "君主L83", "君主L84", "君主L85","君主L86","君主L87","君主L88","君主L89","君主L90","君主L91","君主L92","君主L93","君主L94+"};
@@ -1617,6 +1605,24 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[P_AUA].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[P_AUA].addActionListener(this);
         panels[3].add(cb_buff[P_AUA]);
+
+        //エンパイア:オーバーロード
+        cb_buff[P_EOD] = new JCheckBox("エンパイア:オーバーロード");
+        cb_buff[P_EOD].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[P_EOD].addActionListener(this);
+        panels[3].add(cb_buff[P_EOD]);
+
+        //シャイニング アーマー
+        cb_buff[P_SAR] = new JCheckBox("シャイニング アーマー");
+        cb_buff[P_SAR].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[P_SAR].addActionListener(this);
+        panels[3].add(cb_buff[P_SAR]);
+        
+        //マジェスティ
+        cb_buff[P_MAY] = new JCheckBox("マジェスティ");
+        cb_buff[P_MAY].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[P_MAY].addActionListener(this);
+        panels[3].add(cb_buff[P_MAY]);
 
         col = 0;
         row = 1;
@@ -2099,6 +2105,7 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[E_ISN] = new JCheckBox("アイアン スキン");
         cb_buff[E_ISN].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[E_ISN].addActionListener(this);
+        cb_buff[E_ISN].setEnabled(false);
         panels[3].add(cb_buff[E_ISN]);
 
         //*エキゾチック バイタライズ
