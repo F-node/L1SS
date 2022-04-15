@@ -2706,15 +2706,6 @@ public class Calculator implements Common {
         //スキル効果未実装
         }
 
-        //エルヴンストライク
-        ui.cb_buff[E_ESE].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
-                                         + "<br>"+ "6セル内の対象にダメージを与え、一定確率でホールド状態にする"
-                                         + "<br>"+ "個別クールタイム(60秒)"
-                                         + "<br>"+ "[習得レベル:85][持続時間:5秒以下][対象:PC/NPC][触媒:精霊の玉(1)]"+"</html>");
-        if (ui.cb_buff[E_ESE].isSelected()) {
-        //スキル効果未実装
-        }
-
         //バーニングショット
         ui.cb_buff[E_BST].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
                                          + "<br>"+ "ダメージを20%増加する 全スキル耐性+3 PvPダメージ低下+10"
@@ -6497,7 +6488,7 @@ public class Calculator implements Common {
         }
 
         ui.cb_buff[ACC2].setToolTipText("<html>"+ "x1.3333:BP イビルブラッド ブラッドラスト 名誉のコイン ダンシングブレイズ フォーカスウェーブ ハリケーン サンドストーム"
-                                        + "<br>"+ "x1.1547:EW 濃縮集中ポーション ムービングアクセレーション:マキシマム"
+                                        + "<br>"+ "x1.1547:EW 濃縮集中ポーション ムービングアクセレーション:マキシマム ホーリーウォーク:エボリューション"
                                         + "<br>"+ "x1.0800:ダークホース"+"</html>");
         if (ui.cb_buff[ACC2].isSelected()) {
             switch (ui.cb_buff_group[ACC2].getSelectedIndex()) {
@@ -6506,7 +6497,7 @@ public class Calculator implements Common {
                     acc *= acc_2;
                     break;
                 case 1:
-                    ui.cb_buff[ACC2].setToolTipText("x1.1547:EW 濃縮集中ポーション ムービングアクセレーション:マキシマム");
+                    ui.cb_buff[ACC2].setToolTipText("x1.1547:EW 濃縮集中ポーション ムービングアクセレーション:マキシマム ホーリーウォーク:エボリューション");
                     acc *= acc_ew;
                     break;
                 case 2:

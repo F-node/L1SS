@@ -58,8 +58,8 @@ public interface Common {
     final int W_CS = 11;    //チェーンソード
     final int W_DA = 12;    //双斧
 
-    final int MAIN = 13;
-    final int SUB = 14;
+    final int MAIN = 13;    //メイン武器
+    final int SUB = 14;     //サブ武器
 
     final int PHI = 0;
     final int MAG = 1;
@@ -79,7 +79,7 @@ public interface Common {
     final int L82 = 12;
     final int L84 = 13;
     final int L90 = 14;
-    final int L100 = 15;             //Hero用
+    final int L100 = 15;    //Hero用
 
     //パネル1のアミュレット/イアリング/リング/インシグニア/スポールダー/紋章/ペンダント等の順と位置
     final String[] EQ_LIST = {"武器", "武器", "シールド", "ヘルム", "グローブ", "シャツ",
@@ -96,13 +96,13 @@ public interface Common {
     final int RING5 = 18;
     final int RING6 = 19;
 
-//エンチャント(0から320までの合計321個分)　UI.javaの223行目も合わせて変更必須
+//エンチャント(0から319までの合計320個分)　UI.javaの203行目も合わせて変更必須
 //基本エンチャント
     final int ACC1 = 0;             //1段加速
     final int ACC2 = 1;             //2段加速
     final int ACC3 = 2;             //3段加速
-    final int ACC4 = 312;           //4段加速               //マジックドールの潜在力
-    final int ACC5 = 313;           //5段加速               //騎士技術(レイジング ウェポン)
+    final int ACC4 = 312;           //4段加速   マジックドールの潜在力
+    final int ACC5 = 313;           //5段加速   騎士技術(レイジング ウェポン)
     final int B_STR = 3;            //STR
     final int B_DEX = 4;            //DEX
     final int B_AC = 5;             //AC
@@ -136,7 +136,7 @@ public interface Common {
     final int H_RK = 97;            //ランカーボーナス
     final int H_RKT = 141;          //各クラス別1位
 
-//君主魔法          合計11種類
+//君主魔法          8+4=12              合計12種類
     //アクティブスキル
     final int P_TTT = 144;          //LV50  True TargeT                   トゥルーターゲット
     final int P_GWN = 7;            //LV60  Glowing WeapoN                グローイング ウェポン
@@ -148,31 +148,30 @@ public interface Common {
     final int P_CCA = 142;          //LV85  Call Clan Advance             コールクラン アドバンス
     //パッシブスキル
     final int P_AUA = 59;           //LV80  AUrA                          オーラ
-    final int P_EOD = 320;          //LV80  Empire:OverlorD               エンパイア:オーバーロード
+    final int P_EOD = 311;          //LV80  Empire:OverlorD               エンパイア:オーバーロード
     final int P_SAR = 99;           //LV80  Shining ArmoR                 シャイニング アーマー
     final int P_MAY = 100;          //LV80  MAjestY                       マジェスティ
     
-//騎士の技術        12+3+3=18             合計18種類
+//騎士の技術        8+7=15             合計15種類
     //アクティブスキル
-    final int K_SSN = 147;          //LV60  Shock StaN                    ショックスタン
+    final int K_SSN = 147;          //LV60  Shock StaN                    ショック スタン
     final int K_RAR = 34;           //LV50  Reduction ArmoR               リダクションアーマー
     final int K_BOK = 65;           //LV65  BOunce attacK                 バウンスアタック
     final int K_BLK = 89;           //LV75  BLow attacK                   ブロー アタック
-    final int K_CBR = 36;           //LV80  Counter BarrieR               カウンターバリア
+    final int K_CBR = 36;           //LV80  Counter BarrieR               カウンター バリア
     final int K_ABE = 146;          //LV85  Absolute BladE                アブソルート ブレイド
+    final int K_SAK = 306;          //LV85  Shock AttacK                  ショック アタック
     final int K_FSN = 145;          //LV85  Force StaN                    フォース スタン
     //パッシブスキル
     final int K_CBV = 73;           //LV85  Counter Barrier:Veteran       カウンター バリア:ベテラン
+    final int K_CBM = 308;          //LV86  Counter Barrier:Master        カウンター バリア:マスター
     final int K_RAV = 112;          //LV80  Reduction Armor:Veteran       リダクション アーマー:ベテラン
     final int K_RFE = 111;          //LV80  Raging ForcE                  レイジング フォース
-    final int K_SCE = 35;           //LV55  Solid CarriagE                ソリッドキャリッジ
+    final int K_SCE = 35;           //LV55  Solid CarriagE                ソリッド キャリッジ
     final int K_PRE = 88;           //LV60  PRidE                         プライド
-    //[UP待ち]
-    final int K_SAK = 306;          //LV85  Shock AttacK                  ショックアタック
-    final int K_RWN = 307;          //LV88  Raging WeapoN                 レイジングウェポン
-    final int K_CBM = 308;          //LV86  Counter Barrier:Master        カウンターバリア:マスター
+    final int K_RWN = 307;          //LV88  Raging WeapoN                 レイジング ウェポン(基本エンチャントの5段加速で実装)
 
-//エルフの精霊魔法  4+1+8+11+20+3+3=50  合計50種類
+//エルフの精霊魔法  4+1+8+11+20+5=49    合計49種類
     //アクティブスキル
     //LV1魔法    合計4種類
     final int E_RMC = 20;           //LV15  Resist MagiC                  レジスト マジック
@@ -203,6 +202,7 @@ public interface Common {
     final int E_FWE = 166;          //LV60  Focus WavE                    フォーカス ウェーブ(基本エンチャントの2段加速で実装)
     final int E_SSM = 172;          //LV60  Sand StorM                    サンド ストーム(基本エンチャントの2段加速で実装)
     //LV5魔法    合計20種類
+    final int E_BST = 309;          //LV90  Burning ShoT                  バーニング ショット
     final int E_ELY = 57;           //LV75  ELvengravitY                  エルヴン グラヴィティー
     final int E_ASE = 152;          //LV75  Area SilencE                  エリア サイレンス
     final int E_GEL = 153;          //LV75  Greater ElementaL             グレーター エレメンタル
@@ -222,17 +222,14 @@ public interface Common {
     final int E_INO = 86;           //LV80  INfernO                       インフェルノ
     final int E_MSD = 150;          //LV85  Magic ShielD                  マジック シールド
     final int E_LIN = 149;          //LV85  LIberatioN                    リベレーション
-    final int E_ESE = 148;          //LV85  Elven StrikE                  エルブンストライク
-    //パッシブ    合計3種類
+    //パッシブ    合計5種類
     final int E_RET = 19;           //LV30  Resist ElemenT                レジスト エレメント
     final int E_GEH = 113;          //LV85  Glory EartH                   グローリーアース
     final int E_BSL = 158;          //LV45  Bloody SouL                   ブラッディ ソウル
-    //[UP待ち]    合計3種類
-    final int E_BST = 309;          //LV90  Burning ShoT                  [UP待ち]バーニングショット
-    final int E_SBA = 310;          //LV85  Seoul Barrier Armor           [UP待ち]ソウルバリア:アーマー
-    final int E_SGS = 311;          //LV85  Striker Gail:Shot             [UP待ち]ストライカーゲイル:ショット
+    final int E_SBA = 310;          //LV85  Seoul Barrier Armor           ソウル バリア:アーマー
+    final int E_SGS = 148;          //LV85  Striker Gail:Shot             ストライカー ゲイル:ショット
 
-//ウィザードの魔法  8+8+7+8+8+8+8+8+8+8+3+7=89    合計89種類
+//ウィザードの魔法  8+8+7+8+8+8+8+8+8+7+3+8=89    合計89種類
     //アクティブスキル
     //LV1魔法    合計8種類
     final int W_HEL = 228;          //LV8   HEaL                          ヒール
@@ -262,7 +259,7 @@ public interface Common {
     final int W_WEL = 248;          //LV24  Week ElementaL                ウィーク エレメンタル
     //LV4魔法    合計8種類
     final int W_FIL = 249;          //LV32  FIrebalL                      ファイアー ボール
-    final int W_PED = 250;          //LV32  Physical Enchant:DEX          フィジカル エンチャント:DEX
+    final int W_PED = 250;          //LV32  Physical Enchant:DEX          フィジカル エンチャント:DEX(基本エンチャントのDEXで実装)
     final int W_WBK = 251;          //LV32  Weapon BreaK                  ウェポン ブレイク
     final int W_VTH = 252;          //LV32  Vampiric ToucH                バンパイアリック タッチ
     final int W_THW = 253;          //LV32  THroW                         スロー
@@ -280,13 +277,13 @@ public interface Common {
     final int W_DAS = 264;          //LV40  DArknesS                      ダークネス
     //LV6魔法    合計8種類
     final int W_CZE = 265;          //LV48  Create ZombiE                 クリエイト ゾンビ
-    final int W_PES = 266;          //LV48  Physical Enchant:STR          フィジカル エンチャント:STR
+    final int W_PES = 266;          //LV48  Physical Enchant:STR          フィジカル エンチャント:STR(基本エンチャントのSTRで実装)
     final int W_HET = 267;          //LV48  HEisT                         ヘイスト(基本エンチャントの2段加速で実装)
     final int W_CAN = 268;          //LV48  CAncellatioN                  キャンセレーション
     final int W_IRN = 269;          //LV48  IRaptioN                      イラプション
     final int W_SUT = 270;          //LV48  SUnbursT                      サン バースト
     final int W_WES = 271;          //LV48  WEaknesS                      ウィークネス
-    final int W_BWN = 272;          //LV48  Breath WeapoN                 ブレス ウェポン
+    final int W_BWN = 272;          //LV48  Breath WeapoN                 ブレス ウェポン(基本エンチャントのキャラ/武器で実装)
     //LV7魔法    合計8種類
     final int W_HAL = 273;          //LV56  Heel AlL                      ヒール オール
     final int W_FAR = 102;          //LV56  Freezing ArmoR                フリージング アーマー
@@ -312,29 +309,29 @@ public interface Common {
     final int W_ITH = 289;          //LV72  Immun To Harm                 イミューン トゥ ハーム
     final int W_MTT = 290;          //LV72  Mass TeleporT                 マス テレポート
     final int W_FSM = 291;          //LV72  Fire StorM                    ファイアー ストーム
-    final int W_DPN = 292;          //LV72  Decay potion                  ディケイポーション
+    final int W_FPN = 292;          //LV72  Decay potion                  フェイタル ポーション
     final int W_CDN = 293;          //LV72  Counter DetectioN             カウンター ディテクション
-    //LV10魔法    合計8種類
+    //LV10魔法    合計7種類
     final int W_DHL = 294;          //LV80  Death Heel                    デス ヒール
     final int W_MSE = 295;          //LV80  Meteor StrikE                 メテオ ストライク
     final int W_GRN = 296;          //LV80  Greater ResurrectioN          グレーター リザレクション
     final int W_IMR = 297;          //LV80  Ice MeteoR                    アイス メテオ
     final int W_DIE = 298;          //LV80  DisIntegratE                  ディスインテグレート
     final int W_ABR = 299;          //LV80  Absolute BarrieR              アブソルート バリア
-    final int W_ADS = 24;           //LV80  ADvanced Spirits              アドバンスド スピリッツ
     final int W_ISE = 300;          //LV80  Ice SpikE                     アイス スパイク
     //LV11魔法    合計3種類
     final int W_ETY = 301;          //LV85  ETernitY                      エタニティ
     final int W_MIT = 304;          //LV85  Mas Immun To Harm             マス イミューン トゥ ハーム
-    final int W_DPR = 315;          //LVXX  Divine PRotection             ディバインプロテクション
-    //パッシブ    合計7種類
+    final int W_DPR = 315;          //LVXX  Divine PRotection             ディバイン プロテクション
+    //パッシブ    合計8種類
     final int W_IHS = 302;          //LV80  Immun to Harm: Saint          イミューン トゥ ハーム:セイント
     final int W_MAY = 303;          //LV85  Meister AccuracY              マイスター アキュラシー
     final int W_MBD = 305;          //LV85  Meditation:BeyonD             メディテーション:ビヨンド
     final int W_DNS = 316;          //LVXX  Disintegrate:NemesiS          ディスインテグレート:ネメシス
-    final int W_HWE = 317;          //LVXX  Holy Walk:Evolution           ホーリーウォーク:エボリューション(EW速度)
-    final int W_ERC = 318;          //LVXX  Ether Real Circle             エーテリアルサークル
-    final int W_GSM = 319;          //LV90  Greater Summon Monster        グレーターサモンモンスター
+    final int W_HWE = 317;          //LVXX  Holy Walk:Evolution           ホーリーウォーク:エボリューション(基本エンチャントの2段加速で実装)
+    final int W_ADS = 24;           //LV80  ADvanced Spirits              アドバンスド スピリッツ
+    final int W_ERC = 318;          //LVXX  Ether Real Circle             エテリアル サークル
+    final int W_GSM = 319;          //LV90  Greater Summon Monster        グレーター サモン モンスター
 
 //闇の精霊魔法  4+4+3+4+8=23  合計23種類
     //アクティブスキル

@@ -1,9 +1,36 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2022/04/15
+Update 4.6.2
+LSS/src/lss/Calculator.java
+LSS/src/lss/Common.java
+LSS/src/lss/UI.java
+修正
+	UIのスキル順等を見直し
+	ウィザード
+	アドバンスド スピリッツ
+		アクティブ → パッシブ
+	ディケイポーション → フェイタル ポーション
+	W_DPN = 292; → W_FPN = 292;
+
+	ナイト
+	ショック アタック
+	カウンター バリア:マスター
+	レイジング ウェポン
+
+	エルフ
+	バーニング ショット
+	ソウル バリア:アーマー
+	エルブンストライク → ストライカーゲイル：ショット
+		アクティブ → パッシブ
+	E_ESE = 148; → 削除
+	E_SGS = 311; → 148;
+	P_EOD = 320; → 311;
+		320; → 削除
+
 2022/04/13
 Update 4.6.1
-LSS/data/E.zip
 LSS/src/lss/Calculator.java
 LSS/src/lss/Common.java
 LSS/src/lss/UI.java
