@@ -1,6 +1,14 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2022/04/16
+Update 4.6.3
+LSS/data/E.zip
+LSS/src/lss/Bougu.java
+追加
+	20周年記念ベルト
+	AC:2+0/特性:意地/ポーション回復量:+2%+2/所持量増加:+1500/材質:金属/重さ:50
+
 2022/04/15
 Update 4.6.2
 LSS/src/lss/Calculator.java

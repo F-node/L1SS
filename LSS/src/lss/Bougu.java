@@ -3223,6 +3223,10 @@ if (name.contains("勇士")) {
                 }
             }
 
+            if (name.contains("20周年記念ベルト")) {
+                        op2.effect = "ポーション回復量 +2% +2,";
+            }
+
             //意地のベルト
             if (tokusei.equals("意地")) {
                 switch (enchant) {
