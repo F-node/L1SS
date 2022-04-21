@@ -1,6 +1,22 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2022/04/21
+Update 4.6.4
+LSS/src/lss/Calculator.java
+LSS/src/lss/Common.java
+LSS/src/lss/UI.java
+修正
+	https://lineage1.games/article.php?story=20211220215644567
+	各クラスHP上昇値（KR2021バランシング版）
+
+	UIのスキル順等を見直し
+	竜騎士
+
+	ウォーリア
+	バーサーカー → バーサーク
+		アクティブ → パッシブ
+
 2022/04/16
 Update 4.6.3
 LSS/data/E.zip

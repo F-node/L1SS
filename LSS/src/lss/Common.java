@@ -429,17 +429,16 @@ public interface Common {
     final int I_IGM = 44;           //LV45  Illusion[GoleM]               イリュージョン[ゴーレム]
     final int I_BBL = 194;          //LV85  Bone Break:Last               ボーン ブレイク:ラスト
 
-//ウォリアーの技術      8+8+=16　合計16種類
-    //アクティブスキル  合計8種類
+//ウォリアーの技術      7+9+=16　合計16種類
+    //アクティブスキル  合計7種類
     final int S_HOL = 213;          //LV30  HOwL                          ハウル
-    final int S_GIC = 76;           //LV60  GIgantiC                      ギガンティック
     final int S_PGP = 211;          //LV75  Power GriP                    パワー グリップ
     final int S_TOK = 212;          //LV45  TOmahawK                      トマホーク
     final int S_DEO = 210;          //LV80  DEsperadO                     デスペラード
     final int S_TRG = 115;          //LV80  Titan RisinG                  タイタン ライジング
     final int S_DEN = 208;          //LV85  DEmolitioN                    デモリッション
-    final int S_BER = 209;          //LV85  BErserkeR                     バーサーカー
-    //パッシブスキル    合計8種類
+    final int S_BEK = 209;          //LV85  BErserK                       バーサーク
+    //パッシブスキル    合計9種類
     final int S_FUY = 68;           //LV60  FUrY                          フューリー
     final int S_SLR = 214;          //LV15  SLayeR                        スレイヤー
     final int S_CRH = 67;           //LV45  CRasH                         クラッシュ
@@ -448,6 +447,7 @@ public interface Common {
     final int S_TMC = 70;           //LV75  Titan MagiC                   タイタンマジック
     final int S_TBZ = 71;           //LV80  Titan BlitZ                   タイタンブリッツ
     final int S_DAE = 215;          //LV85  Desperado:AbsolutE            デスペラード:アブソリュート
+    final int S_GIC = 76;           //LV60  GIgantiC                      ギガンティック
 
 //フェンサーの技術    合計19種類
     //  アクティブスキル

@@ -3795,10 +3795,10 @@ public class Calculator implements Common {
         }
 
         //バーサーク
-        ui.cb_buff[S_BER].setToolTipText("<html>"+ "[消費MP:--][消費HP:100]"
+        ui.cb_buff[S_BEK].setToolTipText("<html>"+ "[消費MP:--][消費HP:100]"
                                          + "<br>"+ "近距離ダメージ+20 全スキル耐性+20"
                                          + "<br>"+ "[習得レベル:85][持続時間:16秒][対象:術者][触媒:結晶体(100)]"+"</html>");
-        if (ui.cb_buff[S_BER].isSelected()) {
+        if (ui.cb_buff[S_BEK].isSelected()) {
         //スキル効果未実装
         }
 
@@ -9010,27 +9010,27 @@ buki.arrow_elementdmg=0;
 
         switch (cls) {
             case P:
-                hp = 14;
+                hp = 20;
                 mp = 3;
                 break;
             case K:
-                hp = 16;
+                hp = 28;
                 mp = 2;
                 break;
             case E:
-                hp = 15;
+                hp = 17;
                 mp = 4;
                 break;
             case W:
-                hp = 12;
+                hp = 8;
                 mp = 6;
                 break;
             case D:
-                hp = 12;
+                hp = 18;
                 mp = 4;
                 break;
             case R:
-                hp = 16;
+                hp = 25;
                 mp = 2;
                 break;
             case I:
@@ -9038,15 +9038,15 @@ buki.arrow_elementdmg=0;
                 mp = 5;
                 break;
             case S:
-                hp = 16;
+                hp = 29;
                 mp = 2;
                 break;
             case F:
-                hp = 16;
+                hp = 21;
                 mp = 2;
                 break;
             case L:
-                hp = 16;
+                hp = 31;
                 mp = 2;
                 break;
             default:
