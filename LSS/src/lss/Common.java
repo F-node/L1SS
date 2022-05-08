@@ -96,7 +96,7 @@ public interface Common {
     final int RING5 = 18;
     final int RING6 = 19;
 
-//エンチャント(0から319までの合計320個分)　UI.javaの203行目も合わせて変更必須
+//エンチャント(0から323までの合計324個分)　UI.javaの203行目も合わせて変更必須
 //基本エンチャント
     final int ACC1 = 0;             //1段加速
     final int ACC2 = 1;             //2段加速
@@ -145,7 +145,7 @@ public interface Common {
     final int P_GRE = 87;           //LV80  GRacE                         グレース
     final int P_EME = 143;          //LV80  EMpirE                        エンパイア
     final int P_PRE = 110;          //LV85  PRimE                         プライム
-    final int P_CCA = 142;          //LV85  Call Clan Advance             コールクラン アドバンス
+    final int P_CCA = 142;          //LV90  Call Clan Advance             コールクラン アドバンス
     //パッシブスキル
     final int P_AUA = 59;           //LV80  AUrA                          オーラ
     final int P_EOD = 311;          //LV80  Empire:OverlorD               エンパイア:オーバーロード
@@ -164,14 +164,14 @@ public interface Common {
     final int K_FSN = 145;          //LV85  Force StaN                    フォース スタン
     //パッシブスキル
     final int K_CBV = 73;           //LV85  Counter Barrier:Veteran       カウンター バリア:ベテラン
-    final int K_CBM = 308;          //LV86  Counter Barrier:Master        カウンター バリア:マスター
+    final int K_CBM = 308;          //LV90  Counter Barrier:Master        カウンター バリア:マスター
     final int K_RAV = 112;          //LV80  Reduction Armor:Veteran       リダクション アーマー:ベテラン
     final int K_RFE = 111;          //LV80  Raging ForcE                  レイジング フォース
     final int K_SCE = 35;           //LV55  Solid CarriagE                ソリッド キャリッジ
     final int K_PRE = 88;           //LV60  PRidE                         プライド
-    final int K_RWN = 307;          //LV88  Raging WeapoN                 レイジング ウェポン(基本エンチャントの5段加速で実装)
+    final int K_RWN = 307;          //LV90  Raging WeapoN                 レイジング ウェポン(基本エンチャントの5段加速で実装)
 
-//エルフの精霊魔法  4+1+8+11+20+5=49    合計49種類
+//エルフの精霊魔法  4+1+8+11+20+5+3=52    合計52種類
     //アクティブスキル
     //LV1魔法    合計4種類
     final int E_RMC = 20;           //LV15  Resist MagiC                  レジスト マジック
@@ -228,6 +228,10 @@ public interface Common {
     final int E_BSL = 158;          //LV45  Bloody SouL                   ブラッディ ソウル
     final int E_SBA = 310;          //LV85  Seoul Barrier Armor           ソウル バリア:アーマー
     final int E_SGS = 148;          //LV85  Striker Gail:Shot             ストライカー ゲイル:ショット
+    //未実装      合計3種類
+    final int E_VTT = 321;          //LV85  Vision TeleporT               ビジョンテレポート
+    final int E_FSE = 322;          //LV85  Fine SitE                     ファインサイト
+    final int E_TAB = 323;          //LV90  Triple Arrow:Boost            トリプルアロー:ブースト
 
 //ウィザードの魔法  8+8+7+8+8+8+8+8+8+7+3+8=89    合計89種類
     //アクティブスキル
@@ -362,7 +366,7 @@ public interface Common {
     final int D_DEN = 31;           //LV60  Dress EvasioN                 ドレス イベイジョン
     final int D_LUD = 123;          //LV85  LUcifer:Destiny               ルシファー:デスティニー
     final int D_SAD = 174;          //LV85  Shadow Armor:Destiny          シャドウ アーマー:デスティニー
-    final int D_MAM = 173;          //LV85  Moving Acceleration:Maximum   ムービング アクセレーション:マキシマム
+    final int D_MAM = 173;          //LV85  Moving Acceleration:Maximum   ムービング アクセレーション:マキシマム(基本エンチャントの2段加速で実装)
 
 //竜騎士の秘技    4+4+4+2+8=合計22種類
     //アクティブスキル
@@ -467,9 +471,10 @@ public interface Common {
     final int F_PID = 106;          //LV60  Infinity:BlooD                インフィニティ:ブラッド
     final int F_PIZ = 104;          //LV75  Infinity:BlitZ                インフィニティ:ブリッツ
     final int F_PPX = 226;          //LV75  ParadoX                       パラドックス
-    final int F_PPR = 223;          //LV80  Phantom:ReapeR                ファントム:リーパー
-    final int F_PPH = 216;          //LV80  Phantom:DeatH                 ファントム:デス
-    final int F_PPK = 224;          //LV80  Pantera:ShocK                 パンテラ:ショック
+    final int F_PPR = 223;          //LV80  Phantom:reapeR                ファントム:リーパー
+    final int F_PPM = 320;          //LV80  Phantom:requieM               ファントム:レクイエム
+    final int F_PPH = 216;          //LV80  Phantom:deatH                 ファントム:デス
+    final int F_PPK = 224;          //LV80  Pantera:shocK                 パンテラ:ショック
     final int F_PGE = 227;          //LV60  GrousE                        グロース
 
 //ランサーの槍術    合計14種類
