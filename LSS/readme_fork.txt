@@ -1,6 +1,13 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2022/05/09
+Update 4.6.6
+LSS/src/lss/Calculator.java
+修正
+	実際のキャラクターを使用して各クラスHP/MP上昇値再確認
+	(ナイト/ダークエルフ/イリュージョニストは除く)
+
 2022/05/08
 Update 4.6.5
 LSS/src/lss/Calculator.java
