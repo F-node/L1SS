@@ -1,6 +1,29 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2022/05/12
+Update 4.6.7
+LSS/src/lss/Calculator.java
+LSS/src/lss/UI.java
+修正
+	各職UIの表示内容
+
+	2021/09/08 KR-Update
+	CHAステータス(仮実装)
+	全スキル命中
+	CHA4から、ステータス4あたり全スキル命中+1増加
+	CHA12/35/45/55/60ステータスで、追加ボーナス+1
+
+	スキルディレイ減少
+	CHA7から、ステータス8あたり0.1減少
+	CHA12/25/60ステータスで、0.1追加減少
+
+	状態異常時間減少
+	CHA5から、ステータス8あたり0.1減少
+	CHA12/25/60ステータスで、0.1追加減少
+
+	*[エラー:コードが大きすぎます]対策の為、CHA35以上の処理(Calculator.java)はコメントアウト
+
 2022/05/09
 Update 4.6.6
 LSS/src/lss/Calculator.java

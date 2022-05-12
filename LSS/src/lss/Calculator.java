@@ -2525,14 +2525,13 @@ public class Calculator implements Common {
                                          + "<br>"+ "8セル内に居るPTの血盟員に、イミューントゥハームの効果"
                                          + "<br>"+ "術者と血盟員の間に障害物があると効果が無い"
                                          + "<br>"+ "イミューントゥハーム：セイントを習得していると術者はセイント、血盟員は通常の効果"
-                                         + "<br>"+ "*弱体化 15セルから8セルに"
                                          + "<br>"+ "[習得レベル:85][持続時間:最大32秒][対象:血盟員][触媒:魔力の石(8)]"+"</html>");
         if (ui.cb_buff[W_MIT].isSelected()) {
         //スキル効果未実装
         }
 
 //騎士の技術
-        //*フォーススタン
+        //フォーススタン
         ui.cb_buff[K_FSN].setToolTipText("<html>"+ "[消費MP:17][消費HP:--]"
                                          + "<br>"+ "1セル内の対象にダメージを与え、一定確率でスタン状態にする"
                                          + "<br>"+ "更に一定確率で持続時間が長い、強化スタンが発動する"
@@ -2543,7 +2542,7 @@ public class Calculator implements Common {
         //スキル効果未実装
         }
 
-        //*アブソルートブレイド
+        //アブソルートブレイド
         ui.cb_buff[K_ABE].setToolTipText("<html>"+ "[消費MP:15][消費HP:--]"
                                          + "<br>"+ "攻撃をした時に、一定確率でアブソルートバリアを破壊して強制的に解除する"
                                          + "<br>"+ "レベル80から、レベル1毎に発動率+1%(最大+8%)"
@@ -2553,7 +2552,7 @@ public class Calculator implements Common {
         //スキル効果未実装
         }
 
-        //*カウンターバリア 消費MP15/2mins
+        //カウンターバリア 消費MP15/2mins
         ui.cb_buff[K_CBR].setToolTipText("<html>"+ "[消費MP:15][消費HP:--]"
                                          + "<br>"+ "両手剣装備時 一定確率(20%)で近距離攻撃回避+反撃"
                                          + "<br>"+ "カウンターダメージは武器の([BIG打撃値]+[追加ダメージ]+[強化数])x[2]"
@@ -2567,8 +2566,7 @@ public class Calculator implements Common {
             }
         }
 
-        //ブローアタック
-        //8210行にて処理
+        //ブローアタック    8210行にて処理
 
         //バウンスアタック
         ui.cb_buff[K_BOK].setToolTipText("<html>"+ "[消費MP:10][消費HP:60]"
@@ -2582,7 +2580,7 @@ public class Calculator implements Common {
             }
         }
 
-        //*ショックスタン
+        //ショックスタン
         ui.cb_buff[K_SSN].setToolTipText("<html>"+ "[消費MP:13][消費HP:--]"
                                          + "<br>"+ "1セル内の対象にダメージを与え、一定確率でスタン状態にする"
                                          + "<br>"+ "攻撃が命中したかどうかは関係なく効果が発動する"
@@ -2604,7 +2602,7 @@ public class Calculator implements Common {
             }
         }
 
-        //*カウンターバリア:ベテラン
+        //カウンターバリア:ベテラン
         ui.cb_buff[K_CBV].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
                                          + "<br>"+ "カウンターバリアの発動率を上げる"
                                          + "<br>"+ "85レベルから1レベル毎に発動確率1%増加"
@@ -2645,8 +2643,7 @@ public class Calculator implements Common {
             }
         }
 
-        //プライド
-        //9227行にて処理
+        //プライド  9227行にて処理
 
         //ソリッドキャリッジ
         ui.cb_buff[K_SCE].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
@@ -2660,7 +2657,7 @@ public class Calculator implements Common {
             }
         }
 
-        //*ショックアタック
+        //ショックアタック
         ui.cb_buff[K_SAK].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
                                          + "<br>"+ "3セル内の対象に強力な物理的なダメージと移動速度減少"
                                          + "<br>"+ "移動速度減少時スタン成功確率増加+確率的に帰還不可効果"
@@ -2670,7 +2667,7 @@ public class Calculator implements Common {
         //スキル効果未実装
         }
 
-        //*レイジングウェポン
+        //レイジングウェポン
         ui.cb_buff[K_RWN].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
                                          + "<br>"+ "両手剣攻撃速度10%向上"
                                          + "<br>"+ "[習得レベル:90][持続時間:Passive][対象:術者]"+"</html>");
@@ -2678,7 +2675,7 @@ public class Calculator implements Common {
         //スキル効果未実装
         }
 
-        //*カウンターバリア:マスター
+        //カウンターバリア:マスター
         ui.cb_buff[K_CBM].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
                                          + "<br>"+ "カウンターバリアー発動時のHPの一定量回復"
                                          + "<br>"+ "カウンターバリアー発動を無力化するスキルの発動率を減少"
@@ -2945,8 +2942,7 @@ public class Calculator implements Common {
             }
         }
 
-        //ソウルオブフレイム
-        //5828行にて処理
+        //ソウルオブフレイム    5828行にて処理
 
         //アディショナルファイアー
         ui.cb_buff[E_AFE].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
@@ -2956,8 +2952,7 @@ public class Calculator implements Common {
         //スキル効果未実装
         }
 
-        //エレメンタルファイヤー
-        //6241行にて処理
+        //エレメンタルファイヤー    6241行にて処理
 
         //バーニングウエポン
         ui.cb_buff[E_BWN].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
@@ -3071,8 +3066,7 @@ public class Calculator implements Common {
         //スキル効果未実装
         }
 
-        //サイクロン
-        //6380行にて処理
+        //サイクロン    6380行にて処理
 
         //ストームショット
         ui.cb_buff[E_SST].setToolTipText("<html>"+ "[消費MP:30][消費HP:--]"
@@ -3093,8 +3087,7 @@ public class Calculator implements Common {
                 buff.HIT_LONG += 2;
             }
 
-        //イーグルアイ
-        //5903行にて処理
+        //イーグルアイ  5903行にて処理
 
 //精霊魔法(土)
         //アースバインド
@@ -3145,8 +3138,7 @@ public class Calculator implements Common {
             }
         }
 
-        //クエイク
-        //6396行にて処理
+        //クエイク  6396行にて処理
 
         //アースウェポン
         ui.cb_buff[E_EWN].setToolTipText("<html>"+ "[消費MP:15][消費HP:--]"
@@ -3235,14 +3227,11 @@ public class Calculator implements Common {
         //スキル効果未実装
         }
 
-        //ダブルブレイク
-        //7938行にて処理
+        //ダブルブレイク    7938行にて処理
 
-        //ダブルブレイク:デスティニー
-        //7943行にて処理
+        //ダブルブレイク:デスティニー   7943行にて処理
 
-        //アンキャニードッジ
-        //7021行にて処理
+        //アンキャニードッジ    7021行にて処理
 
         //シャドウファング
         ui.cb_buff[D_SFG].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
@@ -3284,8 +3273,7 @@ public class Calculator implements Common {
         //スキル効果未実装
         }
 
-        //バーニング スピリッツ
-        //7299行にて処理
+        //バーニング スピリッツ 7299行にて処理
 
         //シャドウスリープ
         ui.cb_buff[D_SSP].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
@@ -3400,8 +3388,7 @@ public class Calculator implements Common {
         //スキル効果未実装
         }
 
-        //リンドビオル
-        //7164行にて処理
+        //リンドビオル  7164行にて処理
 
         //モータルボディ
         ui.cb_buff[R_MBY].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
@@ -3632,20 +3619,16 @@ public class Calculator implements Common {
         //スキル効果未実装
         }
 
-        //リデュースウェイト
-        //7370行にて処理
+        //リデュースウェイト    7370行にて処理
 
-        //イリュージョン[アバター]
-        //6606行にて処理
+        //イリュージョン[アバター]  6606行にて処理
 
-        //キューブ[アバター]
-        //6616行にて処理
+        //キューブ[アバター]    6616行にて処理
 
         //ペイシェンス
         ui.cb_buff[I_PAE].setToolTipText("<html>"+ "[消費MP:25][消費HP:--]"
                                          + "<br>"+ "DR+2"
                                          + "<br>"+ "レベル80から、レベル4毎に効果が+1ずつ増加"
-                                         + "<br>"+ "*リニューアル レベル80から効果が上昇"
                                          + "<br>"+ "[習得レベル:45][持続時間:10分][対象:術者/PC]"+"</html>");
         if (ui.cb_buff[I_PAE].isSelected()) {
             buff.DR += 2;
@@ -3727,8 +3710,7 @@ public class Calculator implements Common {
             buff.AC -= 8;
         }
 
-        //ミラーイメージ
-        //7384行にて処理
+        //ミラーイメージ    7384行にて処理
 
         //コンフュージョン
         ui.cb_buff[I_CFN].setToolTipText("<html>"+ "[消費MP:15][消費HP:10]"
@@ -3817,8 +3799,7 @@ public class Calculator implements Common {
         //スキル効果未実装
         }
 
-        //ギガンティック
-        //9204行にて処理
+        //ギガンティック    9204行にて処理
 
         //トマホーク
         ui.cb_buff[S_TOK].setToolTipText("<html>"+ "[消費MP:5][消費HP:--]"
@@ -3873,14 +3854,11 @@ public class Calculator implements Common {
         //スキル効果未実装
         }
 
-        //クラッシュ
-        //6864行にて処理
+        //クラッシュ    6864行にて処理
 
-        //アーマーガード
-        //7471行にて処理
+        //アーマーガード    7471行にて処理
 
-        //フューリー
-        //6875行にて処理
+        //フューリー    6875行にて処理
 
         //デスペラード:アブソリュート
         ui.cb_buff[S_DAE].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
@@ -4022,8 +4000,7 @@ public class Calculator implements Common {
         //スキル効果未実装
         }
 
-        //インフィニティ:ドッジ
-        //7656行にて処理
+        //インフィニティ:ドッジ 7656行にて処理
 
         //グロース
         ui.cb_buff[F_PGE].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
@@ -4034,11 +4011,9 @@ public class Calculator implements Common {
         //スキル効果未実装
         }
 
-        //インフィニティ:ブラッド
-        //8214行にて処理
+        //インフィニティ:ブラッド   8214行にて処理
 
-        //レイジ
-        //7183行にて処理
+        //レイジ    7183行にて処理
 
         //インフィニティ:アーマー
         ui.cb_buff[F_PIR].setToolTipText("<html>"+ "[消費MP:--][消費HP:--]"
@@ -6817,8 +6792,7 @@ public class Calculator implements Common {
             }
         }
 
-        //ブレイブメンタル
-        //6213行にて処理
+        //ブレイブメンタル  6213行にて処理
         
         //グローイングウェポン
         ui.cb_buff[P_GWN].setToolTipText("<html>"+ "[消費MP:20][消費HP:--]"
@@ -7224,20 +7198,14 @@ public class Calculator implements Common {
             _ST[ENCHANT][i] = buff.ST[i];
         }
 
-        int str = _ST[BASE][STR] + _ST[REM][STR] + _ST[LEVEL][STR]
-                + _ST[ENCHANT][STR] + _ST[ELIXIR][STR];
-        int pure_str = _ST[BASE][STR] + _ST[REM][STR]
-                + _ST[LEVEL][STR] + _ST[ELIXIR][STR];
+        int str = _ST[BASE][STR] + _ST[REM][STR] + _ST[LEVEL][STR] + _ST[ENCHANT][STR] + _ST[ELIXIR][STR];
+        int pure_str = _ST[BASE][STR] + _ST[REM][STR] + _ST[LEVEL][STR] + _ST[ELIXIR][STR];
 
-        int dex = _ST[BASE][DEX] + _ST[REM][DEX] + _ST[LEVEL][DEX]
-                + _ST[ENCHANT][DEX] + _ST[ELIXIR][DEX];
-        int pure_dex = _ST[BASE][DEX] + _ST[REM][DEX]
-                + _ST[LEVEL][DEX] + _ST[ELIXIR][DEX];
+        int dex = _ST[BASE][DEX] + _ST[REM][DEX] + _ST[LEVEL][DEX] + _ST[ENCHANT][DEX] + _ST[ELIXIR][DEX];
+        int pure_dex = _ST[BASE][DEX] + _ST[REM][DEX] + _ST[LEVEL][DEX] + _ST[ELIXIR][DEX];
 
-        int _int = _ST[BASE][INT] + _ST[REM][INT] + _ST[LEVEL][INT]
-                + _ST[ENCHANT][INT] + _ST[ELIXIR][INT];
-        int pure_int = _ST[BASE][INT] + _ST[REM][INT]
-                + _ST[LEVEL][INT] + _ST[ELIXIR][INT];
+        int _int = _ST[BASE][INT] + _ST[REM][INT] + _ST[LEVEL][INT] + _ST[ENCHANT][INT] + _ST[ELIXIR][INT];
+        int pure_int = _ST[BASE][INT] + _ST[REM][INT] + _ST[LEVEL][INT] + _ST[ELIXIR][INT];
 
         //追加ダメージ
         base_dmg_short = (int) (str / 2 - 2) + (int) (level / _C[D_SHORT][STR][cls]);
@@ -7333,7 +7301,6 @@ public class Calculator implements Common {
         dmg_short = base_dmg_short + buff.DMG_SHORT;
         dmg_long = base_dmg_long + buff.DMG_LONG;
         dmg_magic = base_dmg_magic + buff.DMG_MAGIC;
-        //sp = buff.SP + buki.op.SP + buki2.op.SP;
         sp = buff.SP + buki.op.SP + buki.op2.SP;
         pvp_dg = buff.PVP + buki.op.PVP + buki.op2.PVP;
         pvp_dgr = buff.PVP_DR + buki.op.PVP_DR + buki.op2.PVP_DR;        
@@ -7353,12 +7320,10 @@ public class Calculator implements Common {
         cri_long += buki.op.CRI_LONG + buki.op2.CRI_LONG + buff.CRI_LONG;
         cri_magic += buki.op.CRI_MAGIC + buki.op2.CRI_MAGIC+ buff.CRI_MAGIC;
         
-        int st_int = _ST[BASE][INT] + _ST[REM][INT] + _ST[LEVEL][INT]
-                + _ST[ENCHANT][INT] + _ST[ELIXIR][INT];
+        int st_int = _ST[BASE][INT] + _ST[REM][INT] + _ST[LEVEL][INT] + _ST[ENCHANT][INT] + _ST[ELIXIR][INT];
 
         //スペルパワー更新
         int_beta = sp + st_int;
-        
         spr = sp + ml + mb;
         
         //マジックレベル更新
@@ -7466,7 +7431,6 @@ public class Calculator implements Common {
 
         // 武器オプション,武器強化数,エンチャント
         hit_short += buki.op.HIT_SHORT + buki.enchant / 2 + buff.HIT_SHORT;
-        //hit_long += buki.op.HIT_LONG + buki.enchant / 2 + buff.HIT_LONG + buff.HIT_SHORT;
         hit_long += buki.arrow_hit + buki.op.HIT_LONG + buki.enchant / 2 + buff.HIT_LONG;
 
         buki.arrow_hit=0;
@@ -7589,7 +7553,6 @@ buki.arrow_elementdmg=0;
         double dmg_big_ave;
         double dmg_small_max = 0;
         double dmg_big_max = 0;
-
         double dmg_small_ave2;
         double dmg_big_ave2;
         double dmg_small_max2;
@@ -7842,7 +7805,6 @@ buki.arrow_elementdmg=0;
         double mag_dmg_min = 0.0;
         double hit_rate = hit;
 
-//        ui.mp_syouhi.setText("0 /min");
         if (ui.cb_magic.getSelectedItem() != null) {
             double mag_dmg;
             double mag_delay;
@@ -8502,19 +8464,17 @@ buki.arrow_elementdmg=0;
         ui.lab_pvp_dg.setText("PVP追加ダメージ : " + pvp_dg);
         ui.lab_pvp_dgr.setText("PVPダメージ低下 : " + pvp_dgr);
 
-        ui.pure_status_bonus[1][0].setText(Integer.toString(base_dmg_short));   //近距離ダメージ
-        ui.pure_status_bonus[1][1].setText(Integer.toString(base_hit_short));   //近距離命中
-        ui.pure_status_bonus[1][2].setText(Integer.toString(cri_short));        //近距離クリティカル
-
-        ui.pure_status_bonus[1][5].setText(Integer.toString(base_dmg_long));    //遠距離ダメージ
-        ui.pure_status_bonus[1][6].setText(Integer.toString(base_hit_long));    //遠距離命中
-        ui.pure_status_bonus[1][7].setText(Integer.toString(cri_long));         //遠距離クリティカル
-
-        ui.pure_status_bonus[1][10].setText(Integer.toString(base_dmg_magic));  //魔法ダメージ
-        ui.pure_status_bonus[1][11].setText(Integer.toString(base_hit_magic));  //魔法命中
-        ui.pure_status_bonus[1][12].setText(Integer.toString(cri_magic));       //魔法クリティカル
-        ui.pure_status_bonus[1][13].setText(Integer.toString(mb));              //MB
-        ui.pure_status_bonus[1][14].setText((Integer.toString(red_mp)));        //MP消費減少
+        ui.pure_status_bonus[1][0].setText(Integer.toString(base_dmg_short));   //[0][0]近距離ダメージ
+        ui.pure_status_bonus[1][1].setText(Integer.toString(base_hit_short));   //[0][1]近距離命中
+        ui.pure_status_bonus[1][2].setText(Integer.toString(cri_short));        //[0][2]近距離クリティカル
+        ui.pure_status_bonus[1][6].setText(Integer.toString(base_dmg_long));    //[0][6]遠距離ダメージ
+        ui.pure_status_bonus[1][7].setText(Integer.toString(base_hit_long));    //[0][7]遠距離命中
+        ui.pure_status_bonus[1][8].setText(Integer.toString(cri_long));         //[0][8]遠距離クリティカル
+        ui.pure_status_bonus[1][12].setText(Integer.toString(base_dmg_magic));  //[0][12]魔法ダメージ
+        ui.pure_status_bonus[1][13].setText(Integer.toString(base_hit_magic));  //[0][13]魔法命中
+        ui.pure_status_bonus[1][14].setText(Integer.toString(cri_magic));       //[0][14]魔法クリティカル
+        ui.pure_status_bonus[1][15].setText(Integer.toString(mb));              //[0][15]魔法ボーナス(MB)
+        ui.pure_status_bonus[1][16].setText((Integer.toString(red_mp)));        //[0][16]MP消費減少
 
         equip_ac = 0;
 
@@ -8576,8 +8536,8 @@ buki.arrow_elementdmg=0;
 //ERの計算式
         base_er = (int) (dex / 2) + (int) (level / _C[ER][DEX][cls]);
 
-        ui.pure_status_bonus[1][8].setText(Integer.toString(base_ac));          //AC
-        ui.pure_status_bonus[1][9].setText(Integer.toString(base_er));          //ER
+        ui.pure_status_bonus[1][9].setText(Integer.toString(base_ac));          //[0][9]物理防御力(AC)
+        ui.pure_status_bonus[1][10].setText(Integer.toString(base_er));         //[0][10]遠距離回避力(ER)
 
         ac = base_ac + buff.AC + equip_ac;
         dg = base_dg + buff.DG;
@@ -8688,8 +8648,7 @@ buki.arrow_elementdmg=0;
         ui.lab_mb.setText(Integer.toString(mb));
         ui.lab_spr.setText(Integer.toString(spr));
 
-        int con = _ST[BASE][CON] + _ST[REM][CON] + _ST[LEVEL][CON]
-                + _ST[ELIXIR][CON] + _ST[ENCHANT][CON];
+        int con = _ST[BASE][CON] + _ST[REM][CON] + _ST[LEVEL][CON] + _ST[ELIXIR][CON] + _ST[ENCHANT][CON];
         double r_eq = 0;
 
         for (Bougu bougu1 : bougu) {
@@ -8700,8 +8659,8 @@ buki.arrow_elementdmg=0;
 
         int weight = (int) ((str + con) / 2) * 100 + 1000;
 
-        ui.pure_status_bonus[1][3].setText(Integer.toString(weight));           //最大所持重量
-        ui.pure_status_bonus[1][23].setText(Integer.toString(weight));          //最大所持重量
+        ui.pure_status_bonus[1][3].setText(Integer.toString(weight));           //[0][3]最大所持重量(STR側)
+        ui.pure_status_bonus[1][27].setText(Integer.toString(weight));          //[0][27]最大所持重量(CON側)
 
         weight *= 1 + r_eq;
 
@@ -8777,11 +8736,10 @@ buki.arrow_elementdmg=0;
             default:
                 break;
         }
-        int wis = _ST[BASE][WIS] + _ST[REM][WIS] + _ST[LEVEL][WIS]
-                + _ST[ELIXIR][WIS] + _ST[ENCHANT][WIS];
+        int wis = _ST[BASE][WIS] + _ST[REM][WIS] + _ST[LEVEL][WIS] + _ST[ELIXIR][WIS] + _ST[ENCHANT][WIS];
 
         mr = minasToZero(wis - 10) * 4 + (int) (level / 2) + _C[MR][WIS][cls];
-        ui.pure_status_bonus[1][18].setText(Integer.toString(mr));              //MR
+        ui.pure_status_bonus[1][21].setText(Integer.toString(mr));              //[0][21]魔法防御力(MR)
         mr += buff.MR;
         mr += buki.op.MR + buki2.op.MR;
         for (Bougu bougu1 : bougu) {
@@ -8817,10 +8775,8 @@ buki.arrow_elementdmg=0;
 
         int hpr = 0;
         int mpr = 0;
-        int pure_con = _ST[BASE][CON] + _ST[REM][CON] + _ST[LEVEL][CON]
-                + _ST[ELIXIR][CON];
-        int pure_wis = _ST[BASE][WIS] + _ST[REM][WIS] + _ST[LEVEL][WIS]
-                + _ST[ELIXIR][WIS];
+        int pure_con = _ST[BASE][CON] + _ST[REM][CON] + _ST[LEVEL][CON] + _ST[ELIXIR][CON];
+        int pure_wis = _ST[BASE][WIS] + _ST[REM][WIS] + _ST[LEVEL][WIS] + _ST[ELIXIR][WIS];
 
         int hp_pot;
 
@@ -8833,7 +8789,7 @@ buki.arrow_elementdmg=0;
                 //mpr += (wis - 10) / 2;
                 //ui.pure_status_bonus[1][22].setText(Integer.toString((wis - 10) / 2));
                 mpr += (wis - 8) / 2;
-                ui.pure_status_bonus[1][17].setText(Integer.toString((wis - 8) / 2));   //MPR
+                ui.pure_status_bonus[1][20].setText(Integer.toString((wis - 8) / 2));   //[0][20]MPポーション回復
             } else {
                 mpr++;
             }
@@ -8844,7 +8800,7 @@ buki.arrow_elementdmg=0;
         mpr += tmp;
         if (pure_wis >= 25) {
             if (ui.cb_buff[ITEM_BLUE].isSelected()) {
-                ui.pure_status_bonus[1][17].setText(Integer.toString(1));
+                ui.pure_status_bonus[1][20].setText(Integer.toString(1));       //[0][20]MPポーション回復
                 mpr++;
             }
             mpr++;                          //MP回復+1
@@ -8853,7 +8809,7 @@ buki.arrow_elementdmg=0;
         }
         if (pure_wis >= 35) {
             if (ui.cb_buff[ITEM_BLUE].isSelected()) {
-                ui.pure_status_bonus[1][17].setText(Integer.toString(2));
+                ui.pure_status_bonus[1][20].setText(Integer.toString(2));       //[0][20]MPポーション回復
                 mpr++;
             }
             mpr++;                          //MP回復+1
@@ -8862,7 +8818,7 @@ buki.arrow_elementdmg=0;
         }
         if (pure_wis >= 45) {
             if (ui.cb_buff[ITEM_BLUE].isSelected()) {
-                ui.pure_status_bonus[1][17].setText(Integer.toString(5));
+                ui.pure_status_bonus[1][20].setText(Integer.toString(5));       //[0][20]MPポーション回復
                 mpr += 3;
             }
             mpr += 3;                       //MP回復+3
@@ -8871,7 +8827,7 @@ buki.arrow_elementdmg=0;
         }
         if (pure_wis >= 55) {
             if (ui.cb_buff[ITEM_BLUE].isSelected()) {
-                ui.pure_status_bonus[1][17].setText(Integer.toString(15));
+                ui.pure_status_bonus[1][20].setText(Integer.toString(15));      //[0][20]MPポーション回復
                 mpr += 5;
             }
             mpr += 5;                       //MP回復+5
@@ -8880,7 +8836,7 @@ buki.arrow_elementdmg=0;
         }
         if (pure_wis >= 60) {
             if (ui.cb_buff[ITEM_BLUE].isSelected()) {
-                ui.pure_status_bonus[1][17].setText(Integer.toString(20));
+                ui.pure_status_bonus[1][20].setText(Integer.toString(20));      //[0][20]MPポーション回復
                 mpr += 5;
             }
             mpr += 5;                       //MP回復+5
@@ -8888,7 +8844,7 @@ buki.arrow_elementdmg=0;
                                             //最大MP+200は8448行目以降で処理
         }
 
-        ui.pure_status_bonus[1][16].setText(Integer.toString(tmp));             //MP増加
+        ui.pure_status_bonus[1][19].setText(Integer.toString(tmp));             //[0][19]MP回復(Tick)
 
 //CON:
         hpr += (con / 2 + level / 20);
@@ -8919,9 +8875,51 @@ buki.arrow_elementdmg=0;
                                             //最大HP+200は8438行目以降で処理
         }
 
-        ui.pure_status_bonus[1][21].setText(Integer.toString(hpr));             //HP増加
-        ui.pure_status_bonus[1][22].setText(Integer.toString(hp_pot));          //HPポーション
+        ui.pure_status_bonus[1][25].setText(Integer.toString(hpr));             //[0][25]HP回復(Tick)
+        ui.pure_status_bonus[1][26].setText(Integer.toString(hp_pot));          //[0][26]HPポーション回復
 
+        //CHA:
+        int cha = _ST[BASE][CHA] + _ST[REM][CHA] + _ST[LEVEL][CHA] + _ST[ELIXIR][CHA] + _ST[ENCHANT][CHA];
+        int pure_cha = _ST[BASE][CHA] + _ST[REM][CHA] + _ST[LEVEL][CHA] + _ST[ELIXIR][CHA];
+        int skill_hit;
+        int skill_time;
+        int jyoutai_time;
+        
+        skill_hit = (int) (minasToZero(cha - 4) / 4);
+        skill_time = (int) (minasToZero(cha - 7) / 8);
+        jyoutai_time = (int) (minasToZero(cha - 5) / 8);
+
+        if (pure_cha >= 12) {
+            skill_time++;                   //スキルクールタイム減少
+            jyoutai_time++;                 //状態異常時間の短縮
+            skill_hit++;                    //スキル命中上昇
+        }
+        if (pure_cha >= 25) {
+            skill_time++;                   //スキルクールタイム減少
+            jyoutai_time++;                 //状態異常時間の短縮
+        }
+        //if (pure_cha >= 35) {
+        //    skill_hit++;                    //スキル命中上昇
+        //}
+        //if (pure_cha >= 45) {
+        //    skill_hit++;                    //スキル命中上昇
+        //}
+        //if (pure_cha >= 55) {
+        //    skill_hit++;                    //スキル命中上昇
+        //}
+        //if (pure_cha >= 60) {
+        //    skill_hit++;                    //スキル命中上昇
+        //    skill_time++;                   //スキルクールタイム減少
+        //    jyoutai_time++;                 //状態異常時間の短縮
+        //}
+
+        ui.pure_status_bonus[1][30].setText(Integer.toString(skill_hit));       //[0][30]技術命中
+        ui.pure_status_bonus[1][31].setText(Integer.toString(skill_hit));       //[0][31]精霊命中
+        ui.pure_status_bonus[1][32].setText(Integer.toString(skill_hit));       //[0][32]秘技命中
+        ui.pure_status_bonus[1][33].setText(Integer.toString(skill_hit));       //[0][33]恐怖命中
+        ui.pure_status_bonus[1][34].setText("0." + skill_time);                 //[0][34]スキルクールタイム減少
+        ui.pure_status_bonus[1][35].setText("0." + jyoutai_time);               //[0][35]状態異常時間の短縮
+        
         hpr += buff.HPR;
         mpr += buff.MPR;
 
@@ -9033,8 +9031,6 @@ buki.arrow_elementdmg=0;
         }
 
 //種族が増えた場合配列を1つ増やす必要あり c1とc2の値が不明　mpの量を決定する為の値と思われる
-//        double[] c1 = {1.0, 2.0 / 3.0, 1.5, 2.0, 1.5, 0.7, 1.7, 2.0 / 3.0};
-//        int[] c2 = {1, 0, 1, 2, 1, 1, 1, 0};
 //                  P/ K/ E/ W/ D/ R/ I/ S/ F/ L
         double[] c1 = {1.0, 2.0 / 3.0, 1.5, 2.0, 1.5, 0.7, 1.7, 1.0 / 3.0, 2.0 / 3.0, 2.0 / 3.0};
         int[] c2 = {1, 0, 1, 2, 1, 1, 1, 0, 1, 1};
@@ -9076,19 +9072,19 @@ buki.arrow_elementdmg=0;
             int min = 1 + minasToZero(con - 12) + _C[HP][CON][cls];
             int max = 2 + minasToZero(con - 12) + _C[HP][CON][cls];
 
-            ui.pure_status_bonus[1][20].setText(min + " - " + max);             //HP増加
+            ui.pure_status_bonus[1][24].setText(min + " - " + max);             //[0][24]LVアップ時HP増加
         } else {
             int min = 1 + (int) ((con + 1) / 2) + _C[HP][CON][cls];
             int max = 2 + (int) ((con + 1) / 2) + _C[HP][CON][cls];
 
-            ui.pure_status_bonus[1][20].setText(min + " - " + max);             //HP増加
+            ui.pure_status_bonus[1][24].setText(min + " - " + max);             //[0][24]LVアップ時HP増加
         }
 
         {
             int min = (int) ((int) (wis / 5) * c1[cls]) + c2[cls];
             int max = (int) ((int) (wis / 3) * c1[cls]) + c2[cls];
 
-            ui.pure_status_bonus[1][15].setText(min + " - " + max);             //MP増加
+            ui.pure_status_bonus[1][18].setText(min + " - " + max);             //[0][18]LVアップ時MP増加
         }
 
 //CONステータスによるHP増加処理

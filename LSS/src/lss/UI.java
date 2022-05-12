@@ -164,7 +164,6 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
 
     JTextField tf_weight;
     JTextField tf_weight2;
-//    JCheckBox cb_weight_auto;
     JComboBox cb_weight;
     JTextField tf_speed;
     JTextField tf_acc;
@@ -191,9 +190,9 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
     JLabel[] lab_ailment = new JLabel[AILMENT_LIST.length];
 
     //パネル2
-    //pure_status_bonus[0][0]から[0][24]までの登録と[1][0]から[1][24]までの登録
+    //pure_status_bonus[0][0]から[0][24]までの登録と[1][0]から[1][35]までの36個分の登録
     //JLabel[][] pure_status_bonus = new JLabel[2][25];
-    JLabel[][] pure_status_bonus = new JLabel[2][30];
+    JLabel[][] pure_status_bonus = new JLabel[2][36];
 
     JComboBox[] cb_elixir = new JComboBox[20];              //エリクサの最大MAX20個
     JComboBox[] cb_elixir_level = new JComboBox[20];        //エリクサーのLV
@@ -240,8 +239,6 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
     }
 
     //表記の修正(y_ikedaさんの修正より)
-    //ArrayList<ZipEntry> arrow_entrys = new ArrayList();
-    //ArrayList<ZipEntry> sting_entrys = new ArrayList();
     ArrayList<ZipEntry> arrow_entrys = new ArrayList<>();
     ArrayList<ZipEntry> sting_entrys = new ArrayList<>();
 
@@ -1008,11 +1005,6 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_weight.addActionListener(this);
         panels[0].add(cb_weight);
 
-//        cb_weight_auto = new JCheckBox("自動入力");
-//        cb_weight_auto.setSelected(true);
-//        cb_weight_auto.setBounds(420 + 280, 380 + 25 + 20, 80, 25);
-//        panels[0].add(cb_weight_auto);
-//        cb_weight_auto.addActionListener(this);
         lab_tmp = new JLabel("属性抵抗");
         lab_tmp.setBounds(420+60, 520, 100, 20);
         panels[0].add(lab_tmp);
@@ -1025,7 +1017,7 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         for (int i = 0, cnt = 0; i < ELEM_LIST.length; i++, cnt++) {
             lab_elem[i] = new JLabel();
             //幅100から120へ変更
-            lab_elem[i].setBounds(420+60 + 80 + 120 * (cnt % 2), 520 + 20 * (cnt / 2), 100, 20);
+            lab_elem[i].setBounds(420 + 60 + 80 + 120 * (cnt % 2), 520 + 20 * (cnt / 2), 100, 20);
             panels[0].add(lab_elem[i]);
         }
         //技術/精霊/秘技/恐怖命中と技術/精霊/秘技/恐怖耐性の表示
@@ -1055,51 +1047,57 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         //初期設定だとCHAも含めて表示 (ST_LIST.length -1)にすることによりfor分がステ-1回分の表示となりCHAは表示されない
         //for (int i = 0; i < (ST_LIST.length -1); i++) {
             JLabel lab4 = new JLabel(ST_LIST[i], SwingConstants.CENTER);
-            lab4.setBounds(30 + 150 * i, 195, 100, 20);
+            lab4.setBounds(30 + 160 * i, 195, 100, 20);
             panels[1].add(lab4);
         }
-        //pure_status_bonus[0][0]から[0][24]までの登録　192行で最大数指定
+        //pure_status_bonus[0][0]から[0][35]までの登録　192行で最大数指定
         pure_status_bonus[0][0] = new JLabel("近距離ダメージ");
         pure_status_bonus[0][1] = new JLabel("近距離命中");
         pure_status_bonus[0][2] = new JLabel("近距離クリティカル");
         pure_status_bonus[0][3] = new JLabel("最大所持重量");
         pure_status_bonus[0][4] = new JLabel("");
+        pure_status_bonus[0][5] = new JLabel("");
 
-        pure_status_bonus[0][5] = new JLabel("遠距離ダメージ");
-        pure_status_bonus[0][6] = new JLabel("遠距離命中");
-        pure_status_bonus[0][7] = new JLabel("遠距離クリティカル");
-        pure_status_bonus[0][8] = new JLabel("物理防御力(AC)");
-        pure_status_bonus[0][9] = new JLabel("遠距離回避力(ER)");
+        pure_status_bonus[0][6] = new JLabel("遠距離ダメージ");
+        pure_status_bonus[0][7] = new JLabel("遠距離命中");
+        pure_status_bonus[0][8] = new JLabel("遠距離クリティカル");
+        pure_status_bonus[0][9] = new JLabel("物理防御力(AC)");
+        pure_status_bonus[0][10] = new JLabel("遠距離回避力(ER)");
+        pure_status_bonus[0][11] = new JLabel("");
 
-        pure_status_bonus[0][10] = new JLabel("魔法ダメージ");
-        pure_status_bonus[0][11] = new JLabel("魔法命中");
-        pure_status_bonus[0][12] = new JLabel("魔法クリティカル");
-        pure_status_bonus[0][13] = new JLabel("魔法ボーナス(MB)");
-        pure_status_bonus[0][14] = new JLabel("MP消費減少");
+        pure_status_bonus[0][12] = new JLabel("魔法ダメージ");
+        pure_status_bonus[0][13] = new JLabel("魔法命中");
+        pure_status_bonus[0][14] = new JLabel("魔法クリティカル");
+        pure_status_bonus[0][15] = new JLabel("魔法ボーナス(MB)");
+        pure_status_bonus[0][16] = new JLabel("MP消費減少");
+        pure_status_bonus[0][17] = new JLabel("");
 
-        pure_status_bonus[0][15] = new JLabel("LVアップ時MP増加");
-        pure_status_bonus[0][16] = new JLabel("MP回復(Tick)");
-        pure_status_bonus[0][17] = new JLabel("MPポーション回復");
-        pure_status_bonus[0][18] = new JLabel("魔法防御力(MR)");
-        pure_status_bonus[0][19] = new JLabel("");
+        pure_status_bonus[0][18] = new JLabel("LVアップ時MP増加");
+        pure_status_bonus[0][19] = new JLabel("MP回復(Tick)");
+        pure_status_bonus[0][20] = new JLabel("MPポーション回復");
+        pure_status_bonus[0][21] = new JLabel("魔法防御力(MR)");
+        pure_status_bonus[0][22] = new JLabel("");
+        pure_status_bonus[0][23] = new JLabel("");
 
-        pure_status_bonus[0][20] = new JLabel("LVアップ時HP増加");
-        pure_status_bonus[0][21] = new JLabel("HP回復(Tick)");
-        pure_status_bonus[0][22] = new JLabel("HPポーション回復");
-        pure_status_bonus[0][23] = new JLabel("最大所持重量");
-        pure_status_bonus[0][24] = new JLabel("");
-
-        pure_status_bonus[0][25] = new JLabel("");
-        pure_status_bonus[0][26] = new JLabel("");
-        pure_status_bonus[0][27] = new JLabel("");
+        pure_status_bonus[0][24] = new JLabel("LVアップ時HP増加");
+        pure_status_bonus[0][25] = new JLabel("HP回復(Tick)");
+        pure_status_bonus[0][26] = new JLabel("HPポーション回復");
+        pure_status_bonus[0][27] = new JLabel("最大所持重量");
         pure_status_bonus[0][28] = new JLabel("");
         pure_status_bonus[0][29] = new JLabel("");
+
+        pure_status_bonus[0][30] = new JLabel("技術命中");
+        pure_status_bonus[0][31] = new JLabel("精霊命中");
+        pure_status_bonus[0][32] = new JLabel("秘技命中");
+        pure_status_bonus[0][33] = new JLabel("恐怖命中");
+        pure_status_bonus[0][34] = new JLabel("スキルディレイ減少");
+        pure_status_bonus[0][35] = new JLabel("状態異常時間減少");
 
         for (int i = 0; i < pure_status_bonus[0].length; i++) {
 
             pure_status_bonus[1][i] = new JLabel("0");
-            pure_status_bonus[0][i].setBounds(30 + 150 * (i / 5), 220 + 20 * (i % 5), 100, 20);
-            pure_status_bonus[1][i].setBounds(130 + 150 * (i / 5), 220 + 20 * (i % 5), 50, 20);
+            pure_status_bonus[0][i].setBounds(30 + 160 * (i / 6), 220 + 20 * (i % 6), 130, 20);
+            pure_status_bonus[1][i].setBounds(140 + 160 * (i / 6), 220 + 20 * (i % 6), 50, 20);
             if (pure_status_bonus[0][i].getText().isEmpty()) {
                 continue;
             }
@@ -1107,7 +1105,7 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
             panels[1].add(pure_status_bonus[1][i]);
         }
 
-        lev.put(panels[1], 0, 330);
+        lev.put(panels[1], 0, 340);
         lev.addActionListener(this);
         lev.setSelfCheck();
 
