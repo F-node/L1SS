@@ -216,7 +216,7 @@ public class Bougu implements Common {
             text += "PVPダメージ低下: +" + (op.PVP_DR + op2.PVP_DR)+ "<br>";
         }
         if (op.MEXP + op2.MEXP > 0) {
-            text += "EXP: +" + (op.MEXP + op2.MEXP) + "%"+ "<br>";
+            text += "経験値ボーナス: +" + (op.MEXP + op2.MEXP) + "%"+ "<br>";
         }
         if (op.c_weight + op2.c_weight > 0) {
             text += "所持重量増加: +" + (op.c_weight + op2.c_weight)+ "<br>";
@@ -1087,9 +1087,27 @@ public class Bougu implements Common {
             if (enchant >= 9) {
                 op2.ST[STR] = 1;
             }
-            //+10強化オプション[最大HP+80]
             if (enchant >= 10) {
                 op2.HP = 80;
+            }
+        }
+
+            if (name.equals("祝福された血戦のグリーヴ")) {
+            if (enchant >= 8) {
+                op2.AC = -3;
+                op2.ST[WIS] = 1;
+                op2.HP = 35;
+                op2.MP = 20;
+                op2.HPR = 5;
+            }
+            if (enchant >= 9) {
+                op2.ST[STR] = 1;
+                op2.HP = 40;
+                op2.HPR = 6;
+            }
+            if (enchant >= 10) {
+                op2.HP = 100;
+                op2.HPR = 8;
             }
         }
 
@@ -1109,9 +1127,27 @@ public class Bougu implements Common {
             if (enchant >= 9) {
                 op2.ST[DEX] = 1;
             }
-            //+10強化オプション[最大HP+80]
             if (enchant >= 10) {
                 op2.HP = 80;
+            }
+        }
+
+        if (name.equals("祝福された血戦のブーツ")) {
+            if (enchant >= 8) {
+                op2.AC = -3;
+                op2.ST[WIS] = 1;
+                op2.HP = 35;
+                op2.MP = 20;
+                op2.HPR = 5;
+            }
+            if (enchant >= 9) {
+                op2.ST[DEX] = 1;
+                op2.HP = 40;
+                op2.HPR = 6;
+            }
+            if (enchant >= 10) {
+                op2.HP = 100;
+                op2.HPR = 8;
             }
         }
 
@@ -1131,9 +1167,28 @@ public class Bougu implements Common {
             if (enchant >= 9) {
                 op2.ST[INT] = 1;
             }
-            //+10強化オプション[最大HP+80]
             if (enchant >= 10) {
                 op2.HP = 80;
+            }
+        }
+
+        if (name.equals("祝福された血戦のバスキン")) {
+            if (enchant >= 8) {
+                op2.AC = -3;
+                op2.ST[WIS] = 1;
+                op2.HP = 35;
+                op2.MP = 20;
+                op2.HPR = 5;
+            }
+            if (enchant >= 9) {
+                op2.ST[INT] = 1;
+                op2.MP = 25;
+                op2.HPR = 6;
+            }
+            if (enchant >= 10) {
+                op2.HP = 90;
+                op2.MP = 30;
+                op2.HPR = 8;
             }
         }
 
@@ -1344,6 +1399,27 @@ public class Bougu implements Common {
             }
         }
 
+        if (name.equals("祝福された血戦のマント")) {
+            if (enchant >= 8) {
+                op2.AC = -3;
+                op2.DR = 1;
+                op2.MR = 22;
+                op2.HP = 40;
+                op2.MP = 40;
+                op2.MEXP = 4;                                                   //経験値ボーナス+4%
+            }
+            if (enchant >= 9) {
+                op2.ST[STR] = 1;
+                op2.MEXP = 6;                                                   //経験値ボーナス+6%
+            }
+            if (enchant >= 10) {
+                op2.DR = 2;
+                op2.MR = 23;
+                op2.c_weight = 300;                                             //所持重量増加+300
+                op2.MEXP = 8;                                                   //経験値ボーナス+8%
+            }
+        }
+
         if (name.equals("血戦のケープ")) {
             if (enchant >= 5) {
                 op2.AC = -2;
@@ -1366,6 +1442,26 @@ public class Bougu implements Common {
             }
         }
 
+        if (name.equals("祝福された血戦のケープ")) {
+            if (enchant >= 8) {
+                op2.AC = -3;
+                op2.DMG_LONG = 1;
+                op2.DR = 1;
+                op2.MR = 22;
+                op2.MEXP = 4;                                                   //経験値ボーナス+4%
+            }
+            if (enchant >= 9) {
+                op2.ST[DEX] = 1;
+                op2.MEXP = 6;                                                   //経験値ボーナス+6%
+            }
+            if (enchant >= 10) {
+                op2.DR = 2;
+                op2.MR = 23;
+                op2.c_weight = 300;                                             //所持重量増加+300
+                op2.MEXP = 8;                                                   //経験値ボーナス+8%
+            }
+        }
+
         if (name.equals("血戦のクローク")) {
             if (enchant >= 5) {
                 op2.AC = -2;
@@ -1385,6 +1481,26 @@ public class Bougu implements Common {
             //+10強化オプション[所持重量増加+240]
             if (enchant >= 10) {
                 op2.c_weight = 240;
+            }
+        }
+
+        if (name.equals("祝福された血戦のクローク")) {
+            if (enchant >= 8) {
+                op2.AC = -3;
+                op2.DR = 1;
+                op2.MR = 22;
+                op2.MPR = 4;
+                op2.MEXP = 4;                                                   //経験値ボーナス+4%
+            }
+            if (enchant >= 9) {
+                op2.ST[INT] = 1;
+                op2.MEXP = 6;                                                   //経験値ボーナス+6%
+            }
+            if (enchant >= 10) {
+                op2.DR = 2;
+                op2.MR = 23;
+                op2.c_weight = 300;                                             //所持重量増加+300
+                op2.MEXP = 8;                                                   //経験値ボーナス+8%
             }
         }
 
@@ -1588,9 +1704,28 @@ public class Bougu implements Common {
             if (enchant >= 9) {
                 op2.DMG_SHORT = 1;
             }
-            //+10強化オプション[ダメージ低下+1]
             if (enchant >= 10) {
                 op2.DR = 1;
+            }
+        }
+
+        if (name.equals("祝福された血戦のグローブ")) {
+            if (enchant >= 8) {
+                op2.AC = -1;
+                op2.ST[STR] = 1;
+                op2.MR = 2;
+                op2.HP = 50;
+                op2.MP = 20;
+                op2.effect = "ポーション回復量 +1% +1,";                         //ポーション回復量+1%+1
+            }
+            if (enchant >= 9) {
+                op2.DMG_SHORT = 1;
+                op2.effect = "ポーション回復量 +2% +1,";                         //ポーション回復量+2%+1
+            }
+            if (enchant >= 10) {
+                op2.DMG_SHORT = 2;
+                op2.DR = 1;
+                op2.effect = "ポーション回復量 +3% +2,";                         //ポーション回復量+3%+2
             }
         }
 
@@ -1610,9 +1745,28 @@ public class Bougu implements Common {
             if (enchant >= 9) {
                 op2.DMG_LONG = 1;
             }
-            //+10強化オプション[ダメージ低下+1]
             if (enchant >= 10) {
                 op2.DR = 1;
+            }
+        }
+
+        if (name.equals("祝福された血戦のブレイサー")) {
+            if (enchant >= 8) {
+                op2.AC = -1;
+                op2.ST[DEX] = 1;
+                op2.HP = 45;
+                op2.MP = 25;
+                op2.MPR = 1;
+                op2.effect = "ポーション回復量 +1% +1,";                         //ポーション回復量+1%+1
+            }
+            if (enchant >= 9) {
+                op2.DMG_LONG = 1;
+                op2.effect = "ポーション回復量 +2% +1,";                         //ポーション回復量+2%+1
+            }
+            if (enchant >= 10) {
+                op2.DMG_LONG = 2;
+                op2.DR = 1;
+                op2.effect = "ポーション回復量 +3% +2,";                         //ポーション回復量+3%+2
             }
         }
 
@@ -1632,9 +1786,28 @@ public class Bougu implements Common {
             if (enchant >= 9) {
                 op2.SP = 1;
             }
-            //+10強化オプション[ダメージ低下+1]
             if (enchant >= 10) {
                 op2.DR = 1;
+            }
+        }
+
+                if (name.equals("祝福された血戦のミトン")) {
+            if (enchant >= 8) {
+                op2.AC = -1;
+                op2.ST[WIS] = 1;
+                op2.HP = 40;
+                op2.MP = 30;
+                op2.MPR = 1;
+                op2.effect = "ポーション回復量 +1% +1,";                         //ポーション回復量+1%+1
+            }
+            if (enchant >= 9) {
+                op2.SP = 1;
+                op2.effect = "ポーション回復量 +2% +1,";                         //ポーション回復量+2%+1
+            }
+            if (enchant >= 10) {
+                op2.MPR = 2;
+                op2.DR = 1;
+                op2.effect = "ポーション回復量 +3% +2,";                         //ポーション回復量+3%+2
             }
         }
 
