@@ -1226,30 +1226,51 @@ public class Bougu implements Common {
             }
         }
         
+        if (name.equals("浄化のブーツ(STR)") || name.equals("浄化のブーツ(DEX)") || name.equals("浄化のブーツ(INT)")) {
+            if (enchant >= 10) {
+                op2.DR = 1;                                                     //ダメージ減少+1
+                op2.AC= -1;                                                     //AC-1
+                op2.HP = 70;                                                    //HP+70
+            } else if (enchant >= 9) {
+                op2.DR = 1;                                                     //ダメージ減少+1
+                op2.HP= 70;                                                     //HP+70
+            } else if (enchant >= 8) {
+                op2.HP= 60;                                                     //HP+60
+            } else if (enchant >= 7) {
+                op2.HP= 50;                                                     //HP+50
+            } else if (enchant >= 6) {
+                op2.HP= 40;                                                     //HP+40
+            } else if (enchant >= 5) {
+                op2.HP= 30;                                                     //HP+30
+            } else if (enchant >= 1) {
+                op2.HP= 20;                                                     //HP+20
+            }
+        }
+
         if (name.equals("ルウン3世のブーツ(STR)") || name.equals("ルウン3世のブーツ(DEX)") || name.equals("ルウン3世のブーツ(INT)")) {
             if (enchant >= 10) {
-                op2.PVP= 2;                                                     //PVP追加ダメージ+2
-                op2.PVP_DR = 2;                                                 //PVPダメージ減少+2
+                op2.PVP= 10;                                                    //PVP追加ダメージ+10
+                op2.PVP_DR = 10;                                                //PVPダメージ減少+10
                 op2.AC= -7;                                                     //AC-7
-                op2.HP = 150;                                                    //HP+150
+                op2.HP = 150;                                                   //HP+150
             } else if (enchant >= 9) {
-                op2.PVP= 2;                                                     //PVP追加ダメージ+2
-                op2.PVP_DR = 2;                                                 //PVPダメージ減少+2
+                op2.PVP= 8;                                                     //PVP追加ダメージ+8
+                op2.PVP_DR = 8;                                                 //PVPダメージ減少+8
                 op2.AC= -5;                                                     //AC-5
-                op2.HP= 100;                                                     //HP+100
+                op2.HP= 100;                                                    //HP+100
             } else if (enchant >= 8) {
-                op2.PVP= 2;                                                     //PVP追加ダメージ+2
-                op2.PVP_DR = 2;                                                 //PVPダメージ減少+2
+                op2.PVP= 6;                                                     //PVP追加ダメージ+6
+                op2.PVP_DR = 6;                                                 //PVPダメージ減少+6
                 op2.AC= -4;                                                     //AC-4
                 op2.HP= 90;                                                     //HP+90
             } else if (enchant >= 7) {
-                op2.PVP= 2;                                                     //PVP追加ダメージ+2
-                op2.PVP_DR = 2;                                                 //PVPダメージ減少+2
+                op2.PVP= 4;                                                     //PVP追加ダメージ+4
+                op2.PVP_DR = 4;                                                 //PVPダメージ減少+4
                 op2.AC= -3;                                                     //AC-3
                 op2.HP= 80;                                                     //HP+80
             } else if (enchant >= 6) {
-                op2.PVP= 1;                                                     //PVP追加ダメージ+1
-                op2.PVP_DR = 1;                                                 //PVPダメージ減少+1
+                op2.PVP= 2;                                                     //PVP追加ダメージ+2
+                op2.PVP_DR = 2;                                                 //PVPダメージ減少+2
                 op2.AC= -2;                                                     //AC-2
                 op2.HP= 70;                                                     //HP+70
             } else if (enchant >= 5) {
@@ -1257,12 +1278,6 @@ public class Bougu implements Common {
                 op2.PVP_DR = 1;                                                 //PVPダメージ減少+1
                 op2.AC= -1;                                                     //AC-1
                 op2.HP= 60;                                                     //HP+60
-            } else if (enchant >= 4) {
-                op2.HP= 50;                                                     //HP+50
-            } else if (enchant >= 3) {
-                op2.HP= 50;                                                     //HP+50
-            } else if (enchant >= 2) {
-                op2.HP= 50;                                                     //HP+50
             } else if (enchant >= 1) {
                 op2.HP= 50;                                                     //HP+50
             }
