@@ -194,8 +194,8 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
     //JLabel[][] pure_status_bonus = new JLabel[2][25];
     JLabel[][] pure_status_bonus = new JLabel[2][36];
 
-    JComboBox[] cb_elixir = new JComboBox[20];              //エリクサの最大MAX20個
-    JComboBox[] cb_elixir_level = new JComboBox[20];        //エリクサーのLV
+    JComboBox[] cb_elixir = new JComboBox[30];              //エリクサの最大MAX20個
+    JComboBox[] cb_elixir_level = new JComboBox[30];        //エリクサーのLV
     LEV lev = new LEV();
 
     //パネル3
@@ -1115,24 +1115,50 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         panels[1].add(lab_tmp);
 
         String elixir_list[] = {"---", "STR", "DEX", "INT", "WIS", "CON", "CHA"};
-        //for (int i = 0; i < 10; i++) {                                                //最大10個まで使用
-        for (int i = 0; i < 20; i++) {                                                  //最大20個まで使用
-            if (i >= 17) {
+        for (int i = 0; i < 30; i++) {                                                  //最大30個まで使用
+            if (i >= 27) {
                 cb_elixir[i] = new JComboBox(elixir_list);
                 cb_elixir_level[i] = new JComboBox(lev_list);
-                cb_elixir[i].setBounds(30 +60 * i-300, 540, 60, 20);
+                cb_elixir[i].setBounds(30 +60 * i-900, 540, 60, 20);
                 cb_elixir[i].addActionListener(this);
-                cb_elixir_level[i].setBounds(30 + 60 * i-300, 560, 60, 20);
-                cb_elixir_level[i].setSelectedItem(Integer.toString(100));              //50レベルから3レベル単位
+                cb_elixir_level[i].setBounds(30 + 60 * i-900, 560, 60, 20);
+                cb_elixir_level[i].setSelectedItem(Integer.toString(100));              //50レベルから2レベル単位
                 cb_elixir_level[i].addActionListener(this);
                 }
-            else if (i >= 10) {
+            else if (i >= 22) {
                 cb_elixir[i] = new JComboBox(elixir_list);
                 cb_elixir_level[i] = new JComboBox(lev_list);
-                cb_elixir[i].setBounds(30 +60 * i-300, 540, 60, 20);
+                cb_elixir[i].setBounds(30 +60 * i-900, 540, 60, 20);
                 cb_elixir[i].addActionListener(this);
-                cb_elixir_level[i].setBounds(30 + 60 * i-300, 560, 60, 20);
-                cb_elixir_level[i].setSelectedItem(Integer.toString(50 + 3 * i));       //50レベルから3レベル単位
+                cb_elixir_level[i].setBounds(30 + 60 * i-900, 560, 60, 20);
+                cb_elixir_level[i].setSelectedItem(Integer.toString(46 + 2 * i));       //50レベルから2レベル単位
+                cb_elixir_level[i].addActionListener(this);
+                }
+            else if (i >= 21) {
+                cb_elixir[i] = new JComboBox(elixir_list);
+                cb_elixir_level[i] = new JComboBox(lev_list);
+                cb_elixir[i].setBounds(30 +60 * i-900, 540, 60, 20);
+                cb_elixir[i].addActionListener(this);
+                cb_elixir_level[i].setBounds(30 + 60 * i-900, 560, 60, 20);
+                cb_elixir_level[i].setSelectedItem(Integer.toString(48 + 2 * i));       //50レベルから2レベル単位
+                cb_elixir_level[i].addActionListener(this);
+                }
+            else if (i >= 16) {
+                cb_elixir[i] = new JComboBox(elixir_list);
+                cb_elixir_level[i] = new JComboBox(lev_list);
+                cb_elixir[i].setBounds(30 +60 * i-900, 540, 60, 20);
+                cb_elixir[i].addActionListener(this);
+                cb_elixir_level[i].setBounds(30 + 60 * i-900, 560, 60, 20);
+                cb_elixir_level[i].setSelectedItem(Integer.toString(48 + 2 * i));       //50レベルから2レベル単位
+                cb_elixir_level[i].addActionListener(this);
+                }
+            else if (i >= 15) {
+                cb_elixir[i] = new JComboBox(elixir_list);
+                cb_elixir_level[i] = new JComboBox(lev_list);
+                cb_elixir[i].setBounds(30 +60 * i-900, 540, 60, 20);
+                cb_elixir[i].addActionListener(this);
+                cb_elixir_level[i].setBounds(30 + 60 * i-900, 560, 60, 20);
+                cb_elixir_level[i].setSelectedItem(Integer.toString(50 + 2 * i));       //50レベルから2レベル単位
                 cb_elixir_level[i].addActionListener(this);
                 }
             else {
@@ -1141,8 +1167,7 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
                 cb_elixir[i].setBounds(30 +60 * i, 500, 60, 20);
                 cb_elixir[i].addActionListener(this);
                 cb_elixir_level[i].setBounds(30 + 60 * i, 520, 60, 20);
-                //cb_elixir_level[i].setSelectedItem(Integer.toString(50 + 5 * i));     //50レベルから5レベル単位
-                cb_elixir_level[i].setSelectedItem(Integer.toString(50 + 3 * i));       //50レベルから3レベル単位
+                cb_elixir_level[i].setSelectedItem(Integer.toString(50 + 2 * i));       //50レベルから2レベル単位
                 cb_elixir_level[i].addActionListener(this);
                 }
             panels[1].add(cb_elixir[i]);

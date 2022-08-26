@@ -473,7 +473,7 @@ public class Calculator implements Common {
         }
 
 //エリクサーの最大使用数(20個へ)
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < 30; i++) {
             int st = ui.cb_elixir[i].getSelectedIndex() - 1;
             if (st >= 0) {
                 if (ui.cb_elixir_level[i].getSelectedIndex() + 1 <= level) {
