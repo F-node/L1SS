@@ -1,6 +1,18 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2022/08/31
+Update 4.7.2
+LSS/data/E.zip
+LSS/src/lss/Calculator.java
+LSS/src/lss/Bougu.java
+修正
+	*[エラー:コードが大きすぎます]対策の為、一部処理(Calculator.java)を削除
+
+	https://press.ncsoft.jp/notice/lineage/2207aden/
+	闘士の守護紋章/射手の守護紋章/賢者の守護紋章の未強化に対応
+	闘士の守護インシグニア/射手の守護インシグニア/賢者の守護インシグニアの未強化に対応
+
 2022/08/27
 Update 4.7.1
 LSS/src/lss/Calculator.java

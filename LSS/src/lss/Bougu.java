@@ -1408,7 +1408,6 @@ public class Bougu implements Common {
             if (enchant >= 9) {
                 op2.ST[STR] = 1;
             }
-            //+10強化オプション[所持重量増加+240]
             if (enchant >= 10) {
                 op2.c_weight = 240;
             }
@@ -1451,7 +1450,6 @@ public class Bougu implements Common {
             if (enchant >= 9) {
                 op2.ST[DEX] = 1;
             }
-            //+10強化オプション[所持重量増加+240]
             if (enchant >= 10) {
                 op2.c_weight = 240;
             }
@@ -1493,7 +1491,6 @@ public class Bougu implements Common {
             if (enchant >= 9) {
                 op2.ST[INT] = 1;
             }
-            //+10強化オプション[所持重量増加+240]
             if (enchant >= 10) {
                 op2.c_weight = 240;
             }
@@ -2995,17 +2992,28 @@ if (name.contains("勇士")) {
                             break;
                     }
                     break;
-                case "闘士の守護紋章":                                           //+3闘士の守護紋章から
+                case "闘士の守護紋章":                                           //+0闘士の守護紋章から
                     switch (enchant) {
+                        case 0:
+                            op2.AC =-2;
+                            break;
+                        case 1:
+                            op2.AC =-2;
+                            op2.effect = "ポーション回復量 +2% +2,";
+                            op2.effect += "回復悪化防御 +2%,";
+                            break;
+                        case 2:
+                            op2.AC =-2;
+                            op2.effect = "ポーション回復量 +4% +4,";
+                            op2.effect += "回復悪化防御 +4%,";
+                            break;
                         case 3:
-                            op2.AC =-1;
-                            op2.ST[STR] = 1;
+                            op2.AC =-2;
                             op2.effect = "ポーション回復量 +8% +8,";
                             op2.effect += "回復悪化防御 +8%,";
                             break;
                         case 4:
-                            op2.AC =-1;
-                            op2.ST[STR] = 1;
+                            op2.AC =-2;
                             op2.effect = "ポーション回復量 +10% +10,";
                             op2.effect += "回復悪化防御 +10%,";
                             op2.HIT_SHORT = 1;
@@ -3013,7 +3021,6 @@ if (name.contains("勇士")) {
                             break;
                         case 5:
                             op2.AC =-2;
-                            op2.ST[STR] = 1;
                             op2.effect = "ポーション回復量 +12% +12,";
                             op2.effect += "回復悪化防御 +12%,";
                             op2.effect += "祝福消耗効率 +5%,";
@@ -3025,7 +3032,6 @@ if (name.contains("勇士")) {
                             break;
                         case 6:
                             op2.AC =-2;
-                            op2.ST[STR] = 1;
                             op2.effect = "ポーション回復量 +14% +14,";
                             op2.effect += "回復悪化防御 +14%,";
                             op2.effect += "祝福消耗効率 +10%,";
@@ -3037,7 +3043,6 @@ if (name.contains("勇士")) {
                             break;
                         case 7:
                             op2.AC =-2;
-                            op2.ST[STR] = 1;
                             op2.effect = "ポーション回復量 +16% +16,";
                             op2.effect += "回復悪化防御 +16%,";
                             op2.effect += "祝福消耗効率 +15%,";
@@ -3049,7 +3054,6 @@ if (name.contains("勇士")) {
                             break;
                         case 8:
                             op2.AC =-2;
-                            op2.ST[STR] = 1;
                             op2.effect = "ポーション回復量 +18% +18,";
                             op2.effect += "回復悪化防御 +18%,";
                             op2.effect += "祝福消耗効率 +20%,";
@@ -3063,17 +3067,28 @@ if (name.contains("勇士")) {
                             break;
                     }
                     break;
-                case "射手の守護紋章":                                           //+3射手の守護紋章から
+                case "射手の守護紋章":                                           //+0射手の守護紋章から
                     switch (enchant) {
+                        case 0:
+                            op2.AC =-2;
+                            break;
+                        case 1:
+                            op2.AC =-2;
+                            op2.effect = "ポーション回復量 +2% +2,";
+                            op2.effect += "回復悪化防御 +2%,";
+                            break;
+                        case 2:
+                            op2.AC =-2;
+                            op2.effect = "ポーション回復量 +4% +4,";
+                            op2.effect += "回復悪化防御 +4%,";
+                            break;
                         case 3:
-                            op2.AC =-1;
-                            op2.ST[DEX] = 1;
+                            op2.AC =-2;
                             op2.effect = "ポーション回復量 +8% +8,";
                             op2.effect += "回復悪化防御 +8%,";
                             break;
                         case 4:
-                            op2.AC =-1;
-                            op2.ST[DEX] = 1;
+                            op2.AC =-2;
                             op2.effect = "ポーション回復量 +10% +10,";
                             op2.effect += "回復悪化防御 +10%,";
                             op2.HIT_LONG = 1;
@@ -3081,7 +3096,6 @@ if (name.contains("勇士")) {
                             break;
                         case 5:
                             op2.AC =-2;
-                            op2.ST[DEX] = 1;
                             op2.effect = "ポーション回復量 +12% +12,";
                             op2.effect += "回復悪化防御 +12%,";
                             op2.effect += "祝福消耗効率 +5%,";
@@ -3093,7 +3107,6 @@ if (name.contains("勇士")) {
                             break;
                         case 6:
                             op2.AC =-2;
-                            op2.ST[DEX] = 1;
                             op2.effect = "ポーション回復量 +14% +14,";
                             op2.effect += "回復悪化防御 +14%,";
                             op2.effect += "祝福消耗効率 +10%,";
@@ -3105,7 +3118,6 @@ if (name.contains("勇士")) {
                             break;
                         case 7:
                             op2.AC =-2;
-                            op2.ST[DEX] = 1;
                             op2.effect = "ポーション回復量 +16% +16,";
                             op2.effect += "回復悪化防御 +16%,";
                             op2.effect += "祝福消耗効率 +15%,";
@@ -3117,7 +3129,6 @@ if (name.contains("勇士")) {
                             break;
                         case 8:
                             op2.AC =-2;
-                            op2.ST[DEX] = 1;
                             op2.effect = "ポーション回復量 +18% +18,";
                             op2.effect += "回復悪化防御 +18%,";
                             op2.effect += "祝福消耗効率 +20%,";
@@ -3131,17 +3142,28 @@ if (name.contains("勇士")) {
                             break;
                     }
                     break;
-                case "賢者の守護紋章":                                           //+3賢者の守護紋章から
+                case "賢者の守護紋章":                                           //+0賢者の守護紋章から
                     switch (enchant) {
+                        case 0:
+                            op2.AC =-2;
+                            break;
+                        case 1:
+                            op2.AC =-2;
+                            op2.effect = "ポーション回復量 +2% +2,";
+                            op2.effect += "回復悪化防御 +2%,";
+                            break;
+                        case 2:
+                            op2.AC =-2;
+                            op2.effect = "ポーション回復量 +4% +4,";
+                            op2.effect += "回復悪化防御 +4%,";
+                            break;
                         case 3:
-                            op2.AC =-1;
-                            op2.ST[INT] = 1;
+                            op2.AC =-2;
                             op2.effect += "回復悪化防御 +8%,";
                             op2.effect = "ポーション回復量 +8% +8,";
                             break;
                         case 4:
-                            op2.AC =-1;
-                            op2.ST[INT] = 1;
+                            op2.AC =-2;
                             op2.effect += "回復悪化防御 +10%,";
                             op2.effect = "ポーション回復量 +10% +10,";
                             op2.HIT_MAGIC = 1;
@@ -3149,7 +3171,6 @@ if (name.contains("勇士")) {
                             break;
                         case 5:
                             op2.AC =-2;
-                            op2.ST[INT] = 1;
                             op2.effect = "ポーション回復量 +12% +12,";
                             op2.effect += "回復悪化防御 +12%,";
                             op2.effect += "祝福消耗効率 +5%,";
@@ -3161,7 +3182,6 @@ if (name.contains("勇士")) {
                             break;
                         case 6:
                             op2.AC =-2;
-                            op2.ST[INT] = 1;
                             op2.effect = "ポーション回復量 +14% +14,";
                             op2.effect += "回復悪化防御 +14%,";
                             op2.effect += "祝福消耗効率 +10%,";
@@ -3173,7 +3193,6 @@ if (name.contains("勇士")) {
                             break;
                         case 7:
                             op2.AC =-2;
-                            op2.ST[INT] = 1;
                             op2.effect = "ポーション回復量 +16% +16,";
                             op2.effect += "回復悪化防御 +16%,";
                             op2.effect += "祝福消耗効率 +15%,";
@@ -3185,7 +3204,6 @@ if (name.contains("勇士")) {
                             break;
                         case 8:
                             op2.AC =-2;
-                            op2.ST[INT] = 1;
                             op2.effect = "ポーション回復量 +18% +18,";
                             op2.effect += "回復悪化防御 +18%,";
                             op2.effect += "祝福消耗効率 +20%,";
@@ -3976,6 +3994,18 @@ if (name.contains("勇士")) {
 
             if (name.equals("闘士の守護インシグニア")) {
                 switch (enchant) {
+                    case 0:
+                        op2.AC = -1;
+                        op2.HP = 5;
+                        break;
+                    case 1:
+                        op2.AC = -1;
+                        op2.HP = 10;
+                        break;
+                    case 2:
+                        op2.AC = -1;
+                        op2.HP = 15;
+                        break;
                     case 3:
                         op2.AC = -1;
                         op2.HP = 20;
@@ -4033,6 +4063,18 @@ if (name.contains("勇士")) {
 
             if (name.equals("射手の守護インシグニア")) {
                 switch (enchant) {
+                    case 0:
+                        op2.AC = -1;
+                        op2.HP = 5;
+                        break;
+                    case 1:
+                        op2.AC = -1;
+                        op2.HP = 10;
+                        break;
+                    case 2:
+                        op2.AC = -1;
+                        op2.HP = 15;
+                        break;
                     case 3:
                         op2.AC = -1;
                         op2.HP = 20;
@@ -4090,6 +4132,18 @@ if (name.contains("勇士")) {
 
             if (name.equals("賢者の守護インシグニア")) {
                 switch (enchant) {
+                    case 0:
+                        op2.AC = -1;
+                        op2.HP = 5;
+                        break;
+                    case 1:
+                        op2.AC = -1;
+                        op2.HP = 10;
+                        break;
+                    case 2:
+                        op2.AC = -1;
+                        op2.HP = 15;
+                        break;
                     case 3:
                         op2.AC = -1;
                         op2.HP = 20;

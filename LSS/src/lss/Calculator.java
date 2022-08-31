@@ -472,7 +472,7 @@ public class Calculator implements Common {
             _ST[ELIXIR][i] = 0;
         }
 
-//エリクサーの最大使用数(20個へ)
+//エリクサーの最大使用数(30個へ)
         for (int i = 0; i < 30; i++) {
             int st = ui.cb_elixir[i].getSelectedIndex() - 1;
             if (st >= 0) {
@@ -800,12 +800,8 @@ public class Calculator implements Common {
         //ウィズダムポーション
         ui.cb_buff[ITEM_WIZP].setToolTipText("SP+2 MPR+2");
         if (ui.cb_buff[ITEM_WIZP].isSelected()) {
-            if (cls == W || cls == I) {
-                buff.SP += 2;
-                buff.MPR += 2;
-            } else {
-                ui.cb_buff[ITEM_WIZP].setSelected(false);
-            }
+            buff.SP += 2;
+            buff.MPR += 2;
         }
 
         // マジックドール
@@ -2935,11 +2931,7 @@ public class Calculator implements Common {
                                          + "<br>"+ "カウンターダメージは武器の[SMALL打撃値]+[追加ダメージ]+[強化数]x[1~4(ランダム)]"
                                          + "<br>"+ "[習得レベル:80][持続時間:2分8秒][対象:術者][触媒:精霊の玉(5)]"+"</html>");
         if (ui.cb_buff[E_INO].isSelected()) {
-            if (level >= 80 && cls == E && buki.type.equals("片手剣")) {
-                // インフェルノ効果未実装
-            } else {
-                ui.cb_buff[E_INO].setSelected(false);
-            }
+        //インフェルノ効果未実装
         }
 
         //ソウルオブフレイム    5828行にて処理
@@ -3073,9 +3065,8 @@ public class Calculator implements Common {
                                          + "<br>"+ "風属性の遠距離ダメージ+6 遠距離命中+3"
                                          + "<br>"+ "[習得レベル:75][持続時間:16分][対象:術者]"+"</html>");
             if (ui.cb_buff[E_SST].isSelected()) {
-                ui.cb_buff[E_SEE].setSelected(false);
-            buff.ELEM_DMG_LONG[WIND] += 6;
-            buff.HIT_LONG += 3;
+                buff.ELEM_DMG_LONG[WIND] += 6;
+                buff.HIT_LONG += 3;
         }
 
         //ストームアイ
