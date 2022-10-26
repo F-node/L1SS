@@ -96,7 +96,7 @@ public interface Common {
     final int RING5 = 18;
     final int RING6 = 19;
 
-//エンチャント(0から323までの合計324個分)　UI.javaの203行目も合わせて変更必須
+//エンチャント(0から327までの合計328個分)　UI.javaの197行目も合わせて変更必須
 //基本エンチャント
     final int ACC1 = 0;             //1段加速
     final int ACC2 = 1;             //2段加速
@@ -136,11 +136,12 @@ public interface Common {
     final int H_RK = 97;            //ランカーボーナス
     final int H_RKT = 141;          //各クラス別1位
 
-//君主魔法          8+4=12              合計12種類
+//君主魔法          9+4=13              合計13種類
     //アクティブスキル
     final int P_TTT = 144;          //LV50  True TargeT                   トゥルーターゲット
     final int P_GWN = 7;            //LV60  Glowing WeapoN                グローイング ウェポン
     final int P_SSD = 9;            //LV75  Shining ShielD                シャイニング シールド
+    final int P_TYT = 324;          //LV80  TYranT                        タイラント
     final int P_BML = 8;            //LV70  Brave MentaL                  ブレイブ メンタル
     final int P_GRE = 87;           //LV80  GRacE                         グレース
     final int P_EME = 143;          //LV80  EMpirE                        エンパイア
@@ -334,7 +335,7 @@ public interface Common {
     final int W_DNS = 316;          //LVXX  Disintegrate:NemesiS          ディスインテグレート:ネメシス
     final int W_HWE = 317;          //LVXX  Holy Walk:Evolution           ホーリーウォーク:エボリューション(基本エンチャントの2段加速で実装)
     final int W_ADS = 24;           //LV80  ADvanced Spirits              アドバンスド スピリッツ
-    final int W_ERC = 318;          //LVXX  Ether Real Circle             エテリアル サークル
+    final int W_ACE = 318;          //LVXX  Aetherial CirclE              エーテリアル サークル
     final int W_GSM = 319;          //LV90  Greater Summon Monster        グレーター サモン モンスター
 
 //闇の精霊魔法  4+4+3+4+8=23  合計23種類
@@ -433,25 +434,28 @@ public interface Common {
     final int I_IGM = 44;           //LV45  Illusion[GoleM]               イリュージョン[ゴーレム]
     final int I_BBL = 194;          //LV85  Bone Break:Last               ボーン ブレイク:ラスト
 
-//ウォリアーの技術      7+9+=16　合計16種類
-    //アクティブスキル  合計7種類
+//ウォリアーの技術      7+9+=16　合計19種類
+    //アクティブスキル  合計6種類
     final int S_HOL = 213;          //LV30  HOwL                          ハウル
     final int S_PGP = 211;          //LV75  Power GriP                    パワー グリップ
     final int S_TOK = 212;          //LV45  TOmahawK                      トマホーク
     final int S_DEO = 210;          //LV80  DEsperadO                     デスペラード
     final int S_TRG = 115;          //LV80  Titan RisinG                  タイタン ライジング
-    final int S_DEN = 208;          //LV85  DEmolitioN                    デモリッション
-    final int S_BEK = 209;          //LV85  BErserK                       バーサーク
-    //パッシブスキル    合計9種類
+    final int S_TET = 325;          //LV80  TEmpesT                       テンペスト
+    //パッシブスキル    合計13種類
     final int S_FUY = 68;           //LV60  FUrY                          フューリー
     final int S_SLR = 214;          //LV15  SLayeR                        スレイヤー
     final int S_CRH = 67;           //LV45  CRasH                         クラッシュ
     final int S_AGD = 66;           //LV60  Armor GuarD                   アーマー ガード
-    final int S_TLK = 69;           //LV75  Titan Lock                    タイタンロック
-    final int S_TMC = 70;           //LV75  Titan MagiC                   タイタンマジック
-    final int S_TBZ = 71;           //LV80  Titan BlitZ                   タイタンブリッツ
+    final int S_TLK = 69;           //LV75  Titan Lock                    タイタン ロック
+    final int S_TMC = 70;           //LV75  Titan MagiC                   タイタン マジック
+    final int S_TBZ = 71;           //LV80  Titan BlitZ                   タイタン ブリッツ
     final int S_DAE = 215;          //LV85  Desperado:AbsolutE            デスペラード:アブソリュート
     final int S_GIC = 76;           //LV60  GIgantiC                      ギガンティック
+    final int S_DEN = 208;          //LV85  DEmolitioN                    デモリッション
+    final int S_BEK = 209;          //LV85  BErserK                       バーサーク
+    final int S_TBT = 326;          //LV85  Titan BeasT                   タイタン ビースト
+    final int S_THR = 327;          //LV85  Tomahawk:HunteR               トマホーク:ハンター
 
 //フェンサーの技術    合計19種類
     //  アクティブスキル

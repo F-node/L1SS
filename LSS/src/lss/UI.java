@@ -194,14 +194,14 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
     //JLabel[][] pure_status_bonus = new JLabel[2][25];
     JLabel[][] pure_status_bonus = new JLabel[2][36];
 
-    JComboBox[] cb_elixir = new JComboBox[30];              //エリクサの最大MAX20個
+    JComboBox[] cb_elixir = new JComboBox[30];              //エリクサの最大MAX30個
     JComboBox[] cb_elixir_level = new JComboBox[30];        //エリクサーのLV
     LEV lev = new LEV();
 
     //パネル3
-    //スキル320個   0から323で計324個
-    JCheckBox[] cb_buff = new JCheckBox[324];
-    JComboBox[] cb_buff_group = new JComboBox[324];
+    //スキル320個   0から327で計328個
+    JCheckBox[] cb_buff = new JCheckBox[328];
+    JComboBox[] cb_buff_group = new JComboBox[328];
 
     //パネル5
     JComboBox cb_npc_level;
@@ -1575,6 +1575,13 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[P_SSD].addActionListener(this);
         panels[3].add(cb_buff[P_SSD]);
 
+        //タイラント
+        cb_buff[P_TYT] = new JCheckBox("タイラント");
+        cb_buff[P_TYT].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[P_TYT].addActionListener(this);
+        cb_buff[P_TYT].setEnabled(false);
+        panels[3].add(cb_buff[P_TYT]);
+
         //ブレイブ メンタル
         cb_buff[P_BML] = new JCheckBox("ブレイブ メンタル");
         cb_buff[P_BML].setBounds(200 * row, 20 * col++, 200, 20);
@@ -2820,12 +2827,12 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[W_ADS].addActionListener(this);
         panels[4].add(cb_buff[W_ADS]);
 
-        //エテリアル サークル
-        cb_buff[W_ERC] = new JCheckBox("エテリアル サークル");
-        cb_buff[W_ERC].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[W_ERC].addActionListener(this);
-        cb_buff[W_ERC].setEnabled(false);
-        panels[4].add(cb_buff[W_ERC]);
+        //エーテリアル サークル
+        cb_buff[W_ACE] = new JCheckBox("エーテリアル サークル");
+        cb_buff[W_ACE].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[W_ACE].addActionListener(this);
+        cb_buff[W_ACE].setEnabled(false);
+        panels[4].add(cb_buff[W_ACE]);
 
         //グレーター サモン モンスター
         cb_buff[W_GSM] = new JCheckBox("グレーター サモン モンスター");
@@ -3386,19 +3393,12 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[S_TRG].setEnabled(false);
         panels[5].add(cb_buff[S_TRG]);
 
-        //デモリッション
-        cb_buff[S_DEN] = new JCheckBox("デモリッション");
-        cb_buff[S_DEN].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[S_DEN].addActionListener(this);
-        cb_buff[S_DEN].setEnabled(false);
-        panels[5].add(cb_buff[S_DEN]);
-
-        //バーサーク
-        cb_buff[S_BEK] = new JCheckBox("バーサーク");
-        cb_buff[S_BEK].setBounds(200 * row, 20 * col++, 200, 20);
-        cb_buff[S_BEK].addActionListener(this);
-        cb_buff[S_BEK].setEnabled(false);
-        panels[5].add(cb_buff[S_BEK]);
+        //テンペスト
+        cb_buff[S_TET] = new JCheckBox("テンペスト");
+        cb_buff[S_TET].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[S_TET].addActionListener(this);
+        cb_buff[S_TET].setEnabled(false);
+        panels[5].add(cb_buff[S_TET]);
 
         col++;
 
@@ -3464,6 +3464,34 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
         cb_buff[S_GIC].setBounds(200 * row, 20 * col++, 200, 20);
         cb_buff[S_GIC].addActionListener(this);
         panels[5].add(cb_buff[S_GIC]);
+
+        //デモリッション
+        cb_buff[S_DEN] = new JCheckBox("デモリッション");
+        cb_buff[S_DEN].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[S_DEN].addActionListener(this);
+        cb_buff[S_DEN].setEnabled(false);
+        panels[5].add(cb_buff[S_DEN]);
+
+        //バーサーク
+        cb_buff[S_BEK] = new JCheckBox("バーサーク");
+        cb_buff[S_BEK].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[S_BEK].addActionListener(this);
+        cb_buff[S_BEK].setEnabled(false);
+        panels[5].add(cb_buff[S_BEK]);
+
+        //タイタン ビースト
+        cb_buff[S_TBT] = new JCheckBox("タイタン ビースト");
+        cb_buff[S_TBT].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[S_TBT].addActionListener(this);
+        cb_buff[S_TBT].setEnabled(false);
+        panels[5].add(cb_buff[S_TBT]);
+
+        //トマホーク:ハンター
+        cb_buff[S_THR] = new JCheckBox("トマホーク:ハンター");
+        cb_buff[S_THR].setBounds(200 * row, 20 * col++, 200, 20);
+        cb_buff[S_THR].addActionListener(this);
+        cb_buff[S_THR].setEnabled(false);
+        panels[5].add(cb_buff[S_THR]);
 
         col = 0;
         row = 3;
@@ -4187,17 +4215,17 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
                                                 .toString(calc.buki.week_point_exposure));
                                         break;
                                     default:
-                                        if (cb_cls.getSelectedIndex() == S && !calc.buki.two_hands && calc.buki.type.equals("鈍器")) {
-                                            tb_blessed2.setEnabled(true);
-                                            cb_eq[1].setEnabled(true);
-                                            cb_eq_en[1].setEnabled(true);
-                                        } else {
+//                                        if (cb_cls.getSelectedIndex() == S && !calc.buki.two_hands && calc.buki.type.equals("鈍器")) {
+//                                            tb_blessed2.setEnabled(true);
+//                                            cb_eq[1].setEnabled(true);
+//                                            cb_eq_en[1].setEnabled(true);
+//                                        } else {
                                             tb_blessed2.setEnabled(false);
                                             cb_eq[1].setEnabled(false);
                                             cb_eq_en[1].setEnabled(false);
                                             cb_eq[1].setSelectedIndex(0);
                                             cb_eq_en[1].setSelectedIndex(0);
-                                        }
+//                                        }
                                         tf_buki_sp_rate.setEnabled(false);
                                         tf_buki_sp_rate.setText("0.0");
                                         break;
@@ -4736,8 +4764,8 @@ public class UI extends JFrame implements Common, ActionListener, ChangeListener
             }
             tb_blessed1.setSelected(this.BL1[channel]);
             cb_elem_1.setSelectedIndex(this.ELEM1[channel]);
-            tb_blessed2.setSelected(this.BL2[channel]);
-            cb_elem_2.setSelectedIndex(this.ELEM2[channel]);
+//            tb_blessed2.setSelected(this.BL2[channel]);
+//            cb_elem_2.setSelectedIndex(this.ELEM2[channel]);
             cb_ts_elem.setSelectedIndex(this.TS_ELEM[channel]);
             cb_arrow.setSelectedItem(this.ARROW[channel]);
             tf_buki_sp_rate.setText(Double.toString(this.SP_R[channel]));

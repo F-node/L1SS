@@ -1,6 +1,23 @@
 LineageStatusSimulator_fork2018
 
 変更点
+2022/10/26
+Update 4.7.3
+LSS/src/lss/Common.java
+LSS/src/lss/UI.java
+新規
+	君主魔法
+		タイラント
+	戦士魔法
+		テンペスト
+		タイタン ビースト
+		トマホーク:ハンター
+	*効果は未実装
+
+修正
+	各職UIの表示順と内容コメント
+	戦士が双斧を装備した際に2個目の武器が選択できる部分を削除
+
 2022/08/31
 Update 4.7.2
 LSS/data/E.zip
